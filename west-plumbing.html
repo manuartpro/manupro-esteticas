@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es-PR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>West Plumbling | Plomero en el Oeste de Puerto Rico</title>
+<meta name="description" content="West Plumbling — Servicio de plomería en el oeste de Puerto Rico. Cuéntanos el problema y recibe orientación directa. WhatsApp (939) 255-9713.">
+<link rel="icon" href="assets/logo-real.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1a2f; --navy2:#0d2240;
+  --sky:#29b6f6; --sky2:#03a9f4;
+  --orange:#f26522; --orange2:#e5551a;
+  --white:#fff; --light:#f1f5f9; --gray:#64748b; --dark:#1e293b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--dark);background:var(--white);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:1.05}
+img{max-width:100%;display:block}
+a{text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+
+/* ===== HEADER ===== */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;box-shadow:0 2px 18px rgba(10,26,47,.1)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1280px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.brand-text{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:26px;line-height:.95;letter-spacing:.5px}
+.brand-text .l1{color:#1a1a1a;display:block}
+.brand-text .l2{color:var(--sky2);display:block}
+.main-nav{display:flex;gap:28px;align-items:center}
+.main-nav a{color:#333;font-weight:500;font-size:15px}
+.main-nav a:hover{color:var(--sky2)}
+.btn-wa-header{background:var(--orange);color:#fff;font-weight:700;padding:12px 24px;border-radius:10px;font-size:15px;box-shadow:0 4px 12px rgba(242,101,34,.35);transition:transform .15s}
+.btn-wa-header:hover{background:var(--orange2);transform:translateY(-1px)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;z-index:1001}
+.hamburger span{display:block;width:26px;height:3px;background:var(--navy);border-radius:2px;transition:.3s}
+.mobile-menu{display:none}
+
+/* ===== HERO ===== */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;padding:140px 0 0;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero-shapes{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+/* Curved pipe left */
+.hero-shapes .pipe{position:absolute;left:-40px;top:15%;width:420px;height:600px;opacity:.9}
+/* Water drop badge top left */
+.hero-shapes .drop-badge{position:absolute;left:6%;top:18%;width:110px;height:110px;background:rgba(41,182,246,.12);border:2px solid rgba(41,182,246,.35);border-radius:24px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+/* Sky semicircle top right */
+.hero-shapes .semicircle{position:absolute;right:-120px;top:-40px;width:420px;height:420px;background:var(--sky);border-radius:50%;opacity:.95}
+/* Orange circle bottom right */
+.hero-shapes .circle-orange{position:absolute;right:22%;bottom:12%;width:64px;height:64px;background:var(--orange);border-radius:50%}
+/* Blue ring bottom right */
+.hero-shapes .ring-blue{position:absolute;right:12%;bottom:8%;width:72px;height:72px;border:10px solid var(--sky);border-radius:50%}
+/* Orange wedge bottom left */
+.hero-shapes .wedge{position:absolute;left:-30px;bottom:-30px;width:180px;height:120px;background:var(--orange);clip-path:polygon(0 100%,100% 100%,0 0);opacity:.9}
+/* Curved pipe bottom right */
+.hero-shapes .pipe2{position:absolute;right:-30px;bottom:5%;width:380px;height:200px;opacity:.7}
+
+.hero-content{position:relative;z-index:2;text-align:center;padding:40px 20px;max-width:900px;margin:0 auto}
+.hero-label{display:inline-flex;align-items:center;gap:14px;color:var(--sky);font-weight:600;font-size:14px;letter-spacing:2px;margin-bottom:24px}
+.hero-label::before,.hero-label::after{content:'';width:44px;height:3px;background:var(--orange);border-radius:2px}
+.hero h1{font-size:clamp(52px,9vw,110px);font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:1px}
+.hero h1 .accent{color:var(--sky)}
+.hero-sub{font-size:clamp(16px,2.2vw,20px);color:rgba(255,255,255,.85);max-width:640px;margin:20px auto 36px;line-height:1.6}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;border-radius:12px;padding:16px 32px;font-size:17px;cursor:pointer;border:none;transition:transform .15s,box-shadow .15s;font-family:'Inter',sans-serif}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:var(--sky);color:#0a1a2f;box-shadow:0 6px 20px rgba(41,182,246,.4)}
+.btn-wa:hover{background:#4fc3f7;transform:translateY(-2px)}
+.btn-call{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+.btn-call:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.hero-benefits{position:relative;z-index:2;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;padding:28px 20px;border-top:1px solid rgba(255,255,255,.12);max-width:900px;margin:0 auto}
+.hero-benefits .benefit{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.9);font-size:14px;font-weight:500}
+.hero-benefits .benefit svg{flex-shrink:0}
+
+/* ===== FLOATING CALL ===== */
+.float-call{position:fixed;bottom:24px;right:24px;z-index:999;display:inline-flex;align-items:center;gap:10px;background:var(--sky);color:#0a1a2f;font-weight:700;padding:14px 24px;border-radius:50px;box-shadow:0 6px 24px rgba(41,182,246,.5);font-size:16px;transition:transform .15s}
+.float-call:hover{transform:scale(1.05)}
+
+/* ===== SECTIONS ===== */
+.section{padding:80px 0}
+.section-light{background:var(--light)}
+.section h2{font-size:clamp(32px,5vw,52px);color:var(--navy);text-align:center;margin-bottom:16px}
+.section .sub{text-align:center;color:var(--gray);max-width:640px;margin:0 auto 48px;font-size:17px}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.service-card{background:#fff;border-radius:16px;padding:36px 28px;box-shadow:0 4px 20px rgba(10,26,47,.08);transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(10,26,47,.14)}
+.service-card .icon{width:64px;height:64px;background:var(--navy);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.service-card h3{font-size:24px;color:var(--navy);margin-bottom:12px}
+.service-card p{color:var(--gray);font-size:15px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-grid img{border-radius:20px;box-shadow:0 8px 30px rgba(10,26,47,.15)}
+.about-grid h2{text-align:left}
+.about-grid p{color:var(--gray);margin-bottom:16px;font-size:16px}
+
+/* Testimonials */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.testi-card{background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 20px rgba(10,26,47,.08);position:relative}
+.testi-card::before{content:'"';position:absolute;top:16px;left:24px;font-size:64px;color:var(--sky);font-family:Georgia,serif;opacity:.3}
+.testi-card .stars{color:#f59e0b;font-size:18px;margin-bottom:12px;letter-spacing:2px}
+.testi-card p{color:var(--dark);font-style:italic;margin-bottom:16px}
+.testi-card .name{font-weight:700;color:var(--navy)}
+
+/* FAQ */
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{background:#fff;border-radius:12px;margin-bottom:12px;box-shadow:0 2px 12px rgba(10,26,47,.06);overflow:hidden}
+.faq-q{padding:20px 24px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:16px}
+.faq-q:hover{color:var(--sky2)}
+.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--gray);font-size:15px}
+.faq-item.open .faq-a{padding:0 24px 20px;max-height:300px}
+.faq-q .plus{font-size:24px;color:var(--sky);font-weight:300}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1000px;margin:0 auto}
+.contact-info h3{font-size:28px;color:var(--navy);margin-bottom:20px}
+.contact-item{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.contact-item .icon{width:48px;height:48px;background:var(--navy);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-item a,.contact-item span{color:var(--dark);font-weight:600;font-size:17px}
+.contact-form{background:#fff;border-radius:20px;padding:36px;box-shadow:0 4px 20px rgba(10,26,47,.1)}
+.contact-form h3{font-size:24px;color:var(--navy);margin-bottom:20px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-weight:600;margin-bottom:6px;color:var(--navy);font-size:14px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;border:2px solid #e2e8f0;border-radius:10px;font-size:15px;font-family:'Inter',sans-serif;transition:border-color .2s}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--sky)}
+.btn-submit{width:100%;background:var(--navy);color:#fff;padding:16px;font-size:17px}
+.btn-submit:hover{background:var(--navy2)}
+
+/* Footer */
+footer{background:var(--navy);color:rgba(255,255,255,.8);padding:48px 0 24px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;margin-bottom:32px}
+.footer-grid h4{color:#fff;font-size:18px;margin-bottom:16px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:1px}
+.footer-grid a{color:rgba(255,255,255,.7);display:block;margin-bottom:8px;font-size:14px}
+.footer-grid a:hover{color:var(--sky)}
+.footer-bottom{text-align:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.5)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .main-nav{display:none}
+  .hamburger{display:flex}
+  .mobile-menu{display:block;position:fixed;top:0;right:-100%;width:80%;max-width:320px;height:100vh;background:#fff;z-index:1002;transition:right .3s ease;box-shadow:-4px 0 24px rgba(0,0,0,.15);padding:80px 32px}
+  .mobile-menu.open{right:0}
+  .mobile-menu a{display:block;padding:14px 0;color:var(--navy);font-weight:600;font-size:18px;border-bottom:1px solid #f1f5f9}
+  .mobile-menu .btn-wa-header{margin-top:20px;text-align:center;display:block}
+  .menu-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1001}
+  .menu-overlay.show{display:block}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero{padding-top:120px}
+  .hero-shapes .semicircle{width:280px;height:280px;right:-80px}
+  .hero-shapes .pipe{width:280px;height:400px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="brand">
+      <img src="assets/logo-real.jpg" alt="West Plumbling">
+      <div class="brand-text"><span class="l1">WEST</span><span class="l2">PLUMBLING</span></div>
+    </a>
+    <nav class="main-nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://wa.me/19392559713?text=Hola%20West%20Plumbling%2C%20necesito%20ayuda%20con%20plomer%C3%ADa" class="btn-wa-header" target="_blank">WhatsApp ahora</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu-overlay" id="menuOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#servicios">Servicios</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#como-funciona">Cómo funciona</a>
+  <a href="#preguntas">Preguntas</a>
+  <a href="#contacto">Contacto</a>
+  <a href="https://wa.me/19392559713?text=Hola%20West%20Plumbling%2C%20necesito%20ayuda%20con%20plomer%C3%ADa" class="btn-wa-header" target="_blank">WhatsApp ahora</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-shapes">
+    <svg class="pipe" viewBox="0 0 420 600" fill="none"><path d="M-20 60 H180 Q280 60 280 160 V440 Q280 540 180 540 H-20" stroke="#1e3a5f" stroke-width="56" fill="none" opacity=".85"/></svg>
+    <div class="drop-badge">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#29b6f6" stroke-width="1.8"><path d="M12 2.7s6.5 7.1 6.5 11.3a6.5 6.5 0 0 1-13 0C5.5 9.8 12 2.7 12 2.7z"/></svg>
+    </div>
+    <div class="semicircle"></div>
+    <div class="circle-orange"></div>
+    <div class="ring-blue"></div>
+    <div class="wedge"></div>
+    <svg class="pipe2" viewBox="0 0 380 200" fill="none"><path d="M400 40 H220 Q140 40 140 120 V200" stroke="#1e3a5f" stroke-width="48" fill="none" opacity=".8"/></svg>
+  </div>
+  <div class="hero-content">
+    <div class="hero-label">ÁREA OESTE · PUERTO RICO</div>
+    <h1>CUANDO EL<br>AGUA MANDA,<br><span class="accent">ACTUAMOS.</span></h1>
+    <p class="hero-sub">Cuéntanos el problema y recibe orientación directa para coordinar tu servicio de plomería.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/19392559713?text=Hola%20West%20Plumbling%2C%20necesito%20ayuda%20con%20plomer%C3%ADa" class="btn btn-wa" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12.04 2C6.56 2 2.1 6.45 2.1 11.93c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.48 0 9.93-4.45 9.93-9.93 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2"/></svg>
+        Escribir por WhatsApp
+      </a>
+      <a href="tel:+19392559713" class="btn btn-call">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+        Llamar
+      </a>
+    </div>
+  </div>
+  <div class="hero-benefits">
+    <div class="benefit">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#29b6f6" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>
+      Atención en el área oeste
+    </div>
+    <div class="benefit">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#29b6f6" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg>
+      Soluciones para hogar y negocio
+    </div>
+    <div class="benefit">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#29b6f6" stroke-width="2"><rect x="3" 4" y="4" width="18" height="16" rx="2"/><path d="M8 12h8M8 8h8"/></svg>
+      Alcance confirmado antes del servicio
+    </div>
+  </div>
+</section>
+
+<!-- FLOATING CALL -->
+<a href="tel:+19392559713" class="float-call">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+  Llamar
+</a>
+
+<!-- SERVICIOS -->
+<section class="section" id="servicios">
+  <div class="container">
+    <h2>Nuestros Servicios</h2>
+    <p class="sub">Soluciones profesionales de plomería para tu hogar o negocio en el oeste de Puerto Rico.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#29b6f6" stroke-width="2"><path d="M12 2.7s6.5 7.1 6.5 11.3a6.5 6.5 0 0 1-13 0C5.5 9.8 12 2.7 12 2.7z"/></svg></div>
+        <h3>Destapes</h3><p>Destape de líneas sanitarias y drenajes con equipo profesional K-400. Removemos grasa, papel y obstrucciones.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#29b6f6" stroke-width="2"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3 3.7-3.7z"/></svg></div>
+        <h3>Reparaciones</h3><p>Reparación de filtraciones, tuberías rotas, llaves y accesorios. Diagnóstico preciso y solución duradera.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#29b6f6" stroke-width="2"><path d="M12 22c4-4 7-7.5 7-11a7 7 0 1 0-14 0c0 3.5 3 7 7 11z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
+        <h3>Calentadores</h3><p>Instalación y mantenimiento de calentadores de agua. Agua caliente confiable para tu hogar.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#29b6f6" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34h.01a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55h.01a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.01a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg></div>
+        <h3>Mantenimiento</h3><p>Mantenimiento preventivo para evitar emergencias. Inspección de sistemas y prueba de flujo de agua.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="section section-light" id="nosotros">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <h2>Plomero de Confianza en el Oeste</h2>
+        <p>West Plumbling brinda servicio de plomería profesional en el área oeste de Puerto Rico. Nos especializamos en destapes con máquina K-400, remoción de grasa y obstrucciones, y prueba de flujo de agua.</p>
+        <p>Cuéntanos el problema y recibe orientación directa para coordinar tu servicio. Alcance confirmado antes de comenzar.</p>
+        <a href="https://wa.me/19392559713?text=Hola%20West%20Plumbling%2C%20necesito%20ayuda%20con%20plomer%C3%ADa" class="btn btn-wa" target="_blank" style="margin-top:12px">Escribir por WhatsApp</a>
+      </div>
+      <img src="assets/logo-real.jpg" alt="West Plumbling">
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="section" id="como-funciona">
+  <div class="container">
+    <h2>Cómo Funciona</h2>
+    <p class="sub">Simple y directo, sin complicaciones.</p>
+    <div class="services-grid">
+      <div class="service-card"><div class="icon"><span style="color:#29b6f6;font-size:28px;font-weight:800">1</span></div><h3>Cuéntanos</h3><p>Escríbenos por WhatsApp o llámanos. Describe el problema con tus palabras.</p></div>
+      <div class="service-card"><div class="icon"><span style="color:#29b6f6;font-size:28px;font-weight:800">2</span></div><h3>Coordinamos</h3><p>Recibe orientación directa y confirmamos el alcance antes del servicio.</p></div>
+      <div class="service-card"><div class="icon"><span style="color:#29b6f6;font-size:28px;font-weight:800">3</span></div><h3>Resolvemos</h3><p>Vamos al lugar, resolvemos el problema y probamos que todo fluya bien.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS -->
+<section class="section section-light" id="preguntas">
+  <div class="container">
+    <h2>Preguntas Frecuentes</h2>
+    <p class="sub">Lo que nos preguntan con más frecuencia.</p>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">¿Atienden emergencias? <span class="plus">+</span></div><div class="faq-a">Escríbenos por WhatsApp al (939) 255-9713 y coordinamos lo antes posible según disponibilidad en el área oeste.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Qué áreas cubren? <span class="plus">+</span></div><div class="faq-a">Servimos el área oeste de Puerto Rico. Confirma tu ubicación por WhatsApp antes del servicio.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Cómo es el proceso? <span class="plus">+</span></div><div class="faq-a">Nos cuentas el problema, confirmamos el alcance, y coordinamos la visita. Simple y directo.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Qué métodos de pago aceptan? <span class="plus">+</span></div><div class="faq-a">Pregúntanos por WhatsApp y te orientamos sobre las opciones disponibles.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+  <div class="container">
+    <h2>Contacto</h2>
+    <p class="sub">Cuéntanos el problema y te respondemos.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Escríbenos Directo</h3>
+        <div class="contact-item"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="#29b6f6"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12.04 2C6.56 2 2.1 6.45 2.1 11.93c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.48 0 9.93-4.45 9.93-9.93 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2"/></svg></div><a href="https://wa.me/19392559713" target="_blank">WhatsApp: (939) 255-9713</a></div>
+        <div class="contact-item"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#29b6f6" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></div><a href="tel:+19392559713">Llamar: (939) 255-9713</a></div>
+        <div class="contact-item"><div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#29b6f6" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span>Área Oeste · Puerto Rico</span></div>
+      </div>
+      <form class="contact-form" onsubmit="event.preventDefault();window.open('https://wa.me/19392559713?text='+encodeURIComponent('Hola West Plumbling, soy '+document.getElementById('cn').value+'. '+document.getElementById('cm').value),'_blank')">
+        <h3>Déjanos tu mensaje</h3>
+        <div class="form-group"><label>Nombre</label><input id="cn" required placeholder="Tu nombre"></div>
+        <div class="form-group"><label>Mensaje</label><textarea id="cm" rows="4" required placeholder="Cuéntanos el problema"></textarea></div>
+        <button class="btn btn-submit" type="submit">Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>West Plumbling</h4><a href="#servicios">Servicios</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></div>
+      <div><h4>Servicios</h4><a href="#servicios">Destapes</a><a href="#servicios">Reparaciones</a><a href="#servicios">Calentadores</a><a href="#servicios">Mantenimiento</a></div>
+      <div><h4>Contacto</h4><a href="https://wa.me/19392559713" target="_blank">WhatsApp (939) 255-9713</a><a href="tel:+19392559713">Llamar (939) 255-9713</a><a href="#contacto">Área Oeste · PR</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 West Plumbling · Área Oeste, Puerto Rico · Demostración creada por ManuPro</div>
+  </div>
+</footer>
+
+<script>
+const ham=document.getElementById('hamburger'),mm=document.getElementById('mobileMenu'),ov=document.getElementById('menuOverlay');
+ham.addEventListener('click',()=>{mm.classList.toggle('open');ov.classList.toggle('show')});
+ov.addEventListener('click',()=>{mm.classList.remove('open');ov.classList.remove('show')});
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');ov.classList.remove('show')}));
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
+</script>
+</body>
+</html>
