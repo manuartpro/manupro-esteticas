@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty You Salon and Spa | Juana Díaz, Puerto Rico</title>
+<meta name="description" content="Beauty You Salon and Spa en Juana Díaz, Puerto Rico. Faciales personalizados, Tratamientos corporales, Masajes relajantes, Manicura & pedicura. Reserva tu cita por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#FAF6F0; --cream:#F3EDE3; --ink:#2A2521; --muted:#6f6459;
+  --gold:#B08D57; --gold-soft:#D4B98C; --white:#ffffff; --wa:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--ink);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1140px,92%);margin:0 auto}
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:transparent}
+header.scrolled{background:rgba(250,246,240,.96);backdrop-filter:blur(10px);box-shadow:0 2px 20px rgba(42,37,33,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;white-space:nowrap}
+.logo small{display:block;font-family:'Jost',sans-serif;font-size:.6rem;letter-spacing:.42em;color:var(--muted);font-weight:400}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-size:.92rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);position:relative}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:.3s}
+.nav-links a:hover::after{width:100%}
+.btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 30px;border-radius:50px;font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;transition:.3s;border:1px solid var(--gold);cursor:pointer}
+.btn:hover{background:transparent;color:var(--gold);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:var(--ink)}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;color:#fff;background:url('assets/hero.webp') center/cover no-repeat}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.55),rgba(20,15,10,.35) 45%,rgba(20,15,10,.65))}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:120px 0 80px}
+.eyebrow{letter-spacing:.4em;text-transform:uppercase;font-size:.8rem;color:var(--gold-soft);margin-bottom:18px}
+.hero h1{font-size:clamp(2.8rem,7vw,5.2rem);font-weight:500;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--gold-soft)}
+.hero p.sub{font-size:1.15rem;font-weight:300;max-width:640px;margin:0 auto 36px;opacity:.92}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+.trust{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;font-size:.95rem;opacity:.9}
+.trust b{color:var(--gold-soft)}
+.gold-rule{width:70px;height:2px;background:var(--gold);margin:22px auto}
+/* SECTIONS */
+section{padding:96px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 56px}
+.sec-head .eyebrow{color:var(--gold)}
+.sec-head h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:14px}
+.sec-head p{color:var(--muted)}
+/* BENEFITS */
+.benefits{background:var(--cream)}
+.ben-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.ben{text-align:center;padding:10px}
+.ben .ico{font-size:2.1rem;margin-bottom:12px}
+.ben h3{font-size:1.25rem;margin-bottom:8px}
+.ben p{font-size:.92rem;color:var(--muted)}
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.card{background:var(--white);border-radius:18px;overflow:hidden;box-shadow:0 10px 35px rgba(42,37,33,.08);transition:.35s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(42,37,33,.14)}
+.card img{height:230px;width:100%;object-fit:cover}
+.card-body{padding:28px;display:flex;flex-direction:column;flex:1}
+.card-body h3{font-size:1.5rem;margin-bottom:8px}
+.card-body p{color:var(--muted);font-size:.95rem;margin-bottom:14px;flex:1}
+.price{color:var(--gold);font-weight:600;letter-spacing:.06em;margin-bottom:16px}
+.card .btn{padding:11px 22px;font-size:.8rem;text-align:center}
+/* ABOUT */
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-grid img{border-radius:22px;box-shadow:0 20px 60px rgba(42,37,33,.15)}
+.about-grid h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:18px}
+.about-grid p{color:var(--muted);margin-bottom:16px}
+.stats{display:flex;gap:40px;margin-top:28px}
+.stat b{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);display:block}
+.stat span{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* BANNER */
+.banner{background:url('assets/ambiente.jpg') center/cover no-repeat;position:relative;color:#fff;text-align:center}
+.banner::before{content:'';position:absolute;inset:0;background:rgba(20,15,10,.6)}
+.banner .container{position:relative;z-index:2}
+.banner h2{font-size:clamp(2rem,5vw,3.2rem);font-style:italic;margin-bottom:18px}
+/* GALLERY */
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gal-grid img{border-radius:14px;height:220px;width:100%;object-fit:cover;transition:.35s}
+.gal-grid img:hover{transform:scale(1.03)}
+/* TESTIMONIALS */
+.testi{background:var(--cream)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.testi-card{background:var(--white);border-radius:18px;padding:34px;box-shadow:0 10px 35px rgba(42,37,33,.07)}
+.testi-card .stars{color:var(--gold);letter-spacing:.2em;margin-bottom:14px}
+.testi-card p{font-style:italic;margin-bottom:18px}
+.testi-card b{font-family:'Cormorant Garamond',serif;font-size:1.15rem}
+.testi-card span{display:block;font-size:.85rem;color:var(--muted)}
+/* FAQ */
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{border-bottom:1px solid #e5dccf}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:22px 6px;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .plus{color:var(--gold);font-size:1.6rem;font-family:'Jost',sans-serif;transition:.3s;flex-shrink:0}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;color:var(--muted);padding:0 6px}
+.faq-a p{padding-bottom:22px}
+/* CONTACT */
+.contact{background:var(--ink);color:#f5efe6}
+.contact .sec-head h2{color:#fff}
+.contact .sec-head p{color:#c9bfae}
+.form-wrap{max-width:640px;margin:0 auto;background:rgba(255,255,255,.05);border:1px solid rgba(212,185,140,.25);border-radius:22px;padding:44px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;color:var(--gold-soft)}
+.field input,.field select,.field textarea{width:100%;padding:13px 16px;border-radius:12px;border:1px solid rgba(212,185,140,.3);background:rgba(255,255,255,.07);color:#fff;font-family:'Jost',sans-serif;font-size:1rem}
+.field input::placeholder,.field textarea::placeholder{color:#8d8478}
+.field select option{color:#222}
+.form-wrap .btn{width:100%;text-align:center;font-size:1rem}
+.form-note{text-align:center;font-size:.85rem;color:#8d8478;margin-top:14px}
+/* FOOTER */
+footer{background:#1d1915;color:#b9ae9d;padding:64px 0 30px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.foot-grid h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#fff;margin-bottom:14px}
+.foot-grid p,.foot-grid a{font-size:.95rem;display:block;margin-bottom:8px}
+.foot-grid a:hover{color:var(--gold-soft)}
+.socials{display:flex;gap:12px;margin-top:14px}
+.socials a{width:42px;height:42px;border:1px solid rgba(212,185,140,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:.3s}
+.socials a:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;text-align:center;font-size:.85rem;color:#7d7466}
+/* FLOATING WA */
+.wa-float{position:fixed;bottom:26px;right:26px;width:60px;height:60px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(37,211,102,.45);z-index:99;transition:.3s}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+  .ben-grid{grid-template-columns:repeat(2,1fr)}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .nav-links{position:fixed;top:0;right:-100%;width:72%;max-width:320px;height:100vh;background:var(--ivory);flex-direction:column;justify-content:center;gap:28px;transition:.35s;box-shadow:-10px 0 40px rgba(0,0,0,.12)}
+  .nav-links.open{right:0}
+  .menu-toggle{display:block}
+  section{padding:70px 0}
+}
+@media(max-width:600px){
+  .svc-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .form-wrap{padding:30px 22px}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="container nav">
+    <a href="#inicio" class="logo">BEAUTY YOU SALON AND SPA<small>ESTÉTICA · SPA</small></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menú">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="https://wa.me/17872980221?text=Hola%20Beauty%20You%20Salon%20and%20Spa%2C%20quiero%20reservar%20una%20cita.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" class="btn">Reservar</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="container hero-inner">
+    <div class="eyebrow">Estética &amp; Spa — Juana Díaz, Puerto Rico</div>
+    <h1>Tu piel, <em>tu mejor versión</em></h1>
+    <div class="gold-rule"></div>
+    <p class="sub">Faciales personalizados, Tratamientos corporales, Masajes relajantes — reserva tu cita por WhatsApp en menos de un minuto.</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/17872980221?text=Hola%20Beauty%20You%20Salon%20and%20Spa%2C%20quiero%20reservar%20una%20cita.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" class="btn">Reservar por WhatsApp</a>
+      <a href="#servicios" class="btn ghost">Ver servicios</a>
+    </div>
+    <div class="trust">
+      <span><b>★ 5.0</b> (202 reseñas)</span>
+      <span><b>+2,562</b> clientas felices</span>
+      <span><b>7 años</b> de experiencia</span>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="container">
+    <div class="ben-grid">
+      <div class="ben reveal"><div class="ico">💬</div><h3 class="serif">Reserva inmediata</h3><p>Separa tu cita por WhatsApp en menos de un minuto.</p></div>
+      <div class="ben reveal"><div class="ico">✨</div><h3 class="serif">Productos premium</h3><p>Solo líneas profesionales de cuidado de la piel.</p></div>
+      <div class="ben reveal"><div class="ico">🎓</div><h3 class="serif">Especialistas certificadas</h3><p>Manos expertas y trato 100% personalizado.</p></div>
+      <div class="ben reveal"><div class="ico">🕯️</div><h3 class="serif">Ambiente relajante</h3><p>Un oasis de calma en Juana Díaz.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Nuestros servicios</div>
+      <h2>Rituales de <em style="color:var(--gold)">belleza</em></h2>
+      <div class="gold-rule"></div>
+      <p>Tratamientos pensados para ti. Toca cualquier servicio para reservarlo por WhatsApp.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal"><img src="assets/facial.jpg" alt="Faciales personalizados"><div class="card-body"><h3>Faciales personalizados</h3><p>Limpieza profunda, hidratación y luminosidad a tu medida.</p><div class="price">desde $45</div><a href="https://wa.me/17872980221?text=Hola%20Beauty%20You%20Salon%20and%20Spa%2C%20me%20interesa%20el%20servicio%20de%20Faciales%20personalizados.%20%C2%BFMe%20das%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="btn">Reservar</a></div></div>
+      <div class="card reveal"><img src="assets/tratamiento.webp" alt="Tratamientos corporales"><div class="card-body"><h3>Tratamientos corporales</h3><p>Reductivos, moldeo, detox y post-operatorios.</p><div class="price">desde $55</div><a href="https://wa.me/17872980221?text=Hola%20Beauty%20You%20Salon%20and%20Spa%2C%20me%20interesa%20el%20servicio%20de%20Tratamientos%20corporales.%20%C2%BFMe%20das%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="btn">Reservar</a></div></div>
+      <div class="card reveal"><img src="assets/masaje.webp" alt="Masajes relajantes"><div class="card-body"><h3>Masajes relajantes</h3><p>Alivia la tensión y renueva tu energía.</p><div class="price">desde $60</div><a href="https://wa.me/17872980221?text=Hola%20Beauty%20You%20Salon%20and%20Spa%2C%20me%20interesa%20el%20servicio%20de%20Masajes%20relajantes.%20%C2%BFMe%20das%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="btn">Reservar</a></div></div>
+      <div class="card reveal"><img src="assets/unas.jpg" alt="Manicura & pedicura"><div class="card-body"><h3>Manicura & pedicura</h3><p>Uñas perfectas con esmaltado en gel.</p><div class="price">desde $35</div><a href="https://wa.me/17872980221?text=Hola%20Beauty%20You%20Salon%20and%20Spa%2C%20me%20interesa%20el%20servicio%20de%20Manicura%20%26%20pedicura.%20%C2%BFMe%20das%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="btn">Reservar</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="nosotros">
+  <div class="container about-grid">
+    <div class="reveal"><img src="assets/nosotros.jpg" alt="Beauty You Salon and Spa — Juana Díaz"></div>
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--gold);letter-spacing:.4em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px">Nosotros</div>
+      <h2>Bienestar que se <em style="color:var(--gold)">nota</em></h2>
+      <p>En Beauty You Salon and Spa creemos que la belleza empieza con el bienestar. Ubicados en Juana Díaz, Puerto Rico, ofrecemos faciales personalizados, tratamientos corporales, masajes relajantes con productos de calidad profesional y atención personalizada. Reserva tu cita por WhatsApp y vive la experiencia.</p>
+      <div class="stats">
+        <div class="stat"><b>7+</b><span>Años</span></div>
+        <div class="stat"><b>2,562+</b><span>Clientas</span></div>
+        <div class="stat"><b>5.0★</b><span>Rating</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="banner">
+  <div class="container reveal">
+    <h2>"Un oasis de calma en el corazón de Juana Díaz"</h2>
+    <a href="https://wa.me/17872980221?text=Hola%20Beauty%20You%20Salon%20and%20Spa%2C%20quiero%20reservar%20una%20cita.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" class="btn">Agenda tu momento</a>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Galería</div>
+      <h2>Nuestro <em style="color:var(--gold)">espacio</em></h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="gal-grid">
+      <img class="reveal" loading="lazy" src="assets/facial.jpg" alt="Beauty You Salon and Spa — facial"><img class="reveal" loading="lazy" src="assets/masaje.webp" alt="Beauty You Salon and Spa — masaje"><img class="reveal" loading="lazy" src="assets/cejas2.jpg" alt="Beauty You Salon and Spa — cejas2"><img class="reveal" loading="lazy" src="assets/unas.jpg" alt="Beauty You Salon and Spa — unas"><img class="reveal" loading="lazy" src="assets/tratamiento.webp" alt="Beauty You Salon and Spa — tratamiento"><img class="reveal" loading="lazy" src="assets/ambiente.jpg" alt="Beauty You Salon and Spa — ambiente"><img class="reveal" loading="lazy" src="assets/facial2.jpg" alt="Beauty You Salon and Spa — facial2">
+    </div>
+  </div>
+</section>
+
+<section class="testi">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Testimonios</div>
+      <h2>Lo que dicen <em style="color:var(--gold)">nuestras clientas</em></h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="stars">★★★★★</div><p>"Reservé por WhatsApp en un minuto y el trato fue de primera. Volveré pronto."</p><b>Carmen D.</b><span>Juana Díaz</span></div><div class="testi-card reveal"><div class="stars">★★★★★</div><p>"Mis cejas quedaron perfectas, justo como las quería. 100% recomendado."</p><b>Yaritza M.</b><span>Juana Díaz</span></div><div class="testi-card reveal"><div class="stars">★★★★★</div><p>"El ambiente es súper relajante y los precios son justos. Me encantó."</p><b>Paola S.</b><span>Juana Díaz</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Preguntas frecuentes</div>
+      <h2>¿Tienes <em style="color:var(--gold)">dudas?</em></h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Necesito cita o atienden sin cita?<span class="plus">+</span></button><div class="faq-a"><p>Recomendamos reservar por WhatsApp para garantizar tu espacio; también aceptamos visitas sin cita según disponibilidad.</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">¿Qué métodos de pago aceptan?<span class="plus">+</span></button><div class="faq-a"><p>Aceptamos ATH Móvil, tarjetas de crédito y débito, y efectivo.</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">¿Los tratamientos como el microblading duelen?<span class="plus">+</span></button><div class="faq-a"><p>Usamos anestesia tópica para tu comodidad; la mayoría de las clientas siente solo una molestia leve.</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">¿Cuántas sesiones necesito para ver resultados?<span class="plus">+</span></button><div class="faq-a"><p>En faciales verás resultados desde la primera sesión. Los tratamientos corporales reductivos suelen requerir de 6 a 8 sesiones.</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">¿Atienden hombres?<span class="plus">+</span></button><div class="faq-a"><p>Sí, todos nuestros servicios son unisex. ¡Bienvenidos todos!</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">¿Qué debo hacer antes de mi cita?<span class="plus">+</span></button><div class="faq-a"><p>Llega 10 minutos antes. Para faciales, ven sin maquillaje y evita exfoliantes fuertes 48 horas antes.</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">¿Tienen paquetes o promociones?<span class="plus">+</span></button><div class="faq-a"><p>Sí, tenemos paquetes con descuento. Escríbenos por WhatsApp y te enviamos el menú actualizado.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow" style="color:var(--gold-soft)">Contacto</div>
+      <h2>Reserva tu <em style="color:var(--gold-soft)">cita</em></h2>
+      <div class="gold-rule"></div>
+      <p>Completa el formulario y te contactamos por WhatsApp para confirmar.</p>
+    </div>
+    <div class="form-wrap reveal">
+      <form id="bookForm" novalidate>
+        <div class="form-row">
+          <div class="field"><label for="fNombre">Nombre *</label><input id="fNombre" type="text" placeholder="Tu nombre" required></div>
+          <div class="field"><label for="fTel">Teléfono *</label><input id="fTel" type="tel" placeholder="(787) 000-0000" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="fSvc">Servicio</label><select id="fSvc"><option>Faciales personalizados</option><option>Tratamientos corporales</option><option>Masajes relajantes</option><option>Manicura & pedicura</option></select></div>
+          <div class="field"><label for="fFecha">Fecha preferida</label><input id="fFecha" type="date"></div>
+        </div>
+        <div class="field"><label for="fMsg">Mensaje</label><textarea id="fMsg" rows="3" placeholder="Cuéntanos qué necesitas..."></textarea></div>
+        <button type="submit" class="btn">Enviar por WhatsApp</button>
+        <p class="form-note">Al enviar se abrirá WhatsApp con tu solicitud lista.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#inicio" class="logo" style="margin-bottom:12px;display:inline-block">BEAUTY YOU SALON AND SPA<small>ESTÉTICA · SPA</small></a>
+        <p>143 Paseo del Campo, Carr #14 Km 14.5, Juana Díaz</p>
+        <p>Juana Díaz, Puerto Rico</p>
+        <p>📞 787-298-0221</p>
+        <div class="socials"><a href="https://www.instagram.com/beauty_you_salon_spa" target="_blank" rel="noopener" aria-label="Instagram">IG</a></div>
+      </div>
+      <div>
+        <h4>Horario</h4>
+        <p>Lun–Sáb: 9:00am – 7:00pm</p>
+        <p>Domingo: cerrado</p>
+      </div>
+      <div>
+        <h4>Enlaces</h4>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="#contacto">Reservar cita</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Beauty You Salon and Spa · Juana Díaz, Puerto Rico</p>
+      <p style="margin-top:6px">Sitio web de demostración creado por <b style="color:var(--gold-soft)">ManuPro</b> · Tu website profesional por $99/año</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17872980221?text=Hola%20Beauty%20You%20Salon%20and%20Spa%2C%20quiero%20reservar%20una%20cita.%20%C2%BFMe%20ayudas%3F" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 0C7.16 0 0 7.16 0 16c0 2.82.74 5.57 2.14 8L0 32l8.4-2.06A15.93 15.93 0 0 0 16 32c8.84 0 16-7.16 16-16S24.84 0 16 0zm0 29.2a13.2 13.2 0 0 1-6.73-1.84l-.48-.29-4.98 1.22 1.25-4.86-.31-.5A13.16 13.16 0 0 1 2.8 16C2.8 8.72 8.72 2.8 16 2.8S29.2 8.72 29.2 16 23.28 29.2 16 29.2zm7.2-9.86c-.4-.2-2.34-1.15-2.7-1.29-.36-.13-.63-.2-.89.2-.26.4-1.03 1.29-1.26 1.55-.23.27-.46.3-.86.1-.4-.2-1.68-.62-3.2-1.98-1.18-1.06-1.98-2.36-2.21-2.76-.23-.4-.03-.61.17-.81.18-.18.4-.46.6-.69.2-.23.26-.4.4-.66.13-.27.06-.5-.04-.7-.1-.2-.9-2.15-1.23-2.95-.32-.78-.65-.67-.89-.68h-.76c-.27 0-.7.1-1.06.5-.36.4-1.39 1.36-1.39 3.31 0 1.95 1.42 3.84 1.62 4.1.2.27 2.79 4.26 6.77 5.97 3.97 1.71 3.97 1.14 4.69 1.07.72-.07 2.34-.96 2.67-1.88.33-.93.33-1.72.23-1.88-.1-.17-.36-.27-.76-.47z"/></svg>
+</a>
+
+<script>
+// CAMBIAR: número WhatsApp del negocio (formato internacional, sin + ni espacios)
+const WHATSAPP_NUMBER = '17872980221';
+const BUSINESS_NAME = "Beauty You Salon and Spa";
+
+const header = document.getElementById('header');
+addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 40), {passive:true});
+
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+      i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+    });
+    if (!wasOpen) {
+      item.classList.add('open');
+      const a = item.querySelector('.faq-a');
+      a.style.maxHeight = a.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded','true');
+    }
+  });
+});
+
+document.getElementById('bookForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const nombre = document.getElementById('fNombre').value.trim();
+  const tel = document.getElementById('fTel').value.trim();
+  const svc = document.getElementById('fSvc').value;
+  const fecha = document.getElementById('fFecha').value;
+  const msg = document.getElementById('fMsg').value.trim();
+  if (!nombre || !tel) { alert('Por favor completa tu nombre y teléfono.'); return; }
+  let text = 'Hola ' + BUSINESS_NAME + ', soy ' + nombre + '. Quisiera reservar: ' + svc;
+  if (fecha) text += ' para el ' + fecha;
+  text += '. Mi teléfono es ' + tel + '.';
+  if (msg) text += ' ' + msg;
+  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank');
+});
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
