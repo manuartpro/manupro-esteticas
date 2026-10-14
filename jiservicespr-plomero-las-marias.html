@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JIServicesPR | Plomero en Las Marías</title>
+<meta name="description" content="JIServicesPR — Plomería en Las Marías, PR. Destapes, filtraciones, calentadores y emergencias. Estimado gratis.">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--petrol:#0f2e36;--petrol2:#163f49;--copper:#e08a3c;--copper2:#f4b46a;--white:#fff;--gray:#bcd3d9}
+body{font-family:'Rubik',system-ui,sans-serif;background:var(--petrol);color:var(--white);line-height:1.6}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,46,54,.96);backdrop-filter:blur(6px);border-bottom:3px solid var(--copper)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem;gap:.6rem;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.15rem}
+.brand span{color:var(--copper2)}
+.nav-actions{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.phone{color:var(--copper2);font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn{display:inline-block;padding:.65rem 1.3rem;border-radius:8px;font-weight:700;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:#25d366;color:#04220f}
+.btn-call{background:var(--copper);color:#1c0f04}
+main{padding-top:74px}
+.hero{background:linear-gradient(150deg,#0f2e36 0%,#163f49 50%,#1f5560 100%);text-align:center;padding:4.5rem 1.2rem 3.5rem;position:relative;overflow:hidden}
+.hero::before{content:"🔧";position:absolute;font-size:20rem;opacity:.06;top:-2rem;right:-1rem;transform:rotate(-12deg)}
+.tag{display:inline-block;background:var(--copper);color:#1c0f04;font-weight:800;font-size:.8rem;padding:.35rem .9rem;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:800;line-height:1.15}
+.hero h1 span{color:var(--copper2)}
+.hero p{color:var(--gray);font-size:1.15rem;max-width:620px;margin:1rem auto 1.6rem}
+.big-phone{display:block;font-size:clamp(1.8rem,5.5vw,2.6rem);font-weight:800;color:var(--copper2);text-decoration:none;margin-bottom:1.4rem}
+.hero-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+section{max-width:1100px;margin:auto;padding:3rem 1.2rem}
+h2{font-size:1.9rem;font-weight:800;margin-bottom:.4rem}
+h2 .accent{color:var(--copper2)}
+.sub{color:var(--gray);margin-bottom:1.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
+.card{background:var(--petrol2);border:1px solid #2a5f6b;border-radius:12px;padding:1.5rem}
+.card .icon{font-size:2.2rem}
+.card h3{margin:.7rem 0 .4rem;font-size:1.15rem}
+.card p{color:var(--gray);font-size:.95rem}
+.price{display:inline-block;margin-top:.7rem;background:rgba(224,138,60,.12);border:1px solid var(--copper);color:var(--copper2);font-weight:700;padding:.3rem .8rem;border-radius:6px;font-size:.95rem}
+.badges{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;margin-top:1.5rem}
+.badge{background:#123740;border:1px solid #2a5f6b;padding:.7rem 1.2rem;border-radius:30px;font-weight:600;font-size:.92rem}
+.badge::before{content:"✔ ";color:var(--copper)}
+.about{background:var(--petrol2);border-radius:14px;padding:2.2rem}
+.about p{color:var(--gray);margin-bottom:.8rem}
+.faq-item{background:var(--petrol2);border:1px solid #2a5f6b;border-radius:10px;margin-bottom:.7rem;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-family:inherit;font-weight:700;font-size:1rem;text-align:left;padding:1rem 1.2rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:"+";color:var(--copper);font-size:1.4rem}
+.faq-item.open .faq-q::after{content:"−"}
+.faq-a{display:none;padding:0 1.2rem 1.1rem;color:var(--gray)}
+.faq-item.open .faq-a{display:block}
+.contact-box{background:linear-gradient(135deg,#163f49,#1f5560);border:1px solid #2a5f6b;border-radius:14px;padding:2.2rem;text-align:center}
+.contact-box .btn{margin:.4rem}
+footer{background:#081d22;text-align:center;padding:1.6rem 1rem;color:#7fa3ac;font-size:.85rem}
+footer .credit{margin-top:.4rem;font-size:.78rem;color:#5d7f88}
+@media(max-width:600px){.nav{justify-content:center}.phone{font-size:.95rem}}
+</style>
+</head>
+<body>
+<header>
+<nav class="nav">
+<div class="brand">🔧 JI<span>ServicesPR</span></div>
+<div class="nav-actions">
+<a class="phone" href="tel:+17876292306">📞 (787) 629-2306</a>
+<a class="btn btn-wa" href="https://wa.me/17876292306" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero" style="max-width:none;padding:4.5rem 1.2rem 3.5rem">
+<div class="tag">Plomería · Las Marías, PR</div>
+<h1>JI<span>ServicesPR</span></h1>
+<p>Plomero en Las Marías: destapes, filtraciones, calentadores y emergencias. Estimado gratis, trabajo garantizado.</p>
+<a class="big-phone" href="tel:+17876292306">(787) 629-2306</a>
+<div class="hero-btns">
+<a class="btn btn-call" href="tel:+17876292306">📞 Llamar ahora</a>
+<a class="btn btn-wa" href="https://wa.me/17876292306" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</section>
+
+<section>
+<h2>Nuestros <span class="accent">servicios</span></h2>
+<p class="sub">Precios de propuesta — estimado gratis antes de empezar.</p>
+<div class="grid">
+<div class="card"><div class="icon">🚿</div><h3>Destapes</h3><p>Destape de tuberías, desagües, inodoros y líneas principales con equipo profesional.</p><span class="price">Destape desde $75</span></div>
+<div class="card"><div class="icon">💧</div><h3>Filtraciones y tuberías</h3><p>Detección y reparación de filtraciones, reemplazo de tuberías y llaves defectuosas.</p><span class="price">Reparación de filtración desde $60</span></div>
+<div class="card"><div class="icon">🔥</div><h3>Calentadores</h3><p>Instalación y reparación de calentadores de agua eléctricos y de gas.</p><span class="price">Estimado gratis</span></div>
+<div class="card"><div class="icon">🚨</div><h3>Emergencias</h3><p>Tuberías rotas, inundaciones y urgencias de plomería con respuesta rápida.</p><span class="price">Estimado gratis</span></div>
+</div>
+<div class="badges">
+<span class="badge">Servicio garantizado</span>
+<span class="badge">Estimado gratis</span>
+<span class="badge">Respuesta rápida</span>
+<span class="badge">Atención en español</span>
+</div>
+</section>
+
+<section>
+<div class="about">
+<h2>Sobre <span class="accent">nosotros</span></h2>
+<p>JIServicesPR es un servicio de plomería que atiende a Las Marías y pueblos cercanos. Resolvemos desde un destape sencillo hasta reparaciones completas de tubería, siempre con diagnóstico honesto y precio acordado por adelantado.</p>
+<p>Sabemos que una emergencia de plomería no espera: por eso respondemos rápido por llamada o WhatsApp. Tu estimado es gratis y sin compromiso.</p>
+</div>
+</section>
+
+<section>
+<h2>Preguntas <span class="accent">frecuentes</span></h2>
+<p class="sub">Lo que más nos preguntan nuestros clientes.</p>
+<div class="faq-item"><button class="faq-q">¿El estimado es realmente gratis?</button><div class="faq-a">Sí. El estimado es gratis y sin compromiso: evaluamos el trabajo y te damos el precio antes de empezar.</div></div>
+<div class="faq-item"><button class="faq-q">¿Cuánto cuesta un destape?</button><div class="faq-a">Los destapes comienzan desde $75, según el tipo de tubería y la complejidad del tapón.</div></div>
+<div class="faq-item"><button class="faq-q">¿Atienden emergencias?</button><div class="faq-a">Sí, atendemos emergencias de plomería como tuberías rotas e inundaciones. Llámanos o escríbenos por WhatsApp.</div></div>
+<div class="faq-item"><button class="faq-q">¿Qué áreas cubren?</button><div class="faq-a">Estamos en Las Marías y servimos pueblos cercanos. Confirma cobertura por WhatsApp con tu sector.</div></div>
+<div class="faq-item"><button class="faq-q">¿Reparan calentadores?</button><div class="faq-a">Sí, instalamos y reparamos calentadores de agua eléctricos y de gas, con estimado gratis.</div></div>
+</section>
+
+<section>
+<div class="contact-box">
+<h2>Contacto y <span class="accent">ubicación</span></h2>
+<p class="sub">📍 Las Marías, Puerto Rico</p>
+<a class="big-phone" href="tel:+17876292306">(787) 629-2306</a>
+<div>
+<a class="btn btn-call" href="tel:+17876292306">📞 Llamar</a>
+<a class="btn btn-wa" href="https://wa.me/17876292306" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<p>© 2026 JIServicesPR · Las Marías, PR</p>
+<p class="credit">Demostración creada por ManuPro</p>
+</footer>
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});
+</script>
+</body>
+</html>

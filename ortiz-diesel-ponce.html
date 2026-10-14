@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centro de Piezas y Reparaciones Ortiz | Mecánica Diesel en Ponce</title>
+<meta name="description" content="Centro de Piezas y Reparaciones Ortiz — Más de 40 años en mecánica diesel en Ponce, PR. Reparación de motores, venta de piezas y mantenimiento de flotas.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--carbon:#14161b;--carbon2:#1d2027;--diesel:#ff6b1a;--diesel2:#ffa25e;--white:#fff;--gray:#b9bec9}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--carbon);color:var(--white);line-height:1.6}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(20,22,27,.96);backdrop-filter:blur(6px);border-bottom:3px solid var(--diesel)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem;gap:.6rem;flex-wrap:wrap}
+.brand{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:.5px}
+.brand span{color:var(--diesel)}
+.nav-actions{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.phone{color:var(--diesel2);font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn{display:inline-block;padding:.65rem 1.3rem;border-radius:8px;font-weight:700;text-decoration:none;transition:transform .15s;font-family:'Inter',sans-serif}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:#25d366;color:#04220f}
+.btn-call{background:var(--diesel);color:#1c0d02}
+main{padding-top:74px}
+.hero{background:linear-gradient(140deg,#14161b 0%,#1d2027 50%,#33241a 100%);text-align:center;padding:4.5rem 1.2rem 3.5rem;position:relative;overflow:hidden}
+.hero::before{content:"🚛";position:absolute;font-size:20rem;opacity:.05;top:-2rem;left:-2rem}
+.tag{display:inline-block;background:var(--diesel);color:#1c0d02;font-weight:800;font-size:.8rem;padding:.35rem .9rem;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem;font-family:'Inter',sans-serif}
+.hero h1{font-family:'Oswald',sans-serif;font-size:clamp(2rem,6vw,3.4rem);font-weight:700;line-height:1.15;text-transform:uppercase}
+.hero h1 span{color:var(--diesel)}
+.hero p{color:var(--gray);font-size:1.15rem;max-width:640px;margin:1rem auto 1.6rem}
+.years{display:inline-block;border:2px solid var(--diesel);color:var(--diesel2);font-weight:700;padding:.4rem 1.1rem;border-radius:8px;margin-bottom:1.2rem}
+.big-phone{display:block;font-size:clamp(1.8rem,5.5vw,2.6rem);font-weight:800;color:var(--diesel);text-decoration:none;margin-bottom:1.4rem}
+.hero-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+section{max-width:1100px;margin:auto;padding:3rem 1.2rem}
+h2{font-family:'Oswald',sans-serif;font-size:1.9rem;font-weight:600;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.5px}
+h2 .accent{color:var(--diesel)}
+.sub{color:var(--gray);margin-bottom:1.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
+.card{background:var(--carbon2);border:1px solid #3a3f4a;border-radius:12px;padding:1.5rem}
+.card .icon{font-size:2.2rem}
+.card h3{margin:.7rem 0 .4rem;font-size:1.15rem}
+.card p{color:var(--gray);font-size:.95rem}
+.price{display:inline-block;margin-top:.7rem;background:rgba(255,107,26,.12);border:1px solid var(--diesel);color:var(--diesel2);font-weight:700;padding:.3rem .8rem;border-radius:6px;font-size:.95rem}
+.badges{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;margin-top:1.5rem}
+.badge{background:#1a1d24;border:1px solid #3a3f4a;padding:.7rem 1.2rem;border-radius:30px;font-weight:600;font-size:.92rem}
+.badge::before{content:"✔ ";color:var(--diesel)}
+.about{background:var(--carbon2);border-radius:14px;padding:2.2rem}
+.about p{color:var(--gray);margin-bottom:.8rem}
+.faq-item{background:var(--carbon2);border:1px solid #3a3f4a;border-radius:10px;margin-bottom:.7rem;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-family:inherit;font-weight:700;font-size:1rem;text-align:left;padding:1rem 1.2rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:"+";color:var(--diesel);font-size:1.4rem}
+.faq-item.open .faq-q::after{content:"−"}
+.faq-a{display:none;padding:0 1.2rem 1.1rem;color:var(--gray)}
+.faq-item.open .faq-a{display:block}
+.contact-box{background:linear-gradient(135deg,#1d2027,#33241a);border:1px solid #3a3f4a;border-radius:14px;padding:2.2rem;text-align:center}
+.contact-box .btn{margin:.4rem}
+footer{background:#0b0c0f;text-align:center;padding:1.6rem 1rem;color:#8a909c;font-size:.85rem}
+footer .credit{margin-top:.4rem;font-size:.78rem;color:#62676f}
+@media(max-width:600px){.nav{justify-content:center}.phone{font-size:.95rem}}
+</style>
+</head>
+<body>
+<header>
+<nav class="nav">
+<div class="brand">⚙️ Ortiz <span>Diesel</span></div>
+<div class="nav-actions">
+<a class="phone" href="tel:+17876177124">📞 (787) 617-7124</a>
+<a class="btn btn-wa" href="https://wa.me/17876177124" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero" style="max-width:none;padding:4.5rem 1.2rem 3.5rem">
+<div class="tag">Mecánica Diesel · Ponce, PR</div>
+<h1>Centro de Piezas y<br>Reparaciones <span>Ortiz</span></h1>
+<p>Especialistas en motores diesel: reparación, venta de piezas y mantenimiento de flotas. Diagnóstico preciso y trabajo serio.</p>
+<div class="years">🏆 Más de 40 años de experiencia</div><br>
+<a class="big-phone" href="tel:+17876177124">(787) 617-7124</a>
+<div class="hero-btns">
+<a class="btn btn-call" href="tel:+17876177124">📞 Llamar ahora</a>
+<a class="btn btn-wa" href="https://wa.me/17876177124" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</section>
+
+<section>
+<h2>Nuestros <span class="accent">servicios</span></h2>
+<p class="sub">Precios de propuesta — cotización final según el vehículo y el trabajo.</p>
+<div class="grid">
+<div class="card"><div class="icon">🔩</div><h3>Reparación de motores diesel</h3><p>Overhaul, inyección, turbos y reparación mayor de motores diesel livianos y pesados.</p><span class="price">Diagnóstico desde $60</span></div>
+<div class="card"><div class="icon">🧩</div><h3>Venta de piezas</h3><p>Piezas y repuestos para motores diesel: filtros, inyectores, bombas y más.</p><span class="price">Piezas a cotización</span></div>
+<div class="card"><div class="icon">🚚</div><h3>Mantenimiento de flotas</h3><p>Programas de mantenimiento preventivo para camiones y flotas comerciales.</p><span class="price">Mantenimiento desde $120</span></div>
+<div class="card"><div class="icon">💻</div><h3>Diagnóstico computarizado</h3><p>Escaneo y diagnóstico electrónico para identificar la falla exacta sin adivinar.</p><span class="price">Diagnóstico desde $60</span></div>
+</div>
+<div class="badges">
+<span class="badge">Más de 40 años de experiencia</span>
+<span class="badge">Servicio garantizado</span>
+<span class="badge">Diagnóstico preciso</span>
+<span class="badge">Atención en español</span>
+</div>
+</section>
+
+<section>
+<div class="about">
+<h2>Sobre <span class="accent">nosotros</span></h2>
+<p>El Centro de Piezas y Reparaciones Ortiz lleva más de 40 años dedicado a la mecánica diesel en Ponce, Puerto Rico. Cuatro décadas de experiencia respaldan cada diagnóstico, cada reparación y cada pieza que vendemos.</p>
+<p>Atendemos desde pickups diesel hasta camiones y flotas comerciales, combinando el conocimiento de toda una vida con diagnóstico moderno. Llámanos o escríbenos por WhatsApp y deja tu equipo en manos expertas.</p>
+</div>
+</section>
+
+<section>
+<h2>Preguntas <span class="accent">frecuentes</span></h2>
+<p class="sub">Lo que más nos preguntan nuestros clientes.</p>
+<div class="faq-item"><button class="faq-q">¿Cuánto cuesta el diagnóstico?</button><div class="faq-a">El diagnóstico computarizado comienza desde $60 e identifica la falla exacta de tu motor diesel.</div></div>
+<div class="faq-item"><button class="faq-q">¿Venden piezas sueltas?</button><div class="faq-a">Sí, vendemos piezas y repuestos para motores diesel. Escríbenos por WhatsApp con el modelo y te cotizamos.</div></div>
+<div class="faq-item"><button class="faq-q">¿Dan mantenimiento a flotas?</button><div class="faq-a">Sí, ofrecemos programas de mantenimiento preventivo para flotas comerciales desde $120 por servicio.</div></div>
+<div class="faq-item"><button class="faq-q">¿Reparan camiones pesados?</button><div class="faq-a">Sí, trabajamos motores diesel livianos y pesados. Llámanos al (787) 617-7124 para coordinar.</div></div>
+<div class="faq-item"><button class="faq-q">¿Dónde están ubicados?</button><div class="faq-a">Estamos en Ponce, Puerto Rico. Contáctanos por llamada o WhatsApp para la dirección exacta y coordinar tu visita.</div></div>
+</section>
+
+<section>
+<div class="contact-box">
+<h2>Contacto y <span class="accent">ubicación</span></h2>
+<p class="sub">📍 Ponce, Puerto Rico</p>
+<a class="big-phone" href="tel:+17876177124">(787) 617-7124</a>
+<div>
+<a class="btn btn-call" href="tel:+17876177124">📞 Llamar</a>
+<a class="btn btn-wa" href="https://wa.me/17876177124" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<p>© 2026 Centro de Piezas y Reparaciones Ortiz · Ponce, PR</p>
+<p class="credit">Demostración creada por ManuPro</p>
+</footer>
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});
+</script>
+</body>
+</html>

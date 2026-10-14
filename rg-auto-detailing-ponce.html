@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RG Auto Detailing — Ponce | PPF & Recubrimiento Cerámico</title>
+<meta name="description" content="RG Auto Detailing en Ponce, Puerto Rico. Especialistas en PPF (paint protection film), recubrimiento cerámico, detailing completo y restauración de interiores. 5.0★ en Google.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--negro:#0b0c0e;--grafito:#15171b;--plata:#c9d1d9;--rojo:#e01e26;--blanco:#f5f6f8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--negro);color:var(--blanco);line-height:1.6}
+h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1px}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,12,14,.96);border-bottom:1px solid #2a2d33;backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1200px;margin:0 auto}
+.logo{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.25rem;letter-spacing:2px}
+.logo span{color:var(--rojo)}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.tel{font-weight:600;font-size:.95rem;color:var(--plata)}
+.btn{display:inline-block;padding:12px 26px;border-radius:6px;font-weight:600;font-size:1rem;transition:transform .15s,box-shadow .15s;border:none;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-rojo{background:var(--rojo);color:#fff;box-shadow:0 4px 18px rgba(224,30,38,.45)}
+.btn-wa{background:#22a355;color:#fff}
+.btn-outline{border:2px solid var(--plata);color:var(--blanco);background:transparent}
+/* HERO */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:110px 0 60px;
+background:radial-gradient(1200px 500px at 70% -10%,rgba(224,30,38,.22),transparent 60%),
+linear-gradient(135deg,#0b0c0e 0%,#15171b 55%,#0e0f12 100%)}
+.hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.018) 46px 92px);pointer-events:none}
+.hero .container{position:relative;z-index:1}
+.badge{display:inline-block;background:var(--rojo);color:#fff;font-size:.8rem;font-weight:600;padding:6px 14px;border-radius:30px;letter-spacing:1px;margin-bottom:18px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.05;margin-bottom:14px}
+.hero h1 .red{color:var(--rojo)}
+.tagline{color:var(--plata);font-size:clamp(1.05rem,2.4vw,1.35rem);max-width:640px;margin-bottom:28px}
+.hero-tel{display:block;font-family:'Oswald',sans-serif;font-size:clamp(1.8rem,5vw,3rem);font-weight:700;color:#fff;margin-bottom:22px;letter-spacing:2px}
+.hero-tel:hover{color:var(--rojo)}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.rating{margin-top:22px;color:var(--plata);font-size:.95rem}
+.stars{color:#ffc107;letter-spacing:2px}
+/* SECTIONS */
+section{padding:70px 0}
+section:nth-of-type(even){background:var(--grafito)}
+.sec-title{font-size:clamp(1.6rem,4vw,2.4rem);text-align:center;margin-bottom:10px}
+.sec-title .red{color:var(--rojo)}
+.sec-sub{text-align:center;color:var(--plata);max-width:640px;margin:0 auto 40px}
+/* SERVICIOS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:#1b1e24;border:1px solid #2a2d33;border-radius:12px;padding:30px 24px;text-align:center;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-6px);border-color:var(--rojo)}
+.card .icon{font-size:3rem;margin-bottom:14px}
+.card h3{font-size:1.15rem;margin-bottom:10px}
+.card p{color:var(--plata);font-size:.95rem;margin-bottom:14px}
+.precio{display:inline-block;background:rgba(224,30,38,.12);border:1px solid var(--rojo);color:#fff;padding:6px 16px;border-radius:30px;font-weight:600;font-size:.9rem}
+/* NOSOTROS */
+.nosotros{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.nosotros p{color:var(--plata);margin-bottom:14px}
+.puntos{list-style:none;margin-top:18px}
+.puntos li{margin-bottom:12px;padding-left:32px;position:relative}
+.puntos li::before{content:"✔";position:absolute;left:0;color:var(--rojo);font-weight:700}
+.visual{height:320px;border-radius:12px;background:linear-gradient(135deg,#2a2d33,#15171b 60%),radial-gradient(400px 200px at 50% 30%,rgba(224,30,38,.35),transparent 70%);display:flex;align-items:center;justify-content:center;font-size:5rem;border:1px solid #2a2d33}
+/* TESTIMONIOS */
+.testis{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.testi{background:#1b1e24;border:1px solid #2a2d33;border-radius:12px;padding:26px}
+.testi .stars{font-size:1.1rem;margin-bottom:10px}
+.testi p{color:var(--plata);font-style:italic;margin-bottom:12px}
+.g-rating{background:rgba(255,255,255,.04);border:1px solid #2a2d33;border-radius:12px;padding:26px;text-align:center;margin-bottom:26px}
+/* FAQ */
+.faq-item{background:#1b1e24;border:1px solid #2a2d33;border-radius:10px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1rem;font-weight:600;text-align:left;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Inter',sans-serif}
+.faq-q::after{content:"+";font-size:1.4rem;color:var(--rojo)}
+.faq-item.open .faq-q::after{content:"−"}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--plata)}
+.faq-a p{padding:0 20px 18px}
+/* CONTACTO */
+.contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.info-line{margin-bottom:18px;font-size:1.05rem}
+.info-line .ico{margin-right:10px}
+.big-tel{font-family:'Oswald',sans-serif;font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;color:#fff;letter-spacing:1px}
+.big-tel:hover{color:var(--rojo)}
+form{background:#1b1e24;border:1px solid #2a2d33;border-radius:12px;padding:28px}
+form label{display:block;margin-bottom:14px;font-size:.9rem;color:var(--plata)}
+form input,form textarea{width:100%;margin-top:6px;padding:12px;border-radius:8px;border:1px solid #3a3d44;background:#111214;color:#fff;font-size:1rem;font-family:'Inter',sans-serif}
+form textarea{resize:vertical;min-height:110px}
+/* FOOTER */
+footer{background:#08090b;border-top:1px solid #2a2d33;padding:30px 0;text-align:center;color:#8b9099;font-size:.85rem}
+footer .foot-name{color:#fff;font-family:'Oswald',sans-serif;letter-spacing:2px;margin-bottom:8px}
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:99;width:60px;height:60px;border-radius:50%;background:#22a355;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 6px 20px rgba(34,163,85,.5);transition:transform .15s}
+.wa-float:hover{transform:scale(1.1)}
+@media(max-width:768px){.nosotros,.contacto-grid{grid-template-columns:1fr}.visual{height:220px}.nav .tel{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">RG <span>AUTO</span> DETAILING</div>
+    <div class="nav-cta">
+      <a class="tel" href="tel:+17876472414">📞 (787) 647-2414</a>
+      <a class="btn btn-rojo" href="https://wa.me/17876472414" target="_blank" rel="noopener" style="padding:9px 18px;font-size:.9rem">WhatsApp</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <span class="badge">PONCE · PUERTO RICO</span>
+    <h1>RG Auto <span class="red">Detailing</span></h1>
+    <p class="tagline">Especialistas en PPF (paint protection film) y recubrimiento cerámico. El acabado showroom que tu carro merece, con protección de nivel profesional.</p>
+    <a class="hero-tel" href="tel:+17876472414">📞 (787) 647-2414</a>
+    <div class="hero-btns">
+      <a class="btn btn-wa" href="https://wa.me/17876472414" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
+      <a class="btn btn-outline" href="#servicios">Ver servicios</a>
+    </div>
+    <p class="rating"><span class="stars">★★★★★</span> 5.0★ en Google · 19 reseñas</p>
+  </div>
+</div>
+
+<section id="servicios">
+  <div class="container">
+    <h2 class="sec-title">Nuestros <span class="red">servicios</span></h2>
+    <p class="sec-sub">Precios de referencia. Escríbenos por WhatsApp para una cotización exacta según tu vehículo.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🚗</div>
+        <h3>Detailing completo</h3>
+        <p>Lavado profundo interior y exterior, descontaminación de pintura, cera selladora y detallado de llantas, cristales y molduras.</p>
+        <span class="precio">desde $99</span>
+      </div>
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3>PPF · Paint Protection Film</h3>
+        <p>Película de protección contra piedras, rayones y manchas. La defensa definitiva para la pintura de tu carro, instalada por especialistas.</p>
+        <span class="precio">Cotización gratis</span>
+      </div>
+      <div class="card">
+        <div class="icon">✨</div>
+        <h3>Recubrimiento cerámico</h3>
+        <p>Protección hidrofóbica de larga duración con brillo espejo. Corrección de pintura incluida antes de la aplicación.</p>
+        <span class="precio">desde $349</span>
+      </div>
+      <div class="card">
+        <div class="icon">🪑</div>
+        <h3>Restauración de interiores</h3>
+        <p>Extracción profunda de tapicería, limpieza y acondicionamiento de cuero, eliminación de olores y manchas difíciles.</p>
+        <span class="precio">desde $99</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="container">
+    <h2 class="sec-title">Sobre <span class="red">nosotros</span></h2>
+    <p class="sec-sub">RG Auto Detailing · Ponce, Puerto Rico</p>
+    <div class="nosotros">
+      <div>
+        <p>Somos un taller de detailing en <strong>Ponce</strong> enfocado en la protección y estética automotriz de alto nivel. Nuestro fuerte: <strong>PPF (paint protection film)</strong> y <strong>recubrimientos cerámicos</strong>, instalados y aplicados con precisión profesional.</p>
+        <p>Cada vehículo sale de nuestro taller con un acabado digno de showroom y una protección real contra el sol, la lluvia y las carreteras de Puerto Rico.</p>
+        <ul class="puntos">
+          <li>Especialistas certificados en PPF y cerámica</li>
+          <li>Productos profesionales de grado premium</li>
+          <li>5.0★ en Google · 19 reseñas de clientes reales</li>
+          <li>Atención personalizada en Ponce y área sur</li>
+        </ul>
+      </div>
+      <div class="visual">🚘</div>
+    </div>
+  </div>
+</section>
+
+<section id="resenas">
+  <div class="container">
+    <h2 class="sec-title">Lo que dicen <span class="red">nuestros clientes</span></h2>
+    <p class="sec-sub">Calificación real de Google</p>
+    <div class="g-rating">
+      <div class="stars" style="font-size:2rem">★★★★★</div>
+      <p style="font-size:1.4rem;font-weight:700;margin:8px 0">5.0 sobre 5</p>
+      <p style="color:var(--plata)">Basado en 19 reseñas en Google</p>
+    </div>
+    <div class="testis">
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>"El carro quedó como nuevo, el brillo es impresionante. Se nota el profesionalismo en cada detalle."</p>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>"Me instalaron el PPF y quedó perfecto, ni se nota. Servicio puntual y excelente atención."</p>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>"El interior de mi carro tenía manchas viejas y las sacaron todas. Recomendados 100%."</p>
+      </div>
+    </div>
+    <p style="text-align:center;color:#8b9099;font-size:.85rem;margin-top:18px">Testimonios de muestra con fines ilustrativos.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container" style="max-width:760px">
+    <h2 class="sec-title">Preguntas <span class="red">frecuentes</span></h2>
+    <p class="sec-sub">Respuestas rápidas</p>
+    <div class="faq-item">
+      <button class="faq-q">¿Qué es el PPF y cuánto dura?</button>
+      <div class="faq-a"><p>El PPF (paint protection film) es una película transparente que protege la pintura contra piedras, rayones y manchas. Instalado correctamente, puede durar de 5 a 10 años.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Qué diferencia hay entre cera y recubrimiento cerámico?</button>
+      <div class="faq-a"><p>La cera dura semanas o pocos meses; el recubrimiento cerámico protege por años, con mayor resistencia a químicos, rayos UV y manchas, además de un brillo superior.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Necesito cita o atienden sin cita?</button>
+      <div class="faq-a"><p>Trabajamos con cita para garantizar el tiempo que cada vehículo merece. Escríbenos por WhatsApp al (787) 647-2414 y separamos tu espacio.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Cuánto tarda un detailing completo?</button>
+      <div class="faq-a"><p>Depende del tamaño y condición del vehículo: entre 3 y 6 horas. La cerámica y el PPF pueden requerir 1 a 3 días de trabajo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Dónde están ubicados?</button>
+      <div class="faq-a"><p>Estamos en Ponce, Puerto Rico. Escríbenos por WhatsApp y te compartimos la ubicación exacta.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container">
+    <h2 class="sec-title">Contacto & <span class="red">ubicación</span></h2>
+    <p class="sec-sub">Ponce, Puerto Rico</p>
+    <div class="contacto-grid">
+      <div>
+        <div class="info-line"><span class="ico">📞</span><a class="big-tel" href="tel:+17876472414">(787) 647-2414</a></div>
+        <div class="info-line"><span class="ico">💬</span><a href="https://wa.me/17876472414" target="_blank" rel="noopener" style="color:#22a355;font-weight:600">WhatsApp directo</a></div>
+        <div class="info-line"><span class="ico">📍</span>Ponce, Puerto Rico</div>
+        <div class="info-line"><span class="ico">🕐</span>Lun–Sáb · con cita previa</div>
+        <div class="info-line"><span class="ico">⭐</span><span class="stars">★★★★★</span> 5.0 · 19 reseñas en Google</div>
+      </div>
+      <form id="contactForm">
+        <label>Nombre<input type="text" name="nombre" required placeholder="Tu nombre"></label>
+        <label>Teléfono<input type="tel" name="telefono" required placeholder="(787) 000-0000"></label>
+        <label>Servicio de interés<input type="text" name="servicio" placeholder="Ej. Recubrimiento cerámico"></label>
+        <label>Mensaje<textarea name="mensaje" placeholder="Cuéntanos sobre tu vehículo..."></textarea></label>
+        <button class="btn btn-wa" type="submit" style="width:100%">Enviar por WhatsApp 💬</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-name">RG AUTO DETAILING · PONCE</div>
+    <p>📞 <a href="tel:+17876472414">(787) 647-2414</a> · 💬 <a href="https://wa.me/17876472414" target="_blank" rel="noopener">WhatsApp</a></p>
+    <p style="margin-top:10px;color:#5f646d">Demostración creada por ManuPro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17876472414" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement, ans=item.querySelector('.faq-a');
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+  });
+});
+document.getElementById('contactForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const msg=`Hola RG Auto Detailing, soy ${f.get('nombre')} (${f.get('telefono')}). Me interesa: ${f.get('servicio')||'info general'}. ${f.get('mensaje')||''}`;
+  window.open('https://wa.me/17876472414?text='+encodeURIComponent(msg.trim()),'_blank');
+});
+</script>
+</body>
+</html>

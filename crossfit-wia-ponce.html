@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrossFit WIA — Ponce | Entrena fuerte, vive fuerte</title>
+<meta name="description" content="CrossFit WIA en Ponce, Puerto Rico. Clases de CrossFit, entrenamiento personal y clase de prueba gratis. Síguenos en Facebook: wiacrossfit.">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--carbon:#111214;--carbon2:#1a1c1f;--lima:#c6f52e;--blanco:#f7f8f5;--gris:#a9b0a3}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--carbon);color:var(--blanco);line-height:1.6}
+h1,h2,h3{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:1px}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,18,20,.96);border-bottom:3px solid var(--lima)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1200px;margin:0 auto}
+.logo{font-family:'Archivo Black',sans-serif;font-size:1.2rem}
+.logo span{color:var(--lima)}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.tel{font-weight:600;font-size:.95rem;color:var(--gris)}
+.btn{display:inline-block;padding:13px 28px;border-radius:8px;font-weight:700;font-size:1rem;border:none;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px) skewX(-2deg)}
+.btn-lima{background:var(--lima);color:#111}
+.btn-wa{background:#22a355;color:#fff}
+.btn-outline{border:2px solid var(--lima);color:var(--lima);background:transparent}
+.hero{min-height:92vh;display:flex;align-items:center;padding:110px 0 60px;position:relative;overflow:hidden;
+background:radial-gradient(900px 420px at 80% 10%,rgba(198,245,46,.14),transparent 60%),linear-gradient(160deg,#111214 0%,#1a1c1f 60%,#101204 100%)}
+.hero::before{content:"💪";position:absolute;right:6%;top:18%;font-size:clamp(6rem,18vw,14rem);opacity:.07;transform:rotate(-12deg)}
+.badge{display:inline-block;background:var(--lima);color:#111;font-size:.8rem;font-weight:700;padding:6px 16px;border-radius:4px;letter-spacing:2px;margin-bottom:18px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1;margin-bottom:14px}
+.hero h1 .volt{color:var(--lima)}
+.tagline{color:var(--gris);font-size:clamp(1.05rem,2.4vw,1.35rem);max-width:620px;margin-bottom:26px}
+.hero-tel{display:block;font-family:'Archivo Black',sans-serif;font-size:clamp(1.8rem,5vw,3rem);color:#fff;margin-bottom:22px}
+.hero-tel:hover{color:var(--lima)}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+section{padding:70px 0}
+section:nth-of-type(even){background:var(--carbon2)}
+.sec-title{font-size:clamp(1.6rem,4vw,2.4rem);text-align:center;margin-bottom:10px}
+.sec-title .volt{color:var(--lima)}
+.sec-sub{text-align:center;color:var(--gris);max-width:640px;margin:0 auto 40px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:#141518;border:2px solid #26282c;border-radius:12px;padding:30px 24px;text-align:center;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-6px);border-color:var(--lima)}
+.card .icon{font-size:3rem;margin-bottom:14px}
+.card h3{font-size:1.1rem;margin-bottom:10px}
+.card p{color:var(--gris);font-size:.95rem;margin-bottom:14px}
+.precio{display:inline-block;background:rgba(198,245,46,.12);border:1px solid var(--lima);color:var(--lima);padding:6px 16px;border-radius:30px;font-weight:700;font-size:.9rem}
+.destacada{border-color:var(--lima);position:relative}
+.destacada::before{content:"MÁS POPULAR";position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--lima);color:#111;font-size:.7rem;font-weight:700;padding:3px 12px;border-radius:4px;letter-spacing:1px}
+.nosotros{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.nosotros p{color:var(--gris);margin-bottom:14px}
+.puntos{list-style:none;margin-top:18px}
+.puntos li{margin-bottom:12px;padding-left:32px;position:relative}
+.puntos li::before{content:"⚡";position:absolute;left:0}
+.visual{height:320px;border-radius:12px;background:linear-gradient(135deg,#22241f,#141518 60%),radial-gradient(400px 200px at 50% 30%,rgba(198,245,46,.25),transparent 70%);display:flex;align-items:center;justify-content:center;font-size:5rem;border:2px solid #26282c}
+.horario{background:#141518;border:2px solid #26282c;border-radius:12px;padding:28px;margin-top:30px}
+.horario h3{color:var(--lima);margin-bottom:14px}
+.horario table{width:100%;border-collapse:collapse;color:var(--gris)}
+.horario td{padding:8px 4px;border-bottom:1px solid #26282c}
+.horario td:last-child{text-align:right;color:#fff;font-weight:600}
+.testis{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.testi{background:#141518;border:2px solid #26282c;border-radius:12px;padding:26px}
+.testi p{color:var(--gris);font-style:italic}
+.faq-item{background:#141518;border:2px solid #26282c;border-radius:10px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1rem;font-weight:600;text-align:left;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Inter',sans-serif}
+.faq-q::after{content:"+";font-size:1.4rem;color:var(--lima)}
+.faq-item.open .faq-q::after{content:"−"}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--gris)}
+.faq-a p{padding:0 20px 18px}
+.contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.info-line{margin-bottom:18px;font-size:1.05rem}
+.info-line .ico{margin-right:10px}
+.big-tel{font-family:'Archivo Black',sans-serif;font-size:clamp(1.5rem,4vw,2.1rem);color:#fff}
+.big-tel:hover{color:var(--lima)}
+form{background:#141518;border:2px solid #26282c;border-radius:12px;padding:28px}
+form label{display:block;margin-bottom:14px;font-size:.9rem;color:var(--gris)}
+form input,form textarea,form select{width:100%;margin-top:6px;padding:12px;border-radius:8px;border:1px solid #33363b;background:#0e0f10;color:#fff;font-size:1rem;font-family:'Inter',sans-serif}
+form textarea{resize:vertical;min-height:100px}
+footer{background:#0a0b0c;border-top:3px solid var(--lima);padding:30px 0;text-align:center;color:#8b9099;font-size:.85rem}
+footer .foot-name{color:#fff;font-family:'Archivo Black',sans-serif;margin-bottom:8px}
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:99;width:60px;height:60px;border-radius:50%;background:#22a355;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 6px 20px rgba(34,163,85,.5);transition:transform .15s}
+.wa-float:hover{transform:scale(1.1)}
+@media(max-width:768px){.nosotros,.contacto-grid{grid-template-columns:1fr}.visual{height:220px}.nav .tel{display:none}.hero::before{top:auto;bottom:6%}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">CROSSFIT <span>WIA</span></div>
+    <div class="nav-cta">
+      <a class="tel" href="tel:+17874322607">📞 (787) 432-2607</a>
+      <a class="btn btn-lima" href="https://wa.me/17874322607" target="_blank" rel="noopener" style="padding:9px 18px;font-size:.9rem">WhatsApp</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <span class="badge">PONCE · PUERTO RICO</span>
+    <h1>CrossFit <span class="volt">WIA</span></h1>
+    <p class="tagline">Entrena fuerte, vive fuerte. Comunidad, coaching de verdad y resultados reales — tu primera clase es gratis.</p>
+    <a class="hero-tel" href="tel:+17874322607">📞 (787) 432-2607</a>
+    <div class="hero-btns">
+      <a class="btn btn-lima" href="https://wa.me/17874322607" target="_blank" rel="noopener">🔥 Agenda tu clase gratis</a>
+      <a class="btn btn-outline" href="#servicios">Ver planes</a>
+    </div>
+    <p style="margin-top:22px;color:var(--gris);font-size:.95rem">📘 Facebook: <a href="https://www.facebook.com/wiacrossfit" target="_blank" rel="noopener" style="color:var(--lima);font-weight:600">wiacrossfit</a></p>
+  </div>
+</div>
+
+<section id="servicios">
+  <div class="container">
+    <h2 class="sec-title">Planes y <span class="volt">servicios</span></h2>
+    <p class="sec-sub">Precios de referencia. Escríbenos por WhatsApp para confirmar planes y horarios actuales.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h3>Clase de prueba</h3>
+        <p>Vive un WOD completo con coaching incluido. Sin compromiso, sin tarjeta. Solo trae ganas.</p>
+        <span class="precio">GRATIS</span>
+      </div>
+      <div class="card destacada">
+        <div class="icon">🏋️</div>
+        <h3>Membresía mensual</h3>
+        <p>Acceso ilimitado a todas las clases de CrossFit del mes, programación diaria y comunidad WIA.</p>
+        <span class="precio">desde $80/mes</span>
+      </div>
+      <div class="card">
+        <div class="icon">💪</div>
+        <h3>Clases de CrossFit</h3>
+        <p>WODs diarios variados: levantamiento, gimnasia y acondicionamiento. Escalables a todos los niveles.</p>
+        <span class="precio">Incluido en membresía</span>
+      </div>
+      <div class="card">
+        <div class="icon">🥇</div>
+        <h3>Entrenamiento personal</h3>
+        <p>Sesiones 1-a-1 con un coach: técnica, fuerza o metas específicas a tu ritmo.</p>
+        <span class="precio">desde $40/sesión</span>
+      </div>
+    </div>
+    <div class="horario">
+      <h3>🕐 Horarios de ejemplo</h3>
+      <table>
+        <tr><td>Lunes a Viernes</td><td>5:30am · 12:00pm · 5:30pm · 7:00pm</td></tr>
+        <tr><td>Sábados</td><td>9:00am — WOD en equipo</td></tr>
+        <tr><td>Domingos</td><td>Descanso activo</td></tr>
+      </table>
+      <p style="color:var(--gris);font-size:.85rem;margin-top:10px">Horarios de referencia — confirma los horarios actuales por WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="container">
+    <h2 class="sec-title">Sobre <span class="volt">WIA</span></h2>
+    <p class="sec-sub">CrossFit WIA · Ponce, Puerto Rico</p>
+    <div class="nosotros">
+      <div>
+        <p><strong>CrossFit WIA</strong> es más que un gimnasio: es una comunidad en <strong>Ponce</strong> donde cada atleta —del principiante al competidor— entrena con propósito.</p>
+        <p>Nuestros coaches programan WODs variados y seguros, corrigen tu técnica en cada clase y te empujan a superar tu mejor marca, una repetición a la vez.</p>
+        <ul class="puntos">
+          <li>Coaching en cada clase, no entrenas solo</li>
+          <li>WODs escalables para todos los niveles</li>
+          <li>Comunidad que te recibe desde el día uno</li>
+          <li>Primera clase completamente gratis</li>
+        </ul>
+      </div>
+      <div class="visual">🏋️</div>
+    </div>
+  </div>
+</section>
+
+<section id="resenas">
+  <div class="container">
+    <h2 class="sec-title">La comunidad <span class="volt">habla</span></h2>
+    <p class="sec-sub">Lo que dicen quienes entrenan con nosotros</p>
+    <div class="testis">
+      <div class="testi"><p>"El mejor ambiente para entrenar en Ponce. Los coaches están pendientes de tu técnica en todo momento."</p></div>
+      <div class="testi"><p>"Llegué sin saber nada de CrossFit y en tres meses estoy más fuerte que nunca. La comunidad te engancha."</p></div>
+      <div class="testi"><p>"WODs duros pero bien programados. Se nota que saben lo que hacen. Recomendado full."</p></div>
+    </div>
+    <p style="text-align:center;color:#8b9099;font-size:.85rem;margin-top:18px">Testimonios de muestra con fines ilustrativos.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container" style="max-width:760px">
+    <h2 class="sec-title">Preguntas <span class="volt">frecuentes</span></h2>
+    <p class="sec-sub">Todo lo que quieres saber antes de tu primera clase</p>
+    <div class="faq-item">
+      <button class="faq-q">¿Nunca he hecho CrossFit, puedo ir?</button>
+      <div class="faq-a"><p>¡Claro! Todos los WODs son escalables. La clase de prueba gratis está diseñada justo para principiantes: el coach adapta cada movimiento a tu nivel.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Qué necesito para la clase de prueba?</button>
+      <div class="faq-a"><p>Solo ropa cómoda, tenis deportivos, agua y ganas. Escríbenos por WhatsApp al (787) 432-2607 para reservar tu espacio.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Cuánto cuesta la membresía?</button>
+      <div class="faq-a"><p>Los planes mensuales comienzan desde $80/mes. Escríbenos para conocer los planes vigentes y promociones.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Ofrecen entrenamiento personal?</button>
+      <div class="faq-a"><p>Sí, sesiones 1-a-1 desde $40 por sesión, ideales para técnica, fuerza o metas específicas.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Dónde están ubicados?</button>
+      <div class="faq-a"><p>Estamos en Ponce, Puerto Rico. Escríbenos por WhatsApp y te enviamos la ubicación exacta. También nos encuentras en Facebook como wiacrossfit.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container">
+    <h2 class="sec-title">Contacto & <span class="volt">ubicación</span></h2>
+    <p class="sec-sub">Ponce, Puerto Rico</p>
+    <div class="contacto-grid">
+      <div>
+        <div class="info-line"><span class="ico">📞</span><a class="big-tel" href="tel:+17874322607">(787) 432-2607</a></div>
+        <div class="info-line"><span class="ico">💬</span><a href="https://wa.me/17874322607" target="_blank" rel="noopener" style="color:#22a355;font-weight:600">WhatsApp directo</a></div>
+        <div class="info-line"><span class="ico">📘</span><a href="https://www.facebook.com/wiacrossfit" target="_blank" rel="noopener" style="color:var(--lima)">facebook.com/wiacrossfit</a></div>
+        <div class="info-line"><span class="ico">📍</span>Ponce, Puerto Rico</div>
+        <div class="info-line"><span class="ico">🎯</span>Primera clase <strong>gratis</strong></div>
+      </div>
+      <form id="contactForm">
+        <label>Nombre<input type="text" name="nombre" required placeholder="Tu nombre"></label>
+        <label>Teléfono<input type="tel" name="telefono" required placeholder="(787) 000-0000"></label>
+        <label>Me interesa
+          <select name="interes">
+            <option>Clase de prueba gratis</option>
+            <option>Membresía mensual</option>
+            <option>Entrenamiento personal</option>
+          </select>
+        </label>
+        <label>Mensaje<textarea name="mensaje" placeholder="¿Tienes experiencia previa? Cuéntanos..."></textarea></label>
+        <button class="btn btn-lima" type="submit" style="width:100%">Agendar por WhatsApp 🔥</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-name">CROSSFIT WIA · PONCE</div>
+    <p>📞 <a href="tel:+17874322607">(787) 432-2607</a> · 💬 <a href="https://wa.me/17874322607" target="_blank" rel="noopener">WhatsApp</a> · 📘 <a href="https://www.facebook.com/wiacrossfit" target="_blank" rel="noopener">wiacrossfit</a></p>
+    <p style="margin-top:10px;color:#5f646d">Demostración creada por ManuPro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17874322607" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement, ans=item.querySelector('.faq-a');
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+  });
+});
+document.getElementById('contactForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const msg=`Hola CrossFit WIA, soy ${f.get('nombre')} (${f.get('telefono')}). Me interesa: ${f.get('interes')}. ${f.get('mensaje')||''}`;
+  window.open('https://wa.me/17874322607?text='+encodeURIComponent(msg.trim()),'_blank');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tezla Wash | Lavado de Autos a Domicilio en Puerto Rico</title>
+<meta name="description" content="Tezla Wash — el car wash en la comodidad de tu hogar. Lavado detallado, descontaminación de pintura y brillo a domicilio en Puerto Rico. Agenda por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0a0c; --dark:#121216; --graphite:#1c1c22; --gray:#8a8a94;
+  --white:#ffffff; --electric:#00d4ff; --electric-dim:rgba(0,212,255,.14);
+  --wa:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--black);color:#e8e8ec;line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Montserrat',sans-serif;line-height:1.15}
+a{text-decoration:none;color:inherit}
+.container{width:min(1140px,92%);margin:0 auto}
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:rgba(10,10,12,.75);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:.18em;color:#fff;text-transform:uppercase}
+.logo span{color:var(--electric)}
+.logo small{display:block;font-family:'Inter',sans-serif;font-size:.58rem;letter-spacing:.4em;color:var(--gray);font-weight:400}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#cfcfd6;transition:.25s}
+.nav-links a:hover{color:var(--electric)}
+.btn{display:inline-block;background:var(--electric);color:#04121a;padding:13px 30px;border-radius:50px;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;transition:.3s;border:1px solid var(--electric);cursor:pointer;font-family:'Montserrat',sans-serif}
+.btn:hover{background:transparent;color:var(--electric);transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,212,255,.25)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 8px 25px rgba(37,211,102,.25)}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn.ghost:hover{border-color:var(--electric);color:var(--electric);box-shadow:none}
+.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:#fff}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;color:#fff;background:radial-gradient(ellipse 80% 60% at 50% 0%,#1a2b3a 0%,var(--black) 70%),linear-gradient(180deg,#0d1420,#0a0a0c)}
+.hero::after{content:'🚗';position:absolute;right:6%;bottom:12%;font-size:clamp(6rem,18vw,14rem);opacity:.08;filter:grayscale(1)}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:130px 0 90px;width:100%}
+.eyebrow{letter-spacing:.42em;text-transform:uppercase;font-size:.78rem;color:var(--electric);margin-bottom:20px;font-weight:600}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;margin-bottom:20px;letter-spacing:.02em}
+.hero h1 em{font-style:normal;color:var(--electric)}
+.hero p.sub{font-size:1.15rem;font-weight:300;max-width:640px;margin:0 auto 14px;color:#b9b9c2}
+.hero p.tag{font-size:1rem;color:var(--electric);font-weight:500;letter-spacing:.06em;margin-bottom:36px}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero-phone{font-size:1.35rem;font-weight:700;letter-spacing:.05em}
+.hero-phone a{color:#fff;border-bottom:2px solid var(--electric);padding-bottom:2px}
+.trust{display:flex;gap:34px;justify-content:center;flex-wrap:wrap;font-size:.92rem;color:var(--gray)}
+.trust b{color:#fff}
+/* MARQUEE */
+.strip{background:var(--electric);color:#04121a;overflow:hidden;padding:12px 0;font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.22em;font-size:.85rem;text-transform:uppercase}
+.strip div{white-space:nowrap;animation:slide 22s linear infinite}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* SECTIONS */
+section{padding:96px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 56px}
+.sec-head .eyebrow{color:var(--electric)}
+.sec-head h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:14px;color:#fff;font-weight:700}
+.sec-head p{color:var(--gray)}
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.card{background:var(--graphite);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:40px 32px;transition:.35s;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--electric),transparent);opacity:0;transition:.35s}
+.card:hover{transform:translateY(-8px);border-color:rgba(0,212,255,.35);box-shadow:0 20px 50px rgba(0,212,255,.12)}
+.card:hover::before{opacity:1}
+.card .ico{font-size:2.6rem;margin-bottom:18px}
+.card h3{font-size:1.45rem;margin-bottom:10px;color:#fff}
+.card p{color:var(--gray);font-size:.95rem;margin-bottom:16px;flex:1}
+.price{color:var(--electric);font-weight:700;font-size:1.15rem;letter-spacing:.04em;margin-bottom:18px;font-family:'Montserrat',sans-serif}
+.card .btn{padding:11px 22px;font-size:.78rem;text-align:center}
+/* HOW */
+.how{background:var(--dark)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.step{text-align:center;padding:20px}
+.step .num{width:64px;height:64px;border-radius:50%;background:var(--electric-dim);border:2px solid var(--electric);color:var(--electric);font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.5rem;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.step h3{color:#fff;font-size:1.3rem;margin-bottom:10px}
+.step p{color:var(--gray);font-size:.95rem}
+/* MOBILE BANNER */
+.mobile-banner{background:linear-gradient(135deg,#0d2233,#0a0a0c);border:1px solid rgba(0,212,255,.25);border-radius:24px;padding:56px 8%;display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:space-between}
+.mobile-banner h2{color:#fff;font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:12px}
+.mobile-banner h2 em{font-style:normal;color:var(--electric)}
+.mobile-banner p{color:var(--gray);max-width:520px}
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.testi{background:var(--graphite);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:32px}
+.testi .stars{color:var(--electric);letter-spacing:.2em;margin-bottom:14px;font-size:1.05rem}
+.testi p{color:#c9c9d1;font-style:italic;margin-bottom:16px;font-size:.96rem}
+.testi .who{color:var(--gray);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+/* FAQ */
+.faq{background:var(--dark)}
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.1)}
+.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.08rem;font-weight:600;text-align:left;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Montserrat',sans-serif}
+.faq-q span{color:var(--electric);font-size:1.4rem;transition:.3s}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--gray);font-size:.96rem}
+.faq-a p{padding:0 0 22px}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info h2{color:#fff;font-size:clamp(2rem,4vw,2.8rem);margin-bottom:18px}
+.contact-info p{color:var(--gray);margin-bottom:26px}
+.c-line{display:flex;align-items:center;gap:14px;margin-bottom:16px;font-size:1.05rem}
+.c-line .ico{font-size:1.4rem}
+.c-line a{color:#fff;font-weight:600;border-bottom:2px solid var(--electric)}
+form{background:var(--graphite);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:36px}
+form h3{color:#fff;margin-bottom:20px;font-size:1.4rem}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.12);border-radius:10px;color:#fff;padding:12px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--electric)}
+/* FOOTER */
+footer{background:#060608;border-top:1px solid rgba(255,255,255,.06);padding:56px 0 32px;text-align:center}
+footer .flogo{font-family:'Montserrat',sans-serif;font-weight:800;letter-spacing:.2em;font-size:1.3rem;color:#fff;margin-bottom:8px}
+footer .flogo span{color:var(--electric)}
+footer p{color:var(--gray);font-size:.9rem;margin-bottom:6px}
+footer .demo{margin-top:22px;font-size:.78rem;color:#55555e;letter-spacing:.06em}
+/* FLOAT WA */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.4);transition:.3s}
+.wa-float:hover{transform:scale(1.1)}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:.7s}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+  .svc-grid,.steps,.testi-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,12,.98);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid rgba(255,255,255,.08)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">TEZLA<span>WASH</span><small>A DOMICILIO</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#como">Cómo funciona</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a class="btn wa" href="https://wa.me/17877106170?text=Hola%20Tezla%20Wash%2C%20quiero%20agendar%20un%20lavado%20a%20domicilio" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Lavado de autos a domicilio</p>
+    <h1>El car wash <em>en la comodidad</em> de tu hogar</h1>
+    <p class="sub">Lavado detallado, descontaminación de pintura y brillo profesional — sin filas, sin espera, sin moverte.</p>
+    <p class="tag">🚗 Nosotros vamos hasta ti · Área metropolitana y pueblos limítrofes</p>
+    <div class="hero-ctas">
+      <a class="btn wa" href="https://wa.me/17877106170?text=Hola%20Tezla%20Wash%2C%20quiero%20agendar%20un%20lavado%20a%20domicilio" target="_blank" rel="noopener">📲 Agendar por WhatsApp</a>
+      <a class="btn ghost" href="tel:+17877106170">📞 (787) 710-6170</a>
+    </div>
+    <div class="trust">
+      <span><b>100%</b> a domicilio</span>
+      <span><b>Sin</b> filas ni espera</span>
+      <span><b>Equipo</b> profesional</span>
+    </div>
+  </div>
+</section>
+
+<div class="strip"><div>✦ LAVADO A DOMICILIO &nbsp;&nbsp; ✦ AGENDA POR WHATSAPP &nbsp;&nbsp; ✦ VAMOS HASTA TI &nbsp;&nbsp; ✦ LAVADO A DOMICILIO &nbsp;&nbsp; ✦ AGENDA POR WHATSAPP &nbsp;&nbsp; ✦ VAMOS HASTA TI &nbsp;&nbsp;</div></div>
+
+<section id="servicios">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Servicios</p>
+      <h2>Detalle premium, donde estés</h2>
+      <p>Llevamos todo el equipo hasta tu casa u oficina. Tú sigues con tu día — nosotros nos encargamos del resto.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal">
+        <div class="ico">🧽</div>
+        <h3>Lavado Detallado</h3>
+        <p>Lavado exterior completo con técnica de dos cubetas, limpieza de aros, gomas, cristales y detalles que marcan la diferencia.</p>
+        <p class="price">desde $50</p>
+        <a class="btn wa" href="https://wa.me/17877106170?text=Hola%2C%20me%20interesa%20el%20Lavado%20Detallado%20a%20domicilio" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">✨</div>
+        <h3>Descontaminación de Pintura</h3>
+        <p>Eliminamos contaminantes adheridos, brea y residuos industriales para devolverle a tu pintura una superficie lisa como vidrio.</p>
+        <p class="price">desde $90</p>
+        <a class="btn wa" href="https://wa.me/17877106170?text=Hola%2C%20me%20interesa%20la%20Descontaminaci%C3%B3n%20de%20Pintura" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">💎</div>
+        <h3>Brillo y Protección</h3>
+        <p>Encerado y sellado que le da a tu auto ese brillo profundo de showroom y lo protege del sol y la lluvia por semanas.</p>
+        <p class="price">desde $70</p>
+        <a class="btn wa" href="https://wa.me/17877106170?text=Hola%2C%20me%20interesa%20el%20Brillo%20y%20Protecci%C3%B3n" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como" class="how">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2>Tan fácil como escribirnos</h2>
+      <p>Sin apps complicadas ni llamadas eternas. Tres pasos y tu auto queda nuevo.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">1</div>
+        <h3>Agenda por WhatsApp</h3>
+        <p>Escríbenos, elige el servicio y coordinamos día y hora que te convenga.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">2</div>
+        <h3>Llegamos hasta ti</h3>
+        <p>Vamos a tu casa u oficina con todo el equipo profesional. No necesitas nada.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">3</div>
+        <h3>Auto como nuevo</h3>
+        <p>Lavamos, detallamos y te entregamos las llaves. Tú ni te enteraste.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="mobile-banner reveal">
+      <div>
+        <h2>Sin local. <em>Sin filas.</em> Sin excusas.</h2>
+        <p>Somos un servicio 100% móvil: el taller va montado en nuestra unidad. Área metropolitana y pueblos limítrofes — pregúntanos por tu zona.</p>
+      </div>
+      <a class="btn wa" href="https://wa.me/17877106170?text=Hola%20Tezla%20Wash%2C%20%C2%BFllegan%20a%20mi%20zona%3F" target="_blank" rel="noopener">¿Llegan a mi zona?</a>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Opiniones</p>
+      <h2>Clientes que ya no hacen fila</h2>
+      <p>La comodidad se nota — y se recomienda.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Me lavaron el carro en el parking del trabajo. Cuando salí parecía recién salido del dealer."</p>
+        <p class="who">Cliente · San Juan</p>
+      </div>
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"La descontaminación le quitó años de encima a la pintura. No sabía que mi carro podía brillar así."</p>
+        <p class="who">Cliente · Bayamón</p>
+      </div>
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Puntuales, profesionales y ni tuve que moverme de casa. Los llamo cada mes."</p>
+        <p class="who">Cliente · Guaynabo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Preguntas</p>
+      <h2>Lo que nos preguntan</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">¿De verdad llegan hasta mi casa? <span>+</span></button>
+        <div class="faq-a"><p>Sí. Somos 100% móviles: llevamos agua, luz y todo el equipo en nuestra unidad. Solo necesitamos espacio para trabajar alrededor del auto.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Qué áreas cubren? <span>+</span></button>
+        <div class="faq-a"><p>Área metropolitana y pueblos limítrofes. Escríbenos por WhatsApp con tu pueblo y te confirmamos al momento.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Cuánto tarda el servicio? <span>+</span></button>
+        <div class="faq-a"><p>Un lavado detallado toma alrededor de 1 hora; la descontaminación y el brillo pueden tomar 2 a 3 horas según el estado del auto.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Cómo puedo pagar? <span>+</span></button>
+        <div class="faq-a"><p>Aceptamos ATH Móvil, tarjetas y efectivo al completar el servicio.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Necesito estar presente? <span>+</span></button>
+        <div class="faq-a"><p>No necesariamente. Muchos clientes nos dejan las llaves y siguen con su día; al terminar te avisamos por WhatsApp.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <h2>Agenda tu lavado hoy</h2>
+      <p>Escríbenos por WhatsApp y coordinamos tu cita a domicilio. Respuesta rápida, sin compromiso.</p>
+      <div class="c-line"><span class="ico">📞</span><a href="tel:+17877106170">(787) 710-6170</a></div>
+      <div class="c-line"><span class="ico">📲</span><a href="https://wa.me/17877106170" target="_blank" rel="noopener">WhatsApp directo</a></div>
+      <div class="c-line"><span class="ico">📍</span><span>Servicio a domicilio · Puerto Rico</span></div>
+      <div class="c-line"><span class="ico">🕐</span><span>Lun–Sáb · 8:00am – 6:00pm</span></div>
+    </div>
+    <form id="bookForm" class="reveal">
+      <h3>Solicita tu cita</h3>
+      <div class="field">
+        <label for="fNombre">Nombre</label>
+        <input id="fNombre" type="text" placeholder="Tu nombre" required>
+      </div>
+      <div class="field">
+        <label for="fTel">Teléfono</label>
+        <input id="fTel" type="tel" placeholder="(787) 000-0000" required>
+      </div>
+      <div class="field">
+        <label for="fSvc">Servicio</label>
+        <select id="fSvc">
+          <option>Lavado Detallado</option>
+          <option>Descontaminación de Pintura</option>
+          <option>Brillo y Protección</option>
+          <option>Paquete completo</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fMsg">Pueblo / dirección</label>
+        <textarea id="fMsg" rows="3" placeholder="¿Dónde llegamos?"></textarea>
+      </div>
+      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="flogo">TEZLA<span>WASH</span></p>
+    <p>El car wash en la comodidad de tu hogar · Puerto Rico</p>
+    <p><a href="tel:+17877106170" style="color:#8a8a94">(787) 710-6170</a></p>
+    <p class="demo">Demostración creada por ManuPro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17877106170?text=Hola%20Tezla%20Wash%2C%20quiero%20agendar%20un%20lavado" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+document.getElementById('menuToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.faq-item').forEach(item => {
+  const btn = item.querySelector('.faq-q');
+  btn.addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+      i.querySelector('.faq-q span').textContent = '+';
+    });
+    if (!wasOpen) {
+      item.classList.add('open');
+      const a = item.querySelector('.faq-a');
+      a.style.maxHeight = a.scrollHeight + 'px';
+      btn.querySelector('span').textContent = '×';
+    }
+  });
+});
+document.getElementById('bookForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const nombre = document.getElementById('fNombre').value.trim();
+  const tel = document.getElementById('fTel').value.trim();
+  const svc = document.getElementById('fSvc').value;
+  const msg = document.getElementById('fMsg').value.trim();
+  if (!nombre || !tel) { alert('Por favor completa tu nombre y teléfono.'); return; }
+  let text = 'Hola Tezla Wash, soy ' + nombre + '. Quiero agendar: ' + svc + '. Mi teléfono es ' + tel + '.';
+  if (msg) text += ' Dirección/pueblo: ' + msg;
+  window.open('https://wa.me/17877106170?text=' + encodeURIComponent(text), '_blank');
+});
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

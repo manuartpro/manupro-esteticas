@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. José E. Fernández — Clínica Dental en Aguadilla</title>
+<meta name="description" content="Dr. José E. Fernández, clínica dental en Aguadilla, Puerto Rico. Limpieza, ortodoncia, blanqueamiento y emergencias dentales. 5.0★ en Google. Evaluación gratis.">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--turq:#0fb5a8;--turq-d:#0a8d84;--claro:#f4fbfb;--blanco:#ffffff;--tinta:#1c2b2a;--gris:#5a7070}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--claro);color:var(--tinta);line-height:1.65}
+h1,h2,h3{font-weight:800;letter-spacing:.3px}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);border-bottom:1px solid #d9efed;box-shadow:0 2px 12px rgba(15,181,168,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1200px;margin:0 auto}
+.logo{font-weight:800;font-size:1.15rem;color:var(--tinta)}
+.logo span{color:var(--turq)}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.tel{font-weight:700;font-size:.95rem;color:var(--tinta)}
+.btn{display:inline-block;padding:12px 26px;border-radius:30px;font-weight:700;font-size:1rem;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(15,181,168,.3)}
+.btn-turq{background:var(--turq);color:#fff}
+.btn-wa{background:#22a355;color:#fff}
+.btn-outline{border:2px solid var(--turq);color:var(--turq-d);background:transparent}
+.hero{min-height:92vh;display:flex;align-items:center;padding:110px 0 60px;position:relative;overflow:hidden;
+background:radial-gradient(800px 400px at 85% 5%,rgba(15,181,168,.18),transparent 60%),linear-gradient(180deg,#ffffff 0%,#f4fbfb 100%)}
+.hero::before{content:"🦷";position:absolute;right:8%;top:20%;font-size:clamp(5rem,15vw,11rem);opacity:.08}
+.badge{display:inline-block;background:#e3f7f5;color:var(--turq-d);font-size:.8rem;font-weight:700;padding:6px 16px;border-radius:30px;letter-spacing:1px;margin-bottom:18px;border:1px solid #bfe9e5}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.1;margin-bottom:14px}
+.hero h1 .tq{color:var(--turq)}
+.tagline{color:var(--gris);font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:620px;margin-bottom:26px}
+.hero-tel{display:block;font-size:clamp(1.7rem,5vw,2.8rem);font-weight:800;color:var(--turq-d);margin-bottom:22px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.rating{margin-top:22px;color:var(--gris);font-size:.95rem}
+.stars{color:#f5a623;letter-spacing:2px}
+section{padding:70px 0}
+section:nth-of-type(even){background:#fff}
+.sec-title{font-size:clamp(1.6rem,4vw,2.3rem);text-align:center;margin-bottom:10px}
+.sec-title .tq{color:var(--turq)}
+.sec-sub{text-align:center;color:var(--gris);max-width:640px;margin:0 auto 40px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:#fff;border:1px solid #d9efed;border-radius:16px;padding:30px 24px;text-align:center;transition:transform .2s,box-shadow .2s,border-color .2s}
+section:nth-of-type(even) .card{background:var(--claro)}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(15,181,168,.15);border-color:var(--turq)}
+.card .icon{font-size:3rem;margin-bottom:14px}
+.card h3{font-size:1.12rem;margin-bottom:10px}
+.card p{color:var(--gris);font-size:.95rem;margin-bottom:14px}
+.precio{display:inline-block;background:#e3f7f5;border:1px solid var(--turq);color:var(--turq-d);padding:6px 16px;border-radius:30px;font-weight:700;font-size:.9rem}
+.nosotros{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.nosotros p{color:var(--gris);margin-bottom:14px}
+.puntos{list-style:none;margin-top:18px}
+.puntos li{margin-bottom:12px;padding-left:32px;position:relative}
+.puntos li::before{content:"✓";position:absolute;left:0;color:var(--turq);font-weight:800}
+.visual{height:320px;border-radius:16px;background:linear-gradient(135deg,#d9efed,#ffffff 60%),radial-gradient(400px 200px at 50% 30%,rgba(15,181,168,.25),transparent 70%);display:flex;align-items:center;justify-content:center;font-size:5rem;border:1px solid #d9efed}
+.g-rating{background:#fff;border:1px solid #d9efed;border-radius:16px;padding:26px;text-align:center;margin-bottom:26px;box-shadow:0 6px 18px rgba(15,181,168,.08)}
+.testis{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.testi{background:#fff;border:1px solid #d9efed;border-radius:16px;padding:26px}
+.testi .stars{font-size:1.05rem;margin-bottom:10px}
+.testi p{color:var(--gris);font-style:italic}
+.faq-item{background:#fff;border:1px solid #d9efed;border-radius:12px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:var(--tinta);font-size:1rem;font-weight:700;text-align:left;padding:18px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Nunito',sans-serif}
+.faq-q::after{content:"+";font-size:1.4rem;color:var(--turq)}
+.faq-item.open .faq-q::after{content:"−"}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--gris)}
+.faq-a p{padding:0 20px 18px}
+.contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.info-line{margin-bottom:18px;font-size:1.05rem}
+.info-line .ico{margin-right:10px}
+.big-tel{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;color:var(--turq-d)}
+.emerg{background:#fff3f3;border:1px solid #f3c1c1;border-radius:12px;padding:18px;margin-top:8px}
+.emerg strong{color:#c0392b}
+form{background:#fff;border:1px solid #d9efed;border-radius:16px;padding:28px;box-shadow:0 6px 18px rgba(15,181,168,.08)}
+form label{display:block;margin-bottom:14px;font-size:.9rem;color:var(--gris)}
+form input,form textarea{width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid #cfe6e3;background:#fbfefe;color:var(--tinta);font-size:1rem;font-family:'Nunito',sans-serif}
+form textarea{resize:vertical;min-height:100px}
+footer{background:#123c3a;padding:30px 0;text-align:center;color:#a8c4c1;font-size:.85rem}
+footer .foot-name{color:#fff;font-weight:800;margin-bottom:8px}
+footer a{color:#7fd8d0}
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:99;width:60px;height:60px;border-radius:50%;background:#22a355;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 6px 20px rgba(34,163,85,.5);transition:transform .15s}
+.wa-float:hover{transform:scale(1.1)}
+@media(max-width:768px){.nosotros,.contacto-grid{grid-template-columns:1fr}.visual{height:220px}.nav .tel{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">Dr. José E. <span>Fernández</span></div>
+    <div class="nav-cta">
+      <a class="tel" href="tel:+17878824640">📞 (787) 882-4640</a>
+      <a class="btn btn-turq" href="https://wa.me/17878824640" target="_blank" rel="noopener" style="padding:9px 18px;font-size:.9rem">WhatsApp</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <span class="badge">AGUADILLA · PUERTO RICO</span>
+    <h1>Dr. José E. <span class="tq">Fernández</span></h1>
+    <p class="tagline">Clínica dental en Aguadilla: sonrisas sanas con trato cercano. Limpieza, ortodoncia, blanqueamiento y atención de emergencias.</p>
+    <a class="hero-tel" href="tel:+17878824640">📞 (787) 882-4640</a>
+    <div class="hero-btns">
+      <a class="btn btn-wa" href="https://wa.me/17878824640" target="_blank" rel="noopener">💬 Agenda por WhatsApp</a>
+      <a class="btn btn-outline" href="#servicios">Ver servicios</a>
+    </div>
+    <p class="rating"><span class="stars">★★★★★</span> 5.0★ en Google · 5 reseñas</p>
+  </div>
+</div>
+
+<section id="servicios">
+  <div class="container">
+    <h2 class="sec-title">Nuestros <span class="tq">servicios</span></h2>
+    <p class="sec-sub">Precios de referencia. Escríbenos por WhatsApp para una evaluación y cotización exacta.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🪥</div>
+        <h3>Limpieza dental</h3>
+        <p>Profilaxis completa: remoción de sarro y placa, pulido y revisión general de tu salud bucal.</p>
+        <span class="precio">desde $75</span>
+      </div>
+      <div class="card">
+        <div class="icon">😁</div>
+        <h3>Ortodoncia</h3>
+        <p>Corrección de la alineación dental para niños, adolescentes y adultos. Plan de tratamiento personalizado.</p>
+        <span class="precio">Evaluación gratis</span>
+      </div>
+      <div class="card">
+        <div class="icon">✨</div>
+        <h3>Blanqueamiento dental</h3>
+        <p>Devuélvele el brillo a tu sonrisa con blanqueamiento profesional, seguro y de resultados visibles.</p>
+        <span class="precio">desde $199</span>
+      </div>
+      <div class="card">
+        <div class="icon">🚨</div>
+        <h3>Emergencias dentales</h3>
+        <p>Dolor intenso, fracturas o accidentes: atención prioritaria para resolver tu emergencia el mismo día.</p>
+        <span class="precio">Llámanos hoy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="container">
+    <h2 class="sec-title">Sobre <span class="tq">nosotros</span></h2>
+    <p class="sec-sub">Dr. José E. Fernández · Aguadilla, Puerto Rico</p>
+    <div class="nosotros">
+      <div>
+        <p>En la clínica del <strong>Dr. José E. Fernández</strong> en <strong>Aguadilla</strong> creemos que ir al dentista no tiene por qué dar miedo. Combinamos tecnología dental moderna con un trato humano y cercano.</p>
+        <p>Desde limpiezas de rutina hasta ortodoncia y emergencias, cuidamos la sonrisa de toda la familia con honestidad en el diagnóstico y precios claros.</p>
+        <ul class="puntos">
+          <li>Atención personalizada para cada paciente</li>
+          <li>Evaluación inicial gratis</li>
+          <li>5.0★ en Google · 5 reseñas de pacientes</li>
+          <li>Emergencias atendidas con prioridad</li>
+        </ul>
+      </div>
+      <div class="visual">🦷</div>
+    </div>
+  </div>
+</section>
+
+<section id="resenas">
+  <div class="container">
+    <h2 class="sec-title">Nuestros <span class="tq">pacientes</span></h2>
+    <p class="sec-sub">Calificación real de Google</p>
+    <div class="g-rating">
+      <div class="stars" style="font-size:2rem">★★★★★</div>
+      <p style="font-size:1.4rem;font-weight:800;margin:8px 0">5.0 sobre 5</p>
+      <p style="color:var(--gris)">Basado en 5 reseñas en Google</p>
+    </div>
+    <div class="testis">
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>"Excelente trato desde que llegas. Me explicó todo con calma y el tratamiento quedó perfecto."</p>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>"La limpieza fue rápida y sin dolor. La oficina se ve muy limpia y moderna."</p>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>"Atendió mi emergencia el mismo día. Muy profesional y honesto con los precios."</p>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--gris);font-size:.85rem;margin-top:18px">Testimonios de muestra con fines ilustrativos.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container" style="max-width:760px">
+    <h2 class="sec-title">Preguntas <span class="tq">frecuentes</span></h2>
+    <p class="sec-sub">Respuestas rápidas</p>
+    <div class="faq-item">
+      <button class="faq-q">¿Cada cuánto debo hacerme una limpieza dental?</button>
+      <div class="faq-a"><p>Se recomienda una limpieza profesional cada 6 meses. En tu primera visita evaluamos tu caso y te sugerimos la frecuencia ideal.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿La evaluación inicial tiene costo?</button>
+      <div class="faq-a"><p>No. La evaluación inicial es gratis: revisamos tu caso y te presentamos un plan de tratamiento con precios claros, sin compromiso.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Atienden emergencias dentales?</button>
+      <div class="faq-a"><p>Sí. Si tienes dolor fuerte, una fractura o un accidente dental, llámanos al (787) 882-4640 y te atendemos con prioridad el mismo día.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿La ortodoncia es solo para jóvenes?</button>
+      <div class="faq-a"><p>No. Tratamos adolescentes y adultos. En la evaluación gratis determinamos el mejor plan según tu caso.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">¿Dónde están ubicados?</button>
+      <div class="faq-a"><p>Estamos en Aguadilla, Puerto Rico. Escríbenos por WhatsApp y te compartimos la ubicación exacta y cómo llegar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container">
+    <h2 class="sec-title">Contacto & <span class="tq">ubicación</span></h2>
+    <p class="sec-sub">Aguadilla, Puerto Rico</p>
+    <div class="contacto-grid">
+      <div>
+        <div class="info-line"><span class="ico">📞</span><a class="big-tel" href="tel:+17878824640">(787) 882-4640</a></div>
+        <div class="info-line"><span class="ico">💬</span><a href="https://wa.me/17878824640" target="_blank" rel="noopener" style="color:#22a355;font-weight:700">WhatsApp directo</a></div>
+        <div class="info-line"><span class="ico">📍</span>Aguadilla, Puerto Rico</div>
+        <div class="info-line"><span class="ico">🕐</span>Lun–Vie · con cita previa</div>
+        <div class="info-line"><span class="ico">⭐</span><span class="stars">★★★★★</span> 5.0 · 5 reseñas en Google</div>
+        <div class="emerg"><strong>🚨 ¿Emergencia dental?</strong><br>Llámanos de inmediato al <a href="tel:+17878824640" style="color:#c0392b;font-weight:700">(787) 882-4640</a> — atención prioritaria el mismo día.</div>
+      </div>
+      <form id="contactForm">
+        <label>Nombre<input type="text" name="nombre" required placeholder="Tu nombre"></label>
+        <label>Teléfono<input type="tel" name="telefono" required placeholder="(787) 000-0000"></label>
+        <label>Motivo de la visita<input type="text" name="motivo" placeholder="Ej. Limpieza dental"></label>
+        <label>Mensaje<textarea name="mensaje" placeholder="Cuéntanos brevemente tu caso..."></textarea></label>
+        <button class="btn btn-turq" type="submit" style="width:100%">Agendar por WhatsApp 💬</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-name">DR. JOSÉ E. FERNÁNDEZ · AGUADILLA</div>
+    <p>📞 <a href="tel:+17878824640">(787) 882-4640</a> · 💬 <a href="https://wa.me/17878824640" target="_blank" rel="noopener">WhatsApp</a></p>
+    <p style="margin-top:10px;color:#6d8f8c">Demostración creada por ManuPro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17878824640" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement, ans=item.querySelector('.faq-a');
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+  });
+});
+document.getElementById('contactForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const msg=`Hola Dr. Fernández, soy ${f.get('nombre')} (${f.get('telefono')}). Motivo: ${f.get('motivo')||'consulta general'}. ${f.get('mensaje')||''}`;
+  window.open('https://wa.me/17878824640?text='+encodeURIComponent(msg.trim()),'_blank');
+});
+</script>
+</body>
+</html>

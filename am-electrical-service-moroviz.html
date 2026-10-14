@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AM Electrical Service | Electricista en Morovis</title>
+<meta name="description" content="AM Electrical Service — Electricidad residencial y comercial en Morovis, PR. Instalaciones, reparaciones y emergencias 24/7.">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0a1628;--navy2:#10233f;--yellow:#ffd60a;--yellow2:#ffe14d;--white:#fff;--gray:#c9d4e3}
+body{font-family:'Archivo',system-ui,sans-serif;background:var(--navy);color:var(--white);line-height:1.6}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,.96);backdrop-filter:blur(6px);border-bottom:3px solid var(--yellow)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem;gap:.6rem;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.15rem;letter-spacing:.5px}
+.brand span{color:var(--yellow)}
+.nav-actions{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.phone{color:var(--yellow);font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn{display:inline-block;padding:.65rem 1.3rem;border-radius:8px;font-weight:700;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:#25d366;color:#04220f}
+.btn-call{background:var(--yellow);color:#0a1628}
+main{padding-top:74px}
+.hero{background:linear-gradient(135deg,#0a1628 0%,#10233f 55%,#1b3a68 100%);text-align:center;padding:4.5rem 1.2rem 3.5rem;position:relative;overflow:hidden}
+.hero::before{content:"⚡";position:absolute;font-size:22rem;opacity:.05;top:-3rem;right:-2rem;transform:rotate(15deg)}
+.tag{display:inline-block;background:var(--yellow);color:#0a1628;font-weight:800;font-size:.8rem;padding:.35rem .9rem;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:800;line-height:1.15}
+.hero h1 span{color:var(--yellow)}
+.hero p{color:var(--gray);font-size:1.15rem;max-width:620px;margin:1rem auto 1.6rem}
+.big-phone{display:block;font-size:clamp(1.8rem,5.5vw,2.6rem);font-weight:800;color:var(--yellow);text-decoration:none;margin-bottom:1.4rem}
+.hero-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+section{max-width:1100px;margin:auto;padding:3rem 1.2rem}
+h2{font-size:1.9rem;font-weight:800;margin-bottom:.4rem}
+h2 .accent{color:var(--yellow)}
+.sub{color:var(--gray);margin-bottom:1.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
+.card{background:var(--navy2);border:1px solid #27436b;border-radius:12px;padding:1.5rem}
+.card .icon{font-size:2.2rem}
+.card h3{margin:.7rem 0 .4rem;font-size:1.15rem}
+.card p{color:var(--gray);font-size:.95rem}
+.price{display:inline-block;margin-top:.7rem;background:rgba(255,214,10,.12);border:1px solid var(--yellow);color:var(--yellow);font-weight:700;padding:.3rem .8rem;border-radius:6px;font-size:.95rem}
+.badges{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;margin-top:1.5rem}
+.badge{background:#0e1e38;border:1px solid #27436b;padding:.7rem 1.2rem;border-radius:30px;font-weight:600;font-size:.92rem}
+.badge::before{content:"✔ ";color:var(--yellow)}
+.about{background:var(--navy2);border-radius:14px;padding:2.2rem}
+.about p{color:var(--gray);margin-bottom:.8rem}
+.faq-item{background:var(--navy2);border:1px solid #27436b;border-radius:10px;margin-bottom:.7rem;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-family:inherit;font-weight:700;font-size:1rem;text-align:left;padding:1rem 1.2rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:"+";color:var(--yellow);font-size:1.4rem}
+.faq-item.open .faq-q::after{content:"−"}
+.faq-a{display:none;padding:0 1.2rem 1.1rem;color:var(--gray)}
+.faq-item.open .faq-a{display:block}
+.contact-box{background:linear-gradient(135deg,#10233f,#1b3a68);border:1px solid #27436b;border-radius:14px;padding:2.2rem;text-align:center}
+.contact-box .btn{margin:.4rem}
+footer{background:#060d18;text-align:center;padding:1.6rem 1rem;color:#7c8ba3;font-size:.85rem}
+footer .credit{margin-top:.4rem;font-size:.78rem;color:#5a6a85}
+@media(max-width:600px){.nav{justify-content:center}.phone{font-size:.95rem}}
+</style>
+</head>
+<body>
+<header>
+<nav class="nav">
+<div class="brand">⚡ AM <span>Electrical Service</span></div>
+<div class="nav-actions">
+<a class="phone" href="tel:+17873782100">📞 (787) 378-2100</a>
+<a class="btn btn-wa" href="https://wa.me/17873782100" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero" style="max-width:none;padding:4.5rem 1.2rem 3.5rem">
+<div class="tag">Electricidad · Morovis, PR</div>
+<h1>AM <span>Electrical Service</span></h1>
+<p>Electricista en Morovis: instalaciones, reparaciones y emergencias eléctricas. Respuesta rápida, trabajo seguro y precios claros.</p>
+<a class="big-phone" href="tel:+17873782100">(787) 378-2100</a>
+<div class="hero-btns">
+<a class="btn btn-call" href="tel:+17873782100">📞 Llamar ahora</a>
+<a class="btn btn-wa" href="https://wa.me/17873782100" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</section>
+
+<section>
+<h2>Nuestros <span class="accent">servicios</span></h2>
+<p class="sub">Precios de propuesta — cotización final según el trabajo.</p>
+<div class="grid">
+<div class="card"><div class="icon">🔌</div><h3>Instalaciones eléctricas</h3><p>Cableado, tomacorrientes, interruptores y circuitos nuevos en hogares y negocios.</p><span class="price">Visita diagnóstico desde $50</span></div>
+<div class="card"><div class="icon">🚨</div><h3>Reparación de averías 24/7</h3><p>Cortes de luz, breakers que se disparan y emergencias eléctricas a cualquier hora.</p><span class="price">Emergencias 24/7</span></div>
+<div class="card"><div class="icon">🧰</div><h3>Paneles y breakers</h3><p>Reemplazo y modernización de paneles eléctricos y disyuntores.</p><span class="price">Cotización gratis</span></div>
+<div class="card"><div class="icon">💡</div><h3>Iluminación y abanicos</h3><p>Instalación de lámparas, luces LED y abanicos de techo con acabado limpio.</p><span class="price">Instalación de abanico desde $75</span></div>
+</div>
+<div class="badges">
+<span class="badge">Servicio garantizado</span>
+<span class="badge">Respuesta rápida</span>
+<span class="badge">Precios claros por adelantado</span>
+<span class="badge">Atención en español</span>
+</div>
+</section>
+
+<section>
+<div class="about">
+<h2>Sobre <span class="accent">nosotros</span></h2>
+<p>AM Electrical Service es un servicio de electricidad que atiende a Morovis y pueblos cercanos. Nos especializamos en trabajos eléctricos residenciales y comerciales, desde una reparación sencilla hasta la modernización completa de un panel.</p>
+<p>Creemos en el trato honesto: diagnóstico claro, precio acordado antes de empezar y trabajo hecho con seguridad. Llámanos o escríbenos por WhatsApp y resolvemos tu problema eléctrico.</p>
+</div>
+</section>
+
+<section>
+<h2>Preguntas <span class="accent">frecuentes</span></h2>
+<p class="sub">Lo que más nos preguntan nuestros clientes.</p>
+<div class="faq-item"><button class="faq-q">¿Atienden emergencias fuera de horario?</button><div class="faq-a">Sí. Ofrecemos servicio de emergencias 24/7 para averías eléctricas urgentes en Morovis y áreas cercanas.</div></div>
+<div class="faq-item"><button class="faq-q">¿Cuánto cuesta la visita de diagnóstico?</button><div class="faq-a">La visita de diagnóstico comienza desde $50. El costo final se confirma antes de realizar cualquier trabajo.</div></div>
+<div class="faq-item"><button class="faq-q">¿Qué áreas cubren?</button><div class="faq-a">Estamos ubicados en Morovis y servimos pueblos cercanos. Escríbenos por WhatsApp para confirmar cobertura en tu sector.</div></div>
+<div class="faq-item"><button class="faq-q">¿Instalan abanicos de techo?</button><div class="faq-a">Sí, instalamos abanicos de techo y lámparas desde $75, con acabado limpio y seguro.</div></div>
+<div class="faq-item"><button class="faq-q">¿Cómo pido una cotización?</button><div class="faq-a">Llámanos al (787) 378-2100 o escríbenos por WhatsApp con fotos del trabajo que necesitas y te damos un estimado.</div></div>
+</section>
+
+<section>
+<div class="contact-box">
+<h2>Contacto y <span class="accent">ubicación</span></h2>
+<p class="sub">📍 Morovis, Puerto Rico</p>
+<a class="big-phone" href="tel:+17873782100">(787) 378-2100</a>
+<div>
+<a class="btn btn-call" href="tel:+17873782100">📞 Llamar</a>
+<a class="btn btn-wa" href="https://wa.me/17873782100" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<p>© 2026 AM Electrical Service · Morovis, PR</p>
+<p class="credit">Demostración creada por ManuPro</p>
+</footer>
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});
+</script>
+</body>
+</html>

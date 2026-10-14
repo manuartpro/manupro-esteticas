@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geo's AC Service | Aires Acondicionados en Villalba</title>
+<meta name="description" content="Geo's AC Service — Instalación, mantenimiento y reparación de aires acondicionados en Villalba, PR.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--deep:#0b2545;--deep2:#13325c;--ice:#7fe7f2;--ice2:#d9fbff;--white:#fff;--gray:#b9d4e8}
+body{font-family:'Montserrat',system-ui,sans-serif;background:var(--deep);color:var(--white);line-height:1.6}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,37,69,.96);backdrop-filter:blur(6px);border-bottom:3px solid var(--ice)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem;gap:.6rem;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.15rem}
+.brand span{color:var(--ice)}
+.nav-actions{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.phone{color:var(--ice);font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn{display:inline-block;padding:.65rem 1.3rem;border-radius:8px;font-weight:700;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:#25d366;color:#04220f}
+.btn-call{background:var(--ice);color:var(--deep)}
+main{padding-top:74px}
+.hero{background:linear-gradient(160deg,#0b2545 0%,#13325c 50%,#1d4e7e 100%);text-align:center;padding:4.5rem 1.2rem 3.5rem;position:relative;overflow:hidden}
+.hero::before{content:"❄";position:absolute;font-size:20rem;opacity:.06;top:-2rem;left:-1rem}
+.hero::after{content:"❄";position:absolute;font-size:9rem;opacity:.05;bottom:-1rem;right:8%}
+.tag{display:inline-block;background:var(--ice);color:var(--deep);font-weight:800;font-size:.8rem;padding:.35rem .9rem;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:800;line-height:1.15}
+.hero h1 span{color:var(--ice)}
+.hero p{color:var(--gray);font-size:1.15rem;max-width:620px;margin:1rem auto 1.6rem}
+.big-phone{display:block;font-size:clamp(1.8rem,5.5vw,2.6rem);font-weight:800;color:var(--ice);text-decoration:none;margin-bottom:1.4rem}
+.hero-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+section{max-width:1100px;margin:auto;padding:3rem 1.2rem}
+h2{font-size:1.9rem;font-weight:800;margin-bottom:.4rem}
+h2 .accent{color:var(--ice)}
+.sub{color:var(--gray);margin-bottom:1.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
+.card{background:var(--deep2);border:1px solid #2a5a8f;border-radius:12px;padding:1.5rem}
+.card .icon{font-size:2.2rem}
+.card h3{margin:.7rem 0 .4rem;font-size:1.15rem}
+.card p{color:var(--gray);font-size:.95rem}
+.price{display:inline-block;margin-top:.7rem;background:rgba(127,231,242,.12);border:1px solid var(--ice);color:var(--ice);font-weight:700;padding:.3rem .8rem;border-radius:6px;font-size:.95rem}
+.badges{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;margin-top:1.5rem}
+.badge{background:#0d2c52;border:1px solid #2a5a8f;padding:.7rem 1.2rem;border-radius:30px;font-weight:600;font-size:.92rem}
+.badge::before{content:"✔ ";color:var(--ice)}
+.about{background:var(--deep2);border-radius:14px;padding:2.2rem}
+.about p{color:var(--gray);margin-bottom:.8rem}
+.faq-item{background:var(--deep2);border:1px solid #2a5a8f;border-radius:10px;margin-bottom:.7rem;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-family:inherit;font-weight:700;font-size:1rem;text-align:left;padding:1rem 1.2rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:"+";color:var(--ice);font-size:1.4rem}
+.faq-item.open .faq-q::after{content:"−"}
+.faq-a{display:none;padding:0 1.2rem 1.1rem;color:var(--gray)}
+.faq-item.open .faq-a{display:block}
+.contact-box{background:linear-gradient(135deg,#13325c,#1d4e7e);border:1px solid #2a5a8f;border-radius:14px;padding:2.2rem;text-align:center}
+.contact-box .btn{margin:.4rem}
+footer{background:#071627;text-align:center;padding:1.6rem 1rem;color:#7ea6c4;font-size:.85rem}
+footer .credit{margin-top:.4rem;font-size:.78rem;color:#5a7a96}
+@media(max-width:600px){.nav{justify-content:center}.phone{font-size:.95rem}}
+</style>
+</head>
+<body>
+<header>
+<nav class="nav">
+<div class="brand">❄ Geo's <span>AC Service</span></div>
+<div class="nav-actions">
+<a class="phone" href="tel:+17875169293">📞 (787) 516-9293</a>
+<a class="btn btn-wa" href="https://wa.me/17875169293" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero" style="max-width:none;padding:4.5rem 1.2rem 3.5rem">
+<div class="tag">Refrigeración · Villalba, PR</div>
+<h1>Geo's <span>AC Service</span></h1>
+<p>Aires acondicionados en Villalba: instalación, mantenimiento y reparación. Frío garantizado en tu hogar o negocio.</p>
+<a class="big-phone" href="tel:+17875169293">(787) 516-9293</a>
+<div class="hero-btns">
+<a class="btn btn-call" href="tel:+17875169293">📞 Llamar ahora</a>
+<a class="btn btn-wa" href="https://wa.me/17875169293" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</section>
+
+<section>
+<h2>Nuestros <span class="accent">servicios</span></h2>
+<p class="sub">Precios de propuesta — cotización final según el equipo y el trabajo.</p>
+<div class="grid">
+<div class="card"><div class="icon">🧊</div><h3>Instalación de aires</h3><p>Instalación profesional de consolas, splits y unidades centrales con garantía de instalación.</p><span class="price">Cotización gratis</span></div>
+<div class="card"><div class="icon">🛠️</div><h3>Mantenimiento preventivo</h3><p>Limpieza de filtros y serpentines, revisión eléctrica y chequeo general del sistema.</p><span class="price">Mantenimiento desde $60</span></div>
+<div class="card"><div class="icon">💨</div><h3>Carga de gas refrigerante</h3><p>Detección de fugas y recarga de refrigerante para que tu aire enfríe como nuevo.</p><span class="price">Carga de gas desde $90</span></div>
+<div class="card"><div class="icon">🔧</div><h3>Reparación</h3><p>Diagnóstico y reparación de aires que no enfrían, gotean o hacen ruidos extraños.</p><span class="price">Diagnóstico a convenir</span></div>
+</div>
+<div class="badges">
+<span class="badge">Servicio garantizado</span>
+<span class="badge">Respuesta rápida</span>
+<span class="badge">Precios claros por adelantado</span>
+<span class="badge">Atención en español</span>
+</div>
+</section>
+
+<section>
+<div class="about">
+<h2>Sobre <span class="accent">nosotros</span></h2>
+<p>Geo's AC Service atiende a Villalba y pueblos cercanos en todo lo relacionado con aires acondicionados y refrigeración. Nos dedicamos a que tu equipo funcione al máximo: enfríe bien, consuma menos y dure más.</p>
+<p>Del mantenimiento preventivo a la instalación completa, trabajamos con honestidad y precios claros. Contáctanos por llamada o WhatsApp y resuelve hoy el calor.</p>
+</div>
+</section>
+
+<section>
+<h2>Preguntas <span class="accent">frecuentes</span></h2>
+<p class="sub">Lo que más nos preguntan nuestros clientes.</p>
+<div class="faq-item"><button class="faq-q">¿Cada cuánto debo dar mantenimiento a mi aire?</button><div class="faq-a">Recomendamos mantenimiento preventivo al menos una vez al año para mantener la eficiencia y evitar averías.</div></div>
+<div class="faq-item"><button class="faq-q">¿Cuánto cuesta la carga de gas?</button><div class="faq-a">La carga de gas refrigerante comienza desde $90, dependiendo del tipo de refrigerante y la capacidad del equipo.</div></div>
+<div class="faq-item"><button class="faq-q">¿La cotización de instalación es gratis?</button><div class="faq-a">Sí, la cotización para instalación de aires es completamente gratis y sin compromiso.</div></div>
+<div class="faq-item"><button class="faq-q">¿Qué áreas cubren?</button><div class="faq-a">Estamos en Villalba y servimos pueblos cercanos. Escríbenos por WhatsApp para confirmar cobertura en tu sector.</div></div>
+<div class="faq-item"><button class="faq-q">¿Cómo agendo un servicio?</button><div class="faq-a">Llámanos al (787) 516-9293 o escríbenos por WhatsApp indicando el problema y coordinamos la visita.</div></div>
+</section>
+
+<section>
+<div class="contact-box">
+<h2>Contacto y <span class="accent">ubicación</span></h2>
+<p class="sub">📍 Villalba, Puerto Rico</p>
+<a class="big-phone" href="tel:+17875169293">(787) 516-9293</a>
+<div>
+<a class="btn btn-call" href="tel:+17875169293">📞 Llamar</a>
+<a class="btn btn-wa" href="https://wa.me/17875169293" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<p>© 2026 Geo's AC Service · Villalba, PR</p>
+<p class="credit">Demostración creada por ManuPro</p>
+</footer>
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{q.parentElement.classList.toggle('open')})});
+</script>
+</body>
+</html>

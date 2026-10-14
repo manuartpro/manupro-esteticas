@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L&amp;M Roofing — Selladores de Techos en Caguas, Puerto Rico</title>
+<meta name="description" content="L&M Roofing: sellado de techos residencial, impermeabilización certificada Danosa, reparación de filtraciones y mantenimiento preventivo en Caguas, Puerto Rico. Estimado gratis.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--slate:#232a33;--slate2:#2e3742;--orange:#f97316;--orange2:#ea580c;--light:#f4f5f6;--white:#fff;--dark:#171c22}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Open Sans',sans-serif;color:var(--dark);line-height:1.65}
+h1,h2,h3,.btn,header{font-family:'Montserrat',sans-serif}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(23,28,34,.97);backdrop-filter:blur(6px);box-shadow:0 2px 12px rgba(0,0,0,.35)}
+.hbar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem;gap:.6rem}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;font-weight:800;font-size:1.05rem}
+.brand .logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--orange),var(--orange2));display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.brand small{display:block;font-weight:600;color:#b7c1cc;font-size:.68rem}
+.hactions{display:flex;align-items:center;gap:.7rem}
+.phone{color:#fff;text-decoration:none;font-weight:700;font-size:1rem;white-space:nowrap}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:10px;text-decoration:none;font-weight:700;transition:.2s;border:none;cursor:pointer;font-size:.95rem}
+.btn-wa{background:#22c55e;color:#fff;box-shadow:0 4px 14px rgba(34,197,94,.4)}
+.btn-wa:hover{transform:translateY(-2px)}
+.btn-orange{background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff}
+.btn-call{background:#fff;color:var(--slate);border:2px solid var(--orange)}
+.hero{margin-top:64px;background:linear-gradient(135deg,var(--slate) 0%,var(--slate2) 55%,#3d4754 100%);color:#fff;padding:4.5rem 1.2rem 3.5rem;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:"🏠";position:absolute;font-size:14rem;opacity:.07;right:-2rem;bottom:-3rem}
+.hero .rating{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:.4rem 1rem;border-radius:30px;margin-bottom:1rem;font-size:.9rem}
+.hero h1{font-size:2.6rem;font-weight:800;line-height:1.15;max-width:800px;margin:0 auto 1rem}
+.hero h1 span{color:var(--orange)}
+.hero p{max-width:640px;margin:0 auto 1.6rem;font-size:1.1rem;color:#d5dbe2}
+.hero .bignum{display:block;font-size:2.2rem;font-weight:800;color:#fff;text-decoration:none;margin:0 auto .8rem}
+.cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.4rem}
+.badge-cert{display:inline-block;background:var(--orange);color:#fff;font-weight:700;padding:.45rem 1.1rem;border-radius:8px;font-size:.9rem}
+section{padding:3.2rem 1.2rem}
+.wrap{max-width:1050px;margin:0 auto}
+h2.sec{font-size:1.9rem;font-weight:800;margin-bottom:.4rem;color:var(--slate)}
+.sub{color:#5b6672;margin-bottom:2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem}
+.card{background:#fff;border:1px solid #e3e7eb;border-radius:14px;padding:1.5rem;box-shadow:0 6px 18px rgba(35,42,51,.07);transition:.2s}
+.card:hover{transform:translateY(-4px)}
+.card .ico{font-size:2rem;margin-bottom:.5rem}
+.card h3{font-size:1.08rem;margin-bottom:.4rem;color:var(--slate)}
+.card p{font-size:.93rem;color:#5b6672}
+.price{display:inline-block;margin-top:.7rem;background:#fff4e9;color:var(--orange2);font-weight:800;padding:.3rem .8rem;border-radius:8px;font-size:.95rem;border:1px dashed var(--orange)}
+.dark{background:var(--slate);color:#e6eaef}
+.dark h2.sec{color:#fff}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.about .imgbox{height:280px;border-radius:16px;background:linear-gradient(135deg,#3d4754,#232a33 60%,var(--orange2));display:flex;align-items:center;justify-content:center;font-size:5rem}
+.stats{display:flex;gap:1.4rem;margin-top:1.2rem;flex-wrap:wrap}
+.stat{background:#fff;border-radius:12px;padding:1rem 1.4rem;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.06);flex:1;min-width:120px}
+.stat b{font-size:1.7rem;color:var(--orange2);font-family:'Montserrat'}
+.stat span{display:block;font-size:.82rem;color:#5b6672}
+.testi{background:var(--light)}
+.tcard{background:#fff;border-radius:14px;padding:1.6rem;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.tcard .stars{color:#f59e0b;font-size:1.15rem;margin-bottom:.5rem}
+.tcard p{font-style:italic;color:#3c4652}
+.tcard small{color:#8a94a0}
+.faq details{background:#fff;border:1px solid #e3e7eb;border-radius:10px;padding:1rem 1.2rem;margin-bottom:.7rem}
+.faq summary{font-weight:700;cursor:pointer;color:var(--slate);font-family:'Montserrat'}
+.faq p{margin-top:.6rem;color:#5b6672;font-size:.95rem}
+.contact{background:linear-gradient(135deg,var(--slate),var(--slate2));color:#fff;text-align:center}
+.contact h2.sec{color:#fff}
+.contact .big-tel{font-size:2.4rem;font-weight:800;color:#fff;text-decoration:none;display:inline-block;margin:1rem 0}
+.contact p{color:#c9d2dc;max-width:560px;margin:0 auto 1.5rem}
+footer{background:#10141a;color:#8a94a0;text-align:center;padding:1.6rem 1rem;font-size:.85rem}
+footer .cred{opacity:.65;margin-top:.4rem}
+@media(max-width:640px){.hero h1{font-size:1.85rem}.about{grid-template-columns:1fr}.hbarscroll{overflow-x:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hbar">
+    <div class="brand"><div class="logo">🏠</div><div>L&amp;M ROOFING<small>Selladores de Techos · Caguas, PR</small></div></div>
+    <div class="hactions">
+      <a class="phone" href="tel:+17874735676">📞 (787) 473-5676</a>
+      <a class="btn btn-wa" href="https://wa.me/17874735676" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="rating">⭐ 4.9 en Google · 9 reseñas</div>
+    <h1>Expertos en <span>Sellado de Techos</span> en Caguas, Puerto Rico</h1>
+    <p>Impermeabilización certificada Danosa, reparación de filtraciones y mantenimiento preventivo. Protegemos tu hogar del sol y la lluvia con garantía.</p>
+    <a class="bignum" href="tel:+17874735676">📞 (787) 473-5676</a>
+    <div class="cta">
+      <a class="btn btn-wa" href="https://wa.me/17874735676" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
+      <a class="btn btn-call" href="tel:+17874735676">📞 Llamar ahora</a>
+    </div>
+    <span class="badge-cert">✅ Certificados Danosa · Estimado GRATIS</span>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <h2 class="sec">Nuestros Servicios</h2>
+    <p class="sub">Soluciones profesionales para que tu techo dure años. Todos los trabajos incluyen inspección y garantía.</p>
+    <div class="grid">
+      <div class="card"><div class="ico">🛡️</div><h3>Sellado de Techos Residencial</h3><p>Sellado completo con membrana impermeable que protege contra filtraciones, humedad y los rayos UV del Caribe.</p><span class="price">desde $899</span></div>
+      <div class="card"><div class="ico">💧</div><h3>Impermeabilización Danosa</h3><p>Instalación certificada de sistemas Danosa, la marca líder en impermeabilización para techos planos y de concreto.</p><span class="price">cotización gratis</span></div>
+      <div class="card"><div class="ico">🔧</div><h3>Reparación de Filtraciones</h3><p>Detectamos el origen exacto de la gotera y la reparamos de raíz, sin parches temporales.</p><span class="price">desde $150</span></div>
+      <div class="card"><div class="ico">🔍</div><h3>Mantenimiento Preventivo</h3><p>Limpieza de desagües, revisión de sellos y retoques periódicos para alargar la vida de tu techo.</p><span class="price">estimado gratis</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="nosotros">
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <h2 class="sec">Sobre L&amp;M Roofing</h2>
+        <p style="color:#c9d2dc">Somos selladores de techos en Caguas, Puerto Rico, especializados en impermeabilización con sistemas certificados Danosa. Nuestro enfoque es simple: hacerlo bien desde la primera vez, con materiales de primera y mano de obra honesta.</p>
+        <p style="color:#c9d2dc;margin-top:.8rem">Con un promedio de 4.9 estrellas en Google, nuestros clientes nos recomiendan por la puntualidad, la limpieza en el trabajo y resultados que aguantan temporada tras temporada.</p>
+        <div class="stats">
+          <div class="stat"><b>4.9★</b><span>Rating en Google</span></div>
+          <div class="stat"><b>Danosa</b><span>Certificados</span></div>
+          <div class="stat"><b>Caguas</b><span>Servicio local</span></div>
+        </div>
+      </div>
+      <div class="imgbox">🧱</div>
+    </div>
+  </div>
+</section>
+
+<section class="testi" id="resenas">
+  <div class="wrap">
+    <h2 class="sec">Lo que dicen nuestros clientes</h2>
+    <p class="sub">4.9★ en Google · 9 reseñas</p>
+    <div class="grid">
+      <div class="tcard"><div class="stars">★★★★★</div><p>"Trabajo serio y limpio. Se acabaron las filtraciones del cuarto que llevaban años molestando."</p><small>— Reseña de Google</small></div>
+      <div class="tcard"><div class="stars">★★★★★</div><p>"Llegaron puntuales, explicaron todo el proceso y el techo quedó como nuevo. Los recomiendo."</p><small>— Reseña de Google</small></div>
+      <div class="tcard"><div class="stars">★★★★★</div><p>"Excelente servicio, buen precio y cumplen lo que prometen. El estimado fue gratis y sin compromiso."</p><small>— Reseña de Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2 class="sec">Preguntas Frecuentes</h2>
+    <p class="sub">Lo que más nos preguntan antes de sellar un techo.</p>
+    <details><summary>¿Cuánto dura un sellado de techo?</summary><p>Con materiales certificados Danosa y una instalación correcta, un sellado bien hecho puede durar entre 7 y 12 años, dependiendo de la exposición y el mantenimiento.</p></details>
+    <details><summary>¿El estimado es realmente gratis?</summary><p>Sí. Visitamos tu propiedad en Caguas y áreas cercanas, inspeccionamos el techo y te damos una cotización detallada sin costo ni compromiso.</p></details>
+    <details><summary>¿Trabajan con seguros?</summary><p>Te orientamos con la documentación y fotos que necesites para reclamaciones por daños de tormenta.</p></details>
+    <details><summary>¿Cuánto tiempo toma sellar un techo residencial?</summary><p>La mayoría de las casas se completan en 1 a 3 días laborables, según el tamaño y la condición del techo.</p></details>
+    <details><summary>¿Ofrecen garantía?</summary><p>Sí, todos nuestros trabajos incluyen garantía escrita por mano de obra, además de la garantía del fabricante del material.</p></details>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <h2 class="sec">Contáctanos</h2>
+    <p>📍 Caguas, Puerto Rico — servimos Caguas y pueblos cercanos.</p>
+    <a class="big-tel" href="tel:+17874735676">📞 (787) 473-5676</a>
+    <div class="cta">
+      <a class="btn btn-wa" href="https://wa.me/17874735676" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a class="btn btn-orange" href="tel:+17874735676">Llamar ahora</a>
+    </div>
+    <p>⏰ Lun–Sáb · Estimado gratis</p>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 L&amp;M Roofing · Caguas, Puerto Rico</div>
+  <div class="cred">Demostración creada por ManuPro</div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+  });
+});
+</script>
+</body>
+</html>
