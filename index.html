@@ -25,6 +25,15 @@ header p{color:#b9c4bb;max-width:640px;margin:0 auto;font-size:1.05rem}
 .pcard-body span{color:#1faa55;font-weight:600;font-size:.9rem;letter-spacing:.05em}
 footer{text-align:center;padding:50px 20px;color:#7c857d;font-size:.9rem;border-top:1px solid #222}
 footer b{color:#1faa55}
+.section-head{text-align:center;padding:70px 20px 10px}
+.section-head .sec-tag{display:inline-block;font-size:.72rem;letter-spacing:.3em;padding:8px 22px;border-radius:50px;margin-bottom:18px;text-transform:uppercase;font-weight:600}
+.section-head h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:12px}
+.section-head p{color:#b9c4bb;max-width:620px;margin:0 auto 34px;font-size:1rem}
+.sec-green .sec-tag{background:#1faa55;color:#fff}
+.sec-green h2 em{color:#1faa55;font-style:italic}
+.sec-orange .sec-tag{background:#f46b1b;color:#fff}
+.sec-orange h2 em{color:#f46b1b;font-style:italic}
+.sec-divider{border:0;border-top:2px solid #222;margin:20px auto 0;width:min(1200px,92%)}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.grid{grid-template-columns:1fr}}
 </style>
@@ -32,10 +41,15 @@ footer b{color:#1faa55}
 <body>
 <header>
   <div class="tag">Portafolio ManuPro</div>
-  <h1>Websites profesionales <em>para estéticas</em></h1>
-  <p>Diseños de demostración listos para personalizar: reserva por WhatsApp, preguntas frecuentes, galería y más. Tu website profesional por <b>$99/año</b> todo incluido.</p>
+  <h1>Demos de websites <em>profesionales</em></h1>
+  <p>Elige tu sección: estéticas o oficios y servicios. Todas listas para personalizar con tu negocio.</p>
 </header>
-<div class="wrap"><div class="grid">
+<div class="section-head sec-green">
+  <div class="sec-tag">Sección 1 · 30 demos</div>
+  <h2>💅 <em>Estéticas</em> — $99/año</h2>
+  <p>Websites para salones, spas y clínicas estéticas. Todo incluido por un año.</p>
+</div>
+<div class="wrap" style="padding-top:0"><div class="grid">
 <a class="pcard" href="./la-estetica/"><img loading="lazy" src="./assets/facial.jpg" alt="La Estética"><div class="pcard-body"><h3>La Estética</h3><p>San Juan, Puerto Rico</p><span>Ver website →</span></div></a>
 <a class="pcard" href="./viva-estetica/"><img loading="lazy" src="./assets/cejas2.jpg" alt="Viva Estética"><div class="pcard-body"><h3>Viva Estética</h3><p>San Juan, Puerto Rico</p><span>Ver website →</span></div></a>
 <a class="pcard" href="./estetica-by-virgen/"><img loading="lazy" src="./assets/nosotros.jpg" alt="Estética by Virgen"><div class="pcard-body"><h3>Estética by Virgen</h3><p>Bayamón, Puerto Rico</p><span>Ver website →</span></div></a>
@@ -67,9 +81,13 @@ footer b{color:#1faa55}
 <a class="pcard" href="./style-house-salon-and-esthetic/"><img loading="lazy" src="./assets/cejas2.jpg" alt="Style House Salon and Esthetic"><div class="pcard-body"><h3>Style House Salon and Esthetic</h3><p>Juana Díaz, Puerto Rico</p><span>Ver website →</span></div></a>
 <a class="pcard" href="./amanash-salon/"><img loading="lazy" src="./assets/nosotros.jpg" alt="Amanash Salon"><div class="pcard-body"><h3>Amanash Salon</h3><p>Guayama, Puerto Rico</p><span>Ver website →</span></div></a>
 </div></div>
+<hr class="sec-divider">
+<div class="section-head sec-orange">
+  <div class="sec-tag">Sección 2 · 26 demos</div>
+  <h2>🔧 <em>Oficios y servicios</em> — $200 / $300 / $500</h2>
+  <p>Demos para plomeros, electricistas, detailing, gimnasios, dentistas y más. Precio según el tier.</p>
+</div>
 <div class="wrap" style="padding-top:0">
-<h2 style="font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:8px">Negocios y <em style="color:#f46b1b;font-style:italic">servicios</em></h2>
-<p style="color:#b9c4bb;margin-bottom:30px">Demos para oficios y servicios profesionales — tiers <b>$200 / $300 / $500</b>.</p>
 <div class="grid">
 <a class="pcard" href="./tezla-wash.html"><div class="pcard-body"><h3>Tezla Wash</h3><p>Lavado a domicilio · Puerto Rico</p><span>Ver website →</span></div></a>
 <a class="pcard" href="./lm-roofing-caguas.html"><div class="pcard-body"><h3>L&M Roofing</h3><p>Sellado de techos · Caguas</p><span>Ver website →</span></div></a>
