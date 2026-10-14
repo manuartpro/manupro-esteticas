@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayson Auto Detailing en Ciales, Puerto Rico</title>
+<meta name="description" content="Detailing profesional en Ciales, Puerto Rico: lavado premium, pulido, tratamiento cerámico y limpieza de interiores. Tu carro como nuevo. Llama al (939) 401-2851.">
+<meta name="theme-color" content="#0891B2">
+<link rel="manifest" href='data:application/manifest+json,{"name":"Jayson Auto Detailing","short_name":"Jayson Detailing","display":"standalone","start_url":".","theme_color":"#0891B2","background_color":"#F4F7FA"}'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F7FA; --bg2:#E9EFF5; --card:#FFFFFF; --text:#0F1E2A; --muted:#57707F;
+  --primary:#0891B2; --accent:#22D3EE; --line:#D7E1EA;
+  --header-bg:rgba(255,255,255,.86);
+}
+[data-theme="dark"]{
+  --bg:#080C12; --bg2:#0D141D; --card:#121B26; --text:#E8F1F8; --muted:#93A7B8;
+  --line:#1E2C3C; --header-bg:rgba(10,12,16,.82);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;transition:background .3s,color .3s}
+h1,h2,h3,.display{font-family:'Archivo',serif;letter-spacing:-.5px;line-height:1.15}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--header-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800}
+.mono{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Archivo';font-size:20px}
+.links{display:flex;gap:26px;align-items:center}
+.links a{font-size:14.5px;font-weight:600;text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--primary)}
+.hbtns{display:flex;gap:10px;align-items:center}
+.theme-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text)}
+.theme-btn .moon{display:none}
+[data-theme="dark"] .theme-btn .sun{display:none}
+[data-theme="dark"] .theme-btn .moon{display:block}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.btn-outline{border:2px solid var(--primary);color:var(--primary);background:transparent}
+.btn-wa{background:#25D366;color:#fff}
+.burger{display:none;background:none;border:none;cursor:pointer;color:var(--text)}
+@media(max-width:860px){.links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--header-bg);flex-direction:column;padding:22px;gap:18px;border-bottom:1px solid var(--line)}.links.open{display:flex}.burger{display:block}}
+.hero{position:relative;padding:150px 0 96px;overflow:hidden;background:radial-gradient(1100px 500px at 80% -10%,rgba(8,145,178,.16),transparent 60%),var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--primary);margin-bottom:18px}
+.kicker::before{content:"";width:34px;height:3px;background:var(--accent);border-radius:2px}
+.hero h1{font-size:clamp(38px,5.6vw,64px);margin-bottom:18px}
+.hero h1 .hl{color:var(--primary)}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:560px;margin-bottom:32px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.hero-art{position:relative;min-height:380px;display:flex;align-items:center;justify-content:center}
+.blob{position:absolute;width:340px;height:340px;border-radius:46% 54% 55% 45%/48% 44% 56% 52%;background:linear-gradient(135deg,var(--primary),var(--accent));opacity:.16;animation:morph 9s ease-in-out infinite}
+@keyframes morph{0%,100%{border-radius:46% 54% 55% 45%/48% 44% 56% 52%}50%{border-radius:58% 42% 44% 56%/44% 56% 42% 58%}}
+.hero-icon{position:relative;width:210px;height:210px;border-radius:32px;background:var(--card);border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;color:var(--primary)}
+.hero-icon svg{width:104px;height:104px}
+.chip-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.chip{font-size:13px;font-weight:700;padding:8px 16px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--muted)}
+section{padding:84px 0}
+.sec-head{max-width:640px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(28px,4vw,42px);margin-bottom:14px}
+.sec-head p{color:var(--muted);font-size:17px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:900px){.grid3,.grid4{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.grid3,.grid4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.12)}
+.card .ic{width:54px;height:54px;border-radius:15px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.card .ic svg{width:27px;height:27px}
+.card h3{font-size:20px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:15px}
+.price{display:inline-block;margin-top:14px;font-weight:800;color:var(--primary);font-size:17px}
+.price small{display:block;font-weight:600;color:var(--muted);font-size:12px}
+.alt{background:var(--bg2)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.step .n{font-family:'Archivo';font-size:44px;color:var(--accent);opacity:.9;line-height:1}
+.step h3{margin:12px 0 8px;font-size:18px}
+.step p{color:var(--muted);font-size:14.5px}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+@media(max-width:860px){.why-grid{grid-template-columns:1fr}}
+.why-list{list-style:none;display:flex;flex-direction:column;gap:18px}
+.why-list li{display:flex;gap:15px;align-items:flex-start}
+.why-list .tk{flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center}
+.why-list .tk svg{width:16px;height:16px}
+.why-list b{display:block;font-size:16.5px}
+.why-list span{color:var(--muted);font-size:15px}
+.rating-band{background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:26px;padding:54px;color:#fff;text-align:center}
+.rating-band .stars{font-size:34px;letter-spacing:6px;margin-bottom:10px}
+.rating-band h2{margin-bottom:8px}
+.rating-band p{opacity:.92}
+details.faq{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:14px;overflow:hidden}
+details.faq summary{cursor:pointer;padding:20px 24px;font-weight:700;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary .pm{flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--primary);transition:transform .3s}
+details.faq[open] summary .pm{transform:rotate(45deg)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-body p{padding:0 24px 22px;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.cinfo{display:flex;flex-direction:column;gap:18px}
+.crow{display:flex;gap:15px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.crow .ic{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center}
+.crow .ic svg{width:22px;height:22px}
+.crow b{display:block;font-size:15.5px}
+.crow a,.crow span{color:var(--muted);font-size:15px;text-decoration:none}
+.crow a:hover{color:var(--primary)}
+form.waform{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:32px}
+form.waform h3{margin-bottom:6px;font-size:22px}
+form.waform p{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13.5px;font-weight:700;margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:15px;font-family:inherit}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--accent);border-color:transparent}
+footer{border-top:1px solid var(--line);padding:44px 0 30px;background:var(--bg2)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot p{color:var(--muted);font-size:13.5px}
+.foot .demo{font-weight:700;color:var(--text)}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:200;width:62px;height:62px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.45);text-decoration:none;animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 22px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rv.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.blob,.wa-float{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio"><span class="mono">JD</span><span>Jayson Detailing</span></a>
+    <nav class="links" id="navLinks">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn btn-wa" href="https://wa.me/19394012851" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.6 12.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg> WhatsApp</a>
+    </nav>
+    <div class="hbtns">
+      <button class="theme-btn" id="themeToggle" aria-label="Cambiar tema">
+        <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker rv">Ciales, Puerto Rico</span>
+      <h1 class="rv">Tu carro, <span class="hl">como salido del dealer</span></h1>
+      <p class="lead rv">Detailing profesional en Ciales: lavado premium, corrección de pintura, cerámico e interiores impecables. Cita por WhatsApp en minutos.</p>
+      <div class="cta-row rv">
+        <a class="btn btn-primary" href="https://wa.me/19394012851" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.6 12.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg> Escríbenos por WhatsApp</a>
+        <a class="btn btn-outline" href="tel:+119394012851"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg> (939) 401-2851</a>
+      </div>
+      <div class="chip-row rv"><span class="chip">Lavado premium</span><span class="chip">Tratamiento cerámico</span><span class="chip">Interiores profundos</span></div>
+    </div>
+    <div class="hero-art rv">
+      <div class="blob"></div>
+      <div class="hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11m-14 0h14a2 2 0 0 1 2 2v4h-2.5m-13.5 0H3v-4a2 2 0 0 1 2-2z"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="kicker">Servicios</span><h2>Paquetes de detailing</h2><p>Productos profesionales y técnica de dos cubetas. Precios desde — propuesta.</p></div>
+    <div class="grid3"><div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.2 6 11a6 6 0 0 1-12 0c0-4.8 6-11 6-11z"/></svg></div><h3>Lavado exterior premium</h3><p>Lavado a mano, descontaminación, cera en spray y detallado de aros y gomas.</p><span class="price">desde $35 — propuesta</span></div><div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1l2.1-2.1M17 7l2.1-2.1"/></svg></div><h3>Lavado + interior</h3><p>Exterior completo más aspirado profundo, limpieza de cristales y paneles.</p><span class="price">desde $75 — propuesta</span></div><div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11m-14 0h14a2 2 0 0 1 2 2v4h-2.5m-13.5 0H3v-4a2 2 0 0 1 2-2z"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/></svg></div><h3>Detailing completo</h3><p>Interior y exterior a fondo: shampoo de asientos, plásticos, motor y cera.</p><span class="price">desde $125 — propuesta</span></div><div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3.5v5.5c0 5-3.4 8.6-8 11-4.6-2.4-8-6-8-11V5.5z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Tratamiento cerámico</h3><p>Protección hidrofóbica de larga duración con brillo espejo.</p><span class="price">desde $299 — propuesta</span></div><div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3>Pulido y corrección</h3><p>Elimina swirls, hologramas y oxidación. Devuelve el brillo original.</p><span class="price">desde $150 — propuesta</span></div><div class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4 0 7-2.8 7-7 0-3-2-5.5-3.5-7C14 6.5 13 5 13 2c-3 2-5 4.5-5.5 7C6 10 5 11.5 5 15c0 4.2 3 7 7 7z"/></svg></div><h3>Limpieza de motor</h3><p>Desengrasado y detallado del compartimiento del motor con protección.</p><span class="price">desde $55 — propuesta</span></div></div>
+  </div>
+</section>
+
+<section id="nosotros" class="alt">
+  <div class="wrap why-grid">
+    <div class="rv"><span class="kicker">Por qué elegirnos</span><h2 style="font-size:clamp(28px,4vw,40px);margin-bottom:16px">Detalle de verdad, no un car wash</h2><p style="color:var(--muted);font-size:17px;margin-bottom:30px">Cada carro se trata como si fuera el nuestro. Sin rayones, sin prisas.</p>
+    <ul class="why-list"><li><span class="tk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><b>Productos profesionales</b><span>Ceras, selladores y químicos de grado detailing.</span></div></li><li><span class="tk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><b>Técnica segura para tu pintura</b><span>Lavado de dos cubetas y microfibras limpias.</span></div></li><li><span class="tk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><b>Antes y después documentado</b><span>Te mostramos el cambio en fotos al entregar.</span></div></li><li><span class="tk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><b>Cita flexible</b><span>Coordinamos el horario que te convenga.</span></div></li></ul></div>
+    <div class="rv">
+      <div class="card" style="padding:38px">
+        <h3 style="margin-bottom:14px">Sobre Jayson Auto Detailing</h3>
+        <p style="color:var(--muted)">Detailing con pasión por el detalle en Ciales. Nos especializamos en devolverle a tu carro ese acabado de showroom, por dentro y por fuera, con un servicio honesto y puntual.</p>
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="https://wa.me/19394012851" target="_blank" rel="noopener">Pedir cotización gratis</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="kicker">Cómo trabajamos</span><h2>Un proceso simple y claro</h2><p>Reservar es tan fácil como escribirnos.</p></div>
+    <div class="steps"><div class="step rv"><div class="n">1</div><h3>Reserva por WhatsApp</h3><p>Elige tu paquete y coordina fecha y hora.</p></div><div class="step rv"><div class="n">2</div><h3>Inspección</h3><p>Evaluamos la condición del vehículo contigo.</p></div><div class="step rv"><div class="n">3</div><h3>Detailing</h3><p>Trabajamos cada panel e interior con calma y técnica.</p></div><div class="step rv"><div class="n">4</div><h3>Entrega</h3><p>Revisas el resultado antes de pagar. Garantizado.</p></div></div>
+  </div>
+</section>
+
+
+
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="kicker">FAQ</span><h2>Preguntas frecuentes</h2><p>Respuestas directas a lo que más nos preguntan.</p></div>
+    <div style="max-width:780px"><details class="faq rv"><summary>¿Cuánto dura un detailing completo?<span class="pm">+</span></summary><div class="faq-body"><p>Entre 3 y 5 horas según el tamaño y la condición del vehículo. El cerámico puede tomar un día completo.</p></div></details><details class="faq rv"><summary>¿Necesito cita o atienden sin cita?<span class="pm">+</span></summary><div class="faq-body"><p>Recomendamos reservar por WhatsApp para garantizar tu espacio, pero si hay disponibilidad atendemos el mismo día.</p></div></details><details class="faq rv"><summary>¿El tratamiento cerámico vale la pena?<span class="pm">+</span></summary><div class="faq-body"><p>Sí: protege la pintura del sol, la lluvia y los contaminantes por años, y hace el mantenimiento mucho más fácil.</p></div></details><details class="faq rv"><summary>¿Limpian manchas difíciles en asientos?<span class="pm">+</span></summary><div class="faq-body"><p>Sí. Usamos extracción con shampoo para manchas de tela y tratamiento especial para cuero.</p></div></details><details class="faq rv"><summary>¿Qué formas de pago aceptan?<span class="pm">+</span></summary><div class="faq-body"><p>Efectivo, ATH Móvil y tarjeta.</p></div></details></div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="kicker">Contacto</span><h2>Reserva tu espacio</h2><p>Escríbenos por WhatsApp y coordina tu cita hoy mismo.</p></div>
+    <div class="contact-grid">
+      <div class="cinfo rv"><div class="crow"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></div><div><b>Teléfono</b><a href="tel:+119394012851">(939) 401-2851</a></div></div><div class="crow"><div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.6 12.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg></div><div><b>WhatsApp</b><a href="https://wa.me/19394012851" target="_blank" rel="noopener">(939) 401-2851</a></div></div><div class="crow"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div><div><b>Ubicación</b><span>Ciales, Puerto Rico</span></div></div><div class="crow"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div><div><b>Horario</b><span>Lun–Sáb: 8:00 AM – 5:00 PM · Dom: con cita</span></div></div></div>
+      <form class="waform rv" id="waForm">
+        <h3>Solicita tu cotización</h3>
+        <p>Completa el formulario y te contactamos por WhatsApp.</p>
+        <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" required placeholder="Tu nombre"></div>
+        <div class="field"><label for="f-tel">Teléfono</label><input id="f-tel" name="telefono" type="tel" placeholder="(787) 000-0000"></div>
+        <div class="field"><label for="f-serv">Servicio de interés</label><select id="f-serv" name="servicio"><option>Lavado exterior premium</option><option>Lavado + interior</option><option>Detailing completo</option><option>Tratamiento cerámico</option><option>Pulido y corrección</option><option>Limpieza de motor</option></select></div>
+        <div class="field"><label for="f-msg">Mensaje</label><textarea id="f-msg" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas"></textarea></div>
+        <button class="btn btn-wa" type="submit" style="width:100%;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.6 12.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg> Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p><span class="demo">Demostración creada por ManuPro</span><br>Sitio Esencial ($200)<br>Precios de propuesta sujetos a cotización final.</p>
+    <p>Jayson Detailing &middot; Ciales, PR<br><a href="tel:+119394012851" style="color:var(--primary);font-weight:700">(939) 401-2851</a></p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/19394012851" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg></a>
+
+<script>
+/* ManuPro Métricas — sin dependencias externas.
+   Cómo verlas: abre la consola del navegador (F12) y escribe: ManuProMetrics.resumen() */
+(function(){
+  var K='mpm_'+location.pathname.replace(/[^a-z0-9]/gi,'_');
+  function get(){ try{return JSON.parse(localStorage.getItem(K))||{visitas:0,wa:0,llamadas:0,scrollMax:0};}catch(e){return{visitas:0,wa:0,llamadas:0,scrollMax:0};} }
+  function save(d){ try{localStorage.setItem(K,JSON.stringify(d));}catch(e){} }
+  var d=get(); d.visitas++; save(d);
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a'); if(!a) return;
+    var h=(a.getAttribute('href')||'');
+    var d2=get();
+    if(h.indexOf('wa.me')>-1){d2.wa++;}
+    else if(h.indexOf('tel:')===0){d2.llamadas++;}
+    else return; save(d2);
+  });
+  var ticking=false;
+  window.addEventListener('scroll',function(){
+    if(ticking) return; ticking=true;
+    requestAnimationFrame(function(){
+      var p=Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight||1))*100);
+      var d3=get(); if(p>d3.scrollMax){d3.scrollMax=p; save(d3);} ticking=false;
+    });
+  },{passive:true});
+  window.ManuProMetrics={resumen:function(){var x=get();return 'Visitas:'+x.visitas+' | WhatsApp:'+x.wa+' | Llamadas:'+x.llamadas+' | Scroll max:'+x.scrollMax+'%';}};
+})();
+</script>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  try{
+    var saved=localStorage.getItem('mpm_theme');
+    if(saved){root.setAttribute('data-theme',saved);}
+  }catch(e){}
+  document.getElementById('themeToggle').addEventListener('click',function(){
+    var next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('mpm_theme',next);}catch(e){}
+  });
+  var b=document.getElementById('burger'),l=document.getElementById('navLinks');
+  b.addEventListener('click',function(){l.classList.toggle('open');});
+  l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');});});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  document.querySelectorAll('details.faq').forEach(function(dt){
+    var body=dt.querySelector('.faq-body');
+    function sync(){body.style.maxHeight=dt.open?body.scrollHeight+'px':'0px';}
+    dt.addEventListener('toggle',sync);sync();
+  });
+  document.getElementById('waForm').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var n=document.getElementById('f-nombre').value.trim();
+    var t=document.getElementById('f-tel').value.trim();
+    var s=document.getElementById('f-serv').value;
+    var m=document.getElementById('f-msg').value.trim();
+    var txt='Hola Jayson Auto Detailing, soy '+n+'. Me interesa: '+s+'.'+(t?' Mi teléfono: '+t+'.':'')+(m?' Mensaje: '+m:'');
+    window.open('https://wa.me/19394012851?text='+encodeURIComponent(txt),'_blank');
+  });
+})();
+</script>
+</body>
+</html>
