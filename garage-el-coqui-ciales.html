@@ -3,170 +3,184 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Garage El Coqui | Mecánica en Ciales, PR — (787) 871-4591</title>
-<meta name="description" content="Garage El Coqui — mecánica general en Ciales, Puerto Rico. Diagnóstico honesto, frenos, suspensión, aceite y más. Rating 5 estrellas. Llámanos: (787) 871-4591.">
+<title>Garage El Coquí | Taller de Mecánica General en Ciales, PR — (787) 871-4591</title>
+<meta name="description" content="Garage El Coquí — taller de mecánica general en Ciales, Puerto Rico. Diagnóstico honesto, frenos, suspensión, aceite y más. Rating 5 estrellas. Llámanos: (787) 871-4591.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --black:#0a0a0a; --dark:#111111; --panel:#161616; --line:rgba(255,212,0,.32);
-  --yel:#FFD400; --yel-hi:#FFE14D; --yel-dim:rgba(255,212,0,.12);
-  --white:#ffffff; --gray:#9a9a9a; --wa:#25D366;
+  --navy:#1B2F5A; --navy-dk:#12203F; --red:#D92B2B; --red-dk:#A91F1F;
+  --paper:#F7F8FA; --white:#ffffff; --ink:#1C2433; --gray:#5F6B7E; --wa:#25D366;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.7;overflow-x:hidden}
-h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;line-height:.95;letter-spacing:.03em}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:600;line-height:1.05;letter-spacing:.01em;text-transform:uppercase}
 a{text-decoration:none;color:inherit}
 .container{width:min(1140px,92%);margin:0 auto}
 section{padding:96px 0;position:relative}
-.hazard{height:14px;background:repeating-linear-gradient(-45deg,var(--yel) 0 22px,#0a0a0a 22px 44px)}
 /* HEADER */
 header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:transparent}
-header.solid{background:rgba(10,10,10,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
-.logo{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.08em;line-height:1;display:flex;align-items:center;gap:10px}
-.logo .frog{font-size:1.5rem}
-.logo small{display:block;font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:.42em;color:var(--gray);font-weight:600}
-.logo .yel{color:var(--yel)}
+header.solid{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:3px solid var(--red);box-shadow:0 4px 20px rgba(27,47,90,.1)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:58px;width:auto;border:2px solid var(--navy);border-radius:6px;background:#fff;box-shadow:0 3px 12px rgba(27,47,90,.18)}
+.logo .t{font-family:'Oswald',sans-serif;font-size:1rem;line-height:1.1;color:var(--navy);text-transform:uppercase}
+.logo .t small{display:block;font-family:'Inter',sans-serif;font-size:.58rem;letter-spacing:.32em;color:var(--red);font-weight:700}
 .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
-.nav-links a{font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:#d4d4d4;transition:.25s;font-weight:600}
-.nav-links a:hover{color:var(--yel)}
-.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;font-size:1.4rem;cursor:pointer;color:var(--yel);padding:4px 12px}
-.btn{display:inline-block;background:var(--yel);color:#0a0a0a;padding:14px 32px;border-radius:6px;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;transition:.28s;border:2px solid var(--yel);cursor:pointer}
-.btn:hover{background:transparent;color:var(--yel);transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,212,0,.25)}
+.nav-links a{font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);transition:.25s;font-weight:600}
+.nav-links a:hover{color:var(--red)}
+.menu-toggle{display:none;background:none;border:1px solid rgba(27,47,90,.3);border-radius:8px;font-size:1.4rem;cursor:pointer;color:var(--navy);padding:4px 12px}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:15px 32px;border-radius:6px;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;transition:.28s;border:2px solid var(--red);cursor:pointer}
+.btn:hover{background:var(--navy);border-color:var(--navy);transform:translateY(-2px);box-shadow:0 12px 30px rgba(27,47,90,.3)}
 .btn.wa{background:var(--wa);border-color:var(--wa);color:#062b16}
-.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 28px rgba(37,211,102,.25)}
-.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
-.btn.ghost:hover{border-color:var(--yel);color:var(--yel);box-shadow:none}
+.btn.wa:hover{background:#1db857;border-color:#1db857;color:#fff;box-shadow:0 12px 30px rgba(37,211,102,.3)}
+.btn.navy{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn.navy:hover{background:transparent;color:var(--navy);box-shadow:none}
+.btn.ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn.ghost:hover{border-color:var(--red);color:var(--red);box-shadow:none}
 .btn.sm{padding:11px 22px;font-size:.76rem}
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;
+/* HERO — sign board */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;color:var(--ink);
   background:
-    linear-gradient(180deg,rgba(10,10,10,.62) 0%,rgba(10,10,10,.94) 100%),
-    radial-gradient(ellipse 75% 55% at 50% 0%,#2a230a 0%,var(--black) 70%)}
-.hero::after{content:'🔧';position:absolute;right:5%;bottom:10%;font-size:clamp(6rem,16vw,12rem);opacity:.07;transform:rotate(-18deg)}
-.hero-inner{position:relative;z-index:2;padding:140px 0 80px;max-width:880px}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;letter-spacing:.4em;text-transform:uppercase;font-size:.74rem;color:var(--yel);margin-bottom:22px;font-weight:700}
-.eyebrow::before{content:'';width:40px;height:3px;background:var(--yel)}
-.hero h1{font-size:clamp(3.4rem,11vw,7.6rem);margin-bottom:18px}
-.hero h1 em{font-style:normal;color:var(--yel)}
-.hero .sub{font-size:1.14rem;font-weight:300;max-width:620px;margin-bottom:12px;color:#cfcfcf}
-.rating-line{display:flex;align-items:center;gap:12px;margin-bottom:32px;flex-wrap:wrap}
-.rating-line .stars{color:var(--yel);font-size:1.5rem;letter-spacing:.15em}
+    linear-gradient(180deg,rgba(247,248,250,.88) 0%,rgba(247,248,250,.96) 100%),
+    repeating-linear-gradient(45deg,rgba(27,47,90,.05) 0 14px,transparent 14px 28px)}
+.signbar{height:10px;background:repeating-linear-gradient(-45deg,var(--red) 0 24px,var(--navy) 24px 48px)}
+.hero-inner{position:relative;z-index:2;padding:140px 0 80px;max-width:920px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;letter-spacing:.36em;text-transform:uppercase;font-size:.72rem;color:var(--red);margin-bottom:24px;font-weight:700}
+.eyebrow::before{content:'';width:44px;height:3px;background:var(--red)}
+.hero h1{font-size:clamp(3rem,10.5vw,7rem);margin-bottom:18px;color:var(--navy)}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .sub{font-size:1.12rem;font-weight:400;max-width:640px;margin-bottom:14px;color:var(--gray)}
+.rating-line{display:flex;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.rating-line .stars{color:var(--red);font-size:1.5rem;letter-spacing:.15em}
 .rating-line b{font-size:1.05rem}
 .rating-line span{color:var(--gray);font-size:.88rem}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:30px}
-.hero-phone{font-size:1.7rem;font-weight:800;letter-spacing:.03em}
-.hero-phone a{color:#fff;border-bottom:3px solid var(--yel);padding-bottom:3px;transition:.25s}
-.hero-phone a:hover{color:var(--yel)}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin:30px 0 26px}
+.hero-phone{font-size:1.7rem;font-weight:800}
+.hero-phone a{color:var(--navy);border-bottom:3px solid var(--red);padding-bottom:3px;transition:.25s}
+.hero-phone a:hover{color:var(--red)}
 .hero-note{font-size:.85rem;color:var(--gray);margin-top:8px}
 .hero-tags{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-.htag{border:1px solid var(--line);background:rgba(255,212,0,.07);color:var(--yel-hi);padding:9px 16px;border-radius:6px;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.htag{border:1px solid rgba(217,43,43,.4);background:rgba(217,43,43,.07);color:var(--red-dk);padding:9px 16px;border-radius:6px;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+/* PROOF */
+.proof{background:var(--navy);color:#fff}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:46px 0;text-align:center}
+.proof-item b{display:block;font-family:'Oswald',sans-serif;font-size:1.9rem;color:#fff;margin-bottom:4px}
+.proof-item span{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:#A9B8D4}
 /* MARQUEE */
-.strip{background:var(--yel);color:#0a0a0a;overflow:hidden;padding:12px 0;font-family:'Bebas Neue',sans-serif;letter-spacing:.22em;font-size:1.05rem}
+.strip{background:var(--red);color:#fff;overflow:hidden;padding:12px 0;font-family:'Oswald',sans-serif;letter-spacing:.2em;font-size:1.05rem;text-transform:uppercase}
 .strip div{white-space:nowrap;animation:slide 24s linear infinite;display:inline-block}
 @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* PROOF */
-.proof{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
-.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:42px 0;text-align:center}
-.proof-item .stars{color:var(--yel);font-size:1.6rem;letter-spacing:.12em;display:block;margin-bottom:4px}
-.proof-item b{display:block;font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--yel);letter-spacing:.04em}
-.proof-item span{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray)}
 /* SEC HEADS */
-.sec-head{text-align:center;max-width:700px;margin:0 auto 58px}
+.sec-head{max-width:720px;margin:0 auto 58px;text-align:center}
 .sec-head .eyebrow{justify-content:center}
-.sec-head .eyebrow::after{content:'';width:40px;height:3px;background:var(--yel)}
-.sec-head h2{font-size:clamp(2.4rem,5.5vw,3.8rem);margin-bottom:14px}
-.sec-head h2 em{font-style:normal;color:var(--yel)}
+.sec-head h2{font-size:clamp(2.4rem,5.5vw,3.9rem);margin-bottom:14px;color:var(--navy)}
+.sec-head h2 em{font-style:normal;color:var(--red)}
 .sec-head p{color:var(--gray)}
+/* GALLERY — real photos */
+.gallery{background:#fff;border-top:1px solid rgba(27,47,90,.1);border-bottom:1px solid rgba(27,47,90,.1)}
+.gal-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:980px;margin:0 auto}
+.gal{border-radius:12px;overflow:hidden;background:var(--paper);border:1px solid rgba(27,47,90,.14);transition:.3s}
+.gal:hover{transform:translateY(-6px);box-shadow:0 20px 45px rgba(27,47,90,.15)}
+.gal img{width:100%;height:340px;object-fit:cover;display:block}
+.gal figcaption{padding:20px 24px}
+.gal figcaption h3{font-size:1.15rem;color:var(--navy);margin-bottom:6px}
+.gal figcaption p{color:var(--gray);font-size:.9rem}
 /* SERVICES */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:38px 30px;transition:.32s;display:flex;flex-direction:column;position:relative}
-.card::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:repeating-linear-gradient(-45deg,var(--yel) 0 14px,transparent 14px 28px);opacity:0;transition:.32s;border-radius:10px 10px 0 0}
-.card:hover{transform:translateY(-8px);border-color:var(--yel);box-shadow:0 20px 50px rgba(255,212,0,.12)}
-.card:hover::before{opacity:1}
-.card .ico{font-size:2.5rem;margin-bottom:16px}
-.card h3{font-size:1.5rem;margin-bottom:10px;letter-spacing:.04em}
-.card p{color:var(--gray);font-size:.93rem;margin-bottom:16px;flex:1}
-.price{color:var(--yel);font-weight:800;font-size:1.2rem;margin-bottom:4px}
-.price-note{font-size:.7rem;color:#6d6d6d;letter-spacing:.06em;margin-bottom:20px;text-transform:uppercase}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border:1px solid rgba(27,47,90,.12);border-radius:12px;padding:36px 30px;transition:.32s;display:flex;flex-direction:column;position:relative;border-top:6px solid var(--navy)}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 45px rgba(27,47,90,.14);border-top-color:var(--red)}
+.card .ico{font-size:2.4rem;margin-bottom:14px}
+.card h3{font-size:1.35rem;margin-bottom:10px;color:var(--navy)}
+.card p{color:var(--gray);font-size:.92rem;margin-bottom:16px;flex:1}
+.price{color:var(--red);font-weight:800;font-size:1.2rem;margin-bottom:4px}
+.price-note{font-size:.7rem;color:#9AA5B5;letter-spacing:.06em;margin-bottom:20px;text-transform:uppercase}
 .card .btn{text-align:center}
 /* HOW */
-.how{background:var(--dark)}
+.how{background:var(--navy);color:#fff}
+.how .sec-head h2{color:#fff}
+.how .sec-head p{color:#A9B8D4}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.step{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:32px 24px;text-align:center;transition:.3s;position:relative}
-.step:hover{border-color:var(--yel);transform:translateY(-5px)}
-.step .num{font-family:'Bebas Neue',sans-serif;font-size:3.6rem;color:var(--yel);line-height:1;margin-bottom:10px}
-.step h3{font-size:1.25rem;margin-bottom:8px;letter-spacing:.05em}
-.step p{color:var(--gray);font-size:.9rem}
+.step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:32px 24px;text-align:center;transition:.3s}
+.step:hover{border-color:var(--red);transform:translateY(-5px)}
+.step .num{font-family:'Oswald',sans-serif;font-size:3.4rem;color:var(--red);line-height:1;margin-bottom:10px}
+.step h3{font-size:1.2rem;margin-bottom:8px;color:#fff}
+.step p{color:#A9B8D4;font-size:.9rem}
 /* DIFF */
 .diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.diff{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-top:4px solid var(--yel);border-radius:0 0 10px 10px;padding:28px 24px;transition:.3s}
-.diff:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.5)}
-.diff h3{font-size:1.25rem;margin-bottom:8px;letter-spacing:.05em}
+.diff{background:#fff;border:1px solid rgba(27,47,90,.12);border-radius:12px;padding:30px 26px;transition:.3s;position:relative}
+.diff::before{content:'';position:absolute;top:0;left:24px;right:24px;height:4px;background:var(--red);border-radius:0 0 4px 4px}
+.diff:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(27,47,90,.12)}
+.diff h3{font-size:1.2rem;margin-bottom:8px;color:var(--navy)}
 .diff p{color:var(--gray);font-size:.9rem}
 /* TESTI */
-.testi{background:var(--dark)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.testi-card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:32px;transition:.3s}
-.testi-card:hover{transform:translateY(-5px);border-color:var(--yel)}
-.stars{color:var(--yel);letter-spacing:.22em;margin-bottom:14px;font-size:1.05rem}
-.testi-card p{color:#d4d4d4;font-style:italic;margin-bottom:16px;font-size:.94rem}
-.testi-card .who{color:var(--gray);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
-.illus-note{text-align:center;color:#6d6d6d;font-size:.78rem;margin-top:26px;letter-spacing:.05em}
+.testi{background:#fff;border-top:1px solid rgba(27,47,90,.1)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi-card{background:var(--paper);border:1px solid rgba(27,47,90,.12);border-radius:12px;padding:32px;transition:.3s}
+.testi-card:hover{transform:translateY(-5px);border-color:var(--red)}
+.stars{color:var(--red);letter-spacing:.22em;margin-bottom:14px;font-size:1.05rem}
+.testi-card p{color:var(--ink);font-style:italic;margin-bottom:16px;font-size:.94rem}
+.testi-card .who{color:var(--gray);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.illus-note{text-align:center;color:#9AA5B5;font-size:.78rem;margin-top:26px}
 /* FAQ */
 .faq-list{max-width:760px;margin:0 auto}
-.faq-item{border-bottom:1px solid rgba(255,255,255,.1)}
-.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.04rem;font-weight:600;text-align:left;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Inter',sans-serif}
-.faq-q span{color:var(--yel);font-size:1.5rem;transition:.3s;flex-shrink:0}
+.faq-item{background:#fff;border:1px solid rgba(27,47,90,.12);border-radius:10px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:var(--navy);font-size:1.02rem;font-weight:700;text-align:left;padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Inter',sans-serif}
+.faq-q span{color:var(--red);font-size:1.5rem;transition:.3s;flex-shrink:0;font-weight:400}
 .faq-item.open .faq-q span{transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--gray);font-size:.95rem}
-.faq-a p{padding:0 0 24px}
+.faq-a p{padding:0 24px 22px}
 /* CTA BAND */
-.cta-band{background:#141000;border-top:14px solid transparent;border-image:repeating-linear-gradient(-45deg,var(--yel) 0 22px,#0a0a0a 22px 44px) 1;border-bottom:14px solid transparent;border-image:repeating-linear-gradient(-45deg,var(--yel) 0 22px,#0a0a0a 22px 44px) 1;text-align:center;padding:100px 0;position:relative;overflow:hidden}
-.cta-band h2{font-size:clamp(2.6rem,6.5vw,4.6rem);margin-bottom:14px}
-.cta-band h2 em{font-style:normal;color:var(--yel)}
-.cta-band p{color:#cfcfcf;max-width:560px;margin:0 auto 34px;font-size:1.04rem}
+.cta-band{background:var(--navy);text-align:center;padding:100px 0;color:#fff;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;top:0;left:0;right:0;height:10px;background:repeating-linear-gradient(-45deg,var(--red) 0 24px,var(--navy) 24px 48px)}
+.cta-band::after{content:'';position:absolute;bottom:0;left:0;right:0;height:10px;background:repeating-linear-gradient(-45deg,var(--red) 0 24px,var(--navy) 24px 48px)}
+.cta-band h2{font-size:clamp(2.5rem,6.5vw,4.4rem);margin-bottom:14px}
+.cta-band h2 em{font-style:normal;color:var(--red)}
+.cta-band p{max-width:560px;margin:0 auto 34px;font-size:1.04rem;color:#C9D4E8}
 .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 /* CONTACT */
+.contact{background:#fff;border-top:1px solid rgba(27,47,90,.1)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.contact-info h2{font-size:clamp(2.4rem,4.5vw,3.2rem);margin-bottom:14px}
-.contact-info h2 em{font-style:normal;color:var(--yel)}
+.contact-info h2{font-size:clamp(2.4rem,4.5vw,3.4rem);margin-bottom:14px;color:var(--navy)}
+.contact-info h2 em{font-style:normal;color:var(--red)}
 .contact-info>p{color:var(--gray);margin-bottom:26px}
 .c-line{display:flex;align-items:center;gap:14px;margin-bottom:17px;font-size:1.04rem}
 .c-line .ico{font-size:1.4rem}
-.c-line a{color:#fff;font-weight:700;border-bottom:2px solid var(--yel)}
-form{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:36px}
-form h3{margin-bottom:20px;font-size:1.5rem;letter-spacing:.05em}
+.c-line a{color:var(--navy);font-weight:700;border-bottom:2px solid var(--red)}
+form{background:var(--paper);border:1px solid rgba(27,47,90,.14);border-radius:12px;padding:36px}
+form h3{margin-bottom:20px;font-size:1.4rem;color:var(--navy)}
 .field{margin-bottom:16px}
 .field label{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:6px;font-weight:600}
-.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.12);border-radius:8px;color:#fff;padding:12px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--yel)}
+.field input,.field select,.field textarea{width:100%;background:#fff;border:1px solid rgba(27,47,90,.2);border-radius:8px;color:var(--ink);padding:12px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--red)}
 /* FOOTER */
-footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:52px 0 110px;text-align:center}
-footer .flogo{font-family:'Bebas Neue',sans-serif;letter-spacing:.1em;font-size:1.7rem;margin-bottom:8px}
-footer .flogo .yel{color:var(--yel)}
-footer p{color:var(--gray);font-size:.9rem;margin-bottom:6px}
-footer .demo{margin-top:20px;font-size:.76rem;color:#555;letter-spacing:.06em}
+footer{background:var(--navy-dk);color:#A9B8D4;padding:52px 0 110px;text-align:center}
+footer .flogo{font-family:'Oswald',sans-serif;font-size:1.6rem;margin-bottom:8px;color:#fff;display:flex;align-items:center;justify-content:center;gap:12px;text-transform:uppercase}
+footer .flogo img{height:46px;width:auto;border-radius:6px;border:2px solid rgba(255,255,255,.25)}
+footer .flogo .rd{color:var(--red)}
+footer p{color:#8A99B8;font-size:.9rem;margin-bottom:6px}
+footer .demo{margin-top:20px;font-size:.76rem;color:#5A6A8E;letter-spacing:.06em}
 /* FLOATS */
 .wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.4);transition:.3s}
 .wa-float:hover{transform:scale(1.1)}
-.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(10,10,10,.97);border-top:2px solid var(--yel);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.97);border-top:3px solid var(--red);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
 .sticky-bar a{flex:1;text-align:center;padding:13px 8px;border-radius:6px;font-weight:800;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
-.sticky-bar .call{background:var(--yel);color:#0a0a0a}
+.sticky-bar .call{background:var(--navy);color:#fff}
 .sticky-bar .wab{background:var(--wa);color:#062b16}
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.3,1)}
 .reveal.visible{opacity:1;transform:none}
 @media(max-width:960px){
   .svc-grid,.steps,.diff-grid,.testi-grid{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:1fr}
+  .gal img{height:280px}
   .contact-grid{grid-template-columns:1fr}
   .proof-grid{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
   .menu-toggle{display:block}
-  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,10,.98);flex-direction:column;padding:26px;gap:18px;border-bottom:2px solid var(--yel)}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:26px;gap:18px;border-bottom:3px solid var(--red)}
 }
 @media(max-width:640px){
   section{padding:70px 0}
@@ -181,10 +195,10 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#555;letter-spacing:.06em}
 
 <header id="siteHeader">
   <div class="container nav">
-    <a href="#" class="logo"><span class="frog">🐸</span><span>Garage <span class="yel">El Coqui</span><small>MECÁNICA · CIALES</small></span></a>
+    <a href="#" class="logo"><img src="assets-reales/garage-el-coqui-ciales/logo.jpg" alt="Rótulo de Garage El Coquí Inc"><span class="t">Garage <span style="color:var(--red)">El Coquí</span><small>TALLER · CIALES</small></span></a>
     <ul class="nav-links" id="navLinks">
+      <li><a href="#taller">Nuestro taller</a></li>
       <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#como">Cómo funciona</a></li>
       <li><a href="#faq">Preguntas</a></li>
       <li><a href="#contacto">Contacto</a></li>
       <li><a class="btn wa sm" href="https://wa.me/17878714591?text=Hola%20Garage%20El%20Coqui%2C%20quiero%20cotizar%20un%20servicio%20para%20mi%20auto" target="_blank" rel="noopener">WhatsApp</a></li>
@@ -195,7 +209,7 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#555;letter-spacing:.06em}
 
 <section class="hero">
   <div class="container hero-inner">
-    <p class="eyebrow">Mecánica general · Ciales, PR</p>
+    <p class="eyebrow">Taller de mecánica general · Ciales, PR</p>
     <h1>Tu carro en <em>manos que saben</em></h1>
     <p class="sub">Diagnóstico honesto, reparación bien hecha y precio claro desde el principio. El taller de confianza de Ciales y la montaña.</p>
     <div class="rating-line">
@@ -205,7 +219,7 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#555;letter-spacing:.06em}
     </div>
     <div class="hero-ctas">
       <a class="btn wa" href="https://wa.me/17878714591?text=Hola%20Garage%20El%20Coqui%2C%20quiero%20cotizar%20un%20servicio%20para%20mi%20auto" target="_blank" rel="noopener">📲 Cotizar por WhatsApp</a>
-      <a class="btn ghost" href="tel:+17878714591">📞 Llamar ahora</a>
+      <a class="btn navy" href="tel:+17878714591">📞 Llamar ahora</a>
     </div>
     <p class="hero-phone"><a href="tel:+17878714591">(787) 871-4591</a></p>
     <p class="hero-note">Lun–Vie 8am–5pm · Sáb 8am–12pm · Ciales, PR</p>
@@ -217,18 +231,44 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#555;letter-spacing:.06em}
   </div>
 </section>
 
-<div class="hazard"></div>
+<div class="signbar"></div>
 <div class="strip"><div>⚙ MECÁNICA GENERAL &nbsp;&nbsp; ⚙ DIAGNÓSTICO COMPUTARIZADO &nbsp;&nbsp; ⚙ FRENOS Y SUSPENSIÓN &nbsp;&nbsp; ⚙ AIRE ACONDICIONADO &nbsp;&nbsp; ⚙ MECÁNICA GENERAL &nbsp;&nbsp; ⚙ DIAGNÓSTICO COMPUTARIZADO &nbsp;&nbsp; ⚙ FRENOS Y SUSPENSIÓN &nbsp;&nbsp; ⚙ AIRE ACONDICIONADO &nbsp;&nbsp;</div></div>
-<div class="hazard"></div>
+<div class="signbar"></div>
 
 <div class="proof">
   <div class="container proof-grid">
-    <div class="proof-item reveal"><span class="stars">★★★★★</span><b>5.0 / 5</b><span>Rating en directorio</span></div>
+    <div class="proof-item reveal"><b>★ 5.0 / 5</b><span>Rating en directorio</span></div>
     <div class="proof-item reveal"><b>Ciales</b><span>Taller local de la montaña</span></div>
     <div class="proof-item reveal"><b>Honesto</b><span>Diagnóstico sin inventos</span></div>
     <div class="proof-item reveal"><b>Garantía</b><span>En mano de obra</span></div>
   </div>
 </div>
+
+<section id="taller" class="gallery">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Fotos reales</p>
+      <h2>Nuestro <em>taller</em></h2>
+      <p>Así se ve Garage El Coquí: nuestro rótulo y el taller donde trabajamos todos los días.</p>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal reveal">
+        <img src="assets-reales/garage-el-coqui-ciales/logo.jpg" alt="Rótulo de Garage El Coquí Inc en Ciales">
+        <figcaption>
+          <h3>Nuestro rótulo</h3>
+          <p>Garage El Coquí Inc — mantenimiento de su auto, cambio de aceite y taller de mecánica general. (787) 871-4591.</p>
+        </figcaption>
+      </figure>
+      <figure class="gal reveal">
+        <img src="assets-reales/garage-el-coqui-ciales/foto2.jpg" alt="Taller Garage El Coquí en Ciales con autos en servicio">
+        <figcaption>
+          <h3>El taller en acción</h3>
+          <p>Taller Garage El Coquí, Ciales — autos en servicio, lifts ocupados y trabajo real todos los días.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
 <section id="servicios">
   <div class="container">
@@ -298,37 +338,19 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#555;letter-spacing:.06em}
       <p>El proceso es simple y transparente: sabes qué tiene tu carro y cuánto cuesta antes de autorizar nada.</p>
     </div>
     <div class="steps">
-      <div class="step reveal">
-        <div class="num">01</div>
-        <h3>Diagnóstico</h3>
-        <p>Revisamos tu auto y encontramos la falla real con equipo y experiencia.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">02</div>
-        <h3>Cotización clara</h3>
-        <p>Te decimos qué hay que hacer y cuánto cuesta. Tú decides, sin presión.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">03</div>
-        <h3>Reparación</h3>
-        <p>Reparamos con piezas de calidad y te mostramos lo que se cambió.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">04</div>
-        <h3>Prueba y entrega</h3>
-        <p>Probamos el auto antes de entregarlo. Nuestra mano de obra va garantizada.</p>
-      </div>
+      <div class="step reveal"><div class="num">01</div><h3>Diagnóstico</h3><p>Revisamos tu auto y encontramos la falla real con equipo y experiencia.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>Cotización clara</h3><p>Te decimos qué hay que hacer y cuánto cuesta. Tú decides, sin presión.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Reparación</h3><p>Reparamos con piezas de calidad y te mostramos lo que se cambió.</p></div>
+      <div class="step reveal"><div class="num">04</div><h3>Prueba y entrega</h3><p>Probamos el auto antes de entregarlo. Nuestra mano de obra va garantizada.</p></div>
     </div>
   </div>
 </section>
-
-<div class="hazard"></div>
 
 <section id="diferenciales">
   <div class="container">
     <div class="sec-head reveal">
       <p class="eyebrow">Diferenciales</p>
-      <h2>Por qué <em>El Coqui</em></h2>
+      <h2>Por qué <em>El Coquí</em></h2>
     </div>
     <div class="diff-grid">
       <div class="diff reveal"><h3>★ 5.0 en directorio</h3><p>Nuestros clientes nos califican con la máxima puntuación. Esa reputación se cuida trabajo a trabajo.</p></div>
@@ -375,43 +397,27 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#555;letter-spacing:.06em}
       <h2>Lo que nos <em>preguntan</em></h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Necesito cita o atienden por orden de llegada? <span>+</span></button>
-        <div class="faq-a"><p>Escríbenos por WhatsApp o llámanos para coordinar. Así te atendemos más rápido y sin esperas largas.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿El diagnóstico tiene costo? <span>+</span></button>
-        <div class="faq-a"><p>El diagnóstico computarizado tiene un costo base que se descuenta si autorizas la reparación con nosotros. Pregúntanos por WhatsApp.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Cuánto tarda una reparación típica? <span>+</span></button>
-        <div class="faq-a"><p>Cambios de aceite y frenos usualmente el mismo día. Reparaciones mayores te damos fecha estimada clara desde la cotización.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Puedo traer mis propias piezas? <span>+</span></button>
-        <div class="faq-a"><p>Sí, puedes traerlas. Te orientamos sobre qué piezas convienen según tu caso y solo cobramos la mano de obra.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Atienden emergencias? <span>+</span></button>
-        <div class="faq-a"><p>Si tu carro te dejó a pie, llámanos al (787) 871-4591 y vemos cómo ayudarte lo antes posible.</p></div>
-      </div>
+      <div class="faq-item reveal"><button class="faq-q">¿Necesito cita o atienden por orden de llegada? <span>+</span></button><div class="faq-a"><p>Escríbenos por WhatsApp o llámanos para coordinar. Así te atendemos más rápido y sin esperas largas.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿El diagnóstico tiene costo? <span>+</span></button><div class="faq-a"><p>El diagnóstico computarizado tiene un costo base que se descuenta si autorizas la reparación con nosotros. Pregúntanos por WhatsApp.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿Cuánto tarda una reparación típica? <span>+</span></button><div class="faq-a"><p>Cambios de aceite y frenos usualmente el mismo día. Reparaciones mayores te damos fecha estimada clara desde la cotización.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿Puedo traer mis propias piezas? <span>+</span></button><div class="faq-a"><p>Sí, puedes traerlas. Te orientamos sobre qué piezas convienen según tu caso y solo cobramos la mano de obra.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿Atienden emergencias? <span>+</span></button><div class="faq-a"><p>Si tu carro te dejó a pie, llámanos al (787) 871-4591 y vemos cómo ayudarte lo antes posible.</p></div></div>
     </div>
   </div>
 </section>
 
 <section class="cta-band">
   <div class="container">
-    <p class="eyebrow reveal" style="justify-content:center">★ 5.0 en directorio · Ciales, PR</p>
     <h2 class="reveal">¿Tu carro hace <em>un ruido raro?</em></h2>
     <p class="reveal">No lo dejes para después: un diagnóstico a tiempo te ahorra una reparación grande. Escríbenos hoy.</p>
     <div class="cta-btns reveal">
       <a class="btn wa" href="https://wa.me/17878714591?text=Hola%20Garage%20El%20Coqui%2C%20mi%20auto%20tiene%20un%20problema%20y%20quiero%20un%20diagn%C3%B3stico" target="_blank" rel="noopener">📲 WhatsApp directo</a>
-      <a class="btn ghost" href="tel:+17878714591">📞 (787) 871-4591</a>
+      <a class="btn ghost" href="tel:+17878714591" style="border-color:#fff;color:#fff">📞 (787) 871-4591</a>
     </div>
   </div>
 </section>
 
-<section id="contacto">
+<section id="contacto" class="contact">
   <div class="container contact-grid">
     <div class="contact-info reveal">
       <h2>Tráenos <em>tu carro</em></h2>
@@ -424,29 +430,10 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#555;letter-spacing:.06em}
     </div>
     <form id="bookForm" class="reveal">
       <h3>Solicita tu diagnóstico</h3>
-      <div class="field">
-        <label for="fNombre">Nombre</label>
-        <input id="fNombre" type="text" placeholder="Tu nombre" required>
-      </div>
-      <div class="field">
-        <label for="fTel">Teléfono</label>
-        <input id="fTel" type="tel" placeholder="(787) 000-0000" required>
-      </div>
-      <div class="field">
-        <label for="fSvc">Servicio</label>
-        <select id="fSvc">
-          <option>Diagnóstico computarizado</option>
-          <option>Cambio de aceite y filtro</option>
-          <option>Frenos</option>
-          <option>Suspensión y tren delantero</option>
-          <option>Aire acondicionado</option>
-          <option>Eléctrico / batería</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="fMsg">Describe el problema</label>
-        <textarea id="fMsg" rows="3" placeholder="¿Qué le pasa a tu auto?"></textarea>
-      </div>
+      <div class="field"><label for="fNombre">Nombre</label><input id="fNombre" type="text" placeholder="Tu nombre" required></div>
+      <div class="field"><label for="fTel">Teléfono</label><input id="fTel" type="tel" placeholder="(787) 000-0000" required></div>
+      <div class="field"><label for="fSvc">Servicio</label><select id="fSvc"><option>Diagnóstico computarizado</option><option>Cambio de aceite y filtro</option><option>Frenos</option><option>Suspensión y tren delantero</option><option>Aire acondicionado</option><option>Eléctrico / batería</option></select></div>
+      <div class="field"><label for="fMsg">Describe el problema</label><textarea id="fMsg" rows="3" placeholder="¿Qué le pasa a tu auto?"></textarea></div>
       <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
     </form>
   </div>
@@ -454,9 +441,9 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#555;letter-spacing:.06em}
 
 <footer>
   <div class="container">
-    <p class="flogo">Garage <span class="yel">El Coqui</span> 🐸</p>
+    <p class="flogo"><img src="assets-reales/garage-el-coqui-ciales/logo.jpg" alt="Garage El Coquí">Garage <span class="rd">El Coquí</span></p>
     <p>Mecánica general · Ciales, Puerto Rico · Rating 5.0 en directorio</p>
-    <p><a href="tel:+17878714591" style="color:var(--gray)">(787) 871-4591</a></p>
+    <p><a href="tel:+17878714591" style="color:#A9B8D4">(787) 871-4591</a></p>
     <p class="demo">Demostración creada por ManuPro</p>
   </div>
 </footer>
@@ -476,8 +463,8 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   const btn=item.querySelector('.faq-q');
   btn.addEventListener('click',()=>{
     const wasOpen=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+'});
-    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='×'}
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px'}
   });
 });
 document.getElementById('bookForm').addEventListener('submit',e=>{

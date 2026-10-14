@@ -5,216 +5,237 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Larregui Detailing | Detailing a Domicilio en Ciales, PR</title>
 <meta name="description" content="Larregui Detailing — detailing profesional a domicilio en Ciales. Lavado premium, interior profundo y encerado por cita. Vamos hasta ti. Agenda por WhatsApp.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --black:#070907; --dark:#0d0f0d; --panel:#121512; --line:rgba(255,255,255,.08);
-  --gray:#9aa39a; --white:#f4f7f4; --accent:#39FF14; --accent-dim:rgba(57,255,20,.12);
-  --accent-dark:#0d2b06; --wa:#25D366;
-}
 *{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#060d1a; --bg2:#0a1830; --navy:#0e2a5c; --line:rgba(150,175,210,.16);
+  --chrome1:#f4f7fb; --chrome2:#c3cedd; --chrome3:#8a97ad;
+  --ice:#9cc4ff; --txt:#e9f0fa; --mut:#9db1cc;
+  --wa:#25D366; --gold:#d9b36a;
+}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.7;overflow-x:hidden}
-h1,h2,h3,.display{font-family:'Oswald',sans-serif;line-height:.98;text-transform:uppercase}
-a{text-decoration:none;color:inherit}
-.container{width:min(1180px,92%);margin:0 auto}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:110px 0}
+h1,h2,h3{font-family:'Archivo Black',sans-serif;font-weight:400;line-height:1.04;letter-spacing:.01em}
+.eyebrow{display:inline-block;font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;color:var(--ice);margin-bottom:22px;font-weight:600}
 /* ===== HEADER ===== */
-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:rgba(7,9,7,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent}
-header.solid{background:rgba(7,9,7,.96);border-bottom-color:var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
-.logo{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.55rem;letter-spacing:.12em;text-transform:uppercase}
-.logo span{color:var(--accent)}
-.logo small{display:block;font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:.46em;color:var(--gray);font-weight:500}
-.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
-.nav-links a{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:#d5dcd5;transition:.25s;font-weight:500}
-.nav-links a:hover{color:var(--accent)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#06130a;padding:14px 32px;border-radius:6px;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;transition:.3s;border:2px solid var(--accent);cursor:pointer;font-family:'Oswald',sans-serif}
-.btn:hover{background:transparent;color:var(--accent);transform:translateY(-2px);box-shadow:0 10px 30px rgba(57,255,20,.28)}
-.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
-.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 30px rgba(37,211,102,.28)}
-.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
-.btn.ghost:hover{border-color:var(--accent);color:var(--accent);box-shadow:none}
-.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:#fff}
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;padding:20px 0}
+header.solid{background:rgba(6,13,26,.96);backdrop-filter:blur(12px);padding:12px 0;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--txt)}
+.logo .mono{width:52px;height:52px;flex:none}
+.logo b{font-family:'Archivo Black';font-size:1.02rem;letter-spacing:.14em;display:block;line-height:1.1}
+.logo small{font-size:.6rem;letter-spacing:.34em;color:var(--mut);font-weight:600}
+.nav-links{display:flex;list-style:none;gap:30px;align-items:center}
+.nav-links a{color:var(--txt);text-decoration:none;font-size:.85rem;letter-spacing:.08em;font-weight:500}
+.nav-links a:hover{color:var(--ice)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--txt);font-size:1.5rem;padding:6px 12px;border-radius:8px;cursor:pointer}
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:17px 34px;border-radius:2px;text-decoration:none;font-weight:700;font-size:.92rem;letter-spacing:.1em;text-transform:uppercase;transition:.3s;border:none;cursor:pointer}
+.btn.wa{background:linear-gradient(135deg,var(--chrome1),var(--chrome2) 55%,var(--chrome3));color:#0a1830}
+.btn.wa:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(180,200,230,.35)}
+.btn.line{background:transparent;color:var(--txt);border:1px solid rgba(150,175,210,.4)}
+.btn.line:hover{border-color:var(--ice);color:var(--ice)}
 /* ===== HERO ===== */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;color:#fff;overflow:hidden;
-  background:radial-gradient(ellipse 70% 55% at 70% 10%,rgba(57,255,20,.10) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 15% 85%,rgba(57,255,20,.06) 0%,transparent 55%),linear-gradient(180deg,#0a0d0a,#070907)}
-.hero-ghost{position:absolute;top:50%;left:50%;transform:translate(-50%,-52%);font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(6rem,22vw,20rem);letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(57,255,20,.14);white-space:nowrap;pointer-events:none;user-select:none}
-.hero-inner{position:relative;z-index:2;text-align:center;padding:140px 0 80px;width:100%}
-.eyebrow{letter-spacing:.44em;text-transform:uppercase;font-size:.78rem;color:var(--accent);margin-bottom:22px;font-weight:600}
-.eyebrow::before,.eyebrow::after{content:'—';color:rgba(57,255,20,.4);margin:0 10px}
-.hero h1{font-size:clamp(3.2rem,9.5vw,7.5rem);font-weight:700;margin-bottom:22px;letter-spacing:.01em}
-.hero h1 .fill{color:var(--accent)}
-.hero h1 .stroke{color:transparent;-webkit-text-stroke:2px #fff}
-.hero p.sub{font-size:1.18rem;font-weight:300;max-width:660px;margin:0 auto 12px;color:#c3ccc3}
-.hero p.tag{font-size:1.02rem;color:var(--accent);font-weight:600;letter-spacing:.08em;margin-bottom:38px;text-transform:uppercase}
-.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
-.hero-phone{font-family:'Oswald',sans-serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;letter-spacing:.08em}
-.hero-phone a{color:#fff;border-bottom:3px solid var(--accent);padding-bottom:2px;transition:.25s}
-.hero-phone a:hover{color:var(--accent)}
-.badge-cita{display:inline-block;margin-top:18px;padding:10px 26px;border:1px solid var(--accent);border-radius:40px;color:var(--accent);font-size:.82rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;background:var(--accent-dim)}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:150px 0 90px;background:
+ radial-gradient(1100px 520px at 50% -8%,rgba(28,72,150,.55),transparent 60%),
+ radial-gradient(800px 400px at 85% 100%,rgba(28,72,150,.25),transparent 60%),var(--bg)}
+.hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 46px,rgba(150,175,210,.035) 46px 47px);pointer-events:none}
+.hero-inner{position:relative;z-index:2;text-align:center;max-width:900px}
+.hero .mono{width:104px;height:104px;margin:0 auto 30px;filter:drop-shadow(0 8px 26px rgba(160,190,230,.3))}
+.hero h1{font-size:clamp(2.6rem,7.2vw,5.4rem);text-transform:uppercase;margin-bottom:26px}
+.hero h1 .chrome{background:linear-gradient(180deg,#ffffff 10%,#c9d4e6 38%,#7d8ca6 52%,#e8eef7 66%,#9aa7bd 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{color:var(--mut);font-size:1.12rem;max-width:640px;margin:0 auto 14px}
+.hero .tagline{color:var(--ice);font-size:.85rem;letter-spacing:.24em;text-transform:uppercase;margin-bottom:38px}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
+.hero-phone a{font-family:'Archivo Black';font-size:clamp(1.7rem,4vw,2.6rem);color:var(--txt);text-decoration:none;letter-spacing:.04em}
+.hero-phone a:hover{color:var(--ice)}
+.hero .cita{display:inline-block;margin-top:16px;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:10px 22px;border-radius:100px}
 /* ===== STATS ===== */
-.stats{background:var(--accent);color:#06130a;padding:34px 0}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
-.stats-grid .num{font-family:'Oswald',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1}
-.stats-grid .lbl{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;opacity:.75;margin-top:6px}
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(10,24,48,.5)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);max-width:1180px;margin:0 auto}
+.stats-grid>div{padding:34px 20px;text-align:center;border-left:1px solid var(--line)}
+.stats-grid>div:first-child{border-left:none}
+.stats-grid .num{font-family:'Archivo Black';font-size:1.5rem;color:var(--chrome1);letter-spacing:.06em}
+.stats-grid .lbl{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-top:6px}
 /* ===== MARQUEE ===== */
-.strip{background:#000;color:var(--accent);overflow:hidden;padding:13px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.strip div{white-space:nowrap;animation:slide 24s linear infinite;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.26em;font-size:.9rem;text-transform:uppercase}
-@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* ===== SECTIONS ===== */
-section{padding:104px 0}
-.sec-head{text-align:center;max-width:700px;margin:0 auto 60px}
-.sec-head .eyebrow{margin-bottom:16px}
-.sec-head h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:16px;color:#fff;font-weight:600}
-.sec-head h2 em{font-style:normal;color:var(--accent)}
-.sec-head p{color:var(--gray)}
-/* ===== SERVICES ===== */
-.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:44px 36px;transition:.35s;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:.35s}
-.card:hover{transform:translateY(-10px);border-color:rgba(57,255,20,.4);box-shadow:0 24px 60px rgba(57,255,20,.12)}
-.card:hover::before{transform:scaleX(1)}
-.card .ico{font-size:2.8rem;margin-bottom:20px}
-.card h3{font-size:1.7rem;margin-bottom:10px;color:#fff;letter-spacing:.03em}
-.card p{color:var(--gray);font-size:.96rem;margin-bottom:18px;flex:1}
-.price{color:var(--accent);font-weight:700;font-size:1.3rem;letter-spacing:.05em;margin-bottom:20px;font-family:'Oswald',sans-serif}
-.price small{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:400;color:var(--gray);letter-spacing:.02em;margin-top:2px}
-.card .btn{padding:12px 24px;font-size:.78rem;align-self:flex-start}
-/* ===== HOW ===== */
-.how{background:var(--dark);position:relative;overflow:hidden}
-.how::before{content:'01·02·03·04';position:absolute;top:40px;right:-20px;font-family:'Oswald',sans-serif;font-size:clamp(5rem,14vw,11rem);color:rgba(255,255,255,.03);white-space:nowrap;pointer-events:none}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;position:relative;z-index:2}
-.step{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:38px 28px;text-align:center;transition:.35s;position:relative}
-.step:hover{border-color:rgba(57,255,20,.45);transform:translateY(-6px)}
-.step .num{font-family:'Oswald',sans-serif;font-size:3.4rem;font-weight:700;color:transparent;-webkit-text-stroke:2px var(--accent);line-height:1;margin-bottom:16px}
-.step h3{color:#fff;font-size:1.35rem;margin-bottom:10px;letter-spacing:.04em}
-.step p{color:var(--gray);font-size:.93rem}
+.strip{overflow:hidden;background:linear-gradient(90deg,#0e2a5c,#1c4a96,#0e2a5c);padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip div{white-space:nowrap;font-family:'Archivo Black';font-size:.95rem;letter-spacing:.3em;color:#dfe8f6;animation:mq 26s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* ===== SECTION HEADS ===== */
+.sec-head{max-width:760px;margin-bottom:64px}
+.sec-head h2{font-size:clamp(1.9rem,4.4vw,3rem);text-transform:uppercase;margin:0 0 18px}
+.sec-head h2 em{font-style:normal;color:var(--ice)}
+.sec-head p{color:var(--mut)}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+/* ===== PRICE-LIST SERVICES (editorial) ===== */
+.menu{border-top:1px solid var(--line)}
+.menu-row{display:grid;grid-template-columns:64px 1fr auto;gap:26px;align-items:center;padding:38px 10px;border-bottom:1px solid var(--line);transition:.3s;text-decoration:none;color:inherit}
+.menu-row:hover{background:rgba(28,72,150,.14);padding-left:22px}
+.menu-row .idx{font-family:'Archivo Black';font-size:1rem;color:var(--chrome3);letter-spacing:.1em}
+.menu-row h3{font-size:clamp(1.25rem,2.6vw,1.9rem);text-transform:uppercase;margin-bottom:8px}
+.menu-row h3 .dot{color:var(--ice)}
+.menu-row p{color:var(--mut);font-size:.96rem;max-width:560px}
+.menu-row .right{text-align:right}
+.menu-row .price{font-family:'Archivo Black';font-size:1.35rem;color:var(--chrome1);white-space:nowrap}
+.menu-row .price small{display:block;font-family:'Inter';font-weight:400;font-size:.68rem;color:var(--mut);letter-spacing:.06em;margin-top:4px}
+.menu-row .go{margin-top:14px;display:inline-flex;align-items:center;gap:8px;color:var(--ice);font-size:.8rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.menu-note{margin-top:26px;color:var(--mut);font-size:.82rem;text-align:center}
+/* ===== PROCESS ===== */
+.how{background:var(--bg2)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}
+.step{padding:44px 30px;border-left:1px solid var(--line);position:relative;transition:.3s}
+.step:first-child{border-left:none}
+.step:hover{background:rgba(28,72,150,.18)}
+.step .num{font-family:'Archivo Black';font-size:3.2rem;background:linear-gradient(180deg,var(--chrome1),var(--chrome3));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.step h3{font-size:1.02rem;text-transform:uppercase;letter-spacing:.1em;margin:18px 0 10px}
+.step p{color:var(--mut);font-size:.92rem}
 /* ===== WHY ===== */
-.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:stretch}
-.why-main{background:linear-gradient(135deg,rgba(57,255,20,.14),rgba(57,255,20,.03));border:1px solid rgba(57,255,20,.3);border-radius:14px;padding:52px 44px;display:flex;flex-direction:column;justify-content:center}
-.why-main h2{font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:18px;font-weight:600}
-.why-main h2 em{font-style:normal;color:var(--accent)}
-.why-main p{color:var(--gray);margin-bottom:30px;max-width:460px}
-.why-list{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.why-item{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px;transition:.3s}
-.why-item:hover{border-color:rgba(57,255,20,.4);transform:translateY(-4px)}
-.why-item .ico{font-size:2rem;margin-bottom:12px}
-.why-item h3{font-size:1.15rem;color:#fff;margin-bottom:8px;letter-spacing:.04em}
-.why-item p{color:var(--gray);font-size:.9rem}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.why-main h2{font-size:clamp(1.9rem,4vw,2.8rem);text-transform:uppercase;margin-bottom:20px}
+.why-main h2 em{font-style:normal;color:var(--ice)}
+.why-main p{color:var(--mut);margin-bottom:30px}
+.why-list{display:grid;gap:2px;background:var(--line);border:1px solid var(--line)}
+.why-item{background:var(--bg);padding:28px;display:flex;gap:20px;align-items:flex-start}
+.why-item .n{font-family:'Archivo Black';color:var(--chrome3);font-size:1.1rem;flex:none;width:44px}
+.why-item h3{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.why-item p{color:var(--mut);font-size:.9rem}
 /* ===== TESTIMONIALS ===== */
-.testi{background:var(--dark)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.testi-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:34px;transition:.3s;display:flex;flex-direction:column}
-.testi-card:hover{transform:translateY(-6px);border-color:rgba(57,255,20,.35)}
-.testi-card .stars{color:var(--accent);letter-spacing:.22em;margin-bottom:16px;font-size:1.05rem}
-.testi-card p{color:#cfd6cf;font-style:italic;margin-bottom:18px;font-size:.97rem;flex:1}
-.testi-card .who{color:var(--gray);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
-.note{margin-top:28px;text-align:center;color:var(--gray);font-size:.8rem;font-style:italic}
+.testi{background:var(--bg2)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.testi-card{border:1px solid var(--line);padding:40px 34px;position:relative;background:var(--bg)}
+.testi-card::before{content:"\201C";position:absolute;top:6px;left:22px;font-family:'Archivo Black';font-size:4.4rem;color:var(--navy);line-height:1}
+.testi-card .stars{color:var(--gold);letter-spacing:.2em;margin:14px 0 16px}
+.testi-card p{color:var(--txt);font-size:.98rem}
+.testi-card .who{margin-top:20px;color:var(--mut);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase}
+.note{text-align:center;color:var(--mut);font-size:.78rem;margin-top:26px;font-style:italic}
 /* ===== FAQ ===== */
-.faq-list{max-width:780px;margin:0 auto}
+.faq-list{max-width:820px;margin:0 auto}
 .faq-item{border-bottom:1px solid var(--line)}
-.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.1rem;font-weight:600;text-align:left;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Oswald',sans-serif;letter-spacing:.04em;text-transform:uppercase}
-.faq-q span{color:var(--accent);font-size:1.5rem;transition:.3s;flex-shrink:0}
-.faq-item.open .faq-q span{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--gray);font-size:.96rem}
-.faq-a p{padding:0 0 24px}
+.faq-q{width:100%;background:none;border:none;color:var(--txt);font-family:'Archivo Black';font-size:1.02rem;letter-spacing:.04em;text-align:left;padding:26px 6px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;text-transform:uppercase}
+.faq-q span{color:var(--ice);font-size:1.6rem;flex:none}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a p{color:var(--mut);padding:0 6px 28px;max-width:700px}
 /* ===== CTA BAND ===== */
-.cta-band{background:var(--accent);color:#06130a;padding:90px 0;text-align:center;position:relative;overflow:hidden}
-.cta-band::before{content:'VAMOS HASTA TI';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Oswald',sans-serif;font-size:clamp(4rem,16vw,13rem);font-weight:700;color:rgba(6,19,10,.06);white-space:nowrap;pointer-events:none}
-.cta-band h2{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:700;margin-bottom:16px;position:relative;z-index:2}
-.cta-band p{font-size:1.1rem;font-weight:500;margin-bottom:34px;position:relative;z-index:2}
-.cta-band .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
-.btn.dark{background:#06130a;border-color:#06130a;color:var(--accent)}
-.btn.dark:hover{background:transparent;color:#06130a;box-shadow:none}
+.cta-band{background:linear-gradient(135deg,#0e2a5c,#123a7d 50%,#0e2a5c);border-top:1px solid rgba(150,175,210,.3);border-bottom:1px solid rgba(150,175,210,.3);text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:"LD";position:absolute;right:-30px;top:50%;transform:translateY(-50%);font-family:'Archivo Black';font-size:22rem;color:rgba(255,255,255,.035);line-height:1}
+.cta-band h2{font-size:clamp(2rem,5vw,3.4rem);text-transform:uppercase;margin-bottom:16px;position:relative}
+.cta-band p{color:#cdd9ee;margin-bottom:36px;position:relative}
+.btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative}
 /* ===== CONTACT ===== */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.contact-info h2{color:#fff;font-size:clamp(2.2rem,4.5vw,3.2rem);margin-bottom:18px;font-weight:600}
-.contact-info h2 em{font-style:normal;color:var(--accent)}
-.contact-info>p{color:var(--gray);margin-bottom:28px}
-.c-line{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-size:1.06rem}
-.c-line .ico{font-size:1.4rem;width:32px;text-align:center}
-.c-line a{color:#fff;font-weight:600;border-bottom:2px solid var(--accent)}
-.c-line span.txt{color:#cfd6cf}
-form{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:38px}
-form h3{color:#fff;margin-bottom:22px;font-size:1.6rem;letter-spacing:.04em}
-.field{margin-bottom:16px}
-.field label{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:6px}
-.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.14);border-radius:8px;color:#fff;padding:13px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.contact-info h2{font-size:clamp(1.9rem,4vw,2.8rem);text-transform:uppercase;margin-bottom:18px}
+.contact-info h2 em{font-style:normal;color:var(--ice)}
+.contact-info>p{color:var(--mut);margin-bottom:34px}
+.c-line{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+.c-line .k{width:46px;height:46px;flex:none;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ice);font-size:1.1rem}
+.c-line a{color:var(--txt);text-decoration:none;font-weight:600}
+.c-line a:hover{color:var(--ice)}
+.c-line .txt{color:var(--mut)}
+form{background:var(--bg2);border:1px solid var(--line);padding:44px}
+form h3{font-size:1.3rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+form .fsub{color:var(--mut);font-size:.9rem;margin-bottom:28px}
+.field{margin-bottom:20px}
+.field label{display:block;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
+.field input,.field select,.field textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--txt);padding:16px;font-size:1rem;border-radius:2px;font-family:inherit}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ice)}
+form .btn{width:100%;justify-content:center}
 /* ===== FOOTER ===== */
-footer{background:#040604;border-top:1px solid var(--line);padding:60px 0 100px;text-align:center}
-footer .flogo{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.16em;font-size:1.5rem;color:#fff;margin-bottom:10px}
-footer .flogo span{color:var(--accent)}
-footer p{color:var(--gray);font-size:.9rem;margin-bottom:6px}
-footer a.ftel{color:var(--accent);font-weight:600}
-footer .demo{margin-top:24px;font-size:.78rem;color:#4c544c;letter-spacing:.06em}
+footer{border-top:1px solid var(--line);padding:60px 0 40px;text-align:center;background:#040a16}
+footer .flogo{font-family:'Archivo Black';font-size:1.3rem;letter-spacing:.2em;margin-bottom:12px}
+footer p{color:var(--mut);font-size:.92rem;margin-bottom:6px}
+footer a.ftel{color:var(--ice);font-weight:700;text-decoration:none;font-size:1.15rem}
+footer .demo{margin-top:26px;font-size:.76rem;color:#3d4c66;letter-spacing:.14em;text-transform:uppercase}
 /* ===== FLOATS ===== */
-.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
 .wa-float:hover{transform:scale(1.1)}
-.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(7,9,7,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
-.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:8px;font-family:'Oswald',sans-serif;font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
-.mobile-bar .call{background:var(--accent);color:#06130a}
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(6,13,26,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 6px;border-radius:4px;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.mobile-bar .call{background:linear-gradient(135deg,var(--chrome1),var(--chrome3));color:#0a1830}
 .mobile-bar .wachat{background:var(--wa);color:#fff}
 /* ===== REVEAL ===== */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
 @media(max-width:960px){
-  .svc-grid,.why-grid{grid-template-columns:1fr}
+  .why-grid,.contact-grid{grid-template-columns:1fr;gap:50px}
   .steps{grid-template-columns:repeat(2,1fr)}
+  .step:nth-child(3){border-left:none}
   .testi-grid{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .stats-grid{grid-template-columns:repeat(2,1fr);gap:26px}
-  .why-list{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid>div:nth-child(3){border-left:none}
   .nav-links{display:none}
   .menu-toggle{display:block}
-  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(7,9,7,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(6,13,26,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
   section{padding:80px 0}
+  .menu-row{grid-template-columns:1fr;gap:10px}
+  .menu-row .right{text-align:left}
 }
 @media(max-width:640px){
   .mobile-bar{display:flex}
   .wa-float{display:none}
   footer{padding-bottom:150px}
   .steps{grid-template-columns:1fr}
+  .step{border-left:none;border-top:1px solid var(--line)}
+  .step:first-child{border-top:none}
 }
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header id="header">
   <div class="container nav">
-    <a href="#" class="logo">LARREGUI<span>DETAILING</span><small>CIALES · A DOMICILIO</small></a>
+    <a href="#" class="logo">
+      <svg class="mono" viewBox="0 0 64 64" aria-hidden="true">
+        <defs><linearGradient id="ch" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f4f7fb"/><stop offset=".5" stop-color="#9aa7bd"/><stop offset="1" stop-color="#e8eef7"/>
+        </linearGradient></defs>
+        <circle cx="32" cy="32" r="29" fill="none" stroke="url(#ch)" stroke-width="3"/>
+        <circle cx="32" cy="32" r="23" fill="none" stroke="url(#ch)" stroke-width="1" opacity=".45"/>
+        <text x="32" y="40" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="19" fill="url(#ch)" letter-spacing="1">LD</text>
+      </svg>
+      <span><b>LARREGUI</b><b>DETAILING</b><small>CIALES &middot; A DOMICILIO</small></span>
+    </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#como">Cómo funciona</a></li>
+      <li><a href="#como">C&oacute;mo funciona</a></li>
       <li><a href="#opiniones">Opiniones</a></li>
       <li><a href="#faq">Preguntas</a></li>
       <li><a href="#contacto">Contacto</a></li>
-      <li><a class="btn wa" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20agendar%20una%20cita%20a%20domicilio" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a class="btn wa" style="padding:12px 24px" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20agendar%20una%20cita%20a%20domicilio" target="_blank" rel="noopener">WhatsApp</a></li>
     </ul>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir men&uacute;">&#9776;</button>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-ghost">DETAILING</div>
   <div class="container hero-inner">
-    <p class="eyebrow">Detailing profesional a domicilio</p>
-    <h1>Tu carro como nuevo, <span class="fill">sin salir</span> <span class="stroke">de casa</span></h1>
-    <p class="sub">Lavado premium, interior profundo y protección de pintura — llevamos el taller completo hasta tu marquesina en Ciales y pueblos cercanos.</p>
-    <p class="tag">🚗 Vamos hasta ti · Servicio por cita</p>
-    <div class="hero-ctas">
-      <a class="btn wa" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20agendar%20una%20cita%20a%20domicilio" target="_blank" rel="noopener">📲 Agendar por WhatsApp</a>
-      <a class="btn ghost" href="tel:+17874287135">📞 Llamar ahora</a>
+    <svg class="mono reveal" viewBox="0 0 64 64" aria-hidden="true">
+      <defs><linearGradient id="ch2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f4f7fb"/><stop offset=".5" stop-color="#9aa7bd"/><stop offset="1" stop-color="#e8eef7"/>
+      </linearGradient></defs>
+      <circle cx="32" cy="32" r="29" fill="none" stroke="url(#ch2)" stroke-width="3"/>
+      <circle cx="32" cy="32" r="23" fill="none" stroke="url(#ch2)" stroke-width="1" opacity=".45"/>
+      <text x="32" y="40" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="19" fill="url(#ch2)" letter-spacing="1">LD</text>
+    </svg>
+    <p class="eyebrow reveal">Detailing profesional a domicilio</p>
+    <h1 class="reveal">Tu carro como nuevo,<br><span class="chrome">sin salir de casa.</span></h1>
+    <p class="sub reveal">Lavado premium, interior profundo y protecci&oacute;n de pintura &mdash; llevamos el taller completo hasta tu marquesina en Ciales y pueblos cercanos.</p>
+    <p class="tagline reveal">Vamos hasta ti &middot; Servicio por cita</p>
+    <div class="hero-ctas reveal">
+      <a class="btn wa" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20agendar%20una%20cita%20a%20domicilio" target="_blank" rel="noopener">Agendar por WhatsApp</a>
+      <a class="btn line" href="tel:+17874287135">Llamar ahora</a>
     </div>
-    <div class="hero-phone"><a href="tel:+17874287135">(787) 428-7135</a></div>
-    <span class="badge-cita">✓ Por cita · Tú eliges el día y la hora</span>
+    <div class="hero-phone reveal"><a href="tel:+17874287135">(787) 428-7135</a></div>
+    <div class="reveal"><span class="cita">&#10003; Por cita &middot; T&uacute; eliges el d&iacute;a y la hora</span></div>
   </div>
 </section>
 
 <div class="stats">
-  <div class="container stats-grid">
+  <div class="stats-grid">
     <div><div class="num">100%</div><div class="lbl">A domicilio</div></div>
     <div><div class="num">POR CITA</div><div class="lbl">Sin filas ni espera</div></div>
     <div><div class="num">CIALES</div><div class="lbl">Y pueblos cercanos</div></div>
@@ -222,137 +243,84 @@ footer .demo{margin-top:24px;font-size:.78rem;color:#4c544c;letter-spacing:.06em
   </div>
 </div>
 
-<div class="strip"><div>✦ VAMOS HASTA TI &nbsp;&nbsp; ✦ DETAILING POR CITA &nbsp;&nbsp; ✦ CIALES · PUERTO RICO &nbsp;&nbsp; ✦ VAMOS HASTA TI &nbsp;&nbsp; ✦ DETAILING POR CITA &nbsp;&nbsp; ✦ CIALES · PUERTO RICO &nbsp;&nbsp;</div></div>
+<div class="strip"><div>&#10022; VAMOS HASTA TI &nbsp;&nbsp; &#10022; DETAILING POR CITA &nbsp;&nbsp; &#10022; CIALES &middot; PUERTO RICO &nbsp;&nbsp; &#10022; VAMOS HASTA TI &nbsp;&nbsp; &#10022; DETAILING POR CITA &nbsp;&nbsp; &#10022; CIALES &middot; PUERTO RICO &nbsp;&nbsp; </div></div>
 
 <section id="servicios">
   <div class="container">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Servicios</p>
-      <h2>Detalle de <em>showroom</em> en tu marquesina</h2>
-      <p>Traemos agua, luz y todo el equipo profesional. Tú no pones nada — solo las llaves.</p>
+    <div class="sec-head center reveal">
+      <p class="eyebrow">La carta</p>
+      <h2>Detalle de <em>showroom</em><br>en tu marquesina</h2>
+      <p>Traemos agua, luz y todo el equipo profesional. T&uacute; no pones nada &mdash; solo las llaves.</p>
     </div>
-    <div class="svc-grid">
-      <div class="card reveal">
-        <div class="ico">🧽</div>
-        <h3>Lavado Premium a Domicilio</h3>
-        <p>Lavado exterior completo con técnica de dos cubetas, aros, gomas, cristales y dressing de plásticos. El brillo que tu carro merece.</p>
-        <p class="price">desde $60<small>Precio propuesto · final según evaluación del vehículo</small></p>
-        <a class="btn wa" href="https://wa.me/17874287135?text=Hola%2C%20me%20interesa%20el%20Lavado%20Premium%20a%20domicilio" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
-      <div class="card reveal">
-        <div class="ico">🛋️</div>
-        <h3>Interior Profundo</h3>
-        <p>Aspirado detallado, limpieza de tapicería y alfombras, tablero, consola y cristales interiores. Adentro como recién salido del dealer.</p>
-        <p class="price">desde $80<small>Precio propuesto · final según evaluación del vehículo</small></p>
-        <a class="btn wa" href="https://wa.me/17874287135?text=Hola%2C%20me%20interesa%20el%20Interior%20Profundo" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
-      <div class="card reveal">
-        <div class="ico">✨</div>
-        <h3>Encerado y Protección</h3>
-        <p>Cera premium y sellado que le da a tu pintura un brillo profundo y la protege del sol y la lluvia por semanas.</p>
-        <p class="price">desde $75<small>Precio propuesto · final según evaluación del vehículo</small></p>
-        <a class="btn wa" href="https://wa.me/17874287135?text=Hola%2C%20me%20interesa%20el%20Encerado%20y%20Protecci%C3%B3n" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
-      <div class="card reveal">
-        <div class="ico">💎</div>
-        <h3>Full Detailing</h3>
-        <p>El paquete completo: exterior premium + interior profundo + encerado. Tu carro renovado de punta a punta en una sola cita.</p>
-        <p class="price">desde $150<small>Precio propuesto · final según evaluación del vehículo</small></p>
-        <a class="btn wa" href="https://wa.me/17874287135?text=Hola%2C%20me%20interesa%20el%20Full%20Detailing" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
+    <div class="menu">
+      <a class="menu-row reveal" href="https://wa.me/17874287135?text=Hola%2C%20me%20interesa%20el%20Lavado%20Premium%20a%20domicilio" target="_blank" rel="noopener">
+        <span class="idx">01</span>
+        <span><h3>Lavado Premium <span class="dot">&middot;</span> a domicilio</h3><p>Lavado exterior completo con t&eacute;cnica de dos cubetas, aros, gomas, cristales y dressing de pl&aacute;sticos. El brillo que tu carro merece.</p></span>
+        <span class="right"><span class="price">desde $60<small>propuesto &middot; final seg&uacute;n evaluaci&oacute;n</small></span><br><span class="go">Pedir por WhatsApp &rarr;</span></span>
+      </a>
+      <a class="menu-row reveal" href="https://wa.me/17874287135?text=Hola%2C%20me%20interesa%20el%20Interior%20Profundo" target="_blank" rel="noopener">
+        <span class="idx">02</span>
+        <span><h3>Interior <span class="dot">&middot;</span> Profundo</h3><p>Aspirado detallado, limpieza de tapicer&iacute;a y alfombras, tablero, consola y cristales interiores. Adentro como reci&eacute;n salido del dealer.</p></span>
+        <span class="right"><span class="price">desde $80<small>propuesto &middot; final seg&uacute;n evaluaci&oacute;n</small></span><br><span class="go">Pedir por WhatsApp &rarr;</span></span>
+      </a>
+      <a class="menu-row reveal" href="https://wa.me/17874287135?text=Hola%2C%20me%20interesa%20el%20Encerado%20y%20Protecci%C3%B3n" target="_blank" rel="noopener">
+        <span class="idx">03</span>
+        <span><h3>Encerado <span class="dot">&middot;</span> Protecci&oacute;n</h3><p>Cera premium y sellado que le da a tu pintura un brillo profundo y la protege del sol y la lluvia por semanas.</p></span>
+        <span class="right"><span class="price">desde $75<small>propuesto &middot; final seg&uacute;n evaluaci&oacute;n</small></span><br><span class="go">Pedir por WhatsApp &rarr;</span></span>
+      </a>
+      <a class="menu-row reveal" href="https://wa.me/17874287135?text=Hola%2C%20me%20interesa%20el%20Full%20Detailing" target="_blank" rel="noopener">
+        <span class="idx">04</span>
+        <span><h3>Full <span class="dot">&middot;</span> Detailing</h3><p>El paquete completo: exterior premium + interior profundo + encerado. Tu carro renovado de punta a punta en una sola cita.</p></span>
+        <span class="right"><span class="price">desde $150<small>propuesto &middot; final seg&uacute;n evaluaci&oacute;n</small></span><br><span class="go">Pedir por WhatsApp &rarr;</span></span>
+      </a>
     </div>
+    <p class="menu-note">Precios propuestos &middot; el precio final se confirma seg&uacute;n el tama&ntilde;o y estado del veh&iacute;culo.</p>
   </div>
 </section>
 
 <section id="como" class="how">
   <div class="container">
     <div class="sec-head reveal">
-      <p class="eyebrow">Cómo funciona</p>
-      <h2>Agenda hoy, <em>estrena</em> mañana</h2>
-      <p>Servicio por cita: tú eliges el día y la hora. Así de simple.</p>
+      <p class="eyebrow">C&oacute;mo funciona</p>
+      <h2>Agenda hoy, <em>estrena</em> ma&ntilde;ana</h2>
+      <p>Servicio por cita: t&uacute; eliges el d&iacute;a y la hora. As&iacute; de simple.</p>
     </div>
     <div class="steps">
-      <div class="step reveal">
-        <div class="num">01</div>
-        <h3>Escríbenos</h3>
-        <p>Mándanos un WhatsApp, elige tu servicio y separa tu cita.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">02</div>
-        <h3>Vamos hasta ti</h3>
-        <p>Llegamos a tu casa u oficina con todo el equipo. No necesitas nada.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">03</div>
-        <h3>Detallamos</h3>
-        <p>Trabajamos con calma y detalle mientras tú sigues con tu día.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">04</div>
-        <h3>Estrenas carro</h3>
-        <p>Inspección final contigo y te entregamos las llaves. Como nuevo.</p>
-      </div>
+      <div class="step reveal"><div class="num">01</div><h3>Escr&iacute;benos</h3><p>M&aacute;ndanos un WhatsApp, elige tu servicio y separa tu cita.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>Vamos hasta ti</h3><p>Llegamos a tu casa u oficina con todo el equipo. No necesitas nada.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Detallamos</h3><p>Trabajamos con calma y detalle mientras t&uacute; sigues con tu d&iacute;a.</p></div>
+      <div class="step reveal"><div class="num">04</div><h3>Estrenas carro</h3><p>Inspecci&oacute;n final contigo y te entregamos las llaves. Como nuevo.</p></div>
     </div>
   </div>
 </section>
 
 <section id="porque">
-  <div class="container">
-    <div class="why-grid">
-      <div class="why-main reveal">
-        <p class="eyebrow">Por qué Larregui</p>
-        <h2>El taller <em>va montado</em> en nuestra unidad</h2>
-        <p>No somos un car wash de fila rápida. Somos detailing de verdad, con el tiempo y el equipo que tu carro se merece — en la comodidad de tu hogar.</p>
-        <a class="btn" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20separar%20mi%20cita" target="_blank" rel="noopener">Separar mi cita</a>
-      </div>
-      <div class="why-list">
-        <div class="why-item reveal">
-          <div class="ico">🚗</div>
-          <h3>Vamos hasta ti</h3>
-          <p>Ciales y pueblos cercanos. El servicio llega a tu puerta.</p>
-        </div>
-        <div class="why-item reveal">
-          <div class="ico">📅</div>
-          <h3>Por cita</h3>
-          <p>Tu horario, tu día. Sin filas, sin espera, sin prisa.</p>
-        </div>
-        <div class="why-item reveal">
-          <div class="ico">🧴</div>
-          <h3>Productos premium</h3>
-          <p>Químicos y ceras de grado profesional, seguros para tu pintura.</p>
-        </div>
-        <div class="why-item reveal">
-          <div class="ico">🔍</div>
-          <h3>Ojo al detalle</h3>
-          <p>Cada rincón cuenta. Inspección final contigo antes de entregar.</p>
-        </div>
-      </div>
+  <div class="container why-grid">
+    <div class="why-main reveal">
+      <p class="eyebrow">Por qu&eacute; Larregui</p>
+      <h2>El taller <em>va montado</em> en nuestra unidad</h2>
+      <p>No somos un car wash de fila r&aacute;pida. Somos detailing de verdad, con el tiempo y el equipo que tu carro se merece &mdash; en la comodidad de tu hogar.</p>
+      <a class="btn wa" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20separar%20mi%20cita" target="_blank" rel="noopener">Separar mi cita</a>
+    </div>
+    <div class="why-list reveal">
+      <div class="why-item"><span class="n">a.</span><span><h3>Vamos hasta ti</h3><p>Ciales y pueblos cercanos. El servicio llega a tu puerta.</p></span></div>
+      <div class="why-item"><span class="n">b.</span><span><h3>Por cita</h3><p>Tu horario, tu d&iacute;a. Sin filas, sin espera, sin prisa.</p></span></div>
+      <div class="why-item"><span class="n">c.</span><span><h3>Productos premium</h3><p>Qu&iacute;micos y ceras de grado profesional, seguros para tu pintura.</p></span></div>
+      <div class="why-item"><span class="n">d.</span><span><h3>Ojo al detalle</h3><p>Cada rinc&oacute;n cuenta. Inspecci&oacute;n final contigo antes de entregar.</p></span></div>
     </div>
   </div>
 </section>
 
 <section id="opiniones" class="testi">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head center reveal">
       <p class="eyebrow">Opiniones</p>
       <h2>Carros que <em>volvieron</em> a brillar</h2>
     </div>
     <div class="testi-grid">
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"Llegaron puntuales a mi casa en Ciales y dejaron la guagua como nueva. El interior quedó impecable."</p>
-        <p class="who">Cliente · Ciales</p>
-      </div>
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"El encerado le devolvió el brillo al carro. Se nota que trabajan con calma y con buenos productos."</p>
-        <p class="who">Cliente · Morovis</p>
-      </div>
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"Agendé por WhatsApp en dos minutos y al otro día ya estaban en mi marquesina. Súper profesionales."</p>
-        <p class="who">Cliente · Ciales</p>
-      </div>
+      <div class="testi-card reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Llegaron puntuales a mi casa en Ciales y dejaron la guagua como nueva. El interior qued&oacute; impecable.&rdquo;</p><p class="who">Cliente &middot; Ciales</p></div>
+      <div class="testi-card reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;El encerado le devolvi&oacute; el brillo al carro. Se nota que trabajan con calma y con buenos productos.&rdquo;</p><p class="who">Cliente &middot; Morovis</p></div>
+      <div class="testi-card reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Agend&eacute; por WhatsApp en dos minutos y al otro d&iacute;a ya estaban en mi marquesina. S&uacute;per profesionales.&rdquo;</p><p class="who">Cliente &middot; Ciales</p></div>
     </div>
     <p class="note">Testimonios con fines ilustrativos.</p>
   </div>
@@ -360,42 +328,27 @@ footer .demo{margin-top:24px;font-size:.78rem;color:#4c544c;letter-spacing:.06em
 
 <section id="faq">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head center reveal">
       <p class="eyebrow">Preguntas</p>
       <h2>Antes de <em>agendar</em></h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item reveal">
-        <button class="faq-q">¿A qué pueblos llegan? <span>+</span></button>
-        <div class="faq-a"><p>Nuestra base es Ciales y llegamos a pueblos cercanos como Morovis, Orocovis, Barceloneta y Florida. Escríbenos por WhatsApp con tu pueblo y te confirmamos al momento.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Cómo funciona lo de "por cita"? <span>+</span></button>
-        <div class="faq-a"><p>Escríbenos por WhatsApp, eliges el servicio y coordinamos el día y la hora que te convenga. Trabajamos por citas para dedicarle a cada carro el tiempo que merece.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Necesito tener agua o luz disponible? <span>+</span></button>
-        <div class="faq-a"><p>No. Llevamos nuestra propia agua, planta eléctrica y todo el equipo en la unidad. Solo necesitamos espacio para trabajar alrededor del vehículo.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Cuánto tarda el servicio? <span>+</span></button>
-        <div class="faq-a"><p>Un lavado premium toma alrededor de 1 hora; el interior profundo o el full detailing pueden tomar de 2 a 4 horas según el tamaño y estado del vehículo.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Cómo puedo pagar? <span>+</span></button>
-        <div class="faq-a"><p>Aceptamos ATH Móvil, tarjetas y efectivo al completar el servicio.</p></div>
-      </div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;A qu&eacute; pueblos llegan? <span>+</span></button><div class="faq-a"><p>Nuestra base es Ciales y llegamos a pueblos cercanos como Morovis, Orocovis, Barceloneta y Florida. Escr&iacute;benos por WhatsApp con tu pueblo y te confirmamos al momento.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;C&oacute;mo funciona lo de &ldquo;por cita&rdquo;? <span>+</span></button><div class="faq-a"><p>Escr&iacute;benos por WhatsApp, eliges el servicio y coordinamos el d&iacute;a y la hora que te convenga. Trabajamos por citas para dedicarle a cada carro el tiempo que merece.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;Necesito tener agua o luz disponible? <span>+</span></button><div class="faq-a"><p>No. Llevamos nuestra propia agua, planta el&eacute;ctrica y todo el equipo en la unidad. Solo necesitamos espacio para trabajar alrededor del veh&iacute;culo.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;Cu&aacute;nto tarda el servicio? <span>+</span></button><div class="faq-a"><p>Un lavado premium toma alrededor de 1 hora; el interior profundo o el full detailing pueden tomar de 2 a 4 horas seg&uacute;n el tama&ntilde;o y estado del veh&iacute;culo.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;C&oacute;mo puedo pagar? <span>+</span></button><div class="faq-a"><p>Aceptamos ATH M&oacute;vil, tarjetas y efectivo al completar el servicio.</p></div></div>
     </div>
   </div>
 </section>
 
 <section class="cta-band">
   <div class="container">
-    <h2>¿Listo para estrenar carro otra vez?</h2>
-    <p>Separa tu cita hoy — vamos hasta ti.</p>
-    <div class="btn-row">
-      <a class="btn dark" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20separar%20mi%20cita%20a%20domicilio" target="_blank" rel="noopener">📲 Agendar por WhatsApp</a>
-      <a class="btn dark" href="tel:+17874287135">📞 (787) 428-7135</a>
+    <h2 class="reveal">&iquest;Listo para estrenar<br>carro otra vez?</h2>
+    <p class="reveal">Separa tu cita hoy &mdash; vamos hasta ti.</p>
+    <div class="btn-row reveal">
+      <a class="btn wa" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20separar%20mi%20cita%20a%20domicilio" target="_blank" rel="noopener">Agendar por WhatsApp</a>
+      <a class="btn line" href="tel:+17874287135">(787) 428-7135</a>
     </div>
   </div>
 </section>
@@ -405,56 +358,40 @@ footer .demo{margin-top:24px;font-size:.78rem;color:#4c544c;letter-spacing:.06em
     <div class="contact-info reveal">
       <p class="eyebrow">Contacto</p>
       <h2>Agenda tu <em>cita</em> hoy</h2>
-      <p>Escríbenos por WhatsApp y coordinamos tu detailing a domicilio. Respuesta rápida, sin compromiso.</p>
-      <div class="c-line"><span class="ico">📞</span><a href="tel:+17874287135">(787) 428-7135</a></div>
-      <div class="c-line"><span class="ico">📲</span><a href="https://wa.me/17874287135" target="_blank" rel="noopener">WhatsApp directo</a></div>
-      <div class="c-line"><span class="ico">📍</span><span class="txt">Ciales, Puerto Rico · Servicio a domicilio</span></div>
-      <div class="c-line"><span class="ico">🕐</span><span class="txt">Por cita · Lun–Sáb · 8:00am – 6:00pm</span></div>
+      <p>Escr&iacute;benos por WhatsApp y coordinamos tu detailing a domicilio. Respuesta r&aacute;pida, sin compromiso.</p>
+      <div class="c-line"><span class="k">&#9742;</span><a href="tel:+17874287135">(787) 428-7135</a></div>
+      <div class="c-line"><span class="k">&#9993;</span><a href="https://wa.me/17874287135" target="_blank" rel="noopener">WhatsApp directo</a></div>
+      <div class="c-line"><span class="k">&#9673;</span><span class="txt">Ciales, Puerto Rico &middot; Servicio a domicilio</span></div>
+      <div class="c-line"><span class="k">&#9719;</span><span class="txt">Por cita &middot; Lun&ndash;S&aacute;b &middot; 8:00am &ndash; 6:00pm</span></div>
     </div>
     <form id="bookForm" class="reveal">
       <h3>Solicita tu cita</h3>
-      <div class="field">
-        <label for="fNombre">Nombre</label>
-        <input id="fNombre" type="text" placeholder="Tu nombre" required>
-      </div>
-      <div class="field">
-        <label for="fTel">Teléfono</label>
-        <input id="fTel" type="tel" placeholder="(787) 000-0000" required>
-      </div>
-      <div class="field">
-        <label for="fSvc">Servicio</label>
-        <select id="fSvc">
-          <option>Lavado Premium a Domicilio</option>
-          <option>Interior Profundo</option>
-          <option>Encerado y Protección</option>
-          <option>Full Detailing</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="fMsg">Pueblo / dirección</label>
-        <textarea id="fMsg" rows="3" placeholder="¿Dónde llegamos?"></textarea>
-      </div>
-      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
+      <p class="fsub">Te respondemos por WhatsApp en minutos.</p>
+      <div class="field"><label for="fNombre">Nombre</label><input id="fNombre" type="text" placeholder="Tu nombre" required></div>
+      <div class="field"><label for="fTel">Tel&eacute;fono</label><input id="fTel" type="tel" placeholder="(787) 428-7135" required></div>
+      <div class="field"><label for="fSvc">Servicio</label><select id="fSvc">
+        <option>Lavado Premium a Domicilio</option><option>Interior Profundo</option><option>Encerado y Protecci&oacute;n</option><option>Full Detailing</option>
+      </select></div>
+      <div class="field"><label for="fMsg">Pueblo / direcci&oacute;n</label><textarea id="fMsg" rows="3" placeholder="&iquest;D&oacute;nde llegamos?"></textarea></div>
+      <button class="btn wa" type="submit">Enviar por WhatsApp</button>
     </form>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p class="flogo">LARREGUI<span>DETAILING</span></p>
-    <p>Detailing a domicilio · Ciales, Puerto Rico</p>
+    <p class="flogo">LARREGUI DETAILING</p>
+    <p>Detailing a domicilio &middot; Ciales, Puerto Rico</p>
     <p><a class="ftel" href="tel:+17874287135">(787) 428-7135</a></p>
-    <p class="demo">Demostración creada por ManuPro</p>
+    <p class="demo">Demostraci&oacute;n creada por ManuPro</p>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-
+<a class="wa-float" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6 1.6h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.2c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.8C4.9 9 9.9 4 16 4s11.1 5 11.1 11-5 10.2-11.1 10.2zm6.1-7.6c-.3-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.5-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.6 5.7 5.1 2.2.9 3 .9 4.1.8.6-.1 2-0.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.4-.2-.7-.4z"/></svg></a>
 <div class="mobile-bar">
-  <a class="call" href="tel:+17874287135">📞 Llamar</a>
-  <a class="wachat" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a class="call" href="tel:+17874287135"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg> Llamar</a>
+  <a class="wachat" href="https://wa.me/17874287135?text=Hola%20Larregui%20Detailing%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6 1.6h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.2c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.8C4.9 9 9.9 4 16 4s11.1 5 11.1 11-5 10.2-11.1 10.2zm6.1-7.6c-.3-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.5-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.6 5.7 5.1 2.2.9 3 .9 4.1.8.6-.1 2-0.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.4-.2-.7-.4z"/></svg> WhatsApp</a>
 </div>
-
 <script>
 const header=document.getElementById('header');
 addEventListener('scroll',()=>{header.classList.toggle('solid',scrollY>40)},{passive:true});
@@ -463,8 +400,8 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   const btn=item.querySelector('.faq-q');
   btn.addEventListener('click',()=>{
     const wasOpen=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+';});
-    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='×';}
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q').querySelector('span').textContent='+';});
+    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='\u00d7';}
   });
 });
 document.getElementById('bookForm').addEventListener('submit',e=>{
@@ -473,9 +410,9 @@ document.getElementById('bookForm').addEventListener('submit',e=>{
   const tel=document.getElementById('fTel').value.trim();
   const svc=document.getElementById('fSvc').value;
   const msg=document.getElementById('fMsg').value.trim();
-  if(!nombre||!tel){alert('Por favor completa tu nombre y teléfono.');return;}
-  let text='Hola Larregui Detailing, soy '+nombre+'. Quiero agendar: '+svc+'. Mi teléfono es '+tel+'.';
-  if(msg)text+=' Dirección/pueblo: '+msg;
+  if(!nombre||!tel){alert('Por favor completa tu nombre y tel\u00e9fono.');return;}
+  let text='Hola Larregui Detailing, soy '+nombre+'. Quiero: '+svc+'. Mi tel\u00e9fono es '+tel+'.';
+  if(msg)text+=' '+msg;
   window.open('https://wa.me/17874287135?text='+encodeURIComponent(text),'_blank');
 });
 const io=new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}})},{threshold:.12});

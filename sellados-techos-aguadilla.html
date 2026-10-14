@@ -3,168 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sellados y Lavados de Techos y Más | Sellado de Techos en Aguadilla, PR</title>
-<meta name="description" content="Sellado y lavado de techos en Aguadilla y el área oeste. Inspección gratis, membrana de calidad y garantía escrita. Llámanos: (939) 344-0498.">
+<title>Sellados y Lavados de Techos y Más | Aguadilla, PR — (939) 344-0498</title>
+<meta name="description" content="Sellado de techos, lavado a presión y reparación de filtraciones en Aguadilla y el área oeste. Inspección gratis, garantía escrita. Llámanos: (939) 344-0498.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --black:#0d0b09; --dark:#161210; --panel:#1e1815; --line:rgba(210,140,70,.30);
-  --earth:#D28C46; --earth-hi:#EFAE63; --earth-dim:rgba(210,140,70,.13);
-  --white:#f7f2ea; --gray:#ab9f8f; --wa:#25D366;
+  --brick:#B8502F; --brick-dk:#8E3A20; --sand:#F5EDDE; --sand-dk:#E9DCC2;
+  --ink:#3A2A1E; --gray:#7A6A58; --white:#FFFDF8; --sun:#E8A93D; --wa:#25D366;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.7;overflow-x:hidden}
-h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:600;line-height:1.08;text-transform:uppercase;letter-spacing:.02em}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--ink);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;line-height:1;letter-spacing:.02em}
 a{text-decoration:none;color:inherit}
 .container{width:min(1140px,92%);margin:0 auto}
 section{padding:96px 0;position:relative}
+.roofline{height:34px;background:var(--brick);clip-path:polygon(0 100%,0 45%,6.25% 45%,6.25% 100%,6.25% 45%,12.5% 0,18.75% 45%,18.75% 100%,18.75% 45%,25% 0,31.25% 45%,31.25% 100%,31.25% 45%,37.5% 0,43.75% 45%,43.75% 100%,43.75% 45%,50% 0,56.25% 45%,56.25% 100%,56.25% 45%,62.5% 0,68.75% 45%,68.75% 100%,68.75% 45%,75% 0,81.25% 45%,81.25% 100%,81.25% 45%,87.5% 0,93.75% 45%,93.75% 100%,93.75% 45%,100% 0,100% 100%)}
 /* HEADER */
 header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:transparent}
-header.solid{background:rgba(13,11,9,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-.logo{font-family:'Oswald',sans-serif;font-size:1.25rem;letter-spacing:.08em;text-transform:uppercase;line-height:1.25}
-.logo b{color:var(--earth)}
-.logo small{display:block;font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:.4em;color:var(--gray);font-weight:500}
+header.solid{background:rgba(255,253,248,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(184,80,47,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{display:flex;align-items:center;gap:12px}
+.monogram{width:52px;height:52px;background:linear-gradient(135deg,var(--brick),var(--brick-dk));clip-path:polygon(50% 0,100% 38%,100% 100%,0 100%,0 38%);display:flex;align-items:flex-end;justify-content:center;color:#fff;font-family:'Anton',sans-serif;font-size:1.15rem;padding-bottom:8px;letter-spacing:.04em}
+.logo .t{font-family:'Anton',sans-serif;font-size:1.02rem;line-height:1.15;color:var(--ink)}
+.logo .t small{display:block;font-family:'Inter',sans-serif;font-size:.58rem;letter-spacing:.32em;color:var(--brick);font-weight:700}
 .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
-.nav-links a{font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:#d6cbb9;transition:.25s;font-weight:500}
-.nav-links a:hover{color:var(--earth-hi)}
-.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;font-size:1.4rem;cursor:pointer;color:var(--earth);padding:4px 12px}
-.btn{display:inline-block;background:var(--earth);color:#171006;padding:14px 32px;border-radius:50px;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;transition:.3s;border:1px solid var(--earth);cursor:pointer}
-.btn:hover{background:transparent;color:var(--earth-hi);transform:translateY(-2px);box-shadow:0 10px 28px rgba(210,140,70,.28)}
+.nav-links a{font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink);transition:.25s;font-weight:600}
+.nav-links a:hover{color:var(--brick)}
+.menu-toggle{display:none;background:none;border:1px solid rgba(184,80,47,.4);border-radius:8px;font-size:1.4rem;cursor:pointer;color:var(--brick);padding:4px 12px}
+.btn{display:inline-block;background:var(--brick);color:#fff;padding:15px 32px;border-radius:60px;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;transition:.28s;border:2px solid var(--brick);cursor:pointer}
+.btn:hover{background:transparent;color:var(--brick);transform:translateY(-2px);box-shadow:0 12px 30px rgba(184,80,47,.25)}
 .btn.wa{background:var(--wa);border-color:var(--wa);color:#062b16}
-.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 28px rgba(37,211,102,.25)}
-.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
-.btn.ghost:hover{border-color:var(--earth-hi);color:var(--earth-hi);box-shadow:none}
+.btn.wa:hover{background:transparent;color:#1da851;box-shadow:0 12px 30px rgba(37,211,102,.25)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{border-color:var(--brick);color:var(--brick);box-shadow:none}
 .btn.sm{padding:11px 22px;font-size:.76rem}
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;text-align:center;position:relative;
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;color:var(--ink);
   background:
-    radial-gradient(ellipse 60% 45% at 50% 8%,rgba(210,140,70,.35) 0%,transparent 60%),
-    linear-gradient(180deg,#1c130b 0%,var(--black) 78%)}
-.hero::before{content:'☀';position:absolute;top:14%;left:50%;transform:translateX(-50%);font-size:5rem;opacity:.16;filter:saturate(2)}
-.hero-inner{position:relative;z-index:2;padding:140px 0 90px;width:100%}
-.eyebrow{letter-spacing:.42em;text-transform:uppercase;font-size:.74rem;color:var(--earth-hi);margin-bottom:22px;font-weight:600}
-.hero h1{font-size:clamp(2.9rem,9vw,6.4rem);margin-bottom:20px}
-.hero h1 em{font-style:normal;color:var(--earth-hi)}
-.hero .sub{font-size:1.14rem;font-weight:300;max-width:640px;margin:0 auto 14px;color:#d9cebc}
-.hero .warn{font-size:.95rem;color:var(--earth-hi);font-weight:600;letter-spacing:.05em;margin-bottom:34px}
-.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
-.hero-phone{font-size:1.6rem;font-weight:700;letter-spacing:.04em}
-.hero-phone a{color:#fff;border-bottom:3px solid var(--earth);padding-bottom:3px;transition:.25s}
-.hero-phone a:hover{color:var(--earth-hi)}
+    radial-gradient(ellipse 60% 45% at 82% 12%,rgba(232,169,61,.5) 0%,transparent 70%),
+    linear-gradient(180deg,var(--sand) 0%,var(--white) 100%)}
+.hero-inner{position:relative;z-index:2;padding:150px 0 90px;max-width:880px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;letter-spacing:.36em;text-transform:uppercase;font-size:.72rem;color:var(--brick);margin-bottom:24px;font-weight:700}
+.eyebrow::before{content:'⌂';font-size:1.1rem;color:var(--brick)}
+.hero h1{font-size:clamp(3rem,10vw,6.8rem);margin-bottom:20px;color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--brick)}
+.hero .sub{font-size:1.12rem;font-weight:400;max-width:640px;margin-bottom:14px;color:var(--gray)}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin:32px 0 26px}
+.hero-phone{font-size:1.7rem;font-weight:800}
+.hero-phone a{color:var(--ink);border-bottom:3px solid var(--brick);padding-bottom:3px;transition:.25s}
+.hero-phone a:hover{color:var(--brick)}
 .hero-note{font-size:.85rem;color:var(--gray);margin-top:8px}
-.trust{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:30px;font-size:.9rem;color:var(--gray)}
-.trust b{color:#fff}
-/* MARQUEE */
-.strip{background:var(--earth);color:#171006;overflow:hidden;padding:12px 0;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.2em;font-size:.88rem;text-transform:uppercase}
-.strip div{white-space:nowrap;animation:slide 24s linear infinite;display:inline-block}
-@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero-tags{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.htag{background:var(--sand);border:1px solid rgba(184,80,47,.35);color:var(--brick-dk);padding:9px 18px;border-radius:60px;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
 /* PROOF */
-.proof{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
-.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:42px 0;text-align:center}
-.proof-item b{display:block;font-family:'Oswald',sans-serif;font-size:1.9rem;color:var(--earth-hi)}
-.proof-item span{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray)}
+.proof{background:var(--brick);color:#fff}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:46px 0;text-align:center}
+.proof-item b{display:block;font-family:'Anton',sans-serif;font-size:1.9rem;margin-bottom:4px;letter-spacing:.03em}
+.proof-item span{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:#F8E3D4}
+/* MARQUEE */
+.strip{background:var(--ink);color:var(--sand);overflow:hidden;padding:12px 0;font-family:'Anton',sans-serif;letter-spacing:.2em;font-size:1rem}
+.strip div{white-space:nowrap;animation:slide 26s linear infinite;display:inline-block}
+.strip em{font-style:normal;color:var(--sun)}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 /* SEC HEADS */
-.sec-head{text-align:center;max-width:700px;margin:0 auto 58px}
-.sec-head .eyebrow{display:block}
-.sec-head h2{font-size:clamp(2rem,4.8vw,3.2rem);margin-bottom:14px}
-.sec-head h2 em{font-style:normal;color:var(--earth-hi)}
+.sec-head{max-width:720px;margin:0 auto 58px;text-align:center}
+.sec-head .eyebrow{justify-content:center}
+.sec-head h2{font-size:clamp(2.3rem,5.5vw,3.9rem);margin-bottom:14px;color:var(--ink)}
+.sec-head h2 em{font-style:normal;color:var(--brick)}
 .sec-head p{color:var(--gray)}
 /* SERVICES */
-.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-.card{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:40px 34px;transition:.35s;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--earth),transparent);opacity:0;transition:.35s}
-.card:hover{transform:translateY(-8px);border-color:rgba(210,140,70,.4);box-shadow:0 20px 50px rgba(210,140,70,.12)}
-.card:hover::before{opacity:1}
-.card .ico{font-size:2.5rem;margin-bottom:16px}
-.card h3{font-size:1.4rem;margin-bottom:10px}
-.card p{color:var(--gray);font-size:.94rem;margin-bottom:16px;flex:1}
-.price{color:var(--earth-hi);font-weight:700;font-size:1.18rem;margin-bottom:4px;font-family:'Oswald',sans-serif;letter-spacing:.03em}
-.price-note{font-size:.7rem;color:#6f6455;letter-spacing:.06em;margin-bottom:20px;text-transform:uppercase}
-.card .btn{text-align:center}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.card{background:#fff;border:1px solid rgba(184,80,47,.18);border-radius:18px;padding:38px 34px;transition:.32s;display:flex;gap:22px;align-items:flex-start;position:relative;overflow:hidden}
+.card::after{content:'';position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--brick),var(--sun));opacity:0;transition:.32s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 45px rgba(184,80,47,.15)}
+.card:hover::after{opacity:1}
+.card .ico{flex-shrink:0;width:64px;height:64px;border-radius:50%;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:1.9rem}
+.card-body{flex:1}
+.card h3{font-size:1.3rem;margin-bottom:8px;color:var(--ink)}
+.card .d{color:var(--gray);font-size:.92rem;margin-bottom:14px}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.price{color:var(--brick);font-weight:800;font-size:1.2rem}
+.price-note{font-size:.7rem;color:#A89880;letter-spacing:.05em;text-transform:uppercase}
 /* HOW */
-.how{background:var(--dark)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.step{text-align:center;padding:10px}
-.step .num{font-family:'Oswald',sans-serif;font-size:3.4rem;color:transparent;-webkit-text-stroke:1.5px var(--earth);line-height:1;margin-bottom:12px}
-.step h3{font-size:1.12rem;margin-bottom:8px;font-family:'Inter',sans-serif;font-weight:700;text-transform:none;letter-spacing:0}
+.how{background:var(--sand)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.step{padding:36px 26px;text-align:center;position:relative;background:transparent;transition:.3s}
+.step+.step::before{content:'→';position:absolute;left:-12px;top:52px;font-size:1.6rem;color:var(--brick);opacity:.5}
+.step .num{width:72px;height:72px;margin:0 auto 16px;border-radius:50%;background:var(--brick);color:#fff;font-family:'Anton',sans-serif;font-size:1.7rem;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(184,80,47,.3)}
+.step h3{font-size:1.2rem;margin-bottom:8px;color:var(--ink)}
 .step p{color:var(--gray);font-size:.9rem}
 /* DIFF */
 .diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.diff{display:flex;gap:18px;background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:26px;transition:.3s}
-.diff:hover{border-color:var(--earth);transform:translateY(-4px)}
-.diff .di{font-size:2rem;flex-shrink:0}
-.diff h3{font-size:1.05rem;margin-bottom:6px;font-family:'Inter',sans-serif;font-weight:700;text-transform:none}
-.diff p{color:var(--gray);font-size:.9rem}
+.diff{background:var(--sand);border-radius:18px;padding:32px 30px;transition:.3s;border:1px solid transparent}
+.diff:hover{transform:translateY(-5px);border-color:rgba(184,80,47,.35);box-shadow:0 16px 40px rgba(184,80,47,.12)}
+.diff h3{font-size:1.25rem;margin-bottom:8px;color:var(--brick-dk)}
+.diff p{color:var(--gray);font-size:.92rem}
 /* TESTI */
-.testi{background:var(--dark)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.testi-card{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:32px;transition:.3s}
-.testi-card:hover{transform:translateY(-5px);border-color:var(--earth)}
-.stars{color:var(--earth-hi);letter-spacing:.25em;margin-bottom:14px;font-size:1.05rem}
-.testi-card p{color:#d9cebc;font-style:italic;margin-bottom:16px;font-size:.94rem}
-.testi-card .who{color:var(--gray);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
-.illus-note{text-align:center;color:#6f6455;font-size:.78rem;margin-top:26px;letter-spacing:.05em}
+.testi{background:var(--ink);color:var(--sand)}
+.testi .sec-head h2{color:var(--sand)}
+.testi .sec-head p{color:#C9B99C}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi-card{background:rgba(245,237,222,.06);border:1px solid rgba(232,169,61,.35);border-radius:18px;padding:32px;transition:.3s}
+.testi-card:hover{transform:translateY(-5px)}
+.stars{color:var(--sun);letter-spacing:.22em;margin-bottom:14px;font-size:1.05rem}
+.testi-card p{color:var(--sand);font-style:italic;margin-bottom:16px;font-size:.94rem}
+.testi-card .who{color:#A89880;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.illus-note{text-align:center;color:#8A7A64;font-size:.78rem;margin-top:26px}
 /* FAQ */
 .faq-list{max-width:760px;margin:0 auto}
-.faq-item{border-bottom:1px solid rgba(255,255,255,.1)}
-.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.04rem;font-weight:600;text-align:left;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Inter',sans-serif}
-.faq-q span{color:var(--earth);font-size:1.5rem;transition:.3s;flex-shrink:0}
+.faq-item{border-bottom:2px solid var(--sand-dk)}
+.faq-q{width:100%;background:none;border:none;color:var(--ink);font-size:1.04rem;font-weight:700;text-align:left;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Inter',sans-serif}
+.faq-q span{color:var(--brick);font-size:1.5rem;transition:.3s;flex-shrink:0}
 .faq-item.open .faq-q span{transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--gray);font-size:.95rem}
 .faq-a p{padding:0 0 24px}
 /* CTA BAND */
-.cta-band{background:linear-gradient(135deg,#2b1a0c,#120c06 65%);border-top:2px solid var(--earth);border-bottom:2px solid var(--earth);text-align:center;padding:104px 0;position:relative;overflow:hidden}
-.cta-band::before{content:'🛡️';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:11rem;opacity:.07}
-.cta-band .container{position:relative;z-index:2}
-.cta-band h2{font-size:clamp(2.3rem,6vw,4.2rem);margin-bottom:14px}
-.cta-band h2 em{font-style:normal;color:var(--earth-hi)}
-.cta-band p{color:#d9cebc;max-width:560px;margin:0 auto 34px;font-size:1.04rem}
+.cta-band{background:var(--brick);text-align:center;padding:100px 0;color:#fff;position:relative;overflow:hidden}
+.cta-band::before{content:'☀';position:absolute;right:6%;top:12%;font-size:9rem;opacity:.15}
+.cta-band h2{font-size:clamp(2.5rem,6.5vw,4.4rem);margin-bottom:14px}
+.cta-band h2 em{font-style:normal;color:var(--sand)}
+.cta-band p{max-width:560px;margin:0 auto 34px;font-size:1.04rem;color:#F8E3D4}
 .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-band .btn.ghost{border-color:#fff;color:#fff}
+.cta-band .btn.ghost:hover{background:#fff;color:var(--brick-dk)}
 /* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.contact-info h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:14px}
-.contact-info h2 em{font-style:normal;color:var(--earth-hi)}
+.contact-info h2{font-size:clamp(2.3rem,4.5vw,3.4rem);margin-bottom:14px;color:var(--ink)}
+.contact-info h2 em{font-style:normal;color:var(--brick)}
 .contact-info>p{color:var(--gray);margin-bottom:26px}
 .c-line{display:flex;align-items:center;gap:14px;margin-bottom:17px;font-size:1.04rem}
 .c-line .ico{font-size:1.4rem}
-.c-line a{color:#fff;font-weight:600;border-bottom:2px solid var(--earth)}
-form{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:36px}
-form h3{margin-bottom:20px;font-size:1.35rem}
+.c-line a{color:var(--ink);font-weight:700;border-bottom:2px solid var(--brick)}
+form{background:var(--sand);border-radius:18px;padding:36px}
+form h3{margin-bottom:20px;font-size:1.4rem;color:var(--ink)}
 .field{margin-bottom:16px}
 .field label{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:6px;font-weight:600}
-.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.12);border-radius:10px;color:#fff;padding:12px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--earth)}
+.field input,.field select,.field textarea{width:100%;background:#fff;border:1px solid rgba(184,80,47,.25);border-radius:12px;color:var(--ink);padding:12px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brick)}
 /* FOOTER */
-footer{background:#080604;border-top:1px solid rgba(255,255,255,.06);padding:52px 0 110px;text-align:center}
-footer .flogo{font-family:'Oswald',sans-serif;letter-spacing:.1em;font-size:1.25rem;margin-bottom:8px;text-transform:uppercase}
-footer .flogo b{color:var(--earth)}
-footer p{color:var(--gray);font-size:.9rem;margin-bottom:6px}
-footer .demo{margin-top:20px;font-size:.76rem;color:#5b5145;letter-spacing:.06em}
+footer{background:var(--ink);color:#C9B99C;padding:52px 0 110px;text-align:center}
+footer .flogo{font-family:'Anton',sans-serif;font-size:1.6rem;margin-bottom:8px;color:var(--sand);display:flex;align-items:center;justify-content:center;gap:12px}
+footer .flogo .mg{width:44px;height:44px;background:linear-gradient(135deg,var(--brick),var(--brick-dk));clip-path:polygon(50% 0,100% 38%,100% 100%,0 100%,0 38%);display:flex;align-items:flex-end;justify-content:center;color:#fff;font-size:1rem;padding-bottom:7px}
+footer .flogo .br{color:var(--sun)}
+footer p{color:#A89880;font-size:.9rem;margin-bottom:6px}
+footer .demo{margin-top:20px;font-size:.76rem;color:#6E5F4C;letter-spacing:.06em}
 /* FLOATS */
 .wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.4);transition:.3s}
 .wa-float:hover{transform:scale(1.1)}
-.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(13,11,9,.97);border-top:1px solid var(--line);backdrop-filter:blur(10px);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
-.sticky-bar a{flex:1;text-align:center;padding:13px 8px;border-radius:50px;font-weight:700;font-size:.9rem;letter-spacing:.05em;text-transform:uppercase}
-.sticky-bar .call{background:var(--earth);color:#171006}
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(255,253,248,.97);border-top:2px solid var(--brick);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.sticky-bar a{flex:1;text-align:center;padding:13px 8px;border-radius:60px;font-weight:800;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
+.sticky-bar .call{background:var(--brick);color:#fff}
 .sticky-bar .wab{background:var(--wa);color:#062b16}
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.3,1)}
 .reveal.visible{opacity:1;transform:none}
 @media(max-width:960px){
-  .steps,.testi-grid{grid-template-columns:1fr 1fr}
-  .svc-grid,.diff-grid,.contact-grid{grid-template-columns:1fr}
+  .svc-grid,.diff-grid,.testi-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;gap:10px}
+  .step+.step::before{display:none}
+  .contact-grid{grid-template-columns:1fr}
   .proof-grid{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
   .menu-toggle{display:block}
-  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(13,11,9,.98);flex-direction:column;padding:26px;gap:18px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;padding:26px;gap:18px;border-bottom:2px solid var(--brick)}
 }
 @media(max-width:640px){
   section{padding:70px 0}
-  .steps,.testi-grid{grid-template-columns:1fr}
+  .svc-grid,.diff-grid,.testi-grid,.steps{grid-template-columns:1fr}
   .sticky-bar{display:flex}
   .wa-float{display:none}
   footer{padding-bottom:130px}
@@ -175,7 +183,7 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#5b5145;letter-spacing:.06em
 
 <header id="siteHeader">
   <div class="container nav">
-    <a href="#" class="logo">Sellados <b>y Lavados</b><br>de Techos <b>y Más</b><small>AGUADILLA · PR</small></a>
+    <a href="#" class="logo"><span class="monogram">ST</span><span class="t">Sellados y Lavados<br>de Techos <span style="color:var(--brick)">y Más</span><small>AGUADILLA · PR</small></span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#como">Cómo funciona</a></li>
@@ -189,32 +197,33 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#5b5145;letter-spacing:.06em
 
 <section class="hero">
   <div class="container hero-inner">
-    <p class="eyebrow">Aguadilla y el área oeste</p>
-    <h1>Tu techo <em>sellado,</em> tu casa <em>protegida</em></h1>
-    <p class="sub">Sellado profesional, lavado a presión y reparación de filtraciones. Preparamos tu techo para aguantar el sol, la lluvia y la temporada de huracanes.</p>
-    <p class="warn">☀️ El sol de verano castiga los techos sin sellar — protégelo a tiempo</p>
+    <p class="eyebrow">Sellado · Lavado · Filtraciones — Aguadilla y el oeste</p>
+    <h1>Tu techo, <em>como nuevo</em>, sin goteras</h1>
+    <p class="sub">Sellado profesional con membrana de alta calidad, lavado a presión profundo y reparación de filtraciones. Inspección gratis y garantía por escrito.</p>
     <div class="hero-ctas">
-      <a class="btn wa" href="https://wa.me/19393440498?text=Hola%2C%20quiero%20una%20inspecci%C3%B3n%20gratis%20de%20mi%20techo" target="_blank" rel="noopener">📲 Inspección gratis por WhatsApp</a>
-      <a class="btn ghost" href="tel:+19393440498">📞 Llamar ahora</a>
+      <a class="btn" href="https://wa.me/19393440498?text=Hola%2C%20quiero%20una%20inspecci%C3%B3n%20gratis%20de%20mi%20techo" target="_blank" rel="noopener">📲 Inspección gratis por WhatsApp</a>
+      <a class="btn wa" href="tel:+19393440498">📞 Llamar ahora</a>
     </div>
     <p class="hero-phone"><a href="tel:+19393440498">(939) 344-0498</a></p>
     <p class="hero-note">Lun–Sáb 7am–6pm · Aguadilla y pueblos limítrofes</p>
-    <div class="trust">
-      <span><b>Inspección</b> gratis</span>
-      <span><b>Garantía</b> escrita</span>
-      <span><b>Membrana</b> de calidad</span>
+    <div class="hero-tags">
+      <span class="htag">Inspección gratis</span>
+      <span class="htag">Garantía escrita</span>
+      <span class="htag">Del oeste, para el oeste</span>
     </div>
   </div>
 </section>
 
-<div class="strip"><div>✦ SELLADO DE TECHOS &nbsp;&nbsp; ✦ LAVADO A PRESIÓN &nbsp;&nbsp; ✦ REPARACIÓN DE FILTRACIONES &nbsp;&nbsp; ✦ INSPECCIÓN GRATIS &nbsp;&nbsp; ✦ SELLADO DE TECHOS &nbsp;&nbsp; ✦ LAVADO A PRESIÓN &nbsp;&nbsp; ✦ REPARACIÓN DE FILTRACIONES &nbsp;&nbsp; ✦ INSPECCIÓN GRATIS &nbsp;&nbsp;</div></div>
+<div class="roofline"></div>
+<div class="strip"><div>⌂ SELLADO DE TECHO &nbsp;<em>☀</em>&nbsp; ⌂ LAVADO A PRESIÓN &nbsp;<em>☀</em>&nbsp; ⌂ REPARACIÓN DE FILTRACIONES &nbsp;<em>☀</em>&nbsp; ⌂ MANTENIMIENTO &nbsp;<em>☀</em>&nbsp; ⌂ SELLADO DE TECHO &nbsp;<em>☀</em>&nbsp; ⌂ LAVADO A PRESIÓN &nbsp;<em>☀</em>&nbsp; ⌂ REPARACIÓN DE FILTRACIONES &nbsp;<em>☀</em>&nbsp; ⌂ MANTENIMIENTO &nbsp;<em>☀</em>&nbsp;</div></div>
+<div class="roofline"></div>
 
 <div class="proof">
   <div class="container proof-grid">
-    <div class="proof-item reveal"><b>Gratis</b><span>Inspección y estimado</span></div>
+    <div class="proof-item reveal"><b>Gratis</b><span>Inspección del techo</span></div>
     <div class="proof-item reveal"><b>Escrita</b><span>Garantía del sellado</span></div>
-    <div class="proof-item reveal"><b>Oeste</b><span>Aguadilla y limítrofes</span></div>
-    <div class="proof-item reveal"><b>100%</b><span>Residencial y comercial</span></div>
+    <div class="proof-item reveal"><b>Oeste</b><span>Conocemos el clima</span></div>
+    <div class="proof-item reveal"><b>☀ −°</b><span>Menos calor adentro</span></div>
   </div>
 </div>
 
@@ -222,41 +231,53 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#5b5145;letter-spacing:.06em
   <div class="container">
     <div class="sec-head reveal">
       <p class="eyebrow">Servicios</p>
-      <h2>Blindamos tu techo <em>contra todo</em></h2>
-      <p>Del lavado a la membrana final: un solo equipo responsable de que tu techo quede impecable. Precios de referencia — el estimado final es gratis en sitio.</p>
+      <h2>Cuidamos tu techo <em>de principio a fin</em></h2>
+      <p>Del lavado a la membrana final: preparación correcta, materiales de calidad y garantía escrita. Precios de referencia.</p>
     </div>
     <div class="svc-grid">
       <div class="card reveal">
-        <div class="ico">🛡️</div>
-        <h3>Sellado de techo</h3>
-        <p>Membrana elastomérica de alta calidad aplicada sobre superficie preparada. Impermeabiliza y refleja el calor, bajando la temperatura interior.</p>
-        <p class="price">desde $650</p>
-        <p class="price-note">Precio de referencia · final según evaluación</p>
-        <a class="btn wa sm" href="https://wa.me/19393440498?text=Hola%2C%20me%20interesa%20el%20sellado%20de%20techo" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <div class="ico">🏠</div>
+        <div class="card-body">
+          <h3>Sellado de techo</h3>
+          <p class="d">Membrana elastomérica de alta calidad aplicada sobre superficie preparada. Protección contra filtraciones y calor por años.</p>
+          <div class="card-foot">
+            <div><p class="price">desde $650</p><p class="price-note">Referencia · final según evaluación</p></div>
+            <a class="btn sm" href="https://wa.me/19393440498?text=Hola%2C%20quiero%20cotizar%20un%20sellado%20de%20techo" target="_blank" rel="noopener">Cotizar</a>
+          </div>
+        </div>
       </div>
       <div class="card reveal">
         <div class="ico">💦</div>
-        <h3>Lavado a presión</h3>
-        <p>Lavado profundo de techo, marquesinas, aceras y paredes. Quitamos hongo, verdín y suciedad acumulada de años.</p>
-        <p class="price">desde $180</p>
-        <p class="price-note">Precio de referencia · final según evaluación</p>
-        <a class="btn wa sm" href="https://wa.me/19393440498?text=Hola%2C%20me%20interesa%20el%20lavado%20a%20presi%C3%B3n" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <div class="card-body">
+          <h3>Lavado a presión</h3>
+          <p class="d">Lavado profundo de techo, marquesinas, aceras y paredes. Quitamos hongo, moho y sucio acumulado.</p>
+          <div class="card-foot">
+            <div><p class="price">desde $180</p><p class="price-note">Referencia · final según evaluación</p></div>
+            <a class="btn sm" href="https://wa.me/19393440498?text=Hola%2C%20quiero%20un%20lavado%20a%20presi%C3%B3n" target="_blank" rel="noopener">Cotizar</a>
+          </div>
+        </div>
       </div>
       <div class="card reveal">
-        <div class="ico">🔧</div>
-        <h3>Reparación de filtraciones</h3>
-        <p>Localizamos el punto exacto de la filtración y lo reparamos con materiales compatibles con tu techo. Adiós a los cubos cuando llueve.</p>
-        <p class="price">desde $250</p>
-        <p class="price-note">Precio de referencia · final según evaluación</p>
-        <a class="btn wa sm" href="https://wa.me/19393440498?text=Hola%2C%20tengo%20una%20filtraci%C3%B3n%20en%20el%20techo" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <div class="ico">🩹</div>
+        <div class="card-body">
+          <h3>Reparación de filtraciones</h3>
+          <p class="d">Localizamos el punto exacto de la filtración y lo reparamos con materiales adecuados. Adiós a las goteras.</p>
+          <div class="card-foot">
+            <div><p class="price">desde $250</p><p class="price-note">Referencia · final según evaluación</p></div>
+            <a class="btn sm" href="https://wa.me/19393440498?text=Hola%2C%20tengo%20una%20filtraci%C3%B3n%20en%20el%20techo" target="_blank" rel="noopener">Cotizar</a>
+          </div>
+        </div>
       </div>
       <div class="card reveal">
-        <div class="ico">🔄</div>
-        <h3>Mantenimiento y recubrimiento</h3>
-        <p>Revisión periódica y recubrimiento de mantenimiento para techos ya sellados. Alarga la vida de tu inversión por años.</p>
-        <p class="price">desde $450</p>
-        <p class="price-note">Precio de referencia · final según evaluación</p>
-        <a class="btn wa sm" href="https://wa.me/19393440498?text=Hola%2C%20me%20interesa%20el%20mantenimiento%20de%20techo" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <div class="ico">🛡️</div>
+        <div class="card-body">
+          <h3>Mantenimiento y recubrimiento</h3>
+          <p class="d">Revisión periódica y recubrimiento de mantenimiento para techos ya sellados. Alarga la vida de tu inversión.</p>
+          <div class="card-foot">
+            <div><p class="price">desde $450</p><p class="price-note">Referencia · final según evaluación</p></div>
+            <a class="btn sm" href="https://wa.me/19393440498?text=Hola%2C%20quiero%20mantenimiento%20para%20mi%20techo" target="_blank" rel="noopener">Cotizar</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -266,45 +287,31 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#5b5145;letter-spacing:.06em
   <div class="container">
     <div class="sec-head reveal">
       <p class="eyebrow">Cómo funciona</p>
-      <h2>Un sellado que <em>sí dura</em></h2>
-      <p>El secreto no es solo la membrana: es la preparación. Así trabajamos cada techo.</p>
+      <h2>Del techo sucio al <em>techo sellado</em></h2>
+      <p>Un proceso simple y honesto: si tu techo no necesita sellado, te lo decimos.</p>
     </div>
     <div class="steps">
-      <div class="step reveal">
-        <div class="num">01</div>
-        <h3>Inspección gratis</h3>
-        <p>Subimos, revisamos grietas, desagües y puntos débiles. Te decimos la verdad, sin venta de miedo.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">02</div>
-        <h3>Lavado y preparación</h3>
-        <p>Lavado a presión profundo y reparación de grietas. La membrana solo se adhiere bien sobre superficie limpia.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">03</div>
-        <h3>Sellado profesional</h3>
-        <p>Aplicamos la membrana en las manos correctas, con refuerzo en desagües y uniones críticas.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">04</div>
-        <h3>Garantía escrita</h3>
-        <p>Te entregamos la garantía por escrito y te explicamos el mantenimiento para que dure años.</p>
-      </div>
+      <div class="step reveal"><div class="num">1</div><h3>Inspección gratis</h3><p>Subimos, revisamos grietas, desagües y puntos débiles. Te decimos la verdad.</p></div>
+      <div class="step reveal"><div class="num">2</div><h3>Lavado y preparación</h3><p>Lavado a presión profundo y reparación de grietas. La membrana solo se aplica sobre base sana.</p></div>
+      <div class="step reveal"><div class="num">3</div><h3>Sellado profesional</h3><p>Aplicamos la membrana en las manos correctas, con refuerzo en desagües y bordes.</p></div>
+      <div class="step reveal"><div class="num">4</div><h3>Garantía escrita</h3><p>Te entregamos la garantía por escrito y te explicamos el mantenimiento.</p></div>
     </div>
   </div>
 </section>
+
+<div class="roofline"></div>
 
 <section id="diferenciales">
   <div class="container">
     <div class="sec-head reveal">
       <p class="eyebrow">Diferenciales</p>
-      <h2>Por qué <em>nosotros</em></h2>
+      <h2>Por qué nos llaman <em>del oeste</em></h2>
     </div>
     <div class="diff-grid">
-      <div class="diff reveal"><div class="di">🔍</div><div><h3>Inspección honesta y gratis</h3><p>Si tu techo no necesita sellado todavía, te lo decimos. Preferimos un cliente que confíe que una venta forzada.</p></div></div>
-      <div class="diff reveal"><div class="di">🧪</div><div><h3>Preparación correcta</h3><p>No pintamos sobre sucio: lavamos, reparamos grietas y preparamos la superficie para que la membrana agarre de verdad.</p></div></div>
-      <div class="diff reveal"><div class="di">📜</div><div><h3>Garantía por escrito</h3><p>Nuestro sellado incluye garantía escrita. Si filtra en un punto que sellamos, volvemos.</p></div></div>
-      <div class="diff reveal"><div class="di">🌊</div><div><h3>Del oeste, para el oeste</h3><p>Conocemos el clima de Aguadilla y el área oeste: salitre, sol fuerte y lluvias intensas. Sellamos para eso.</p></div></div>
+      <div class="diff reveal"><h3>Inspección honesta y gratis</h3><p>Si tu techo no necesita sellado todavía, te lo decimos. Preferimos un cliente informado que una venta forzada.</p></div>
+      <div class="diff reveal"><h3>Preparación correcta</h3><p>No pintamos sobre sucio: lavamos, reparamos grietas y preparamos la superficie como debe ser.</p></div>
+      <div class="diff reveal"><h3>Garantía por escrito</h3><p>Nuestro sellado incluye garantía escrita. Si filtra en un punto que sellamos, volvemos y lo atendemos.</p></div>
+      <div class="diff reveal"><h3>Del oeste, para el oeste</h3><p>Conocemos el clima de Aguadilla y el área oeste: salitre, sol fuerte y lluvias. Trabajamos con eso en mente.</p></div>
     </div>
   </div>
 </section>
@@ -313,23 +320,23 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#5b5145;letter-spacing:.06em
   <div class="container">
     <div class="sec-head reveal">
       <p class="eyebrow">Opiniones</p>
-      <h2>Techos que <em>ya no filtran</em></h2>
+      <h2>Techos que ya <em>no filtran</em></h2>
     </div>
     <div class="testi-grid">
       <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
-        <p>"Llevaba dos inviernos poniendo cubos en el cuarto. Desde que sellaron, ni una gota. Y la casa se siente más fresca."</p>
+        <p>"Después de cada aguacero teníamos goteras en el cuarto. Desde el sellado, ni una gota. Y la casa se siente más fresca."</p>
         <p class="who">Cliente · Aguadilla</p>
       </div>
       <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
-        <p>"Vinieron, inspeccionaron gratis y me dieron precio claro. El techo quedó blanco y limpio, parece nuevo."</p>
-        <p class="who">Cliente · Aguada</p>
+        <p>"Vinieron, inspeccionaron gratis y me dijeron la verdad: mi techo solo necesitaba lavado y dos reparaciones. Honestos."</p>
+        <p class="who">Cliente · Moca</p>
       </div>
       <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
-        <p>"Puntuales y dejaron todo recogido. El lavado a presión le quitó años de hongo al techo y a la marquesina."</p>
-        <p class="who">Cliente · Moca</p>
+        <p>"El lavado a presión dejó la marquesina como nueva y el sellado quedó parejito. Trabajo limpio de principio a fin."</p>
+        <p class="who">Cliente · Isabela</p>
       </div>
     </div>
     <p class="illus-note">Testimonios con fines ilustrativos.</p>
@@ -343,37 +350,21 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#5b5145;letter-spacing:.06em
       <h2>Lo que nos <em>preguntan</em></h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Cuánto dura un sellado de techo? <span>+</span></button>
-        <div class="faq-a"><p>Con buena preparación y mantenimiento, un sellado profesional dura varios años. Te explicamos el cuidado necesario y ofrecemos recubrimiento de mantenimiento.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿El sellado ayuda con el calor? <span>+</span></button>
-        <div class="faq-a"><p>Sí. La membrana clara refleja gran parte del sol y baja notablemente la temperatura del techo, lo que se siente dentro de la casa.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Cómo sé si mi techo necesita sellado o solo lavado? <span>+</span></button>
-        <div class="faq-a"><p>En la inspección gratis evaluamos grietas, desgaste y filtraciones, y te recomendamos lo justo: a veces un buen lavado y reparaciones puntuales bastan.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Trabajan techos comerciales? <span>+</span></button>
-        <div class="faq-a"><p>Sí, sellamos y lavamos techos de casas, apartamentos, locales y naves. El estimado para comerciales también es gratis.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿En qué pueblos trabajan? <span>+</span></button>
-        <div class="faq-a"><p>Estamos en Aguadilla y cubrimos el área oeste y pueblos limítrofes. Escríbenos por WhatsApp y te confirmamos.</p></div>
-      </div>
+      <div class="faq-item reveal"><button class="faq-q">¿Cuánto dura un sellado de techo? <span>+</span></button><div class="faq-a"><p>Con buena preparación y mantenimiento, un sellado profesional dura varios años. Te explicamos el cuidado necesario para que rinda al máximo.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿El sellado ayuda con el calor? <span>+</span></button><div class="faq-a"><p>Sí. La membrana clara refleja gran parte del sol y baja notablemente la temperatura del techo, lo que se siente adentro de la casa.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿Cómo sé si mi techo necesita sellado o solo lavado? <span>+</span></button><div class="faq-a"><p>En la inspección gratis evaluamos grietas, desgaste y filtraciones, y te recomendamos lo justo: a veces un buen lavado y reparaciones puntuales bastan.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿Trabajan techos comerciales? <span>+</span></button><div class="faq-a"><p>Sí, sellamos y lavamos techos de casas, apartamentos, locales y naves. El estimado para comerciales también es gratis.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿En qué pueblos trabajan? <span>+</span></button><div class="faq-a"><p>Estamos en Aguadilla y cubrimos el área oeste y pueblos limítrofes. Escríbenos por WhatsApp y te confirmamos.</p></div></div>
     </div>
   </div>
 </section>
 
 <section class="cta-band">
   <div class="container">
-    <p class="eyebrow reveal">Inspección gratis · Garantía escrita</p>
-    <h2 class="reveal">Que la próxima lluvia <em>no te preocupe</em></h2>
-    <p class="reveal">Agenda tu inspección gratis hoy. Te decimos el estado real de tu techo y cuánto costaría dejarlo protegido.</p>
+    <h2 class="reveal">¿Tu techo filtra <em>o se ve cansado?</em></h2>
+    <p class="reveal">La inspección es gratis y sin compromiso. Escríbenos hoy y subimos a revisarlo.</p>
     <div class="cta-btns reveal">
-      <a class="btn wa" href="https://wa.me/19393440498?text=Hola%2C%20quiero%20agendar%20mi%20inspecci%C3%B3n%20gratis" target="_blank" rel="noopener">📲 Agendar por WhatsApp</a>
+      <a class="btn wa" href="https://wa.me/19393440498?text=Hola%2C%20quiero%20una%20inspecci%C3%B3n%20gratis%20de%20mi%20techo" target="_blank" rel="noopener">📲 WhatsApp directo</a>
       <a class="btn ghost" href="tel:+19393440498">📞 (939) 344-0498</a>
     </div>
   </div>
@@ -382,36 +373,20 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#5b5145;letter-spacing:.06em
 <section id="contacto">
   <div class="container contact-grid">
     <div class="contact-info reveal">
-      <h2>Protege tu techo <em>hoy</em></h2>
-      <p>Escríbenos por WhatsApp con tu pueblo y coordinamos la inspección gratis. Sin compromiso.</p>
+      <h2>Subimos a <em>revisar tu techo</em></h2>
+      <p>Escríbenos por WhatsApp con tu pueblo y coordinamos la inspección gratis.</p>
       <div class="c-line"><span class="ico">📞</span><a href="tel:+19393440498">(939) 344-0498</a></div>
       <div class="c-line"><span class="ico">💬</span><a href="https://wa.me/19393440498" target="_blank" rel="noopener">WhatsApp directo</a></div>
-      <div class="c-line"><span class="ico">📍</span><span>Aguadilla, Puerto Rico · Área oeste</span></div>
-      <div class="c-line"><span class="ico">🕐</span><span>Lun–Sáb · 7:00am – 6:00pm</span></div>
+      <div class="c-line"><span class="ico">📍</span><span>Aguadilla · área oeste y pueblos limítrofes</span></div>
+      <div class="c-line"><span class="ico">🕐</span><span>Lun–Sáb 7:00am – 6:00pm</span></div>
+      <div class="c-line"><span class="ico">⌂</span><span>Sellado · Lavado · Filtraciones</span></div>
     </div>
     <form id="bookForm" class="reveal">
       <h3>Solicita tu inspección gratis</h3>
-      <div class="field">
-        <label for="fNombre">Nombre</label>
-        <input id="fNombre" type="text" placeholder="Tu nombre" required>
-      </div>
-      <div class="field">
-        <label for="fTel">Teléfono</label>
-        <input id="fTel" type="tel" placeholder="(939) 000-0000" required>
-      </div>
-      <div class="field">
-        <label for="fSvc">Servicio</label>
-        <select id="fSvc">
-          <option>Sellado de techo</option>
-          <option>Lavado a presión</option>
-          <option>Reparación de filtración</option>
-          <option>Mantenimiento / recubrimiento</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="fMsg">Pueblo / detalles</label>
-        <textarea id="fMsg" rows="3" placeholder="¿Dónde queda la propiedad? ¿Filtra actualmente?"></textarea>
-      </div>
+      <div class="field"><label for="fNombre">Nombre</label><input id="fNombre" type="text" placeholder="Tu nombre" required></div>
+      <div class="field"><label for="fTel">Teléfono</label><input id="fTel" type="tel" placeholder="(939) 000-0000" required></div>
+      <div class="field"><label for="fSvc">Servicio</label><select id="fSvc"><option>Inspección gratis</option><option>Sellado de techo</option><option>Lavado a presión</option><option>Reparación de filtración</option><option>Mantenimiento de techo</option></select></div>
+      <div class="field"><label for="fMsg">Cuéntanos</label><textarea id="fMsg" rows="3" placeholder="¿Qué le pasa a tu techo?"></textarea></div>
       <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
     </form>
   </div>
@@ -419,9 +394,9 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#5b5145;letter-spacing:.06em
 
 <footer>
   <div class="container">
-    <p class="flogo">Sellados <b>y Lavados</b> de Techos <b>y Más</b></p>
-    <p>Sellado y lavado de techos · Aguadilla, Puerto Rico</p>
-    <p><a href="tel:+19393440498" style="color:var(--gray)">(939) 344-0498</a></p>
+    <p class="flogo"><span class="mg">ST</span>Sellados y Lavados <span class="br">de Techos y Más</span></p>
+    <p>Sellado · Lavado a presión · Filtraciones · Aguadilla, PR</p>
+    <p><a href="tel:+19393440498" style="color:#C9B99C">(939) 344-0498</a></p>
     <p class="demo">Demostración creada por ManuPro</p>
   </div>
 </footer>
@@ -441,8 +416,8 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   const btn=item.querySelector('.faq-q');
   btn.addEventListener('click',()=>{
     const wasOpen=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+'});
-    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='×'}
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px'}
   });
 });
 document.getElementById('bookForm').addEventListener('submit',e=>{

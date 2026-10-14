@@ -7,171 +7,181 @@
 <meta name="description" content="Lemuel Electric Services — electricistas en el área metropolitana de Puerto Rico. Instalaciones, reparaciones y emergencias eléctricas 24/7. Cotiza por WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --acc:#FFD400; --acc-ink:#0a0a0a; --acc-dim:rgba(255,212,0,.14);
-  --bg0:#0b0b0d; --bg1:#101014; --card:#15151a; --line:rgba(255,255,255,.08);
-  --txt:#f4f4f6; --mut:#a3a3ad; --wa:#25D366;
-}
+:root{--o:#FF7A00;--od:#E56A00;--navy:#0A1428;--navy2:#0E1B34;--card:#121F3A;--line:rgba(255,255,255,.09);--txt:#F2F5FB;--mut:#9AA7C2;--wa:#25D366}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg0);color:var(--txt);line-height:1.7;overflow-x:hidden}
-h1,h2,h3,h4{font-family:'Oswald',sans-serif;line-height:1.05;text-transform:uppercase;letter-spacing:.01em}
+body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--txt);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Oswald',sans-serif;line-height:1.06;letter-spacing:.015em;text-transform:uppercase}
 a{text-decoration:none;color:inherit}
-.container{width:min(1160px,92%);margin:0 auto}
+.container{width:min(1180px,92%);margin:0 auto}
 section{padding:100px 0;position:relative}
+svg{width:1.3em;height:1.3em;flex-shrink:0}
 /* HEADER */
-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:rgba(10,10,12,.82);backdrop-filter:blur(14px);border-bottom:1px solid transparent}
-header.solid{border-bottom:1px solid var(--line);box-shadow:0 10px 40px rgba(0,0,0,.35)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-.logo{font-family:'Oswald',sans-serif;font-size:1.45rem;font-weight:700;letter-spacing:.1em;color:#fff;text-transform:uppercase;line-height:1}
-.logo span{color:var(--acc)}
-.logo small{display:block;font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:.42em;color:var(--mut);font-weight:400;margin-top:4px}
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:rgba(10,20,40,.8);backdrop-filter:blur(14px);border-bottom:1px solid transparent}
+header.solid{border-bottom:1px solid var(--line);box-shadow:0 12px 40px rgba(0,0,0,.45)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .mono svg{width:52px;height:52px}
+.logo .lt{font-family:'Oswald',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:.08em;line-height:1.1;color:#fff}
+.logo .lt span{color:var(--o)}
+.logo .lt small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.56rem;letter-spacing:.32em;color:var(--mut)}
 .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
-.nav-links a{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#d5d5db;transition:.25s;font-weight:500}
-.nav-links a:hover{color:var(--acc)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--acc);color:var(--acc-ink);padding:15px 34px;border-radius:60px;font-size:.88rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;transition:.3s;border:2px solid var(--acc);cursor:pointer;font-family:'Oswald',sans-serif}
-.btn:hover{background:transparent;color:var(--acc);transform:translateY(-3px);box-shadow:0 12px 32px var(--acc-dim)}
-.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
-.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 12px 32px rgba(37,211,102,.25)}
+.nav-links a{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#D5DDF0;font-weight:600;transition:.25s}
+.nav-links a:hover{color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--o);color:#fff;padding:16px 34px;border-radius:999px;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;transition:.3s;border:2px solid var(--o);cursor:pointer;font-family:'Inter',sans-serif}
+.btn:hover{background:transparent;color:var(--o);transform:translateY(-3px);box-shadow:0 14px 34px rgba(255,122,0,.3)}
+.btn svg{width:1.25em;height:1.25em}
 .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
-.btn.ghost:hover{border-color:var(--acc);color:var(--acc);box-shadow:none}
-.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:#fff}
+.btn.ghost:hover{border-color:var(--o);color:var(--o);box-shadow:none}
+.btn.sm{padding:12px 22px;font-size:.74rem}
+.btn.dark{background:#0A1428;border-color:#0A1428;color:#fff}
+.btn.dark:hover{background:transparent;color:#0A1428}
+.btn.dark-ghost{background:transparent;border-color:#0A1428;color:#0A1428}
+.btn.dark-ghost:hover{background:#0A1428;color:#fff}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;color:#fff}
+.menu-toggle svg{width:1.9em;height:1.9em}
 /* HERO */
-.hero{min-height:100svh;display:flex;align-items:center;position:relative;color:#fff;background:radial-gradient(ellipse 70% 50% at 50% 0%,#2a2200 0%,#0b0b0d 70%),#0b0b0d}
-.hero::before{content:'⚡';position:absolute;right:4%;bottom:8%;font-size:clamp(7rem,20vw,15rem);opacity:.07;filter:grayscale(1);pointer-events:none}
-.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 45% at 50% 0%,rgba(255,212,0,.10) 0%,transparent 70%);pointer-events:none}
-.hero-inner{position:relative;z-index:2;padding:140px 0 100px;width:100%;text-align:center}
-.eyebrow{letter-spacing:.45em;text-transform:uppercase;font-size:.78rem;color:var(--acc);margin-bottom:22px;font-weight:600}
-.hero h1{font-size:clamp(3rem,9vw,6.6rem);font-weight:700;margin-bottom:22px;color:#fff}
-.hero h1 em{font-style:normal;color:var(--acc)}
-.hero p.sub{font-size:1.2rem;font-weight:300;max-width:660px;margin:0 auto 12px;color:#c9c9d1}
-.badge24{display:inline-block;margin-bottom:30px;padding:10px 26px;border:1.5px solid var(--acc);border-radius:60px;color:var(--acc);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.82rem;background:var(--acc-dim)}
-.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:38px}
-.hero-phone{font-size:1.5rem;font-weight:700;letter-spacing:.04em}
-.hero-phone a{color:#fff;border-bottom:3px solid var(--acc);padding-bottom:2px}
-.trust{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;font-size:.95rem;color:var(--mut)}
-.trust b{color:#fff}
-/* PROOF STRIP */
-.proof{background:var(--acc);color:#0a0a0a;padding:0}
-.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-.proof-cell{padding:30px 20px;text-align:center;border-left:1px solid rgba(0,0,0,.12)}
-.proof-cell:first-child{border-left:none}
-.proof-cell .v{font-family:'Oswald',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;letter-spacing:.03em}
-.proof-cell .k{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.85}
-/* MARQUEE */
-.strip{background:var(--bg1);color:var(--acc);overflow:hidden;padding:14px 0;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.28em;font-size:.9rem;text-transform:uppercase;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.strip div{white-space:nowrap;animation:slide 24s linear infinite;display:inline-block}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:150px 0 0;overflow:hidden;background:radial-gradient(ellipse 65% 50% at 50% 30%,rgba(255,122,0,.14),transparent 65%),var(--navy)}
+.circuit{position:absolute;inset:0;pointer-events:none}
+.circuit svg{width:100%;height:100%}
+.hero-inner{position:relative;z-index:2;text-align:center;padding-bottom:20px}
+.medal-wrap{position:relative;width:230px;height:230px;margin:0 auto 30px}
+.orbit{position:absolute;inset:-18px;border:2px dashed rgba(255,122,0,.5);border-radius:50%;animation:spin 24s linear infinite}
+.orbit::before{content:'';position:absolute;top:-7px;left:50%;width:12px;height:12px;background:var(--o);border-radius:50%;box-shadow:0 0 18px var(--o)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.medal{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,rgba(255,122,0,.16),transparent 70%)}
+.medal .mono svg{width:170px;height:170px;filter:drop-shadow(0 0 26px rgba(255,122,0,.4))}
+.eyebrow{letter-spacing:.42em;text-transform:uppercase;font-size:.76rem;color:var(--o);margin-bottom:18px;font-weight:700}
+.hero h1{font-size:clamp(2.8rem,7vw,5.4rem);color:#fff;margin-bottom:20px;font-weight:700}
+.hero h1 em{font-style:normal;color:var(--o)}
+.hero .sub{font-size:1.12rem;font-weight:300;max-width:640px;margin:0 auto 24px;color:#C3CEE6}
+.towns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
+.towns span{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#D5DDF0;border:1px solid rgba(255,122,0,.5);border-radius:999px;padding:8px 18px;background:rgba(255,122,0,.08)}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.hero-phone{font-size:1.55rem;font-weight:700;margin-bottom:22px}
+.hero-phone a{color:#fff;border-bottom:3px solid var(--o)}
+.badge24{display:inline-flex;align-items:center;gap:10px;padding:11px 26px;border-radius:999px;background:rgba(255,122,0,.14);border:1.5px solid var(--o);color:var(--o);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+.marquee{margin-top:60px;background:var(--o);color:#0A1428;overflow:hidden;padding:13px 0;position:relative;z-index:2}
+.mq-in{display:flex;white-space:nowrap;animation:slide 20s linear infinite;width:max-content}
+.mq-in span{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.26em;font-size:.92rem;text-transform:uppercase;padding-right:12px}
 @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* SECTION HEADS */
-.sec-head{text-align:center;max-width:700px;margin:0 auto 60px}
-.sec-head h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:16px;color:#fff;font-weight:700}
-.sec-head h2 em{font-style:normal;color:var(--acc)}
-.sec-head p{color:var(--mut);font-size:1.05rem}
-.giant{position:absolute;top:40px;right:4%;font-family:'Oswald',sans-serif;font-size:clamp(6rem,16vw,13rem);font-weight:700;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.07);line-height:1;pointer-events:none;user-select:none}
-/* SERVICES */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:42px 34px;transition:.35s;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--acc);opacity:0;transition:.35s}
-.card:hover{transform:translateY(-10px);border-color:var(--acc-dim);box-shadow:0 24px 60px rgba(0,0,0,.45)}
-.card:hover::before{opacity:1}
-.card .ico{font-size:2.7rem;margin-bottom:18px}
-.card h3{font-size:1.5rem;margin-bottom:10px;color:#fff}
-.card p{color:var(--mut);font-size:.96rem;margin-bottom:18px;flex:1}
-.price{color:var(--acc);font-weight:700;font-size:1.25rem;letter-spacing:.04em;margin-bottom:20px;font-family:'Oswald',sans-serif}
-.price small{font-family:'Inter',sans-serif;font-size:.72rem;color:var(--mut);font-weight:400;letter-spacing:.06em}
-.card .btn{padding:12px 22px;font-size:.78rem;text-align:center}
+/* PROOF */
+.proof{background:#fff;color:#0A1428;padding:0}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.proof-cell{padding:30px 16px;text-align:center;border-left:1px solid #E4E9F4}
+.proof-cell:first-child{border-left:none}
+.proof-cell .v{font-family:'Oswald',sans-serif;font-size:clamp(1.6rem,3vw,2.3rem);font-weight:700;color:var(--od)}
+.proof-cell .k{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#5B6B8C}
+/* SECTIONS */
+.sec-head{text-align:center;max-width:700px;margin:0 auto 56px}
+.sec-head h2{font-size:clamp(2.2rem,4.8vw,3.3rem);margin-bottom:14px;color:#fff;font-weight:700}
+.sec-head h2 em{font-style:normal;color:var(--o)}
+.sec-head p{color:var(--mut)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:40px 32px;transition:.35s;display:flex;flex-direction:column;text-align:center;align-items:center}
+.card:hover{transform:translateY(-10px);border-color:rgba(255,122,0,.55);box-shadow:0 26px 60px rgba(0,0,0,.5)}
+.card .ico{width:76px;height:76px;border-radius:50%;background:rgba(255,122,0,.12);border:2px solid var(--o);color:var(--o);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.card .ico svg{width:1.9em;height:1.9em}
+.card h3{font-size:1.3rem;margin-bottom:10px;color:#fff}
+.card p{color:var(--mut);font-size:.94rem;margin-bottom:14px;flex:1}
+.price{color:var(--o);font-weight:800;font-size:1.3rem;margin-bottom:20px;font-family:'Oswald',sans-serif;letter-spacing:.04em}
+.price small{font-family:'Inter',sans-serif;font-size:.72rem;color:var(--mut);font-weight:500}
 .note{text-align:center;color:var(--mut);font-size:.85rem;margin-top:26px}
 /* HOW */
-.how{background:var(--bg1)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-.step{text-align:center;padding:24px 16px}
-.step .num{width:72px;height:72px;border-radius:50%;background:var(--acc-dim);border:2px solid var(--acc);color:var(--acc);font-family:'Oswald',sans-serif;font-weight:700;font-size:1.7rem;display:flex;align-items:center;justify-content:center;margin:0 auto 22px}
-.step h3{color:#fff;font-size:1.32rem;margin-bottom:10px}
-.step p{color:var(--mut);font-size:.95rem}
-/* DIFF */
-.diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.diff{display:flex;gap:20px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;transition:.3s}
-.diff:hover{border-color:var(--acc-dim);transform:translateY(-4px)}
-.diff .ico{font-size:2rem;flex-shrink:0}
-.diff h3{font-size:1.2rem;margin-bottom:6px;color:#fff}
-.diff p{color:var(--mut);font-size:.94rem}
+.how{background:var(--navy2)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:36px 28px;text-align:center;position:relative;transition:.3s}
+.step:hover{border-color:var(--o);transform:translateY(-6px)}
+.step .snum{width:64px;height:64px;border-radius:50%;background:var(--o);color:#fff;font-family:'Oswald',sans-serif;font-weight:700;font-size:1.6rem;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 0 24px rgba(255,122,0,.5)}
+.step h3{font-size:1.2rem;margin-bottom:8px;color:#fff}
+.step p{color:var(--mut);font-size:.92rem}
+.step .sline{display:none}
 /* BANNER */
-.banner{background:linear-gradient(135deg,var(--acc-dim),transparent 60%),var(--card);border:1px solid var(--acc-dim);border-radius:26px;padding:64px 8%;display:flex;align-items:center;gap:44px;flex-wrap:wrap;justify-content:space-between}
-.banner h2{color:#fff;font-size:clamp(1.8rem,3.8vw,2.6rem);margin-bottom:14px;font-weight:700}
-.banner h2 em{font-style:normal;color:var(--acc)}
-.banner p{color:var(--mut);max-width:540px}
-/* TESTIMONIALS */
-.testi{background:var(--bg1)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.testi-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px;transition:.3s}
-.testi-card:hover{transform:translateY(-6px)}
-.testi-card .stars{color:var(--acc);letter-spacing:.22em;margin-bottom:14px;font-size:1.05rem}
-.testi-card p{color:#d5d5db;font-style:italic;margin-bottom:18px;font-size:.97rem}
-.testi-card .who{color:var(--mut);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
-.disc{text-align:center;color:#6a6a74;font-size:.78rem;margin-top:24px;letter-spacing:.04em}
+.banner{background:linear-gradient(120deg,rgba(255,122,0,.16),transparent 60%),var(--card);border:1px solid rgba(255,122,0,.4);border-radius:28px;padding:60px 7%;display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:space-between}
+.banner h2{color:#fff;font-size:clamp(1.8rem,3.6vw,2.5rem);margin-bottom:12px;font-weight:700}
+.banner h2 em{font-style:normal;color:var(--o)}
+.banner p{color:var(--mut);max-width:520px}
+/* DIFF */
+.diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.diff{display:flex;gap:20px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;transition:.3s}
+.diff:hover{border-color:rgba(255,122,0,.5);transform:translateY(-4px)}
+.diff .d-ico{width:56px;height:56px;flex-shrink:0;border-radius:16px;background:rgba(255,122,0,.12);color:var(--o);display:flex;align-items:center;justify-content:center}
+.diff .d-ico svg{width:1.7em;height:1.7em}
+.diff h3{font-size:1.16rem;margin-bottom:6px;color:#fff}
+.diff p{color:var(--mut);font-size:.93rem}
+/* TESTI */
+.testi{background:var(--navy2)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testi-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px;transition:.3s}
+.testi-card:hover{transform:translateY(-6px);border-color:rgba(255,122,0,.45)}
+.testi-card .stars{color:var(--o);letter-spacing:.22em;margin-bottom:12px}
+.testi-card p{color:#DCE3F2;font-style:italic;margin-bottom:16px;font-size:.96rem}
+.testi-card .who{color:var(--mut);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-style:normal;font-weight:700}
+.disc{text-align:center;color:#5E6C8C;font-size:.78rem;margin-top:24px}
 /* FAQ */
 .faq-list{max-width:780px;margin:0 auto}
-.faq-item{border-bottom:1px solid var(--line)}
-.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.1rem;font-weight:600;text-align:left;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Oswald',sans-serif;letter-spacing:.03em}
-.faq-q span{color:var(--acc);font-size:1.5rem;transition:.3s;flex-shrink:0}
-.faq-item.open .faq-q span{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--mut);font-size:.96rem}
-.faq-a p{padding:0 0 24px}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;transition:.3s;overflow:hidden}
+.faq-item.open{border-color:var(--o)}
+.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.04rem;font-weight:700;text-align:left;padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Inter',sans-serif}
+.faq-q .pm{color:var(--o);font-size:1.6rem;transition:.3s;flex-shrink:0;font-weight:300}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--mut);font-size:.95rem}
+.faq-a p{padding:0 26px 24px}
 /* CTA BAND */
-.cta-band{background:var(--acc);color:#0a0a0a;text-align:center;border-radius:0}
-.cta-band h2{font-size:clamp(2.4rem,6vw,4.2rem);margin-bottom:16px;font-weight:700}
-.cta-band p{font-size:1.1rem;margin-bottom:36px;font-weight:500;opacity:.9;max-width:640px;margin-left:auto;margin-right:auto}
-.cta-band .btn{background:transparent;border-color:#0a0a0a;color:#0a0a0a}
-.cta-band .btn:hover{background:#0a0a0a;color:var(--acc);box-shadow:none}
-.cta-band .hero-phone a{color:#0a0a0a;border-color:#0a0a0a}
+.cta-band{background:linear-gradient(120deg,var(--o),#FF9A2E);color:#0A1428;text-align:center}
+.cta-band h2{font-size:clamp(2.3rem,5.4vw,3.8rem);margin-bottom:14px;font-weight:700}
+.cta-band h2 em{font-style:normal}
+.cta-band p{font-size:1.08rem;margin-bottom:32px;font-weight:500;max-width:640px;margin-left:auto;margin-right:auto}
+.cta-band .hero-ctas{justify-content:center;margin-bottom:0}
 /* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.contact-info h2{color:#fff;font-size:clamp(2.1rem,4vw,3rem);margin-bottom:18px;font-weight:700}
-.contact-info h2 em{font-style:normal;color:var(--acc)}
-.contact-info p{color:var(--mut);margin-bottom:28px}
-.c-line{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-size:1.06rem}
-.c-line .ico{font-size:1.4rem}
-.c-line a{color:#fff;font-weight:600;border-bottom:2px solid var(--acc)}
-.c-line span.plain{color:#d5d5db}
-form{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:38px}
-form h3{color:#fff;margin-bottom:22px;font-size:1.5rem}
-.field{margin-bottom:16px}
-.field label{display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
-.field input,.field select,.field textarea{width:100%;background:var(--bg1);border:1px solid var(--line);border-radius:10px;color:#fff;padding:13px 15px;font-size:.95rem;font-family:'Inter',sans-serif}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--acc)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info h2{color:#fff;font-size:clamp(2rem,3.8vw,2.9rem);margin-bottom:16px;font-weight:700}
+.contact-info h2 em{font-style:normal;color:var(--o)}
+.contact-info>p{color:var(--mut);margin-bottom:26px}
+.c-line{display:flex;align-items:center;gap:14px;margin-bottom:16px;font-size:1.04rem}
+.c-line .ico{color:var(--o);display:flex}
+.c-line a{color:#fff;font-weight:700;border-bottom:2px solid var(--o)}
+.c-line .plain{color:#D5DDF0}
+form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:38px}
+form h3{color:#fff;margin-bottom:22px;font-size:1.4rem}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:6px;font-weight:700}
+.field input,.field select,.field textarea{width:100%;background:var(--navy2);border:1px solid var(--line);border-radius:12px;color:#fff;padding:13px 15px;font-size:.95rem;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--o)}
 /* FOOTER */
-footer{background:#050506;border-top:1px solid var(--line);padding:60px 0 36px;text-align:center}
-footer .flogo{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.16em;font-size:1.4rem;color:#fff;margin-bottom:10px}
-footer .flogo span{color:var(--acc)}
+footer{background:#060C1A;border-top:1px solid var(--line);padding:60px 0 34px;text-align:center}
+.f-brand{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:12px}
+.f-brand .mono svg{width:54px;height:54px}
+footer .flogo{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.1em;font-size:1.4rem;color:#fff}
+footer .flogo span{color:var(--o)}
 footer p{color:var(--mut);font-size:.9rem;margin-bottom:6px}
-footer p a{border-bottom:1px solid var(--acc)}
-footer .demo{margin-top:24px;font-size:.78rem;color:#55555e;letter-spacing:.06em}
+footer p a{color:#D5DDF0;border-bottom:1px solid var(--o)}
+footer .demo{margin-top:22px;font-size:.76rem;color:#5E6C8C;letter-spacing:.05em;line-height:1.9}
 /* FLOAT + STICKY */
-.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.9rem;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
-.wa-float:hover{transform:scale(1.1)}
-.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:rgba(8,8,10,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px;gap:10px}
-.sticky-bar a{flex:1;text-align:center;padding:13px 0;border-radius:14px;font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem}
-.sticky-bar .s-call{background:var(--acc);color:var(--acc-ink)}
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
+.wa-float svg{width:1.9em;height:1.9em;color:#fff}
+.wa-float:hover{transform:scale(1.08)}
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:rgba(8,14,28,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px;gap:10px}
+.sticky-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 0;border-radius:999px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.88rem}
+.sticky-bar .s-call{background:var(--o);color:#fff}
 .sticky-bar .s-wa{background:var(--wa);color:#fff}
 body{padding-bottom:0}
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){
+@media(max-width:960px){
   .svc-grid,.steps,.testi-grid{grid-template-columns:1fr}
   .diff-grid,.contact-grid{grid-template-columns:1fr}
   .proof-grid{grid-template-columns:repeat(2,1fr)}
-  .proof-cell{border-left:none;border-top:1px solid rgba(0,0,0,.12);padding:22px 10px}
+  .proof-cell{border-left:none;border-top:1px solid #E4E9F4;padding:22px 10px}
   .nav-links{display:none}
   .menu-toggle{display:block}
-  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(8,8,10,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(8,14,28,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
   .sticky-bar{display:flex}
   .wa-float{bottom:86px}
   body{padding-bottom:66px}
   section{padding:72px 0}
-  .giant{display:none}
 }
 </style>
 </head>
@@ -179,220 +189,192 @@ body{padding-bottom:0}
 
 <header id="hdr">
   <div class="container nav">
-    <a href="#" class="logo">LEMUEL <span>ELECTRIC</span><small>SERVICES · ÁREA METRO PR</small></a>
+    <a href="#" class="logo"><span class="mono" aria-label="Monograma provisional LE"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="none" stroke="#FF7A00" stroke-width="5"/><circle cx="50" cy="50" r="36" fill="#FF7A00" opacity="0.1"/><path d="M50 5v10M50 85v10M5 50h10M85 50h10" stroke="#FF7A00" stroke-width="4" stroke-linecap="round"/><circle cx="50" cy="5" r="3.5" fill="#FF7A00"/><circle cx="50" cy="95" r="3.5" fill="#FF7A00"/><circle cx="5" cy="50" r="3.5" fill="#FF7A00"/><circle cx="95" cy="50" r="3.5" fill="#FF7A00"/><text x="50" y="63" text-anchor="middle" font-family="Oswald, sans-serif" font-weight="700" font-size="30" fill="#fff" letter-spacing="2">LE</text></svg></span><span class="lt">LEMUEL <span>ELECTRIC</span><small>SERVICES · ÁREA METRO PR</small></span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#como">Cómo funciona</a></li>
+      <li><a href="#como">Proceso</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#opiniones">Opiniones</a></li>
       <li><a href="#faq">Preguntas</a></li>
-      <li><a class="btn wa" href="https://wa.me/17876907427?text=Hola%20Lemuel%20Electric,%20necesito%20un%20servicio%20eléctrico" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a class="btn sm" href="https://wa.me/17876907427?text=Hola%20Lemuel%20Electric%2C%20necesito%20un%20servicio%20el%C3%A9ctrico" target="_blank" rel="noopener">WhatsApp</a></li>
     </ul>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">&#9776;</button>
   </div>
 </header>
 
+
 <section class="hero">
+  <div class="circuit" aria-hidden="true">
+    <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+      <g stroke="#FF7A00" stroke-width="1.5" opacity="0.16" fill="none">
+        <path d="M-20 120 H260 L340 200 H560"/><circle cx="560" cy="200" r="6"/>
+        <path d="M-20 420 H180 L260 340 H480"/><circle cx="480" cy="340" r="6"/>
+        <path d="M1220 160 H940 L860 240 H640"/><circle cx="640" cy="240" r="6"/>
+        <path d="M1220 460 H1000 L920 380 H700"/><circle cx="700" cy="380" r="6"/>
+        <path d="M300 -20 V140 L380 220"/><circle cx="380" cy="220" r="6"/>
+        <path d="M900 -20 V120 L820 200"/><circle cx="820" cy="200" r="6"/>
+        <path d="M150 620 V480 L230 400"/><circle cx="230" cy="400" r="6"/>
+        <path d="M1050 620 V500 L970 420"/><circle cx="970" cy="420" r="6"/>
+      </g>
+    </svg>
+  </div>
   <div class="container hero-inner">
-    <p class="eyebrow">Electricistas · Área metropolitana, PR</p>
-    <h1>Electricidad <em>elite</em> para el área metro</h1>
-    <p class="sub">Instalaciones, reparaciones y emergencias eléctricas en San Juan, Bayamón, Guaynabo, Carolina y toda el área metro. Servicio rápido, limpio y garantizado.</p>
-    <div><span class="badge24">⚡ Emergencia 24/7 · Llámanos ahora</span></div>
-    <div class="hero-ctas">
-      <a class="btn wa" href="https://wa.me/17876907427?text=Hola%20Lemuel%20Electric,%20necesito%20un%20servicio%20eléctrico" target="_blank" rel="noopener">📲 Cotiza por WhatsApp</a>
-      <a class="btn ghost" href="tel:+17876907427">📞 (787) 690-7427</a>
+    <div class="medal-wrap reveal">
+      <div class="orbit" aria-hidden="true"></div>
+      <div class="medal"><span class="mono" aria-label="Monograma provisional LE"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="none" stroke="#FF7A00" stroke-width="5"/><circle cx="50" cy="50" r="36" fill="#FF7A00" opacity="0.1"/><path d="M50 5v10M50 85v10M5 50h10M85 50h10" stroke="#FF7A00" stroke-width="4" stroke-linecap="round"/><circle cx="50" cy="5" r="3.5" fill="#FF7A00"/><circle cx="50" cy="95" r="3.5" fill="#FF7A00"/><circle cx="5" cy="50" r="3.5" fill="#FF7A00"/><circle cx="95" cy="50" r="3.5" fill="#FF7A00"/><text x="50" y="63" text-anchor="middle" font-family="Oswald, sans-serif" font-weight="700" font-size="30" fill="#fff" letter-spacing="2">LE</text></svg></span></div>
     </div>
-    <p class="hero-phone"><a href="tel:+17876907427">(787) 690-7427</a></p>
-    <div class="trust" style="margin-top:26px">
-      <span><b>Área metro</b> completa</span><span><b>24/7</b> emergencias</span><span><b>Garantía</b> escrita</span>
+    <p class="eyebrow reveal">Electricistas · Área metropolitana, PR</p>
+    <h1 class="reveal">Electricidad <em>elite</em><br>para el área metro</h1>
+    <p class="sub reveal">Instalaciones, reparaciones y emergencias eléctricas en San Juan, Bayamón, Guaynabo, Carolina y toda el área metro. Servicio rápido, limpio y garantizado.</p>
+    <div class="towns reveal"><span>San Juan</span><span>Bayamón</span><span>Guaynabo</span><span>Carolina</span><span>Trujillo Alto</span><span>Toa Baja</span><span>Cataño</span></div>
+    <div class="hero-ctas reveal">
+      <a class="btn" href="https://wa.me/17876907427?text=Hola%20Lemuel%20Electric%2C%20necesito%20un%20servicio%20el%C3%A9ctrico" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg><span>Cotiza por WhatsApp</span></a>
+      <a class="btn ghost" href="tel:+17876907427"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>(787) 690-7427</span></a>
     </div>
+    <p class="hero-phone reveal"><a href="tel:+17876907427">(787) 690-7427</a></p>
+    <div class="badge24 reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3z"/><path d="M12 10v4M12 17.5v.5"/></svg><span>Emergencia 24/7 · Mismo día</span></div>
   </div>
+  <div class="marquee" aria-hidden="true"><div class="mq-in"><span>Residencial ◆ Comercial ◆ Emergencia 24/7 ◆ Garantía escrita ◆ </span><span>Residencial ◆ Comercial ◆ Emergencia 24/7 ◆ Garantía escrita ◆ </span></div></div>
 </section>
-
-<div class="proof">
-  <div class="container proof-grid">
-    <div class="proof-cell"><div class="v">Metro</div><div class="k">Cobertura total</div></div><div class="proof-cell"><div class="v">24/7</div><div class="k">Emergencias</div></div><div class="proof-cell"><div class="v">100%</div><div class="k">Garantizado</div></div><div class="proof-cell"><div class="v">Gratis</div><div class="k">Cotización</div></div>
-  </div>
-</div>
-
-<div class="strip"><div>✦ ÁREA METROPOLITANA &nbsp;&nbsp; ✦ EMERGENCIA 24/7 &nbsp;&nbsp; ✦ COTIZACIÓN GRATIS &nbsp;&nbsp; ✦ ÁREA METROPOLITANA &nbsp;&nbsp; ✦ EMERGENCIA 24/7 &nbsp;&nbsp; ✦ COTIZACIÓN GRATIS &nbsp;&nbsp;</div></div>
-
-<section id="servicios">
-  <span class="giant" aria-hidden="true">01</span>
-  <div class="container">
-    <div class="sec-head reveal"><p class="eyebrow">Servicios</p><h2>Todo lo eléctrico, <em>resuelto</em></h2><p>Residencial y comercial: del apartamento al negocio, lo dejamos funcionando.</p></div>
-    <div class="svc-grid">
-      <div class="card reveal"><div class="ico">🔌</div><h3>Diagnóstico y reparación</h3><p>Localizamos el fallo eléctrico en tu casa o negocio y lo reparamos de forma segura, sin rodeos.</p><p class="price">desde $65 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17876907427?text=Hola,%20necesito%20un%20diagnóstico%20eléctrico" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
-<div class="card reveal"><div class="ico">⚡</div><h3>Paneles y breaker box</h3><p>Instalación y reemplazo de paneles eléctricos, breakers y sub-paneles con materiales de calidad.</p><p class="price">desde $250 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17876907427?text=Hola,%20me%20interesa%20instalación%20de%20panel%20eléctrico" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
-<div class="card reveal"><div class="ico">💡</div><h3>Iluminación y abanicos</h3><p>Instalamos lámparas, focos, abanicos de techo y alumbrado exterior para que todo quede perfecto.</p><p class="price">desde $85 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17876907427?text=Hola,%20quiero%20instalar%20iluminación%20o%20abanicos" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
-<div class="card reveal"><div class="ico">🔧</div><h3>Tomacorrientes y apagadores</h3><p>Reemplazo y adición de receptáculos, apagadores y dimmers, cumpliendo con el código vigente.</p><p class="price">desde $45 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17876907427?text=Hola,%20necesito%20tomacorrientes%20o%20apagadores" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
-<div class="card reveal"><div class="ico">🏠</div><h3>Generadores y transfer switch</h3><p>Instalación de generadores y transfer switches para que nunca te quedes sin luz.</p><p class="price">desde $350 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17876907427?text=Hola,%20me%20interesa%20instalación%20de%20generador" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
-<div class="card reveal"><div class="ico">🚨</div><h3>Emergencia eléctrica 24/7</h3><p>Apagones, cortos, chispas u olor a quemado: atendemos emergencias eléctricas cuando más lo necesitas.</p><p class="price">desde $95 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17876907427?text=Hola,%20tengo%20una%20EMERGENCIA%20eléctrica" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
-    </div>
+<div class="proof"><div class="container proof-grid"><div class="proof-cell reveal"><div class="v">24/7</div><div class="k">Emergencias</div></div><div class="proof-cell reveal"><div class="v">100%</div><div class="k">Garantía escrita</div></div><div class="proof-cell reveal"><div class="v">2</div><div class="k">Residencial + comercial</div></div><div class="proof-cell reveal"><div class="v">Metro</div><div class="k">Cobertura total</div></div></div></div>
+<section id="servicios"><div class="container">
+    <div class="sec-head reveal"><p class="eyebrow">Servicios</p><h2>Todo lo <em>eléctrico</em>, resuelto</h2>
+    <p>Residencial y comercial: de un apagador a la iluminación completa de tu negocio.</p></div>
+    <div class="svc-grid"><div class="card reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2v5M15 2v5M7 7h10v4a5 5 0 0 1-10 0V7zM12 16v6"/></svg></div>
+      <h3>Diagnóstico y reparación</h3><p>Localizamos el fallo eléctrico en tu casa o negocio y lo reparamos de forma segura, sin rodeos.</p>
+      <p class="price">desde $65 <small>/ / propuesta</small></p>
+      <a class="btn sm" href="https://wa.me/17876907427?text=Hola,%20necesito%20un%20diagnóstico%20eléctrico" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg><span>Pedir por WhatsApp</span></a>
+    </div><div class="card reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M12 14v4M9.5 18.5 12 16l2.5 2.5"/></svg></div>
+      <h3>Paneles y breaker box</h3><p>Instalación y reemplazo de paneles eléctricos, breakers y sub-paneles con materiales de calidad.</p>
+      <p class="price">desde $250 <small>/ / propuesta</small></p>
+      <a class="btn sm" href="https://wa.me/17876907427?text=Hola,%20me%20interesa%20instalación%20de%20panel%20eléctrico" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg><span>Pedir por WhatsApp</span></a>
+    </div><div class="card reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.8.6 1.5 1.4 1.5 2.6h4c0-1.2.7-2 1.5-2.6A6 6 0 0 0 12 3z"/></svg></div>
+      <h3>Iluminación y abanicos</h3><p>Instalamos lámparas, focos, abanicos de techo y alumbrado exterior para que todo quede perfecto.</p>
+      <p class="price">desde $85 <small>/ / propuesta</small></p>
+      <a class="btn sm" href="https://wa.me/17876907427?text=Hola,%20quiero%20instalar%20iluminación%20o%20abanicos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg><span>Pedir por WhatsApp</span></a>
+    </div><div class="card reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9.5" cy="12" r="1.3" fill="currentColor"/><circle cx="14.5" cy="12" r="1.3" fill="currentColor"/></svg></div>
+      <h3>Tomacorrientes y apagadores</h3><p>Reemplazo y adición de receptáculos, apagadores y dimmers, cumpliendo con el código vigente.</p>
+      <p class="price">desde $45 <small>/ / propuesta</small></p>
+      <a class="btn sm" href="https://wa.me/17876907427?text=Hola,%20necesito%20tomacorrientes%20o%20apagadores" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg><span>Pedir por WhatsApp</span></a>
+    </div><div class="card reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 8V5h10v3M7 13h10M12 13v5"/></svg></div>
+      <h3>Generadores y transfer switch</h3><p>Instalación de generadores y transfer switches para que nunca te quedes sin luz.</p>
+      <p class="price">desde $350 <small>/ / propuesta</small></p>
+      <a class="btn sm" href="https://wa.me/17876907427?text=Hola,%20me%20interesa%20instalación%20de%20generador" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg><span>Pedir por WhatsApp</span></a>
+    </div><div class="card reveal">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3z"/><path d="M12 10v4M12 17.5v.5"/></svg></div>
+      <h3>Emergencia eléctrica 24/7</h3><p>Apagones, cortos, chispas u olor a quemado: atendemos emergencias eléctricas cuando más lo necesitas.</p>
+      <p class="price">desde $95 <small>/ / propuesta</small></p>
+      <a class="btn sm" href="https://wa.me/17876907427?text=Hola,%20tengo%20una%20EMERGENCIA%20eléctrica" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg><span>Pedir por WhatsApp</span></a>
+    </div></div>
     <p class="note">Precios de referencia. Precio final según evaluación en el lugar — la cotización por WhatsApp es gratis.</p>
-  </div>
-</section>
-
-<section id="como" class="how">
-  <div class="container">
-    <div class="sec-head reveal"><p class="eyebrow">Cómo funciona</p><h2>Del problema a la <em>solución</em> en 4 pasos</h2><p>Transparencia total: sabes qué pasa y cuánto cuesta antes de que empecemos.</p></div>
-    <div class="steps">
-      <div class="step reveal"><div class="num">1</div><h3>Cuéntanos el problema</h3><p>Escríbenos por WhatsApp o llama. Nos describes qué pasa y te damos un estimado inicial sin compromiso.</p></div>
-<div class="step reveal"><div class="num">2</div><h3>Visita y diagnóstico</h3><p>Vamos al lugar, revisamos todo con equipo profesional y te explicamos la causa exacta.</p></div>
-<div class="step reveal"><div class="num">3</div><h3>Cotización clara</h3><p>Te damos precio fijo antes de tocar un cable. Sin sorpresas, sin letras pequeñas.</p></div>
-<div class="step reveal"><div class="num">4</div><h3>Reparación garantizada</h3><p>Hacemos el trabajo limpio, probamos todo y te dejamos funcionando con garantía escrita.</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="banner reveal">
-      <div>
-        <h2>¿Problema eléctrico <em>en el metro?</em></h2>
-        <p>Estamos cerca de ti: San Juan, Bayamón, Guaynabo, Carolina y más. Escríbenos y llegamos hoy.</p>
-      </div>
-      <a class="btn" href="https://wa.me/17876907427?text=Hola,%20necesito%20un%20electricista%20en%20el%20área%20metro" target="_blank" rel="noopener">Coordinar visita</a>
-    </div>
-  </div>
-</section>
-
-<section id="nosotros">
-  <span class="giant" aria-hidden="true">02</span>
-  <div class="container">
-    <div class="sec-head reveal"><p class="eyebrow">Por qué nosotros</p><h2>El electricista <em>del metro</em></h2><p>Rapidez local, trabajo serio y precio honesto: la combinación que nos recomienda.</p></div>
-    <div class="diff-grid">
-      <div class="diff reveal"><div class="ico">🏙️</div><div><h3>Especialistas del área metro</h3><p>Conocemos los residenciales, urbanizaciones y comercios del metro. Llegamos rápido a donde estés.</p></div></div>
-<div class="diff reveal"><div class="ico">🏢</div><div><h3>Residencial y comercial</h3><p>De apartamentos a locales comerciales: paneles, iluminación y sistemas completos.</p></div></div>
-<div class="diff reveal"><div class="ico">⏱️</div><div><h3>Mismo día en emergencias</h3><p>Si es urgente, lo tratamos como urgente. Coordinamos tu visita para hoy.</p></div></div>
-<div class="diff reveal"><div class="ico">🛡️</div><div><h3>Garantía escrita</h3><p>Cada trabajo queda probado y garantizado. Nuestra reputación se construye trabajo a trabajo.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="opiniones" class="testi">
-  <div class="container">
-    <div class="sec-head reveal"><p class="eyebrow">Opiniones</p><h2>El metro <em>nos recomienda</em></h2><p>De San Juan a Carolina, clientes que repiten y refieren.</p></div>
-    <div class="testi-grid">
-      <div class="testi-card reveal"><div class="stars">★★★★★</div><p>"Me cambiaron todos los receptáculos del apartamento en una mañana. Rápidos y super limpios."</p><p class="who">Cliente · San Juan</p></div>
-<div class="testi-card reveal"><div class="stars">★★★★★</div><p>"Instalaron la iluminación de mi negocio completa. Quedó de show y abrieron a tiempo."</p><p class="who">Cliente · Guaynabo</p></div>
-<div class="testi-card reveal"><div class="stars">★★★★★</div><p>"Emergencia un domingo: vinieron, resolvieron y el precio fue el acordado. Eso vale oro."</p><p class="who">Cliente · Bayamón</p></div>
-    </div>
-    <p class="disc">Testimonios con fines ilustrativos.</p>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="container">
-    <div class="sec-head reveal"><p class="eyebrow">Preguntas</p><h2>Lo que nos <em>preguntan</em></h2><p></p></div>
-    <div class="faq-list">
-      <div class="faq-item reveal"><button class="faq-q">¿Qué pueblos del área metro cubren?<span>+</span></button><div class="faq-a"><p>San Juan, Bayamón, Guaynabo, Carolina, Trujillo Alto, Toa Baja, Cataño y pueblos limítrofes. Si estás cerca del metro, pregúntanos.</p></div></div>
-<div class="faq-item reveal"><button class="faq-q">¿Hacen trabajos comerciales?<span>+</span></button><div class="faq-a"><p>Sí: iluminación de locales, paneles, circuitos dedicados y mantenimiento eléctrico para negocios.</p></div></div>
-<div class="faq-item reveal"><button class="faq-q">¿Atienden emergencias 24/7?<span>+</span></button><div class="faq-a"><p>Sí. Chispas, cortos, olor a quemado o apagones parciales se atienden día y noche, todos los días.</p></div></div>
-<div class="faq-item reveal"><button class="faq-q">¿Cuánto cuesta la cotización?<span>+</span></button><div class="faq-a"><p>Por WhatsApp es gratis. Si necesitas visita de diagnóstico, el cargo se descuenta del trabajo final.</p></div></div>
-<div class="faq-item reveal"><button class="faq-q">¿Aceptan ATH Móvil?<span>+</span></button><div class="faq-a"><p>Sí: ATH Móvil, tarjetas y efectivo al completar el trabajo.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-band">
-  <div class="container">
-    <h2>El metro no se detiene. <em>Tu electricidad tampoco debería.</em></h2>
-    <p>Escríbenos ahora y coordinamos tu visita para hoy mismo en el área metropolitana.</p>
+    </div></section>
+<section id="como" class="how"><div class="container">
+    <div class="sec-head reveal"><p class="eyebrow">Cómo funciona</p><h2>Del problema a la <em>solución</em></h2>
+    <p>Transparencia total: sabes qué pasa y cuánto cuesta antes de que empecemos.</p></div>
+    <div class="steps"><div class="step reveal"><div class="snum">1</div>
+      <h3>Cuéntanos el problema</h3><p>Escríbenos por WhatsApp o llama. Nos describes qué pasa y te damos un estimado inicial sin compromiso.</p><div class="sline" aria-hidden="true"></div></div><div class="step reveal"><div class="snum">2</div>
+      <h3>Visita y diagnóstico</h3><p>Vamos al lugar, revisamos todo con equipo profesional y te explicamos la causa exacta.</p><div class="sline" aria-hidden="true"></div></div><div class="step reveal"><div class="snum">3</div>
+      <h3>Cotización clara</h3><p>Te damos precio fijo antes de tocar un cable. Sin sorpresas, sin letras pequeñas.</p><div class="sline" aria-hidden="true"></div></div><div class="step reveal"><div class="snum">4</div>
+      <h3>Reparación garantizada</h3><p>Hacemos el trabajo limpio, probamos todo y te dejamos funcionando con garantía escrita.</p><div class="sline" aria-hidden="true"></div></div></div></div></section>
+<section><div class="container"><div class="banner reveal">
+      <div><p class="eyebrow">Área metropolitana</p><h2>¿Problema eléctrico en el metro?</h2><p>Estamos cerca de ti: San Juan, Bayamón, Guaynabo, Carolina y más. Escríbenos y llegamos hoy.</p></div>
+      <a class="btn" href="https://wa.me/17876907427?text=Hola%2C%20necesito%20un%20electricista%20en%20el%20%C3%A1rea%20metro" target="_blank" rel="noopener"><span>Escríbenos ahora</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div></div></section>
+<section id="nosotros"><div class="container">
+    <div class="sec-head reveal"><p class="eyebrow">Por qué nosotros</p><h2>Los del <em>metro</em> nos conocen</h2>
+    <p>Conocemos los residenciales, urbanizaciones y comercios del área metropolitana.</p></div>
+    <div class="diff-grid"><div class="diff reveal"><div class="d-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M10 21v-3h4v3"/></svg></div>
+      <div><h3>Especialistas del área metro</h3><p>Conocemos los residenciales, urbanizaciones y comercios del metro. Llegamos rápido a donde estés.</p></div></div><div class="diff reveal"><div class="d-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5 10 18 19.5 6.5"/></svg></div>
+      <div><h3>Residencial y comercial</h3><p>De apartamentos a locales comerciales: paneles, iluminación y sistemas completos.</p></div></div><div class="diff reveal"><div class="d-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+      <div><h3>Mismo día en emergencias</h3><p>Si es urgente, lo tratamos como urgente. Coordinamos tu visita para hoy.</p></div></div><div class="diff reveal"><div class="d-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5.5V11c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5.5L12 2z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+      <div><h3>Garantía escrita</h3><p>Cada trabajo queda probado y garantizado. Nuestra reputación se construye trabajo a trabajo.</p></div></div></div></div></section>
+<section id="opiniones" class="testi"><div class="container">
+    <div class="sec-head reveal"><p class="eyebrow">Opiniones</p><h2>Clientes del <em>área metro</em></h2>
+    <p>San Juan, Guaynabo y Bayamón hablan por nosotros.</p></div>
+    <div class="testi-grid"><div class="testi-card reveal">
+      <div class="stars">★★★★★</div><p>"Me cambiaron todos los receptáculos del apartamento en una mañana. Rápidos y super limpios."</p><p class="who">Cliente · San Juan</p></div><div class="testi-card reveal">
+      <div class="stars">★★★★★</div><p>"Instalaron la iluminación de mi negocio completa. Quedó de show y abrieron a tiempo."</p><p class="who">Cliente · Guaynabo</p></div><div class="testi-card reveal">
+      <div class="stars">★★★★★</div><p>"Emergencia un domingo: vinieron, resolvieron y el precio fue el acordado. Eso vale oro."</p><p class="who">Cliente · Bayamón</p></div></div>
+    <p class="disc">Testimonios con fines ilustrativos.</p></div></section>
+<section id="faq"><div class="container">
+    <div class="sec-head reveal"><p class="eyebrow">Preguntas</p><h2>Dudas <em>frecuentes</em></h2></div>
+    <div class="faq-list"><div class="faq-item reveal"><button class="faq-q" type="button"><span class="qt">¿Qué pueblos del área metro cubren?</span><span class="pm">+</span></button>
+      <div class="faq-a"><p>San Juan, Bayamón, Guaynabo, Carolina, Trujillo Alto, Toa Baja, Cataño y pueblos limítrofes. Si estás cerca del metro, pregúntanos.</p></div></div><div class="faq-item reveal"><button class="faq-q" type="button"><span class="qt">¿Hacen trabajos comerciales?</span><span class="pm">+</span></button>
+      <div class="faq-a"><p>Sí: iluminación de locales, paneles, circuitos dedicados y mantenimiento eléctrico para negocios.</p></div></div><div class="faq-item reveal"><button class="faq-q" type="button"><span class="qt">¿Atienden emergencias 24/7?</span><span class="pm">+</span></button>
+      <div class="faq-a"><p>Sí. Chispas, cortos, olor a quemado o apagones parciales se atienden día y noche, todos los días.</p></div></div><div class="faq-item reveal"><button class="faq-q" type="button"><span class="qt">¿Cuánto cuesta la cotización?</span><span class="pm">+</span></button>
+      <div class="faq-a"><p>Por WhatsApp es gratis. Si necesitas visita de diagnóstico, el cargo se descuenta del trabajo final.</p></div></div><div class="faq-item reveal"><button class="faq-q" type="button"><span class="qt">¿Aceptan ATH Móvil?</span><span class="pm">+</span></button>
+      <div class="faq-a"><p>Sí: ATH Móvil, tarjetas y efectivo al completar el trabajo.</p></div></div></div></div></section>
+<section class="cta-band"><div class="container">
+    <h2>¿Problema eléctrico <em>hoy mismo?</em></h2>
+    <p>Si es urgente, lo tratamos como urgente. Escríbenos y coordinamos tu visita.</p>
     <div class="hero-ctas">
-      <a class="btn" href="https://wa.me/17876907427?text=Hola%20Lemuel%20Electric,%20necesito%20un%20servicio%20eléctrico" target="_blank" rel="noopener">📲 Escríbenos ahora</a>
-      <a class="btn" href="tel:+17876907427">📞 (787) 690-7427</a>
-    </div>
-    <p class="hero-phone" style="margin-top:10px"><a href="tel:+17876907427">(787) 690-7427</a></p>
-  </div>
-</section>
-
-<section id="contacto">
-  <div class="container contact-grid">
-    <div class="contact-info reveal">
-      <h2>Tu electricista <em>en el metro</em></h2>
-      <p>Llámanos o escríbenos: te respondemos rápido y coordinamos la visita que te convenga.</p>
-      <div class="c-line"><span class="ico">📞</span><a href="tel:+17876907427">(787) 690-7427</a></div>
-      <div class="c-line"><span class="ico">📲</span><a href="https://wa.me/17876907427" target="_blank" rel="noopener">WhatsApp directo</a></div>
-      <div class="c-line"><span class="ico">📸</span><a href="https://www.instagram.com/lemuelelectrillc" target="_blank" rel="noopener">Instagram @lemuelelectrillc</a></div>
-      <div class="c-line"><span class="ico">📍</span><span class="plain">Área metropolitana · Puerto Rico</span></div>
-      <div class="c-line"><span class="ico">🕐</span><span class="plain">Lun–Sáb · 8:00am – 6:00pm · Emergencias 24/7</span></div>
-    </div>
-    <form id="bookForm" class="reveal">
-      <h3>Solicita tu cotización</h3>
-      <div class="field">
-        <label for="fNombre">Nombre</label>
-        <input id="fNombre" type="text" placeholder="Tu nombre" required>
-      </div>
-      <div class="field">
-        <label for="fTel">Teléfono</label>
-        <input id="fTel" type="tel" placeholder="(787) 000-0000" required>
-      </div>
-      <div class="field">
-        <label for="fSvc">Servicio</label>
-        <select id="fSvc">
-          <option>Diagnóstico y reparación</option>
-          <option>Paneles y breaker box</option>
-          <option>Iluminación y abanicos</option>
-          <option>Tomacorrientes y apagadores</option>
-          <option>Generadores y transfer switch</option>
-          <option>Emergencia eléctrica 24/7</option>
-          <option>Otro / emergencia</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="fMsg">Describe tu necesidad</label>
-        <textarea id="fMsg" rows="3" placeholder="¿Qué necesitas arreglar o instalar?"></textarea>
-      </div>
-      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p class="flogo">LEMUEL <span>ELECTRIC</span></p>
-    <p>Electricistas profesionales · Área Metropolitana, Puerto Rico</p>
-    <p><a href="tel:+17876907427" style="color:#a3a3ad">(787) 690-7427</a></p>
-    <p><a href="https://www.instagram.com/lemuelelectrillc" target="_blank" rel="noopener" style="color:#a3a3ad">@lemuelelectrillc</a></p>
-    <p class="demo">Demostración creada por ManuPro</p>
-  </div>
-</footer>
-
-<a class="wa-float" href="https://wa.me/17876907427?text=Hola%20Lemuel%20Electric,%20necesito%20un%20servicio%20eléctrico" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-
-<div class="sticky-bar">
-  <a class="s-call" href="tel:+17876907427">📞 Llamar</a>
-  <a class="s-wa" href="https://wa.me/17876907427?text=Hola%20Lemuel%20Electric,%20necesito%20un%20servicio%20eléctrico" target="_blank" rel="noopener">💬 WhatsApp</a>
-</div>
+      <a class="btn dark" href="https://wa.me/17876907427?text=Hola%20Lemuel%20Electric%2C%20necesito%20un%20servicio%20el%C3%A9ctrico" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg><span>Escríbenos ahora</span></a>
+      <a class="btn dark-ghost" href="tel:+17876907427"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>(787) 690-7427</span></a>
+    </div></div></section>
+<section id="contacto"><div class="container contact-grid">
+    <div class="contact-info reveal"><p class="eyebrow">Contacto</p>
+      <h2>Cotiza tu trabajo <em>hoy</em></h2>
+      <p>Escríbenos por WhatsApp con fotos del problema si puedes: así te damos un estimado más preciso y rápido.</p>
+      
+      <div class="c-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><a href="tel:+17876907427">(787) 690-7427</a></div>
+      <div class="c-line"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg></span><a href="https://wa.me/17876907427" target="_blank" rel="noopener">WhatsApp directo</a></div>
+      <div class="c-line"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span><a href="https://www.instagram.com/lemuelelectrillc" target="_blank" rel="noopener">Instagram @lemuelelectrillc</a></div>
+      <div class="c-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="plain">Área metropolitana · Puerto Rico</span></div>
+      <div class="c-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span><span class="plain">Lun–Sáb · 8:00am – 6:00pm · Emergencias 24/7</span></div></div>
+    <form id="bookForm" class="reveal"><h3>Solicita tu cotización</h3>
+      <div class="field"><label for="fNombre">Nombre</label><input id="fNombre" type="text" placeholder="Tu nombre" required></div>
+      <div class="field"><label for="fTel">Teléfono</label><input id="fTel" type="tel" placeholder="(787) 000-0000" required></div>
+      <div class="field"><label for="fSvc">Servicio</label><select id="fSvc"><option>Diagnóstico y reparación</option><option>Paneles y breaker box</option><option>Iluminación y abanicos</option><option>Tomacorrientes y apagadores</option><option>Generadores y transfer switch</option><option>Emergencia eléctrica 24/7</option><option>Otro / emergencia</option></select></div>
+      <div class="field"><label for="fMsg">Describe tu necesidad</label><textarea id="fMsg" rows="3" placeholder="¿Qué necesitas arreglar o instalar?"></textarea></div>
+      <button class="btn" type="submit" style="width:100%"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg><span>Enviar por WhatsApp</span></button>
+    </form></div></section>
+<footer><div class="container">
+    <div class="f-brand"><span class="mono" aria-label="Monograma provisional LE"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="none" stroke="#FF7A00" stroke-width="5"/><circle cx="50" cy="50" r="36" fill="#FF7A00" opacity="0.1"/><path d="M50 5v10M50 85v10M5 50h10M85 50h10" stroke="#FF7A00" stroke-width="4" stroke-linecap="round"/><circle cx="50" cy="5" r="3.5" fill="#FF7A00"/><circle cx="50" cy="95" r="3.5" fill="#FF7A00"/><circle cx="5" cy="50" r="3.5" fill="#FF7A00"/><circle cx="95" cy="50" r="3.5" fill="#FF7A00"/><text x="50" y="63" text-anchor="middle" font-family="Oswald, sans-serif" font-weight="700" font-size="30" fill="#fff" letter-spacing="2">LE</text></svg></span><p class="flogo">LEMUEL <span>ELECTRIC</span></p></div>
+    <p>Electricistas · Área metropolitana, Puerto Rico</p>
+    <p><a href="tel:+17876907427">(787) 690-7427</a></p>
+    <p><a href="https://www.instagram.com/lemuelelectrillc" target="_blank" rel="noopener">@lemuelelectrillc</a></p>
+    <p class="demo">Monograma provisional — aquí irá el logo oficial del negocio.<br>Demostración creada por ManuPro</p>
+    </div></footer>
+    <a class="wa-float" href="https://wa.me/17876907427?text=Hola%20Lemuel%20Electric%2C%20necesito%20un%20servicio%20el%C3%A9ctrico" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg></a>
+    <div class="sticky-bar"><a class="s-call" href="tel:+17876907427"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Llamar</span></a>
+    <a class="s-wa" href="https://wa.me/17876907427?text=Hola%20Lemuel%20Electric%2C%20necesito%20un%20servicio%20el%C3%A9ctrico" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg><span>WhatsApp</span></a></div>
 
 
 <script>
 const hdr=document.getElementById('hdr');
-addEventListener('scroll',()=>{hdr.classList.toggle('solid',scrollY>30)});
-document.getElementById('menuToggle').addEventListener('click',()=>{document.getElementById('navLinks').classList.toggle('open')});
+addEventListener('scroll',()=>{hdr.classList.toggle('solid',scrollY>30)},{passive:true});
+const mt=document.getElementById('menuToggle'),nl=document.getElementById('navLinks');
+if(mt&&nl){mt.addEventListener('click',()=>{const o=nl.classList.toggle('open');mt.innerHTML=o?'&#10005;':'&#9776;';mt.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú')});
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nl.classList.remove('open');mt.innerHTML='&#9776;'}));}
 document.querySelectorAll('.faq-item').forEach(item=>{
   const btn=item.querySelector('.faq-q');
   btn.addEventListener('click',()=>{
     const was=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+'});
-    if(!was){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='\u00d7'}
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');const a=i.querySelector('.faq-a');if(a)a.style.maxHeight=null;const s=i.querySelector('.faq-q .pm');if(s)s.textContent='+'});
+    if(!was){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('.pm').textContent='\u00d7'}
   });
 });
-document.getElementById('bookForm').addEventListener('submit',e=>{
+const bookForm=document.getElementById('bookForm');
+if(bookForm){bookForm.addEventListener('submit',e=>{
   e.preventDefault();
   const nombre=document.getElementById('fNombre').value.trim();
   const tel=document.getElementById('fTel').value.trim();
   const svc=document.getElementById('fSvc').value;
   const msg=document.getElementById('fMsg').value.trim();
   if(!nombre||!tel){alert('Por favor completa tu nombre y teléfono.');return}
-  let text='Hola '+'Lemuel Electric'+', soy '+nombre+'. Me interesa: '+svc+'. Mi teléfono es '+tel+'.';
+  let text='Hola Lemuel Electric'+', soy '+nombre+'. Me interesa: '+svc+'. Mi teléfono es '+tel+'.';
   if(msg)text+=' Detalle: '+msg;
   window.open('https://wa.me/17876907427?text='+encodeURIComponent(text),'_blank');
-});
+});}
 const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target)}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+
 
 </body>
 </html>

@@ -5,174 +5,177 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>El Monte Training Studio | Entrena Duro en Ponce, PR</title>
 <meta name="description" content="El Monte Training Studio en Ponce — entrenamiento personal, grupos pequeños y acondicionamiento de verdad. Sin excusas. Agenda tu primera sesión por WhatsApp.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --black:#0b0b0c; --dark:#121214; --panel:#18181b; --line:rgba(255,255,255,.09);
-  --gray:#a3a3ab; --white:#f5f5f6; --accent:#E10600; --accent-dim:rgba(225,6,0,.12);
-  --wa:#25D366;
-}
 *{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#070d08; --bg2:#0c150d; --panel:#101a10; --line:rgba(140,200,120,.18);
+  --pine:#1e4d24; --moss:#2f7a35; --lime:#a8e05f; --lime-d:#7bc043;
+  --txt:#eef5ea; --mut:#9db49a; --wa:#25D366; --gold:#ffc63a;
+}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.65;overflow-x:hidden}
-h1,h2,h3{font-family:'Bebas Neue',sans-serif;line-height:.92;letter-spacing:.02em;font-weight:400}
-a{text-decoration:none;color:inherit}
-.container{width:min(1180px,92%);margin:0 auto}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:104px 0;position:relative}
+h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;line-height:1;letter-spacing:.015em}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;color:var(--lime);margin-bottom:20px;font-weight:700}
+.eyebrow::before{content:"";width:34px;height:3px;background:var(--lime)}
 /* ===== HEADER ===== */
-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:rgba(11,11,12,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent}
-header.solid{background:rgba(11,11,12,.96);border-bottom-color:var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.logo{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:.1em;line-height:1}
-.logo span{color:var(--accent)}
-.logo small{display:block;font-family:'Inter',sans-serif;font-size:.55rem;letter-spacing:.42em;color:var(--gray);font-weight:600}
-.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
-.nav-links a{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:#d8d8dd;transition:.25s;font-weight:600}
-.nav-links a:hover{color:var(--accent)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;padding:15px 34px;border-radius:4px;font-size:.88rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;transition:.25s;border:2px solid var(--accent);cursor:pointer;font-family:'Inter',sans-serif}
-.btn:hover{background:transparent;color:var(--accent);transform:translateY(-2px);box-shadow:0 10px 30px rgba(225,6,0,.35)}
-.btn.wa{background:var(--wa);border-color:var(--wa)}
-.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 30px rgba(37,211,102,.28)}
-.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
-.btn.ghost:hover{border-color:var(--accent);color:var(--accent);box-shadow:none}
-.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:#fff}
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;padding:18px 0}
+header.solid{background:rgba(7,13,8,.96);backdrop-filter:blur(12px);padding:10px 0;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--txt)}
+.logo b{font-family:'Anton';font-size:1.35rem;letter-spacing:.08em;display:block;line-height:1}
+.logo small{font-size:.58rem;letter-spacing:.32em;color:var(--mut);font-weight:600}
+.nav-links{display:flex;list-style:none;gap:28px;align-items:center}
+.nav-links a{color:var(--txt);text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.05em}
+.nav-links a:hover{color:var(--lime)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--txt);font-size:1.5rem;padding:6px 12px;border-radius:8px;cursor:pointer}
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:17px 34px;border-radius:100px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;transition:.3s;border:none;cursor:pointer}
+.btn.wa{background:var(--lime);color:#0a1409;box-shadow:0 8px 30px rgba(168,224,95,.3)}
+.btn.wa:hover{transform:translateY(-3px);box-shadow:0 14px 44px rgba(168,224,95,.45);background:var(--lime-d)}
+.btn.line{background:transparent;color:var(--txt);border:2px solid rgba(168,224,95,.5)}
+.btn.line:hover{border-color:var(--lime);color:var(--lime)}
 /* ===== HERO ===== */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
-  background:radial-gradient(ellipse 65% 50% at 50% 0%,rgba(225,6,0,.14) 0%,transparent 60%),linear-gradient(180deg,#141416,#0b0b0c)}
-.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 34px,rgba(255,255,255,.015) 34px 36px);pointer-events:none}
-.hero-ghost{position:absolute;bottom:-2%;left:50%;transform:translateX(-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(7rem,24vw,22rem);color:transparent;-webkit-text-stroke:1px rgba(225,6,0,.2);white-space:nowrap;pointer-events:none;user-select:none;line-height:1}
-.hero-inner{position:relative;z-index:2;text-align:center;padding:140px 0 90px;width:100%}
-.eyebrow{letter-spacing:.44em;text-transform:uppercase;font-size:.78rem;color:var(--accent);margin-bottom:20px;font-weight:700}
-.hero h1{font-size:clamp(4rem,12vw,9.5rem);margin-bottom:18px}
-.hero h1 .fill{color:var(--accent)}
-.hero h1 .stroke{color:transparent;-webkit-text-stroke:2.5px #fff}
-.hero p.sub{font-size:1.15rem;font-weight:400;max-width:620px;margin:0 auto 10px;color:#c9c9cf}
-.hero p.tag{font-size:1.05rem;color:var(--accent);font-weight:800;letter-spacing:.14em;margin-bottom:36px;text-transform:uppercase}
-.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
-.hero-phone{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4.5vw,2.6rem);letter-spacing:.1em}
-.hero-phone a{color:#fff;border-bottom:3px solid var(--accent);padding-bottom:2px;transition:.25s}
-.hero-phone a:hover{color:var(--accent)}
-.badge-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
-.badge-row span{padding:9px 22px;border:1px solid rgba(225,6,0,.6);border-radius:40px;color:#fff;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;background:var(--accent-dim)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:150px 0 90px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%233f7a35' stroke-width='1' opacity='.28'%3E%3Cpath d='M-20 60 Q60 20 140 60 T300 60'/%3E%3Cpath d='M-20 100 Q60 60 140 100 T300 100'/%3E%3Cpath d='M-20 140 Q60 100 140 140 T300 140'/%3E%3Cpath d='M-20 180 Q60 140 140 180 T300 180'/%3E%3Cpath d='M-20 220 Q60 180 140 220 T300 220'/%3E%3C/g%3E%3C/svg%3E");
+ background-color:var(--bg)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 500px at 78% 30%,rgba(47,122,53,.35),transparent 65%);pointer-events:none}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center;width:100%}
+.hero h1{font-size:clamp(3rem,8.4vw,6.4rem);text-transform:uppercase;margin-bottom:24px}
+.hero h1 .grn{color:var(--lime)}
+.hero .sub{color:var(--mut);font-size:1.12rem;max-width:540px;margin-bottom:14px}
+.hero .tagline{color:var(--lime);font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;font-weight:700;margin-bottom:36px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.hero-phone a{font-family:'Anton';font-size:clamp(1.8rem,4.4vw,2.8rem);color:var(--txt);text-decoration:none;letter-spacing:.03em}
+.hero-phone a:hover{color:var(--lime)}
+.badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.badge-row span{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line);border-radius:100px;padding:9px 18px;color:var(--lime);background:rgba(47,122,53,.14)}
+.shield{display:flex;justify-content:center}
+.shield svg{width:min(320px,70vw);height:auto;filter:drop-shadow(0 20px 50px rgba(47,122,53,.4))}
 /* ===== STATS ===== */
-.stats{background:var(--accent);color:#fff;padding:36px 0}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
-.stats-grid .num{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,5vw,3.8rem);line-height:1}
-.stats-grid .lbl{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;opacity:.9;margin-top:6px}
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);max-width:1180px;margin:0 auto}
+.stats-grid>div{padding:32px 20px;text-align:center;border-left:1px solid var(--line)}
+.stats-grid>div:first-child{border-left:none}
+.stats-grid .num{font-family:'Anton';font-size:1.9rem;color:var(--lime);letter-spacing:.05em}
+.stats-grid .lbl{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-top:6px}
 /* ===== MARQUEE ===== */
-.strip{background:#000;color:var(--accent);overflow:hidden;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.strip div{white-space:nowrap;animation:slide 20s linear infinite;font-family:'Bebas Neue',sans-serif;letter-spacing:.24em;font-size:1.15rem}
-@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* ===== SECTIONS ===== */
-section{padding:104px 0}
-.sec-head{text-align:center;max-width:700px;margin:0 auto 60px}
-.sec-head .eyebrow{margin-bottom:14px}
-.sec-head h2{font-size:clamp(2.8rem,6vw,4.6rem);margin-bottom:14px;color:#fff}
-.sec-head h2 em{font-style:normal;color:var(--accent)}
-.sec-head p{color:var(--gray);font-size:1.05rem}
-/* ===== PROGRAMS ===== */
-.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:44px 36px;transition:.3s;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:5px;background:var(--accent);transform:scaleY(0);transform-origin:top;transition:.3s}
-.card:hover{transform:translateY(-8px);border-color:rgba(225,6,0,.5);box-shadow:0 22px 55px rgba(225,6,0,.16)}
-.card:hover::before{transform:scaleY(1)}
-.card .ico{font-size:2.6rem;margin-bottom:18px}
-.card h3{font-size:2rem;margin-bottom:8px;color:#fff;letter-spacing:.03em}
-.card p{color:var(--gray);font-size:.96rem;margin-bottom:18px;flex:1}
-.card ul{list-style:none;margin-bottom:20px;display:grid;gap:8px}
-.card ul li{color:#c9c9cf;font-size:.9rem;padding-left:22px;position:relative}
-.card ul li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-weight:800}
-.price{color:var(--accent);font-weight:800;font-size:1.4rem;letter-spacing:.04em;margin-bottom:20px;font-family:'Bebas Neue',sans-serif}
-.price small{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:400;color:var(--gray);letter-spacing:.02em;margin-top:2px}
-.card .btn{padding:12px 24px;font-size:.78rem;align-self:flex-start}
-/* ===== HOW ===== */
-.how{background:var(--dark);position:relative;overflow:hidden}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;position:relative;z-index:2}
-.step{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:42px 30px;text-align:center;transition:.3s}
-.step:hover{border-color:rgba(225,6,0,.55);transform:translateY(-6px)}
-.step .num{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:var(--accent);line-height:1;margin-bottom:14px}
-.step h3{color:#fff;font-size:1.8rem;margin-bottom:10px;letter-spacing:.04em}
-.step p{color:var(--gray);font-size:.93rem}
+.strip{overflow:hidden;background:var(--pine);padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip div{white-space:nowrap;font-family:'Anton';font-size:1.15rem;letter-spacing:.26em;color:var(--lime);animation:mq 26s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* ===== SECTION HEADS ===== */
+.sec-head{max-width:760px;margin-bottom:60px}
+.sec-head h2{font-size:clamp(2.2rem,5.2vw,3.8rem);text-transform:uppercase;margin:0 0 16px}
+.sec-head h2 em{font-style:normal;color:var(--lime)}
+.sec-head p{color:var(--mut)}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head.center .eyebrow::after{content:"";width:34px;height:3px;background:var(--lime)}
+/* ===== PROGRAM ROWS ===== */
+.prog{display:grid;gap:22px}
+.prow{display:grid;grid-template-columns:110px 1fr auto;gap:30px;align-items:center;background:var(--panel);border:1px solid var(--line);padding:36px 38px;position:relative;overflow:hidden;transition:.35s}
+.prow:nth-child(even){margin-left:60px}
+.prow:nth-child(odd){margin-right:60px}
+.prow:hover{border-color:var(--moss);transform:translateX(6px)}
+.prow .idx{font-family:'Anton';font-size:3.4rem;color:transparent;-webkit-text-stroke:1.5px var(--moss);line-height:1}
+.prow h3{font-size:clamp(1.5rem,3vw,2.1rem);text-transform:uppercase;margin-bottom:10px}
+.prow h3 .g{color:var(--lime)}
+.prow p{color:var(--mut);font-size:.94rem;max-width:520px;margin-bottom:12px}
+.prow ul{list-style:none;display:flex;gap:8px;flex-wrap:wrap}
+.prow ul li{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);border:1px solid var(--line);border-radius:100px;padding:6px 14px;background:rgba(47,122,53,.12)}
+.prow .right{text-align:right;flex:none}
+.prow .price{font-family:'Anton';font-size:1.5rem;color:var(--txt);white-space:nowrap}
+.prow .price small{display:block;font-family:'Inter';font-weight:400;font-size:.68rem;color:var(--mut);margin:4px 0 14px}
+.prow .btn{font-size:.76rem;padding:13px 26px}
+/* ===== TIMELINE ===== */
+.how{background:var(--bg2)}
+.timeline{max-width:760px;margin:0 auto;position:relative;padding-left:44px}
+.timeline::before{content:"";position:absolute;left:14px;top:8px;bottom:8px;width:3px;background:linear-gradient(var(--moss),var(--lime))}
+.tstep{position:relative;padding:0 0 44px 26px}
+.tstep:last-child{padding-bottom:0}
+.tstep::before{content:"";position:absolute;left:-44px;top:2px;width:31px;height:31px;border-radius:50%;background:var(--bg);border:3px solid var(--lime);box-shadow:0 0 18px rgba(168,224,95,.5)}
+.tstep h3{font-size:1.7rem;text-transform:uppercase;margin-bottom:8px}
+.tstep h3 .g{color:var(--lime)}
+.tstep p{color:var(--mut);max-width:560px}
 /* ===== WHY ===== */
-.why-banner{background:linear-gradient(135deg,#1c0505,#0b0b0c 70%);border:1px solid rgba(225,6,0,.35);border-radius:14px;padding:64px 8%;display:flex;align-items:center;gap:44px;flex-wrap:wrap;justify-content:space-between}
-.why-banner h2{font-size:clamp(2.4rem,5vw,3.8rem);color:#fff;margin-bottom:14px}
-.why-banner h2 em{font-style:normal;color:var(--accent)}
-.why-banner p{color:var(--gray);max-width:540px;font-size:1.05rem}
-.diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
-.diff{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:30px 24px;transition:.3s}
-.diff:hover{border-color:rgba(225,6,0,.5);transform:translateY(-5px)}
-.diff .ico{font-size:2rem;margin-bottom:12px}
-.diff h3{font-size:1.35rem;color:#fff;margin-bottom:8px;letter-spacing:.05em}
-.diff p{color:var(--gray);font-size:.88rem}
+.diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.diff{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:36px 28px;text-align:center;transition:.35s}
+.diff:hover{border-color:var(--lime);transform:translateY(-8px)}
+.diff .pk{width:64px;height:64px;margin:0 auto 20px;border-radius:50%;background:rgba(47,122,53,.2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.diff h3{font-size:1.25rem;text-transform:uppercase;margin-bottom:10px}
+.diff p{color:var(--mut);font-size:.9rem}
+.why-cta{text-align:center;margin-top:50px}
 /* ===== TESTIMONIALS ===== */
-.testi{background:var(--dark)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.testi-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:34px;transition:.3s;display:flex;flex-direction:column}
-.testi-card:hover{transform:translateY(-6px);border-color:rgba(225,6,0,.45)}
-.testi-card .stars{color:var(--accent);letter-spacing:.22em;margin-bottom:16px;font-size:1.05rem}
-.testi-card p{color:#d4d4da;font-style:italic;margin-bottom:18px;font-size:.97rem;flex:1}
-.testi-card .who{color:var(--gray);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
-.note{margin-top:28px;text-align:center;color:var(--gray);font-size:.8rem;font-style:italic}
+.testi{background:var(--bg2)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testi-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:36px 30px;border-bottom:4px solid var(--moss);transition:.3s}
+.testi-card:hover{transform:translateY(-6px);border-bottom-color:var(--lime)}
+.testi-card .stars{color:var(--gold);letter-spacing:.2em;margin-bottom:16px}
+.testi-card p{font-size:.96rem}
+.testi-card .who{margin-top:18px;color:var(--lime);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+.note{text-align:center;color:var(--mut);font-size:.78rem;margin-top:26px;font-style:italic}
 /* ===== FAQ ===== */
-.faq-list{max-width:780px;margin:0 auto}
-.faq-item{border-bottom:1px solid var(--line)}
-.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.05rem;font-weight:700;text-align:left;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Inter',sans-serif;letter-spacing:.03em;text-transform:uppercase}
-.faq-q span{color:var(--accent);font-size:1.5rem;transition:.3s;flex-shrink:0}
-.faq-item.open .faq-q span{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--gray);font-size:.96rem}
-.faq-a p{padding:0 0 24px}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{border:1px solid var(--line);border-radius:14px;margin-bottom:12px;background:var(--panel);overflow:hidden}
+.faq-item.open{border-color:var(--moss)}
+.faq-q{width:100%;background:none;border:none;color:var(--txt);font-family:'Anton';font-size:1.2rem;letter-spacing:.04em;text-align:left;padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.faq-q span{color:var(--lime);font-size:1.7rem;flex:none;font-family:'Inter';font-weight:300}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a p{color:var(--mut);padding:0 26px 26px}
 /* ===== CTA BAND ===== */
-.cta-band{background:var(--accent);color:#fff;padding:96px 0;text-align:center;position:relative;overflow:hidden}
-.cta-band::before{content:'SIN EXCUSAS';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,18vw,15rem);color:rgba(255,255,255,.08);white-space:nowrap;pointer-events:none}
-.cta-band h2{font-size:clamp(3.2rem,8vw,6rem);margin-bottom:14px;position:relative;z-index:2}
-.cta-band p{font-size:1.15rem;font-weight:600;margin-bottom:34px;position:relative;z-index:2}
-.cta-band .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
-.btn.dark{background:#0b0b0c;border-color:#0b0b0c;color:#fff}
-.btn.dark:hover{background:transparent;color:#0b0b0c;box-shadow:none}
+.cta-band{background:linear-gradient(135deg,#123a17,#1e4d24 55%,#123a17);text-align:center;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%233f7a35' stroke-width='1' opacity='.28'%3E%3Cpath d='M-20 60 Q60 20 140 60 T300 60'/%3E%3Cpath d='M-20 100 Q60 60 140 100 T300 100'/%3E%3Cpath d='M-20 140 Q60 100 140 140 T300 140'/%3E%3Cpath d='M-20 180 Q60 140 140 180 T300 180'/%3E%3Cpath d='M-20 220 Q60 180 140 220 T300 220'/%3E%3C/g%3E%3C/svg%3E");}
+.cta-band h2{font-size:clamp(2.4rem,5.6vw,4.4rem);text-transform:uppercase;margin-bottom:16px}
+.cta-band h2 .grn{color:var(--lime)}
+.cta-band p{color:#cfe3c9;margin-bottom:34px;font-size:1.05rem}
+.btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 /* ===== CONTACT ===== */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.contact-info h2{color:#fff;font-size:clamp(2.8rem,5vw,4rem);margin-bottom:16px}
-.contact-info h2 em{font-style:normal;color:var(--accent)}
-.contact-info>p{color:var(--gray);margin-bottom:28px;font-size:1.05rem}
-.c-line{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-size:1.06rem}
-.c-line .ico{font-size:1.4rem;width:32px;text-align:center}
-.c-line a{color:#fff;font-weight:700;border-bottom:2px solid var(--accent)}
-.c-line span.txt{color:#d4d4da}
-form{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:38px}
-form h3{color:#fff;margin-bottom:22px;font-size:2rem;letter-spacing:.04em}
-.field{margin-bottom:16px}
-.field label{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:6px;font-weight:600}
-.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.14);border-radius:6px;color:#fff;padding:13px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info h2{font-size:clamp(2.2rem,4.6vw,3.4rem);text-transform:uppercase;margin-bottom:16px}
+.contact-info h2 em{font-style:normal;color:var(--lime)}
+.contact-info>p{color:var(--mut);margin-bottom:30px}
+.c-line{display:flex;align-items:center;gap:16px;padding:17px 0;border-bottom:1px solid var(--line);font-size:1.04rem}
+.c-line .k{flex:none;width:46px;height:46px;border-radius:50%;background:rgba(47,122,53,.18);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--lime);font-size:1.15rem}
+.c-line a{color:var(--txt);text-decoration:none;font-weight:700}
+.c-line a:hover{color:var(--lime)}
+.c-line .txt{color:var(--mut)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:42px}
+form h3{font-size:1.7rem;text-transform:uppercase;margin-bottom:6px}
+form .fsub{color:var(--mut);font-size:.9rem;margin-bottom:26px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);margin-bottom:8px;font-weight:600}
+.field input,.field select,.field textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:12px;color:var(--txt);padding:15px;font-size:1rem;font-family:inherit}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--lime)}
+form .btn{width:100%;justify-content:center}
 /* ===== FOOTER ===== */
-footer{background:#070708;border-top:1px solid var(--line);padding:60px 0 100px;text-align:center}
-footer .flogo{font-family:'Bebas Neue',sans-serif;letter-spacing:.12em;font-size:2rem;color:#fff;margin-bottom:8px;line-height:1}
-footer .flogo span{color:var(--accent)}
-footer p{color:var(--gray);font-size:.9rem;margin-bottom:6px}
-footer a.ftel{color:var(--accent);font-weight:700}
-footer .demo{margin-top:24px;font-size:.78rem;color:#4e4e55;letter-spacing:.06em}
+footer{border-top:1px solid var(--line);padding:56px 0 40px;text-align:center;background:#040805}
+footer .flogo{font-family:'Anton';font-size:1.6rem;letter-spacing:.16em;margin-bottom:10px}
+footer p{color:var(--mut);font-size:.92rem;margin-bottom:6px}
+footer a.ftel{color:var(--lime);font-weight:700;text-decoration:none;font-size:1.15rem}
+footer .demo{margin-top:24px;font-size:.74rem;color:#3f5240;letter-spacing:.14em;text-transform:uppercase}
 /* ===== FLOATS ===== */
-.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
 .wa-float:hover{transform:scale(1.1)}
-.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(11,11,12,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
-.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:6px;font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
-.mobile-bar .call{background:var(--accent);color:#fff}
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(7,13,8,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 6px;border-radius:100px;font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.mobile-bar .call{background:var(--lime);color:#0a1409}
 .mobile-bar .wachat{background:var(--wa);color:#fff}
 /* ===== REVEAL ===== */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
 @media(max-width:960px){
-  .svc-grid{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr}
+  .shield{order:-1}
+  .shield svg{width:min(220px,60vw)}
+  .prow{grid-template-columns:1fr;gap:16px}
+  .prow:nth-child(even),.prow:nth-child(odd){margin:0}
+  .prow .right{text-align:left}
+  .diff-grid{grid-template-columns:repeat(2,1fr)}
   .testi-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
-  .stats-grid{grid-template-columns:repeat(2,1fr);gap:26px}
-  .diff-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
   .nav-links{display:none}
   .menu-toggle{display:block}
-  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(11,11,12,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
-  section{padding:80px 0}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(7,13,8,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
+  section{padding:76px 0}
 }
 @media(max-width:640px){
   .mobile-bar{display:flex}
@@ -181,50 +184,72 @@ footer .demo{margin-top:24px;font-size:.78rem;color:#4e4e55;letter-spacing:.06em
   .diff-grid{grid-template-columns:1fr}
 }
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header id="header">
   <div class="container nav">
-    <a href="#" class="logo">EL MONTE<span>TRAINING</span><small>STUDIO · PONCE</small></a>
+    <a href="#" class="logo">
+      <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="#123a17" stroke="#a8e05f" stroke-width="2.5"/>
+        <path d="M10 30 L19 16 L25 25 L29 20 L38 30 Z" fill="#a8e05f"/>
+        <path d="M19 16 L22 21 L16 21 Z" fill="#eef5ea"/>
+        <text x="24" y="41" text-anchor="middle" font-family="Anton,sans-serif" font-size="10" fill="#eef5ea" letter-spacing="3">EM</text>
+      </svg>
+      <span><b>EL MONTE</b><small>TRAINING STUDIO &middot; PONCE</small></span>
+    </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#programas">Programas</a></li>
-      <li><a href="#como">Cómo empezar</a></li>
+      <li><a href="#como">C&oacute;mo empezar</a></li>
       <li><a href="#opiniones">Resultados</a></li>
       <li><a href="#faq">Preguntas</a></li>
       <li><a href="#contacto">Contacto</a></li>
-      <li><a class="btn wa" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20informaci%C3%B3n%20para%20empezar%20a%20entrenar" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a class="btn wa" style="padding:12px 26px;font-size:.8rem" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20informaci%C3%B3n%20para%20empezar%20a%20entrenar" target="_blank" rel="noopener">WhatsApp</a></li>
     </ul>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir men&uacute;">&#9776;</button>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-ghost">NO PAIN</div>
-  <div class="container hero-inner">
-    <p class="eyebrow">Training studio · Ponce</p>
-    <h1>Entrena <span class="fill">duro.</span><br><span class="stroke">Sin excusas.</span></h1>
-    <p class="sub">Entrenamiento personal y grupos pequeños con coaching de verdad. Aquí no vienes a pasar el rato — vienes a cambiar.</p>
-    <p class="tag">🔥 Ponce · Puerto Rico</p>
-    <div class="hero-ctas">
-      <a class="btn wa" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20agendar%20mi%20primera%20sesi%C3%B3n" target="_blank" rel="noopener">📲 Agenda tu primera sesión</a>
-      <a class="btn ghost" href="tel:+19393213295">📞 Llamar ahora</a>
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow reveal">Training studio &middot; Ponce</p>
+      <h1 class="reveal">Entrena <span class="grn">duro.</span><br>Sin excusas.</h1>
+      <p class="sub reveal">Entrenamiento personal y grupos peque&ntilde;os con coaching de verdad. Aqu&iacute; no vienes a pasar el rato &mdash; vienes a cambiar.</p>
+      <p class="tagline reveal">Ponce &middot; Puerto Rico</p>
+      <div class="hero-ctas reveal">
+        <a class="btn wa" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20agendar%20mi%20primera%20sesi%C3%B3n" target="_blank" rel="noopener">Agenda tu primera sesi&oacute;n</a>
+        <a class="btn line" href="tel:+19393213295">Llamar ahora</a>
+      </div>
+      <div class="hero-phone reveal"><a href="tel:+19393213295">(939) 321-3295</a></div>
+      <div class="badge-row reveal"><span>Coaching personal</span><span>Grupos peque&ntilde;os</span><span>Resultados reales</span></div>
     </div>
-    <div class="hero-phone"><a href="tel:+19393213295">(939) 321-3295</a></div>
-    <div class="badge-row"><span>Coaching personal</span><span>Grupos pequeños</span><span>Resultados reales</span></div>
+    <div class="shield reveal">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="94" fill="#0c1a0d" stroke="#a8e05f" stroke-width="5"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#2f7a35" stroke-width="2" opacity=".6"/>
+        <path d="M40 128 L76 66 L98 100 L112 84 L160 128 Z" fill="#a8e05f"/>
+        <path d="M76 66 L86 80 L66 80 Z" fill="#eef5ea"/>
+        <path d="M40 128 L160 128 L160 136 L40 136 Z" fill="#2f7a35"/>
+        <text x="100" y="166" text-anchor="middle" font-family="Anton,sans-serif" font-size="30" fill="#eef5ea" letter-spacing="8">EM</text>
+      </svg>
+    </div>
   </div>
 </section>
 
 <div class="stats">
-  <div class="container stats-grid">
-    <div><div class="num">1-ON-1</div><div class="lbl">Atención personal</div></div>
-    <div><div class="num">GRUPOS</div><div class="lbl">Pequeños y enfocados</div></div>
+  <div class="stats-grid">
+    <div><div class="num">1-ON-1</div><div class="lbl">Atenci&oacute;n personal</div></div>
+    <div><div class="num">GRUPOS</div><div class="lbl">Peque&ntilde;os y enfocados</div></div>
     <div><div class="num">PONCE</div><div class="lbl">Tu base de entrenamiento</div></div>
     <div><div class="num">100%</div><div class="lbl">Compromiso</div></div>
   </div>
 </div>
 
-<div class="strip"><div>✦ SIN EXCUSAS &nbsp;&nbsp; ✦ ENTRENA DURO &nbsp;&nbsp; ✦ EL MONTE TRAINING STUDIO &nbsp;&nbsp; ✦ PONCE · PR &nbsp;&nbsp; ✦ SIN EXCUSAS &nbsp;&nbsp; ✦ ENTRENA DURO &nbsp;&nbsp; ✦ EL MONTE TRAINING STUDIO &nbsp;&nbsp; ✦ PONCE · PR &nbsp;&nbsp;</div></div>
+<div class="strip"><div>&#10022; SIN EXCUSAS &nbsp;&nbsp; &#10022; ENTRENA DURO &nbsp;&nbsp; &#10022; EL MONTE TRAINING STUDIO &nbsp;&nbsp; &#10022; PONCE &middot; PR &nbsp;&nbsp; &#10022; SIN EXCUSAS &nbsp;&nbsp; &#10022; ENTRENA DURO &nbsp;&nbsp; &#10022; EL MONTE TRAINING STUDIO &nbsp;&nbsp; &#10022; PONCE &middot; PR &nbsp;&nbsp; </div></div>
 
 <section id="programas">
   <div class="container">
@@ -233,125 +258,56 @@ footer .demo{margin-top:24px;font-size:.78rem;color:#4e4e55;letter-spacing:.06em
       <h2>Elige tu <em>batalla</em></h2>
       <p>Corto y directo: esto es lo que hacemos, y lo hacemos bien.</p>
     </div>
-    <div class="svc-grid">
-      <div class="card reveal">
-        <div class="ico">💪</div>
-        <h3>Entrenamiento Personal</h3>
-        <p>Un coach solo para ti. Plan a tu medida, técnica corregida rep por rep, resultados más rápidos.</p>
-        <ul><li>Evaluación inicial completa</li><li>Plan 100% personalizado</li><li>Seguimiento de progreso</li></ul>
-        <p class="price">desde $40 / sesión<small>Precio propuesto · planes mensuales disponibles</small></p>
-        <a class="btn wa" href="https://wa.me/19393213295?text=Hola%2C%20me%20interesa%20el%20Entrenamiento%20Personal" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
-      <div class="card reveal">
-        <div class="ico">🔥</div>
-        <h3>Grupos Pequeños</h3>
-        <p>Energía de equipo, atención de coach. Grupos reducidos donde nadie se esconde y todos trabajan.</p>
-        <ul><li>Máximo participantes por grupo</li><li>Rutinas que cambian cada semana</li><li>Ambiente que empuja</li></ul>
-        <p class="price">desde $25 / clase<small>Precio propuesto · paquetes de clases disponibles</small></p>
-        <a class="btn wa" href="https://wa.me/19393213295?text=Hola%2C%20me%20interesan%20los%20Grupos%20Peque%C3%B1os" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
-      <div class="card reveal">
-        <div class="ico">📅</div>
-        <h3>Membresía Mensual</h3>
-        <p>Entrena sin límites. Acceso a las clases grupales todo el mes y programación estructurada.</p>
-        <ul><li>Clases ilimitadas</li><li>Programación mensual</li><li>Comunidad que entrena en serio</li></ul>
-        <p class="price">desde $99 / mes<small>Precio propuesto · sin cargos escondidos</small></p>
-        <a class="btn wa" href="https://wa.me/19393213295?text=Hola%2C%20me%20interesa%20la%20Membres%C3%ADa%20Mensual" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
-      <div class="card reveal">
-        <div class="ico">⚡</div>
-        <h3>Fuerza y Acondicionamiento</h3>
-        <p>Levanta más, muévete mejor, aguanta más. Fuerza funcional y cardio que se traduce a la vida real.</p>
-        <ul><li>Técnica de levantamiento segura</li><li>Acondicionamiento metabólico</li><li>Mediciones de progreso</li></ul>
-        <p class="price">desde $35 / sesión<small>Precio propuesto · ideal para atletas</small></p>
-        <a class="btn wa" href="https://wa.me/19393213295?text=Hola%2C%20me%20interesa%20Fuerza%20y%20Acondicionamiento" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
+    <div class="prog">
+      <div class="prow reveal"><span class="idx">01</span><span><h3>Entrenamiento <span class="g">Personal</span></h3><p>Un coach solo para ti. Plan a tu medida, t&eacute;cnica corregida rep por rep, resultados m&aacute;s r&aacute;pidos.</p><ul><li>Evaluaci&oacute;n inicial completa</li><li>Plan 100% personalizado</li><li>Seguimiento de progreso</li></ul></span><span class="right"><span class="price">desde $40 / sesi&oacute;n<small>propuesto &middot; planes mensuales disponibles</small></span><a class="btn wa" href="https://wa.me/19393213295?text=Hola%2C%20me%20interesa%20el%20Entrenamiento%20Personal" target="_blank" rel="noopener">Pedir por WhatsApp</a></span></div>
+      <div class="prow reveal"><span class="idx">02</span><span><h3>Grupos <span class="g">Peque&ntilde;os</span></h3><p>Energ&iacute;a de equipo, atenci&oacute;n de coach. Grupos reducidos donde nadie se esconde y todos trabajan.</p><ul><li>Grupos reducidos</li><li>Rutinas que cambian cada semana</li><li>Ambiente que empuja</li></ul></span><span class="right"><span class="price">desde $25 / clase<small>propuesto &middot; paquetes de clases disponibles</small></span><a class="btn wa" href="https://wa.me/19393213295?text=Hola%2C%20me%20interesan%20los%20Grupos%20Peque%C3%B1os" target="_blank" rel="noopener">Pedir por WhatsApp</a></span></div>
+      <div class="prow reveal"><span class="idx">03</span><span><h3>Membres&iacute;a <span class="g">Mensual</span></h3><p>Entrena sin l&iacute;mites. Acceso a las clases grupales todo el mes y programaci&oacute;n estructurada.</p><ul><li>Clases ilimitadas</li><li>Programaci&oacute;n mensual</li><li>Comunidad que entrena en serio</li></ul></span><span class="right"><span class="price">desde $99 / mes<small>propuesto &middot; sin cargos escondidos</small></span><a class="btn wa" href="https://wa.me/19393213295?text=Hola%2C%20me%20interesa%20la%20Membres%C3%ADa%20Mensual" target="_blank" rel="noopener">Pedir por WhatsApp</a></span></div>
+      <div class="prow reveal"><span class="idx">04</span><span><h3>Fuerza y <span class="g">Acondicionamiento</span></h3><p>Levanta m&aacute;s, mu&eacute;vete mejor, aguanta m&aacute;s. Fuerza funcional y cardio que se traduce a la vida real.</p><ul><li>T&eacute;cnica de levantamiento segura</li><li>Acondicionamiento metab&oacute;lico</li><li>Mediciones de progreso</li></ul></span><span class="right"><span class="price">desde $35 / sesi&oacute;n<small>propuesto &middot; ideal para atletas</small></span><a class="btn wa" href="https://wa.me/19393213295?text=Hola%2C%20me%20interesa%20Fuerza%20y%20Acondicionamiento" target="_blank" rel="noopener">Pedir por WhatsApp</a></span></div>
     </div>
   </div>
 </section>
 
 <section id="como" class="how">
   <div class="container">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Cómo empezar</p>
+    <div class="sec-head center reveal">
+      <p class="eyebrow">C&oacute;mo empezar</p>
       <h2>Tres pasos. <em>Cero</em> excusas.</h2>
     </div>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="num">01</div>
-        <h3>Escríbenos</h3>
-        <p>Mándanos un WhatsApp. Dinos tu meta y tu nivel — sin pena.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">02</div>
-        <h3>Evaluación</h3>
-        <p>Medimos dónde estás para programar dónde vas. Simple y honesto.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">03</div>
-        <h3>Entrena</h3>
-        <p>Empieza tu plan. Nosotros te empujamos — tú pones el trabajo.</p>
-      </div>
+    <div class="timeline">
+      <div class="tstep reveal"><h3><span class="g">01 &middot;</span> Escr&iacute;benos</h3><p>M&aacute;ndanos un WhatsApp. Dinos tu meta y tu nivel &mdash; sin pena.</p></div>
+      <div class="tstep reveal"><h3><span class="g">02 &middot;</span> Evaluaci&oacute;n</h3><p>Medimos d&oacute;nde est&aacute;s para programar d&oacute;nde vas. Simple y honesto.</p></div>
+      <div class="tstep reveal"><h3><span class="g">03 &middot;</span> Entrena</h3><p>Empieza tu plan. Nosotros te empujamos &mdash; t&uacute; pones el trabajo.</p></div>
     </div>
   </div>
 </section>
 
 <section id="porque">
   <div class="container">
-    <div class="why-banner reveal">
-      <div>
-        <h2>No es un gym. <em>Es un studio.</em></h2>
-        <p>Nada de máquinas ocupadas por gente en el celular. Aquí cada sesión tiene propósito, cada rep cuenta, y tu coach está mirando. Entrenamiento de verdad en Ponce.</p>
-      </div>
-      <a class="btn" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20empezar%20esta%20semana" target="_blank" rel="noopener">Empezar esta semana</a>
+    <div class="sec-head center reveal">
+      <p class="eyebrow">La diferencia</p>
+      <h2>No es un gym. <em>Es un studio.</em></h2>
+      <p>Nada de m&aacute;quinas ocupadas por gente en el celular. Aqu&iacute; cada sesi&oacute;n tiene prop&oacute;sito, cada rep cuenta, y tu coach est&aacute; mirando.</p>
     </div>
     <div class="diff-grid">
-      <div class="diff reveal">
-        <div class="ico">👁️</div>
-        <h3>Coaching real</h3>
-        <p>Corrección de técnica en cada sesión. No entrenas solo.</p>
-      </div>
-      <div class="diff reveal">
-        <div class="ico">👥</div>
-        <h3>Grupos pequeños</h3>
-        <p>Atención individual dentro de la energía del grupo.</p>
-      </div>
-      <div class="diff reveal">
-        <div class="ico">📈</div>
-        <h3>Progreso medible</h3>
-        <p>Evaluaciones periódicas. Ves tus números subir.</p>
-      </div>
-      <div class="diff reveal">
-        <div class="ico">🤝</div>
-        <h3>Comunidad</h3>
-        <p>Gente que entrena en serio y te empuja a más.</p>
-      </div>
+      <div class="diff reveal"><div class="pk"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a8e05f" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Coaching real</h3><p>Correcci&oacute;n de t&eacute;cnica en cada sesi&oacute;n. No entrenas solo.</p></div>
+      <div class="diff reveal"><div class="pk"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a8e05f" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Grupos peque&ntilde;os</h3><p>Atenci&oacute;n individual dentro de la energ&iacute;a del grupo.</p></div>
+      <div class="diff reveal"><div class="pk"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a8e05f" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div><h3>Progreso medible</h3><p>Evaluaciones peri&oacute;dicas. Ves tus n&uacute;meros subir.</p></div>
+      <div class="diff reveal"><div class="pk"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#a8e05f" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h3>Comunidad</h3><p>Gente que entrena en serio y te empuja a m&aacute;s.</p></div>
     </div>
+    <div class="why-cta reveal"><a class="btn wa" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20empezar%20esta%20semana" target="_blank" rel="noopener">Empezar esta semana</a></div>
   </div>
 </section>
 
 <section id="opiniones" class="testi">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head center reveal">
       <p class="eyebrow">Resultados</p>
-      <h2>Gente que <em>ya cambió</em></h2>
+      <h2>Gente que <em>ya cambi&oacute;</em></h2>
     </div>
     <div class="testi-grid">
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"Llevo 3 meses y nunca había sido tan constante. El coaching personal hace toda la diferencia."</p>
-        <p class="who">Miembro · Ponce</p>
-      </div>
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"Los grupos pequeños son otro nivel. Te corrigen, te empujan y el ambiente es brutal."</p>
-        <p class="who">Miembro · Ponce</p>
-      </div>
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"Bajé 18 libras y subí fuerza en todo. El plan es claro y los resultados se ven."</p>
-        <p class="who">Miembro · Juana Díaz</p>
-      </div>
+      <div class="testi-card reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Llevo 3 meses y nunca hab&iacute;a sido tan constante. El coaching personal hace toda la diferencia.&rdquo;</p><p class="who">Miembro &middot; Ponce</p></div>
+      <div class="testi-card reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Los grupos peque&ntilde;os son otro nivel. Te corrigen, te empujan y el ambiente es brutal.&rdquo;</p><p class="who">Miembro &middot; Ponce</p></div>
+      <div class="testi-card reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Baj&eacute; 18 libras y sub&iacute; fuerza en todo. El plan es claro y los resultados se ven.&rdquo;</p><p class="who">Miembro &middot; Juana D&iacute;az</p></div>
     </div>
     <p class="note">Testimonios con fines ilustrativos.</p>
   </div>
@@ -359,42 +315,27 @@ footer .demo{margin-top:24px;font-size:.78rem;color:#4e4e55;letter-spacing:.06em
 
 <section id="faq">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head center reveal">
       <p class="eyebrow">Preguntas</p>
       <h2>Dudas <em>fuera</em></h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item reveal">
-        <button class="faq-q">Soy principiante, ¿puedo entrenar aquí? <span>+</span></button>
-        <div class="faq-a"><p>Claro. La evaluación inicial nos dice tu nivel y programamos desde ahí. La mayoría de nuestros miembros empezó de cero.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Qué necesito traer? <span>+</span></button>
-        <div class="faq-a"><p>Ropa cómoda, tenis de entrenar, toalla y agua. Del resto nos encargamos nosotros.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Cuál es el horario? <span>+</span></button>
-        <div class="faq-a"><p>Trabajamos por sesiones programadas de lunes a sábado. Escríbenos por WhatsApp y coordinamos el horario que te funcione.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿La primera sesión tiene costo? <span>+</span></button>
-        <div class="faq-a"><p>Escríbenos y te explicamos cómo funciona la sesión de evaluación inicial. Sin compromiso.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Dónde están ubicados? <span>+</span></button>
-        <div class="faq-a"><p>En Ponce, Puerto Rico. Mándanos un WhatsApp y te enviamos la ubicación exacta.</p></div>
-      </div>
+      <div class="faq-item reveal"><button class="faq-q">Soy principiante, &iquest;puedo entrenar aqu&iacute;? <span>+</span></button><div class="faq-a"><p>Claro. La evaluaci&oacute;n inicial nos dice tu nivel y programamos desde ah&iacute;. La mayor&iacute;a de nuestros miembros empez&oacute; de cero.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;Qu&eacute; necesito traer? <span>+</span></button><div class="faq-a"><p>Ropa c&oacute;moda, tenis de entrenar, toalla y agua. Del resto nos encargamos nosotros.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;Cu&aacute;l es el horario? <span>+</span></button><div class="faq-a"><p>Trabajamos por sesiones programadas de lunes a s&aacute;bado. Escr&iacute;benos por WhatsApp y coordinamos el horario que te funcione.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;La primera sesi&oacute;n tiene costo? <span>+</span></button><div class="faq-a"><p>Escr&iacute;benos y te explicamos c&oacute;mo funciona la sesi&oacute;n de evaluaci&oacute;n inicial. Sin compromiso.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;D&oacute;nde est&aacute;n ubicados? <span>+</span></button><div class="faq-a"><p>En Ponce, Puerto Rico. M&aacute;ndanos un WhatsApp y te enviamos la ubicaci&oacute;n exacta.</p></div></div>
     </div>
   </div>
 </section>
 
 <section class="cta-band">
   <div class="container">
-    <h2>Mañana querrás haber empezado hoy</h2>
-    <p>Escríbenos ahora. Tu primera sesión te está esperando.</p>
-    <div class="btn-row">
-      <a class="btn dark" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20agendar%20mi%20primera%20sesi%C3%B3n" target="_blank" rel="noopener">📲 Agendar por WhatsApp</a>
-      <a class="btn dark" href="tel:+19393213295">📞 (939) 321-3295</a>
+    <h2 class="reveal">Ma&ntilde;ana querr&aacute;s haber<br><span class="grn">empezado hoy</span></h2>
+    <p class="reveal">Escr&iacute;benos ahora. Tu primera sesi&oacute;n te est&aacute; esperando.</p>
+    <div class="btn-row reveal">
+      <a class="btn wa" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20agendar%20mi%20primera%20sesi%C3%B3n" target="_blank" rel="noopener">Agendar por WhatsApp</a>
+      <a class="btn line" href="tel:+19393213295">(939) 321-3295</a>
     </div>
   </div>
 </section>
@@ -404,56 +345,40 @@ footer .demo{margin-top:24px;font-size:.78rem;color:#4e4e55;letter-spacing:.06em
     <div class="contact-info reveal">
       <p class="eyebrow">Contacto</p>
       <h2>Empieza <em>hoy</em></h2>
-      <p>Un mensaje es todo lo que te separa de tu primera sesión. Te respondemos rápido.</p>
-      <div class="c-line"><span class="ico">📞</span><a href="tel:+19393213295">(939) 321-3295</a></div>
-      <div class="c-line"><span class="ico">📲</span><a href="https://wa.me/19393213295" target="_blank" rel="noopener">WhatsApp directo</a></div>
-      <div class="c-line"><span class="ico">📍</span><span class="txt">Ponce, Puerto Rico</span></div>
-      <div class="c-line"><span class="ico">🕐</span><span class="txt">Lun–Sáb · Por sesiones programadas</span></div>
+      <p>Un mensaje es todo lo que te separa de tu primera sesi&oacute;n. Te respondemos r&aacute;pido.</p>
+      <div class="c-line"><span class="k">&#9742;</span><a href="tel:+19393213295">(939) 321-3295</a></div>
+      <div class="c-line"><span class="k">&#9993;</span><a href="https://wa.me/19393213295" target="_blank" rel="noopener">WhatsApp directo</a></div>
+      <div class="c-line"><span class="k">&#9673;</span><span class="txt">Ponce, Puerto Rico</span></div>
+      <div class="c-line"><span class="k">&#9733;</span><a href="https://www.instagram.com/elmontetrainingstudio_llc" target="_blank" rel="noopener">@elmontetrainingstudio_llc</a></div>
     </div>
     <form id="bookForm" class="reveal">
-      <h3>Agenda tu sesión</h3>
-      <div class="field">
-        <label for="fNombre">Nombre</label>
-        <input id="fNombre" type="text" placeholder="Tu nombre" required>
-      </div>
-      <div class="field">
-        <label for="fTel">Teléfono</label>
-        <input id="fTel" type="tel" placeholder="(939) 000-0000" required>
-      </div>
-      <div class="field">
-        <label for="fSvc">Programa</label>
-        <select id="fSvc">
-          <option>Entrenamiento Personal</option>
-          <option>Grupos Pequeños</option>
-          <option>Membresía Mensual</option>
-          <option>Fuerza y Acondicionamiento</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="fMsg">Tu meta</label>
-        <textarea id="fMsg" rows="3" placeholder="Cuéntanos qué quieres lograr"></textarea>
-      </div>
-      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
+      <h3>Agenda tu sesi&oacute;n</h3>
+      <p class="fsub">Te respondemos por WhatsApp.</p>
+      <div class="field"><label for="fNombre">Nombre</label><input id="fNombre" type="text" placeholder="Tu nombre" required></div>
+      <div class="field"><label for="fTel">Tel&eacute;fono</label><input id="fTel" type="tel" placeholder="(939) 321-3295" required></div>
+      <div class="field"><label for="fSvc">Programa</label><select id="fSvc">
+        <option>Entrenamiento Personal</option><option>Grupos Peque&ntilde;os</option><option>Membres&iacute;a Mensual</option><option>Fuerza y Acondicionamiento</option>
+      </select></div>
+      <div class="field"><label for="fMsg">Tu meta</label><textarea id="fMsg" rows="3" placeholder="Cu&eacute;ntanos qu&eacute; quieres lograr"></textarea></div>
+      <button class="btn wa" type="submit">Enviar por WhatsApp</button>
     </form>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p class="flogo">EL MONTE<span>TRAINING</span></p>
-    <p>Training studio · Ponce, Puerto Rico · Sin excusas</p>
+    <p class="flogo">EL MONTE TRAINING STUDIO</p>
+    <p>Training studio &middot; Ponce, Puerto Rico</p>
     <p><a class="ftel" href="tel:+19393213295">(939) 321-3295</a></p>
-    <p class="demo">Demostración creada por ManuPro</p>
+    <p class="demo">Demostraci&oacute;n creada por ManuPro</p>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20empezar%20a%20entrenar" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-
+<a class="wa-float" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20agendar%20mi%20primera%20sesi%C3%B3n" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6 1.6h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.2c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.8C4.9 9 9.9 4 16 4s11.1 5 11.1 11-5 10.2-11.1 10.2zm6.1-7.6c-.3-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.5-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.6 5.7 5.1 2.2.9 3 .9 4.1.8.6-.1 2-0.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.4-.2-.7-.4z"/></svg></a>
 <div class="mobile-bar">
-  <a class="call" href="tel:+19393213295">📞 Llamar</a>
-  <a class="wachat" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20empezar%20a%20entrenar" target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a class="call" href="tel:+19393213295"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg> Llamar</a>
+  <a class="wachat" href="https://wa.me/19393213295?text=Hola%20El%20Monte%20Training%20Studio%2C%20quiero%20agendar%20mi%20primera%20sesi%C3%B3n" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6 1.6h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.2c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.8C4.9 9 9.9 4 16 4s11.1 5 11.1 11-5 10.2-11.1 10.2zm6.1-7.6c-.3-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.5-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.6 5.7 5.1 2.2.9 3 .9 4.1.8.6-.1 2-0.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.4-.2-.7-.4z"/></svg> WhatsApp</a>
 </div>
-
 <script>
 const header=document.getElementById('header');
 addEventListener('scroll',()=>{header.classList.toggle('solid',scrollY>40)},{passive:true});
@@ -462,8 +387,8 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   const btn=item.querySelector('.faq-q');
   btn.addEventListener('click',()=>{
     const wasOpen=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+';});
-    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='×';}
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q').querySelector('span').textContent='+';});
+    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='\u00d7';}
   });
 });
 document.getElementById('bookForm').addEventListener('submit',e=>{
@@ -472,9 +397,9 @@ document.getElementById('bookForm').addEventListener('submit',e=>{
   const tel=document.getElementById('fTel').value.trim();
   const svc=document.getElementById('fSvc').value;
   const msg=document.getElementById('fMsg').value.trim();
-  if(!nombre||!tel){alert('Por favor completa tu nombre y teléfono.');return;}
-  let text='Hola El Monte Training Studio, soy '+nombre+'. Me interesa: '+svc+'. Mi teléfono es '+tel+'.';
-  if(msg)text+=' Mi meta: '+msg;
+  if(!nombre||!tel){alert('Por favor completa tu nombre y tel\u00e9fono.');return;}
+  let text='Hola El Monte Training Studio, soy '+nombre+'. Quiero: '+svc+'. Mi tel\u00e9fono es '+tel+'.';
+  if(msg)text+=' '+msg;
   window.open('https://wa.me/19393213295?text='+encodeURIComponent(text),'_blank');
 });
 const io=new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}})},{threshold:.12});

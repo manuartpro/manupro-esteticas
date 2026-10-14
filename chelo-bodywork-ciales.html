@@ -3,179 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chelo Bodywork and Painting | Hojalatería y Pintura en Ciales, PR</title>
-<meta name="description" content="Chelo Bodywork and Painting — hojalatería y pintura profesional en Ciales, PR. Pintura completa, reparación de choques, pulido. Trabajamos con seguros. (787) 718-2664.">
+<title>Chelo Bodywork and Painting | Hojalatería y Pintura en Ciales, PR — (787) 718-2664</title>
+<meta name="description" content="Chelo Bodywork and Painting — hojalatería y pintura en cabina en Ciales, PR. Igualación de color exacta, coordinación con seguros. Estimado gratis: (787) 718-2664.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --black:#0c0c0d; --dark:#131315; --panel:#1a1a1d; --line:rgba(255,107,0,.32);
-  --org:#FF6B00; --org-hi:#FF8C38; --org-dim:rgba(255,107,0,.12);
-  --white:#ffffff; --gray:#9c9ca2; --wa:#25D366;
+  --red:#E10600; --red-dk:#9E0400; --black:#0B0B0D; --dark:#141417; --panel:#1B1B1F;
+  --silver:#C7CDD6; --silver-dk:#8A919C; --white:#ffffff; --gray:#9AA0AA; --wa:#25D366;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.7;overflow-x:hidden}
-h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;line-height:1;text-transform:uppercase;letter-spacing:.02em}
+h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;line-height:.95;letter-spacing:.03em}
 a{text-decoration:none;color:inherit}
-.container{width:min(1180px,92%);margin:0 auto}
-section{padding:100px 0;position:relative}
+.container{width:min(1140px,92%);margin:0 auto}
+section{padding:96px 0;position:relative}
+.checker{height:22px;background:repeating-conic-gradient(#0B0B0D 0% 25%, #fff 0% 50%) 0 0/44px 44px}
 /* HEADER */
 header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:transparent}
-header.solid{background:rgba(12,12,13,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-.logo{font-family:'Anton',sans-serif;font-size:1.4rem;letter-spacing:.06em;line-height:1.1}
-.logo .o{color:var(--org)}
-.logo small{display:block;font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:.4em;color:var(--gray);font-weight:600}
+header.solid{background:rgba(11,11,13,.96);backdrop-filter:blur(12px);border-bottom:2px solid var(--red)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:13px 0}
+.logo{display:flex;align-items:center;gap:12px}
+.shield{width:54px;height:54px;background:linear-gradient(160deg,var(--red) 0%,var(--red-dk) 100%);clip-path:polygon(50% 0,100% 22%,100% 62%,50% 100%,0 62%,0 22%);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.05em;padding-bottom:4px}
+.logo .t{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;line-height:1;color:#fff;letter-spacing:.06em}
+.logo .t small{display:block;font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:.4em;color:var(--silver-dk);font-weight:600}
+.logo .t .rd{color:var(--red)}
 .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
-.nav-links a{font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:#d4d4d8;transition:.25s;font-weight:600}
-.nav-links a:hover{color:var(--org-hi)}
-.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;font-size:1.4rem;cursor:pointer;color:var(--org);padding:4px 12px}
-.btn{display:inline-block;background:var(--org);color:#160a00;padding:14px 32px;border-radius:4px;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;transition:.3s;border:1px solid var(--org);cursor:pointer}
-.btn:hover{background:transparent;color:var(--org-hi);transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,107,0,.3)}
+.nav-links a{font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;color:#d4d4d4;transition:.25s;font-weight:600}
+.nav-links a:hover{color:var(--red)}
+.menu-toggle{display:none;background:none;border:1px solid rgba(225,6,0,.5);border-radius:8px;font-size:1.4rem;cursor:pointer;color:var(--red);padding:4px 12px}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:14px 32px;border-radius:4px;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;transition:.28s;border:2px solid var(--red);cursor:pointer;transform:skew(-6deg)}
+.btn span{display:inline-block;transform:skew(6deg)}
+.btn:hover{background:transparent;color:var(--red);box-shadow:0 10px 28px rgba(225,6,0,.3)}
 .btn.wa{background:var(--wa);border-color:var(--wa);color:#062b16}
-.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 28px rgba(37,211,102,.25)}
+.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 28px rgba(37,211,102,.3)}
 .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
-.btn.ghost:hover{border-color:var(--org-hi);color:var(--org-hi);box-shadow:none}
+.btn.ghost:hover{border-color:var(--red);color:var(--red);box-shadow:none}
 .btn.sm{padding:11px 22px;font-size:.76rem}
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
-  background:linear-gradient(115deg,rgba(12,12,13,.55) 30%,rgba(12,12,13,.92) 75%),
-  linear-gradient(135deg,#2b1505 0%,#120a05 45%,var(--black) 100%)}
-.hero .paint-splash{position:absolute;right:-6%;top:8%;width:44vw;height:44vw;max-width:640px;max-height:640px;border-radius:50%;
-  background:radial-gradient(circle,rgba(255,107,0,.5) 0%,rgba(255,107,0,.14) 45%,transparent 70%);filter:blur(10px);pointer-events:none}
-.hero-inner{position:relative;z-index:2;padding:140px 0 90px;max-width:860px}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;letter-spacing:.4em;text-transform:uppercase;font-size:.74rem;color:var(--org-hi);margin-bottom:22px;font-weight:700}
-.eyebrow::before{content:'';width:44px;height:3px;background:var(--org)}
-.hero h1{font-size:clamp(3.2rem,10.5vw,7.2rem);margin-bottom:20px}
-.hero h1 em{font-style:normal;color:var(--org);text-shadow:0 0 60px rgba(255,107,0,.45)}
-.hero .sub{font-size:1.15rem;font-weight:300;max-width:620px;margin-bottom:12px;color:#d6d6da}
-.hero .ins{font-size:.95rem;color:var(--org-hi);font-weight:600;letter-spacing:.05em;margin-bottom:32px}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:30px}
-.hero-phone{font-size:1.6rem;font-weight:800;letter-spacing:.03em}
-.hero-phone a{color:#fff;border-bottom:3px solid var(--org);padding-bottom:3px;transition:.25s}
-.hero-phone a:hover{color:var(--org-hi)}
+/* HERO — speed lines */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;
+  background:
+    linear-gradient(180deg,rgba(11,11,13,.55) 0%,rgba(11,11,13,.95) 100%),
+    repeating-linear-gradient(100deg,transparent 0 60px,rgba(225,6,0,.08) 60px 62px,transparent 62px 130px),
+    radial-gradient(ellipse 80% 60% at 80% 20%,#2A1214 0%,var(--black) 70%)}
+.hero-inner{position:relative;z-index:2;padding:150px 0 90px;max-width:920px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;letter-spacing:.4em;text-transform:uppercase;font-size:.72rem;color:var(--red);margin-bottom:22px;font-weight:700}
+.eyebrow::before{content:'';width:44px;height:3px;background:var(--red);transform:skew(-20deg)}
+.hero h1{font-size:clamp(3.6rem,12vw,8rem);margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .sub{font-size:1.12rem;font-weight:300;max-width:640px;margin-bottom:14px;color:#cfcfcf}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin:32px 0 26px}
+.hero-phone{font-size:1.7rem;font-weight:800}
+.hero-phone a{color:#fff;border-bottom:3px solid var(--red);padding-bottom:3px;transition:.25s}
+.hero-phone a:hover{color:var(--red)}
 .hero-note{font-size:.85rem;color:var(--gray);margin-top:8px}
-.hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-.hbadge{border:1px solid var(--line);background:rgba(255,107,0,.08);padding:10px 18px;border-radius:4px;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:#ffd9b8;font-weight:700}
-/* MARQUEE */
-.strip{background:var(--org);color:#160a00;overflow:hidden;padding:12px 0;font-family:'Anton',sans-serif;letter-spacing:.18em;font-size:1rem;text-transform:uppercase}
-.strip div{white-space:nowrap;animation:slide 26s linear infinite;display:inline-block}
-@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero-tags{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.htag{border:1px solid rgba(225,6,0,.55);background:rgba(225,6,0,.1);color:#FF8A80;padding:9px 16px;border-radius:4px;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;transform:skew(-6deg)}
+.htag span{display:inline-block;transform:skew(6deg)}
 /* PROOF */
-.proof{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.proof{background:var(--red);color:#fff}
 .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:44px 0;text-align:center}
-.proof-item b{display:block;font-family:'Anton',sans-serif;font-size:2rem;color:var(--org-hi);letter-spacing:.03em}
-.proof-item span{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray)}
+.proof-item b{display:block;font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.04em;margin-bottom:4px}
+.proof-item span{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:#FFD9D6}
+/* MARQUEE */
+.strip{background:var(--dark);color:var(--silver);overflow:hidden;padding:12px 0;font-family:'Bebas Neue',sans-serif;letter-spacing:.22em;font-size:1.05rem;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.strip div{white-space:nowrap;animation:slide 24s linear infinite;display:inline-block}
+.strip em{font-style:normal;color:var(--red)}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 /* SEC HEADS */
-.sec-head{text-align:center;max-width:720px;margin:0 auto 60px}
+.sec-head{max-width:720px;margin:0 auto 58px;text-align:center}
 .sec-head .eyebrow{justify-content:center}
-.sec-head .eyebrow::after{content:'';width:44px;height:3px;background:var(--org)}
-.sec-head h2{font-size:clamp(2.2rem,5.5vw,3.6rem);margin-bottom:14px}
-.sec-head h2 em{font-style:normal;color:var(--org)}
+.sec-head h2{font-size:clamp(2.6rem,6vw,4.2rem);margin-bottom:14px}
+.sec-head h2 em{font-style:normal;color:var(--red)}
 .sec-head p{color:var(--gray)}
 /* SERVICES */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.card{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:40px 30px;transition:.35s;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.card::after{content:'';position:absolute;left:0;bottom:0;height:4px;width:100%;background:linear-gradient(90deg,var(--org),transparent);transform:scaleX(0);transform-origin:left;transition:.4s}
-.card:hover{transform:translateY(-8px);border-color:var(--org);box-shadow:0 22px 55px rgba(255,107,0,.14)}
-.card:hover::after{transform:scaleX(1)}
-.card .ico{font-size:2.5rem;margin-bottom:16px}
-.card h3{font-size:1.4rem;margin-bottom:10px}
-.card p{color:var(--gray);font-size:.93rem;margin-bottom:16px;flex:1}
-.price{color:var(--org-hi);font-weight:800;font-size:1.2rem;margin-bottom:4px}
-.price-note{font-size:.7rem;color:#6d6d72;letter-spacing:.06em;margin-bottom:20px;text-transform:uppercase}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--panel);border:1px solid rgba(255,255,255,.09);border-radius:8px;padding:36px 30px;transition:.32s;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--red),var(--silver-dk));transform:scaleX(0);transform-origin:left;transition:.35s}
+.card:hover{transform:translateY(-8px);border-color:rgba(225,6,0,.5);box-shadow:0 20px 50px rgba(225,6,0,.12)}
+.card:hover::before{transform:scaleX(1)}
+.card .ico{font-size:2.4rem;margin-bottom:14px}
+.card h3{font-size:1.6rem;margin-bottom:10px;letter-spacing:.04em}
+.card p{color:var(--gray);font-size:.92rem;margin-bottom:16px;flex:1}
+.price{color:var(--red);font-weight:800;font-size:1.2rem;margin-bottom:4px}
+.price.free{color:var(--wa)}
+.price-note{font-size:.7rem;color:#6d6d6d;letter-spacing:.06em;margin-bottom:20px;text-transform:uppercase}
 .card .btn{text-align:center}
-/* PROCESS (paint steps) */
-.process{background:var(--dark)}
-.psteps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.pstep{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:36px 28px;position:relative;transition:.3s;overflow:hidden}
-.pstep:hover{border-color:var(--org);transform:translateY(-5px)}
-.pstep .num{font-family:'Anton',sans-serif;font-size:4rem;color:transparent;-webkit-text-stroke:1.5px var(--org);line-height:1;margin-bottom:12px}
-.pstep h3{font-size:1.25rem;margin-bottom:10px}
-.pstep p{color:var(--gray);font-size:.92rem}
-/* GALLERY */
-.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.gal{border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08);transition:.35s;background:var(--panel)}
-.gal:hover{transform:translateY(-6px) scale(1.01);border-color:var(--org);box-shadow:0 20px 50px rgba(0,0,0,.55)}
-.gal-vis{height:200px;position:relative;display:flex;align-items:flex-end;justify-content:flex-start}
-.gal-vis .car{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:5rem;filter:drop-shadow(0 10px 24px rgba(0,0,0,.6))}
-.gal-vis small{position:relative;z-index:2;margin:0 0 12px 16px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.92);background:rgba(0,0,0,.45);padding:5px 12px;border-radius:4px}
-.gal-body{padding:24px}
-.gal-body h3{font-size:1.15rem;margin-bottom:6px}
-.gal-body p{color:var(--gray);font-size:.9rem}
+/* FINISHES — honest swatch gallery */
+.finishes{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.fin-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.fin{border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);transition:.3s}
+.fin:hover{transform:translateY(-5px)}
+.fin .sw{height:110px}
+.fin .fl{padding:12px 14px;background:var(--panel)}
+.fin .fl h3{font-size:1.05rem;letter-spacing:.05em}
+.fin .fl p{color:var(--gray);font-size:.76rem}
+/* HOW */
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.step{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:26px 18px;text-align:center;transition:.3s;position:relative}
+.step:hover{border-color:var(--red);transform:translateY(-5px)}
+.step .num{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--red);line-height:1;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px;letter-spacing:.05em}
+.step p{color:var(--gray);font-size:.82rem}
 /* DIFF */
-.diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.diff{border-left:3px solid var(--org);padding:6px 0 6px 22px}
-.diff h3{font-size:1.15rem;margin-bottom:8px}
-.diff p{color:var(--gray);font-size:.92rem}
+.diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.diff{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:30px 26px;transition:.3s;border-left:5px solid var(--red)}
+.diff:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.5)}
+.diff h3{font-size:1.3rem;margin-bottom:8px;letter-spacing:.04em}
+.diff p{color:var(--gray);font-size:.9rem}
 /* TESTI */
 .testi{background:var(--dark)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.testi-card{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:32px;transition:.3s}
-.testi-card:hover{transform:translateY(-5px);border-color:var(--org)}
-.stars{color:var(--org-hi);letter-spacing:.25em;margin-bottom:14px;font-size:1.05rem}
-.testi-card p{color:#d6d6da;font-style:italic;margin-bottom:16px;font-size:.94rem}
-.testi-card .who{color:var(--gray);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
-.illus-note{text-align:center;color:#6d6d72;font-size:.78rem;margin-top:26px;letter-spacing:.05em}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi-card{background:var(--panel);border:1px solid rgba(255,255,255,.09);border-radius:8px;padding:32px;transition:.3s}
+.testi-card:hover{transform:translateY(-5px);border-color:var(--red)}
+.stars{color:var(--red);letter-spacing:.22em;margin-bottom:14px;font-size:1.05rem}
+.testi-card p{color:#d4d4d4;font-style:italic;margin-bottom:16px;font-size:.94rem}
+.testi-card .who{color:var(--gray);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.illus-note{text-align:center;color:#6d6d6d;font-size:.78rem;margin-top:26px}
 /* FAQ */
-.faq-list{max-width:780px;margin:0 auto}
-.faq-item{border-bottom:1px solid rgba(255,255,255,.1)}
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.12)}
 .faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.04rem;font-weight:600;text-align:left;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Inter',sans-serif}
-.faq-q span{color:var(--org);font-size:1.5rem;transition:.3s;flex-shrink:0}
+.faq-q span{color:var(--red);font-size:1.5rem;transition:.3s;flex-shrink:0}
 .faq-item.open .faq-q span{transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--gray);font-size:.95rem}
 .faq-a p{padding:0 0 24px}
 /* CTA BAND */
-.cta-band{background:linear-gradient(135deg,#331a08,#120a04 65%);border-top:2px solid var(--org);border-bottom:2px solid var(--org);text-align:center;padding:108px 0;position:relative;overflow:hidden}
-.cta-band::before{content:'🎨';position:absolute;left:5%;top:50%;transform:translateY(-50%) rotate(-12deg);font-size:10rem;opacity:.08}
+.cta-band{background:linear-gradient(135deg,var(--red-dk),var(--red));text-align:center;padding:100px 0;color:#fff;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(100deg,transparent 0 60px,rgba(0,0,0,.12) 60px 62px,transparent 62px 130px)}
 .cta-band .container{position:relative;z-index:2}
-.cta-band h2{font-size:clamp(2.4rem,6vw,4.4rem);margin-bottom:14px}
-.cta-band h2 em{font-style:normal;color:var(--org)}
-.cta-band p{color:#d6d6da;max-width:560px;margin:0 auto 34px;font-size:1.04rem}
+.cta-band h2{font-size:clamp(2.8rem,7vw,4.8rem);margin-bottom:14px}
+.cta-band p{max-width:560px;margin:0 auto 34px;font-size:1.04rem;color:#FFD9D6}
 .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-band .btn{background:#fff;border-color:#fff;color:var(--red-dk)}
+.cta-band .btn:hover{background:transparent;color:#fff}
+.cta-band .btn.ghost{border-color:#fff;color:#fff;background:transparent}
+.cta-band .btn.ghost:hover{background:#fff;color:var(--red-dk)}
 /* CONTACT */
+.contact{background:var(--dark);border-top:1px solid rgba(255,255,255,.06)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.contact-info h2{font-size:clamp(2.2rem,4.5vw,3rem);margin-bottom:14px}
-.contact-info h2 em{font-style:normal;color:var(--org)}
+.contact-info h2{font-size:clamp(2.6rem,5vw,3.6rem);margin-bottom:14px}
+.contact-info h2 em{font-style:normal;color:var(--red)}
 .contact-info>p{color:var(--gray);margin-bottom:26px}
 .c-line{display:flex;align-items:center;gap:14px;margin-bottom:17px;font-size:1.04rem}
 .c-line .ico{font-size:1.4rem}
-.c-line a{color:#fff;font-weight:700;border-bottom:2px solid var(--org)}
-form{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:36px}
-form h3{margin-bottom:20px;font-size:1.4rem}
+.c-line a{color:#fff;font-weight:700;border-bottom:2px solid var(--red)}
+form{background:var(--panel);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:36px}
+form h3{margin-bottom:20px;font-size:1.6rem;letter-spacing:.04em}
 .field{margin-bottom:16px}
 .field label{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:6px;font-weight:600}
-.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.12);border-radius:6px;color:#fff;padding:12px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--org)}
+.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.14);border-radius:6px;color:#fff;padding:12px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--red)}
 /* FOOTER */
-footer{background:#070707;border-top:1px solid rgba(255,255,255,.06);padding:52px 0 110px;text-align:center}
-footer .flogo{font-family:'Anton',sans-serif;letter-spacing:.08em;font-size:1.45rem;margin-bottom:8px}
-footer .flogo .o{color:var(--org)}
+footer{background:#060607;border-top:1px solid rgba(255,255,255,.07);padding:52px 0 110px;text-align:center}
+footer .flogo{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;margin-bottom:8px;color:#fff;display:flex;align-items:center;justify-content:center;gap:12px;letter-spacing:.05em}
+footer .flogo .sh{width:44px;height:44px;background:linear-gradient(160deg,var(--red),var(--red-dk));clip-path:polygon(50% 0,100% 22%,100% 62%,50% 100%,0 62%,0 22%);display:flex;align-items:center;justify-content:center;font-size:1.05rem;padding-bottom:3px}
+footer .flogo .rd{color:var(--red)}
 footer p{color:var(--gray);font-size:.9rem;margin-bottom:6px}
-footer .demo{margin-top:20px;font-size:.76rem;color:#55555a;letter-spacing:.06em}
+footer .demo{margin-top:20px;font-size:.76rem;color:#4a4a4a;letter-spacing:.06em}
 /* FLOATS */
 .wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.4);transition:.3s}
 .wa-float:hover{transform:scale(1.1)}
-.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(12,12,13,.97);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
-.sticky-bar a{flex:1;text-align:center;padding:13px 8px;border-radius:6px;font-weight:800;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
-.sticky-bar .call{background:var(--org);color:#160a00}
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(11,11,13,.97);border-top:2px solid var(--red);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.sticky-bar a{flex:1;text-align:center;padding:13px 8px;border-radius:4px;font-weight:800;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
+.sticky-bar .call{background:var(--red);color:#fff}
 .sticky-bar .wab{background:var(--wa);color:#062b16}
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.3,1)}
 .reveal.visible{opacity:1;transform:none}
 @media(max-width:960px){
-  .svc-grid,.psteps,.gal-grid,.diff-grid,.testi-grid{grid-template-columns:1fr 1fr}
+  .svc-grid,.diff-grid,.testi-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .fin-grid{grid-template-columns:repeat(3,1fr)}
   .contact-grid{grid-template-columns:1fr}
   .proof-grid{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
   .menu-toggle{display:block}
-  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(12,12,13,.98);flex-direction:column;padding:26px;gap:18px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(11,11,13,.98);flex-direction:column;padding:26px;gap:18px;border-bottom:2px solid var(--red)}
 }
 @media(max-width:640px){
-  section{padding:72px 0}
-  .svc-grid,.psteps,.gal-grid,.diff-grid,.testi-grid{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .svc-grid,.diff-grid,.testi-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .fin-grid{grid-template-columns:1fr 1fr}
   .sticky-bar{display:flex}
   .wa-float{display:none}
   footer{padding-bottom:130px}
@@ -186,48 +198,47 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#55555a;letter-spacing:.06em
 
 <header id="siteHeader">
   <div class="container nav">
-    <a href="#" class="logo">Chelo <span class="o">Bodywork</span><br>&amp; Painting<small>CIALES · PUERTO RICO</small></a>
+    <a href="#" class="logo"><span class="shield">CB</span><span class="t">Chelo <span class="rd">Bodywork</span><small>HOJALATERÍA · CIALES</small></span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#proceso">Proceso</a></li>
-      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#acabados">Acabados</a></li>
       <li><a href="#faq">Preguntas</a></li>
       <li><a href="#contacto">Contacto</a></li>
-      <li><a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%20Chelo%20Bodywork%2C%20quiero%20un%20estimado%20gratis%20para%20mi%20auto" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%20Chelo%2C%20quiero%20un%20estimado%20gratis" target="_blank" rel="noopener"><span>WhatsApp</span></a></li>
     </ul>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
   </div>
 </header>
 
 <section class="hero">
-  <div class="paint-splash"></div>
   <div class="container hero-inner">
-    <p class="eyebrow">Hojalatería y pintura · Ciales, PR</p>
-    <h1>Devolvemos el <em>brillo de fábrica</em> a tu auto</h1>
-    <p class="sub">Hojalatería, pintura en cabina y pulido profesional. Enderezamos, igualamos el color al 100% y entregamos un acabado que parece salido del dealer.</p>
-    <p class="ins">✓ Trabajamos con compañías de seguro &nbsp;·&nbsp; ✓ Estimados gratis</p>
+    <p class="eyebrow">Hojalatería y pintura en cabina · Ciales, PR</p>
+    <h1>Tu auto sale <em>como de fábrica</em></h1>
+    <p class="sub">Hojalatería, pintura en cabina e igualación de color exacta por código. Coordinamos con tu seguro y el estimado es gratis.</p>
     <div class="hero-ctas">
-      <a class="btn wa" href="https://wa.me/17877182664?text=Hola%20Chelo%20Bodywork%2C%20quiero%20un%20estimado%20gratis%20para%20mi%20auto" target="_blank" rel="noopener">📲 Estimado gratis por WhatsApp</a>
-      <a class="btn ghost" href="tel:+17877182664">📞 Llamar ahora</a>
+      <a class="btn wa" href="https://wa.me/17877182664?text=Hola%20Chelo%2C%20quiero%20un%20estimado%20gratis" target="_blank" rel="noopener"><span>📲 Estimado gratis por WhatsApp</span></a>
+      <a class="btn ghost" href="tel:+17877182664"><span>📞 Llamar ahora</span></a>
     </div>
     <p class="hero-phone"><a href="tel:+17877182664">(787) 718-2664</a></p>
     <p class="hero-note">Lun–Vie 8am–5pm · Sáb 8am–12pm · Ciales, Puerto Rico</p>
-    <div class="hero-badges">
-      <span class="hbadge">Pintura con garantía</span>
-      <span class="hbadge">Igualación de color</span>
-      <span class="hbadge">Trabajamos con seguros</span>
+    <div class="hero-tags">
+      <span class="htag"><span>Estimado gratis</span></span>
+      <span class="htag"><span>Pintura en cabina</span></span>
+      <span class="htag"><span>Coordinación con seguros</span></span>
     </div>
   </div>
 </section>
 
-<div class="strip"><div>✦ HOJALATERÍA &nbsp;&nbsp; ✦ PINTURA COMPLETA &nbsp;&nbsp; ✦ PULIDO Y BRILLO &nbsp;&nbsp; ✦ REPARACIÓN DE CHOQUES &nbsp;&nbsp; ✦ HOJALATERÍA &nbsp;&nbsp; ✦ PINTURA COMPLETA &nbsp;&nbsp; ✦ PULIDO Y BRILLO &nbsp;&nbsp; ✦ REPARACIÓN DE CHOQUES &nbsp;&nbsp;</div></div>
+<div class="checker"></div>
+<div class="strip"><div>🏁 HOJALATERÍA &nbsp;<em>///</em>&nbsp; 🏁 PINTURA EN CABINA &nbsp;<em>///</em>&nbsp; 🏁 IGUALACIÓN DE COLOR &nbsp;<em>///</em>&nbsp; 🏁 REPARACIÓN DE CHOQUES &nbsp;<em>///</em>&nbsp; 🏁 HOJALATERÍA &nbsp;<em>///</em>&nbsp; 🏁 PINTURA EN CABINA &nbsp;<em>///</em>&nbsp; 🏁 IGUALACIÓN DE COLOR &nbsp;<em>///</em>&nbsp; 🏁 REPARACIÓN DE CHOQUES &nbsp;<em>///</em>&nbsp;</div></div>
+<div class="checker"></div>
 
 <div class="proof">
   <div class="container proof-grid">
-    <div class="proof-item reveal"><b>Cabina</b><span>Pintura profesional</span></div>
-    <div class="proof-item reveal"><b>100%</b><span>Igualación de color</span></div>
-    <div class="proof-item reveal"><b>Seguros</b><span>Trabajamos con aseguradoras</span></div>
-    <div class="proof-item reveal"><b>Garantía</b><span>En pintura y hojalatería</span></div>
+    <div class="proof-item reveal"><b>Gratis</b><span>Estimado en persona</span></div>
+    <div class="proof-item reveal"><b>Cabina</b><span>Pintura controlada</span></div>
+    <div class="proof-item reveal"><b>Exacto</b><span>Color por código</span></div>
+    <div class="proof-item reveal"><b>Seguros</b><span>Coordinamos todo</span></div>
   </div>
 </div>
 
@@ -235,178 +246,135 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#55555a;letter-spacing:.06em
   <div class="container">
     <div class="sec-head reveal">
       <p class="eyebrow">Servicios</p>
-      <h2>Carrocería y pintura <em>nivel showroom</em></h2>
-      <p>Del golpe a la entrega final: un solo equipo responsable de cada panel. Precios de referencia — el estimado en persona es gratis.</p>
+      <h2>Del golpe al <em>brillo espejo</em></h2>
+      <p>Reparamos daños por colisión de principio a fin y dejamos la pintura con acabado de fábrica. Precios de referencia.</p>
     </div>
     <div class="svc-grid">
       <div class="card reveal">
         <div class="ico">🔨</div>
         <h3>Hojalatería</h3>
-        <p>Enderezado de paneles, bumpers y guardalodos. Devolvemos la forma original antes de que toque la pintura.</p>
+        <p>Enderezado de paneles, bumpers y guardalodos. Devolvemos la forma original de tu auto.</p>
         <p class="price">desde $150</p>
         <p class="price-note">Precio de referencia · final según evaluación</p>
-        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20necesito%20hojalater%C3%ADa%20para%20mi%20auto" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20necesito%20hojalater%C3%ADa%20para%20mi%20auto" target="_blank" rel="noopener"><span>Cotizar por WhatsApp</span></a>
       </div>
       <div class="card reveal">
-        <div class="ico">🚗</div>
+        <div class="ico">🎨</div>
         <h3>Pintura completa</h3>
-        <p>Cambio de color o restauración total en cabina: desmontaje, preparación completa y acabado profundo.</p>
+        <p>Cambio de color o restauración total en cabina: desmontaje, preparación y clear de alto sólido.</p>
         <p class="price">desde $1,200</p>
         <p class="price-note">Precio de referencia · final según evaluación</p>
-        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20quiero%20cotizar%20una%20pintura%20completa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20quiero%20cotizar%20una%20pintura%20completa" target="_blank" rel="noopener"><span>Cotizar por WhatsApp</span></a>
       </div>
       <div class="card reveal">
-        <div class="ico">🧩</div>
+        <div class="ico">🚪</div>
         <h3>Pintura por piezas</h3>
-        <p>Bumper, puerta, guardalodo o bonete: pintamos solo lo necesario igualando el color original al detalle.</p>
+        <p>Bumper, puerta, guardalodo o bonete: pintamos solo lo necesario igualando el color exacto.</p>
         <p class="price">desde $180</p>
         <p class="price-note">Precio de referencia · final según evaluación</p>
-        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20quiero%20pintar%20una%20pieza%20de%20mi%20auto" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20quiero%20pintar%20una%20pieza%20de%20mi%20auto" target="_blank" rel="noopener"><span>Cotizar por WhatsApp</span></a>
       </div>
       <div class="card reveal">
         <div class="ico">✨</div>
         <h3>Pulido y brillo</h3>
-        <p>Corrección de pintura: eliminamos swirls, oxidación y opacidad. Tu pintura vuelve a tener profundidad.</p>
+        <p>Corrección de pintura: eliminamos swirls, oxidación y opacidad. Tu pintura vuelve a brillar.</p>
         <p class="price">desde $120</p>
         <p class="price-note">Precio de referencia · final según evaluación</p>
-        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20me%20interesa%20el%20pulido%20de%20mi%20auto" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20quiero%20un%20pulido%20para%20mi%20auto" target="_blank" rel="noopener"><span>Cotizar por WhatsApp</span></a>
       </div>
       <div class="card reveal">
         <div class="ico">💥</div>
         <h3>Reparación de choques</h3>
-        <p>Reparamos daños por colisión de principio a fin y te ayudamos con el proceso de tu seguro.</p>
+        <p>Reparamos daños por colisión de principio a fin y te ayudamos con el proceso del seguro.</p>
         <p class="price">desde $350</p>
         <p class="price-note">Precio de referencia · final según evaluación</p>
-        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20tuve%20un%20choque%20y%20necesito%20reparaci%C3%B3n" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20tuve%20un%20choque%20y%20necesito%20reparaci%C3%B3n" target="_blank" rel="noopener"><span>Cotizar por WhatsApp</span></a>
       </div>
       <div class="card reveal">
         <div class="ico">📋</div>
         <h3>Estimados para seguros</h3>
-        <p>Preparamos el estimado detallado que tu aseguradora necesita. Coordinamos directamente con el ajustador.</p>
-        <p class="price">gratis</p>
-        <p class="price-note">Sin costo · te ayudamos con el trámite</p>
-        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20necesito%20un%20estimado%20para%20mi%20seguro" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+        <p>Preparamos el estimado detallado que tu aseguradora necesita. Coordinamos con el ajustador.</p>
+        <p class="price free">gratis</p>
+        <p class="price-note">Estimado sin costo</p>
+        <a class="btn wa sm" href="https://wa.me/17877182664?text=Hola%2C%20necesito%20un%20estimado%20para%20mi%20seguro" target="_blank" rel="noopener"><span>Cotizar por WhatsApp</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="proceso" class="process">
+<section id="acabados" class="finishes">
   <div class="container">
     <div class="sec-head reveal">
-      <p class="eyebrow">Proceso de pintura</p>
-      <h2>Así nace un <em>acabado perfecto</em></h2>
-      <p>Una buena pintura es 80% preparación. Estos son los pasos que sigue cada auto que entra a nuestro taller.</p>
+      <p class="eyebrow">Acabados</p>
+      <h2>Colores que <em>entregamos</em></h2>
+      <p>Muestra de los acabados que salen de nuestro taller. Cada auto se entrega inspeccionado contigo.</p>
     </div>
-    <div class="psteps">
-      <div class="pstep reveal">
-        <div class="num">01</div>
-        <h3>Desmontaje y evaluación</h3>
-        <p>Desmontamos piezas, molduras y accesorios. Evaluamos cada panel y definimos el plan de reparación.</p>
-      </div>
-      <div class="pstep reveal">
-        <div class="num">02</div>
-        <h3>Hojalatería</h3>
-        <p>Enderezamos golpes y abolladuras hasta recuperar la línea original de fábrica del auto.</p>
-      </div>
-      <div class="pstep reveal">
-        <div class="num">03</div>
-        <h3>Preparación y lijado</h3>
-        <p>Lijado progresivo y enmasillado fino. La superficie queda lisa al tacto antes de cualquier pintura.</p>
-      </div>
-      <div class="pstep reveal">
-        <div class="num">04</div>
-        <h3>Primer y aparejo</h3>
-        <p>Aplicamos primer y aparejo para sellar la superficie y garantizar adherencia total de la pintura.</p>
-      </div>
-      <div class="pstep reveal">
-        <div class="num">05</div>
-        <h3>Pintura en cabina</h3>
-        <p>Base del color igualado por código y clear coat en ambiente controlado, libre de polvo.</p>
-      </div>
-      <div class="pstep reveal">
-        <div class="num">06</div>
-        <h3>Pulido y entrega</h3>
-        <p>Pulido final, montaje de piezas e inspección contigo. Entregamos con garantía escrita.</p>
-      </div>
+    <div class="fin-grid">
+      <div class="fin reveal"><div class="sw" style="background:linear-gradient(135deg,#1b2f4a,#0b1522)"></div><div class="fl"><h3>Azul medianoche</h3><p>Pintura completa · clear de alto sólido</p></div></div>
+      <div class="fin reveal"><div class="sw" style="background:linear-gradient(135deg,#c7cdd6,#7d848e)"></div><div class="fl"><h3>Plata metálico</h3><p>Pintura completa · acabado espejo</p></div></div>
+      <div class="fin reveal"><div class="sw" style="background:linear-gradient(135deg,#c22020,#6e0d0d)"></div><div class="fl"><h3>Rojo racing</h3><p>Pintura completa · brillo profundo</p></div></div>
+      <div class="fin reveal"><div class="sw" style="background:linear-gradient(135deg,#f2ede4,#b9b2a4)"></div><div class="fl"><h3>Blanco perla</h3><p>Pintura completa · tricapa</p></div></div>
+      <div class="fin reveal"><div class="sw" style="background:linear-gradient(135deg,#16161a,#000)"></div><div class="fl"><h3>Negro sólido</h3><p>Pintura completa · espejo total</p></div></div>
+      <div class="fin reveal"><div class="sw" style="background:linear-gradient(135deg,#2d4a2f,#101d11)"></div><div class="fl"><h3>Verde bosque</h3><p>Pintura completa · clásico</p></div></div>
     </div>
   </div>
 </section>
 
-<section id="galeria">
+<section id="como">
   <div class="container">
     <div class="sec-head reveal">
-      <p class="eyebrow">Galería</p>
-      <h2>Trabajos <em>recientes</em></h2>
-      <p>Una muestra de los acabados que salen de nuestro taller. Cada auto se entrega inspeccionado contigo.</p>
+      <p class="eyebrow">Cómo funciona</p>
+      <h2>El proceso <em>paso a paso</em></h2>
+      <p>Así sale cada auto de nuestro taller: método, cabina y revisión final contigo.</p>
     </div>
-    <div class="gal-grid">
-      <div class="gal reveal">
-        <div class="gal-vis" style="background:linear-gradient(135deg,#1b2f4a,#0b1522)"><div class="car">🚗</div><small>Pintura completa</small></div>
-        <div class="gal-body"><h3>Azul medianoche · Sedán</h3><p>Pintura completa con clear de alto sólido. Profundidad de espejo en cada panel.</p></div>
-      </div>
-      <div class="gal reveal">
-        <div class="gal-vis" style="background:linear-gradient(135deg,#5a5a60,#232327)"><div class="car">🚙</div><small>Hojalatería + pintura</small></div>
-        <div class="gal-body"><h3>Plata metálico · SUV</h3><p>Enderezado de puerta y guardalodo + igualación de color invisible.</p></div>
-      </div>
-      <div class="gal reveal">
-        <div class="gal-vis" style="background:linear-gradient(135deg,#6e1f1f,#2a0d0d)"><div class="car">🏎️</div><small>Pulido correctivo</small></div>
-        <div class="gal-body"><h3>Rojo · Deportivo</h3><p>Corrección de pintura en dos pasos: adiós swirls y oxidación.</p></div>
-      </div>
-      <div class="gal reveal">
-        <div class="gal-vis" style="background:linear-gradient(135deg,#e8e4da,#8f8a7e)"><div class="car">🚗</div><small>Reparación de choque</small></div>
-        <div class="gal-body"><h3>Blanco perla · Compacto</h3><p>Reparación frontal por colisión coordinada con el seguro del cliente.</p></div>
-      </div>
-      <div class="gal reveal">
-        <div class="gal-vis" style="background:linear-gradient(135deg,#1d1d20,#050506)"><div class="car">🛻</div><small>Pintura por piezas</small></div>
-        <div class="gal-body"><h3>Negro sólido · Pickup</h3><p>Bumper y bonete repintados con igualación exacta al resto del auto.</p></div>
-      </div>
-      <div class="gal reveal">
-        <div class="gal-vis" style="background:linear-gradient(135deg,#3d5a37,#14200f)"><div class="car">🚙</div><small>Restauración</small></div>
-        <div class="gal-body"><h3>Verde bosque · Clásico</h3><p>Restauración de pintura en auto clásico: preparación total y acabado original.</p></div>
-      </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">01</div><h3>Evaluación</h3><p>Desmontamos piezas y evaluamos cada panel.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>Hojalatería</h3><p>Enderezamos hasta recuperar la línea original.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Preparación</h3><p>Lijado progresivo y enmasillado fino.</p></div>
+      <div class="step reveal"><div class="num">04</div><h3>Primer</h3><p>Primer y aparejo para sellar y adherir.</p></div>
+      <div class="step reveal"><div class="num">05</div><h3>Pintura</h3><p>Color igualado por código en cabina.</p></div>
+      <div class="step reveal"><div class="num">06</div><h3>Entrega</h3><p>Pulido final e inspección contigo.</p></div>
     </div>
-    <p class="illus-note" style="text-align:center;color:#6d6d72;font-size:.78rem;margin-top:26px">Imágenes de referencia con fines ilustrativos.</p>
   </div>
 </section>
 
-<section id="diferenciales" style="padding-top:0">
+<section id="diferenciales" style="background:var(--dark)">
   <div class="container">
     <div class="sec-head reveal">
       <p class="eyebrow">Diferenciales</p>
       <h2>Por qué <em>Chelo</em></h2>
     </div>
     <div class="diff-grid">
-      <div class="diff reveal"><h3>Igualación de color exacta</h3><p>Trabajamos por código de fábrica y ajustamos el tono hasta que la reparación sea invisible.</p></div>
-      <div class="diff reveal"><h3>Pintura en cabina</h3><p>Ambiente controlado libre de polvo: el acabado sale limpio, sin basura atrapada en el clear.</p></div>
-      <div class="diff reveal"><h3>Coordinación con seguros</h3><p>Hablamos el idioma de los ajustadores: estimado detallado y seguimiento del reclamo.</p></div>
-      <div class="diff reveal"><h3>Garantía escrita</h3><p>Nuestra pintura y hojalatería están garantizadas por escrito. Si algo falla, lo corregimos.</p></div>
-      <div class="diff reveal"><h3>Entrega inspeccionada</h3><p>Revisas tu auto con nosotros antes de llevártelo. No se entrega nada que no firmaríamos.</p></div>
-      <div class="diff reveal"><h3>Taller de Ciales</h3><p>Trato directo con quien pinta tu auto. Sin intermediarios ni sorpresas en la factura.</p></div>
+      <div class="diff reveal"><h3>Igualación de color exacta</h3><p>Trabajamos por código de fábrica y ajustamos el tono hasta que no se note la reparación.</p></div>
+      <div class="diff reveal"><h3>Pintura en cabina</h3><p>Ambiente controlado libre de polvo: el acabado sale limpio, parejo y con brillo espejo.</p></div>
+      <div class="diff reveal"><h3>Coordinación con seguros</h3><p>Hablamos el idioma de los ajustadores: estimado detallado y seguimiento del caso.</p></div>
+      <div class="diff reveal"><h3>Garantía escrita</h3><p>Nuestra pintura y hojalatería están garantizadas por escrito contra defectos de aplicación.</p></div>
+      <div class="diff reveal"><h3>Entrega inspeccionada</h3><p>Revisas tu auto con nosotros antes de llevártelo. No se entrega nada a medias.</p></div>
+      <div class="diff reveal"><h3>Taller de Ciales</h3><p>Trato directo con quien pinta tu auto. Sin intermediarios ni sorpresas.</p></div>
     </div>
   </div>
 </section>
 
-<section id="opiniones" class="testi">
+<section id="opiniones">
   <div class="container">
     <div class="sec-head reveal">
       <p class="eyebrow">Opiniones</p>
-      <h2>Autos que <em>volvieron a brillar</em></h2>
+      <h2>Autos que ya <em>brillan</em></h2>
     </div>
     <div class="testi-grid">
       <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
-        <p>"Me chocaron por detrás y el carro quedó como nuevo. Ni se nota dónde fue el golpe, el color quedó idéntico."</p>
+        <p>"Me chocaron la puerta y quedó como si nada hubiera pasado. El color igualito, ni se nota la reparación."</p>
         <p class="who">Cliente · Ciales</p>
       </div>
       <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
-        <p>"Le hicieron pintura completa a mi guagua y parece recién salida del dealer. El brillo es de otro nivel."</p>
+        <p>"La pintura completa dejó el carro como nuevo. Me coordinaron todo con el seguro, yo no tuve que hacer nada."</p>
         <p class="who">Cliente · Morovis</p>
       </div>
       <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
-        <p>"Coordinaron todo con mi seguro y me mantuvieron al tanto. Profesionales de verdad, los recomiendo."</p>
+        <p>"El pulido le quitó años al carro. Brilla como espejo y el precio fue justo desde el estimado gratis."</p>
         <p class="who">Cliente · Ciales</p>
       </div>
     </div>
@@ -421,95 +389,61 @@ footer .demo{margin-top:20px;font-size:.76rem;color:#55555a;letter-spacing:.06em
       <h2>Lo que nos <em>preguntan</em></h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Trabajan directamente con mi seguro? <span>+</span></button>
-        <div class="faq-a"><p>Sí. Preparamos el estimado detallado, coordinamos con el ajustador y ejecutamos la reparación aprobada. Tú solo nos traes el auto.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿El color nuevo se va a notar diferente? <span>+</span></button>
-        <div class="faq-a"><p>No. Igualamos por código de fábrica y ajustamos el tono considerando el desgaste del resto de la pintura, para una transición invisible.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Cuánto tarda una pintura completa? <span>+</span></button>
-        <div class="faq-a"><p>Entre 2 y 4 semanas según el estado del auto y el alcance. Te damos fecha estimada por escrito desde el inicio.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Qué garantía tiene la pintura? <span>+</span></button>
-        <div class="faq-a"><p>Nuestra pintura y hojalatería incluyen garantía escrita contra defectos de aplicación. Te explicamos los cuidados para mantenerla.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿El estimado es gratis? <span>+</span></button>
-        <div class="faq-a"><p>Sí, el estimado en persona es gratis y sin compromiso. Tráenos el auto o envíanos fotos por WhatsApp para una pre-cotización.</p></div>
-      </div>
+      <div class="faq-item reveal"><button class="faq-q">¿Trabajan directamente con mi seguro? <span>+</span></button><div class="faq-a"><p>Sí. Preparamos el estimado detallado, coordinamos con el ajustador y ejecutamos la reparación aprobada. Tú solo traes el auto.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿El color nuevo se va a notar diferente? <span>+</span></button><div class="faq-a"><p>No. Igualamos por código de fábrica y ajustamos el tono considerando el desgaste del resto de la pintura, para que la transición sea invisible.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿Cuánto tarda una pintura completa? <span>+</span></button><div class="faq-a"><p>Entre 2 y 4 semanas según el estado del auto y el alcance. Te damos fecha estimada por escrito desde el inicio.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿Qué garantía tiene la pintura? <span>+</span></button><div class="faq-a"><p>Nuestra pintura y hojalatería incluyen garantía escrita contra defectos de aplicación. Te explicamos los cuidados al entregar.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">¿El estimado es gratis? <span>+</span></button><div class="faq-a"><p>Sí, el estimado en persona es gratis y sin compromiso. Tráenos el auto o envíanos fotos por WhatsApp para una pre-evaluación.</p></div></div>
     </div>
   </div>
 </section>
 
 <section class="cta-band">
   <div class="container">
-    <p class="eyebrow reveal" style="justify-content:center">Estimado gratis · Trabajamos con seguros</p>
-    <h2 class="reveal">Tu auto merece <em>verse nuevo</em></h2>
-    <p class="reveal">Envíanos fotos del daño por WhatsApp y recibe una pre-cotización hoy mismo. Sin compromiso.</p>
+    <h2 class="reveal">¿Tu auto necesita <em>un rescate?</em></h2>
+    <p class="reveal">El estimado es gratis. Mándanos fotos por WhatsApp y te damos una pre-evaluación hoy mismo.</p>
     <div class="cta-btns reveal">
-      <a class="btn wa" href="https://wa.me/17877182664?text=Hola%20Chelo%20Bodywork%2C%20quiero%20enviar%20fotos%20para%20un%20estimado" target="_blank" rel="noopener">📲 Enviar fotos por WhatsApp</a>
-      <a class="btn ghost" href="tel:+17877182664">📞 (787) 718-2664</a>
+      <a class="btn wa" href="https://wa.me/17877182664?text=Hola%20Chelo%2C%20quiero%20un%20estimado%20gratis" target="_blank" rel="noopener"><span>📲 WhatsApp directo</span></a>
+      <a class="btn ghost" href="tel:+17877182664"><span>📞 (787) 718-2664</span></a>
     </div>
   </div>
 </section>
 
-<section id="contacto">
+<section id="contacto" class="contact">
   <div class="container contact-grid">
     <div class="contact-info reveal">
-      <h2>Empieza <em>tu estimado</em></h2>
-      <p>Escríbenos por WhatsApp con fotos del auto y te damos una pre-cotización rápida. El estimado en persona es gratis.</p>
+      <h2>Tráenos <em>tu auto</em></h2>
+      <p>Escríbenos por WhatsApp con fotos del daño y coordinamos tu estimado gratis.</p>
       <div class="c-line"><span class="ico">📞</span><a href="tel:+17877182664">(787) 718-2664</a></div>
       <div class="c-line"><span class="ico">💬</span><a href="https://wa.me/17877182664" target="_blank" rel="noopener">WhatsApp directo</a></div>
       <div class="c-line"><span class="ico">📍</span><span>Ciales, Puerto Rico</span></div>
       <div class="c-line"><span class="ico">🕐</span><span>Lun–Vie 8:00am–5:00pm · Sáb 8:00am–12:00pm</span></div>
+      <div class="c-line"><span class="ico">🏁</span><span>Hojalatería · Pintura en cabina · Seguros</span></div>
     </div>
     <form id="bookForm" class="reveal">
       <h3>Solicita tu estimado gratis</h3>
-      <div class="field">
-        <label for="fNombre">Nombre</label>
-        <input id="fNombre" type="text" placeholder="Tu nombre" required>
-      </div>
-      <div class="field">
-        <label for="fTel">Teléfono</label>
-        <input id="fTel" type="tel" placeholder="(787) 000-0000" required>
-      </div>
-      <div class="field">
-        <label for="fSvc">Servicio</label>
-        <select id="fSvc">
-          <option>Hojalatería</option>
-          <option>Pintura completa</option>
-          <option>Pintura por piezas</option>
-          <option>Pulido y brillo</option>
-          <option>Reparación de choque</option>
-          <option>Estimado para seguro</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="fMsg">Describe el daño</label>
-        <textarea id="fMsg" rows="3" placeholder="¿Qué le pasó a tu auto? ¿Tienes seguro?"></textarea>
-      </div>
-      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
+      <div class="field"><label for="fNombre">Nombre</label><input id="fNombre" type="text" placeholder="Tu nombre" required></div>
+      <div class="field"><label for="fTel">Teléfono</label><input id="fTel" type="tel" placeholder="(787) 000-0000" required></div>
+      <div class="field"><label for="fSvc">Servicio</label><select id="fSvc"><option>Estimado general</option><option>Hojalatería</option><option>Pintura completa</option><option>Pintura por piezas</option><option>Pulido y brillo</option><option>Reparación de choque / seguro</option></select></div>
+      <div class="field"><label for="fMsg">Describe el daño</label><textarea id="fMsg" rows="3" placeholder="¿Qué le pasó a tu auto?"></textarea></div>
+      <button class="btn wa" type="submit" style="width:100%"><span>Enviar por WhatsApp</span></button>
     </form>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p class="flogo">Chelo <span class="o">Bodywork</span> &amp; Painting</p>
+    <p class="flogo"><span class="sh">CB</span>Chelo <span class="rd">Bodywork</span></p>
     <p>Hojalatería y pintura · Ciales, Puerto Rico</p>
     <p><a href="tel:+17877182664" style="color:var(--gray)">(787) 718-2664</a></p>
     <p class="demo">Demostración creada por ManuPro</p>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/17877182664?text=Hola%20Chelo%20Bodywork%2C%20quiero%20un%20estimado%20gratis%20para%20mi%20auto" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<a class="wa-float" href="https://wa.me/17877182664?text=Hola%20Chelo%2C%20quiero%20un%20estimado%20gratis" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 <div class="sticky-bar">
   <a class="call" href="tel:+17877182664">📞 Llamar</a>
-  <a class="wab" href="https://wa.me/17877182664?text=Hola%20Chelo%20Bodywork%2C%20quiero%20un%20estimado%20gratis%20para%20mi%20auto" target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a class="wab" href="https://wa.me/17877182664?text=Hola%20Chelo%2C%20quiero%20un%20estimado%20gratis" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <script>
@@ -521,8 +455,8 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   const btn=item.querySelector('.faq-q');
   btn.addEventListener('click',()=>{
     const wasOpen=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+'});
-    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='×'}
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px'}
   });
 });
 document.getElementById('bookForm').addEventListener('submit',e=>{
@@ -530,7 +464,7 @@ document.getElementById('bookForm').addEventListener('submit',e=>{
   const n=document.getElementById('fNombre').value.trim(),t=document.getElementById('fTel').value.trim(),
         s=document.getElementById('fSvc').value,m=document.getElementById('fMsg').value.trim();
   if(!n||!t){alert('Por favor completa tu nombre y teléfono.');return}
-  let txt='Hola Chelo Bodywork, soy '+n+'. Me interesa: '+s+'. Mi teléfono es '+t+'.';
+  let txt='Hola Chelo, soy '+n+'. Me interesa: '+s+'. Mi teléfono es '+t+'.';
   if(m)txt+=' Detalles: '+m;
   window.open('https://wa.me/17877182664?text='+encodeURIComponent(txt),'_blank');
 });

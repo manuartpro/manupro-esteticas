@@ -5,173 +5,173 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Extreme Training | Gimnasio en Ponce, PR — Entrena al Extremo</title>
 <meta name="description" content="Extreme Training en Ponce — clases de HIIT, fuerza, boxeo fitness y acondicionamiento atlético. Energía alta, resultados reales. Síguenos @extremesportstraining.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --black:#0c0705; --dark:#140c08; --panel:#1a100a; --line:rgba(255,255,255,.09);
-  --gray:#a8a09a; --white:#f7f4f2; --accent:#FF6B00; --accent2:#E10600;
-  --accent-dim:rgba(255,107,0,.12); --wa:#25D366;
-}
 *{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#060408; --bg2:#0c0812; --panel:#100a18; --line:rgba(180,80,255,.22);
+  --pur:#8b2ff7; --mag:#f72585; --grad:linear-gradient(120deg,#8b2ff7,#f72585);
+  --txt:#f6f1fc; --mut:#a795c4; --wa:#25D366; --gold:#ffc63a;
+}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.65;overflow-x:hidden}
-h1,h2,h3{font-family:'Bebas Neue',sans-serif;line-height:.92;letter-spacing:.02em;font-weight:400}
-a{text-decoration:none;color:inherit}
-.container{width:min(1180px,92%);margin:0 auto}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:100px 0}
+h1,h2,h3{font-family:'Archivo Black',sans-serif;font-weight:400;line-height:1.02}
+.grad-t{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:inline-block;font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;margin-bottom:20px;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 /* ===== HEADER ===== */
-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:rgba(12,7,5,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent}
-header.solid{background:rgba(12,7,5,.96);border-bottom-color:var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.logo{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:.1em;line-height:1}
-.logo span{color:var(--accent)}
-.logo small{display:block;font-family:'Inter',sans-serif;font-size:.55rem;letter-spacing:.42em;color:var(--gray);font-weight:600}
-.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
-.nav-links a{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:#dcd5d0;transition:.25s;font-weight:600}
-.nav-links a:hover{color:var(--accent)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:15px 34px;border-radius:4px;font-size:.88rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;transition:.25s;border:2px solid transparent;cursor:pointer;font-family:'Inter',sans-serif}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(255,107,0,.4);filter:brightness(1.1)}
-.btn.wa{background:var(--wa);border-color:var(--wa)}
-.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 30px rgba(37,211,102,.28);filter:none}
-.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
-.btn.ghost:hover{border-color:var(--accent);color:var(--accent);box-shadow:none}
-.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:#fff}
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;padding:18px 0}
+header.solid{background:rgba(6,4,8,.96);backdrop-filter:blur(12px);padding:10px 0;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--txt)}
+.logo b{font-family:'Archivo Black';font-size:1rem;letter-spacing:.12em;display:block;line-height:1.15}
+.logo small{font-size:.58rem;letter-spacing:.3em;color:var(--mut);font-weight:600}
+.nav-links{display:flex;list-style:none;gap:28px;align-items:center}
+.nav-links a{color:var(--txt);text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.05em}
+.nav-links a:hover{color:var(--mag)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--txt);font-size:1.5rem;padding:6px 12px;border-radius:8px;cursor:pointer}
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:17px 34px;border-radius:4px;text-decoration:none;font-weight:800;font-size:.88rem;letter-spacing:.1em;text-transform:uppercase;transition:.3s;border:none;cursor:pointer;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%)}
+.btn.wa{background:var(--grad);color:#fff;box-shadow:0 8px 32px rgba(247,37,133,.35)}
+.btn.wa:hover{transform:translateY(-3px);box-shadow:0 14px 48px rgba(247,37,133,.55)}
+.btn.line{background:transparent;color:var(--txt);border:2px solid;border-image:linear-gradient(120deg,#8b2ff7,#f72585) 1}
+.btn.line:hover{background:rgba(139,47,247,.14)}
 /* ===== HERO ===== */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
-  background:radial-gradient(ellipse 65% 50% at 50% 0%,rgba(255,107,0,.16) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 90% 90%,rgba(225,6,0,.1) 0%,transparent 55%),linear-gradient(180deg,#160d08,#0c0705)}
-.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 40px,rgba(255,107,0,.02) 40px 42px);pointer-events:none}
-.hero-ghost{position:absolute;bottom:-2%;left:50%;transform:translateX(-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(7rem,22vw,20rem);color:transparent;-webkit-text-stroke:1px rgba(255,107,0,.22);white-space:nowrap;pointer-events:none;user-select:none;line-height:1}
-.hero-inner{position:relative;z-index:2;text-align:center;padding:140px 0 90px;width:100%}
-.eyebrow{letter-spacing:.44em;text-transform:uppercase;font-size:.78rem;color:var(--accent);margin-bottom:20px;font-weight:700}
-.hero h1{font-size:clamp(4rem,12vw,9.5rem);margin-bottom:18px}
-.hero h1 .fill{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero h1 .stroke{color:transparent;-webkit-text-stroke:2.5px #fff}
-.hero p.sub{font-size:1.15rem;font-weight:400;max-width:640px;margin:0 auto 10px;color:#cfc6c0}
-.hero p.tag{font-size:1.05rem;color:var(--accent);font-weight:800;letter-spacing:.14em;margin-bottom:36px;text-transform:uppercase}
-.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
-.hero-phone{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4.5vw,2.6rem);letter-spacing:.1em}
-.hero-phone a{color:#fff;border-bottom:3px solid var(--accent);padding-bottom:2px;transition:.25s}
-.hero-phone a:hover{color:var(--accent)}
-.ig-pill{display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:10px 26px;border:1px solid rgba(255,107,0,.6);border-radius:40px;color:#fff;font-size:.9rem;letter-spacing:.08em;background:var(--accent-dim);font-weight:600}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:150px 0 90px;background:
+ radial-gradient(900px 500px at 85% 15%,rgba(139,47,247,.3),transparent 60%),
+ radial-gradient(800px 500px at 10% 90%,rgba(247,37,133,.2),transparent 60%),var(--bg)}
+.hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(139,47,247,.05) 3px 4px);pointer-events:none}
+.hero-inner{position:relative;z-index:2}
+.hero .mono{width:96px;height:96px;margin-bottom:28px;filter:drop-shadow(0 0 26px rgba(247,37,133,.55))}
+.hero h1{font-size:clamp(3rem,9.4vw,7rem);text-transform:uppercase;font-style:italic;margin-bottom:24px}
+.hero .sub{color:var(--mut);font-size:1.12rem;max-width:600px;margin-bottom:14px}
+.hero .tagline{font-size:.82rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--mag);margin-bottom:36px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+.hero-phone a{font-family:'Archivo Black';font-size:clamp(1.9rem,4.6vw,2.9rem);color:var(--txt);text-decoration:none;letter-spacing:.03em}
+.hero-phone a:hover{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .ig{display:inline-flex;align-items:center;gap:10px;margin-top:18px;color:var(--txt);text-decoration:none;font-weight:600;border:1px solid var(--line);border-radius:100px;padding:10px 22px;background:rgba(139,47,247,.1)}
+.hero .ig:hover{border-color:var(--mag)}
+.hero .ig b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 /* ===== STATS ===== */
-.stats{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:36px 0}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
-.stats-grid .num{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,5vw,3.8rem);line-height:1}
-.stats-grid .lbl{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;opacity:.92;margin-top:6px}
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);max-width:1180px;margin:0 auto}
+.stats-grid>div{padding:32px 20px;text-align:center;border-left:1px solid var(--line)}
+.stats-grid>div:first-child{border-left:none}
+.stats-grid .num{font-family:'Archivo Black';font-size:1.6rem;letter-spacing:.06em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
+.stats-grid .lbl{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-top:6px}
 /* ===== MARQUEE ===== */
-.strip{background:#000;color:var(--accent);overflow:hidden;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.strip div{white-space:nowrap;animation:slide 20s linear infinite;font-family:'Bebas Neue',sans-serif;letter-spacing:.24em;font-size:1.15rem}
-@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* ===== SECTIONS ===== */
-section{padding:104px 0}
-.sec-head{text-align:center;max-width:700px;margin:0 auto 60px}
-.sec-head .eyebrow{margin-bottom:14px}
-.sec-head h2{font-size:clamp(2.8rem,6vw,4.6rem);margin-bottom:14px;color:#fff}
-.sec-head h2 em{font-style:normal;color:var(--accent)}
-.sec-head p{color:var(--gray);font-size:1.05rem}
-/* ===== PROGRAMS ===== */
-.prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-.prog{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:44px 36px;transition:.3s;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.prog::after{content:'';position:absolute;top:0;right:0;width:90px;height:90px;background:linear-gradient(135deg,transparent 50%,rgba(255,107,0,.18) 50%);transition:.3s}
-.prog:hover{transform:translateY(-8px);border-color:rgba(255,107,0,.55);box-shadow:0 22px 55px rgba(255,107,0,.18)}
-.prog .ico{font-size:2.6rem;margin-bottom:18px}
-.prog h3{font-size:2.1rem;margin-bottom:8px;color:#fff;letter-spacing:.03em}
-.prog .meta{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
-.prog p{color:var(--gray);font-size:.96rem;margin-bottom:18px;flex:1}
+.strip{overflow:hidden;background:var(--grad);padding:15px 0}
+.strip div{white-space:nowrap;font-family:'Archivo Black';font-size:1rem;letter-spacing:.28em;color:#fff;animation:mq 24s linear infinite;font-style:italic}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* ===== SECTION HEADS ===== */
+.sec-head{max-width:760px;margin-bottom:60px}
+.sec-head h2{font-size:clamp(2.2rem,5.4vw,3.9rem);text-transform:uppercase;font-style:italic;margin:0 0 16px}
+.sec-head p{color:var(--mut)}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+/* ===== PROGRAM CARDS ===== */
+.prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.prog{position:relative;padding:40px 36px;background:var(--panel);clip-path:polygon(0 0,calc(100% - 34px) 0,100% 34px,100% 100%,0 100%);transition:.35s;border:1px solid var(--line)}
+.prog::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--grad)}
+.prog:hover{transform:translateY(-8px);box-shadow:0 24px 60px rgba(139,47,247,.25)}
+.prog .meta{display:inline-block;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:#fff;background:rgba(139,47,247,.25);border:1px solid var(--line);border-radius:100px;padding:7px 16px;margin-bottom:16px;font-weight:700}
+.prog h3{font-size:clamp(1.6rem,3vw,2.2rem);text-transform:uppercase;font-style:italic;margin-bottom:12px}
+.prog>p{color:var(--mut);font-size:.94rem;margin-bottom:16px}
 .prog ul{list-style:none;margin-bottom:20px;display:grid;gap:8px}
-.prog ul li{color:#cfc6c0;font-size:.9rem;padding-left:22px;position:relative}
-.prog ul li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-weight:800}
-.price{color:var(--accent);font-weight:800;font-size:1.4rem;letter-spacing:.04em;margin-bottom:20px;font-family:'Bebas Neue',sans-serif}
-.price small{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:400;color:var(--gray);letter-spacing:.02em;margin-top:2px}
-.prog .btn{padding:12px 24px;font-size:.78rem;align-self:flex-start}
-/* ===== HOW ===== */
-.how{background:var(--dark);position:relative;overflow:hidden}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;position:relative;z-index:2}
-.step{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:42px 30px;text-align:center;transition:.3s}
-.step:hover{border-color:rgba(255,107,0,.6);transform:translateY(-6px)}
-.step .num{font-family:'Bebas Neue',sans-serif;font-size:4rem;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;margin-bottom:14px}
-.step h3{color:#fff;font-size:1.8rem;margin-bottom:10px;letter-spacing:.04em}
-.step p{color:var(--gray);font-size:.93rem}
+.prog ul li{color:var(--txt);font-size:.9rem;padding-left:26px;position:relative}
+.prog ul li::before{content:"";position:absolute;left:0;top:8px;width:14px;height:8px;background:var(--grad);clip-path:polygon(0 0,100% 0,calc(100% - 5px) 100%,0 100%)}
+.prog .price{font-family:'Archivo Black';font-size:1.5rem;margin-bottom:22px;font-style:italic}
+.prog .price small{display:block;font-family:'Inter';font-weight:400;font-size:.68rem;color:var(--mut);font-style:normal;margin-top:4px}
+.prog .btn{font-size:.78rem;padding:14px 28px}
+/* ===== PROCESS ===== */
+.how{background:var(--bg2);clip-path:polygon(0 3vw,100% 0,100% calc(100% - 3vw),0 100%);padding:130px 0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.step{padding:40px 32px;border:1px solid var(--line);background:var(--panel);position:relative;transition:.3s}
+.step:hover{border-color:var(--mag);box-shadow:0 0 40px rgba(247,37,133,.2)}
+.step .num{font-family:'Archivo Black';font-size:3.6rem;font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.step h3{font-size:1.35rem;text-transform:uppercase;font-style:italic;margin:18px 0 10px}
+.step p{color:var(--mut);font-size:.93rem}
 /* ===== WHY ===== */
-.why-banner{background:linear-gradient(135deg,rgba(255,107,0,.16),rgba(225,6,0,.05));border:1px solid rgba(255,107,0,.4);border-radius:14px;padding:64px 8%;display:flex;align-items:center;gap:44px;flex-wrap:wrap;justify-content:space-between}
-.why-banner h2{font-size:clamp(2.4rem,5vw,3.8rem);color:#fff;margin-bottom:14px}
-.why-banner h2 em{font-style:normal;color:var(--accent)}
-.why-banner p{color:var(--gray);max-width:540px;font-size:1.05rem}
-.diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
-.diff{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:30px 24px;transition:.3s}
-.diff:hover{border-color:rgba(255,107,0,.55);transform:translateY(-5px)}
-.diff .ico{font-size:2rem;margin-bottom:12px}
-.diff h3{font-size:1.35rem;color:#fff;margin-bottom:8px;letter-spacing:.05em}
-.diff p{color:var(--gray);font-size:.88rem}
+.why-banner{position:relative;border:1px solid var(--line);padding:64px 56px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;background:linear-gradient(135deg,rgba(139,47,247,.14),rgba(247,37,133,.1)),var(--panel);clip-path:polygon(0 0,100% 0,100% calc(100% - 30px),calc(100% - 30px) 100%,0 100%);margin-bottom:26px}
+.why-banner h2{font-size:clamp(1.9rem,4.4vw,3rem);text-transform:uppercase;font-style:italic;margin-bottom:16px}
+.why-banner p{color:var(--mut);max-width:620px}
+.diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.diff{border:1px solid var(--line);padding:34px 26px;background:var(--panel);transition:.3s;position:relative}
+.diff::after{content:"";position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:.35s}
+.diff:hover::after{transform:scaleX(1)}
+.diff:hover{transform:translateY(-6px)}
+.diff .g{font-family:'Archivo Black';font-size:1.6rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;margin-bottom:14px;display:block}
+.diff h3{font-size:1.1rem;text-transform:uppercase;font-style:italic;margin-bottom:8px}
+.diff p{color:var(--mut);font-size:.88rem}
 /* ===== TESTIMONIALS ===== */
-.testi{background:var(--dark)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.testi-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:34px;transition:.3s;display:flex;flex-direction:column}
-.testi-card:hover{transform:translateY(-6px);border-color:rgba(255,107,0,.5)}
-.testi-card .stars{color:var(--accent);letter-spacing:.22em;margin-bottom:16px;font-size:1.05rem}
-.testi-card p{color:#d8d0cb;font-style:italic;margin-bottom:18px;font-size:.97rem;flex:1}
-.testi-card .who{color:var(--gray);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
-.note{margin-top:28px;text-align:center;color:var(--gray);font-size:.8rem;font-style:italic}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testi-card{border:1px solid var(--line);padding:38px 30px;background:var(--panel);clip-path:polygon(0 0,100% 0,100% calc(100% - 24px),calc(100% - 24px) 100%,0 100%);transition:.3s}
+.testi-card:hover{transform:translateY(-6px);border-color:var(--pur)}
+.testi-card .stars{color:var(--gold);letter-spacing:.2em;margin-bottom:16px}
+.testi-card p{font-size:.96rem}
+.testi-card .who{margin-top:18px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.note{text-align:center;color:var(--mut);font-size:.78rem;margin-top:26px;font-style:italic}
 /* ===== FAQ ===== */
-.faq-list{max-width:780px;margin:0 auto}
-.faq-item{border-bottom:1px solid var(--line)}
-.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.05rem;font-weight:700;text-align:left;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Inter',sans-serif;letter-spacing:.03em;text-transform:uppercase}
-.faq-q span{color:var(--accent);font-size:1.5rem;transition:.3s;flex-shrink:0}
-.faq-item.open .faq-q span{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--gray);font-size:.96rem}
-.faq-a p{padding:0 0 24px}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{border:1px solid var(--line);margin-bottom:12px;background:var(--panel);clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,0 100%)}
+.faq-item.open{border-color:var(--mag)}
+.faq-q{width:100%;background:none;border:none;color:var(--txt);font-family:'Archivo Black';font-size:1.05rem;letter-spacing:.04em;text-align:left;padding:24px 30px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;text-transform:uppercase;font-style:italic}
+.faq-q span{font-size:1.8rem;flex:none;font-family:'Inter';background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a p{color:var(--mut);padding:0 30px 28px}
 /* ===== CTA BAND ===== */
-.cta-band{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:96px 0;text-align:center;position:relative;overflow:hidden}
-.cta-band::before{content:'GO EXTREME';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,18vw,15rem);color:rgba(255,255,255,.09);white-space:nowrap;pointer-events:none}
-.cta-band h2{font-size:clamp(3.2rem,8vw,6rem);margin-bottom:14px;position:relative;z-index:2}
-.cta-band p{font-size:1.15rem;font-weight:600;margin-bottom:34px;position:relative;z-index:2}
-.cta-band .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
-.btn.dark{background:#0c0705;border-color:#0c0705;color:#fff}
-.btn.dark:hover{background:transparent;color:#0c0705;box-shadow:none;filter:none}
+.cta-band{background:var(--grad);text-align:center;position:relative;overflow:hidden;clip-path:polygon(0 3vw,100% 0,100% 100%,0 100%);padding-top:130px}
+.cta-band::before{content:"ET";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:'Archivo Black';font-style:italic;font-size:24rem;color:rgba(255,255,255,.07);line-height:1}
+.cta-band h2{font-size:clamp(2.4rem,5.8vw,4.4rem);text-transform:uppercase;font-style:italic;color:#fff;margin-bottom:14px;position:relative}
+.cta-band p{color:rgba(255,255,255,.9);font-weight:600;margin-bottom:34px;position:relative}
+.cta-band .btn.wa{background:#0a0612;color:#fff;box-shadow:0 10px 34px rgba(0,0,0,.4)}
+.cta-band .btn.line{border:2px solid #fff;color:#fff;border-image:none}
+.btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative}
 /* ===== CONTACT ===== */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.contact-info h2{color:#fff;font-size:clamp(2.8rem,5vw,4rem);margin-bottom:16px}
-.contact-info h2 em{font-style:normal;color:var(--accent)}
-.contact-info>p{color:var(--gray);margin-bottom:28px;font-size:1.05rem}
-.c-line{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-size:1.06rem}
-.c-line .ico{font-size:1.4rem;width:32px;text-align:center}
-.c-line a{color:#fff;font-weight:700;border-bottom:2px solid var(--accent)}
-.c-line span.txt{color:#d8d0cb}
-form{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:38px}
-form h3{color:#fff;margin-bottom:22px;font-size:2rem;letter-spacing:.04em}
-.field{margin-bottom:16px}
-.field label{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:6px;font-weight:600}
-.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.14);border-radius:6px;color:#fff;padding:13px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info h2{font-size:clamp(2.2rem,4.6vw,3.4rem);text-transform:uppercase;font-style:italic;margin-bottom:16px}
+.contact-info>p{color:var(--mut);margin-bottom:30px}
+.c-line{display:flex;align-items:center;gap:16px;padding:17px 0;border-bottom:1px solid var(--line);font-size:1.04rem}
+.c-line .k{flex:none;width:46px;height:46px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.15rem;background:var(--grad);clip-path:polygon(25% 0,100% 0,75% 100%,0 100%)}
+.c-line a{color:var(--txt);text-decoration:none;font-weight:700}
+.c-line a:hover{color:var(--mag)}
+.c-line .txt{color:var(--mut)}
+form{background:var(--panel);border:1px solid var(--line);padding:42px;position:relative;clip-path:polygon(0 0,calc(100% - 28px) 0,100% 28px,100% 100%,0 100%)}
+form::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--grad)}
+form h3{font-size:1.6rem;text-transform:uppercase;font-style:italic;margin-bottom:6px}
+form .fsub{color:var(--mut);font-size:.9rem;margin-bottom:26px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);margin-bottom:8px;font-weight:600}
+.field input,.field select,.field textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:4px;color:var(--txt);padding:15px;font-size:1rem;font-family:inherit}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--mag)}
+form .btn{width:100%;justify-content:center}
 /* ===== FOOTER ===== */
-footer{background:#080504;border-top:1px solid var(--line);padding:60px 0 100px;text-align:center}
-footer .flogo{font-family:'Bebas Neue',sans-serif;letter-spacing:.12em;font-size:2rem;color:#fff;margin-bottom:8px;line-height:1}
-footer .flogo span{color:var(--accent)}
-footer p{color:var(--gray);font-size:.9rem;margin-bottom:6px}
-footer a.ftel{color:var(--accent);font-weight:700}
-footer .demo{margin-top:24px;font-size:.78rem;color:#544c46;letter-spacing:.06em}
+footer{border-top:1px solid var(--line);padding:56px 0 40px;text-align:center;background:#030205}
+footer .flogo{font-family:'Archivo Black';font-size:1.4rem;letter-spacing:.14em;font-style:italic;margin-bottom:10px}
+footer .flogo .grad-t{font-style:italic}
+footer p{color:var(--mut);font-size:.92rem;margin-bottom:6px}
+footer a.ftel{font-weight:700;text-decoration:none;font-size:1.15rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+footer .demo{margin-top:24px;font-size:.74rem;color:#4a3d5e;letter-spacing:.14em;text-transform:uppercase}
 /* ===== FLOATS ===== */
-.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
 .wa-float:hover{transform:scale(1.1)}
-.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(12,7,5,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
-.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:6px;font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
-.mobile-bar .call{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(6,4,8,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 6px;font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.mobile-bar .call{background:var(--grad);color:#fff}
 .mobile-bar .wachat{background:var(--wa);color:#fff}
 /* ===== REVEAL ===== */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
 @media(max-width:960px){
-  .prog-grid{grid-template-columns:1fr}
+  .prog-grid,.why-banner,.contact-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
-  .testi-grid{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .stats-grid{grid-template-columns:repeat(2,1fr);gap:26px}
   .diff-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
   .nav-links{display:none}
   .menu-toggle{display:block}
-  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(12,7,5,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
-  section{padding:80px 0}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(6,4,8,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
+  section{padding:76px 0}
+  .how{clip-path:none;padding:90px 0}
 }
 @media(max-width:640px){
   .mobile-bar{display:flex}
@@ -180,121 +180,95 @@ footer .demo{margin-top:24px;font-size:.78rem;color:#544c46;letter-spacing:.06em
   .diff-grid{grid-template-columns:1fr}
 }
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header id="header">
   <div class="container nav">
-    <a href="#" class="logo">EXTREME<span>TRAINING</span><small>PONCE · PUERTO RICO</small></a>
+    <a href="#" class="logo">
+      <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="etg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#8b2ff7"/><stop offset="1" stop-color="#f72585"/>
+        </linearGradient></defs>
+        <rect x="3" y="3" width="42" height="42" rx="6" fill="#0a0612" stroke="url(#etg)" stroke-width="3"/>
+        <text x="24" y="34" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="20" fill="url(#etg)" font-style="italic">ET</text>
+      </svg>
+      <span><b>EXTREME <span class="grad-t">TRAINING</span></b><small>PONCE &middot; PUERTO RICO</small></span>
+    </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#programas">Clases</a></li>
-      <li><a href="#como">Cómo empezar</a></li>
+      <li><a href="#como">C&oacute;mo empezar</a></li>
       <li><a href="#opiniones">Opiniones</a></li>
       <li><a href="#faq">Preguntas</a></li>
       <li><a href="#contacto">Contacto</a></li>
-      <li><a class="btn wa" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20informaci%C3%B3n%20de%20las%20clases" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a class="btn wa" style="padding:12px 24px;font-size:.78rem" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener">WhatsApp</a></li>
     </ul>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir men&uacute;">&#9776;</button>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-ghost">EXTREME</div>
   <div class="container hero-inner">
-    <p class="eyebrow">Gimnasio · Ponce</p>
-    <h1>Suda. <span class="fill">Sufre.</span><br><span class="stroke">Supérate.</span></h1>
-    <p class="sub">HIIT, fuerza, boxeo fitness y acondicionamiento atlético. Clases que te rompen — en el buen sentido — y te dejan queriendo más.</p>
-    <p class="tag">⚡ Ponce · Puerto Rico · Energía alta</p>
-    <div class="hero-ctas">
-      <a class="btn wa" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener">📲 Probar una clase</a>
-      <a class="btn ghost" href="tel:+19392095997">📞 Llamar ahora</a>
+    <svg class="mono reveal" viewBox="0 0 48 48" aria-hidden="true">
+      <defs><linearGradient id="etg2" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#8b2ff7"/><stop offset="1" stop-color="#f72585"/>
+      </linearGradient></defs>
+      <rect x="3" y="3" width="42" height="42" rx="6" fill="#0a0612" stroke="url(#etg2)" stroke-width="3"/>
+      <text x="24" y="34" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="20" fill="url(#etg2)" font-style="italic">ET</text>
+    </svg>
+    <p class="eyebrow reveal">Gimnasio &middot; Ponce</p>
+    <h1 class="reveal">Suda. <span class="grad-t">Sufre.</span><br>Sup&eacute;rate.</h1>
+    <p class="sub reveal">HIIT, fuerza, boxeo fitness y acondicionamiento atl&eacute;tico. Clases que te rompen &mdash; en el buen sentido &mdash; y te dejan queriendo m&aacute;s.</p>
+    <p class="tagline reveal">Ponce &middot; Puerto Rico &middot; Energ&iacute;a alta</p>
+    <div class="hero-ctas reveal">
+      <a class="btn wa" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener">Probar una clase</a>
+      <a class="btn line" href="tel:+19392095997">Llamar ahora</a>
     </div>
-    <div class="hero-phone"><a href="tel:+19392095997">(939) 209-5997</a></div>
-    <div><a class="ig-pill" href="https://www.instagram.com/extremesportstraining" target="_blank" rel="noopener">📸 @extremesportstraining</a></div>
+    <div class="hero-phone reveal"><a href="tel:+19392095997">(939) 209-5997</a></div>
+    <div class="reveal"><a class="ig" href="https://www.instagram.com/extremesportstraining" target="_blank" rel="noopener">S&iacute;guenos: <b>@extremesportstraining</b> &rarr;</a></div>
   </div>
 </section>
 
 <div class="stats">
-  <div class="container stats-grid">
-    <div><div class="num">HIIT</div><div class="lbl">Quema máxima</div></div>
+  <div class="stats-grid">
+    <div><div class="num">HIIT</div><div class="lbl">Quema m&aacute;xima</div></div>
     <div><div class="num">FUERZA</div><div class="lbl">Levanta pesado</div></div>
     <div><div class="num">BOXEO</div><div class="lbl">Fitness de combate</div></div>
     <div><div class="num">PONCE</div><div class="lbl">Tu arena</div></div>
   </div>
 </div>
 
-<div class="strip"><div>✦ GO EXTREME &nbsp;&nbsp; ✦ HIIT · FUERZA · BOXEO &nbsp;&nbsp; ✦ PONCE · PUERTO RICO &nbsp;&nbsp; ✦ GO EXTREME &nbsp;&nbsp; ✦ HIIT · FUERZA · BOXEO &nbsp;&nbsp; ✦ PONCE · PUERTO RICO &nbsp;&nbsp;</div></div>
+<div class="strip"><div>&#10022; GO EXTREME &nbsp;&nbsp; &#10022; HIIT &middot; FUERZA &middot; BOXEO &nbsp;&nbsp; &#10022; PONCE &middot; PUERTO RICO &nbsp;&nbsp; &#10022; GO EXTREME &nbsp;&nbsp; &#10022; HIIT &middot; FUERZA &middot; BOXEO &nbsp;&nbsp; &#10022; PONCE &middot; PUERTO RICO &nbsp;&nbsp; </div></div>
 
 <section id="programas">
   <div class="container">
     <div class="sec-head reveal">
       <p class="eyebrow">Programas / Clases</p>
-      <h2>Elige tu <em>veneno</em></h2>
+      <h2>Elige tu <span class="grad-t">veneno</span></h2>
       <p>Cuatro formas de destruirte (y reconstruirte). Todas con coach, todas en serio.</p>
     </div>
     <div class="prog-grid">
-      <div class="prog reveal">
-        <div class="ico">🔥</div>
-        <h3>HIIT Extremo</h3>
-        <p class="meta">Alta intensidad · 45 min</p>
-        <p>Intervalos explosivos que queman calorías durante horas. Cardio, fuerza y agallas en una sola clase.</p>
-        <ul><li>Quema calórica máxima</li><li>Mejora tu condición rápido</li><li>Para todos los niveles (escalable)</li></ul>
-        <p class="price">desde $20 / clase<small>Precio propuesto · paquetes disponibles</small></p>
-        <a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20la%20clase%20de%20HIIT%20Extremo" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
-      <div class="prog reveal">
-        <div class="ico">🏋️</div>
-        <h3>Fuerza Total</h3>
-        <p class="meta">Levantamiento · 60 min</p>
-        <p>Pesas de verdad, técnica de verdad. Construye músculo y fuerza funcional que se nota en el espejo y en la vida.</p>
-        <ul><li>Programación progresiva</li><li>Técnica supervisada</li><li>Gana fuerza medible</li></ul>
-        <p class="price">desde $25 / clase<small>Precio propuesto · paquetes disponibles</small></p>
-        <a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20la%20clase%20de%20Fuerza%20Total" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
-      <div class="prog reveal">
-        <div class="ico">🥊</div>
-        <h3>Boxeo Fitness</h3>
-        <p class="meta">Combate · 50 min</p>
-        <p>Golpea el saco, no tu agenda. Cardio brutal, coordinación y estrés fuera — sin contacto, puro fitness.</p>
-        <ul><li>Cardio de combate</li><li>Coordinación y reflejos</li><li>Libera el estrés del día</li></ul>
-        <p class="price">desde $20 / clase<small>Precio propuesto · guantes disponibles</small></p>
-        <a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20la%20clase%20de%20Boxeo%20Fitness" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
-      <div class="prog reveal">
-        <div class="ico">⚡</div>
-        <h3>Acondicionamiento Atlético</h3>
-        <p class="meta">Rendimiento · 60 min</p>
-        <p>Velocidad, potencia y agilidad para atletas que compiten. Entrena como juegas: al máximo.</p>
-        <ul><li>Velocidad y explosividad</li><li>Prevención de lesiones</li><li>Ideal para deportistas</li></ul>
-        <p class="price">desde $30 / clase<small>Precio propuesto · evaluación atlética incluida</small></p>
-        <a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20el%20Acondicionamiento%20Atl%C3%A9tico" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-      </div>
+      <div class="prog reveal"><span class="meta">Alta intensidad &middot; 45 min</span><h3>HIIT <span class="grad-t">Extremo</span></h3><p>Intervalos explosivos que queman calor&iacute;as durante horas. Cardio, fuerza y agallas en una sola clase.</p><ul><li>Quema cal&oacute;rica m&aacute;xima</li><li>Mejora tu condici&oacute;n r&aacute;pido</li><li>Para todos los niveles (escalable)</li></ul><p class="price">desde $20 / clase<small>propuesto &middot; paquetes disponibles</small></p><a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20la%20clase%20de%20HIIT%20Extremo" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
+      <div class="prog reveal"><span class="meta">Levantamiento &middot; 60 min</span><h3>Fuerza <span class="grad-t">Total</span></h3><p>Pesas de verdad, t&eacute;cnica de verdad. Construye m&uacute;sculo y fuerza funcional que se nota en el espejo y en la vida.</p><ul><li>Programaci&oacute;n progresiva</li><li>T&eacute;cnica supervisada</li><li>Gana fuerza medible</li></ul><p class="price">desde $25 / clase<small>propuesto &middot; paquetes disponibles</small></p><a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20la%20clase%20de%20Fuerza%20Total" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
+      <div class="prog reveal"><span class="meta">Combate &middot; 50 min</span><h3>Boxeo <span class="grad-t">Fitness</span></h3><p>Golpea el saco, no tu agenda. Cardio brutal, coordinaci&oacute;n y estr&eacute;s fuera &mdash; sin contacto, puro fitness.</p><ul><li>Cardio de combate</li><li>Coordinaci&oacute;n y reflejos</li><li>Libera el estr&eacute;s del d&iacute;a</li></ul><p class="price">desde $20 / clase<small>propuesto &middot; guantes disponibles</small></p><a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20la%20clase%20de%20Boxeo%20Fitness" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
+      <div class="prog reveal"><span class="meta">Rendimiento &middot; 60 min</span><h3>Acondicionamiento <span class="grad-t">Atl&eacute;tico</span></h3><p>Velocidad, potencia y agilidad para atletas que compiten. Entrena como juegas: al m&aacute;ximo.</p><ul><li>Velocidad y explosividad</li><li>Prevenci&oacute;n de lesiones</li><li>Ideal para deportistas</li></ul><p class="price">desde $30 / clase<small>propuesto &middot; evaluaci&oacute;n atl&eacute;tica incluida</small></p><a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20el%20Acondicionamiento%20Atl%C3%A9tico" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
     </div>
   </div>
 </section>
 
 <section id="como" class="how">
   <div class="container">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Cómo empezar</p>
-      <h2>Fácil. <em>Difícil</em> es quedarse en el sofá.</h2>
+    <div class="sec-head center reveal">
+      <p class="eyebrow">C&oacute;mo empezar</p>
+      <h2>F&aacute;cil. <span class="grad-t">Dif&iacute;cil</span> es quedarse en el sof&aacute;.</h2>
     </div>
     <div class="steps">
-      <div class="step reveal">
-        <div class="num">01</div>
-        <h3>Escríbenos</h3>
-        <p>Un WhatsApp. Elige tu clase y separa tu espacio.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">02</div>
-        <h3>Ven a probar</h3>
-        <p>Primera clase para sentir la energía. Trae agua y ganas.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">03</div>
-        <h3>Quédate</h3>
-        <p>Elige tu paquete y hazlo parte de tu semana. Sin vuelta atrás.</p>
-      </div>
+      <div class="step reveal"><div class="num">01</div><h3>Escr&iacute;benos</h3><p>Un WhatsApp. Elige tu clase y separa tu espacio.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>Ven a probar</h3><p>Primera clase para sentir la energ&iacute;a. Trae agua y ganas.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Qu&eacute;date</h3><p>Elige tu paquete y hazlo parte de tu semana. Sin vuelta atr&aacute;s.</p></div>
     </div>
   </div>
 </section>
@@ -303,58 +277,30 @@ footer .demo{margin-top:24px;font-size:.78rem;color:#544c46;letter-spacing:.06em
   <div class="container">
     <div class="why-banner reveal">
       <div>
-        <h2>Esto no es <em>un gym comercial.</em></h2>
-        <p>Aquí no hay filas para las máquinas ni gente paseando. Hay clases dirigidas, música alta, coaches que te gritan tu nombre y una comunidad que no te deja rendirte. Eso es Extreme Training.</p>
+        <h2>Esto no es <span class="grad-t">un gym comercial.</span></h2>
+        <p>Aqu&iacute; no hay filas para las m&aacute;quinas ni gente paseando. Hay clases dirigidas, m&uacute;sica alta, coaches que te gritan tu nombre y una comunidad que no te deja rendirte. Eso es Extreme Training.</p>
       </div>
-      <a class="btn" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase%20esta%20semana" target="_blank" rel="noopener">Probar esta semana</a>
+      <a class="btn wa" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase%20esta%20semana" target="_blank" rel="noopener">Probar esta semana</a>
     </div>
     <div class="diff-grid">
-      <div class="diff reveal">
-        <div class="ico">🎯</div>
-        <h3>Clases dirigidas</h3>
-        <p>Cada sesión la guía un coach. Nunca entrenas a ciegas.</p>
-      </div>
-      <div class="diff reveal">
-        <div class="ico">🔊</div>
-        <h3>Energía alta</h3>
-        <p>Música, intensidad y ambiente que te saca lo mejor.</p>
-      </div>
-      <div class="diff reveal">
-        <div class="ico">📊</div>
-        <h3>Todos los niveles</h3>
-        <p>Cada ejercicio se escala a tu nivel. Empieza donde estés.</p>
-      </div>
-      <div class="diff reveal">
-        <div class="ico">🏆</div>
-        <h3>Comunidad</h3>
-        <p>La gente de aquí se conoce por nombre y se empuja mutuamente.</p>
-      </div>
+      <div class="diff reveal"><span class="g">01</span><h3>Clases dirigidas</h3><p>Cada sesi&oacute;n la gu&iacute;a un coach. Nunca entrenas a ciegas.</p></div>
+      <div class="diff reveal"><span class="g">02</span><h3>Energ&iacute;a alta</h3><p>M&uacute;sica, intensidad y ambiente que te saca lo mejor.</p></div>
+      <div class="diff reveal"><span class="g">03</span><h3>Todos los niveles</h3><p>Cada ejercicio se escala a tu nivel. Empieza donde est&eacute;s.</p></div>
+      <div class="diff reveal"><span class="g">04</span><h3>Comunidad</h3><p>La gente de aqu&iacute; se conoce por nombre y se empuja mutuamente.</p></div>
     </div>
   </div>
 </section>
 
-<section id="opiniones" class="testi">
+<section id="opiniones">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head center reveal">
       <p class="eyebrow">Opiniones</p>
-      <h2>Los que <em>se atrevieron</em></h2>
+      <h2>Los que <span class="grad-t">se atrevieron</span></h2>
     </div>
     <div class="testi-grid">
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"La clase de HIIT me destruyó en el buen sentido. Sudé como nunca y al mes ya veía cambios."</p>
-        <p class="who">Miembro · Ponce</p>
-      </div>
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"El boxeo fitness es mi terapia. Salgo de cada clase con la mente clara y el cuerpo hecho polvo."</p>
-        <p class="who">Miembro · Ponce</p>
-      </div>
-      <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"Probé una clase y me quedé. Los coaches saben lo que hacen y el ambiente te engancha."</p>
-        <p class="who">Miembro · Peñuelas</p>
-      </div>
+      <div class="testi-card reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;La clase de HIIT me destruy&oacute; en el buen sentido. Sud&eacute; como nunca y al mes ya ve&iacute;a cambios.&rdquo;</p><p class="who">Miembro &middot; Ponce</p></div>
+      <div class="testi-card reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;El boxeo fitness es mi terapia. Salgo de cada clase con la mente clara y el cuerpo hecho polvo.&rdquo;</p><p class="who">Miembro &middot; Ponce</p></div>
+      <div class="testi-card reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Prob&eacute; una clase y me qued&eacute;. Los coaches saben lo que hacen y el ambiente te engancha.&rdquo;</p><p class="who">Miembro &middot; Pe&ntilde;uelas</p></div>
     </div>
     <p class="note">Testimonios con fines ilustrativos.</p>
   </div>
@@ -362,42 +308,27 @@ footer .demo{margin-top:24px;font-size:.78rem;color:#544c46;letter-spacing:.06em
 
 <section id="faq">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head center reveal">
       <p class="eyebrow">Preguntas</p>
-      <h2>Sin <em>miedo</em></h2>
+      <h2>Sin <span class="grad-t">miedo</span></h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item reveal">
-        <button class="faq-q">Nunca he entrenado, ¿aguanto una clase? <span>+</span></button>
-        <div class="faq-a"><p>Sí. Todos los ejercicios se escalan a tu nivel y el coach te guía. La primera clase es para conocer tu ritmo — nadie espera que seas atleta el día uno.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Qué traigo a mi primera clase? <span>+</span></button>
-        <div class="faq-a"><p>Ropa deportiva, tenis, toalla y mucha agua. Para boxeo fitness tenemos guantes disponibles — pregúntanos por WhatsApp.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Cuál es el horario de clases? <span>+</span></button>
-        <div class="faq-a"><p>Tenemos clases de lunes a sábado en varios horarios. Escríbenos por WhatsApp y te enviamos el horario actualizado de la semana.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Venden paquetes o membresías? <span>+</span></button>
-        <div class="faq-a"><p>Sí — manejamos clases sueltas, paquetes de clases y opciones mensuales. Escríbenos y te explicamos cuál te conviene según tu meta.</p></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q">¿Dónde los sigo? <span>+</span></button>
-        <div class="faq-a"><p>En Instagram como <strong>@extremesportstraining</strong>: horarios, videos de las clases y la energía del día a día.</p></div>
-      </div>
+      <div class="faq-item reveal"><button class="faq-q">Nunca he entrenado, &iquest;aguanto una clase? <span>+</span></button><div class="faq-a"><p>S&iacute;. Todos los ejercicios se escalan a tu nivel y el coach te gu&iacute;a. La primera clase es para conocer tu ritmo &mdash; nadie espera que seas atleta el d&iacute;a uno.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;Qu&eacute; traigo a mi primera clase? <span>+</span></button><div class="faq-a"><p>Ropa deportiva, tenis, toalla y mucha agua. Para boxeo fitness tenemos guantes disponibles &mdash; preg&uacute;ntanos por WhatsApp.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;Cu&aacute;l es el horario de clases? <span>+</span></button><div class="faq-a"><p>Tenemos clases de lunes a s&aacute;bado en varios horarios. Escr&iacute;benos por WhatsApp y te enviamos el horario actualizado de la semana.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;Venden paquetes o membres&iacute;as? <span>+</span></button><div class="faq-a"><p>S&iacute; &mdash; manejamos clases sueltas, paquetes de clases y opciones mensuales. Escr&iacute;benos y te explicamos cu&aacute;l te conviene seg&uacute;n tu meta.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">&iquest;D&oacute;nde los sigo? <span>+</span></button><div class="faq-a"><p>En Instagram como <b>@extremesportstraining</b>: horarios, videos de las clases y la energ&iacute;a del d&iacute;a a d&iacute;a.</p></div></div>
     </div>
   </div>
 </section>
 
 <section class="cta-band">
   <div class="container">
-    <h2>Deja de pensarlo. Empieza a sudarlo.</h2>
-    <p>Tu primera clase te está esperando en Ponce.</p>
-    <div class="btn-row">
-      <a class="btn dark" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener">📲 Probar por WhatsApp</a>
-      <a class="btn dark" href="tel:+19392095997">📞 (939) 209-5997</a>
+    <h2 class="reveal">Deja de pensarlo.<br>Empieza a sudarlo.</h2>
+    <p class="reveal">Tu primera clase te est&aacute; esperando en Ponce.</p>
+    <div class="btn-row reveal">
+      <a class="btn wa" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener">Probar por WhatsApp</a>
+      <a class="btn line" href="tel:+19392095997">(939) 209-5997</a>
     </div>
   </div>
 </section>
@@ -406,58 +337,41 @@ footer .demo{margin-top:24px;font-size:.78rem;color:#544c46;letter-spacing:.06em
   <div class="container contact-grid">
     <div class="contact-info reveal">
       <p class="eyebrow">Contacto</p>
-      <h2>Ven al <em>extremo</em></h2>
-      <p>Escríbenos, llámanos o síguenos en Instagram. La primera clase es el paso más difícil — nosotros lo hacemos fácil.</p>
-      <div class="c-line"><span class="ico">📞</span><a href="tel:+19392095997">(939) 209-5997</a></div>
-      <div class="c-line"><span class="ico">📲</span><a href="https://wa.me/19392095997" target="_blank" rel="noopener">WhatsApp directo</a></div>
-      <div class="c-line"><span class="ico">📸</span><a href="https://www.instagram.com/extremesportstraining" target="_blank" rel="noopener">@extremesportstraining</a></div>
-      <div class="c-line"><span class="ico">📍</span><span class="txt">Ponce, Puerto Rico</span></div>
-      <div class="c-line"><span class="ico">🕐</span><span class="txt">Lun–Sáb · Horario de clases por WhatsApp</span></div>
+      <h2>Ven al <span class="grad-t">extremo</span></h2>
+      <p>Escr&iacute;benos, ll&aacute;manos o s&iacute;guenos en Instagram. La primera clase es el paso m&aacute;s dif&iacute;cil &mdash; nosotros lo hacemos f&aacute;cil.</p>
+      <div class="c-line"><span class="k">&#9742;</span><a href="tel:+19392095997">(939) 209-5997</a></div>
+      <div class="c-line"><span class="k">&#9993;</span><a href="https://wa.me/19392095997" target="_blank" rel="noopener">WhatsApp directo</a></div>
+      <div class="c-line"><span class="k">&#9673;</span><a href="https://www.instagram.com/extremesportstraining" target="_blank" rel="noopener">@extremesportstraining</a></div>
+      <div class="c-line"><span class="k">&#9733;</span><span class="txt">Ponce, Puerto Rico</span></div>
     </div>
     <form id="bookForm" class="reveal">
       <h3>Separa tu clase</h3>
-      <div class="field">
-        <label for="fNombre">Nombre</label>
-        <input id="fNombre" type="text" placeholder="Tu nombre" required>
-      </div>
-      <div class="field">
-        <label for="fTel">Teléfono</label>
-        <input id="fTel" type="tel" placeholder="(939) 000-0000" required>
-      </div>
-      <div class="field">
-        <label for="fSvc">Clase</label>
-        <select id="fSvc">
-          <option>HIIT Extremo</option>
-          <option>Fuerza Total</option>
-          <option>Boxeo Fitness</option>
-          <option>Acondicionamiento Atlético</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="fMsg">Tu nivel / meta</label>
-        <textarea id="fMsg" rows="3" placeholder="Cuéntanos en qué nivel estás"></textarea>
-      </div>
-      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
+      <p class="fsub">Te confirmamos por WhatsApp.</p>
+      <div class="field"><label for="fNombre">Nombre</label><input id="fNombre" type="text" placeholder="Tu nombre" required></div>
+      <div class="field"><label for="fTel">Tel&eacute;fono</label><input id="fTel" type="tel" placeholder="(939) 209-5997" required></div>
+      <div class="field"><label for="fSvc">Clase</label><select id="fSvc">
+        <option>HIIT Extremo</option><option>Fuerza Total</option><option>Boxeo Fitness</option><option>Acondicionamiento Atl&eacute;tico</option>
+      </select></div>
+      <div class="field"><label for="fMsg">Tu nivel / meta</label><textarea id="fMsg" rows="3" placeholder="Cu&eacute;ntanos en qu&eacute; nivel est&aacute;s"></textarea></div>
+      <button class="btn wa" type="submit">Enviar por WhatsApp</button>
     </form>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p class="flogo">EXTREME<span>TRAINING</span></p>
-    <p>Gimnasio · Ponce, Puerto Rico · Go Extreme</p>
-    <p><a class="ftel" href="tel:+19392095997">(939) 209-5997</a> · <a class="ftel" href="https://www.instagram.com/extremesportstraining" target="_blank" rel="noopener">@extremesportstraining</a></p>
-    <p class="demo">Demostración creada por ManuPro</p>
+    <p class="flogo">EXTREME <span class="grad-t">TRAINING</span></p>
+    <p>Gimnasio &middot; Ponce, Puerto Rico</p>
+    <p><a class="ftel" href="tel:+19392095997">(939) 209-5997</a></p>
+    <p class="demo">Demostraci&oacute;n creada por ManuPro</p>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-
+<a class="wa-float" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6 1.6h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.2c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.8C4.9 9 9.9 4 16 4s11.1 5 11.1 11-5 10.2-11.1 10.2zm6.1-7.6c-.3-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.5-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.6 5.7 5.1 2.2.9 3 .9 4.1.8.6-.1 2-0.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.4-.2-.7-.4z"/></svg></a>
 <div class="mobile-bar">
-  <a class="call" href="tel:+19392095997">📞 Llamar</a>
-  <a class="wachat" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a class="call" href="tel:+19392095997"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg> Llamar</a>
+  <a class="wachat" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.6 6 1.6h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.2c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.8C4.9 9 9.9 4 16 4s11.1 5 11.1 11-5 10.2-11.1 10.2zm6.1-7.6c-.3-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.5-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.6 5.7 5.1 2.2.9 3 .9 4.1.8.6-.1 2-0.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.4-.2-.7-.4z"/></svg> WhatsApp</a>
 </div>
-
 <script>
 const header=document.getElementById('header');
 addEventListener('scroll',()=>{header.classList.toggle('solid',scrollY>40)},{passive:true});
@@ -466,8 +380,8 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   const btn=item.querySelector('.faq-q');
   btn.addEventListener('click',()=>{
     const wasOpen=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+';});
-    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='×';}
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q').querySelector('span').textContent='+';});
+    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='\u00d7';}
   });
 });
 document.getElementById('bookForm').addEventListener('submit',e=>{
@@ -476,9 +390,9 @@ document.getElementById('bookForm').addEventListener('submit',e=>{
   const tel=document.getElementById('fTel').value.trim();
   const svc=document.getElementById('fSvc').value;
   const msg=document.getElementById('fMsg').value.trim();
-  if(!nombre||!tel){alert('Por favor completa tu nombre y teléfono.');return;}
-  let text='Hola Extreme Training, soy '+nombre+'. Quiero probar: '+svc+'. Mi teléfono es '+tel+'.';
-  if(msg)text+=' Mi nivel/meta: '+msg;
+  if(!nombre||!tel){alert('Por favor completa tu nombre y tel\u00e9fono.');return;}
+  let text='Hola Extreme Training, soy '+nombre+'. Quiero: '+svc+'. Mi tel\u00e9fono es '+tel+'.';
+  if(msg)text+=' '+msg;
   window.open('https://wa.me/19392095997?text='+encodeURIComponent(text),'_blank');
 });
 const io=new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}})},{threshold:.12});
