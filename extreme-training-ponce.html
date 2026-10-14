@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Extreme Training | Gimnasio en Ponce, PR — Entrena al Extremo</title>
+<meta name="description" content="Extreme Training en Ponce — clases de HIIT, fuerza, boxeo fitness y acondicionamiento atlético. Energía alta, resultados reales. Síguenos @extremesportstraining.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0c0705; --dark:#140c08; --panel:#1a100a; --line:rgba(255,255,255,.09);
+  --gray:#a8a09a; --white:#f7f4f2; --accent:#FF6B00; --accent2:#E10600;
+  --accent-dim:rgba(255,107,0,.12); --wa:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Bebas Neue',sans-serif;line-height:.92;letter-spacing:.02em;font-weight:400}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:0 auto}
+/* ===== HEADER ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:rgba(12,7,5,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent}
+header.solid{background:rgba(12,7,5,.96);border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:.1em;line-height:1}
+.logo span{color:var(--accent)}
+.logo small{display:block;font-family:'Inter',sans-serif;font-size:.55rem;letter-spacing:.42em;color:var(--gray);font-weight:600}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:#dcd5d0;transition:.25s;font-weight:600}
+.nav-links a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:15px 34px;border-radius:4px;font-size:.88rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;transition:.25s;border:2px solid transparent;cursor:pointer;font-family:'Inter',sans-serif}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(255,107,0,.4);filter:brightness(1.1)}
+.btn.wa{background:var(--wa);border-color:var(--wa)}
+.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 30px rgba(37,211,102,.28);filter:none}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);box-shadow:none}
+.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:#fff}
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 65% 50% at 50% 0%,rgba(255,107,0,.16) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 90% 90%,rgba(225,6,0,.1) 0%,transparent 55%),linear-gradient(180deg,#160d08,#0c0705)}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 40px,rgba(255,107,0,.02) 40px 42px);pointer-events:none}
+.hero-ghost{position:absolute;bottom:-2%;left:50%;transform:translateX(-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(7rem,22vw,20rem);color:transparent;-webkit-text-stroke:1px rgba(255,107,0,.22);white-space:nowrap;pointer-events:none;user-select:none;line-height:1}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:140px 0 90px;width:100%}
+.eyebrow{letter-spacing:.44em;text-transform:uppercase;font-size:.78rem;color:var(--accent);margin-bottom:20px;font-weight:700}
+.hero h1{font-size:clamp(4rem,12vw,9.5rem);margin-bottom:18px}
+.hero h1 .fill{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .stroke{color:transparent;-webkit-text-stroke:2.5px #fff}
+.hero p.sub{font-size:1.15rem;font-weight:400;max-width:640px;margin:0 auto 10px;color:#cfc6c0}
+.hero p.tag{font-size:1.05rem;color:var(--accent);font-weight:800;letter-spacing:.14em;margin-bottom:36px;text-transform:uppercase}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
+.hero-phone{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4.5vw,2.6rem);letter-spacing:.1em}
+.hero-phone a{color:#fff;border-bottom:3px solid var(--accent);padding-bottom:2px;transition:.25s}
+.hero-phone a:hover{color:var(--accent)}
+.ig-pill{display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:10px 26px;border:1px solid rgba(255,107,0,.6);border-radius:40px;color:#fff;font-size:.9rem;letter-spacing:.08em;background:var(--accent-dim);font-weight:600}
+/* ===== STATS ===== */
+.stats{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:36px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats-grid .num{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,5vw,3.8rem);line-height:1}
+.stats-grid .lbl{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;opacity:.92;margin-top:6px}
+/* ===== MARQUEE ===== */
+.strip{background:#000;color:var(--accent);overflow:hidden;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip div{white-space:nowrap;animation:slide 20s linear infinite;font-family:'Bebas Neue',sans-serif;letter-spacing:.24em;font-size:1.15rem}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* ===== SECTIONS ===== */
+section{padding:104px 0}
+.sec-head{text-align:center;max-width:700px;margin:0 auto 60px}
+.sec-head .eyebrow{margin-bottom:14px}
+.sec-head h2{font-size:clamp(2.8rem,6vw,4.6rem);margin-bottom:14px;color:#fff}
+.sec-head h2 em{font-style:normal;color:var(--accent)}
+.sec-head p{color:var(--gray);font-size:1.05rem}
+/* ===== PROGRAMS ===== */
+.prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.prog{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:44px 36px;transition:.3s;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.prog::after{content:'';position:absolute;top:0;right:0;width:90px;height:90px;background:linear-gradient(135deg,transparent 50%,rgba(255,107,0,.18) 50%);transition:.3s}
+.prog:hover{transform:translateY(-8px);border-color:rgba(255,107,0,.55);box-shadow:0 22px 55px rgba(255,107,0,.18)}
+.prog .ico{font-size:2.6rem;margin-bottom:18px}
+.prog h3{font-size:2.1rem;margin-bottom:8px;color:#fff;letter-spacing:.03em}
+.prog .meta{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.prog p{color:var(--gray);font-size:.96rem;margin-bottom:18px;flex:1}
+.prog ul{list-style:none;margin-bottom:20px;display:grid;gap:8px}
+.prog ul li{color:#cfc6c0;font-size:.9rem;padding-left:22px;position:relative}
+.prog ul li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-weight:800}
+.price{color:var(--accent);font-weight:800;font-size:1.4rem;letter-spacing:.04em;margin-bottom:20px;font-family:'Bebas Neue',sans-serif}
+.price small{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:400;color:var(--gray);letter-spacing:.02em;margin-top:2px}
+.prog .btn{padding:12px 24px;font-size:.78rem;align-self:flex-start}
+/* ===== HOW ===== */
+.how{background:var(--dark);position:relative;overflow:hidden}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;position:relative;z-index:2}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:42px 30px;text-align:center;transition:.3s}
+.step:hover{border-color:rgba(255,107,0,.6);transform:translateY(-6px)}
+.step .num{font-family:'Bebas Neue',sans-serif;font-size:4rem;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;margin-bottom:14px}
+.step h3{color:#fff;font-size:1.8rem;margin-bottom:10px;letter-spacing:.04em}
+.step p{color:var(--gray);font-size:.93rem}
+/* ===== WHY ===== */
+.why-banner{background:linear-gradient(135deg,rgba(255,107,0,.16),rgba(225,6,0,.05));border:1px solid rgba(255,107,0,.4);border-radius:14px;padding:64px 8%;display:flex;align-items:center;gap:44px;flex-wrap:wrap;justify-content:space-between}
+.why-banner h2{font-size:clamp(2.4rem,5vw,3.8rem);color:#fff;margin-bottom:14px}
+.why-banner h2 em{font-style:normal;color:var(--accent)}
+.why-banner p{color:var(--gray);max-width:540px;font-size:1.05rem}
+.diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+.diff{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:30px 24px;transition:.3s}
+.diff:hover{border-color:rgba(255,107,0,.55);transform:translateY(-5px)}
+.diff .ico{font-size:2rem;margin-bottom:12px}
+.diff h3{font-size:1.35rem;color:#fff;margin-bottom:8px;letter-spacing:.05em}
+.diff p{color:var(--gray);font-size:.88rem}
+/* ===== TESTIMONIALS ===== */
+.testi{background:var(--dark)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.testi-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:34px;transition:.3s;display:flex;flex-direction:column}
+.testi-card:hover{transform:translateY(-6px);border-color:rgba(255,107,0,.5)}
+.testi-card .stars{color:var(--accent);letter-spacing:.22em;margin-bottom:16px;font-size:1.05rem}
+.testi-card p{color:#d8d0cb;font-style:italic;margin-bottom:18px;font-size:.97rem;flex:1}
+.testi-card .who{color:var(--gray);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.note{margin-top:28px;text-align:center;color:var(--gray);font-size:.8rem;font-style:italic}
+/* ===== FAQ ===== */
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.05rem;font-weight:700;text-align:left;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Inter',sans-serif;letter-spacing:.03em;text-transform:uppercase}
+.faq-q span{color:var(--accent);font-size:1.5rem;transition:.3s;flex-shrink:0}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--gray);font-size:.96rem}
+.faq-a p{padding:0 0 24px}
+/* ===== CTA BAND ===== */
+.cta-band{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:96px 0;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'GO EXTREME';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,18vw,15rem);color:rgba(255,255,255,.09);white-space:nowrap;pointer-events:none}
+.cta-band h2{font-size:clamp(3.2rem,8vw,6rem);margin-bottom:14px;position:relative;z-index:2}
+.cta-band p{font-size:1.15rem;font-weight:600;margin-bottom:34px;position:relative;z-index:2}
+.cta-band .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
+.btn.dark{background:#0c0705;border-color:#0c0705;color:#fff}
+.btn.dark:hover{background:transparent;color:#0c0705;box-shadow:none;filter:none}
+/* ===== CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact-info h2{color:#fff;font-size:clamp(2.8rem,5vw,4rem);margin-bottom:16px}
+.contact-info h2 em{font-style:normal;color:var(--accent)}
+.contact-info>p{color:var(--gray);margin-bottom:28px;font-size:1.05rem}
+.c-line{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-size:1.06rem}
+.c-line .ico{font-size:1.4rem;width:32px;text-align:center}
+.c-line a{color:#fff;font-weight:700;border-bottom:2px solid var(--accent)}
+.c-line span.txt{color:#d8d0cb}
+form{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:38px}
+form h3{color:#fff;margin-bottom:22px;font-size:2rem;letter-spacing:.04em}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:6px;font-weight:600}
+.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.14);border-radius:6px;color:#fff;padding:13px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+/* ===== FOOTER ===== */
+footer{background:#080504;border-top:1px solid var(--line);padding:60px 0 100px;text-align:center}
+footer .flogo{font-family:'Bebas Neue',sans-serif;letter-spacing:.12em;font-size:2rem;color:#fff;margin-bottom:8px;line-height:1}
+footer .flogo span{color:var(--accent)}
+footer p{color:var(--gray);font-size:.9rem;margin-bottom:6px}
+footer a.ftel{color:var(--accent);font-weight:700}
+footer .demo{margin-top:24px;font-size:.78rem;color:#544c46;letter-spacing:.06em}
+/* ===== FLOATS ===== */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
+.wa-float:hover{transform:scale(1.1)}
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(12,7,5,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:6px;font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
+.mobile-bar .call{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
+.mobile-bar .wachat{background:var(--wa);color:#fff}
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:960px){
+  .prog-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:26px}
+  .diff-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(12,7,5,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
+  section{padding:80px 0}
+}
+@media(max-width:640px){
+  .mobile-bar{display:flex}
+  .wa-float{display:none}
+  footer{padding-bottom:150px}
+  .diff-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="container nav">
+    <a href="#" class="logo">EXTREME<span>TRAINING</span><small>PONCE · PUERTO RICO</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#programas">Clases</a></li>
+      <li><a href="#como">Cómo empezar</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a class="btn wa" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20informaci%C3%B3n%20de%20las%20clases" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-ghost">EXTREME</div>
+  <div class="container hero-inner">
+    <p class="eyebrow">Gimnasio · Ponce</p>
+    <h1>Suda. <span class="fill">Sufre.</span><br><span class="stroke">Supérate.</span></h1>
+    <p class="sub">HIIT, fuerza, boxeo fitness y acondicionamiento atlético. Clases que te rompen — en el buen sentido — y te dejan queriendo más.</p>
+    <p class="tag">⚡ Ponce · Puerto Rico · Energía alta</p>
+    <div class="hero-ctas">
+      <a class="btn wa" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener">📲 Probar una clase</a>
+      <a class="btn ghost" href="tel:+19392095997">📞 Llamar ahora</a>
+    </div>
+    <div class="hero-phone"><a href="tel:+19392095997">(939) 209-5997</a></div>
+    <div><a class="ig-pill" href="https://www.instagram.com/extremesportstraining" target="_blank" rel="noopener">📸 @extremesportstraining</a></div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container stats-grid">
+    <div><div class="num">HIIT</div><div class="lbl">Quema máxima</div></div>
+    <div><div class="num">FUERZA</div><div class="lbl">Levanta pesado</div></div>
+    <div><div class="num">BOXEO</div><div class="lbl">Fitness de combate</div></div>
+    <div><div class="num">PONCE</div><div class="lbl">Tu arena</div></div>
+  </div>
+</div>
+
+<div class="strip"><div>✦ GO EXTREME &nbsp;&nbsp; ✦ HIIT · FUERZA · BOXEO &nbsp;&nbsp; ✦ PONCE · PUERTO RICO &nbsp;&nbsp; ✦ GO EXTREME &nbsp;&nbsp; ✦ HIIT · FUERZA · BOXEO &nbsp;&nbsp; ✦ PONCE · PUERTO RICO &nbsp;&nbsp;</div></div>
+
+<section id="programas">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Programas / Clases</p>
+      <h2>Elige tu <em>veneno</em></h2>
+      <p>Cuatro formas de destruirte (y reconstruirte). Todas con coach, todas en serio.</p>
+    </div>
+    <div class="prog-grid">
+      <div class="prog reveal">
+        <div class="ico">🔥</div>
+        <h3>HIIT Extremo</h3>
+        <p class="meta">Alta intensidad · 45 min</p>
+        <p>Intervalos explosivos que queman calorías durante horas. Cardio, fuerza y agallas en una sola clase.</p>
+        <ul><li>Quema calórica máxima</li><li>Mejora tu condición rápido</li><li>Para todos los niveles (escalable)</li></ul>
+        <p class="price">desde $20 / clase<small>Precio propuesto · paquetes disponibles</small></p>
+        <a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20la%20clase%20de%20HIIT%20Extremo" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+      <div class="prog reveal">
+        <div class="ico">🏋️</div>
+        <h3>Fuerza Total</h3>
+        <p class="meta">Levantamiento · 60 min</p>
+        <p>Pesas de verdad, técnica de verdad. Construye músculo y fuerza funcional que se nota en el espejo y en la vida.</p>
+        <ul><li>Programación progresiva</li><li>Técnica supervisada</li><li>Gana fuerza medible</li></ul>
+        <p class="price">desde $25 / clase<small>Precio propuesto · paquetes disponibles</small></p>
+        <a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20la%20clase%20de%20Fuerza%20Total" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+      <div class="prog reveal">
+        <div class="ico">🥊</div>
+        <h3>Boxeo Fitness</h3>
+        <p class="meta">Combate · 50 min</p>
+        <p>Golpea el saco, no tu agenda. Cardio brutal, coordinación y estrés fuera — sin contacto, puro fitness.</p>
+        <ul><li>Cardio de combate</li><li>Coordinación y reflejos</li><li>Libera el estrés del día</li></ul>
+        <p class="price">desde $20 / clase<small>Precio propuesto · guantes disponibles</small></p>
+        <a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20la%20clase%20de%20Boxeo%20Fitness" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+      <div class="prog reveal">
+        <div class="ico">⚡</div>
+        <h3>Acondicionamiento Atlético</h3>
+        <p class="meta">Rendimiento · 60 min</p>
+        <p>Velocidad, potencia y agilidad para atletas que compiten. Entrena como juegas: al máximo.</p>
+        <ul><li>Velocidad y explosividad</li><li>Prevención de lesiones</li><li>Ideal para deportistas</li></ul>
+        <p class="price">desde $30 / clase<small>Precio propuesto · evaluación atlética incluida</small></p>
+        <a class="btn wa" href="https://wa.me/19392095997?text=Hola%2C%20me%20interesa%20el%20Acondicionamiento%20Atl%C3%A9tico" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como" class="how">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Cómo empezar</p>
+      <h2>Fácil. <em>Difícil</em> es quedarse en el sofá.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">01</div>
+        <h3>Escríbenos</h3>
+        <p>Un WhatsApp. Elige tu clase y separa tu espacio.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">02</div>
+        <h3>Ven a probar</h3>
+        <p>Primera clase para sentir la energía. Trae agua y ganas.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">03</div>
+        <h3>Quédate</h3>
+        <p>Elige tu paquete y hazlo parte de tu semana. Sin vuelta atrás.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="container">
+    <div class="why-banner reveal">
+      <div>
+        <h2>Esto no es <em>un gym comercial.</em></h2>
+        <p>Aquí no hay filas para las máquinas ni gente paseando. Hay clases dirigidas, música alta, coaches que te gritan tu nombre y una comunidad que no te deja rendirte. Eso es Extreme Training.</p>
+      </div>
+      <a class="btn" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase%20esta%20semana" target="_blank" rel="noopener">Probar esta semana</a>
+    </div>
+    <div class="diff-grid">
+      <div class="diff reveal">
+        <div class="ico">🎯</div>
+        <h3>Clases dirigidas</h3>
+        <p>Cada sesión la guía un coach. Nunca entrenas a ciegas.</p>
+      </div>
+      <div class="diff reveal">
+        <div class="ico">🔊</div>
+        <h3>Energía alta</h3>
+        <p>Música, intensidad y ambiente que te saca lo mejor.</p>
+      </div>
+      <div class="diff reveal">
+        <div class="ico">📊</div>
+        <h3>Todos los niveles</h3>
+        <p>Cada ejercicio se escala a tu nivel. Empieza donde estés.</p>
+      </div>
+      <div class="diff reveal">
+        <div class="ico">🏆</div>
+        <h3>Comunidad</h3>
+        <p>La gente de aquí se conoce por nombre y se empuja mutuamente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" class="testi">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Opiniones</p>
+      <h2>Los que <em>se atrevieron</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"La clase de HIIT me destruyó en el buen sentido. Sudé como nunca y al mes ya veía cambios."</p>
+        <p class="who">Miembro · Ponce</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"El boxeo fitness es mi terapia. Salgo de cada clase con la mente clara y el cuerpo hecho polvo."</p>
+        <p class="who">Miembro · Ponce</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Probé una clase y me quedé. Los coaches saben lo que hacen y el ambiente te engancha."</p>
+        <p class="who">Miembro · Peñuelas</p>
+      </div>
+    </div>
+    <p class="note">Testimonios con fines ilustrativos.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Preguntas</p>
+      <h2>Sin <em>miedo</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">Nunca he entrenado, ¿aguanto una clase? <span>+</span></button>
+        <div class="faq-a"><p>Sí. Todos los ejercicios se escalan a tu nivel y el coach te guía. La primera clase es para conocer tu ritmo — nadie espera que seas atleta el día uno.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Qué traigo a mi primera clase? <span>+</span></button>
+        <div class="faq-a"><p>Ropa deportiva, tenis, toalla y mucha agua. Para boxeo fitness tenemos guantes disponibles — pregúntanos por WhatsApp.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Cuál es el horario de clases? <span>+</span></button>
+        <div class="faq-a"><p>Tenemos clases de lunes a sábado en varios horarios. Escríbenos por WhatsApp y te enviamos el horario actualizado de la semana.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Venden paquetes o membresías? <span>+</span></button>
+        <div class="faq-a"><p>Sí — manejamos clases sueltas, paquetes de clases y opciones mensuales. Escríbenos y te explicamos cuál te conviene según tu meta.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Dónde los sigo? <span>+</span></button>
+        <div class="faq-a"><p>En Instagram como <strong>@extremesportstraining</strong>: horarios, videos de las clases y la energía del día a día.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Deja de pensarlo. Empieza a sudarlo.</h2>
+    <p>Tu primera clase te está esperando en Ponce.</p>
+    <div class="btn-row">
+      <a class="btn dark" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener">📲 Probar por WhatsApp</a>
+      <a class="btn dark" href="tel:+19392095997">📞 (939) 209-5997</a>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <p class="eyebrow">Contacto</p>
+      <h2>Ven al <em>extremo</em></h2>
+      <p>Escríbenos, llámanos o síguenos en Instagram. La primera clase es el paso más difícil — nosotros lo hacemos fácil.</p>
+      <div class="c-line"><span class="ico">📞</span><a href="tel:+19392095997">(939) 209-5997</a></div>
+      <div class="c-line"><span class="ico">📲</span><a href="https://wa.me/19392095997" target="_blank" rel="noopener">WhatsApp directo</a></div>
+      <div class="c-line"><span class="ico">📸</span><a href="https://www.instagram.com/extremesportstraining" target="_blank" rel="noopener">@extremesportstraining</a></div>
+      <div class="c-line"><span class="ico">📍</span><span class="txt">Ponce, Puerto Rico</span></div>
+      <div class="c-line"><span class="ico">🕐</span><span class="txt">Lun–Sáb · Horario de clases por WhatsApp</span></div>
+    </div>
+    <form id="bookForm" class="reveal">
+      <h3>Separa tu clase</h3>
+      <div class="field">
+        <label for="fNombre">Nombre</label>
+        <input id="fNombre" type="text" placeholder="Tu nombre" required>
+      </div>
+      <div class="field">
+        <label for="fTel">Teléfono</label>
+        <input id="fTel" type="tel" placeholder="(939) 000-0000" required>
+      </div>
+      <div class="field">
+        <label for="fSvc">Clase</label>
+        <select id="fSvc">
+          <option>HIIT Extremo</option>
+          <option>Fuerza Total</option>
+          <option>Boxeo Fitness</option>
+          <option>Acondicionamiento Atlético</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fMsg">Tu nivel / meta</label>
+        <textarea id="fMsg" rows="3" placeholder="Cuéntanos en qué nivel estás"></textarea>
+      </div>
+      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="flogo">EXTREME<span>TRAINING</span></p>
+    <p>Gimnasio · Ponce, Puerto Rico · Go Extreme</p>
+    <p><a class="ftel" href="tel:+19392095997">(939) 209-5997</a> · <a class="ftel" href="https://www.instagram.com/extremesportstraining" target="_blank" rel="noopener">@extremesportstraining</a></p>
+    <p class="demo">Demostración creada por ManuPro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+19392095997">📞 Llamar</a>
+  <a class="wachat" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<script>
+const header=document.getElementById('header');
+addEventListener('scroll',()=>{header.classList.toggle('solid',scrollY>40)},{passive:true});
+document.getElementById('menuToggle').addEventListener('click',()=>{document.getElementById('navLinks').classList.toggle('open')});
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const btn=item.querySelector('.faq-q');
+  btn.addEventListener('click',()=>{
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+';});
+    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='×';}
+  });
+});
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const nombre=document.getElementById('fNombre').value.trim();
+  const tel=document.getElementById('fTel').value.trim();
+  const svc=document.getElementById('fSvc').value;
+  const msg=document.getElementById('fMsg').value.trim();
+  if(!nombre||!tel){alert('Por favor completa tu nombre y teléfono.');return;}
+  let text='Hola Extreme Training, soy '+nombre+'. Quiero probar: '+svc+'. Mi teléfono es '+tel+'.';
+  if(msg)text+=' Mi nivel/meta: '+msg;
+  window.open('https://wa.me/19392095997?text='+encodeURIComponent(text),'_blank');
+});
+const io=new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

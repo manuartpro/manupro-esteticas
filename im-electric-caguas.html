@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IM Electric & Appliance Services | Iván Montalvo · Caguas, PR</title>
+<meta name="description" content="IM Electric & Appliance Services — Iván Montalvo, perito electricista licencia #10978 en Caguas, PR. Instalaciones eléctricas y servicio de enseres. Cotiza por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --acc:#FFD400; --acc-ink:#0a0a0a; --acc-dim:rgba(255,212,0,.14);
+  --bg0:#0b0b0d; --bg1:#101014; --card:#15151a; --line:rgba(255,255,255,.08);
+  --txt:#f4f4f6; --mut:#a3a3ad; --wa:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg0);color:var(--txt);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Oswald',sans-serif;line-height:1.05;text-transform:uppercase;letter-spacing:.01em}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:0 auto}
+section{padding:100px 0;position:relative}
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:rgba(10,10,12,.82);backdrop-filter:blur(14px);border-bottom:1px solid transparent}
+header.solid{border-bottom:1px solid var(--line);box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{font-family:'Oswald',sans-serif;font-size:1.45rem;font-weight:700;letter-spacing:.1em;color:#fff;text-transform:uppercase;line-height:1}
+.logo span{color:var(--acc)}
+.logo small{display:block;font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:.42em;color:var(--mut);font-weight:400;margin-top:4px}
+.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+.nav-links a{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#d5d5db;transition:.25s;font-weight:500}
+.nav-links a:hover{color:var(--acc)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--acc);color:var(--acc-ink);padding:15px 34px;border-radius:60px;font-size:.88rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;transition:.3s;border:2px solid var(--acc);cursor:pointer;font-family:'Oswald',sans-serif}
+.btn:hover{background:transparent;color:var(--acc);transform:translateY(-3px);box-shadow:0 12px 32px var(--acc-dim)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 12px 32px rgba(37,211,102,.25)}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.btn.ghost:hover{border-color:var(--acc);color:var(--acc);box-shadow:none}
+.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:#fff}
+/* HERO */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;color:#fff;background:radial-gradient(ellipse 70% 50% at 50% 0%,#2a2200 0%,#0b0b0d 70%),#0b0b0d}
+.hero::before{content:'⚡';position:absolute;right:4%;bottom:8%;font-size:clamp(7rem,20vw,15rem);opacity:.07;filter:grayscale(1);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 45% at 50% 0%,rgba(255,212,0,.10) 0%,transparent 70%);pointer-events:none}
+.hero-inner{position:relative;z-index:2;padding:140px 0 100px;width:100%;text-align:center}
+.eyebrow{letter-spacing:.45em;text-transform:uppercase;font-size:.78rem;color:var(--acc);margin-bottom:22px;font-weight:600}
+.hero h1{font-size:clamp(3rem,9vw,6.6rem);font-weight:700;margin-bottom:22px;color:#fff}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero p.sub{font-size:1.2rem;font-weight:300;max-width:660px;margin:0 auto 12px;color:#c9c9d1}
+.badge24{display:inline-block;margin-bottom:30px;padding:10px 26px;border:1.5px solid var(--acc);border-radius:60px;color:var(--acc);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.82rem;background:var(--acc-dim)}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:38px}
+.hero-phone{font-size:1.5rem;font-weight:700;letter-spacing:.04em}
+.hero-phone a{color:#fff;border-bottom:3px solid var(--acc);padding-bottom:2px}
+.trust{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;font-size:.95rem;color:var(--mut)}
+.trust b{color:#fff}
+/* PROOF STRIP */
+.proof{background:var(--acc);color:#0a0a0a;padding:0}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.proof-cell{padding:30px 20px;text-align:center;border-left:1px solid rgba(0,0,0,.12)}
+.proof-cell:first-child{border-left:none}
+.proof-cell .v{font-family:'Oswald',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;letter-spacing:.03em}
+.proof-cell .k{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.85}
+/* MARQUEE */
+.strip{background:var(--bg1);color:var(--acc);overflow:hidden;padding:14px 0;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.28em;font-size:.9rem;text-transform:uppercase;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip div{white-space:nowrap;animation:slide 24s linear infinite;display:inline-block}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* SECTION HEADS */
+.sec-head{text-align:center;max-width:700px;margin:0 auto 60px}
+.sec-head h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:16px;color:#fff;font-weight:700}
+.sec-head h2 em{font-style:normal;color:var(--acc)}
+.sec-head p{color:var(--mut);font-size:1.05rem}
+.giant{position:absolute;top:40px;right:4%;font-family:'Oswald',sans-serif;font-size:clamp(6rem,16vw,13rem);font-weight:700;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.07);line-height:1;pointer-events:none;user-select:none}
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:42px 34px;transition:.35s;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--acc);opacity:0;transition:.35s}
+.card:hover{transform:translateY(-10px);border-color:var(--acc-dim);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.card:hover::before{opacity:1}
+.card .ico{font-size:2.7rem;margin-bottom:18px}
+.card h3{font-size:1.5rem;margin-bottom:10px;color:#fff}
+.card p{color:var(--mut);font-size:.96rem;margin-bottom:18px;flex:1}
+.price{color:var(--acc);font-weight:700;font-size:1.25rem;letter-spacing:.04em;margin-bottom:20px;font-family:'Oswald',sans-serif}
+.price small{font-family:'Inter',sans-serif;font-size:.72rem;color:var(--mut);font-weight:400;letter-spacing:.06em}
+.card .btn{padding:12px 22px;font-size:.78rem;text-align:center}
+.note{text-align:center;color:var(--mut);font-size:.85rem;margin-top:26px}
+/* HOW */
+.how{background:var(--bg1)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.step{text-align:center;padding:24px 16px}
+.step .num{width:72px;height:72px;border-radius:50%;background:var(--acc-dim);border:2px solid var(--acc);color:var(--acc);font-family:'Oswald',sans-serif;font-weight:700;font-size:1.7rem;display:flex;align-items:center;justify-content:center;margin:0 auto 22px}
+.step h3{color:#fff;font-size:1.32rem;margin-bottom:10px}
+.step p{color:var(--mut);font-size:.95rem}
+/* DIFF */
+.diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.diff{display:flex;gap:20px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;transition:.3s}
+.diff:hover{border-color:var(--acc-dim);transform:translateY(-4px)}
+.diff .ico{font-size:2rem;flex-shrink:0}
+.diff h3{font-size:1.2rem;margin-bottom:6px;color:#fff}
+.diff p{color:var(--mut);font-size:.94rem}
+/* BANNER */
+.banner{background:linear-gradient(135deg,var(--acc-dim),transparent 60%),var(--card);border:1px solid var(--acc-dim);border-radius:26px;padding:64px 8%;display:flex;align-items:center;gap:44px;flex-wrap:wrap;justify-content:space-between}
+.banner h2{color:#fff;font-size:clamp(1.8rem,3.8vw,2.6rem);margin-bottom:14px;font-weight:700}
+.banner h2 em{font-style:normal;color:var(--acc)}
+.banner p{color:var(--mut);max-width:540px}
+/* TESTIMONIALS */
+.testi{background:var(--bg1)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.testi-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px;transition:.3s}
+.testi-card:hover{transform:translateY(-6px)}
+.testi-card .stars{color:var(--acc);letter-spacing:.22em;margin-bottom:14px;font-size:1.05rem}
+.testi-card p{color:#d5d5db;font-style:italic;margin-bottom:18px;font-size:.97rem}
+.testi-card .who{color:var(--mut);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+.disc{text-align:center;color:#6a6a74;font-size:.78rem;margin-top:24px;letter-spacing:.04em}
+/* FAQ */
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.1rem;font-weight:600;text-align:left;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Oswald',sans-serif;letter-spacing:.03em}
+.faq-q span{color:var(--acc);font-size:1.5rem;transition:.3s;flex-shrink:0}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--mut);font-size:.96rem}
+.faq-a p{padding:0 0 24px}
+/* CTA BAND */
+.cta-band{background:var(--acc);color:#0a0a0a;text-align:center;border-radius:0}
+.cta-band h2{font-size:clamp(2.4rem,6vw,4.2rem);margin-bottom:16px;font-weight:700}
+.cta-band p{font-size:1.1rem;margin-bottom:36px;font-weight:500;opacity:.9;max-width:640px;margin-left:auto;margin-right:auto}
+.cta-band .btn{background:transparent;border-color:#0a0a0a;color:#0a0a0a}
+.cta-band .btn:hover{background:#0a0a0a;color:var(--acc);box-shadow:none}
+.cta-band .hero-phone a{color:#0a0a0a;border-color:#0a0a0a}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact-info h2{color:#fff;font-size:clamp(2.1rem,4vw,3rem);margin-bottom:18px;font-weight:700}
+.contact-info h2 em{font-style:normal;color:var(--acc)}
+.contact-info p{color:var(--mut);margin-bottom:28px}
+.c-line{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-size:1.06rem}
+.c-line .ico{font-size:1.4rem}
+.c-line a{color:#fff;font-weight:600;border-bottom:2px solid var(--acc)}
+.c-line span.plain{color:#d5d5db}
+form{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:38px}
+form h3{color:#fff;margin-bottom:22px;font-size:1.5rem}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;background:var(--bg1);border:1px solid var(--line);border-radius:10px;color:#fff;padding:13px 15px;font-size:.95rem;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--acc)}
+/* FOOTER */
+footer{background:#050506;border-top:1px solid var(--line);padding:60px 0 36px;text-align:center}
+footer .flogo{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.16em;font-size:1.4rem;color:#fff;margin-bottom:10px}
+footer .flogo span{color:var(--acc)}
+footer p{color:var(--mut);font-size:.9rem;margin-bottom:6px}
+footer p a{border-bottom:1px solid var(--acc)}
+footer .demo{margin-top:24px;font-size:.78rem;color:#55555e;letter-spacing:.06em}
+/* FLOAT + STICKY */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.9rem;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
+.wa-float:hover{transform:scale(1.1)}
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:rgba(8,8,10,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px;gap:10px}
+.sticky-bar a{flex:1;text-align:center;padding:13px 0;border-radius:14px;font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem}
+.sticky-bar .s-call{background:var(--acc);color:var(--acc-ink)}
+.sticky-bar .s-wa{background:var(--wa);color:#fff}
+body{padding-bottom:0}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+  .svc-grid,.steps,.testi-grid{grid-template-columns:1fr}
+  .diff-grid,.contact-grid{grid-template-columns:1fr}
+  .proof-grid{grid-template-columns:repeat(2,1fr)}
+  .proof-cell{border-left:none;border-top:1px solid rgba(0,0,0,.12);padding:22px 10px}
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(8,8,10,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
+  .sticky-bar{display:flex}
+  .wa-float{bottom:86px}
+  body{padding-bottom:66px}
+  section{padding:72px 0}
+  .giant{display:none}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="container nav">
+    <a href="#" class="logo">IM <span>ELECTRIC</span><small>IVÁN MONTALVO · CAGUAS PR</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#como">Cómo funciona</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a class="btn wa" href="https://wa.me/17875020557?text=Hola%20IM%20Electric,%20necesito%20un%20servicio%20eléctrico" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Perito electricista · Caguas, Puerto Rico</p>
+    <h1>Electricidad hecha <em>por un perito</em>, no por cualquiera</h1>
+    <p class="sub">Iván Montalvo, perito electricista licencia #10978, atiende tu hogar y negocio en Caguas y área este. Instalaciones eléctricas y reparación de enseres.</p>
+    <div><span class="badge24">⚡ Emergencia 24/7 · Llámanos ahora</span></div>
+    <div class="hero-ctas">
+      <a class="btn wa" href="https://wa.me/17875020557?text=Hola%20IM%20Electric,%20necesito%20un%20servicio%20eléctrico" target="_blank" rel="noopener">📲 Cotiza por WhatsApp</a>
+      <a class="btn ghost" href="tel:+17875020557">📞 787-502-0557</a>
+    </div>
+    <p class="hero-phone"><a href="tel:+17875020557">787-502-0557</a></p>
+    <div class="trust" style="margin-top:26px">
+      <span><b>Lic. #10978</b> perito electricista</span><span><b>Electricidad</b> + enseres</span><span><b>Cotización</b> gratis</span>
+    </div>
+  </div>
+</section>
+
+<div class="proof">
+  <div class="container proof-grid">
+    <div class="proof-cell"><div class="v">#10978</div><div class="k">Perito licenciado</div></div><div class="proof-cell"><div class="v">2 en 1</div><div class="k">Luz + enseres</div></div><div class="proof-cell"><div class="v">24/7</div><div class="k">Emergencias</div></div><div class="proof-cell"><div class="v">Gratis</div><div class="k">Cotización</div></div>
+  </div>
+</div>
+
+<div class="strip"><div>✦ PERITO ELECTRICISTA LIC. #10978 &nbsp;&nbsp; ✦ ELECTRICIDAD + ENSERES &nbsp;&nbsp; ✦ EMERGENCIA 24/7 &nbsp;&nbsp; ✦ PERITO ELECTRICISTA LIC. #10978 &nbsp;&nbsp; ✦ ELECTRICIDAD + ENSERES &nbsp;&nbsp; ✦ EMERGENCIA 24/7 &nbsp;&nbsp;</div></div>
+
+<section id="servicios">
+  <span class="giant" aria-hidden="true">01</span>
+  <div class="container">
+    <div class="sec-head reveal"><p class="eyebrow">Servicios</p><h2>Electricidad <em>y enseres</em>, un solo técnico</h2><p>La ventaja de IM: resolvemos el circuito y el enser que se dañó por el problema eléctrico.</p></div>
+    <div class="svc-grid">
+      <div class="card reveal"><div class="ico">🔌</div><h3>Diagnóstico y reparación</h3><p>Localizamos fallos eléctricos con equipo profesional y los reparamos con materiales certificados.</p><p class="price">desde $65 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17875020557?text=Hola,%20necesito%20un%20diagnóstico%20eléctrico" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
+<div class="card reveal"><div class="ico">⚡</div><h3>Paneles y breaker box</h3><p>Instalación y reemplazo de paneles y breakers según código, firmados por perito licenciado.</p><p class="price">desde $250 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17875020557?text=Hola,%20me%20interesa%20instalación%20de%20panel%20eléctrico" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
+<div class="card reveal"><div class="ico">🔧</div><h3>Reparación de enseres</h3><p>Reparamos estufas, secadoras, lavadoras y otros enseres eléctricos que dejaron de funcionar.</p><p class="price">desde $75 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17875020557?text=Hola,%20tengo%20un%20enser%20dañado" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
+<div class="card reveal"><div class="ico">💡</div><h3>Iluminación y abanicos</h3><p>Instalación de lámparas, focos interiores y exteriores, y abanicos de techo.</p><p class="price">desde $85 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17875020557?text=Hola,%20quiero%20instalar%20iluminación" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
+<div class="card reveal"><div class="ico">🏠</div><h3>Generadores y transfer switch</h3><p>Instalación completa de sistemas de respaldo para que tu casa nunca se quede a oscuras.</p><p class="price">desde $350 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17875020557?text=Hola,%20me%20interesa%20instalación%20de%20generador" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
+<div class="card reveal"><div class="ico">🚨</div><h3>Emergencia eléctrica 24/7</h3><p>Cortos, chispas, breakers tumbados u olor a quemado: respuesta inmediata día y noche.</p><p class="price">desde $95 <small>/ propuesta</small></p><a class="btn wa" href="https://wa.me/17875020557?text=Hola,%20tengo%20una%20EMERGENCIA%20eléctrica" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
+    </div>
+    <p class="note">Precios de referencia. Precio final según evaluación en el lugar — la cotización por WhatsApp es gratis.</p>
+  </div>
+</section>
+
+<section id="como" class="how">
+  <div class="container">
+    <div class="sec-head reveal"><p class="eyebrow">Cómo funciona</p><h2>Del problema a la <em>solución</em> en 4 pasos</h2><p>Transparencia total: sabes qué pasa y cuánto cuesta antes de que empecemos.</p></div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><h3>Cuéntanos el problema</h3><p>Escríbenos por WhatsApp o llama. Nos describes qué pasa y te damos un estimado inicial sin compromiso.</p></div>
+<div class="step reveal"><div class="num">2</div><h3>Visita y diagnóstico</h3><p>Vamos al lugar, revisamos todo con equipo profesional y te explicamos la causa exacta.</p></div>
+<div class="step reveal"><div class="num">3</div><h3>Cotización clara</h3><p>Te damos precio fijo antes de tocar un cable. Sin sorpresas, sin letras pequeñas.</p></div>
+<div class="step reveal"><div class="num">4</div><h3>Reparación garantizada</h3><p>Hacemos el trabajo limpio, probamos todo y te dejamos funcionando con garantía escrita.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="banner reveal">
+      <div>
+        <h2>¿Breaker tumbado <em>o enser que no prende?</em></h2>
+        <p>Un perito licenciado lo diagnostica bien desde el principio. Escríbenos y coordinamos tu visita hoy.</p>
+      </div>
+      <a class="btn" href="https://wa.me/17875020557?text=Hola,%20quiero%20agendar%20una%20visita%20técnica" target="_blank" rel="noopener">Agendar visita</a>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <span class="giant" aria-hidden="true">02</span>
+  <div class="container">
+    <div class="sec-head reveal"><p class="eyebrow">Por qué nosotros</p><h2>La diferencia de un <em>perito</em></h2><p>Cuando la electricidad de tu casa está en juego, la licencia no es un lujo: es lo mínimo.</p></div>
+    <div class="diff-grid">
+      <div class="diff reveal"><div class="ico">🎓</div><div><h3>Perito licenciado #10978</h3><p>No es un handyman: es un perito electricista licenciado. Publicamos el número porque el trabajo serio se firma.</p></div></div>
+<div class="diff reveal"><div class="ico">🔌</div><div><h3>Electricidad + enseres</h3><p>Si el problema eléctrico dañó tu estufa o secadora, lo reparamos todo en la misma visita.</p></div></div>
+<div class="diff reveal"><div class="ico">⏱️</div><div><h3>Respuesta rápida en Caguas</h3><p>Base local: llegamos rápido al área este y atendemos emergencias 24/7.</p></div></div>
+<div class="diff reveal"><div class="ico">💰</div><div><h3>Precio claro por adelantado</h3><p>Cotización fija antes de empezar. Sin sorpresas al final.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" class="testi">
+  <div class="container">
+    <div class="sec-head reveal"><p class="eyebrow">Opiniones</p><h2>Caguas ya <em>nos conoce</em></h2><p>Recomendación de boca en boca en el área este.</p></div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="stars">★★★★★</div><p>"El breaker de la cocina se tumbaba cada rato. Iván encontró el problema en minutos y quedó perfecto."</p><p class="who">Cliente · Caguas</p></div>
+<div class="testi-card reveal"><div class="stars">★★★★★</div><p>"Me arregló la secadora y de paso el receptáculo que la estaba dañando. Dos pájaros de un tiro."</p><p class="who">Cliente · Gurabo</p></div>
+<div class="testi-card reveal"><div class="stars">★★★★★</div><p>"Serio y puntual. Me mostró su licencia sin que se la pidiera y el trabajo quedó impecable."</p><p class="who">Cliente · San Lorenzo</p></div>
+    </div>
+    <p class="disc">Testimonios con fines ilustrativos.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="sec-head reveal"><p class="eyebrow">Preguntas</p><h2>Lo que nos <em>preguntan</em></h2><p></p></div>
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-q">¿Qué significa que sea perito electricista?<span>+</span></button><div class="faq-a"><p>Es un electricista con licencia oficial del gobierno de Puerto Rico (la mía es la #10978). Puede certificar instalaciones y trabaja conforme al código eléctrico vigente.</p></div></div>
+<div class="faq-item reveal"><button class="faq-q">¿Reparan enseres eléctricos?<span>+</span></button><div class="faq-a"><p>Sí, es una de nuestras especialidades: estufas, secadoras, lavadoras y otros enseres. Muchas veces el daño del enser viene de un problema eléctrico, y resolvemos ambas cosas.</p></div></div>
+<div class="faq-item reveal"><button class="faq-q">¿Atienden emergencias?<span>+</span></button><div class="faq-a"><p>Sí, 24/7. Cortos, chispas, olor a quemado o apagones parciales: llámanos de inmediato.</p></div></div>
+<div class="faq-item reveal"><button class="faq-q">¿Qué áreas cubren?<span>+</span></button><div class="faq-a"><p>Caguas como base, y el área este: Gurabo, San Lorenzo, Juncos, Las Piedras, Humacao y pueblos cercanos.</p></div></div>
+<div class="faq-item reveal"><button class="faq-q">¿La cotización es gratis?<span>+</span></button><div class="faq-a"><p>Por WhatsApp sí, siempre gratis. La visita de diagnóstico tiene un cargo que se descuenta si haces el trabajo con nosotros.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Tu casa merece un <em>perito</em>, no un invento.</h2>
+    <p>Licencia #10978, garantía escrita y respuesta rápida en Caguas. Escríbenos ahora.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="https://wa.me/17875020557?text=Hola%20IM%20Electric,%20necesito%20un%20servicio%20eléctrico" target="_blank" rel="noopener">📲 Escríbenos ahora</a>
+      <a class="btn" href="tel:+17875020557">📞 787-502-0557</a>
+    </div>
+    <p class="hero-phone" style="margin-top:10px"><a href="tel:+17875020557">787-502-0557</a></p>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <h2>Habla directo <em>con el perito</em></h2>
+      <p>Te atiende Iván Montalvo personalmente. Cuéntanos qué pasa y te decimos cómo lo resolvemos.</p>
+      <div class="c-line"><span class="ico">📞</span><a href="tel:+17875020557">787-502-0557</a></div>
+      <div class="c-line"><span class="ico">📲</span><a href="https://wa.me/17875020557" target="_blank" rel="noopener">WhatsApp directo</a></div>
+      
+      <div class="c-line"><span class="ico">📍</span><span class="plain">Caguas y área este · Puerto Rico</span></div>
+      <div class="c-line"><span class="ico">🕐</span><span class="plain">Lun–Sáb · 8:00am – 6:00pm · Emergencias 24/7</span></div>
+    </div>
+    <form id="bookForm" class="reveal">
+      <h3>Solicita tu cotización</h3>
+      <div class="field">
+        <label for="fNombre">Nombre</label>
+        <input id="fNombre" type="text" placeholder="Tu nombre" required>
+      </div>
+      <div class="field">
+        <label for="fTel">Teléfono</label>
+        <input id="fTel" type="tel" placeholder="(787) 000-0000" required>
+      </div>
+      <div class="field">
+        <label for="fSvc">Servicio</label>
+        <select id="fSvc">
+          <option>Diagnóstico y reparación</option>
+          <option>Paneles y breaker box</option>
+          <option>Reparación de enseres</option>
+          <option>Iluminación y abanicos</option>
+          <option>Generadores y transfer switch</option>
+          <option>Emergencia eléctrica 24/7</option>
+          <option>Otro / emergencia</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fMsg">Describe tu necesidad</label>
+        <textarea id="fMsg" rows="3" placeholder="¿Qué necesitas arreglar o instalar?"></textarea>
+      </div>
+      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="flogo">IM <span>ELECTRIC</span></p>
+    <p>Iván Montalvo · Perito Electricista Lic. #10978 · Caguas, Puerto Rico</p>
+    <p><a href="tel:+17875020557" style="color:#a3a3ad">787-502-0557</a></p>
+    
+    <p class="demo">Demostración creada por ManuPro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17875020557?text=Hola%20IM%20Electric,%20necesito%20un%20servicio%20eléctrico" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<div class="sticky-bar">
+  <a class="s-call" href="tel:+17875020557">📞 Llamar</a>
+  <a class="s-wa" href="https://wa.me/17875020557?text=Hola%20IM%20Electric,%20necesito%20un%20servicio%20eléctrico" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>{hdr.classList.toggle('solid',scrollY>30)});
+document.getElementById('menuToggle').addEventListener('click',()=>{document.getElementById('navLinks').classList.toggle('open')});
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const btn=item.querySelector('.faq-q');
+  btn.addEventListener('click',()=>{
+    const was=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+'});
+    if(!was){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='\u00d7'}
+  });
+});
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const nombre=document.getElementById('fNombre').value.trim();
+  const tel=document.getElementById('fTel').value.trim();
+  const svc=document.getElementById('fSvc').value;
+  const msg=document.getElementById('fMsg').value.trim();
+  if(!nombre||!tel){alert('Por favor completa tu nombre y teléfono.');return}
+  let text='Hola '+'IM Electric'+', soy '+nombre+'. Me interesa: '+svc+'. Mi teléfono es '+tel+'.';
+  if(msg)text+=' Detalle: '+msg;
+  window.open('https://wa.me/17875020557?text='+encodeURIComponent(text),'_blank');
+});
+const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

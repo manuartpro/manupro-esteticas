@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garage El Coqui | Mecánica en Ciales, PR — (787) 871-4591</title>
+<meta name="description" content="Garage El Coqui — mecánica general en Ciales, Puerto Rico. Diagnóstico honesto, frenos, suspensión, aceite y más. Rating 5 estrellas. Llámanos: (787) 871-4591.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0a0a; --dark:#111111; --panel:#161616; --line:rgba(255,212,0,.32);
+  --yel:#FFD400; --yel-hi:#FFE14D; --yel-dim:rgba(255,212,0,.12);
+  --white:#ffffff; --gray:#9a9a9a; --wa:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;line-height:.95;letter-spacing:.03em}
+a{text-decoration:none;color:inherit}
+.container{width:min(1140px,92%);margin:0 auto}
+section{padding:96px 0;position:relative}
+.hazard{height:14px;background:repeating-linear-gradient(-45deg,var(--yel) 0 22px,#0a0a0a 22px 44px)}
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:transparent}
+header.solid{background:rgba(10,10,10,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.08em;line-height:1;display:flex;align-items:center;gap:10px}
+.logo .frog{font-size:1.5rem}
+.logo small{display:block;font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:.42em;color:var(--gray);font-weight:600}
+.logo .yel{color:var(--yel)}
+.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+.nav-links a{font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:#d4d4d4;transition:.25s;font-weight:600}
+.nav-links a:hover{color:var(--yel)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;font-size:1.4rem;cursor:pointer;color:var(--yel);padding:4px 12px}
+.btn{display:inline-block;background:var(--yel);color:#0a0a0a;padding:14px 32px;border-radius:6px;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;transition:.28s;border:2px solid var(--yel);cursor:pointer}
+.btn:hover{background:transparent;color:var(--yel);transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,212,0,.25)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#062b16}
+.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 28px rgba(37,211,102,.25)}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn.ghost:hover{border-color:var(--yel);color:var(--yel);box-shadow:none}
+.btn.sm{padding:11px 22px;font-size:.76rem}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;
+  background:
+    linear-gradient(180deg,rgba(10,10,10,.62) 0%,rgba(10,10,10,.94) 100%),
+    radial-gradient(ellipse 75% 55% at 50% 0%,#2a230a 0%,var(--black) 70%)}
+.hero::after{content:'🔧';position:absolute;right:5%;bottom:10%;font-size:clamp(6rem,16vw,12rem);opacity:.07;transform:rotate(-18deg)}
+.hero-inner{position:relative;z-index:2;padding:140px 0 80px;max-width:880px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;letter-spacing:.4em;text-transform:uppercase;font-size:.74rem;color:var(--yel);margin-bottom:22px;font-weight:700}
+.eyebrow::before{content:'';width:40px;height:3px;background:var(--yel)}
+.hero h1{font-size:clamp(3.4rem,11vw,7.6rem);margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--yel)}
+.hero .sub{font-size:1.14rem;font-weight:300;max-width:620px;margin-bottom:12px;color:#cfcfcf}
+.rating-line{display:flex;align-items:center;gap:12px;margin-bottom:32px;flex-wrap:wrap}
+.rating-line .stars{color:var(--yel);font-size:1.5rem;letter-spacing:.15em}
+.rating-line b{font-size:1.05rem}
+.rating-line span{color:var(--gray);font-size:.88rem}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.hero-phone{font-size:1.7rem;font-weight:800;letter-spacing:.03em}
+.hero-phone a{color:#fff;border-bottom:3px solid var(--yel);padding-bottom:3px;transition:.25s}
+.hero-phone a:hover{color:var(--yel)}
+.hero-note{font-size:.85rem;color:var(--gray);margin-top:8px}
+.hero-tags{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.htag{border:1px solid var(--line);background:rgba(255,212,0,.07);color:var(--yel-hi);padding:9px 16px;border-radius:6px;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+/* MARQUEE */
+.strip{background:var(--yel);color:#0a0a0a;overflow:hidden;padding:12px 0;font-family:'Bebas Neue',sans-serif;letter-spacing:.22em;font-size:1.05rem}
+.strip div{white-space:nowrap;animation:slide 24s linear infinite;display:inline-block}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* PROOF */
+.proof{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:42px 0;text-align:center}
+.proof-item .stars{color:var(--yel);font-size:1.6rem;letter-spacing:.12em;display:block;margin-bottom:4px}
+.proof-item b{display:block;font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--yel);letter-spacing:.04em}
+.proof-item span{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray)}
+/* SEC HEADS */
+.sec-head{text-align:center;max-width:700px;margin:0 auto 58px}
+.sec-head .eyebrow{justify-content:center}
+.sec-head .eyebrow::after{content:'';width:40px;height:3px;background:var(--yel)}
+.sec-head h2{font-size:clamp(2.4rem,5.5vw,3.8rem);margin-bottom:14px}
+.sec-head h2 em{font-style:normal;color:var(--yel)}
+.sec-head p{color:var(--gray)}
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:38px 30px;transition:.32s;display:flex;flex-direction:column;position:relative}
+.card::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:repeating-linear-gradient(-45deg,var(--yel) 0 14px,transparent 14px 28px);opacity:0;transition:.32s;border-radius:10px 10px 0 0}
+.card:hover{transform:translateY(-8px);border-color:var(--yel);box-shadow:0 20px 50px rgba(255,212,0,.12)}
+.card:hover::before{opacity:1}
+.card .ico{font-size:2.5rem;margin-bottom:16px}
+.card h3{font-size:1.5rem;margin-bottom:10px;letter-spacing:.04em}
+.card p{color:var(--gray);font-size:.93rem;margin-bottom:16px;flex:1}
+.price{color:var(--yel);font-weight:800;font-size:1.2rem;margin-bottom:4px}
+.price-note{font-size:.7rem;color:#6d6d6d;letter-spacing:.06em;margin-bottom:20px;text-transform:uppercase}
+.card .btn{text-align:center}
+/* HOW */
+.how{background:var(--dark)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.step{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:32px 24px;text-align:center;transition:.3s;position:relative}
+.step:hover{border-color:var(--yel);transform:translateY(-5px)}
+.step .num{font-family:'Bebas Neue',sans-serif;font-size:3.6rem;color:var(--yel);line-height:1;margin-bottom:10px}
+.step h3{font-size:1.25rem;margin-bottom:8px;letter-spacing:.05em}
+.step p{color:var(--gray);font-size:.9rem}
+/* DIFF */
+.diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.diff{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-top:4px solid var(--yel);border-radius:0 0 10px 10px;padding:28px 24px;transition:.3s}
+.diff:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.5)}
+.diff h3{font-size:1.25rem;margin-bottom:8px;letter-spacing:.05em}
+.diff p{color:var(--gray);font-size:.9rem}
+/* TESTI */
+.testi{background:var(--dark)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.testi-card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:32px;transition:.3s}
+.testi-card:hover{transform:translateY(-5px);border-color:var(--yel)}
+.stars{color:var(--yel);letter-spacing:.22em;margin-bottom:14px;font-size:1.05rem}
+.testi-card p{color:#d4d4d4;font-style:italic;margin-bottom:16px;font-size:.94rem}
+.testi-card .who{color:var(--gray);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.illus-note{text-align:center;color:#6d6d6d;font-size:.78rem;margin-top:26px;letter-spacing:.05em}
+/* FAQ */
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.1)}
+.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.04rem;font-weight:600;text-align:left;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Inter',sans-serif}
+.faq-q span{color:var(--yel);font-size:1.5rem;transition:.3s;flex-shrink:0}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--gray);font-size:.95rem}
+.faq-a p{padding:0 0 24px}
+/* CTA BAND */
+.cta-band{background:#141000;border-top:14px solid transparent;border-image:repeating-linear-gradient(-45deg,var(--yel) 0 22px,#0a0a0a 22px 44px) 1;border-bottom:14px solid transparent;border-image:repeating-linear-gradient(-45deg,var(--yel) 0 22px,#0a0a0a 22px 44px) 1;text-align:center;padding:100px 0;position:relative;overflow:hidden}
+.cta-band h2{font-size:clamp(2.6rem,6.5vw,4.6rem);margin-bottom:14px}
+.cta-band h2 em{font-style:normal;color:var(--yel)}
+.cta-band p{color:#cfcfcf;max-width:560px;margin:0 auto 34px;font-size:1.04rem}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info h2{font-size:clamp(2.4rem,4.5vw,3.2rem);margin-bottom:14px}
+.contact-info h2 em{font-style:normal;color:var(--yel)}
+.contact-info>p{color:var(--gray);margin-bottom:26px}
+.c-line{display:flex;align-items:center;gap:14px;margin-bottom:17px;font-size:1.04rem}
+.c-line .ico{font-size:1.4rem}
+.c-line a{color:#fff;font-weight:700;border-bottom:2px solid var(--yel)}
+form{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:36px}
+form h3{margin-bottom:20px;font-size:1.5rem;letter-spacing:.05em}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:6px;font-weight:600}
+.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.12);border-radius:8px;color:#fff;padding:12px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--yel)}
+/* FOOTER */
+footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:52px 0 110px;text-align:center}
+footer .flogo{font-family:'Bebas Neue',sans-serif;letter-spacing:.1em;font-size:1.7rem;margin-bottom:8px}
+footer .flogo .yel{color:var(--yel)}
+footer p{color:var(--gray);font-size:.9rem;margin-bottom:6px}
+footer .demo{margin-top:20px;font-size:.76rem;color:#555;letter-spacing:.06em}
+/* FLOATS */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.4);transition:.3s}
+.wa-float:hover{transform:scale(1.1)}
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(10,10,10,.97);border-top:2px solid var(--yel);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.sticky-bar a{flex:1;text-align:center;padding:13px 8px;border-radius:6px;font-weight:800;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
+.sticky-bar .call{background:var(--yel);color:#0a0a0a}
+.sticky-bar .wab{background:var(--wa);color:#062b16}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:960px){
+  .svc-grid,.steps,.diff-grid,.testi-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .proof-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,10,.98);flex-direction:column;padding:26px;gap:18px;border-bottom:2px solid var(--yel)}
+}
+@media(max-width:640px){
+  section{padding:70px 0}
+  .svc-grid,.steps,.diff-grid,.testi-grid{grid-template-columns:1fr}
+  .sticky-bar{display:flex}
+  .wa-float{display:none}
+  footer{padding-bottom:130px}
+}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="container nav">
+    <a href="#" class="logo"><span class="frog">🐸</span><span>Garage <span class="yel">El Coqui</span><small>MECÁNICA · CIALES</small></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#como">Cómo funciona</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a class="btn wa sm" href="https://wa.me/17878714591?text=Hola%20Garage%20El%20Coqui%2C%20quiero%20cotizar%20un%20servicio%20para%20mi%20auto" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Mecánica general · Ciales, PR</p>
+    <h1>Tu carro en <em>manos que saben</em></h1>
+    <p class="sub">Diagnóstico honesto, reparación bien hecha y precio claro desde el principio. El taller de confianza de Ciales y la montaña.</p>
+    <div class="rating-line">
+      <span class="stars">★★★★★</span>
+      <b>5.0 de 5</b>
+      <span>rating en directorio local</span>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn wa" href="https://wa.me/17878714591?text=Hola%20Garage%20El%20Coqui%2C%20quiero%20cotizar%20un%20servicio%20para%20mi%20auto" target="_blank" rel="noopener">📲 Cotizar por WhatsApp</a>
+      <a class="btn ghost" href="tel:+17878714591">📞 Llamar ahora</a>
+    </div>
+    <p class="hero-phone"><a href="tel:+17878714591">(787) 871-4591</a></p>
+    <p class="hero-note">Lun–Vie 8am–5pm · Sáb 8am–12pm · Ciales, PR</p>
+    <div class="hero-tags">
+      <span class="htag">★ 5.0 en directorio</span>
+      <span class="htag">Diagnóstico honesto</span>
+      <span class="htag">Garantía en mano de obra</span>
+    </div>
+  </div>
+</section>
+
+<div class="hazard"></div>
+<div class="strip"><div>⚙ MECÁNICA GENERAL &nbsp;&nbsp; ⚙ DIAGNÓSTICO COMPUTARIZADO &nbsp;&nbsp; ⚙ FRENOS Y SUSPENSIÓN &nbsp;&nbsp; ⚙ AIRE ACONDICIONADO &nbsp;&nbsp; ⚙ MECÁNICA GENERAL &nbsp;&nbsp; ⚙ DIAGNÓSTICO COMPUTARIZADO &nbsp;&nbsp; ⚙ FRENOS Y SUSPENSIÓN &nbsp;&nbsp; ⚙ AIRE ACONDICIONADO &nbsp;&nbsp;</div></div>
+<div class="hazard"></div>
+
+<div class="proof">
+  <div class="container proof-grid">
+    <div class="proof-item reveal"><span class="stars">★★★★★</span><b>5.0 / 5</b><span>Rating en directorio</span></div>
+    <div class="proof-item reveal"><b>Ciales</b><span>Taller local de la montaña</span></div>
+    <div class="proof-item reveal"><b>Honesto</b><span>Diagnóstico sin inventos</span></div>
+    <div class="proof-item reveal"><b>Garantía</b><span>En mano de obra</span></div>
+  </div>
+</div>
+
+<section id="servicios">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Servicios</p>
+      <h2>Reparamos <em>de verdad</em></h2>
+      <p>Primero diagnosticamos, luego cotizamos claro, y reparamos con piezas de calidad. Precios de referencia — cotización final gratis en el taller.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal">
+        <div class="ico">💻</div>
+        <h3>Diagnóstico computarizado</h3>
+        <p>Escaneo completo del sistema: motor, transmisión y sensores. Encontramos la falla real, no adivinamos.</p>
+        <p class="price">desde $40</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17878714591?text=Hola%2C%20quiero%20un%20diagn%C3%B3stico%20para%20mi%20auto" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🛢️</div>
+        <h3>Cambio de aceite y filtro</h3>
+        <p>Aceite y filtro de calidad, revisión de niveles y chequeo básico de puntos. Mantenimiento que alarga la vida del motor.</p>
+        <p class="price">desde $35</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17878714591?text=Hola%2C%20quiero%20un%20cambio%20de%20aceite" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🛑</div>
+        <h3>Frenos</h3>
+        <p>Pastillas, discos, líquido y sistema completo. Tus frenos son seguridad: los dejamos al 100%.</p>
+        <p class="price">desde $85</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17878714591?text=Hola%2C%20necesito%20revisar%20los%20frenos%20de%20mi%20auto" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🔩</div>
+        <h3>Suspensión y tren delantero</h3>
+        <p>Amortiguadores, terminales, bujes y alineación. Adiós a los ruidos y al desgaste disparejo de gomas.</p>
+        <p class="price">desde $120</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17878714591?text=Hola%2C%20quiero%20revisar%20la%20suspensi%C3%B3n%20de%20mi%20auto" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">❄️</div>
+        <h3>Aire acondicionado</h3>
+        <p>Diagnóstico de fugas, recarga y reparación del sistema. Enfría como debe, aunque afuera queme.</p>
+        <p class="price">desde $75</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17878714591?text=Hola%2C%20el%20aire%20de%20mi%20auto%20no%20enfr%C3%ADa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🔋</div>
+        <h3>Eléctrico y baterías</h3>
+        <p>Baterías, alternador, arranque y sistema eléctrico. Resolvemos esos fallos eléctricos que nadie encuentra.</p>
+        <p class="price">desde $50</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17878714591?text=Hola%2C%20tengo%20un%20problema%20el%C3%A9ctrico%20en%20mi%20auto" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como" class="how">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2>Sin cuentos, <em>así trabajamos</em></h2>
+      <p>El proceso es simple y transparente: sabes qué tiene tu carro y cuánto cuesta antes de autorizar nada.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">01</div>
+        <h3>Diagnóstico</h3>
+        <p>Revisamos tu auto y encontramos la falla real con equipo y experiencia.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">02</div>
+        <h3>Cotización clara</h3>
+        <p>Te decimos qué hay que hacer y cuánto cuesta. Tú decides, sin presión.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">03</div>
+        <h3>Reparación</h3>
+        <p>Reparamos con piezas de calidad y te mostramos lo que se cambió.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">04</div>
+        <h3>Prueba y entrega</h3>
+        <p>Probamos el auto antes de entregarlo. Nuestra mano de obra va garantizada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hazard"></div>
+
+<section id="diferenciales">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Diferenciales</p>
+      <h2>Por qué <em>El Coqui</em></h2>
+    </div>
+    <div class="diff-grid">
+      <div class="diff reveal"><h3>★ 5.0 en directorio</h3><p>Nuestros clientes nos califican con la máxima puntuación. Esa reputación se cuida trabajo a trabajo.</p></div>
+      <div class="diff reveal"><h3>Diagnóstico honesto</h3><p>Te decimos lo que tu carro necesita — y también lo que NO necesita. Nada de reparaciones inventadas.</p></div>
+      <div class="diff reveal"><h3>Precio antes de reparar</h3><p>Cotización clara por adelantado. No autorizamos nada sin tu aprobación.</p></div>
+      <div class="diff reveal"><h3>Piezas de calidad</h3><p>Usamos repuestos confiables y te mostramos las piezas viejas que se reemplazaron.</p></div>
+      <div class="diff reveal"><h3>Garantía en mano de obra</h3><p>Respaldamos nuestro trabajo. Si algo de lo que reparamos falla, lo atendemos.</p></div>
+      <div class="diff reveal"><h3>De Ciales, para Ciales</h3><p>Taller de la montaña: trato de vecino, comunicación directa y seguimiento real.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" class="testi">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Opiniones</p>
+      <h2>Lo que dice <em>la gente</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Me dijeron exactamente lo que tenía el carro y el precio antes de tocar nada. En otros talleres me habían querido cambiar medio motor."</p>
+        <p class="who">Cliente · Ciales</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Los frenos quedaron nuevos y me mostraron las pastillas viejas. Honestos y puntuales, los recomiendo a ojos cerrados."</p>
+        <p class="who">Cliente · Morovis</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"El aire no enfriaba y en un día lo dejaron tirando frío. Buen precio y te explican todo sin tecnicismos."</p>
+        <p class="who">Cliente · Ciales</p>
+      </div>
+    </div>
+    <p class="illus-note">Testimonios con fines ilustrativos.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Preguntas</p>
+      <h2>Lo que nos <em>preguntan</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Necesito cita o atienden por orden de llegada? <span>+</span></button>
+        <div class="faq-a"><p>Escríbenos por WhatsApp o llámanos para coordinar. Así te atendemos más rápido y sin esperas largas.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿El diagnóstico tiene costo? <span>+</span></button>
+        <div class="faq-a"><p>El diagnóstico computarizado tiene un costo base que se descuenta si autorizas la reparación con nosotros. Pregúntanos por WhatsApp.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Cuánto tarda una reparación típica? <span>+</span></button>
+        <div class="faq-a"><p>Cambios de aceite y frenos usualmente el mismo día. Reparaciones mayores te damos fecha estimada clara desde la cotización.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Puedo traer mis propias piezas? <span>+</span></button>
+        <div class="faq-a"><p>Sí, puedes traerlas. Te orientamos sobre qué piezas convienen según tu caso y solo cobramos la mano de obra.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Atienden emergencias? <span>+</span></button>
+        <div class="faq-a"><p>Si tu carro te dejó a pie, llámanos al (787) 871-4591 y vemos cómo ayudarte lo antes posible.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <p class="eyebrow reveal" style="justify-content:center">★ 5.0 en directorio · Ciales, PR</p>
+    <h2 class="reveal">¿Tu carro hace <em>un ruido raro?</em></h2>
+    <p class="reveal">No lo dejes para después: un diagnóstico a tiempo te ahorra una reparación grande. Escríbenos hoy.</p>
+    <div class="cta-btns reveal">
+      <a class="btn wa" href="https://wa.me/17878714591?text=Hola%20Garage%20El%20Coqui%2C%20mi%20auto%20tiene%20un%20problema%20y%20quiero%20un%20diagn%C3%B3stico" target="_blank" rel="noopener">📲 WhatsApp directo</a>
+      <a class="btn ghost" href="tel:+17878714591">📞 (787) 871-4591</a>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <h2>Tráenos <em>tu carro</em></h2>
+      <p>Escríbenos por WhatsApp describiendo el problema y coordinamos tu visita. Diagnóstico honesto, garantizado.</p>
+      <div class="c-line"><span class="ico">📞</span><a href="tel:+17878714591">(787) 871-4591</a></div>
+      <div class="c-line"><span class="ico">💬</span><a href="https://wa.me/17878714591" target="_blank" rel="noopener">WhatsApp directo</a></div>
+      <div class="c-line"><span class="ico">📍</span><span>Ciales, Puerto Rico</span></div>
+      <div class="c-line"><span class="ico">🕐</span><span>Lun–Vie 8:00am–5:00pm · Sáb 8:00am–12:00pm</span></div>
+      <div class="c-line"><span class="ico">⭐</span><span>Rating 5.0 en directorio local</span></div>
+    </div>
+    <form id="bookForm" class="reveal">
+      <h3>Solicita tu diagnóstico</h3>
+      <div class="field">
+        <label for="fNombre">Nombre</label>
+        <input id="fNombre" type="text" placeholder="Tu nombre" required>
+      </div>
+      <div class="field">
+        <label for="fTel">Teléfono</label>
+        <input id="fTel" type="tel" placeholder="(787) 000-0000" required>
+      </div>
+      <div class="field">
+        <label for="fSvc">Servicio</label>
+        <select id="fSvc">
+          <option>Diagnóstico computarizado</option>
+          <option>Cambio de aceite y filtro</option>
+          <option>Frenos</option>
+          <option>Suspensión y tren delantero</option>
+          <option>Aire acondicionado</option>
+          <option>Eléctrico / batería</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fMsg">Describe el problema</label>
+        <textarea id="fMsg" rows="3" placeholder="¿Qué le pasa a tu auto?"></textarea>
+      </div>
+      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="flogo">Garage <span class="yel">El Coqui</span> 🐸</p>
+    <p>Mecánica general · Ciales, Puerto Rico · Rating 5.0 en directorio</p>
+    <p><a href="tel:+17878714591" style="color:var(--gray)">(787) 871-4591</a></p>
+    <p class="demo">Demostración creada por ManuPro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17878714591?text=Hola%20Garage%20El%20Coqui%2C%20quiero%20cotizar%20un%20servicio%20para%20mi%20auto" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<div class="sticky-bar">
+  <a class="call" href="tel:+17878714591">📞 Llamar</a>
+  <a class="wab" href="https://wa.me/17878714591?text=Hola%20Garage%20El%20Coqui%2C%20quiero%20cotizar%20un%20servicio%20para%20mi%20auto" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<script>
+const header=document.getElementById('siteHeader');
+addEventListener('scroll',()=>{header.classList.toggle('solid',scrollY>40)},{passive:true});
+document.getElementById('menuToggle').addEventListener('click',()=>{document.getElementById('navLinks').classList.toggle('open')});
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open')}));
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const btn=item.querySelector('.faq-q');
+  btn.addEventListener('click',()=>{
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+'});
+    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='×'}
+  });
+});
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=document.getElementById('fNombre').value.trim(),t=document.getElementById('fTel').value.trim(),
+        s=document.getElementById('fSvc').value,m=document.getElementById('fMsg').value.trim();
+  if(!n||!t){alert('Por favor completa tu nombre y teléfono.');return}
+  let txt='Hola Garage El Coqui, soy '+n+'. Me interesa: '+s+'. Mi teléfono es '+t+'.';
+  if(m)txt+=' Detalles: '+m;
+  window.open('https://wa.me/17878714591?text='+encodeURIComponent(txt),'_blank');
+});
+const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

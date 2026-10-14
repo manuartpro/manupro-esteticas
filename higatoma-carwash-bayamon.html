@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Higatoma Car Wash | Car Wash en Bayamón, PR — 5.0★</title>
+<meta name="description" content="Higatoma Car Wash en Bayamón — lavado de autos con calificación 5.0. Lavado exterior, interior, encerado y detalle completo. Síguenos en Instagram @higatoma_carwash_.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0505; --dark:#100909; --panel:#171010; --line:rgba(255,255,255,.08);
+  --gray:#a89a9a; --white:#f7f2f2; --accent:#FF2A1F; --accent-dim:rgba(255,42,31,.12);
+  --wa:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Oswald',sans-serif;line-height:.98;text-transform:uppercase}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:0 auto}
+/* ===== HEADER ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:rgba(10,5,5,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent}
+header.solid{background:rgba(10,5,5,.96);border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.logo{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.55rem;letter-spacing:.12em;text-transform:uppercase}
+.logo span{color:var(--accent)}
+.logo small{display:block;font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:.46em;color:var(--gray);font-weight:500}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:#ddd4d4;transition:.25s;font-weight:500}
+.nav-links a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;padding:14px 32px;border-radius:6px;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;transition:.3s;border:2px solid var(--accent);cursor:pointer;font-family:'Oswald',sans-serif}
+.btn:hover{background:transparent;color:var(--accent);transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,42,31,.3)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 30px rgba(37,211,102,.28)}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);box-shadow:none}
+.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:#fff}
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;color:#fff;overflow:hidden;
+  background:radial-gradient(ellipse 70% 55% at 70% 10%,rgba(255,42,31,.12) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 15% 85%,rgba(255,42,31,.07) 0%,transparent 55%),linear-gradient(180deg,#120a0a,#0a0505)}
+.hero-ghost{position:absolute;top:50%;left:50%;transform:translate(-50%,-52%);font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(6rem,20vw,18rem);letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(255,42,31,.16);white-space:nowrap;pointer-events:none;user-select:none}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:140px 0 80px;width:100%}
+.eyebrow{letter-spacing:.44em;text-transform:uppercase;font-size:.78rem;color:var(--accent);margin-bottom:22px;font-weight:600}
+.eyebrow::before,.eyebrow::after{content:'—';color:rgba(255,42,31,.4);margin:0 10px}
+.hero h1{font-size:clamp(3.2rem,9.5vw,7.5rem);font-weight:700;margin-bottom:22px;letter-spacing:.01em}
+.hero h1 .fill{color:var(--accent)}
+.hero h1 .stroke{color:transparent;-webkit-text-stroke:2px #fff}
+.hero p.sub{font-size:1.18rem;font-weight:300;max-width:660px;margin:0 auto 12px;color:#cdc2c2}
+.hero p.tag{font-size:1.02rem;color:var(--accent);font-weight:600;letter-spacing:.08em;margin-bottom:38px;text-transform:uppercase}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+.hero-phone{font-family:'Oswald',sans-serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;letter-spacing:.08em}
+.hero-phone a{color:#fff;border-bottom:3px solid var(--accent);padding-bottom:2px;transition:.25s}
+.hero-phone a:hover{color:var(--accent)}
+.rating-hero{display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:10px 26px;border:1px solid var(--accent);border-radius:40px;color:#fff;font-size:.9rem;letter-spacing:.1em;background:var(--accent-dim)}
+.rating-hero .stars{color:var(--accent);letter-spacing:.15em}
+/* ===== STATS ===== */
+.stats{background:var(--accent);color:#fff;padding:34px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats-grid .num{font-family:'Oswald',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1}
+.stats-grid .lbl{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;opacity:.85;margin-top:6px}
+/* ===== MARQUEE ===== */
+.strip{background:#000;color:var(--accent);overflow:hidden;padding:13px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip div{white-space:nowrap;animation:slide 24s linear infinite;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.26em;font-size:.9rem;text-transform:uppercase}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* ===== SECTIONS ===== */
+section{padding:104px 0}
+.sec-head{text-align:center;max-width:700px;margin:0 auto 60px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:16px;color:#fff;font-weight:600}
+.sec-head h2 em{font-style:normal;color:var(--accent)}
+.sec-head p{color:var(--gray)}
+/* ===== SERVICES ===== */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:44px 36px;transition:.35s;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:.35s}
+.card:hover{transform:translateY(-10px);border-color:rgba(255,42,31,.45);box-shadow:0 24px 60px rgba(255,42,31,.14)}
+.card:hover::before{transform:scaleX(1)}
+.card .ico{font-size:2.8rem;margin-bottom:20px}
+.card h3{font-size:1.7rem;margin-bottom:10px;color:#fff;letter-spacing:.03em}
+.card p{color:var(--gray);font-size:.96rem;margin-bottom:18px;flex:1}
+.price{color:var(--accent);font-weight:700;font-size:1.3rem;letter-spacing:.05em;margin-bottom:20px;font-family:'Oswald',sans-serif}
+.price small{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:400;color:var(--gray);letter-spacing:.02em;margin-top:2px}
+.card .btn{padding:12px 24px;font-size:.78rem;align-self:flex-start}
+/* ===== HOW ===== */
+.how{background:var(--dark);position:relative;overflow:hidden}
+.how::before{content:'01·02·03';position:absolute;top:40px;right:-20px;font-family:'Oswald',sans-serif;font-size:clamp(5rem,14vw,11rem);color:rgba(255,255,255,.03);white-space:nowrap;pointer-events:none}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;position:relative;z-index:2}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:40px 28px;text-align:center;transition:.35s}
+.step:hover{border-color:rgba(255,42,31,.5);transform:translateY(-6px)}
+.step .num{font-family:'Oswald',sans-serif;font-size:3.4rem;font-weight:700;color:transparent;-webkit-text-stroke:2px var(--accent);line-height:1;margin-bottom:16px}
+.step h3{color:#fff;font-size:1.35rem;margin-bottom:10px;letter-spacing:.04em}
+.step p{color:var(--gray);font-size:.93rem}
+/* ===== WHY ===== */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;align-items:stretch}
+.why-main{background:linear-gradient(135deg,rgba(255,42,31,.16),rgba(255,42,31,.04));border:1px solid rgba(255,42,31,.32);border-radius:14px;padding:52px 44px;display:flex;flex-direction:column;justify-content:center}
+.why-main h2{font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:18px;font-weight:600}
+.why-main h2 em{font-style:normal;color:var(--accent)}
+.why-main p{color:var(--gray);margin-bottom:30px;max-width:460px}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.why-item{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px;transition:.3s}
+.why-item:hover{border-color:rgba(255,42,31,.45);transform:translateY(-4px)}
+.why-item .ico{font-size:2rem;margin-bottom:12px}
+.why-item h3{font-size:1.15rem;color:#fff;margin-bottom:8px;letter-spacing:.04em}
+.why-item p{color:var(--gray);font-size:.9rem}
+/* ===== TESTIMONIALS ===== */
+.testi{background:var(--dark)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.testi-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:34px;transition:.3s;display:flex;flex-direction:column}
+.testi-card:hover{transform:translateY(-6px);border-color:rgba(255,42,31,.4)}
+.testi-card .stars{color:var(--accent);letter-spacing:.22em;margin-bottom:16px;font-size:1.05rem}
+.testi-card p{color:#d6cccc;font-style:italic;margin-bottom:18px;font-size:.97rem;flex:1}
+.testi-card .who{color:var(--gray);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+.note{margin-top:28px;text-align:center;color:var(--gray);font-size:.8rem;font-style:italic}
+/* ===== FAQ ===== */
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.1rem;font-weight:600;text-align:left;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Oswald',sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.faq-q span{color:var(--accent);font-size:1.5rem;transition:.3s;flex-shrink:0}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--gray);font-size:.96rem}
+.faq-a p{padding:0 0 24px}
+/* ===== CTA BAND ===== */
+.cta-band{background:var(--accent);color:#fff;padding:90px 0;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'BRILLA MÁS';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Oswald',sans-serif;font-size:clamp(4rem,16vw,13rem);font-weight:700;color:rgba(255,255,255,.08);white-space:nowrap;pointer-events:none}
+.cta-band h2{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:700;margin-bottom:16px;position:relative;z-index:2}
+.cta-band p{font-size:1.1rem;font-weight:500;margin-bottom:34px;position:relative;z-index:2}
+.cta-band .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
+.btn.dark{background:#0a0505;border-color:#0a0505;color:var(--accent)}
+.btn.dark:hover{background:transparent;color:#0a0505;box-shadow:none}
+/* ===== CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact-info h2{color:#fff;font-size:clamp(2.2rem,4.5vw,3.2rem);margin-bottom:18px;font-weight:600}
+.contact-info h2 em{font-style:normal;color:var(--accent)}
+.contact-info>p{color:var(--gray);margin-bottom:28px}
+.c-line{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-size:1.06rem}
+.c-line .ico{font-size:1.4rem;width:32px;text-align:center}
+.c-line a{color:#fff;font-weight:600;border-bottom:2px solid var(--accent)}
+.c-line span.txt{color:#d6cccc}
+form{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:38px}
+form h3{color:#fff;margin-bottom:22px;font-size:1.6rem;letter-spacing:.04em}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.14);border-radius:8px;color:#fff;padding:13px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+/* ===== FOOTER ===== */
+footer{background:#070404;border-top:1px solid var(--line);padding:60px 0 100px;text-align:center}
+footer .flogo{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.16em;font-size:1.5rem;color:#fff;margin-bottom:10px}
+footer .flogo span{color:var(--accent)}
+footer p{color:var(--gray);font-size:.9rem;margin-bottom:6px}
+footer a.ftel{color:var(--accent);font-weight:600}
+footer .demo{margin-top:24px;font-size:.78rem;color:#544c4c;letter-spacing:.06em}
+/* ===== FLOATS ===== */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
+.wa-float:hover{transform:scale(1.1)}
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(10,5,5,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:8px;font-family:'Oswald',sans-serif;font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.mobile-bar .call{background:var(--accent);color:#fff}
+.mobile-bar .wachat{background:var(--wa);color:#fff}
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:960px){
+  .svc-grid,.why-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:26px}
+  .why-list{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(10,5,5,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
+  section{padding:80px 0}
+}
+@media(max-width:640px){
+  .mobile-bar{display:flex}
+  .wa-float{display:none}
+  footer{padding-bottom:150px}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="container nav">
+    <a href="#" class="logo">HIGATOMA<span>CAR WASH</span><small>BAYAMÓN · PUERTO RICO</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#como">Cómo funciona</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a class="btn wa" href="https://wa.me/17876428005?text=Hola%20Higatoma%20Car%20Wash%2C%20quiero%20informaci%C3%B3n%20de%20sus%20servicios" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-ghost">BAYAMÓN</div>
+  <div class="container hero-inner">
+    <p class="eyebrow">Car wash en Bayamón</p>
+    <h1>Tu carro <span class="fill">brilla.</span> <span class="stroke">Punto.</span></h1>
+    <p class="sub">Lavado exterior, interior profundo y encerado con la calidad que nos ganó la calificación perfecta de nuestros clientes.</p>
+    <p class="tag">🔥 Bayamón · Puerto Rico</p>
+    <div class="hero-ctas">
+      <a class="btn wa" href="https://wa.me/17876428005?text=Hola%20Higatoma%20Car%20Wash%2C%20quiero%20agendar%20un%20lavado" target="_blank" rel="noopener">📲 Agendar por WhatsApp</a>
+      <a class="btn ghost" href="tel:+17876428005">📞 Llamar ahora</a>
+    </div>
+    <div class="hero-phone"><a href="tel:+17876428005">(787) 642-8005</a></div>
+    <div><span class="rating-hero"><span class="stars">★★★★★</span> 5.0 · 9 reseñas de clientes</span></div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container stats-grid">
+    <div><div class="num">5.0 ★</div><div class="lbl">Calificación perfecta</div></div>
+    <div><div class="num">9</div><div class="lbl">Reseñas de clientes</div></div>
+    <div><div class="num">BAYAMÓN</div><div class="lbl">En el corazón del pueblo</div></div>
+    <div><div class="num">IG</div><div class="lbl">@higatoma_carwash_</div></div>
+  </div>
+</div>
+
+<div class="strip"><div>✦ 5.0 ESTRELLAS &nbsp;&nbsp; ✦ BAYAMÓN · PUERTO RICO &nbsp;&nbsp; ✦ TU CARRO BRILLA. PUNTO. &nbsp;&nbsp; ✦ 5.0 ESTRELLAS &nbsp;&nbsp; ✦ BAYAMÓN · PUERTO RICO &nbsp;&nbsp; ✦ TU CARRO BRILLA. PUNTO. &nbsp;&nbsp;</div></div>
+
+<section id="servicios">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Servicios</p>
+      <h2>Lavado con <em>actitud</em> de 5 estrellas</h2>
+      <p>Del lavado rápido al detalle completo — cada carro sale de aquí brillando.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal">
+        <div class="ico">🚿</div>
+        <h3>Lavado Exterior</h3>
+        <p>Lavado completo de carrocería, aros, gomas, cristales y dressing. Rápido, impecable y a buen precio.</p>
+        <p class="price">desde $25<small>Precio propuesto · final según tamaño del vehículo</small></p>
+        <a class="btn wa" href="https://wa.me/17876428005?text=Hola%2C%20me%20interesa%20el%20Lavado%20Exterior" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🧹</div>
+        <h3>Exterior + Interior</h3>
+        <p>Lavado exterior más aspirado completo, tablero, consola y cristales interiores. El combo que más piden.</p>
+        <p class="price">desde $40<small>Precio propuesto · final según tamaño del vehículo</small></p>
+        <a class="btn wa" href="https://wa.me/17876428005?text=Hola%2C%20me%20interesa%20el%20combo%20Exterior%20%2B%20Interior" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">✨</div>
+        <h3>Encerado Express</h3>
+        <p>Cera de brillo rápido que protege tu pintura y le da ese acabado mojado que se nota desde lejos.</p>
+        <p class="price">desde $30<small>Precio propuesto · final según tamaño del vehículo</small></p>
+        <a class="btn wa" href="https://wa.me/17876428005?text=Hola%2C%20me%20interesa%20el%20Encerado%20Express" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">💎</div>
+        <h3>Detalle Completo</h3>
+        <p>El tratamiento total: exterior a fondo, interior profundo y encerado. Tu carro renovado en una sola visita.</p>
+        <p class="price">desde $90<small>Precio propuesto · final según tamaño del vehículo</small></p>
+        <a class="btn wa" href="https://wa.me/17876428005?text=Hola%2C%20me%20interesa%20el%20Detalle%20Completo" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como" class="how">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2>Llega, <em>brilla,</em> vete</h2>
+      <p>Nada complicado. Así trabajamos.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">01</div>
+        <h3>Llega o agenda</h3>
+        <p>Pasa por el local o escríbenos por WhatsApp para coordinar tu visita.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">02</div>
+        <h3>Elige tu lavado</h3>
+        <p>Del express al detalle completo — te recomendamos el ideal para tu carro.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">03</div>
+        <h3>Sal brillando</h3>
+        <p>Recoge tu carro impecable. Así de simple, así de bueno.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-main reveal">
+        <p class="eyebrow">Por qué Higatoma</p>
+        <h2>5.0 estrellas <em>no se regalan</em></h2>
+        <p>Nueve reseñas, nueve veces cinco estrellas. En Bayamón ya saben: aquí el carro sale brillando o no sale.</p>
+        <a class="btn" href="https://wa.me/17876428005?text=Hola%20Higatoma%20Car%20Wash%2C%20quiero%20agendar%20un%20lavado" target="_blank" rel="noopener">Agendar mi lavado</a>
+      </div>
+      <div class="why-list">
+        <div class="why-item reveal">
+          <div class="ico">⭐</div>
+          <h3>Calificación 5.0</h3>
+          <p>9 reseñas de clientes reales, todas de 5 estrellas.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="ico">📍</div>
+          <h3>En Bayamón</h3>
+          <p>Ubicación céntrica, fácil de llegar y de salir brillando.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="ico">⚡</div>
+          <h3>Rápido y detallado</h3>
+          <p>Servicio ágil sin sacrificar el detalle que nos distingue.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="ico">📸</div>
+          <h3>Síguenos en IG</h3>
+          <p>@higatoma_carwash_ — mira nuestro trabajo antes de venir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" class="testi">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Opiniones</p>
+      <h2>5.0 estrellas, <em>9 veces</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"El mejor car wash de Bayamón. Mi carro quedó como recién pintado, el brillo dura semanas."</p>
+        <p class="who">Cliente · Bayamón</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Rápidos y súper detallistas. El interior lo dejaron impecable, ni los dealers lo hacen así."</p>
+        <p class="who">Cliente · Bayamón</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Buen precio y tremendo servicio. Ya soy cliente fijo, los recomiendo a ojos cerrados."</p>
+        <p class="who">Cliente · Guaynabo</p>
+      </div>
+    </div>
+    <p class="note">Calificación 5.0 basada en 9 reseñas reales · Testimonios mostrados con fines ilustrativos.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Preguntas</p>
+      <h2>Lo que <em>preguntan</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Dónde están ubicados? <span>+</span></button>
+        <div class="faq-a"><p>Estamos en Bayamón, Puerto Rico. Escríbenos por WhatsApp y te enviamos la ubicación exacta con un pin.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Necesito cita o puedo llegar directo? <span>+</span></button>
+        <div class="faq-a"><p>Puedes llegar directo. Si quieres asegurar tu turno sin espera, escríbenos por WhatsApp y te agendamos.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Cuánto tarda un lavado? <span>+</span></button>
+        <div class="faq-a"><p>El lavado exterior toma alrededor de 30–45 minutos; el detalle completo puede tomar 2 a 3 horas según el vehículo.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Cómo puedo pagar? <span>+</span></button>
+        <div class="faq-a"><p>Aceptamos ATH Móvil, tarjetas y efectivo.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Tienen Instagram? <span>+</span></button>
+        <div class="faq-a"><p>Sí — síguenos en <strong>@higatoma_carwash_</strong> para ver nuestro trabajo, promociones y antes/después de los carros.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Tu carro merece brillar hoy</h2>
+    <p>Bayamón ya lo sabe. Ven y compruébalo.</p>
+    <div class="btn-row">
+      <a class="btn dark" href="https://wa.me/17876428005?text=Hola%20Higatoma%20Car%20Wash%2C%20quiero%20agendar%20un%20lavado" target="_blank" rel="noopener">📲 Agendar por WhatsApp</a>
+      <a class="btn dark" href="tel:+17876428005">📞 (787) 642-8005</a>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <p class="eyebrow">Contacto</p>
+      <h2>Ven a <em>brillar</em></h2>
+      <p>Escríbenos por WhatsApp, llámanos o síguenos en Instagram. Te esperamos en Bayamón.</p>
+      <div class="c-line"><span class="ico">📞</span><a href="tel:+17876428005">(787) 642-8005</a></div>
+      <div class="c-line"><span class="ico">📲</span><a href="https://wa.me/17876428005" target="_blank" rel="noopener">WhatsApp directo</a></div>
+      <div class="c-line"><span class="ico">📸</span><a href="https://www.instagram.com/higatoma_carwash_" target="_blank" rel="noopener">@higatoma_carwash_</a></div>
+      <div class="c-line"><span class="ico">📍</span><span class="txt">Bayamón, Puerto Rico</span></div>
+      <div class="c-line"><span class="ico">🕐</span><span class="txt">Lun–Sáb · 8:00am – 6:00pm</span></div>
+    </div>
+    <form id="bookForm" class="reveal">
+      <h3>Agenda tu lavado</h3>
+      <div class="field">
+        <label for="fNombre">Nombre</label>
+        <input id="fNombre" type="text" placeholder="Tu nombre" required>
+      </div>
+      <div class="field">
+        <label for="fTel">Teléfono</label>
+        <input id="fTel" type="tel" placeholder="(787) 000-0000" required>
+      </div>
+      <div class="field">
+        <label for="fSvc">Servicio</label>
+        <select id="fSvc">
+          <option>Lavado Exterior</option>
+          <option>Exterior + Interior</option>
+          <option>Encerado Express</option>
+          <option>Detalle Completo</option>
+        </select>
+      </div>
+      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="flogo">HIGATOMA<span>CAR WASH</span></p>
+    <p>Car wash · Bayamón, Puerto Rico · 5.0 ★</p>
+    <p><a class="ftel" href="tel:+17876428005">(787) 642-8005</a> · <a class="ftel" href="https://www.instagram.com/higatoma_carwash_" target="_blank" rel="noopener">@higatoma_carwash_</a></p>
+    <p class="demo">Demostración creada por ManuPro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17876428005?text=Hola%20Higatoma%20Car%20Wash%2C%20quiero%20agendar%20un%20lavado" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+17876428005">📞 Llamar</a>
+  <a class="wachat" href="https://wa.me/17876428005?text=Hola%20Higatoma%20Car%20Wash%2C%20quiero%20agendar%20un%20lavado" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<script>
+const header=document.getElementById('header');
+addEventListener('scroll',()=>{header.classList.toggle('solid',scrollY>40)},{passive:true});
+document.getElementById('menuToggle').addEventListener('click',()=>{document.getElementById('navLinks').classList.toggle('open')});
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const btn=item.querySelector('.faq-q');
+  btn.addEventListener('click',()=>{
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+';});
+    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='×';}
+  });
+});
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const nombre=document.getElementById('fNombre').value.trim();
+  const tel=document.getElementById('fTel').value.trim();
+  const svc=document.getElementById('fSvc').value;
+  if(!nombre||!tel){alert('Por favor completa tu nombre y teléfono.');return;}
+  const text='Hola Higatoma Car Wash, soy '+nombre+'. Quiero agendar: '+svc+'. Mi teléfono es '+tel+'.';
+  window.open('https://wa.me/17876428005?text='+encodeURIComponent(text),'_blank');
+});
+const io=new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

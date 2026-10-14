@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. José J. Ferrari Lugo | Endodoncista en Aguadilla, PR</title>
+<meta name="description" content="Dr. José J. Ferrari Lugo, endodoncista en Aguadilla — tratamientos de conducto (root canals) con tecnología moderna y trato humano. Agenda tu evaluación por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#ffffff; --off:#f6f9fc; --panel:#ffffff; --ink:#10222f; --body:#3d5568;
+  --gray:#7a93a6; --line:#e2ecf3; --accent:#0E7CC0; --accent-dark:#0a5a8c;
+  --accent-dim:rgba(14,124,192,.08); --gold:#C9A96A; --gold-dim:rgba(201,169,106,.14);
+  --wa:#25D366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--body);line-height:1.75;overflow-x:hidden}
+h1,h2,h3{font-family:'Oswald',sans-serif;line-height:1.05;text-transform:uppercase;color:var(--ink);font-weight:600}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:0 auto}
+/* ===== HEADER ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:rgba(255,255,255,.7);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent}
+header.solid{background:rgba(255,255,255,.97);border-bottom-color:var(--line);box-shadow:0 4px 24px rgba(16,34,47,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.45rem;letter-spacing:.08em;color:var(--ink);text-transform:uppercase;line-height:1.1}
+.logo span{color:var(--accent)}
+.logo small{display:block;font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:.38em;color:var(--gold);font-weight:700}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--body);transition:.25s;font-weight:600}
+.nav-links a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;padding:14px 32px;border-radius:8px;font-size:.84rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;transition:.3s;border:2px solid var(--accent);cursor:pointer;font-family:'Oswald',sans-serif}
+.btn:hover{background:transparent;color:var(--accent);transform:translateY(-2px);box-shadow:0 10px 28px rgba(14,124,192,.25)}
+.btn.wa{background:var(--wa);border-color:var(--wa)}
+.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 28px rgba(37,211,102,.25)}
+.btn.ghost{background:transparent;color:var(--accent-dark);border-color:rgba(14,124,192,.4)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);box-shadow:none}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn.gold:hover{background:transparent;color:var(--gold);box-shadow:0 10px 28px rgba(201,169,106,.3)}
+.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:var(--ink)}
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 60% 50% at 80% 10%,rgba(14,124,192,.1) 0%,transparent 60%),radial-gradient(ellipse 45% 40% at 10% 90%,rgba(201,169,106,.1) 0%,transparent 55%),linear-gradient(180deg,#f6f9fc,#ffffff)}
+.hero-ghost{position:absolute;top:14%;right:-2%;font-family:'Oswald',sans-serif;font-size:clamp(6rem,18vw,15rem);color:transparent;-webkit-text-stroke:1px rgba(14,124,192,.14);white-space:nowrap;pointer-events:none;user-select:none;line-height:1}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;padding:150px 0 90px;width:100%}
+.eyebrow{letter-spacing:.4em;text-transform:uppercase;font-size:.76rem;color:var(--accent);margin-bottom:20px;font-weight:700}
+.eyebrow::before{content:'';display:inline-block;width:34px;height:2px;background:var(--gold);vertical-align:middle;margin-right:12px}
+.hero h1{font-size:clamp(2.8rem,6vw,4.8rem);margin-bottom:20px}
+.hero h1 .fill{color:var(--accent)}
+.hero p.sub{font-size:1.12rem;max-width:560px;margin-bottom:10px;color:var(--body)}
+.hero p.tag{font-size:.98rem;color:var(--accent-dark);font-weight:600;letter-spacing:.04em;margin-bottom:34px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+.hero-phone{font-family:'Oswald',sans-serif;font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:600;letter-spacing:.06em;color:var(--ink)}
+.hero-phone a{border-bottom:3px solid var(--gold);padding-bottom:2px;transition:.25s}
+.hero-phone a:hover{color:var(--accent)}
+.hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.hero-badges span{padding:9px 20px;border:1px solid var(--line);border-radius:40px;background:#fff;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--body);box-shadow:0 4px 14px rgba(16,34,47,.05)}
+.hero-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:44px 38px;box-shadow:0 24px 70px rgba(14,124,192,.1);position:relative;overflow:hidden}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--accent),var(--gold))}
+.hero-card .doc{font-family:'Oswald',sans-serif;font-size:1.9rem;color:var(--ink);margin-bottom:4px;letter-spacing:.03em}
+.hero-card .spec{color:var(--accent);font-weight:700;font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:18px}
+.hero-card p{font-size:.95rem;color:var(--body);margin-bottom:22px}
+.hero-card ul{list-style:none;display:grid;gap:10px;margin-bottom:26px}
+.hero-card ul li{font-size:.92rem;color:var(--body);padding-left:26px;position:relative}
+.hero-card ul li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:800}
+/* ===== STATS ===== */
+.stats{background:var(--ink);color:#fff;padding:36px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats-grid .num{font-family:'Oswald',sans-serif;font-size:clamp(1.9rem,3.8vw,2.8rem);font-weight:600;line-height:1.1;color:#fff}
+.stats-grid .num em{font-style:normal;color:var(--gold)}
+.stats-grid .lbl{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#b8c9d6;margin-top:6px}
+/* ===== MARQUEE ===== */
+.strip{background:var(--accent);color:#fff;overflow:hidden;padding:13px 0}
+.strip div{white-space:nowrap;animation:slide 26s linear infinite;font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:.26em;font-size:.9rem;text-transform:uppercase}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* ===== SECTIONS ===== */
+section{padding:104px 0}
+.sec-head{text-align:center;max-width:700px;margin:0 auto 60px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head .eyebrow::before{content:none}
+.sec-head h2{font-size:clamp(2.1rem,4.5vw,3.4rem);margin-bottom:14px}
+.sec-head h2 em{font-style:normal;color:var(--accent)}
+.sec-head p{color:var(--body)}
+/* ===== SERVICES ===== */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:44px 36px;transition:.35s;display:flex;flex-direction:column;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(16,34,47,.05)}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--gold));transform:scaleX(0);transform-origin:left;transition:.35s}
+.card:hover{transform:translateY(-10px);box-shadow:0 26px 60px rgba(14,124,192,.14);border-color:rgba(14,124,192,.35)}
+.card:hover::before{transform:scaleX(1)}
+.card .ico{font-size:2.6rem;margin-bottom:20px}
+.card h3{font-size:1.6rem;margin-bottom:10px;letter-spacing:.03em}
+.card p{font-size:.95rem;margin-bottom:18px;flex:1}
+.price{color:var(--accent);font-weight:700;font-size:1.25rem;letter-spacing:.04em;margin-bottom:20px;font-family:'Oswald',sans-serif}
+.price small{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:400;color:var(--gray);letter-spacing:.02em;margin-top:2px}
+.card .btn{padding:12px 24px;font-size:.78rem;align-self:flex-start}
+/* ===== HOW ===== */
+.how{background:var(--off)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px 28px;text-align:center;transition:.35s;box-shadow:0 8px 26px rgba(16,34,47,.05)}
+.step:hover{transform:translateY(-6px);box-shadow:0 20px 46px rgba(14,124,192,.12);border-color:rgba(14,124,192,.3)}
+.step .num{font-family:'Oswald',sans-serif;font-size:3rem;font-weight:600;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-dark));width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 10px 24px rgba(14,124,192,.3)}
+.step h3{font-size:1.3rem;margin-bottom:10px;letter-spacing:.04em}
+.step p{font-size:.92rem}
+/* ===== WHY ===== */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.why-main{background:linear-gradient(135deg,var(--ink),#1b3a52);border-radius:16px;padding:56px 48px;display:flex;flex-direction:column;justify-content:center;color:#fff;position:relative;overflow:hidden}
+.why-main::after{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--gold),var(--accent))}
+.why-main h2{font-size:clamp(1.9rem,3.8vw,2.8rem);color:#fff;margin-bottom:18px}
+.why-main h2 em{font-style:normal;color:var(--gold)}
+.why-main p{color:#c3d4e0;margin-bottom:30px;max-width:460px}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.why-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:.3s;box-shadow:0 8px 26px rgba(16,34,47,.05)}
+.why-item:hover{transform:translateY(-5px);border-color:rgba(14,124,192,.35);box-shadow:0 18px 40px rgba(14,124,192,.12)}
+.why-item .ico{font-size:2rem;margin-bottom:12px}
+.why-item h3{font-size:1.12rem;margin-bottom:8px;letter-spacing:.04em}
+.why-item p{font-size:.89rem}
+/* ===== TESTIMONIALS ===== */
+.testi{background:var(--off)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.testi-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:36px 32px;transition:.3s;display:flex;flex-direction:column;box-shadow:0 8px 26px rgba(16,34,47,.05)}
+.testi-card:hover{transform:translateY(-6px);box-shadow:0 20px 46px rgba(14,124,192,.12)}
+.testi-card .stars{color:var(--gold);letter-spacing:.22em;margin-bottom:16px;font-size:1.05rem}
+.testi-card p{font-style:italic;margin-bottom:18px;font-size:.96rem;flex:1;color:var(--body)}
+.testi-card .who{color:var(--gray);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.note{margin-top:28px;text-align:center;color:var(--gray);font-size:.8rem;font-style:italic}
+/* ===== FAQ ===== */
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden;box-shadow:0 4px 16px rgba(16,34,47,.04);transition:.3s}
+.faq-item.open{border-color:rgba(14,124,192,.35)}
+.faq-q{width:100%;background:none;border:none;color:var(--ink);font-size:1.02rem;font-weight:600;text-align:left;padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Inter',sans-serif}
+.faq-q span{color:var(--accent);font-size:1.5rem;transition:.3s;flex-shrink:0;font-weight:400}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--body);font-size:.95rem}
+.faq-a p{padding:0 26px 24px}
+/* ===== CTA BAND ===== */
+.cta-band{background:linear-gradient(135deg,var(--accent-dark),var(--accent));color:#fff;padding:96px 0;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--gold),transparent,var(--gold))}
+.cta-band h2{font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;margin-bottom:14px}
+.cta-band p{font-size:1.08rem;margin-bottom:34px;color:#dcebf5;max-width:640px;margin-left:auto;margin-right:auto}
+.cta-band .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn.light{background:#fff;border-color:#fff;color:var(--accent-dark)}
+.btn.light:hover{background:transparent;color:#fff;box-shadow:none}
+/* ===== CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact-info h2{font-size:clamp(2.1rem,4.5vw,3.2rem);margin-bottom:16px}
+.contact-info h2 em{font-style:normal;color:var(--accent)}
+.contact-info>p{margin-bottom:28px}
+.c-line{display:flex;align-items:center;gap:14px;margin-bottom:18px;font-size:1.05rem}
+.c-line .ico{font-size:1.35rem;width:32px;text-align:center}
+.c-line a{color:var(--ink);font-weight:700;border-bottom:2px solid var(--gold)}
+.c-line span.txt{color:var(--body)}
+form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px 38px;box-shadow:0 20px 60px rgba(14,124,192,.1)}
+form h3{margin-bottom:22px;font-size:1.5rem;letter-spacing:.04em}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:6px;font-weight:600}
+.field input,.field select,.field textarea{width:100%;background:var(--off);border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:13px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+/* ===== FOOTER ===== */
+footer{background:var(--ink);padding:64px 0 100px;text-align:center;color:#b8c9d6}
+footer .flogo{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.1em;font-size:1.6rem;color:#fff;margin-bottom:8px}
+footer .flogo span{color:var(--gold)}
+footer p{font-size:.9rem;margin-bottom:6px}
+footer a.ftel{color:var(--gold);font-weight:700}
+footer .demo{margin-top:24px;font-size:.78rem;color:#5f7688;letter-spacing:.06em}
+/* ===== FLOATS ===== */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.45);transition:.3s}
+.wa-float:hover{transform:scale(1.1)}
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px;box-shadow:0 -6px 24px rgba(16,34,47,.08)}
+.mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:8px;font-family:'Oswald',sans-serif;font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.mobile-bar .call{background:var(--accent);color:#fff}
+.mobile-bar .wachat{background:var(--wa);color:#fff}
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr}
+  .svc-grid,.why-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:26px}
+  .why-list{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line);box-shadow:0 20px 40px rgba(16,34,47,.1)}
+  section{padding:80px 0}
+}
+@media(max-width:640px){
+  .mobile-bar{display:flex}
+  .wa-float{display:none}
+  footer{padding-bottom:150px}
+  .steps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="container nav">
+    <a href="#" class="logo">DR. FERRARI<span>LUGO</span><small>ENDODONCIA · AGUADILLA</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicios">Tratamientos</a></li>
+      <li><a href="#como">Tu visita</a></li>
+      <li><a href="#opiniones">Pacientes</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a class="btn wa" href="https://wa.me/17879973000?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20con%20el%20Dr.%20Ferrari%20Lugo" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-ghost">SONRÍE</div>
+  <div class="container hero-inner">
+    <div>
+      <p class="eyebrow">Endodoncista · Aguadilla</p>
+      <h1>Salva tu diente. <span class="fill">Sin dolor,</span> sin miedo.</h1>
+      <p class="sub">El Dr. José J. Ferrari Lugo se especializa en tratamientos de conducto (root canals): diagnóstico preciso, tecnología moderna y un trato calmado que te hace sentir en buenas manos.</p>
+      <p class="tag">🦷 Especialista en endodoncia · Aguadilla, Puerto Rico</p>
+      <div class="hero-ctas">
+        <a class="btn wa" href="https://wa.me/17879973000?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20con%20el%20Dr.%20Ferrari%20Lugo" target="_blank" rel="noopener">📲 Agendar evaluación</a>
+        <a class="btn ghost" href="tel:+17879973000">📞 Llamar a la oficina</a>
+      </div>
+      <div class="hero-phone"><a href="tel:+17879973000">(787) 997-3000</a></div>
+      <div class="hero-badges"><span>Especialista</span><span>Diagnóstico preciso</span><span>Trato humano</span></div>
+    </div>
+    <div class="hero-card reveal">
+      <p class="doc">Dr. José J. Ferrari Lugo</p>
+      <p class="spec">Endodoncia</p>
+      <p>La endodoncia salva dientes que de otro modo habría que extraer. Con el especialista correcto, el tratamiento de conducto es cómodo, predecible y te devuelve la tranquilidad.</p>
+      <ul>
+        <li>Evaluación y diagnóstico detallado</li>
+        <li>Tratamientos de conducto modernos</li>
+        <li>Atención a urgencias dentales</li>
+        <li>Explicación clara, sin tecnicismos</li>
+      </ul>
+      <a class="btn gold" href="https://wa.me/17879973000?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20con%20el%20Dr.%20Ferrari%20Lugo" target="_blank" rel="noopener" style="width:100%">Agendar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container stats-grid">
+    <div><div class="num"><em>ESPECIALISTA</em></div><div class="lbl">En endodoncia</div></div>
+    <div><div class="num">ROOT <em>CANAL</em></div><div class="lbl">Tratamiento de conducto</div></div>
+    <div><div class="num">AGUADILLA</div><div class="lbl">Tu oficina cercana</div></div>
+    <div><div class="num"><em>SIN</em> MIEDO</div><div class="lbl">Trato calmado y humano</div></div>
+  </div>
+</div>
+
+<div class="strip"><div>✦ ENDODONCIA ESPECIALIZADA &nbsp;&nbsp; ✦ AGUADILLA · PUERTO RICO &nbsp;&nbsp; ✦ SALVA TU DIENTE &nbsp;&nbsp; ✦ ENDODONCIA ESPECIALIZADA &nbsp;&nbsp; ✦ AGUADILLA · PUERTO RICO &nbsp;&nbsp; ✦ SALVA TU DIENTE &nbsp;&nbsp;</div></div>
+
+<section id="servicios">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Tratamientos</p>
+      <h2>Cuidado <em>especializado</em> para tu diente</h2>
+      <p>La endodoncia es la especialidad que salva dientes. Esto es lo que hacemos.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal">
+        <div class="ico">🦷</div>
+        <h3>Tratamiento de Conducto</h3>
+        <p>El famoso "root canal": eliminamos la infección del interior del diente, lo sellamos y lo salvamos. Con anestesia moderna, el procedimiento es cómodo.</p>
+        <p class="price">desde $450<small>Precio propuesto · plan de tratamiento según evaluación</small></p>
+        <a class="btn wa" href="https://wa.me/17879973000?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20tratamiento%20de%20conducto" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🔍</div>
+        <h3>Evaluación y Diagnóstico</h3>
+        <p>¿Dolor al morder, sensibilidad al frío o calor? Evaluamos tu caso con detalle y te decimos con honestidad si necesitas tratamiento o no.</p>
+        <p class="price">desde $75<small>Precio propuesto · incluye plan de tratamiento</small></p>
+        <a class="btn wa" href="https://wa.me/17879973000?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n" target="_blank" rel="noopener">Agendar evaluación</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🔄</div>
+        <h3>Retratamiento Endodóntico</h3>
+        <p>Si un tratamiento de conducto previo no resolvió el problema, evaluamos la opción de retratar el diente antes de considerar la extracción.</p>
+        <p class="price">desde $550<small>Precio propuesto · según complejidad del caso</small></p>
+        <a class="btn wa" href="https://wa.me/17879973000?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20retratamiento" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🚨</div>
+        <h3>Urgencias Dentales</h3>
+        <p>Dolor dental intenso no espera. Si tienes una emergencia, contáctanos y buscamos la forma de atenderte lo antes posible.</p>
+        <p class="price">Evaluación de urgencia<small>Contáctanos para disponibilidad del día</small></p>
+        <a class="btn wa" href="https://wa.me/17879973000?text=Hola%2C%20tengo%20una%20urgencia%20dental%20y%20necesito%20ayuda" target="_blank" rel="noopener">Escríbenos ahora</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como" class="how">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Tu visita</p>
+      <h2>Así de <em>tranquilo</em> es el proceso</h2>
+      <p>Sabemos que el dentista genera ansiedad. Por eso cada paso está pensado para tu calma.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">1</div>
+        <h3>Evaluación</h3>
+        <p>Escuchamos tu caso, examinamos y diagnosticamos con precisión. Sin prisa.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">2</div>
+        <h3>Plan claro</h3>
+        <p>Te explicamos qué necesita tu diente, en lenguaje simple, con costo transparente.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">3</div>
+        <h3>Tratamiento</h3>
+        <p>Procedimiento cómodo con anestesia efectiva. La mayoría sale sorprendida de lo tranquilo que fue.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">4</div>
+        <h3>Seguimiento</h3>
+        <p>Verificamos tu recuperación y coordinamos la restauración final de tu diente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-main reveal">
+        <p class="eyebrow" style="color:var(--gold)">Por qué un endodoncista</p>
+        <h2>No todos los <em>conductos</em> son iguales</h2>
+        <p>El endodoncista es el especialista en salvar dientes por dentro. Casos complejos, retratamientos y anatomías difíciles son su día a día — eso se traduce en mejor pronóstico para tu diente.</p>
+        <a class="btn gold" href="https://wa.me/17879973000?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20con%20el%20Dr.%20Ferrari%20Lugo" target="_blank" rel="noopener">Agendar mi evaluación</a>
+      </div>
+      <div class="why-list">
+        <div class="why-item reveal">
+          <div class="ico">🎯</div>
+          <h3>Especialización</h3>
+          <p>Formación dedicada exclusivamente a endodoncia y tratamientos de conducto.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="ico">🔬</div>
+          <h3>Diagnóstico preciso</h3>
+          <p>Evaluación detallada para tratar solo lo necesario, ni más ni menos.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="ico">🤲</div>
+          <h3>Trato calmado</h3>
+          <p>Explicación clara y ritmo pausado. Aquí nadie se siente apurado.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="ico">📍</div>
+          <h3>En Aguadilla</h3>
+          <p>Atención especializada sin tener que viajar lejos del área oeste.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" class="testi">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Pacientes</p>
+      <h2>Historias que <em>nos alegran</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Llegué con un dolor terrible y mucho miedo. El doctor me explicó todo con calma y el tratamiento fue mucho más tranquilo de lo que imaginaba."</p>
+        <p class="who">Paciente · Aguadilla</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Me habían dicho que había que sacarme la muela. El Dr. Ferrari la salvó con el tratamiento de conducto. Muy agradecida."</p>
+        <p class="who">Paciente · Moca</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Profesional, puntual y honesto con los costos desde el primer día. Lo recomiendo sin dudarlo."</p>
+        <p class="who">Paciente · Aguada</p>
+      </div>
+    </div>
+    <p class="note">Testimonios con fines ilustrativos.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Endodoncia, <em>sin misterios</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Qué es exactamente la endodoncia? <span>+</span></button>
+        <div class="faq-a"><p>Es la especialidad dental que trata el interior del diente (la pulpa). Cuando la pulpa se infecta o se inflama por caries profunda o trauma, el tratamiento de conducto la elimina, desinfecta el interior y sella el diente — salvándolo de la extracción.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿El tratamiento de conducto duele? <span>+</span></button>
+        <div class="faq-a"><p>Es el mito más común. Con la anestesia moderna, el tratamiento de conducto se siente parecido a un empaste: la mayoría de los pacientes se sorprende de lo cómodo que fue. Además, elimina el dolor que ya tenías.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Cuántas citas necesito? <span>+</span></button>
+        <div class="faq-a"><p>Depende del caso: muchos tratamientos se completan en una o dos visitas. En tu evaluación te diremos exactamente qué esperar, sin sorpresas.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Qué pasa si no me trato el diente? <span>+</span></button>
+        <div class="faq-a"><p>La infección no se cura sola: el dolor suele empeorar, la infección puede extenderse y eventualmente se pierde el diente. Tratarlo a tiempo es más simple, más económico y salva tu diente natural.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Por qué ir a un endodoncista y no a un dentista general? <span>+</span></button>
+        <div class="faq-a"><p>El endodoncista se dedica exclusivamente a estos tratamientos: maneja casos complejos, retratamientos y anatomías difíciles todos los días. Esa experiencia se traduce en un mejor pronóstico para tu diente.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Tu diente todavía tiene salvación</h2>
+    <p>Agenda tu evaluación hoy y sal de dudas con un diagnóstico honesto y profesional.</p>
+    <div class="btn-row">
+      <a class="btn light" href="https://wa.me/17879973000?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20con%20el%20Dr.%20Ferrari%20Lugo" target="_blank" rel="noopener">📲 Agendar por WhatsApp</a>
+      <a class="btn light" href="tel:+17879973000">📞 (787) 997-3000</a>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <p class="eyebrow">Contacto</p>
+      <h2>Agenda tu <em>evaluación</em></h2>
+      <p>Escríbenos por WhatsApp o llámanos. Te atendemos con la calma que mereces.</p>
+      <div class="c-line"><span class="ico">📞</span><a href="tel:+17879973000">(787) 997-3000</a></div>
+      <div class="c-line"><span class="ico">📲</span><a href="https://wa.me/17879973000" target="_blank" rel="noopener">WhatsApp directo</a></div>
+      <div class="c-line"><span class="ico">📍</span><span class="txt">Aguadilla, Puerto Rico</span></div>
+      <div class="c-line"><span class="ico">🕐</span><span class="txt">Lun–Vie · Por cita</span></div>
+    </div>
+    <form id="bookForm" class="reveal">
+      <h3>Solicita tu cita</h3>
+      <div class="field">
+        <label for="fNombre">Nombre</label>
+        <input id="fNombre" type="text" placeholder="Tu nombre" required>
+      </div>
+      <div class="field">
+        <label for="fTel">Teléfono</label>
+        <input id="fTel" type="tel" placeholder="(787) 000-0000" required>
+      </div>
+      <div class="field">
+        <label for="fMotivo">Motivo de la visita</label>
+        <select id="fMotivo">
+          <option>Evaluación / diagnóstico</option>
+          <option>Tratamiento de conducto</option>
+          <option>Retratamiento</option>
+          <option>Urgencia dental</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fMsg">Describe tu síntoma</label>
+        <textarea id="fMsg" rows="3" placeholder="Ej: dolor al morder del lado derecho..."></textarea>
+      </div>
+      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="flogo">DR. FERRARI<span>LUGO</span></p>
+    <p>Endodoncia especializada · Aguadilla, Puerto Rico</p>
+    <p><a class="ftel" href="tel:+17879973000">(787) 997-3000</a></p>
+    <p class="demo">Demostración creada por ManuPro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17879973000?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20con%20el%20Dr.%20Ferrari%20Lugo" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+17879973000">📞 Llamar</a>
+  <a class="wachat" href="https://wa.me/17879973000?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20con%20el%20Dr.%20Ferrari%20Lugo" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<script>
+const header=document.getElementById('header');
+addEventListener('scroll',()=>{header.classList.toggle('solid',scrollY>40)},{passive:true});
+document.getElementById('menuToggle').addEventListener('click',()=>{document.getElementById('navLinks').classList.toggle('open')});
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const btn=item.querySelector('.faq-q');
+  btn.addEventListener('click',()=>{
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+';});
+    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='×';}
+  });
+});
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const nombre=document.getElementById('fNombre').value.trim();
+  const tel=document.getElementById('fTel').value.trim();
+  const motivo=document.getElementById('fMotivo').value;
+  const msg=document.getElementById('fMsg').value.trim();
+  if(!nombre||!tel){alert('Por favor completa tu nombre y teléfono.');return;}
+  let text='Hola, soy '+nombre+'. Motivo: '+motivo+'. Mi teléfono es '+tel+'.';
+  if(msg)text+=' Síntoma: '+msg;
+  window.open('https://wa.me/17879973000?text='+encodeURIComponent(text),'_blank');
+});
+const io=new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

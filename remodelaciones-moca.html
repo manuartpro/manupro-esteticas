@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remodelaciones | Remodelación de Hogares en Moca, PR — (787) 374-3157</title>
+<meta name="description" content="Remodelaciones en Moca, Puerto Rico: cocinas, baños, pisos, pintura y ampliaciones. Estimados gratis. Llámanos o escríbenos: (787) 374-3157.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0c0a08; --dark:#14100c; --panel:#1c1611; --line:rgba(199,126,58,.30);
+  --cop:#C77E3A; --cop-hi:#E9A861; --cop-dim:rgba(199,126,58,.12);
+  --white:#faf6ef; --gray:#a89c88; --wa:#25D366;
+  --paper:#f4efe6; --ink:#1d1712;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:600;line-height:1.08;text-transform:uppercase;letter-spacing:.02em}
+a{text-decoration:none;color:inherit}
+.container{width:min(1140px,92%);margin:0 auto}
+section{padding:96px 0;position:relative}
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;background:transparent}
+header.solid{background:rgba(12,10,8,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{font-family:'Oswald',sans-serif;font-size:1.3rem;letter-spacing:.1em;text-transform:uppercase;line-height:1.3}
+.logo .r{display:inline-block;background:var(--cop);color:#140d06;padding:2px 10px;margin-right:10px;font-size:1.1rem}
+.logo small{display:block;font-family:'Inter',sans-serif;font-size:.56rem;letter-spacing:.42em;color:var(--gray);font-weight:600;margin-top:4px}
+.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+.nav-links a{font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:#d8cdb9;transition:.25s;font-weight:600}
+.nav-links a:hover{color:var(--cop-hi)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;font-size:1.4rem;cursor:pointer;color:var(--cop);padding:4px 12px}
+.btn{display:inline-block;background:var(--cop);color:#140d06;padding:14px 32px;border-radius:4px;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;transition:.3s;border:1px solid var(--cop);cursor:pointer}
+.btn:hover{background:transparent;color:var(--cop-hi);transform:translateY(-2px);box-shadow:0 10px 28px rgba(199,126,58,.28)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#062b16}
+.btn.wa:hover{background:transparent;color:var(--wa);box-shadow:0 10px 28px rgba(37,211,102,.25)}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn.ghost:hover{border-color:var(--cop-hi);color:var(--cop-hi);box-shadow:none}
+.btn.sm{padding:11px 22px;font-size:.76rem}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;
+  background:
+    linear-gradient(100deg,rgba(12,10,8,.45) 20%,rgba(12,10,8,.93) 70%),
+    radial-gradient(ellipse 65% 50% at 78% 30%,rgba(199,126,58,.28) 0%,transparent 60%),
+    linear-gradient(180deg,#191008,var(--black))}
+.hero .house{position:absolute;right:4%;bottom:8%;font-size:clamp(7rem,20vw,15rem);opacity:.08;pointer-events:none}
+.hero-inner{position:relative;z-index:2;padding:140px 0 90px;max-width:820px}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;letter-spacing:.4em;text-transform:uppercase;font-size:.74rem;color:var(--cop-hi);margin-bottom:22px;font-weight:600}
+.eyebrow::before{content:'';width:44px;height:2px;background:var(--cop)}
+.hero h1{font-size:clamp(3rem,9.5vw,6.6rem);margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--cop-hi)}
+.hero .sub{font-size:1.15rem;font-weight:300;max-width:600px;margin-bottom:14px;color:#ddd2bd}
+.hero .free{font-size:.98rem;color:var(--cop-hi);font-weight:700;letter-spacing:.05em;margin-bottom:32px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.hero-phone{font-size:1.55rem;font-weight:700;letter-spacing:.04em}
+.hero-phone a{color:#fff;border-bottom:3px solid var(--cop);padding-bottom:3px;transition:.25s}
+.hero-phone a:hover{color:var(--cop-hi)}
+.hero-note{font-size:.85rem;color:var(--gray);margin-top:8px}
+.hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hbadge{border:1px solid var(--line);background:rgba(199,126,58,.08);padding:10px 18px;border-radius:4px;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:#ecd9bd;font-weight:700}
+/* MARQUEE */
+.strip{background:var(--cop);color:#140d06;overflow:hidden;padding:12px 0;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.2em;font-size:.88rem;text-transform:uppercase}
+.strip div{white-space:nowrap;animation:slide 24s linear infinite;display:inline-block}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* PROOF */
+.proof{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:42px 0;text-align:center}
+.proof-item b{display:block;font-family:'Oswald',sans-serif;font-size:1.9rem;color:var(--cop-hi)}
+.proof-item span{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray)}
+/* LIGHT SECTION (alternating rhythm) */
+.light{background:var(--paper);color:var(--ink)}
+.light .sec-head p{color:#5d5347}
+.light .eyebrow{color:#a06a2c}
+/* SEC HEADS */
+.sec-head{text-align:center;max-width:700px;margin:0 auto 58px}
+.sec-head .eyebrow{display:block}
+.sec-head h2{font-size:clamp(2rem,4.8vw,3.2rem);margin-bottom:14px}
+.sec-head h2 em{font-style:normal;color:var(--cop-hi)}
+.light .sec-head h2 em{color:#a06a2c}
+.sec-head p{color:var(--gray)}
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:#fffdf8;border:1px solid #e2d8c4;border-radius:10px;padding:38px 30px;transition:.35s;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(29,23,18,.06)}
+.card:hover{transform:translateY(-8px);border-color:var(--cop);box-shadow:0 24px 55px rgba(160,106,44,.18)}
+.card .ico{font-size:2.4rem;margin-bottom:16px}
+.card h3{font-size:1.35rem;margin-bottom:10px;color:var(--ink)}
+.card p{color:#5d5347;font-size:.93rem;margin-bottom:16px;flex:1}
+.price{color:#a06a2c;font-weight:700;font-size:1.2rem;margin-bottom:4px;font-family:'Oswald',sans-serif;letter-spacing:.03em}
+.price-note{font-size:.7rem;color:#9a8c74;letter-spacing:.06em;margin-bottom:20px;text-transform:uppercase}
+.card .btn{text-align:center}
+/* HOW */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{text-align:center;padding:10px}
+.step .ring{width:76px;height:76px;border-radius:50%;border:2px solid var(--cop);background:var(--cop-dim);color:var(--cop-hi);font-family:'Oswald',sans-serif;font-size:1.7rem;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.step h3{font-size:1.15rem;margin-bottom:8px;color:#fff}
+.step p{color:var(--gray);font-size:.9rem}
+/* DIFF */
+.diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.diff{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:30px 26px;transition:.3s;position:relative;overflow:hidden}
+.diff::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--cop);transform:scaleX(0);transform-origin:left;transition:.35s}
+.diff:hover{transform:translateY(-5px)}
+.diff:hover::before{transform:scaleX(1)}
+.diff .di{font-size:2rem;margin-bottom:12px}
+.diff h3{font-size:1.15rem;margin-bottom:8px}
+.diff p{color:var(--gray);font-size:.9rem}
+/* TESTI */
+.testi{background:var(--dark)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.testi-card{background:var(--panel);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:32px;transition:.3s}
+.testi-card:hover{transform:translateY(-5px);border-color:var(--cop)}
+.stars{color:var(--cop-hi);letter-spacing:.25em;margin-bottom:14px;font-size:1.05rem}
+.testi-card p{color:#ddd2bd;font-style:italic;margin-bottom:16px;font-size:.94rem}
+.testi-card .who{color:var(--gray);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.illus-note{text-align:center;color:#6f6455;font-size:.78rem;margin-top:26px;letter-spacing:.05em}
+/* FAQ */
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.1)}
+.faq-q{width:100%;background:none;border:none;color:#fff;font-size:1.04rem;font-weight:600;text-align:left;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Inter',sans-serif}
+.faq-q span{color:var(--cop);font-size:1.5rem;transition:.3s;flex-shrink:0}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--gray);font-size:.95rem}
+.faq-a p{padding:0 0 24px}
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,#2b1c0d,#100b06 65%);border-top:2px solid var(--cop);border-bottom:2px solid var(--cop);text-align:center;padding:104px 0;position:relative;overflow:hidden}
+.cta-band::before{content:'🏠';position:absolute;left:6%;top:50%;transform:translateY(-50%);font-size:10rem;opacity:.07}
+.cta-band .container{position:relative;z-index:2}
+.cta-band h2{font-size:clamp(2.3rem,6vw,4.2rem);margin-bottom:14px}
+.cta-band h2 em{font-style:normal;color:var(--cop-hi)}
+.cta-band p{color:#ddd2bd;max-width:560px;margin:0 auto 34px;font-size:1.04rem}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:14px}
+.contact-info h2 em{font-style:normal;color:var(--cop-hi)}
+.contact-info>p{color:var(--gray);margin-bottom:26px}
+.c-line{display:flex;align-items:center;gap:14px;margin-bottom:17px;font-size:1.04rem}
+.c-line .ico{font-size:1.4rem}
+.c-line a{color:#fff;font-weight:700;border-bottom:2px solid var(--cop)}
+form{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:36px}
+form h3{margin-bottom:20px;font-size:1.35rem}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:6px;font-weight:600}
+.field input,.field select,.field textarea{width:100%;background:var(--dark);border:1px solid rgba(255,255,255,.12);border-radius:8px;color:#fff;padding:12px 14px;font-size:.95rem;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--cop)}
+/* FOOTER */
+footer{background:#080604;border-top:1px solid rgba(255,255,255,.06);padding:52px 0 110px;text-align:center}
+footer .flogo{font-family:'Oswald',sans-serif;letter-spacing:.12em;font-size:1.3rem;margin-bottom:8px;text-transform:uppercase}
+footer .flogo .r{display:inline-block;background:var(--cop);color:#140d06;padding:1px 8px;margin-right:8px;font-size:1rem}
+footer p{color:var(--gray);font-size:.9rem;margin-bottom:6px}
+footer .demo{margin-top:20px;font-size:.76rem;color:#5b5145;letter-spacing:.06em}
+/* FLOATS */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:200;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 8px 30px rgba(37,211,102,.4);transition:.3s}
+.wa-float:hover{transform:scale(1.1)}
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(12,10,8,.97);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.sticky-bar a{flex:1;text-align:center;padding:13px 8px;border-radius:4px;font-weight:700;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
+.sticky-bar .call{background:var(--cop);color:#140d06}
+.sticky-bar .wab{background:var(--wa);color:#062b16}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:960px){
+  .svc-grid,.steps,.diff-grid,.testi-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .proof-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:rgba(12,10,8,.98);flex-direction:column;padding:26px;gap:18px;border-bottom:1px solid var(--line)}
+}
+@media(max-width:640px){
+  section{padding:70px 0}
+  .svc-grid,.steps,.diff-grid,.testi-grid{grid-template-columns:1fr}
+  .sticky-bar{display:flex}
+  .wa-float{display:none}
+  footer{padding-bottom:130px}
+}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="container nav">
+    <a href="#" class="logo"><span class="r">R</span>Remodelaciones<small>MOCA · PUERTO RICO</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#como">Cómo funciona</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a class="btn wa sm" href="https://wa.me/17873743157?text=Hola%2C%20quiero%20un%20estimado%20gratis%20para%20remodelar" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="house">🏠</div>
+  <div class="container hero-inner">
+    <p class="eyebrow">Moca y el área noroeste</p>
+    <h1>Tu casa, <em>como nueva</em> otra vez</h1>
+    <p class="sub">Remodelamos cocinas, baños, pisos y espacios completos en Moca y pueblos cercanos. Trabajo limpio, precio claro y trato de gente seria.</p>
+    <p class="free">✓ Estimados gratis &nbsp;·&nbsp; ✓ Sin compromiso</p>
+    <div class="hero-ctas">
+      <a class="btn wa" href="https://wa.me/17873743157?text=Hola%2C%20quiero%20un%20estimado%20gratis%20para%20remodelar" target="_blank" rel="noopener">📲 Estimado gratis por WhatsApp</a>
+      <a class="btn ghost" href="tel:+17873743157">📞 Llamar ahora</a>
+    </div>
+    <p class="hero-phone"><a href="tel:+17873743157">(787) 374-3157</a></p>
+    <p class="hero-note">Lun–Sáb 8am–6pm · Moca, Puerto Rico</p>
+    <div class="hero-badges">
+      <span class="hbadge">Estimados gratis</span>
+      <span class="hbadge">Trabajo limpio</span>
+      <span class="hbadge">Precio por escrito</span>
+    </div>
+  </div>
+</section>
+
+<div class="strip"><div>✦ COCINAS &nbsp;&nbsp; ✦ BAÑOS &nbsp;&nbsp; ✦ PISOS Y LOSAS &nbsp;&nbsp; ✦ PINTURA &nbsp;&nbsp; ✦ AMPLIACIONES &nbsp;&nbsp; ✦ COCINAS &nbsp;&nbsp; ✦ BAÑOS &nbsp;&nbsp; ✦ PISOS Y LOSAS &nbsp;&nbsp; ✦ PINTURA &nbsp;&nbsp; ✦ AMPLIACIONES &nbsp;&nbsp;</div></div>
+
+<div class="proof">
+  <div class="container proof-grid">
+    <div class="proof-item reveal"><b>Gratis</b><span>Estimados en sitio</span></div>
+    <div class="proof-item reveal"><b>Moca</b><span>Y área noroeste</span></div>
+    <div class="proof-item reveal"><b>Escrito</b><span>Precio antes de empezar</span></div>
+    <div class="proof-item reveal"><b>Limpio</b><span>Obra ordenada y recogida</span></div>
+  </div>
+</div>
+
+<section id="servicios" class="light">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Servicios</p>
+      <h2>Renovamos <em>cada rincón</em></h2>
+      <p>De un baño a la casa completa: un solo equipo, un solo responsable. Precios de referencia — el estimado final es gratis en tu hogar.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card reveal">
+        <div class="ico">🍳</div>
+        <h3>Remodelación de cocinas</h3>
+        <p>Gabinetes, topes, plomería y electricidad. Una cocina moderna, funcional y hecha para durar.</p>
+        <p class="price">desde $4,500</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17873743157?text=Hola%2C%20quiero%20remodelar%20mi%20cocina" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🛁</div>
+        <h3>Remodelación de baños</h3>
+        <p>Losas nuevas, duchas modernas y plomería al día. Baños cómodos con terminación cuidada.</p>
+        <p class="price">desde $2,900</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17873743157?text=Hola%2C%20quiero%20remodelar%20mi%20ba%C3%B1o" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🧱</div>
+        <h3>Pisos y losas</h3>
+        <p>Instalación de losa, porcelanato y piso laminado con nivelación correcta y terminación fina.</p>
+        <p class="price">desde $1,100</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17873743157?text=Hola%2C%20quiero%20cambiar%20los%20pisos%20de%20mi%20casa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🎨</div>
+        <h3>Pintura interior y exterior</h3>
+        <p>Preparación, masilla y pintura de calidad para interiores y fachadas que aguantan el clima.</p>
+        <p class="price">desde $850</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17873743157?text=Hola%2C%20quiero%20pintar%20mi%20casa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🏗️</div>
+        <h3>Ampliaciones</h3>
+        <p>Cuartos, marquesinas y espacios adicionales integrados a tu casa con buena terminación.</p>
+        <p class="price">desde $8,500</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17873743157?text=Hola%2C%20quiero%20cotizar%20una%20ampliaci%C3%B3n" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+      <div class="card reveal">
+        <div class="ico">🔧</div>
+        <h3>Reparaciones del hogar</h3>
+        <p>Plomería menor, electricidad, puertas, ventanas y esos arreglos pendientes que nunca se hacen.</p>
+        <p class="price">desde $120</p>
+        <p class="price-note">Precio de referencia · final según evaluación</p>
+        <a class="btn wa sm" href="https://wa.me/17873743157?text=Hola%2C%20necesito%20unas%20reparaciones%20en%20mi%20casa" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2>Remodelar <em>sin dolores de cabeza</em></h2>
+      <p>Un proceso claro para que sepas qué esperar en cada momento.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="ring">1</div>
+        <h3>Visita gratis</h3>
+        <p>Vamos a tu casa, vemos el espacio y escuchamos lo que quieres lograr.</p>
+      </div>
+      <div class="step reveal">
+        <div class="ring">2</div>
+        <h3>Estimado claro</h3>
+        <p>Te damos precio por escrito con el alcance detallado. Sin sorpresas después.</p>
+      </div>
+      <div class="step reveal">
+        <div class="ring">3</div>
+        <h3>Manos a la obra</h3>
+        <p>Trabajamos limpio y ordenado, cuidando tu hogar y tus cosas.</p>
+      </div>
+      <div class="step reveal">
+        <div class="ring">4</div>
+        <h3>Entrega final</h3>
+        <p>Revisamos todo contigo y no nos vamos hasta que quede bien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciales" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Diferenciales</p>
+      <h2>Por qué <em>elegirnos</em></h2>
+    </div>
+    <div class="diff-grid">
+      <div class="diff reveal"><div class="di">📝</div><h3>Precio por escrito</h3><p>Antes de empezar sabes exactamente cuánto vas a pagar. Lo acordado se respeta.</p></div>
+      <div class="diff reveal"><div class="di">🧹</div><h3>Obra limpia</h3><p>Protegemos tus muebles y recogemos todos los días. Tu casa sigue siendo tu casa.</p></div>
+      <div class="diff reveal"><div class="di">🤝</div><h3>Trato directo</h3><p>Hablas con quien hace el trabajo. Comunicación clara de principio a fin.</p></div>
+      <div class="diff reveal"><div class="di">🏡</div><h3>Del noroeste</h3><p>Somos de Moca y trabajamos el área: llegamos rápido y conocemos las casas de aquí.</p></div>
+      <div class="diff reveal"><div class="di">🔨</div><h3>Un solo equipo</h3><p>Cocina, baño, pisos o pintura: un responsable para todo tu proyecto.</p></div>
+      <div class="diff reveal"><div class="di">✅</div><h3>Se entrega bien</h3><p>Revisamos cada detalle contigo al final. Si algo no te convence, lo corregimos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" class="testi">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Opiniones</p>
+      <h2>Casas <em>transformadas</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Nos remodelaron la cocina completa y quedaron pendientes de cada detalle. Trabajan limpio y cumplen lo que prometen."</p>
+        <p class="who">Cliente · Moca</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"El baño quedó hermoso y terminaron en el tiempo que dijeron. El precio fue el que nos dieron desde el principio."</p>
+        <p class="who">Cliente · Aguadilla</p>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Cambiaron todos los pisos de la casa y pintaron por fuera. Gente seria y buen precio, los recomiendo."</p>
+        <p class="who">Cliente · Moca</p>
+      </div>
+    </div>
+    <p class="illus-note">Testimonios con fines ilustrativos.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Preguntas</p>
+      <h2>Lo que nos <em>preguntan</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">¿El estimado tiene algún costo? <span>+</span></button>
+        <div class="faq-a"><p>No. Visitamos tu casa, evaluamos lo que quieres hacer y te damos el estimado gratis y sin compromiso.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Cuánto tarda remodelar un baño o cocina? <span>+</span></button>
+        <div class="faq-a"><p>Un baño típico toma 2 a 3 semanas y una cocina 4 a 6 semanas. Te damos el tiempo estimado por escrito antes de empezar.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Puedo seguir viviendo en la casa durante la obra? <span>+</span></button>
+        <div class="faq-a"><p>Sí, en la mayoría de los casos. Trabajamos por áreas, protegemos tus espacios y mantenemos la obra recogida a diario.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿Ustedes compran los materiales? <span>+</span></button>
+        <div class="faq-a"><p>Podemos encargarnos de todo o trabajar con materiales que tú elijas. Lo coordinamos en el estimado para que no haya confusión.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">¿En qué pueblos trabajan? <span>+</span></button>
+        <div class="faq-a"><p>Estamos en Moca y servimos el área noroeste y pueblos cercanos. Escríbenos y te confirmamos.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <p class="eyebrow reveal" style="justify-content:center">Estimado gratis · Moca y área noroeste</p>
+    <h2 class="reveal">Empieza <em>tu remodelación</em> hoy</h2>
+    <p class="reveal">Escríbenos por WhatsApp, cuéntanos qué quieres cambiar y coordinamos tu visita gratis.</p>
+    <div class="cta-btns reveal">
+      <a class="btn wa" href="https://wa.me/17873743157?text=Hola%2C%20quiero%20coordinar%20mi%20visita%20gratis" target="_blank" rel="noopener">📲 WhatsApp directo</a>
+      <a class="btn ghost" href="tel:+17873743157">📞 (787) 374-3157</a>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <h2>Hablemos de <em>tu casa</em></h2>
+      <p>Cuéntanos qué quieres remodelar y vamos a verte sin costo. Respondemos rápido por WhatsApp.</p>
+      <div class="c-line"><span class="ico">📞</span><a href="tel:+17873743157">(787) 374-3157</a></div>
+      <div class="c-line"><span class="ico">💬</span><a href="https://wa.me/17873743157" target="_blank" rel="noopener">WhatsApp directo</a></div>
+      <div class="c-line"><span class="ico">📍</span><span>Moca, Puerto Rico · Área noroeste</span></div>
+      <div class="c-line"><span class="ico">🕐</span><span>Lun–Sáb · 8:00am – 6:00pm</span></div>
+    </div>
+    <form id="bookForm" class="reveal">
+      <h3>Solicita tu estimado gratis</h3>
+      <div class="field">
+        <label for="fNombre">Nombre</label>
+        <input id="fNombre" type="text" placeholder="Tu nombre" required>
+      </div>
+      <div class="field">
+        <label for="fTel">Teléfono</label>
+        <input id="fTel" type="tel" placeholder="(787) 000-0000" required>
+      </div>
+      <div class="field">
+        <label for="fSvc">¿Qué quieres remodelar?</label>
+        <select id="fSvc">
+          <option>Cocina</option>
+          <option>Baño</option>
+          <option>Pisos / losas</option>
+          <option>Pintura</option>
+          <option>Ampliación</option>
+          <option>Reparaciones del hogar</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fMsg">Cuéntanos más</label>
+        <textarea id="fMsg" rows="3" placeholder="Describe lo que quieres cambiar"></textarea>
+      </div>
+      <button class="btn wa" type="submit" style="width:100%">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="flogo"><span class="r">R</span>Remodelaciones</p>
+    <p>Remodelación de hogares · Moca, Puerto Rico</p>
+    <p><a href="tel:+17873743157" style="color:var(--gray)">(787) 374-3157</a></p>
+    <p class="demo">Demostración creada por ManuPro</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17873743157?text=Hola%2C%20quiero%20un%20estimado%20gratis%20para%20remodelar" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<div class="sticky-bar">
+  <a class="call" href="tel:+17873743157">📞 Llamar</a>
+  <a class="wab" href="https://wa.me/17873743157?text=Hola%2C%20quiero%20un%20estimado%20gratis%20para%20remodelar" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<script>
+const header=document.getElementById('siteHeader');
+addEventListener('scroll',()=>{header.classList.toggle('solid',scrollY>40)},{passive:true});
+document.getElementById('menuToggle').addEventListener('click',()=>{document.getElementById('navLinks').classList.toggle('open')});
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open')}));
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const btn=item.querySelector('.faq-q');
+  btn.addEventListener('click',()=>{
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-q span').textContent='+'});
+    if(!wasOpen){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';btn.querySelector('span').textContent='×'}
+  });
+});
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=document.getElementById('fNombre').value.trim(),t=document.getElementById('fTel').value.trim(),
+        s=document.getElementById('fSvc').value,m=document.getElementById('fMsg').value.trim();
+  if(!n||!t){alert('Por favor completa tu nombre y teléfono.');return}
+  let txt='Hola, soy '+n+'. Quiero remodelar: '+s+'. Mi teléfono es '+t+'.';
+  if(m)txt+=' Detalles: '+m;
+  window.open('https://wa.me/17873743157?text='+encodeURIComponent(txt),'_blank');
+});
+const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
