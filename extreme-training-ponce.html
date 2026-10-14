@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Extreme Training | Gimnasio en Ponce, PR — Entrena al Extremo</title>
-<meta name="description" content="Extreme Training en Ponce — clases de HIIT, fuerza, boxeo fitness y acondicionamiento atlético. Energía alta, resultados reales. Síguenos @extremesportstraining.">
+<title>Extreme Sports Training | Gimnasio en Ponce, PR — Entrena al Extremo</title>
+<meta name="description" content="Extreme Sports Training en Ponce — clases de HIIT, fuerza, boxeo fitness y acondicionamiento atlético. Energía alta, resultados reales. Síguenos @extremesportstraining.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -24,6 +24,13 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;padding:1
 header.solid{background:rgba(6,4,8,.96);backdrop-filter:blur(12px);padding:10px 0;border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--txt)}
+.logo-img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.gal-grid figure{border-radius:14px;overflow:hidden;background:#0d0a14;border:1px solid #241a33;margin:0}
+.gal-grid img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .35s}
+.gal-grid figure:hover img{transform:scale(1.05)}
+.gal-grid figcaption{padding:12px 14px;font-size:.82rem;color:var(--mut)}
+@media(max-width:900px){.gal-grid{grid-template-columns:repeat(2,1fr)}}
 .logo b{font-family:'Archivo Black';font-size:1rem;letter-spacing:.12em;display:block;line-height:1.15}
 .logo small{font-size:.58rem;letter-spacing:.3em;color:var(--mut);font-weight:600}
 .nav-links{display:flex;list-style:none;gap:28px;align-items:center}
@@ -189,14 +196,8 @@ footer .demo{margin-top:24px;font-size:.74rem;color:#4a3d5e;letter-spacing:.14em
 <header id="header">
   <div class="container nav">
     <a href="#" class="logo">
-      <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
-        <defs><linearGradient id="etg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#8b2ff7"/><stop offset="1" stop-color="#f72585"/>
-        </linearGradient></defs>
-        <rect x="3" y="3" width="42" height="42" rx="6" fill="#0a0612" stroke="url(#etg)" stroke-width="3"/>
-        <text x="24" y="34" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="20" fill="url(#etg)" font-style="italic">ET</text>
-      </svg>
-      <span><b>EXTREME <span class="grad-t">TRAINING</span></b><small>PONCE &middot; PUERTO RICO</small></span>
+      <img class="logo-img" src="./assets-reales/extreme-training/logo.jpg" alt="Logo Extreme Sports Training">
+      <span><b>EXTREME SPORTS <span class="grad-t">TRAINING</span></b><small>PONCE &middot; PUERTO RICO</small></span>
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#programas">Clases</a></li>
@@ -278,7 +279,7 @@ footer .demo{margin-top:24px;font-size:.74rem;color:#4a3d5e;letter-spacing:.14em
     <div class="why-banner reveal">
       <div>
         <h2>Esto no es <span class="grad-t">un gym comercial.</span></h2>
-        <p>Aqu&iacute; no hay filas para las m&aacute;quinas ni gente paseando. Hay clases dirigidas, m&uacute;sica alta, coaches que te gritan tu nombre y una comunidad que no te deja rendirte. Eso es Extreme Training.</p>
+        <p>Aqu&iacute; no hay filas para las m&aacute;quinas ni gente paseando. Hay clases dirigidas, m&uacute;sica alta, coaches que te gritan tu nombre y una comunidad que no te deja rendirte. Eso es Extreme Sports Training.</p>
       </div>
       <a class="btn wa" href="https://wa.me/19392095997?text=Hola%20Extreme%20Training%2C%20quiero%20probar%20una%20clase%20esta%20semana" target="_blank" rel="noopener">Probar esta semana</a>
     </div>
@@ -358,9 +359,25 @@ footer .demo{margin-top:24px;font-size:.74rem;color:#4a3d5e;letter-spacing:.14em
   </div>
 </section>
 
+<section id="galeria">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">En acción</p>
+      <h2>NUESTRA <em>COMUNIDAD</em></h2>
+      <p>Fotos reales de nuestros entrenamientos, atletas y el ambiente Extreme.</p>
+    </div>
+    <div class="gal-grid">
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/extreme-training/trabajo1.jpg" alt="Entrenamiento de boxeo"><figcaption>Boxeo fitness</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/extreme-training/trabajo2.jpg" alt="Equipo de voleibol"><figcaption>Nuestro equipo de voleibol</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/extreme-training/trabajo3.jpg" alt="Camiseta oficial Extreme"><figcaption>Camiseta oficial</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/extreme-training/trabajo4.jpg" alt="Zona de sentadillas"><figcaption>Zona de fuerza</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="container">
-    <p class="flogo">EXTREME <span class="grad-t">TRAINING</span></p>
+    <p class="flogo">EXTREME SPORTS <span class="grad-t">TRAINING</span></p>
     <p>Gimnasio &middot; Ponce, Puerto Rico</p>
     <p><a class="ftel" href="tel:+19392095997">(939) 209-5997</a></p>
     <p class="demo">Demostraci&oacute;n creada por ManuPro</p>
@@ -391,7 +408,7 @@ document.getElementById('bookForm').addEventListener('submit',e=>{
   const svc=document.getElementById('fSvc').value;
   const msg=document.getElementById('fMsg').value.trim();
   if(!nombre||!tel){alert('Por favor completa tu nombre y tel\u00e9fono.');return;}
-  let text='Hola Extreme Training, soy '+nombre+'. Quiero: '+svc+'. Mi tel\u00e9fono es '+tel+'.';
+  let text='Hola Extreme Sports Training, soy '+nombre+'. Quiero: '+svc+'. Mi tel\u00e9fono es '+tel+'.';
   if(msg)text+=' '+msg;
   window.open('https://wa.me/19392095997?text='+encodeURIComponent(text),'_blank');
 });

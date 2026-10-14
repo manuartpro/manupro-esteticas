@@ -23,6 +23,13 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;padding:1
 header.solid{background:rgba(5,7,11,.96);backdrop-filter:blur(12px);padding:10px 0;border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--txt)}
+.logo-img{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.gal-grid figure{border-radius:14px;overflow:hidden;background:#101418;border:1px solid #1e2a33;margin:0}
+.gal-grid img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .35s}
+.gal-grid figure:hover img{transform:scale(1.05)}
+.gal-grid figcaption{padding:12px 14px;font-size:.82rem;color:var(--mut)}
+@media(max-width:900px){.gal-grid{grid-template-columns:repeat(2,1fr)}}
 .logo b{font-family:'Bebas Neue';font-size:1.5rem;letter-spacing:.1em;display:block;line-height:1}
 .logo small{font-size:.6rem;letter-spacing:.3em;color:var(--mut);font-weight:600}
 .nav-links{display:flex;list-style:none;gap:28px;align-items:center}
@@ -185,14 +192,7 @@ footer .demo{margin-top:24px;font-size:.74rem;color:#3a4453;letter-spacing:.14em
 <header id="header">
   <div class="container nav">
     <a href="#" class="logo">
-      <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
-        <defs><linearGradient id="hb" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#4cc3ff"/><stop offset="1" stop-color="#0077c8"/>
-        </linearGradient></defs>
-        <rect x="2" y="2" width="42" height="42" rx="9" fill="url(#hb)"/>
-        <path d="M2 11 L46 2 L46 11 L2 20 Z" fill="#fff" opacity=".28"/>
-        <text x="23" y="33" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="26" fill="#03121d" font-style="italic">H</text>
-      </svg>
+      <img class="logo-img" src="./assets-reales/higatoma/logo.jpg" alt="Logo Higatoma Car Wash">
       <span><b>HIGATOMA</b><small>CAR WASH &middot; BAYAM&Oacute;N</small></span>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -350,6 +350,21 @@ footer .demo{margin-top:24px;font-size:.74rem;color:#3a4453;letter-spacing:.14em
   </div>
 </section>
 
+<section id="trabajos">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Trabajos reales</p>
+      <h2>Nuestros <em>trabajos</em></h2>
+      <p>Fotos reales de nuestros lavados y clientes satisfechos.</p>
+    </div>
+    <div class="gal-grid">
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/higatoma/trabajo1.jpg" alt="Toyota Corolla lavado"><figcaption>Detalle completo — Toyota Corolla</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/higatoma/trabajo2.jpg" alt="Interior limpio"><figcaption>Interior profundo impecable</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/higatoma/trabajo3.jpg" alt="BMW X5 lavado"><figcaption>Lavado premium — BMW X5</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/higatoma/trabajo4.jpg" alt="Equipo trabajando en Toyota Tundra"><figcaption>Nuestro equipo en acción</figcaption></figure>
+    </div>
+  </div>
+</section>
 <footer>
   <div class="container">
     <p class="flogo">HIGATOMA CAR WASH</p>

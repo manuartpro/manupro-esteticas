@@ -24,6 +24,13 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;padding:1
 header.solid{background:rgba(7,13,8,.96);backdrop-filter:blur(12px);padding:10px 0;border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--txt)}
+.logo-img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.gal-grid figure{border-radius:14px;overflow:hidden;background:#0f1a10;border:1px solid #22331f;margin:0}
+.gal-grid img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .35s}
+.gal-grid figure:hover img{transform:scale(1.05)}
+.gal-grid figcaption{padding:12px 14px;font-size:.82rem;color:var(--mut)}
+@media(max-width:900px){.gal-grid{grid-template-columns:repeat(2,1fr)}}
 .logo b{font-family:'Anton';font-size:1.35rem;letter-spacing:.08em;display:block;line-height:1}
 .logo small{font-size:.58rem;letter-spacing:.32em;color:var(--mut);font-weight:600}
 .nav-links{display:flex;list-style:none;gap:28px;align-items:center}
@@ -193,12 +200,7 @@ footer .demo{margin-top:24px;font-size:.74rem;color:#3f5240;letter-spacing:.14em
 <header id="header">
   <div class="container nav">
     <a href="#" class="logo">
-      <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
-        <circle cx="24" cy="24" r="22" fill="#123a17" stroke="#a8e05f" stroke-width="2.5"/>
-        <path d="M10 30 L19 16 L25 25 L29 20 L38 30 Z" fill="#a8e05f"/>
-        <path d="M19 16 L22 21 L16 21 Z" fill="#eef5ea"/>
-        <text x="24" y="41" text-anchor="middle" font-family="Anton,sans-serif" font-size="10" fill="#eef5ea" letter-spacing="3">EM</text>
-      </svg>
+      <img class="logo-img" src="./assets-reales/el-monte/logo.jpg" alt="Logo El Monte Training Studio">
       <span><b>EL MONTE</b><small>TRAINING STUDIO &middot; PONCE</small></span>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -362,6 +364,22 @@ footer .demo{margin-top:24px;font-size:.74rem;color:#3f5240;letter-spacing:.14em
       <div class="field"><label for="fMsg">Tu meta</label><textarea id="fMsg" rows="3" placeholder="Cu&eacute;ntanos qu&eacute; quieres lograr"></textarea></div>
       <button class="btn wa" type="submit">Enviar por WhatsApp</button>
     </form>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">En acción</p>
+      <h2>NUESTRA <em>COMUNIDAD</em></h2>
+      <p>Fotos reales de nuestros entrenamientos y atletas.</p>
+    </div>
+    <div class="gal-grid">
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/el-monte/trabajo1.jpg" alt="Póster motivacional Sin Excusas"><figcaption>Mentalidad: sin excusas</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/el-monte/trabajo2.jpg" alt="Entrenador"><figcaption>Nuestro entrenador</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/el-monte/trabajo3.jpg" alt="Entrenamiento con pads de boxeo"><figcaption>Entrenamiento de boxeo</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="./assets-reales/el-monte/trabajo4.jpg" alt="Atleta con bandera de Puerto Rico"><figcaption>Orgullo boricua</figcaption></figure>
+    </div>
   </div>
 </section>
 
