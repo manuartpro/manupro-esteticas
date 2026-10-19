@@ -73,6 +73,48 @@ a{text-decoration:none;color:inherit}
 .cbar a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:100px;padding:11px 20px;font-weight:700;font-size:.9rem}
 .cbar a:hover{border-color:var(--gold);color:var(--gold2)}
 footer{border-top:1px solid rgba(255,255,255,.08);padding:22px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:#5f6f88;font-size:.8rem}
+/* ---------- header nav ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(8,20,38,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.hbar{display:flex;align-items:center;gap:12px;padding:10px 0}
+.hbar img{width:46px;height:46px;border-radius:10px;background:#fff;padding:2px;object-fit:cover}
+.hbar b{font-family:'Archivo';font-size:.95rem;color:#fff;display:block;line-height:1.2}
+.hbar small{color:var(--gold);font-size:.66rem;letter-spacing:1.4px;text-transform:uppercase;font-weight:700}
+nav{margin-left:auto;display:flex;gap:18px;align-items:center}
+nav a.nk{color:#b9c7dc;font-size:.9rem;font-weight:600}
+nav a.nk:hover{color:#fff}
+.btn-wa-sm{display:inline-flex;align-items:center;gap:7px;background:var(--wa);color:#fff;font-weight:800;border-radius:10px;padding:10px 16px;font-size:.88rem}
+.btn-wa-sm:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(34,185,92,.4)}
+@media(max-width:900px){nav a.nk{display:none}}
+/* ---------- sections ---------- */
+.sec{padding:64px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 40px}
+.sec-head .tag{color:var(--gold);font-weight:700;font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase}
+.sec-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);color:#fff;margin:10px 0 12px;font-weight:800}
+.sec-head p{color:var(--mut)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.svc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px 18px;transition:.2s}
+.svc:hover{border-color:rgba(245,179,1,.5);transform:translateY(-4px)}
+.svc .ic{width:48px;height:48px;border-radius:12px;background:rgba(245,179,1,.12);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.svc .ic svg{width:26px;height:26px}
+.svc h3{font-size:1rem;color:#fff;margin-bottom:6px}
+.svc p{color:var(--mut);font-size:.86rem}
+.why3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.why{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 20px}
+.why .n{font-family:'Archivo';font-weight:900;font-size:1.8rem;color:var(--gold)}
+.why h3{color:#fff;font-size:1rem;margin:8px 0 6px}
+.why p{color:var(--mut);font-size:.88rem}
+.faq{max-width:740px;margin:0 auto}
+.faq details{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 20px;font-weight:700;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';color:var(--gold);font-size:1.4rem;font-weight:800;flex:none}
+.faq details[open] summary::after{content:'\2013'}
+.faq .a{padding:0 20px 20px;color:var(--mut);font-size:.92rem}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.ccard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 20px;text-align:center}
+.ccard .t{color:var(--gold);font-size:.75rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.ccard a,.ccard p{color:#fff;font-weight:700;font-size:1rem}
+.ccard a:hover{color:var(--gold2)}
 /* floating */
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(34,185,92,.5)}
 .wa-float:hover{transform:scale(1.08)}
@@ -81,13 +123,19 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:22px 0;display:flex;ju
 </head>
 <body>
 
-<div class="wrap">
-  <div class="topbar">
+<header>
+  <div class="wrap hbar">
     <img src="../assets/logo.jpg" alt="Logo Manny Multi Service LLC">
     <span><b>MANNY MULTI SERVICE LLC</b><small>Toa Baja · Puerto Rico</small></span>
-    <a class="tel" href="tel:+19393834396">939-383-4396</a>
+    <nav>
+      <a class="nk" href="#servicios">Servicios</a>
+      <a class="nk" href="#trabajos">Trabajos</a>
+      <a class="nk" href="#faq">Preguntas</a>
+      <a class="nk" href="#contacto">Contacto</a>
+      <a class="btn-wa-sm" href="https://wa.me/19393834396?text=Hola%20Manny%20Multi%20Service%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
   </div>
-</div>
+</header>
 
 <section class="hero">
   <div class="wrap hero-in">
@@ -138,20 +186,78 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:22px 0;display:flex;ju
 </section>
 
 <div class="wrap">
-  <section class="strip">
+  <section class="sec" id="servicios">
+    <div class="sec-head">
+      <div class="tag">Nuestros servicios</div>
+      <h2>Un solo equipo, <em style="font-style:normal;color:var(--gold)">todo resuelto</em></h2>
+      <p>Siete especialidades para tu hogar o negocio. Elige la tuya en el formulario y cotiza en segundos.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="1.8"><circle cx="12" cy="9" r="3"/><path d="M12 3v2M6 5.5l1.4 1.4M18 5.5l-1.4 1.4M4 9h2M18 9h2M5 14l14 7M19 14L5 21"/></svg></div><h3>Sistemas Solares</h3><p>Placas, calentadores solares y respaldo para bajar tu factura de luz.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2f86ff" stroke-width="1.8"><path d="M14.5 3l-8 10h5l-1.5 8 8-10h-5z"/></svg></div><h3>Handyman</h3><p>Reparaciones del hogar: puertas, ventanas, pintura, montaje y más.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="1.8"><path d="M4 20h16M6 20V10l6-6 6 6v10M12 20v-6"/></svg></div><h3>Soldadura</h3><p>Portones, verjas, rejas y estructuras metálicas con acabado profesional.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2f86ff" stroke-width="1.8"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div><h3>Electricidad Básica</h3><p>Paneles, luminarias, tomacorrientes y solución de fallas eléctricas.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2f86ff" stroke-width="1.8"><path d="M4 10h12v4H4zM16 12h3a2 2 0 0 1 2 2v3M12 14v5"/></svg></div><h3>Plomería</h3><p>Cobre y PVC, cisternas, bombas de agua y reparación de filtraciones.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="1.8"><path d="M3 18h18M5 18V9l7-5 7 5v9M9 18v-4h6v4"/></svg></div><h3>Albañilería</h3><p>Empañetado, losas de cemento y reparación de paredes y techos.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2f86ff" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div><h3>Mantenimiento General</h3><p>Sellado de techos, inspecciones y cuidado completo de tu propiedad.</p></div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="sec-head">
+      <div class="tag">Por qué elegirnos</div>
+      <h2>Trabajo que <em style="font-style:normal;color:var(--gold)">se nota</em></h2>
+    </div>
+    <div class="why3">
+      <div class="why"><div class="n">01</div><h3>Cotización en 60 segundos</h3><p>Sin llamadas eternas. Llena el formulario, abre WhatsApp y recibe respuesta el mismo día.</p></div>
+      <div class="why"><div class="n">02</div><h3>Fotos reales, resultados reales</h3><p>Cada trabajo que ves aquí lo hicimos nosotros. Sin fotos de catálogo ni promesas vacías.</p></div>
+      <div class="why"><div class="n">03</div><h3>Calidad · Confianza · Compromiso</h3><p>Nuestro lema no es decoración: respaldamos cada trabajo con garantía por escrito.</p></div>
+    </div>
+  </section>
+
+  <section class="strip" id="trabajos">
     <h2>Trabajos reales, resultados reales</h2>
     <div class="work">
       <figure><img src="../assets/hero-solar.jpg" alt="Techo con placas solares" loading="lazy"><figcaption>Placas solares</figcaption></figure>
       <figure><img src="../assets/plomeria-06.jpg" alt="Cisterna instalada" loading="lazy"><figcaption>Cisterna</figcaption></figure>
       <figure><img src="../assets/plomeria-03.jpg" alt="Cobre nuevo" loading="lazy"><figcaption>Cobre nuevo</figcaption></figure>
       <figure><img src="../assets/techo-despues-02.jpg" alt="Techo sellado" loading="lazy"><figcaption>Techo sellado</figcaption></figure>
+      <figure><img src="../assets/solar-01.jpg" alt="Sistema solar instalado" loading="lazy"><figcaption>Sistema solar</figcaption></figure>
+      <figure><img src="../assets/techo-despues-01.jpg" alt="Techo reparado" loading="lazy"><figcaption>Techo reparado</figcaption></figure>
+      <figure><img src="../assets/albanileria-03.jpg" alt="Losa de cemento" loading="lazy"><figcaption>Losa de cemento</figcaption></figure>
+      <figure><img src="../assets/soldadura-01.jpg" alt="Portón y verja" loading="lazy"><figcaption>Portón y verja</figcaption></figure>
     </div>
   </section>
-  <div class="cbar">
-    <a href="tel:+19393834396">Llamar: 939-383-4396</a>
-    <a href="mailto:mannymultiservice1@gmail.com">mannymultiservice1@gmail.com</a>
-    <a href="https://www.facebook.com/search/top?q=Manny%20Multi%20Service%20LLC" target="_blank" rel="noopener">Facebook</a>
-  </div>
+
+  <section class="sec" id="faq">
+    <div class="sec-head">
+      <div class="tag">Preguntas frecuentes</div>
+      <h2>¿Tienes dudas?</h2>
+    </div>
+    <!-- FAQ propuesta — el cliente puede pedir ajustes -->
+    <div class="faq">
+      <details><summary>¿El estimado tiene algún costo?</summary><div class="a">No. Es gratis y sin compromiso. Mientras más detalles (y fotos) nos envíes por WhatsApp, más preciso será tu estimado.</div></details>
+      <details><summary>¿Qué áreas cubren?</summary><div class="a">Estamos en Toa Baja, Puerto Rico, y servimos pueblos cercanos del área metro y el norte de la isla. Confírmanos tu pueblo por WhatsApp.</div></details>
+      <details><summary>¿Atienden emergencias?</summary><div class="a">Sí. Filtraciones, fallas eléctricas y problemas de agua se atienden con prioridad.</div></details>
+      <details><summary>¿Cómo les envío las fotos de mi proyecto?</summary><div class="a">Llena el formulario: al pulsar el botón se abrirá WhatsApp con tu mensaje listo. Ahí adjuntas tus fotos antes de enviar. WhatsApp no permite adjuntarlas automáticamente desde la página.</div></details>
+      <details><summary>¿Qué métodos de pago aceptan?</summary><div class="a">Efectivo, ATH Móvil y transferencia bancaria.</div></details>
+      <details><summary>¿Los trabajos tienen garantía?</summary><div class="a">Sí, con garantía por escrito según el servicio. Calidad, confianza y compromiso.</div></details>
+    </div>
+  </section>
+
+  <section class="sec" id="contacto" style="padding-top:0">
+    <div class="sec-head">
+      <div class="tag">Contacto directo</div>
+      <h2>Habla con <em style="font-style:normal;color:var(--gold)">nosotros</em></h2>
+    </div>
+    <div class="cgrid">
+      <div class="ccard"><div class="t">Teléfono / WhatsApp</div><a href="tel:+19393834396">939-383-4396</a></div>
+      <div class="ccard"><div class="t">Email</div><a href="mailto:mannymultiservice1@gmail.com" style="font-size:.9rem">mannymultiservice1@gmail.com</a></div>
+      <div class="ccard"><div class="t">Ubicación</div><p>Toa Baja, Puerto Rico</p></div>
+      <div class="ccard"><div class="t">Facebook</div><a href="https://www.facebook.com/search/top?q=Manny%20Multi%20Service%20LLC" target="_blank" rel="noopener">Manny Multi Service LLC</a></div>
+    </div>
+  </section>
+
   <footer><span>© 2026 Manny Multi Service LLC — Toa Baja, PR</span><span>Demostración creada por ManuPro</span></footer>
 </div>
 
