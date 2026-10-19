@@ -3,94 +3,467 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manny Multi Service LLC — Tu nueva página web</title>
-<meta name="description" content="Tres versiones de website para Manny Multi Service LLC, con fotos reales, logo y servicios.">
+<title>Manny Multi Service LLC | Sistemas Solares, Plomería, Electricidad y Más — Toa Baja, PR</title>
+<meta name="description" content="Manny Multi Service LLC en Toa Baja, Puerto Rico. Sistemas solares, handyman, soldadura, electricidad básica, plomería, albañilería y mantenimiento general. Calidad, confianza y compromiso. Cotiza por WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Manny Multi Service LLC","telephone":"+1-939-383-4396","email":"mannymultiservice1@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Toa Baja","addressRegion":"PR","addressCountry":"US"},"areaServed":"Puerto Rico"}
+</script>
 <style>
-:root{--navy:#081426;--gold:#f5b301;--gold2:#ffc93c;--blue:#2f86ff}
+:root{
+  --navy:#081226; --navy2:#0c1a33; --blue:#1f6dff; --blue2:#2f86ff;
+  --gold:#f5b301; --gold2:#ffc93c; --ink:#0b1526;
+  --txt:#dbe4f0; --mut:#93a3bb; --card:#101f38; --line:rgba(255,255,255,.09);
+  --radius:16px;
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',system-ui,Arial,sans-serif;background:var(--navy);color:#dbe4f0;min-height:100vh}
-h1,h2{font-family:'Archivo',Arial,sans-serif;color:#fff}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;background:var(--navy);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Archivo',Arial,sans-serif;line-height:1.15;color:#fff}
+img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.hero{text-align:center;padding:64px 0 20px}
-.hero img{width:96px;height:96px;border-radius:22px;background:#fff;padding:5px;object-fit:cover;margin:0 auto 20px;box-shadow:0 18px 44px rgba(0,0,0,.5)}
-.hero .k{display:inline-block;color:var(--gold2);font-size:.76rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;border:1px solid rgba(245,179,1,.5);background:rgba(245,179,1,.1);padding:8px 18px;border-radius:100px;margin-bottom:18px}
-.hero h1{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:900;max-width:640px;margin:0 auto}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(8,18,38,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;gap:14px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:52px;height:52px;object-fit:cover;border-radius:12px;background:#fff;padding:3px}
+.brand b{font-family:'Archivo';font-size:1.02rem;color:#fff;letter-spacing:.3px;display:block;line-height:1.2}
+.brand small{color:var(--gold);font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase}
+nav{margin-left:auto;display:flex;gap:22px;align-items:center}
+nav a.nk{color:var(--mut);font-size:.92rem;font-weight:500}
+nav a.nk:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;border-radius:12px;padding:12px 20px;font-size:.95rem;transition:.2s;border:0;cursor:pointer}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1206}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(245,179,1,.35)}
+.btn-wa{background:#22b95c;color:#fff}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(34,185,92,.35)}
+.btn-ghost{border:1px solid var(--line);color:#fff}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hphone{font-weight:700;color:#fff;font-size:.95rem;white-space:nowrap}
+@media(max-width:900px){nav a.nk,.hphone{display:none}}
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('assets/hero-solar.jpg') center/cover}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,18,38,.96) 30%,rgba(8,18,38,.55) 60%,rgba(8,18,38,.25));}
+.hero-in{position:relative;z-index:2;padding:90px 0}
+.kicker{display:inline-block;background:rgba(245,179,1,.14);border:1px solid rgba(245,179,1,.5);color:var(--gold2);font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:8px 16px;border-radius:100px;margin-bottom:22px}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.2rem);font-weight:900;max-width:640px}
 .hero h1 em{font-style:normal;color:var(--gold)}
-.hero p{color:#93a3bb;max-width:560px;margin:16px auto 0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;padding:48px 0 30px}
-.card{background:#0e1f3a;border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-8px);border-color:rgba(245,179,1,.6);box-shadow:0 26px 60px rgba(0,0,0,.5)}
-.card .shot{height:190px;position:relative;overflow:hidden}
-.card .shot img{width:100%;height:100%;object-fit:cover;object-position:top}
-.card .shot::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(8,20,38,.85))}
-.card .num{position:absolute;top:14px;left:14px;z-index:2;background:var(--gold);color:#1a1206;font-family:'Archivo';font-weight:900;width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
-.card .body{padding:26px 24px 28px;display:flex;flex-direction:column;flex:1}
-.card h2{font-size:1.3rem;margin-bottom:6px}
-.card .style{color:var(--gold2);font-size:.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
-.card p{color:#93a3bb;font-size:.92rem;flex:1}
-.card ul{list-style:none;margin:16px 0 22px}
-.card li{color:#b9c7dc;font-size:.86rem;padding:5px 0 5px 24px;position:relative}
-.card li::before{content:'';position:absolute;left:2px;top:11px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;border-radius:12px;padding:14px 20px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1206;transition:.2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(245,179,1,.35)}
-.note{text-align:center;color:#5f6f88;font-size:.85rem;max-width:620px;margin:0 auto;padding:0 0 20px}
-.contact{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;padding:10px 0 50px}
-.contact a{border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:11px 22px;font-weight:700;font-size:.9rem;color:#fff}
-.contact a:hover{border-color:var(--gold);color:var(--gold2)}
-footer{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:#5f6f88;font-size:.78rem}
+.hero p.lead{color:#c9d5e6;font-size:1.12rem;max-width:560px;margin:20px 0 30px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.trust{display:flex;gap:26px;margin-top:38px;flex-wrap:wrap}
+.trust div{display:flex;align-items:center;gap:10px;color:#c9d5e6;font-size:.92rem;font-weight:600}
+.trust svg{width:26px;height:26px;flex:none}
+/* ---------- sections ---------- */
+section{padding:84px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 48px}
+.sec-head .tag{color:var(--gold);font-weight:700;font-size:.8rem;letter-spacing:2.5px;text-transform:uppercase}
+.sec-head h2{font-size:clamp(1.8rem,3.6vw,2.7rem);margin:12px 0 14px;font-weight:800}
+.sec-head p{color:var(--mut)}
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;transition:.25s}
+.svc:hover{transform:translateY(-6px);border-color:rgba(245,179,1,.55);box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.svc .ic{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,rgba(31,109,255,.25),rgba(245,179,1,.18));display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.svc .ic svg{width:30px;height:30px}
+.svc h3{font-size:1.08rem;margin-bottom:8px}
+.svc p{color:var(--mut);font-size:.92rem}
+/* ---------- carrusel de trabajos ---------- */
+#trabajos{background:var(--navy2)}
+.mms-carousel{position:relative;max-width:960px;margin:0 auto}
+.mc-track{position:relative;aspect-ratio:16/10;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#050b18;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.mc-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;cursor:zoom-in;margin:0}
+.mc-slide.on{opacity:1;z-index:1}
+.mc-slide img{width:100%;height:100%;object-fit:cover}
+.mc-cap{position:absolute;left:0;right:0;bottom:0;padding:52px 20px 18px;background:linear-gradient(transparent,rgba(4,10,22,.9));color:#fff;font-weight:700;font-size:1rem}
+.mc-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(5,11,24,.6);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);transition:.2s}
+.mc-arrow:hover{background:var(--gold);border-color:var(--gold);color:#1a1206}
+.mc-arrow.prev{left:14px}
+.mc-arrow.next{right:14px}
+.mc-arrow svg{width:22px;height:22px}
+.mc-bar{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:16px}
+.mc-dots{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.mc-dot{width:10px;height:10px;border-radius:50%;border:0;background:rgba(255,255,255,.25);cursor:pointer;padding:0;transition:.2s}
+.mc-dot.on{background:var(--gold);transform:scale(1.25)}
+.mc-count{color:var(--mut);font-size:.82rem;font-weight:600;min-width:52px;text-align:right}
+/* lightbox */
+.mc-lightbox{position:fixed;inset:0;z-index:100;background:rgba(3,6,14,.94);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.mc-lightbox.open{opacity:1;pointer-events:auto}
+.lb-img{max-width:92vw;max-height:82vh;border-radius:12px;box-shadow:0 30px 90px rgba(0,0,0,.7);object-fit:contain}
+.lb-cap{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:#fff;font-weight:600;font-size:.95rem;padding:0 20px}
+.lb-close{position:absolute;top:18px;right:18px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-close:hover{background:var(--gold);color:#1a1206;border-color:var(--gold)}
+.lb-close svg{width:22px;height:22px}
+.lb-arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-arrow:hover{background:var(--gold);color:#1a1206;border-color:var(--gold)}
+.lb-arrow.prev{left:18px}
+.lb-arrow.next{right:18px}
+.lb-arrow svg{width:24px;height:24px}
+@media(max-width:640px){.mc-track{aspect-ratio:4/3}.mc-arrow{width:40px;height:40px}.lb-arrow{width:44px;height:44px}.lb-arrow.prev{left:8px}.lb-arrow.next{right:8px}}
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.why{background:linear-gradient(160deg,#10203c,#0b1730);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+.why .n{font-family:'Archivo';font-weight:900;font-size:2.2rem;color:var(--gold);opacity:.9}
+.why h3{margin:10px 0 8px;font-size:1.1rem}
+.why p{color:var(--mut);font-size:.93rem}
+/* quote form */
+#cotizar{background:linear-gradient(140deg,#0c1a33 0%,#081226 70%)}
+.form-card{max-width:640px;margin:0 auto;background:#fff;color:#152238;border-radius:20px;padding:38px 34px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.form-card h3{color:#0b1526;font-size:1.5rem;margin-bottom:6px}
+.form-card>p{color:#5b6b82;font-size:.95rem;margin-bottom:24px}
+.frow{margin-bottom:16px}
+.frow label{display:block;font-weight:600;font-size:.88rem;margin-bottom:6px;color:#24344d}
+.frow input,.frow select,.frow textarea{width:100%;border:1.5px solid #d5dde8;border-radius:10px;padding:13px 14px;font-size:1rem;font-family:inherit;color:#152238;background:#f8fafc}
+.frow input:focus,.frow select:focus,.frow textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,109,255,.15)}
+.frow textarea{min-height:110px;resize:vertical}
+.form-card .btn{width:100%;justify-content:center;font-size:1.05rem;padding:16px}
+.fnote{margin-top:14px;font-size:.82rem;color:#7b8aa0;text-align:center}
+/* form file upload */
+.filebox{display:block;border:2px dashed #b9c6da;border-radius:12px;padding:20px;text-align:center;background:#f8fafc;cursor:pointer;transition:.2s;color:#152238}
+.filebox:hover{border-color:var(--blue);background:#f0f6ff}
+.filebox input{display:none}
+.filebox strong{color:#0b1526}
+.filebox p{font-size:.85rem;color:#7b8aa0;margin-top:6px}
+#filecount{font-size:.82rem;color:var(--blue);font-weight:700;margin-top:6px;min-height:1.2em}
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:20px 22px;font-weight:700;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';color:var(--gold);font-size:1.5rem;font-weight:700;flex:none}
+.faq details[open] summary::after{content:'–'}
+.faq .a{padding:0 22px 22px;color:var(--mut);font-size:.95rem}
+/* footer */
+footer{background:#050b18;border-top:1px solid var(--line);padding:56px 0 28px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px;margin-bottom:36px}
+.fgrid h4{color:var(--gold);font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
+.fgrid p,.fgrid a{color:var(--mut);font-size:.93rem;display:block;margin-bottom:8px}
+.fgrid a:hover{color:#fff}
+.fbrand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.fbrand img{width:56px;height:56px;border-radius:12px;background:#fff;padding:3px;object-fit:cover}
+.copy{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#5f6f88;font-size:.82rem}
+/* floating wa */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;background:#22b95c;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(34,185,92,.5);transition:.2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px}
+/* ===== capa elite: reveal on scroll ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+/* ===== hero cinematográfico ===== */
+.hero-glow{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(560px 340px at 12% 78%,rgba(31,109,255,.28),transparent 70%),
+    radial-gradient(640px 380px at 88% 18%,rgba(245,179,1,.14),transparent 70%);
+  animation:glowDrift 14s ease-in-out infinite alternate}
+@keyframes glowDrift{from{opacity:.75;transform:scale(1)}to{opacity:1;transform:scale(1.06)}}
+@media(prefers-reduced-motion:reduce){.hero-glow{animation:none}}
+.hero-in{animation:heroIn 1.1s cubic-bezier(.2,.6,.2,1) both}
+@keyframes heroIn{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+.hero h1 em{background:linear-gradient(120deg,var(--gold),var(--gold2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+/* ===== cinta de stats ===== */
+.stats{padding:0;background:#050b18;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
+.stat{padding:34px 24px;text-align:center;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:'Archivo';font-weight:900;font-size:2rem;color:#fff}
+.stat b em{font-style:normal;color:var(--gold)}
+.stat span{color:var(--mut);font-size:.88rem;font-weight:600}
+@media(max-width:640px){.stat{padding:24px 12px}.stat b{font-size:1.5rem}}
+/* ===== detalles premium ===== */
+.sec-head .tag{position:relative;display:inline-block;padding-bottom:10px}
+.sec-head .tag::after{content:'';position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:44px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.svc:hover .ic{box-shadow:0 0 26px rgba(245,179,1,.35)}
+.mc-track{transition:box-shadow .3s ease}
+.mc-track:hover{box-shadow:0 30px 80px rgba(31,109,255,.22)}
+.form-card{border:1px solid rgba(255,255,255,.08)}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="hero">
-    <img src="assets/logo.jpg" alt="Logo Manny Multi Service LLC">
-    <div><span class="k">Propuesta de website</span></div>
-    <h1>Tu nueva página web, <em>en 3 versiones</em></h1>
-    <p>Tres versiones completas con tus fotos reales, tu logo y tus siete servicios. Míralas con calma y dime qué te parece — todo se puede ajustar a tu gusto: textos, fotos, colores y secciones.</p>
+
+<header>
+  <div class="wrap hbar">
+    <a class="brand" href="#inicio">
+      <img src="assets/logo.jpg" alt="Logo Manny Multi Service LLC">
+      <span><b>MANNY MULTI SERVICE</b><small>Calidad · Confianza · Compromiso</small></span>
+    </a>
+    <nav>
+      <a class="nk" href="#servicios">Servicios</a>
+      <a class="nk" href="#trabajos">Trabajos</a>
+      <a class="nk" href="#faq">Preguntas</a>
+      <a class="hphone" href="tel:+19393834396">939-383-4396</a>
+      <a class="btn btn-wa" href="https://wa.me/19393834396?text=Hola%20Manny%20Multi%20Service%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+        WhatsApp
+      </a>
+    </nav>
   </div>
+</header>
 
-  <div class="cards">
-    <div class="card">
-      <div class="shot"><span class="num">1</span><img src="assets/hero-solar.jpg" alt="Vista previa versión 1"></div>
-      <div class="body">
-        <h2>Impacto Directo</h2><div class="style">Corporativa · Elegante · Completa</div>
-        <p>La presentación formal de tu negocio: hero grande, los 7 servicios, galería de trabajos y formulario de cotización.</p>
-        <ul><li>Portada de alto impacto</li><li>7 servicios con iconos</li><li>Galería + preguntas frecuentes</li></ul>
-        <a class="btn" href="v1/">Ver versión 1</a>
-      </div>
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap hero-in">
+    <span class="kicker">Toa Baja · Puerto Rico</span>
+    <h1>Tu casa en manos <em>expertas</em></h1>
+    <p class="lead">Sistemas solares, plomería, electricidad, soldadura, albañilería y mantenimiento general. Un solo equipo para todo lo que tu hogar necesita.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#cotizar">Pedir cotización gratis</a>
+      <a class="btn btn-ghost" href="#trabajos">Ver trabajos reales</a>
     </div>
-    <div class="card">
-      <div class="shot"><span class="num">2</span><img src="assets/techo-despues-01.jpg" alt="Vista previa versión 2"></div>
-      <div class="body">
-        <h2>Vitrina de Trabajos</h2><div class="style">Visual · Carrusel · Fotos reales</div>
-        <p>El poder de tu trabajo hablando solo: carrusel automático con tus fotos reales — se cambian solas, se controlan a mano y se agrandan al tocar.</p>
-        <ul><li>Carrusel automático de trabajos</li><li>Toca cualquier foto para agrandarla</li><li>Formulario con subida de fotos</li></ul>
-        <a class="btn" href="v2/">Ver versión 2</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="shot"><span class="num">3</span><img src="assets/plomeria-06.jpg" alt="Vista previa versión 3"></div>
-      <div class="body">
-        <h2>Cotiza en 60 segundos</h2><div class="style">Directa · Rápida · Enfocada en clientes</div>
-        <p>Diseñada para conseguir cotizaciones: el formulario al frente, en una sola pantalla, directo a tu WhatsApp.</p>
-        <ul><li>Formulario gigante en portada</li><li>Subida de fotos incluida</li><li>Máxima conversión de visitas a clientes</li></ul>
-        <a class="btn" href="v3/">Ver versión 3</a>
-      </div>
+    <div class="trust">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>Calidad garantizada</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Confianza comprobada</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Compromiso total</div>
     </div>
   </div>
+</section>
 
-  <p class="note">Contenido de ejemplo en las preguntas frecuentes — se ajusta con la información final del negocio.</p>
-
-  <div class="contact">
-    <a href="tel:+19393834396">939-383-4396</a>
-    <a href="https://wa.me/19393834396?text=Hola%20Manny%20Multi%20Service%2C%20quiero%20hablar%20de%20mi%20website." target="_blank" rel="noopener">WhatsApp</a>
-    <a href="mailto:mannymultiservice1@gmail.com">Email</a>
+<section class="stats" aria-label="Datos destacados">
+  <div class="wrap stats-grid">
+    <div class="stat reveal"><b>7<em>+</em></b><span>Servicios especializados</span></div>
+    <div class="stat reveal"><b>100<em>%</em></b><span>Trabajos reales con fotos</span></div>
+    <div class="stat reveal"><b>24<em>h</em></b><span>Respuesta por WhatsApp</span></div>
+    <div class="stat reveal"><b>0<em>$</em></b><span>Estimado gratis</span></div>
   </div>
+</section>
 
-  <footer><span>© 2026 Manny Multi Service LLC</span><span>Demostración creada por ManuPro</span></footer>
-</div>
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Nuestros servicios</div>
+      <h2>Todo lo que tu propiedad necesita</h2>
+      <p>Siete especialidades, un solo contacto. Trabajos residenciales y comerciales en Toa Baja y áreas cercanas.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M12 2v2M5.5 4.5l1.4 1.4M18.5 4.5l-1.4 1.4M3 8h2M19 8h2M4 13l16 8M20 13L4 21M8 14.5l2.5 1.2M12 16l2.5 1.2M16 17.4l2 1"/></svg></div><h3>Sistemas Solares</h3><p>Instalación de placas solares, calentadores solares y sistemas de respaldo para bajar tu factura de luz.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2f86ff" stroke-width="1.8"><path d="M14.5 3l-8 10h5l-1.5 8 8-10h-5z"/></svg></div><h3>Handyman</h3><p>Reparaciones del hogar de todo tipo: puertas, ventanas, pintura, montaje y esos arreglos que no dan espera.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="1.8"><path d="M4 20h16M6 20V10l6-6 6 6v10M12 20v-6"/><path d="M17 4l3 3M19 2l1 4" stroke-linecap="round"/></svg></div><h3>Soldadura</h3><p>Portones, verjas, rejas y estructuras metálicas. Soldadura fuerte y acabados profesionales.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2f86ff" stroke-width="1.8"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div><h3>Electricidad Básica</h3><p>Instalación de paneles, luminarias, tomacorrientes y resolución de fallas eléctricas en tu hogar.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2f86ff" stroke-width="1.8"><path d="M4 10h12v4H4zM16 12h3a2 2 0 0 1 2 2v3M12 14v5M9 19h6"/><circle cx="7" cy="7" r="2"/></svg></div><h3>Plomería</h3><p>Tuberías de cobre y PVC, cisternas, bombas de agua, filtraciones y todo el sistema de agua de tu casa.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#f5b301" stroke-width="1.8"><path d="M3 18h18M5 18V9l7-5 7 5v9M9 18v-4h6v4"/></svg></div><h3>Albañilería</h3><p>Empañetado, losas de cemento, reparaciones de paredes y techos, y construcción menor con acabado fino.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2f86ff" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2L14 3h-4l-.5 2.6a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 0 0 5 12c0 .4 0 .8.1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 2 1.2L10 21h4l.5-2.6a7 7 0 0 0 2-1.2l2.4 1 2-3.4-2-1.6c.1-.4.1-.8.1-1.2z"/></svg></div><h3>Mantenimiento General</h3><p>El cuidado completo de tu propiedad: inspecciones, sellado de techos, limpieza y prevención de daños.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="trabajos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Trabajos reales</div>
+      <h2>Hecho por nuestras manos</h2>
+      <p>Fotos reales de nuestros trabajos. Se cambian solas cada pocos segundos — toca cualquier foto para verla en grande.</p>
+    </div>
+    <div class="mms-carousel" data-autoplay="1300">
+      <div class="mc-track">
+        <figure class="mc-slide on"><img src="assets/hero-solar.jpg" alt="Techo sellado con placas solares instaladas" loading="lazy"><figcaption class="mc-cap">Techo sellado con placas solares</figcaption></figure>
+        <figure class="mc-slide"><img src="assets/solar-01.jpg" alt="Sistema solar instalado en techo" loading="lazy"><figcaption class="mc-cap">Sistema solar instalado en techo</figcaption></figure>
+        <figure class="mc-slide"><img src="assets/solar-02.jpg" alt="Paneles y calentador solar" loading="lazy"><figcaption class="mc-cap">Paneles y calentador solar</figcaption></figure>
+        <figure class="mc-slide"><img src="assets/plomeria-06.jpg" alt="Cisterna instalada" loading="lazy"><figcaption class="mc-cap">Cisterna instalada</figcaption></figure>
+        <figure class="mc-slide"><img src="assets/plomeria-03.jpg" alt="Tubería de cobre nueva" loading="lazy"><figcaption class="mc-cap">Tubería de cobre nueva</figcaption></figure>
+        <figure class="mc-slide"><img src="assets/plomeria-05.jpg" alt="Bomba de agua instalada" loading="lazy"><figcaption class="mc-cap">Bomba de agua instalada</figcaption></figure>
+        <figure class="mc-slide"><img src="assets/plomeria-04.jpg" alt="Sistema de cisterna exterior" loading="lazy"><figcaption class="mc-cap">Sistema de cisterna exterior</figcaption></figure>
+        <figure class="mc-slide"><img src="assets/techo-despues-02.jpg" alt="Techo impermeabilizado" loading="lazy"><figcaption class="mc-cap">Techo impermeabilizado</figcaption></figure>
+        <figure class="mc-slide"><img src="assets/techo-despues-01.jpg" alt="Techo reparado y pintado" loading="lazy"><figcaption class="mc-cap">Techo reparado y pintado</figcaption></figure>
+        <figure class="mc-slide"><img src="assets/electrica-01.jpg" alt="Panel eléctrico instalado" loading="lazy"><figcaption class="mc-cap">Panel eléctrico instalado</figcaption></figure>
+        <figure class="mc-slide"><img src="assets/albanileria-03.jpg" alt="Losa de cemento nueva" loading="lazy"><figcaption class="mc-cap">Losa de cemento nueva</figcaption></figure>
+        <figure class="mc-slide"><img src="assets/soldadura-01.jpg" alt="Portón y verja instalados" loading="lazy"><figcaption class="mc-cap">Portón y verja instalados</figcaption></figure>
+        <button type="button" class="mc-arrow prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="mc-arrow next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+      <div class="mc-bar"><div class="mc-dots"></div><span class="mc-count">1 / 12</span></div>
+    </div>
+    <div class="mc-lightbox" aria-hidden="true" role="dialog" aria-label="Foto ampliada">
+      <button type="button" class="lb-close" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <button type="button" class="lb-arrow prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <img class="lb-img" src="" alt="">
+      <button type="button" class="lb-arrow next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+      <div class="lb-cap"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Por qué elegirnos</div>
+      <h2>La diferencia Manny</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why"><div class="n">01</div><h3>Un solo equipo, todo resuelto</h3><p>No busques cinco contratistas distintos. Solar, agua, luz, techo y estructura: lo resolvemos todo con un solo llamado.</p></div>
+      <div class="why"><div class="n">02</div><h3>Trabajo que se ve</h3><p>Te mostramos fotos reales de cada etapa. Lo que ves en esta página es lo que hacemos en tu casa.</p></div>
+      <div class="why"><div class="n">03</div><h3>Respuesta rápida por WhatsApp</h3><p>Escríbenos, manda fotos del problema y recibe tu estimado sin vueltas ni compromiso.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cotizar">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag" style="color:var(--gold2)">Cotización gratis</div>
+      <h2>Pide tu estimado ahora</h2>
+      <p>Llena el formulario y se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+    </div>
+    <form class="form-card" onsubmit="return enviarWA(event)">
+      <h3>Cuéntanos qué necesitas</h3>
+      <p>Respondemos el mismo día en horario laboral.</p>
+      <div class="frow"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" required placeholder="Ej. Juan Rivera"></div>
+      <div class="frow"><label for="tel">Tu teléfono</label><input id="tel" name="tel" type="tel" placeholder="Ej. 787-000-0000"></div>
+      <div class="frow"><label for="servicio">Servicio que necesitas</label>
+        <select id="servicio" name="servicio" required>
+          <option value="">Selecciona un servicio…</option>
+          <option>Sistemas Solares</option><option>Handyman</option><option>Soldadura</option>
+          <option>Electricidad Básica</option><option>Plomería</option><option>Albañilería</option>
+          <option>Mantenimiento General</option><option>Otro</option>
+        </select>
+      </div>
+      <div class="frow"><label for="msg">Describe el trabajo</label><textarea id="msg" name="msg" required placeholder="Ej. Se me está filtrando el techo del cuarto y quiero sellarlo…"></textarea></div>
+      <div class="frow">
+        <label>¿Tienes fotos? Elígelas aquí</label>
+        <label class="filebox" for="fotos">
+          <strong>Toca para subir fotos</strong>
+          <input id="fotos" name="fotos" type="file" accept="image/*" multiple>
+          <p>Puedes elegir varias fotos de tu galería. Las adjuntas en el chat de WhatsApp al enviar.</p>
+          <div id="filecount"></div>
+        </label>
+      </div>
+      <button class="btn btn-wa" type="submit">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+        Enviar por WhatsApp
+      </button>
+      <p class="fnote">Al enviar, se abrirá WhatsApp con tu mensaje ya escrito. <strong>Adjunta tus fotos ahí mismo en el chat</strong> antes de pulsar enviar — WhatsApp no permite enviarlas automáticamente desde la página.</p>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Preguntas frecuentes</div>
+      <h2>¿Tienes dudas?</h2>
+    </div>
+    <!-- FAQ propuesta — el cliente puede pedir ajustes -->
+    <div class="faq">
+      <details><summary>¿El estimado tiene algún costo?</summary><div class="a">No. Los estimados son completamente gratis y sin compromiso. Escríbenos por WhatsApp, cuéntanos qué necesitas y, si quieres, envíanos fotos para darte un estimado más preciso.</div></details>
+      <details><summary>¿Qué áreas cubren?</summary><div class="a">Estamos en Toa Baja, Puerto Rico, y servimos pueblos cercanos del área metro y el norte de la isla. Pregúntanos por WhatsApp y te confirmamos de inmediato.</div></details>
+      <details><summary>¿Atienden emergencias?</summary><div class="a">Sí. Filtraciones, fallas eléctricas o problemas de agua no esperan. Escríbenos por WhatsApp y coordinamos la visita lo antes posible.</div></details>
+      <details><summary>¿Qué métodos de pago aceptan?</summary><div class="a">Aceptamos efectivo, ATH Móvil y transferencia bancaria. El pago se coordina directamente al confirmar el trabajo.</div></details>
+      <details><summary>¿Los trabajos tienen garantía?</summary><div class="a">Sí. Respaldamos nuestro trabajo con garantía por escrito según el tipo de servicio. Calidad, confianza y compromiso no son solo palabras en nuestro logo.</div></details>
+      <details><summary>¿Trabajan fines de semana?</summary><div class="a">Sí, coordinamos visitas de lunes a sábado. Escríbenos y buscamos el horario que mejor te convenga.</div></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand"><img src="assets/logo.jpg" alt="Logo Manny Multi Service LLC"><b style="color:#fff">MANNY MULTI SERVICE LLC</b></div>
+        <p>Calidad · Confianza · Compromiso.<br>Toa Baja, Puerto Rico.</p>
+      </div>
+      <div><h4>Contacto</h4><a href="tel:+19393834396">939-383-4396</a><a href="mailto:mannymultiservice1@gmail.com">mannymultiservice1@gmail.com</a><a href="https://www.facebook.com/search/top?q=Manny%20Multi%20Service%20LLC" target="_blank" rel="noopener">Facebook: Manny Multi Service LLC</a></div>
+      <div><h4>Servicios</h4><p>Sistemas Solares · Handyman · Soldadura · Electricidad Básica · Plomería · Albañilería · Mantenimiento General</p></div>
+      <div><h4>Cotiza rápido</h4><a class="btn btn-wa" style="font-size:.85rem;padding:10px 16px" href="https://wa.me/19393834396?text=Hola%20Manny%20Multi%20Service%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp directo</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Manny Multi Service LLC. Todos los derechos reservados.</span><span>Demostración creada por ManuPro</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/19393834396?text=Hola%20Manny%20Multi%20Service%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+document.getElementById('fotos').addEventListener('change',function(){
+  var n=this.files.length;
+  document.getElementById('filecount').textContent = n ? n+(n===1?' foto lista':' fotos listas')+' — las adjuntas en el chat de WhatsApp' : '';
+});
+function enviarWA(e){
+  e.preventDefault();
+  var f=e.target, n=f.fotos.files.length;
+  var txt="Hola Manny Multi Service, soy "+f.nombre.value.trim()+
+    " ("+f.tel.value.trim()+"). Necesito el servicio de "+f.servicio.value+
+    ". Detalles: "+f.msg.value.trim()+
+    (n? " Te adjunto "+n+(n===1?" foto":" fotos")+" del trabajo en este chat." : "");
+  window.open("https://wa.me/19393834396?text="+encodeURIComponent(txt),"_blank");
+  return false;
+}
+/* ===== reveal on scroll (elite) ===== */
+(function(){
+  var els = document.querySelectorAll('.sec-head, .svc, .why, .form-card, .mms-carousel, .faq details, .stat');
+  if(!('IntersectionObserver' in window) || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)){
+    els.forEach(function(e){ e.classList.add('reveal','in'); });
+    return;
+  }
+  els.forEach(function(e, i){ e.classList.add('reveal'); e.style.transitionDelay = ((i % 4) * 70) + 'ms'; });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {threshold: 0.12, rootMargin: '0px 0px -6% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+/* Carrusel de trabajos — auto 1.3s, swipe, dots, lightbox */
+(function(){
+  var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.mms-carousel').forEach(function(car){
+    var slides = Array.prototype.slice.call(car.querySelectorAll('.mc-slide'));
+    if(!slides.length) return;
+    var dotsBox = car.querySelector('.mc-dots');
+    var countEl = car.querySelector('.mc-count');
+    var idx = 0, timer = null;
+    var DELAY = parseInt(car.getAttribute('data-autoplay') || '1300', 10);
+    slides.forEach(function(s, i){
+      var d = document.createElement('button');
+      d.type = 'button';
+      d.className = 'mc-dot' + (i === 0 ? ' on' : '');
+      d.setAttribute('aria-label', 'Ver foto ' + (i + 1));
+      d.addEventListener('click', function(){ go(i); restart(); });
+      dotsBox.appendChild(d);
+    });
+    var dots = Array.prototype.slice.call(dotsBox.children);
+    function render(){
+      slides.forEach(function(s, k){ s.classList.toggle('on', k === idx); });
+      dots.forEach(function(d, k){ d.classList.toggle('on', k === idx); });
+      if(countEl) countEl.textContent = (idx + 1) + ' / ' + slides.length;
+    }
+    function go(i){ idx = (i + slides.length) % slides.length; render(); }
+    function start(){ if(REDUCED) return; stop(); timer = setInterval(function(){ go(idx + 1); }, DELAY); }
+    function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+    function restart(){ stop(); start(); }
+    car.querySelector('.mc-arrow.next').addEventListener('click', function(e){ e.stopPropagation(); go(idx + 1); restart(); });
+    car.querySelector('.mc-arrow.prev').addEventListener('click', function(e){ e.stopPropagation(); go(idx - 1); restart(); });
+    car.addEventListener('mouseenter', stop);
+    car.addEventListener('mouseleave', start);
+    car.addEventListener('touchstart', stop, {passive:true});
+    car.addEventListener('touchend', start, {passive:true});
+    var track = car.querySelector('.mc-track'), sx = 0;
+    track.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend', function(e){
+      var dx = e.changedTouches[0].clientX - sx;
+      if(Math.abs(dx) > 40){ go(dx < 0 ? idx + 1 : idx - 1); restart(); }
+    }, {passive:true});
+    var lb = document.querySelector('.mc-lightbox');
+    var lbImg = lb.querySelector('.lb-img'), lbCap = lb.querySelector('.lb-cap');
+    function syncLb(){
+      var img = slides[idx].querySelector('img');
+      lbImg.src = img.getAttribute('src'); lbImg.alt = img.getAttribute('alt') || '';
+      lbCap.textContent = slides[idx].querySelector('figcaption').textContent;
+    }
+    function openLb(i){ go(i); syncLb(); stop(); lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); document.body.style.overflow = 'hidden'; }
+    function closeLb(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; start(); }
+    slides.forEach(function(s, i){ s.addEventListener('click', function(){ openLb(i); }); });
+    lb.querySelector('.lb-close').addEventListener('click', closeLb);
+    lb.querySelector('.lb-arrow.next').addEventListener('click', function(e){ e.stopPropagation(); go(idx + 1); syncLb(); });
+    lb.querySelector('.lb-arrow.prev').addEventListener('click', function(e){ e.stopPropagation(); go(idx - 1); syncLb(); });
+    lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && lb.classList.contains('open')) closeLb(); });
+    document.addEventListener('visibilitychange', function(){ if(document.hidden){ stop(); } else if(!lb.classList.contains('open')){ start(); } });
+    render(); start();
+  });
+})();
+</script>
 </body>
 </html>
