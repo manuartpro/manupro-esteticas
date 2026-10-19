@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manny Multi Service LLC | Antes y Después — Transformaciones Reales en Toa Baja, PR</title>
-<meta name="description" content="Mira las transformaciones reales de Manny Multi Service LLC: techos sellados, tuberías de cobre nuevas, sistemas solares y más. Cada casa es única. Cotiza por WhatsApp: 939-383-4396.">
+<title>Manny Multi Service LLC | Trabajos Reales en Toa Baja, PR</title>
+<meta name="description" content="Mira los trabajos reales de Manny Multi Service LLC: techos sellados, tuberías de cobre nuevas, sistemas solares y más. Fotos reales de cada proyecto. Cotiza por WhatsApp: 939-383-4396.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -52,32 +52,37 @@ section{padding:80px 0}
 .sec-head .tag{color:var(--blue);font-weight:800;font-size:.8rem;letter-spacing:2.5px;text-transform:uppercase}
 .sec-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;margin:12px 0 12px;color:var(--navy)}
 .sec-head p{color:var(--mut)}
-/* before/after */
-.ba-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:26px}
-.ba-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(10,26,51,.08)}
-.ba{position:relative;aspect-ratio:4/3;overflow:hidden;user-select:none;--w:50%}
-.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
-.ba .bw{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--w)) 0 0)}
-.ba input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
-.ba .handle{position:absolute;top:0;bottom:0;left:var(--w);width:3px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.5);transform:translateX(-50%);pointer-events:none}
-.ba .handle::after{content:'◂ ▸';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;color:var(--navy);font-size:.7rem;font-weight:800;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.35)}
-.ba .lbl{position:absolute;top:12px;font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:6px 12px;border-radius:100px;pointer-events:none}
-.ba .lbl.a{left:12px;background:rgba(10,26,51,.8);color:#fff}
-.ba .lbl.d{right:12px;background:var(--gold2);color:#1a1206}
-.ba-cap{padding:20px 22px}
-.ba-cap h3{font-size:1.05rem;color:var(--navy)}
-.ba-cap p{color:var(--mut);font-size:.9rem;margin-top:6px}
-/* filters + gallery */
-.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
-.filters button{border:1.5px solid var(--line);background:#fff;color:var(--mut);font-weight:700;font-size:.88rem;padding:10px 18px;border-radius:100px;cursor:pointer;transition:.2s;font-family:inherit}
-.filters button:hover{border-color:var(--blue);color:var(--blue)}
-.filters button.on{background:var(--navy);border-color:var(--navy);color:#fff}
-.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-.gal figure{border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;background:#dfe6f0;transition:.25s}
-.gal figure.hide{display:none}
-.gal img{width:100%;height:100%;object-fit:cover;transition:.35s}
-.gal figure:hover img{transform:scale(1.05)}
-.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;background:linear-gradient(transparent,rgba(8,18,38,.9));color:#fff;font-size:.82rem;font-weight:600}
+/* ---------- carrusel de trabajos ---------- */
+.mms-carousel{position:relative;max-width:960px;margin:0 auto}
+.mc-track{position:relative;aspect-ratio:16/10;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#0a1a33;box-shadow:0 20px 50px rgba(10,26,51,.18)}
+.mc-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;cursor:zoom-in;margin:0}
+.mc-slide.on{opacity:1;z-index:1}
+.mc-slide img{width:100%;height:100%;object-fit:cover}
+.mc-cap{position:absolute;left:0;right:0;bottom:0;padding:52px 20px 18px;background:linear-gradient(transparent,rgba(8,20,38,.88));color:#fff;font-weight:700;font-size:1rem}
+.mc-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25);transition:.2s}
+.mc-arrow:hover{background:var(--gold2);color:#1a1206}
+.mc-arrow.prev{left:14px}
+.mc-arrow.next{right:14px}
+.mc-arrow svg{width:22px;height:22px}
+.mc-bar{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:16px}
+.mc-dots{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.mc-dot{width:10px;height:10px;border-radius:50%;border:0;background:#c3cede;cursor:pointer;padding:0;transition:.2s}
+.mc-dot.on{background:var(--navy);transform:scale(1.25)}
+.mc-count{color:var(--mut);font-size:.82rem;font-weight:700;min-width:52px;text-align:right}
+/* lightbox */
+.mc-lightbox{position:fixed;inset:0;z-index:100;background:rgba(3,6,14,.94);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.mc-lightbox.open{opacity:1;pointer-events:auto}
+.lb-img{max-width:92vw;max-height:82vh;border-radius:12px;box-shadow:0 30px 90px rgba(0,0,0,.7);object-fit:contain}
+.lb-cap{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:#fff;font-weight:600;font-size:.95rem;padding:0 20px}
+.lb-close{position:absolute;top:18px;right:18px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-close:hover{background:var(--gold2);color:#1a1206;border-color:var(--gold2)}
+.lb-close svg{width:22px;height:22px}
+.lb-arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-arrow:hover{background:var(--gold2);color:#1a1206;border-color:var(--gold2)}
+.lb-arrow.prev{left:18px}
+.lb-arrow.next{right:18px}
+.lb-arrow svg{width:24px;height:24px}
+@media(max-width:640px){.mc-track{aspect-ratio:4/3}.mc-arrow{width:40px;height:40px}.lb-arrow{width:44px;height:44px}.lb-arrow.prev{left:8px}.lb-arrow.next{right:8px}}
 /* services strip */
 .svc-strip{display:flex;gap:12px;overflow-x:auto;padding:6px 2px 14px;scrollbar-width:thin}
 .svc-chip{flex:0 0 auto;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:10px 18px 10px 10px;font-weight:700;font-size:.88rem;color:var(--navy)}
@@ -131,8 +136,7 @@ footer{background:#081426;color:#9fb0c8;padding:52px 0 26px}
   <div class="wrap hbar">
     <a class="brand" href="#inicio"><img src="../assets/logo.jpg" alt="Logo Manny Multi Service LLC"><span><b>MANNY MULTI SERVICE</b><small>Calidad · Confianza · Compromiso</small></span></a>
     <nav>
-      <a class="nk" href="#transformaciones">Antes / Después</a>
-      <a class="nk" href="#galeria">Galería</a>
+      <a class="nk" href="#trabajos">Trabajos</a>
       <a class="nk" href="#faq">Preguntas</a>
       <a class="hphone" href="tel:+19393834396">939-383-4396</a>
       <a class="btn btn-wa" href="https://wa.me/19393834396?text=Hola%20Manny%20Multi%20Service%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">
@@ -144,11 +148,11 @@ footer{background:#081426;color:#9fb0c8;padding:52px 0 26px}
 
 <section class="hero" id="inicio">
   <div class="wrap">
-    <h1>Cambios drásticos, <em>casas únicas</em></h1>
-    <p>Desliza y compruébalo tú mismo: filtraciones que desaparecen, techos que vuelven a la vida y tuberías que quedan nuevas. Esto es lo que hacemos todos los días en Puerto Rico.</p>
+    <h1>Trabajos reales, <em>hechos a mano</em></h1>
+    <p>Techos sellados, cobre nuevo, placas solares, cisternas y más — todo con fotos reales de proyectos que ya terminamos en Puerto Rico. Míralos con calma.</p>
     <div class="hero-cta">
       <a class="btn btn-wa" href="#cotizar">Cotizar mi proyecto</a>
-      <a class="btn btn-navy" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)" href="#transformaciones">Ver transformaciones</a>
+      <a class="btn btn-navy" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)" href="#trabajos">Ver trabajos</a>
     </div>
     <div class="stats">
       <div><b>7</b><span>servicios especializados</span></div>
@@ -158,82 +162,40 @@ footer{background:#081426;color:#9fb0c8;padding:52px 0 26px}
   </div>
 </section>
 
-<section id="transformaciones">
+<section id="trabajos">
   <div class="wrap">
     <div class="sec-head">
-      <div class="tag">Antes / Después</div>
-      <h2>Desliza para ver el cambio</h2>
-      <p>Ejemplos reales de trabajos recientes. Cada casa es única, cada problema distinto — y cada resultado habla por sí solo. Mueve el control de cada foto.</p>
+      <div class="tag">Trabajos reales</div>
+      <h2>Mira lo que hacemos</h2>
+      <p>Fotos reales de proyectos terminados. Se cambian solas cada pocos segundos — toca cualquier foto para verla en grande.</p>
     </div>
-    <div class="ba-grid">
-      <div class="ba-card">
-        <div class="ba" style="--w:50%">
-          <img src="../assets/techo-despues-01.jpg" alt="Techo reparado y pintado">
-          <div class="bw"><img src="../assets/techo-antes-02.jpg" alt="Techo dañado por filtración"></div>
-          <span class="lbl a">Antes</span><span class="lbl d">Después</span>
-          <div class="handle"></div>
-          <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
-        </div>
-        <div class="ba-cap"><h3>Techo con filtración → techo como nuevo</h3><p>Reparación de plafón dañado por agua, sellado y pintura. Adiós manchas y goteras.</p></div>
+    <div class="mms-carousel" data-autoplay="1300">
+      <div class="mc-track">
+        <figure class="mc-slide on"><img src="../assets/hero-solar.jpg" alt="Techo sellado con placas solares instaladas" loading="lazy"><figcaption class="mc-cap">Techo sellado con placas solares</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/solar-01.jpg" alt="Sistema solar instalado en techo" loading="lazy"><figcaption class="mc-cap">Sistema solar instalado en techo</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/solar-02.jpg" alt="Paneles y calentador solar" loading="lazy"><figcaption class="mc-cap">Paneles y calentador solar</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/plomeria-06.jpg" alt="Cisterna instalada" loading="lazy"><figcaption class="mc-cap">Cisterna instalada</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/plomeria-03.jpg" alt="Tubería de cobre nueva" loading="lazy"><figcaption class="mc-cap">Tubería de cobre nueva</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/plomeria-05.jpg" alt="Bomba de agua instalada" loading="lazy"><figcaption class="mc-cap">Bomba de agua instalada</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/plomeria-04.jpg" alt="Sistema de cisterna exterior" loading="lazy"><figcaption class="mc-cap">Sistema de cisterna exterior</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/plomeria-02.jpg" alt="Válvula principal de agua" loading="lazy"><figcaption class="mc-cap">Válvula principal de agua</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/techo-despues-02.jpg" alt="Techo impermeabilizado" loading="lazy"><figcaption class="mc-cap">Techo impermeabilizado</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/techo-despues-01.jpg" alt="Techo reparado y pintado" loading="lazy"><figcaption class="mc-cap">Techo reparado y pintado</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/electrica-01.jpg" alt="Panel eléctrico instalado" loading="lazy"><figcaption class="mc-cap">Panel eléctrico instalado</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/albanileria-03.jpg" alt="Losa de cemento nueva" loading="lazy"><figcaption class="mc-cap">Losa de cemento nueva</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/albanileria-01.jpg" alt="Reparación de pared" loading="lazy"><figcaption class="mc-cap">Reparación de pared</figcaption></figure>
+        <figure class="mc-slide"><img src="../assets/soldadura-01.jpg" alt="Portón y verja instalados" loading="lazy"><figcaption class="mc-cap">Portón y verja instalados</figcaption></figure>
+        <button type="button" class="mc-arrow prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="mc-arrow next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
       </div>
-      <div class="ba-card">
-        <div class="ba" style="--w:50%">
-          <img src="../assets/techo-despues-02.jpg" alt="Techo sellado e impermeabilizado">
-          <div class="bw"><img src="../assets/techo-antes-03.jpg" alt="Techo severamente deteriorado"></div>
-          <span class="lbl a">Antes</span><span class="lbl d">Después</span>
-          <div class="handle"></div>
-          <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
-        </div>
-        <div class="ba-cap"><h3>Techo deteriorado → techo sellado</h3><p>Impermeabilización completa: del daño severo a una superficie lista para años de lluvia.</p></div>
-      </div>
-      <div class="ba-card">
-        <div class="ba" style="--w:50%">
-          <img src="../assets/plomeria-03.jpg" alt="Tubería de cobre nueva instalada">
-          <div class="bw"><img src="../assets/plomeria-01.jpg" alt="Tubería vieja enterrada"></div>
-          <span class="lbl a">Antes</span><span class="lbl d">Después</span>
-          <div class="handle"></div>
-          <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
-        </div>
-        <div class="ba-cap"><h3>Tubería vieja → cobre nuevo</h3><p>Sustitución de líneas de agua deterioradas por cobre nuevo con conexiones profesionales.</p></div>
-      </div>
+      <div class="mc-bar"><div class="mc-dots"></div><span class="mc-count">1 / 14</span></div>
     </div>
-  </div>
-</section>
-
-<section id="galeria" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="tag">Galería</div>
-      <h2>Explora por servicio</h2>
-      <p>Toca una categoría para filtrar los trabajos.</p>
-    </div>
-    <div class="filters">
-      <button class="on" data-f="all">Todos</button>
-      <button data-f="solar">Solar</button>
-      <button data-f="plomeria">Plomería</button>
-      <button data-f="techo">Techos</button>
-      <button data-f="electrica">Eléctrica</button>
-      <button data-f="albanileria">Albañilería</button>
-      <button data-f="soldadura">Soldadura</button>
-    </div>
-    <div class="gal" id="gal">
-      <figure data-cat="solar"><img src="../assets/hero-solar.jpg" alt="Placas solares en techo sellado" loading="lazy"><figcaption>Placas solares + techo sellado</figcaption></figure>
-      <figure data-cat="solar"><img src="../assets/solar-01.jpg" alt="Sistema solar instalado" loading="lazy"><figcaption>Sistema solar en techo</figcaption></figure>
-      <figure data-cat="solar"><img src="../assets/solar-02.jpg" alt="Paneles solares y tanque" loading="lazy"><figcaption>Paneles y calentador solar</figcaption></figure>
-      <figure data-cat="plomeria"><img src="../assets/plomeria-06.jpg" alt="Cisterna instalada" loading="lazy"><figcaption>Cisterna instalada</figcaption></figure>
-      <figure data-cat="plomeria"><img src="../assets/plomeria-03.jpg" alt="Cobre nuevo" loading="lazy"><figcaption>Cobre nuevo</figcaption></figure>
-      <figure data-cat="plomeria"><img src="../assets/plomeria-05.jpg" alt="Bomba de agua" loading="lazy"><figcaption>Bomba de agua</figcaption></figure>
-      <figure data-cat="plomeria"><img src="../assets/plomeria-04.jpg" alt="Sistema de cisterna exterior" loading="lazy"><figcaption>Sistema de cisterna</figcaption></figure>
-      <figure data-cat="plomeria"><img src="../assets/plomeria-02.jpg" alt="Válvula de agua" loading="lazy"><figcaption>Válvula principal</figcaption></figure>
-      <figure data-cat="plomeria"><img src="../assets/plomeria-07.jpg" alt="Reparación de tubería en pared" loading="lazy"><figcaption>Reparación en pared</figcaption></figure>
-      <figure data-cat="techo"><img src="../assets/techo-despues-02.jpg" alt="Techo impermeabilizado" loading="lazy"><figcaption>Techo impermeabilizado</figcaption></figure>
-      <figure data-cat="techo"><img src="../assets/techo-despues-01.jpg" alt="Techo interior reparado" loading="lazy"><figcaption>Interior reparado</figcaption></figure>
-      <figure data-cat="electrica"><img src="../assets/electrica-01.jpg" alt="Panel eléctrico" loading="lazy"><figcaption>Panel eléctrico</figcaption></figure>
-      <figure data-cat="albanileria"><img src="../assets/albanileria-03.jpg" alt="Losa de cemento" loading="lazy"><figcaption>Losa de cemento</figcaption></figure>
-      <figure data-cat="albanileria"><img src="../assets/albanileria-01.jpg" alt="Reparación de pared" loading="lazy"><figcaption>Reparación de pared</figcaption></figure>
-      <figure data-cat="soldadura"><img src="../assets/soldadura-01.jpg" alt="Portón y verja instalados" loading="lazy"><figcaption>Portón y verja</figcaption></figure>
-      <figure data-cat="albanileria"><img src="../assets/albanileria-02.jpg" alt="Trabajo de albañilería" loading="lazy"><figcaption>Albañilería</figcaption></figure>
-      <figure data-cat="techo"><img src="../assets/techo-antes-01.jpg" alt="Techo antes de la reparación" loading="lazy"><figcaption>Techo antes de reparar</figcaption></figure>
+    <div class="mc-lightbox" aria-hidden="true" role="dialog" aria-label="Foto ampliada">
+      <button type="button" class="lb-close" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <button type="button" class="lb-arrow prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <img class="lb-img" src="" alt="">
+      <button type="button" class="lb-arrow next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+      <div class="lb-cap"></div>
     </div>
     <div style="margin-top:36px">
       <div class="sec-head" style="margin-bottom:18px"><h2 style="font-size:1.4rem">Nuestros servicios</h2></div>
@@ -295,7 +257,7 @@ footer{background:#081426;color:#9fb0c8;padding:52px 0 26px}
 
 <section id="faq">
   <div class="wrap">
-    <div class="sec-head"><div class="tag">Preguntas frecuentes</div><h2>Antes de escribirnos</h2></div>
+    <div class="sec-head"><div class="tag">Preguntas frecuentes</div><h2>¿Tienes dudas?</h2></div>
     <!-- FAQ propuesta — el cliente puede pedir ajustes -->
     <div class="faq">
       <details><summary>¿El estimado tiene algún costo?</summary><div class="a">No, es gratis y sin compromiso. Mientras más fotos nos envíes por WhatsApp, más preciso será el estimado.</div></details>
@@ -324,22 +286,6 @@ footer{background:#081426;color:#9fb0c8;padding:52px 0 26px}
 </a>
 
 <script>
-// before/after sliders
-document.querySelectorAll('.ba').forEach(function(ba){
-  var r=ba.querySelector('input[type=range]');
-  r.addEventListener('input',function(){ ba.style.setProperty('--w', r.value+'%'); });
-});
-// gallery filter
-document.querySelectorAll('.filters button').forEach(function(b){
-  b.addEventListener('click',function(){
-    document.querySelectorAll('.filters button').forEach(function(x){x.classList.remove('on')});
-    b.classList.add('on');
-    var f=b.getAttribute('data-f');
-    document.querySelectorAll('#gal figure').forEach(function(fig){
-      fig.classList.toggle('hide', f!=='all' && fig.getAttribute('data-cat')!==f);
-    });
-  });
-});
 // file counter
 document.getElementById('fotos').addEventListener('change',function(){
   var n=this.files.length;
@@ -355,6 +301,65 @@ function enviarWA(e){
   window.open("https://wa.me/19393834396?text="+encodeURIComponent(txt),"_blank");
   return false;
 }
+/* Carrusel de trabajos — auto 1.3s, swipe, dots, lightbox */
+(function(){
+  var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.mms-carousel').forEach(function(car){
+    var slides = Array.prototype.slice.call(car.querySelectorAll('.mc-slide'));
+    if(!slides.length) return;
+    var dotsBox = car.querySelector('.mc-dots');
+    var countEl = car.querySelector('.mc-count');
+    var idx = 0, timer = null;
+    var DELAY = parseInt(car.getAttribute('data-autoplay') || '1300', 10);
+    slides.forEach(function(s, i){
+      var d = document.createElement('button');
+      d.type = 'button';
+      d.className = 'mc-dot' + (i === 0 ? ' on' : '');
+      d.setAttribute('aria-label', 'Ver foto ' + (i + 1));
+      d.addEventListener('click', function(){ go(i); restart(); });
+      dotsBox.appendChild(d);
+    });
+    var dots = Array.prototype.slice.call(dotsBox.children);
+    function render(){
+      slides.forEach(function(s, k){ s.classList.toggle('on', k === idx); });
+      dots.forEach(function(d, k){ d.classList.toggle('on', k === idx); });
+      if(countEl) countEl.textContent = (idx + 1) + ' / ' + slides.length;
+    }
+    function go(i){ idx = (i + slides.length) % slides.length; render(); }
+    function start(){ if(REDUCED) return; stop(); timer = setInterval(function(){ go(idx + 1); }, DELAY); }
+    function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+    function restart(){ stop(); start(); }
+    car.querySelector('.mc-arrow.next').addEventListener('click', function(e){ e.stopPropagation(); go(idx + 1); restart(); });
+    car.querySelector('.mc-arrow.prev').addEventListener('click', function(e){ e.stopPropagation(); go(idx - 1); restart(); });
+    car.addEventListener('mouseenter', stop);
+    car.addEventListener('mouseleave', start);
+    car.addEventListener('touchstart', stop, {passive:true});
+    car.addEventListener('touchend', start, {passive:true});
+    var track = car.querySelector('.mc-track'), sx = 0;
+    track.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend', function(e){
+      var dx = e.changedTouches[0].clientX - sx;
+      if(Math.abs(dx) > 40){ go(dx < 0 ? idx + 1 : idx - 1); restart(); }
+    }, {passive:true});
+    var lb = document.querySelector('.mc-lightbox');
+    var lbImg = lb.querySelector('.lb-img'), lbCap = lb.querySelector('.lb-cap');
+    function syncLb(){
+      var img = slides[idx].querySelector('img');
+      lbImg.src = img.getAttribute('src'); lbImg.alt = img.getAttribute('alt') || '';
+      lbCap.textContent = slides[idx].querySelector('figcaption').textContent;
+    }
+    function openLb(i){ go(i); syncLb(); stop(); lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); document.body.style.overflow = 'hidden'; }
+    function closeLb(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; start(); }
+    slides.forEach(function(s, i){ s.addEventListener('click', function(){ openLb(i); }); });
+    lb.querySelector('.lb-close').addEventListener('click', closeLb);
+    lb.querySelector('.lb-arrow.next').addEventListener('click', function(e){ e.stopPropagation(); go(idx + 1); syncLb(); });
+    lb.querySelector('.lb-arrow.prev').addEventListener('click', function(e){ e.stopPropagation(); go(idx - 1); syncLb(); });
+    lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && lb.classList.contains('open')) closeLb(); });
+    document.addEventListener('visibilitychange', function(){ if(document.hidden){ stop(); } else if(!lb.classList.contains('open')){ start(); } });
+    render(); start();
+  });
+})();
 </script>
 </body>
 </html>
