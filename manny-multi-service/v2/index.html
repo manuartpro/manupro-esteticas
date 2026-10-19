@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manny Multi Service LLC | Antes y Después — Transformaciones Reales en Toa Baja, PR</title>
+<meta name="description" content="Mira las transformaciones reales de Manny Multi Service LLC: techos sellados, tuberías de cobre nuevas, sistemas solares y más. Cada casa es única. Cotiza por WhatsApp: 939-383-4396.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1a33; --blue:#1565d8; --blue2:#2f86ff; --gold:#e9a100; --gold2:#f5b301;
+  --bg:#f4f6fa; --card:#ffffff; --ink:#12233d; --mut:#5d6f88; --line:#e2e8f2;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+h1,h2,h3{font-family:'Archivo',Arial,sans-serif;line-height:1.18}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;gap:14px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:52px;height:52px;border-radius:12px;object-fit:cover;border:2px solid var(--line)}
+.brand b{font-family:'Archivo';font-size:1rem;display:block;line-height:1.2;color:var(--navy)}
+.brand small{color:var(--gold);font-size:.7rem;letter-spacing:1.4px;text-transform:uppercase;font-weight:700}
+nav{margin-left:auto;display:flex;gap:20px;align-items:center}
+nav a.nk{color:var(--mut);font-size:.92rem;font-weight:600}
+nav a.nk:hover{color:var(--navy)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;border-radius:12px;padding:12px 20px;font-size:.95rem;transition:.2s;border:0;cursor:pointer}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:#12305e;transform:translateY(-2px)}
+.btn-wa{background:#22b95c;color:#fff}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(34,185,92,.35)}
+.hphone{font-weight:800;color:var(--navy);white-space:nowrap}
+@media(max-width:900px){nav a.nk,.hphone{display:none}}
+/* hero */
+.hero{background:linear-gradient(120deg,#0a1a33 55%,#12305e);color:#fff;padding:88px 0 70px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(245,179,1,.22),transparent 70%)}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;max-width:660px}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero p{color:#b9c7dc;max-width:580px;margin:18px 0 28px;font-size:1.08rem}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+.stats b{font-family:'Archivo';font-size:1.9rem;color:var(--gold2);display:block}
+.stats span{color:#9fb0c8;font-size:.85rem}
+/* sections */
+section{padding:80px 0}
+.sec-head{max-width:700px;margin:0 auto 44px;text-align:center}
+.sec-head .tag{color:var(--blue);font-weight:800;font-size:.8rem;letter-spacing:2.5px;text-transform:uppercase}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;margin:12px 0 12px;color:var(--navy)}
+.sec-head p{color:var(--mut)}
+/* before/after */
+.ba-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:26px}
+.ba-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(10,26,51,.08)}
+.ba{position:relative;aspect-ratio:4/3;overflow:hidden;user-select:none;--w:50%}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .bw{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--w)) 0 0)}
+.ba input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--w);width:3px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.5);transform:translateX(-50%);pointer-events:none}
+.ba .handle::after{content:'◂ ▸';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;color:var(--navy);font-size:.7rem;font-weight:800;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.ba .lbl{position:absolute;top:12px;font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:6px 12px;border-radius:100px;pointer-events:none}
+.ba .lbl.a{left:12px;background:rgba(10,26,51,.8);color:#fff}
+.ba .lbl.d{right:12px;background:var(--gold2);color:#1a1206}
+.ba-cap{padding:20px 22px}
+.ba-cap h3{font-size:1.05rem;color:var(--navy)}
+.ba-cap p{color:var(--mut);font-size:.9rem;margin-top:6px}
+/* filters + gallery */
+.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.filters button{border:1.5px solid var(--line);background:#fff;color:var(--mut);font-weight:700;font-size:.88rem;padding:10px 18px;border-radius:100px;cursor:pointer;transition:.2s;font-family:inherit}
+.filters button:hover{border-color:var(--blue);color:var(--blue)}
+.filters button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.gal figure{border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;background:#dfe6f0;transition:.25s}
+.gal figure.hide{display:none}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.35s}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;background:linear-gradient(transparent,rgba(8,18,38,.9));color:#fff;font-size:.82rem;font-weight:600}
+/* services strip */
+.svc-strip{display:flex;gap:12px;overflow-x:auto;padding:6px 2px 14px;scrollbar-width:thin}
+.svc-chip{flex:0 0 auto;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:10px 18px 10px 10px;font-weight:700;font-size:.88rem;color:var(--navy)}
+.svc-chip .ic{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,rgba(21,101,216,.15),rgba(245,179,1,.2));display:flex;align-items:center;justify-content:center}
+.svc-chip svg{width:22px;height:22px}
+/* form */
+#cotizar{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.form-wrap{max-width:680px;margin:0 auto}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:30px}
+.step{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:18px}
+.step b{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-family:'Archivo';margin-bottom:10px}
+.step p{font-size:.88rem;color:var(--mut)}
+.step p strong{color:var(--navy)}
+form.fcard{background:var(--bg);border:1.5px solid var(--line);border-radius:18px;padding:32px 28px}
+.frow{margin-bottom:16px}
+.frow label{display:block;font-weight:700;font-size:.88rem;margin-bottom:6px;color:var(--navy)}
+.frow input,.frow select,.frow textarea{width:100%;border:1.5px solid #cfd9e6;border-radius:10px;padding:13px 14px;font-size:1rem;font-family:inherit;background:#fff;color:var(--ink)}
+.frow input:focus,.frow select:focus,.frow textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,101,216,.14)}
+.frow textarea{min-height:100px;resize:vertical}
+.filebox{border:2px dashed #b9c6da;border-radius:12px;padding:22px;text-align:center;background:#fff;cursor:pointer;transition:.2s}
+.filebox:hover{border-color:var(--blue)}
+.filebox input{display:none}
+.filebox p{font-size:.9rem;color:var(--mut);margin-top:8px}
+.filebox strong{color:var(--navy)}
+#filecount{font-size:.82rem;color:var(--blue);font-weight:700;margin-top:6px}
+form.fcard .btn{width:100%;justify-content:center;font-size:1.05rem;padding:16px}
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:19px 22px;font-weight:700;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';color:var(--gold);font-size:1.5rem;font-weight:800;flex:none}
+.faq details[open] summary::after{content:'–'}
+.faq .a{padding:0 22px 20px;color:var(--mut);font-size:.94rem}
+/* footer */
+footer{background:#081426;color:#9fb0c8;padding:52px 0 26px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;margin-bottom:32px}
+.fgrid h4{color:var(--gold2);font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.fgrid p,.fgrid a{font-size:.92rem;display:block;margin-bottom:8px;color:#9fb0c8}
+.fgrid a:hover{color:#fff}
+.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem}
+/* floating */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;background:#22b95c;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(34,185,92,.5)}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hbar">
+    <a class="brand" href="#inicio"><img src="../assets/logo.jpg" alt="Logo Manny Multi Service LLC"><span><b>MANNY MULTI SERVICE</b><small>Calidad · Confianza · Compromiso</small></span></a>
+    <nav>
+      <a class="nk" href="#transformaciones">Antes / Después</a>
+      <a class="nk" href="#galeria">Galería</a>
+      <a class="nk" href="#faq">Preguntas</a>
+      <a class="hphone" href="tel:+19393834396">939-383-4396</a>
+      <a class="btn btn-wa" href="https://wa.me/19393834396?text=Hola%20Manny%20Multi%20Service%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+        WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <h1>Cambios drásticos, <em>casas únicas</em></h1>
+    <p>Desliza y compruébalo tú mismo: filtraciones que desaparecen, techos que vuelven a la vida y tuberías que quedan nuevas. Esto es lo que hacemos todos los días en Puerto Rico.</p>
+    <div class="hero-cta">
+      <a class="btn btn-wa" href="#cotizar">Cotizar mi proyecto</a>
+      <a class="btn btn-navy" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)" href="#transformaciones">Ver transformaciones</a>
+    </div>
+    <div class="stats">
+      <div><b>7</b><span>servicios especializados</span></div>
+      <div><b>100%</b><span>trabajos con fotos reales</span></div>
+      <div><b>1</b><span>llamado lo resuelve todo</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="transformaciones">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Antes / Después</div>
+      <h2>Desliza para ver el cambio</h2>
+      <p>Ejemplos reales de trabajos recientes. Cada casa es única, cada problema distinto — y cada resultado habla por sí solo. Mueve el control de cada foto.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <div class="ba" style="--w:50%">
+          <img src="../assets/techo-despues-01.jpg" alt="Techo reparado y pintado">
+          <div class="bw"><img src="../assets/techo-antes-02.jpg" alt="Techo dañado por filtración"></div>
+          <span class="lbl a">Antes</span><span class="lbl d">Después</span>
+          <div class="handle"></div>
+          <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
+        </div>
+        <div class="ba-cap"><h3>Techo con filtración → techo como nuevo</h3><p>Reparación de plafón dañado por agua, sellado y pintura. Adiós manchas y goteras.</p></div>
+      </div>
+      <div class="ba-card">
+        <div class="ba" style="--w:50%">
+          <img src="../assets/techo-despues-02.jpg" alt="Techo sellado e impermeabilizado">
+          <div class="bw"><img src="../assets/techo-antes-03.jpg" alt="Techo severamente deteriorado"></div>
+          <span class="lbl a">Antes</span><span class="lbl d">Después</span>
+          <div class="handle"></div>
+          <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
+        </div>
+        <div class="ba-cap"><h3>Techo deteriorado → techo sellado</h3><p>Impermeabilización completa: del daño severo a una superficie lista para años de lluvia.</p></div>
+      </div>
+      <div class="ba-card">
+        <div class="ba" style="--w:50%">
+          <img src="../assets/plomeria-03.jpg" alt="Tubería de cobre nueva instalada">
+          <div class="bw"><img src="../assets/plomeria-01.jpg" alt="Tubería vieja enterrada"></div>
+          <span class="lbl a">Antes</span><span class="lbl d">Después</span>
+          <div class="handle"></div>
+          <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
+        </div>
+        <div class="ba-cap"><h3>Tubería vieja → cobre nuevo</h3><p>Sustitución de líneas de agua deterioradas por cobre nuevo con conexiones profesionales.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Galería</div>
+      <h2>Explora por servicio</h2>
+      <p>Toca una categoría para filtrar los trabajos.</p>
+    </div>
+    <div class="filters">
+      <button class="on" data-f="all">Todos</button>
+      <button data-f="solar">Solar</button>
+      <button data-f="plomeria">Plomería</button>
+      <button data-f="techo">Techos</button>
+      <button data-f="electrica">Eléctrica</button>
+      <button data-f="albanileria">Albañilería</button>
+      <button data-f="soldadura">Soldadura</button>
+    </div>
+    <div class="gal" id="gal">
+      <figure data-cat="solar"><img src="../assets/hero-solar.jpg" alt="Placas solares en techo sellado" loading="lazy"><figcaption>Placas solares + techo sellado</figcaption></figure>
+      <figure data-cat="solar"><img src="../assets/solar-01.jpg" alt="Sistema solar instalado" loading="lazy"><figcaption>Sistema solar en techo</figcaption></figure>
+      <figure data-cat="solar"><img src="../assets/solar-02.jpg" alt="Paneles solares y tanque" loading="lazy"><figcaption>Paneles y calentador solar</figcaption></figure>
+      <figure data-cat="plomeria"><img src="../assets/plomeria-06.jpg" alt="Cisterna instalada" loading="lazy"><figcaption>Cisterna instalada</figcaption></figure>
+      <figure data-cat="plomeria"><img src="../assets/plomeria-03.jpg" alt="Cobre nuevo" loading="lazy"><figcaption>Cobre nuevo</figcaption></figure>
+      <figure data-cat="plomeria"><img src="../assets/plomeria-05.jpg" alt="Bomba de agua" loading="lazy"><figcaption>Bomba de agua</figcaption></figure>
+      <figure data-cat="plomeria"><img src="../assets/plomeria-04.jpg" alt="Sistema de cisterna exterior" loading="lazy"><figcaption>Sistema de cisterna</figcaption></figure>
+      <figure data-cat="plomeria"><img src="../assets/plomeria-02.jpg" alt="Válvula de agua" loading="lazy"><figcaption>Válvula principal</figcaption></figure>
+      <figure data-cat="plomeria"><img src="../assets/plomeria-07.jpg" alt="Reparación de tubería en pared" loading="lazy"><figcaption>Reparación en pared</figcaption></figure>
+      <figure data-cat="techo"><img src="../assets/techo-despues-02.jpg" alt="Techo impermeabilizado" loading="lazy"><figcaption>Techo impermeabilizado</figcaption></figure>
+      <figure data-cat="techo"><img src="../assets/techo-despues-01.jpg" alt="Techo interior reparado" loading="lazy"><figcaption>Interior reparado</figcaption></figure>
+      <figure data-cat="electrica"><img src="../assets/electrica-01.jpg" alt="Panel eléctrico" loading="lazy"><figcaption>Panel eléctrico</figcaption></figure>
+      <figure data-cat="albanileria"><img src="../assets/albanileria-03.jpg" alt="Losa de cemento" loading="lazy"><figcaption>Losa de cemento</figcaption></figure>
+      <figure data-cat="albanileria"><img src="../assets/albanileria-01.jpg" alt="Reparación de pared" loading="lazy"><figcaption>Reparación de pared</figcaption></figure>
+      <figure data-cat="soldadura"><img src="../assets/soldadura-01.jpg" alt="Portón y verja instalados" loading="lazy"><figcaption>Portón y verja</figcaption></figure>
+    </div>
+    <div style="margin-top:36px">
+      <div class="sec-head" style="margin-bottom:18px"><h2 style="font-size:1.4rem">Nuestros servicios</h2></div>
+      <div class="svc-strip">
+        <span class="svc-chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#e9a100" stroke-width="1.8"><circle cx="12" cy="9" r="3"/><path d="M12 3v2M6 5.5l1.4 1.4M18 5.5l-1.4 1.4M4 9h2M18 9h2M5 14l14 7M19 14L5 21"/></svg></span>Sistemas Solares</span>
+        <span class="svc-chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1565d8" stroke-width="1.8"><path d="M14.5 3l-8 10h5l-1.5 8 8-10h-5z"/></svg></span>Handyman</span>
+        <span class="svc-chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#e9a100" stroke-width="1.8"><path d="M4 20h16M6 20V10l6-6 6 6v10"/></svg></span>Soldadura</span>
+        <span class="svc-chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1565d8" stroke-width="1.8"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></span>Electricidad Básica</span>
+        <span class="svc-chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1565d8" stroke-width="1.8"><path d="M4 10h12v4H4zM16 12h3a2 2 0 0 1 2 2v3"/></svg></span>Plomería</span>
+        <span class="svc-chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#e9a100" stroke-width="1.8"><path d="M3 18h18M5 18V9l7-5 7 5v9"/></svg></span>Albañilería</span>
+        <span class="svc-chip"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1565d8" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>Mantenimiento General</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cotizar">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Cotización gratis</div>
+      <h2>Mándanos fotos de tu proyecto</h2>
+      <p>Una foto vale más que mil palabras. Llena el formulario en menos de un minuto.</p>
+    </div>
+    <div class="form-wrap">
+      <div class="steps">
+        <div class="step"><b>1</b><p><strong>Llena el formulario</strong> y elige las fotos del problema o del área a trabajar.</p></div>
+        <div class="step"><b>2</b><p><strong>Se abrirá WhatsApp</strong> con tu mensaje ya escrito y listo para enviar.</p></div>
+        <div class="step"><b>3</b><p><strong>Adjunta tus fotos en el chat</strong> de WhatsApp antes de pulsar enviar. Así de fácil.</p></div>
+      </div>
+      <form class="fcard" onsubmit="return enviarWA(event)">
+        <div class="frow"><label for="nombre">Tu nombre</label><input id="nombre" required placeholder="Ej. María Torres"></div>
+        <div class="frow"><label for="tel">Tu teléfono</label><input id="tel" type="tel" placeholder="Ej. 787-000-0000"></div>
+        <div class="frow"><label for="servicio">Servicio</label>
+          <select id="servicio" required>
+            <option value="">Selecciona…</option>
+            <option>Sistemas Solares</option><option>Handyman</option><option>Soldadura</option>
+            <option>Electricidad Básica</option><option>Plomería</option><option>Albañilería</option>
+            <option>Mantenimiento General</option><option>Otro</option>
+          </select>
+        </div>
+        <div class="frow"><label for="msg">Describe el trabajo</label><textarea id="msg" required placeholder="Cuéntanos qué necesitas…"></textarea></div>
+        <div class="frow">
+          <label>Fotos del trabajo (opcional)</label>
+          <label class="filebox" for="fotos">
+            <strong>Toca para elegir fotos</strong>
+            <input id="fotos" type="file" accept="image/*" multiple>
+            <p>Puedes seleccionar varias fotos de tu galería.<br>Se adjuntan en el chat de WhatsApp en el paso 3.</p>
+            <div id="filecount"></div>
+          </label>
+        </div>
+        <button class="btn btn-wa" type="submit">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+          Abrir WhatsApp con mi mensaje
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head"><div class="tag">Preguntas frecuentes</div><h2>Antes de escribirnos</h2></div>
+    <!-- FAQ propuesta — el cliente puede pedir ajustes -->
+    <div class="faq">
+      <details><summary>¿El estimado tiene algún costo?</summary><div class="a">No, es gratis y sin compromiso. Mientras más fotos nos envíes por WhatsApp, más preciso será el estimado.</div></details>
+      <details><summary>¿Qué áreas cubren?</summary><div class="a">Base en Toa Baja, PR, con servicio a pueblos cercanos del área metro y el norte. Confírmanos tu pueblo por WhatsApp.</div></details>
+      <details><summary>¿Atienden emergencias?</summary><div class="a">Sí: filtraciones, fallas eléctricas y problemas de agua se atienden con prioridad. Escríbenos y coordinamos la visita.</div></details>
+      <details><summary>¿Qué métodos de pago aceptan?</summary><div class="a">Efectivo, ATH Móvil y transferencia bancaria.</div></details>
+      <details><summary>¿Los trabajos tienen garantía?</summary><div class="a">Sí, con garantía por escrito según el servicio. Calidad, confianza y compromiso.</div></details>
+      <details><summary>¿Hacen trabajos pequeños de handyman?</summary><div class="a">Claro. Desde un arreglo puntual hasta proyectos completos de techo o sistema solar: ningún trabajo es muy pequeño.</div></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><h4>Manny Multi Service LLC</h4><p>Toa Baja, Puerto Rico<br>Calidad · Confianza · Compromiso</p></div>
+      <div><h4>Contacto</h4><a href="tel:+19393834396">939-383-4396</a><a href="mailto:mannymultiservice1@gmail.com">mannymultiservice1@gmail.com</a><a href="https://www.facebook.com/search/top?q=Manny%20Multi%20Service%20LLC" target="_blank" rel="noopener">Facebook: Manny Multi Service LLC</a></div>
+      <div><h4>Cotiza</h4><a href="https://wa.me/19393834396?text=Hola%20Manny%20Multi%20Service%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">WhatsApp directo</a><a href="#cotizar">Formulario con fotos</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Manny Multi Service LLC.</span><span>Demostración creada por ManuPro</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/19393834396?text=Hola%20Manny%20Multi%20Service%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+// before/after sliders
+document.querySelectorAll('.ba').forEach(function(ba){
+  var r=ba.querySelector('input[type=range]');
+  r.addEventListener('input',function(){ ba.style.setProperty('--w', r.value+'%'); });
+});
+// gallery filter
+document.querySelectorAll('.filters button').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.filters button').forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on');
+    var f=b.getAttribute('data-f');
+    document.querySelectorAll('#gal figure').forEach(function(fig){
+      fig.classList.toggle('hide', f!=='all' && fig.getAttribute('data-cat')!==f);
+    });
+  });
+});
+// file counter
+document.getElementById('fotos').addEventListener('change',function(){
+  var n=this.files.length;
+  document.getElementById('filecount').textContent = n? n+(n===1?' foto seleccionada':' fotos seleccionadas')+' — recuerda adjuntarlas en el chat de WhatsApp' : '';
+});
+function enviarWA(e){
+  e.preventDefault();
+  var f=e.target, n=f.fotos.files.length;
+  var txt="Hola Manny Multi Service, soy "+f.nombre.value.trim()+
+    (f.tel.value.trim()?" ("+f.tel.value.trim()+")":"")+
+    ". Necesito: "+f.servicio.value+". Detalles: "+f.msg.value.trim()+
+    (n? " (Te envío "+n+(n===1?" foto":" fotos")+" del trabajo en este chat.)" : "");
+  window.open("https://wa.me/19393834396?text="+encodeURIComponent(txt),"_blank");
+  return false;
+}
+</script>
+</body>
+</html>
