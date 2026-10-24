@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kWh Solar Puerto Rico | Energía hoy, tranquilidad siempre</title>
+<meta name="description" content="kWh Solar Puerto Rico: sistemas solares residenciales, comerciales e industriales, backup para apartamentos, Medición Neta, financiamiento y agua purificada Kilowatter. Energía hoy, tranquilidad siempre.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071B3F;--navy2:#0B2A5E;--gold:#FFC400;--orange:#FF6A00;--red:#E11D2E;--green:#1B9E4B;--wa:#25D366;--ink:#12233F;--mut:#5B6B85;--bg:#F4F7FC;--card:#fff;--radius:22px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);overflow-x:hidden}
+h1,h2,h3,.display{font-family:Montserrat,sans-serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.topbar{background:var(--navy);color:#fff;font-size:.85rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.topbar b{color:var(--gold)}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 4px 24px rgba(7,27,63,.10)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 20px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{width:62px;height:62px;object-fit:cover;border-radius:14px;border:2px solid var(--gold)}
+.logo .t{line-height:1}
+.logo .t strong{font-family:Montserrat;font-size:1.35rem;color:var(--navy);letter-spacing:-.5px}
+.logo .t span{font-size:.68rem;letter-spacing:3px;color:var(--orange);font-weight:800}
+.navlinks{display:flex;gap:20px;font-weight:600;font-size:.95rem}
+.navlinks a:hover{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font-weight:800;border-radius:999px;padding:14px 24px;font-size:1rem;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,0,0,.18)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-green{background:var(--wa);color:#fff}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-orange{background:var(--orange);color:#fff}
+.btn-outline{background:transparent;color:#fff;border:2px solid #fff}
+.hero{position:relative;color:#fff;overflow:hidden;background:#071B3F}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.95}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,27,63,.92) 0%,rgba(7,27,63,.72) 48%,rgba(7,27,63,.15) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-top:72px;padding-bottom:72px}
+.pill{display:inline-block;background:var(--red);color:#fff;font-weight:800;letter-spacing:1px;font-size:.8rem;padding:8px 16px;border-radius:999px;text-transform:uppercase}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:.98;letter-spacing:-1px;margin:18px 0 14px;text-transform:uppercase}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p.lead{font-size:clamp(1.05rem,2vw,1.35rem);max-width:620px;line-height:1.55;color:#E8EEF8}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(6px);border-radius:16px;padding:14px 18px;min-width:150px}
+.stat b{font-family:Montserrat;font-size:1.5rem;color:var(--gold);display:block}
+.stat span{font-size:.85rem;color:#E8EEF8}
+.sun{position:absolute;right:6%;top:38px;z-index:2;width:110px;height:110px;opacity:.95;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+section{padding:64px 0}
+.sec-head{max-width:760px;margin-bottom:30px}
+.sec-head .kicker{color:var(--orange);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.8rem}
+.sec-head h2{font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.08;color:var(--navy);margin:10px 0}
+.sec-head p{color:var(--mut);line-height:1.6;font-size:1.05rem}
+/* Marquee anuncios */
+.ads{background:var(--navy);color:#fff;overflow:hidden}
+.ads h2{color:#fff}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:20px;width:max-content;animation:scroll 42s linear infinite;padding:6px 0}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.adcard{flex:0 0 300px;background:#fff;border-radius:20px;overflow:hidden;cursor:zoom-in;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.adcard img{width:100%;height:420px;object-fit:cover}
+.adcard figcaption{padding:12px 14px;color:var(--navy);font-weight:800;font-size:.92rem}
+/* Ofertas */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.offer{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 14px 34px rgba(7,27,63,.10);display:flex;flex-direction:column;position:relative}
+.offer .tag{position:absolute;top:14px;left:14px;z-index:2;background:var(--red);color:#fff;font-weight:800;font-size:.75rem;padding:7px 12px;border-radius:999px;text-transform:uppercase}
+.offer img{height:230px;width:100%;object-fit:cover}
+.offer .body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.offer h3{font-size:1.3rem;color:var(--navy)}
+.offer ul{list-style:none;color:var(--mut);line-height:1.6;font-size:.95rem}
+.offer ul li::before{content:"✓ ";color:var(--green);font-weight:800}
+.price{font-family:Montserrat;font-size:2.1rem;color:var(--navy);font-weight:900}
+.price small{font-size:.9rem;color:var(--mut)}
+.offer .body .btn{margin-top:auto}
+/* Servicios */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.svc{background:#fff;border-radius:20px;padding:24px;box-shadow:0 8px 24px rgba(7,27,63,.07)}
+.svc .ic{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,var(--gold),var(--orange));display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.svc .ic svg{width:30px;height:30px;fill:#fff}
+.svc h3{color:var(--navy);margin-bottom:8px}
+.svc p{color:var(--mut);line-height:1.6;font-size:.95rem}
+/* Simulador */
+.calc{background:linear-gradient(135deg,#071B3F,#0B2A5E);color:#fff;border-radius:26px;padding:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;overflow:hidden;position:relative}
+.calc h2{color:#fff;font-size:1.8rem;margin-bottom:10px}
+.calc p{color:#CBD8EF;line-height:1.6}
+.calc input[type=range]{width:100%;accent-color:var(--gold);margin:18px 0 8px}
+.calc .out{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:22px}
+.calc .out .big{font-family:Montserrat;font-size:2rem;color:var(--gold);font-weight:900}
+.calc .out div{margin:10px 0;color:#E8EEF8}
+.calc .out b{color:#fff}
+/* Apagón toggle */
+.blackout{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.bo{border-radius:22px;overflow:hidden;position:relative;min-height:340px;color:#fff}
+.bo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bo .txt{position:absolute;left:0;right:0;bottom:0;padding:22px;background:linear-gradient(transparent,rgba(0,0,0,.82))}
+.bo.off{filter:grayscale(.9) brightness(.55)}
+.bo h3{font-size:1.4rem}
+/* Galería IA */
+.gal{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
+.gal figure{border-radius:22px;overflow:hidden;position:relative}
+.gal figure img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;font-weight:700}
+.gal .col{display:grid;gap:18px}
+/* Proceso y pasos */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.step{background:#fff;border-radius:18px;padding:20px;text-align:center;box-shadow:0 8px 22px rgba(7,27,63,.07)}
+.step b{display:inline-flex;width:44px;height:44px;border-radius:50%;background:var(--navy);color:var(--gold);align-items:center;justify-content:center;font-family:Montserrat;font-size:1.2rem;margin-bottom:10px}
+.step h3{font-size:1rem;color:var(--navy);margin-bottom:6px}
+.step p{font-size:.88rem;color:var(--mut);line-height:1.5}
+/* FAQ */
+.faq{max-width:840px;margin:0 auto}
+.faq details{background:#fff;border-radius:16px;padding:20px 22px;margin-bottom:12px;box-shadow:0 6px 18px rgba(7,27,63,.06);cursor:pointer}
+.faq summary{font-weight:800;color:var(--navy);font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--orange);font-size:1.4rem;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--mut);line-height:1.65;margin-top:10px}
+/* Formularios */
+.forms{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+form.card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:0 14px 34px rgba(7,27,63,.10)}
+form.card h3{color:var(--navy);font-size:1.35rem;margin-bottom:6px}
+form.card p{color:var(--mut);font-size:.95rem;line-height:1.55;margin-bottom:18px}
+.field{margin-bottom:14px}
+.field label{display:block;font-weight:700;font-size:.9rem;margin-bottom:6px;color:var(--navy)}
+.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:2px solid #D9E2F0;border-radius:12px;font:inherit;font-size:1rem}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange)}
+.form-ok{display:none;background:#E7F8EE;color:#146C35;border-radius:12px;padding:12px 14px;font-weight:700;margin-bottom:14px}
+.contact-strip{background:var(--gold);border-radius:22px;padding:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.contact-strip h3{color:var(--navy);font-size:1.5rem}
+.contact-strip p{color:#3D2E00;font-weight:600}
+footer{background:var(--navy);color:#CBD8EF;padding:44px 0 26px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;margin-bottom:12px}
+footer a:hover{color:var(--gold)}
+footer p,footer li{line-height:1.7;font-size:.95rem}
+footer ul{list-style:none}
+.foot-note{border-top:1px solid rgba(255,255,255,.15);margin-top:28px;padding-top:18px;font-size:.85rem;text-align:center;color:#8FA3C4}
+/* WhatsApp flotante animado */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:100;display:flex;align-items:center;gap:12px}
+.wa-tip{background:#fff;color:var(--navy);font-weight:800;padding:10px 14px;border-radius:999px;box-shadow:0 10px 26px rgba(0,0,0,.25);animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.wa-btn{position:relative;width:68px;height:68px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(37,211,102,.55);animation:pulse 2s infinite}
+.wa-btn svg{width:36px;height:36px;fill:#fff}
+.wa-btn::before,.wa-btn::after{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid var(--wa);animation:ring 2s ease-out infinite}
+.wa-btn::after{animation-delay:1s}
+@keyframes ring{from{transform:scale(1);opacity:.8}to{transform:scale(1.7);opacity:0}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+/* Lightbox */
+.lb{position:fixed;inset:0;background:rgba(3,10,25,.92);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:86vh;border-radius:16px;object-fit:contain;background:#fff}
+.lb button{position:absolute;top:18px;right:20px;background:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:1.4rem;cursor:pointer;font-weight:900}
+.reveal{opacity:0;transform:translateY(22px);transition:.6s}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.grid3,.forms{grid-template-columns:1fr}.grid4{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.calc,.blackout,.gal{grid-template-columns:1fr}.navlinks{display:none}.sun{display:none}footer .cols{grid-template-columns:1fr}.wa-tip{display:none}}
+@media(max-width:560px){.grid4,.steps{grid-template-columns:1fr}.hero .wrap{padding-top:44px;padding-bottom:44px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span><b>kWh Solar</b> — Energía hoy, tranquilidad siempre</span><span>Llámanos: <a href="tel:+19394751264"><b>939-475-1264</b></a> &nbsp;|&nbsp; WhatsApp: <a href="https://wa.me/17876750046"><b>787-675-0046</b></a></span></div></div>
+<header><div class="wrap nav">
+<div class="logo"><img src="kwh-solar-assets/logo.jpg" alt="Logo kWh Solar"><div class="t"><strong>kWh Solar</strong><br><span>PUERTO RICO</span></div></div>
+<nav class="navlinks"><a href="#ofertas">Ofertas</a><a href="#anuncios">Anuncios</a><a href="#servicios">Servicios</a><a href="#simulador">Simulador</a><a href="#preguntas">Preguntas</a><a href="#cotizacion">Cotización</a></nav>
+<a class="btn btn-navy" href="#cotizacion">Cotización gratis</a>
+</div></header>
+
+<section class="hero">
+<img class="bg" src="kwh-solar-assets/hero-ai.webp" alt="Casa moderna en Puerto Rico con sistema solar al atardecer">
+<svg class="sun" viewBox="0 0 100 100" aria-hidden="true"><g fill="#FFC400"><circle cx="50" cy="50" r="20"/><path d="M50 0l6 18-6-4-6 4zM50 100l-6-18 6 4 6-4zM0 50l18-6-4 6 4 6zM100 50l-18 6 4-6-4-6zM15 15l16 8-7 1-1 7zM85 85l-16-8 7-1 1-7zM85 15l-8 16-1-7-7-1zM15 85l8-16 1 7 7 1z"/></g></svg>
+<div class="wrap">
+<span class="pill">Anticipo Navideño — 2da batería gratis</span>
+<h1>Energía hoy,<br><em>tranquilidad</em><br>siempre.</h1>
+<p class="lead">Tu hogar, tu decisión. Sistemas solares residenciales, comerciales e industriales en Puerto Rico, con respaldo para que nunca te quedes sin luz — ni en el próximo apagón.</p>
+<div class="cta">
+<a class="btn btn-green" href="https://wa.me/17876750046?text=Hola%20kWh%20Solar%2C%20quiero%20mi%20cotizaci%C3%B3n%20gratis." target="_blank" rel="noopener">WhatsApp: 787-675-0046</a>
+<a class="btn btn-outline" href="#ofertas">Ver ofertas</a>
+</div>
+<div class="stats">
+<div class="stat"><b>10 años</b><span>Garantía sistema backup</span></div>
+<div class="stat"><b>De por vida</b><span>Garantía Kilowatter</span></div>
+<div class="stat"><b>Residencial · Comercial · Industrial</b><span>Soluciones a tu medida</span></div>
+</div>
+</div>
+</section>
+
+<section class="ads" id="anuncios">
+<div class="wrap">
+<div class="sec-head reveal"><span class="kicker">Anuncios</span><h2>Ofertas corriendo para ti</h2><p>Desliza la mirada: nuestros anuncios se mueven solos. Toca cualquier imagen para verla en grande. Pasa el cursor por encima para pausar.</p></div>
+</div>
+<div class="marquee" aria-label="Carrusel automático de anuncios kWh Solar">
+<div class="track" id="adTrack">
+<figure class="adcard"><img src="kwh-solar-assets/anuncio-navideno.jpg" alt="Anticipo Navideño $19,995"><figcaption>Anticipo Navideño — $19,995</figcaption></figure>
+<figure class="adcard"><img src="kwh-solar-assets/anuncio-backup.jpg" alt="Sistema backup para apartamento $9,995"><figcaption>Backup para apartamento — $9,995</figcaption></figure>
+<figure class="adcard"><img src="kwh-solar-assets/anuncio-agua.jpg" alt="Kilowatter agua purificada $850"><figcaption>Kilowatter agua purificada — $850</figcaption></figure>
+<figure class="adcard"><img src="kwh-solar-assets/anuncio-medicion.jpg" alt="Medición Neta"><figcaption>Medición Neta — tu energía trabaja para ti</figcaption></figure>
+<figure class="adcard"><img src="kwh-solar-assets/anuncio-financiamiento.jpg" alt="Financiamiento disponible"><figcaption>Financiamiento disponible</figcaption></figure>
+<figure class="adcard"><img src="kwh-solar-assets/anuncio-compromiso.jpg" alt="Nuestro compromiso"><figcaption>Nuestro compromiso — más que energía</figcaption></figure>
+<figure class="adcard"><img src="kwh-solar-assets/anuncio-gracias.jpg" alt="Gracias por confiar en kWh Solar"><figcaption>Gracias por confiar en un futuro más brillante</figcaption></figure>
+</div>
+</div>
+</section>
+
+<section id="ofertas">
+<div class="wrap">
+<div class="sec-head reveal"><span class="kicker">Ofertas destacadas</span><h2>Elige tu tranquilidad</h2><p>Precios y equipos tal como aparecen en nuestros anuncios. Toca el botón y escríbenos por WhatsApp con la oferta ya seleccionada.</p></div>
+<div class="grid3">
+<article class="offer reveal"><span class="tag">Navidad</span><img src="kwh-solar-assets/anuncio-navideno.jpg" alt="Anticipo Navideño"><div class="body"><h3>Anticipo Navideño</h3><ul><li>6 placas bifaciales Canadian Solar de 680W — más potencia, menos espacio</li><li>Inversor Sol-Ark</li><li>Baterías SUNEC</li><li>2da batería GRATIS</li></ul><div class="price">$19,995</div><a class="btn btn-orange" href="https://wa.me/17876750046?text=Hola%20kWh%20Solar%2C%20me%20interesa%20el%20Anticipo%20Navide%C3%B1o%20de%20%2419%2C995%20con%202da%20bater%C3%ADa%20gratis." target="_blank" rel="noopener">Quiero esta oferta</a></div></article>
+<article class="offer reveal"><span class="tag">Apartamentos</span><img src="kwh-solar-assets/anuncio-backup.jpg" alt="Sistema backup para apartamento"><div class="body"><h3>Sistema Backup para Apartamento</h3><ul><li>Inversor híbrido de 4.8 kW</li><li>1 batería de 10 kWh</li><li>Equipos nuevos y garantizados</li><li>Ideal para emergencias</li><li>Instalación y financiamiento disponible</li></ul><div class="price">$9,995 <small>· sistema completo</small></div><p style="color:var(--mut);font-size:.9rem">Garantía de 10 años.</p><a class="btn btn-orange" href="https://wa.me/17876750046?text=Hola%20kWh%20Solar%2C%20me%20interesa%20el%20Sistema%20Backup%20para%20Apartamento%20de%20%249%2C995." target="_blank" rel="noopener">Quiero esta oferta</a></div></article>
+<article class="offer reveal"><span class="tag">Agua pura</span><img src="kwh-solar-assets/anuncio-agua.jpg" alt="Kilowatter agua purificada"><div class="body"><h3>Kilowatter — Agua Purificada</h3><ul><li>4 etapas de filtración</li><li>Tanque de almacenamiento incluido</li><li>Instalación bajo fregadero</li><li>Agua limpia y de mejor sabor</li><li>Ideal para el hogar</li></ul><div class="price">$850</div><p style="color:var(--mut);font-size:.9rem">Garantía de por vida.</p><a class="btn btn-orange" href="https://wa.me/17876750046?text=Hola%20kWh%20Solar%2C%20me%20interesa%20el%20sistema%20Kilowatter%20de%20agua%20purificada%20de%20%24850." target="_blank" rel="noopener">Quiero esta oferta</a></div></article>
+</div>
+</div>
+</section>
+
+<section id="servicios" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head reveal"><span class="kicker">Servicios</span><h2>Más que energía, un mejor Puerto Rico</h2></div>
+<div class="grid4">
+<div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-12v-9H3z"/></svg></div><h3>Solar Residencial</h3><p>Tu casa produciendo su propia energía, con respaldo para vivir tranquilo todos los días.</p></div>
+<div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13h-3v-6H7v6z"/></svg></div><h3>Solar Comercial</h3><p>Negocios con energía limpia, menor dependencia de la red y costos bajo control.</p></div>
+<div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 20h20v-2H2zM4 18V9h6v9zm10 0V4h6v14z"/></svg></div><h3>Solar Industrial</h3><p>Sistemas de alto rendimiento para operaciones que no pueden parar.</p></div>
+<div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div><h3>Backup y Baterías</h3><p>Energía cuando más la necesitas. Respaldo para casas y apartamentos, con garantía de 10 años en el sistema backup.</p></div>
+<div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 017 7c0 4-4 9-7 11-3-2-7-7-7-11a7 7 0 017-7z"/></svg></div><h3>Medición Neta</h3><p>Genera tu energía, úsala primero y recibe créditos en tu factura de LUMA por el excedente que envías a la red.</p></div>
+<div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-8 12a4 4 0 110-8 4 4 0 010 8z"/></svg></div><h3>Financiamiento</h3><p>Tasas competitivas, términos flexibles y cuotas accesibles con cooperativas y entidades bancarias de confianza.</p></div>
+<div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2s6 6.5 6 11a6 6 0 01-12 0c0-4.5 6-11 6-11z"/></svg></div><h3>Kilowatter — Agua Purificada</h3><p>Agua pura para un futuro más saludable. 4 etapas de filtración y garantía de por vida.</p></div>
+<div class="svc reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></div><h3>Permisos y Soporte</h3><p>Te acompañamos en todo el proceso: evaluación personalizada, diseño, tramitación de permisos, instalación y servicio postventa.</p></div>
+</div>
+</div>
+</section>
+
+<section id="simulador" style="padding-top:0">
+<div class="wrap">
+<div class="calc reveal">
+<div>
+<h2>Simulador de ahorro</h2>
+<p>Mueve la barra según lo que pagas de luz al mes y descubre, en segundos, un estimado de tu sistema. Es un estimado: la evaluación personalizada confirma el diseño final para tu hogar.</p>
+<label style="display:block;margin-top:20px;font-weight:800">Tu factura mensual de LUMA: <span id="billLabel" style="color:var(--gold)">$250</span></label>
+<input type="range" id="bill" min="80" max="800" step="10" value="250">
+<p style="font-size:.85rem">Estimado con tarifa de referencia y producción solar típica en Puerto Rico. No es una cotización final.</p>
+<a class="btn btn-gold" style="margin-top:16px" href="#" id="calcWa">Enviar este estimado por WhatsApp</a>
+</div>
+<div class="out">
+<div>Sistema estimado: <span class="big" id="outKw">—</span></div>
+<div>Placas estimadas (680W): <b id="outPanels">—</b></div>
+<div>Ahorro mensual estimado: <b id="outSave">—</b></div>
+<div>Ahorro anual estimado: <b id="outYear">—</b></div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+<div class="sec-head reveal"><span class="kicker">La diferencia kWh Solar</span><h2>Cuando se va la luz, tu casa sigue</h2><p>Sin respaldo, un apagón lo apaga todo. Con kWh Solar, tu familia sigue con luz, nevera, abanicos y tranquilidad.</p></div>
+<div class="blackout">
+<div class="bo off reveal"><img src="kwh-solar-assets/apartamento-ai.webp" alt="Hogar sin respaldo durante un apagón"><div class="txt"><h3>Sin respaldo</h3><p>Oscuridad, calor y todo detenido hasta que regrese la luz.</p></div></div>
+<div class="bo reveal"><img src="kwh-solar-assets/instalador-ai.webp" alt="Instalación profesional de paneles solares"><div class="txt"><h3>Con kWh Solar</h3><p>Energía limpia, batería cargada y tu hogar funcionando. Energía hoy, tranquilidad siempre.</p></div></div>
+</div>
+<div class="gal" style="margin-top:18px">
+<figure class="reveal"><img src="kwh-solar-assets/hero-ai.webp" alt="Casa puertorriqueña con paneles solares al atardecer"><figcaption>Hogares más seguros, con energía propia al atardecer en Puerto Rico.</figcaption></figure>
+<div class="col">
+<figure class="reveal"><img src="kwh-solar-assets/apartamento-ai.webp" alt="Familia tranquila en su apartamento de noche con batería"><figcaption>La familia tranquila, aunque afuera sea de noche.</figcaption></figure>
+<figure class="reveal"><img src="kwh-solar-assets/instalador-ai.webp" alt="Instalación certificada en techo"><figcaption>Instalación profesional y certificada.</figcaption></figure>
+</div>
+</div>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+<div class="sec-head reveal"><span class="kicker">Así de fácil</span><h2>De la evaluación a tu tranquilidad, en 5 pasos</h2></div>
+<div class="steps">
+<div class="step reveal"><b>1</b><h3>Evaluación personalizada</h3><p>Conocemos tu consumo, tu techo y tu necesidad real.</p></div>
+<div class="step reveal"><b>2</b><h3>Diseño del sistema</h3><p>Placas, inversor y batería a tu medida, sin más ni menos.</p></div>
+<div class="step reveal"><b>3</b><h3>Permisos y Medición Neta</h3><p>Tramitamos todo con LUMA como parte integral de tu proyecto.</p></div>
+<div class="step reveal"><b>4</b><h3>Instalación profesional</h3><p>Equipos nuevos, de alto rendimiento y larga durabilidad.</p></div>
+<div class="step reveal"><b>5</b><h3>Soporte y garantía</h3><p>Siempre contigo: antes, durante y después. Respaldo real.</p></div>
+</div>
+</div>
+</section>
+
+<section id="preguntas" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto"><span class="kicker">Preguntas frecuentes</span><h2>Preguntas con respuestas claras</h2><p>Toca cada pregunta para ver su respuesta.</p></div>
+<div class="faq">
+<details class="reveal"><summary>¿Qué es la Medición Neta?</summary><p>Es el programa que te permite generar tu propia energía y recibir créditos en tu factura de LUMA por el exceso que produces y envías a la red. Tu sistema trabaja a tu favor: usas tu energía primero, el excedente se envía a la red y LUMA te acredita por esa energía entregada.</p></details>
+<details class="reveal"><summary>¿Mi sistema funciona cuando se va la luz?</summary><p>Con batería y respaldo, sí: tu hogar sigue con energía durante un apagón. Por eso el Sistema Backup para Apartamento incluye inversor híbrido de 4.8 kW y batería de 10 kWh, y el Anticipo Navideño incluye baterías SUNEC con 2da batería gratis.</p></details>
+<details class="reveal"><summary>¿Qué incluye el Anticipo Navideño de $19,995?</summary><p>6 placas bifaciales Canadian Solar de 680W (más potencia, menos espacio), inversor Sol-Ark y baterías SUNEC, con 2da batería gratis. Escríbenos por WhatsApp y confirmamos disponibilidad y detalles de instalación para tu hogar.</p></details>
+<details class="reveal"><summary>¿Hay una opción para apartamentos?</summary><p>Sí. El Sistema Backup para Apartamento es un sistema completo de $9,995 con inversor híbrido de 4.8 kW, 1 batería de 10 kWh, equipos nuevos y garantizados, garantía de 10 años, instalación y financiamiento disponible.</p></details>
+<details class="reveal"><summary>¿Puedo financiar mi sistema?</summary><p>Sí. Hay opciones flexibles para tu tranquilidad: tasas competitivas, términos flexibles y cuotas accesibles, con cooperativas y entidades bancarias de confianza. El proceso es ágil y sencillo, con asesoría personalizada: aprueba y comienza a ahorrar.</p></details>
+<details class="reveal"><summary>¿Qué es Kilowatter y cuánto cuesta?</summary><p>Kilowatter es el sistema de agua purificada de kWh Solar: 4 etapas de filtración, tanque de almacenamiento incluido, instalación bajo fregadero, agua limpia y de mejor sabor, ideal para el hogar. Cuesta $850 y tiene garantía de por vida.</p></details>
+<details class="reveal"><summary>¿Atienden casas, negocios e industrias?</summary><p>Sí. kWh Solar trabaja soluciones residenciales, comerciales e industriales, además de sistemas backup. Juntos por un Puerto Rico más fuerte: hogares fuertes, comunidades sostenibles.</p></details>
+<details class="reveal"><summary>¿Cómo empiezo?</summary><p>Llena el formulario de cotización abajo o escríbenos directo por WhatsApp al 787-675-0046. También puedes llamarnos al 939-475-1264. La evaluación es personalizada y sin compromiso.</p></details>
+</div>
+</div>
+</section>
+
+<section id="cotizacion" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head reveal"><span class="kicker">Cotización gratis</span><h2>Tu futuro sí se puede</h2><p>Completa el formulario y se abrirá WhatsApp con tu mensaje listo para enviar a kWh Solar. Sin vueltas, sin spam.</p></div>
+<div class="forms">
+<form class="card reveal" id="formSolar">
+<h3>Cotización solar y backup</h3><p>Para casas, apartamentos, negocios e industrias.</p>
+<div class="form-ok" id="okSolar">Mensaje listo. Se abrirá WhatsApp para que lo envíes.</div>
+<div class="field"><label for="fNombre">Nombre *</label><input id="fNombre" required placeholder="Tu nombre"></div>
+<div class="field"><label for="fTel">Teléfono *</label><input id="fTel" required type="tel" placeholder="787-000-0000"></div>
+<div class="field"><label for="fPueblo">Pueblo</label><input id="fPueblo" placeholder="Ej. Toa Baja, San Juan, Ponce"></div>
+<div class="field"><label for="fTipo">¿Qué te interesa? *</label><select id="fTipo" required><option value="">Elige una opción</option><option>Anticipo Navideño $19,995</option><option>Sistema Backup para Apartamento $9,995</option><option>Sistema solar residencial</option><option>Sistema solar comercial / industrial</option><option>Medición Neta</option><option>Financiamiento</option></select></div>
+<div class="field"><label for="fFactura">Factura mensual de luz aprox.</label><input id="fFactura" type="number" min="0" placeholder="Ej. 250"></div>
+<div class="field"><label for="fMsg">Mensaje</label><textarea id="fMsg" rows="3" placeholder="Cuéntanos tu necesidad: techo, consumo, urgencia..."></textarea></div>
+<button class="btn btn-green" type="submit" style="width:100%">Enviar por WhatsApp</button>
+</form>
+<form class="card reveal" id="formAgua">
+<h3>Kilowatter — agua purificada</h3><p>Agua pura para un futuro más saludable. $850, garantía de por vida.</p>
+<div class="form-ok" id="okAgua">Mensaje listo. Se abrirá WhatsApp para que lo envíes.</div>
+<div class="field"><label for="aNombre">Nombre *</label><input id="aNombre" required placeholder="Tu nombre"></div>
+<div class="field"><label for="aTel">Teléfono *</label><input id="aTel" required type="tel" placeholder="787-000-0000"></div>
+<div class="field"><label for="aPueblo">Pueblo</label><input id="aPueblo" placeholder="Ej. Bayamón, Carolina"></div>
+<div class="field"><label for="aMsg">Mensaje</label><textarea id="aMsg" rows="3" placeholder="Ej. Quiero el sistema Kilowatter para mi hogar.">Quiero información del sistema Kilowatter de agua purificada ($850).</textarea></div>
+<button class="btn btn-navy" type="submit" style="width:100%">Solicitar por WhatsApp</button>
+<p style="margin-top:14px;font-size:.88rem;color:var(--mut)">También puedes escribir directo al WhatsApp <b>787-675-0046</b> o llamar al <b>939-475-1264</b>.</p>
+</form>
+</div>
+<div class="contact-strip reveal" style="margin-top:20px">
+<div><h3>¿Prefieres hablar con alguien ya?</h3><p>Energía hoy, tranquilidad siempre. Juntos por un Puerto Rico más fuerte.</p></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-navy" href="tel:+19394751264">Llamar 939-475-1264</a><a class="btn btn-green" href="https://wa.me/17876750046" target="_blank" rel="noopener">WhatsApp 787-675-0046</a></div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="cols">
+<div><div class="logo" style="margin-bottom:12px"><img src="kwh-solar-assets/logo.jpg" alt="Logo kWh Solar"><div class="t"><strong style="color:#fff">kWh Solar</strong><br><span>PUERTO RICO</span></div></div><p>Energía hoy, tranquilidad siempre. Energía limpia, mayor ahorro, familias más seguras y un futuro sostenible para Puerto Rico.</p><p style="margin-top:10px">Residencial · Comercial · Industrial</p></div>
+<div><h4>Contacto</h4><ul><li>Teléfono: <a href="tel:+19394751264">939-475-1264</a></li><li>WhatsApp: <a href="https://wa.me/17876750046" target="_blank" rel="noopener">787-675-0046</a></li><li>Facebook: <a href="https://www.facebook.com/share/14pX1cH7c56/" target="_blank" rel="noopener">kWh Solar en Facebook</a></li></ul></div>
+<div><h4>Ofertas</h4><ul><li><a href="#ofertas">Anticipo Navideño — $19,995</a></li><li><a href="#ofertas">Backup para Apartamento — $9,995</a></li><li><a href="#ofertas">Kilowatter — $850</a></li><li><a href="#servicios">Medición Neta</a></li><li><a href="#servicios">Financiamiento disponible</a></li></ul></div>
+</div>
+<div class="foot-note">© 2026 kWh Solar Puerto Rico — Energía y soluciones para un mejor mañana. Sitio web creado por ManuPro.</div>
+</div>
+</footer>
+
+<div class="wa-float">
+<span class="wa-tip">¡Escríbenos por WhatsApp!</span>
+<a class="wa-btn" href="https://wa.me/17876750046?text=Hola%20kWh%20Solar%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener" aria-label="Abrir WhatsApp de kWh Solar"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.8-.9c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.1.1.7-.2 1.2z"/></svg></a>
+</div>
+
+<div class="lb" id="lightbox"><button id="lbClose" aria-label="Cerrar">×</button><img id="lbImg" src="" alt="Anuncio kWh Solar en grande"></div>
+
+<script>
+var WA="https://wa.me/17876750046?text=";
+// Marquee: duplicar anuncios para bucle infinito
+(function(){var t=document.getElementById('adTrack');t.innerHTML+=t.innerHTML;})();
+// Lightbox
+var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg');
+document.querySelectorAll('.adcard img').forEach(function(im){im.addEventListener('click',function(){lbImg.src=im.src;lb.classList.add('open');});});
+document.getElementById('lbClose').addEventListener('click',function(){lb.classList.remove('open');});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('open');});
+// Reveal on scroll
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+// Simulador
+var bill=document.getElementById('bill');
+function calc(){
+  var f=parseFloat(bill.value)||0;
+  document.getElementById('billLabel').textContent='$'+f;
+  var kwh=f/0.22, kw=kwh/130, panels=Math.ceil(kw*1000/680);
+  document.getElementById('outKw').textContent=kw.toFixed(1)+' kW';
+  document.getElementById('outPanels').textContent=panels+' placas';
+  document.getElementById('outSave').textContent='$'+Math.round(f*0.85)+' / mes';
+  document.getElementById('outYear').textContent='$'+Math.round(f*0.85*12)+' / año';
+  document.getElementById('calcWa').href=WA+encodeURIComponent('Hola kWh Solar, mi factura mensual es de $'+f+'. Mi estimado en su website fue: '+kw.toFixed(1)+' kW, '+panels+' placas de 680W, ahorro estimado $'+Math.round(f*0.85)+' al mes. Quiero mi cotización personalizada.');
+  document.getElementById('calcWa').target='_blank';document.getElementById('calcWa').rel='noopener';
+}
+bill.addEventListener('input',calc);calc();
+// Formularios -> WhatsApp
+document.getElementById('formSolar').addEventListener('submit',function(e){
+  e.preventDefault();
+  var msg='Hola kWh Solar, quiero una cotización.\nNombre: '+document.getElementById('fNombre').value+'\nTeléfono: '+document.getElementById('fTel').value+'\nPueblo: '+document.getElementById('fPueblo').value+'\nInterés: '+document.getElementById('fTipo').value+'\nFactura mensual aprox.: $'+document.getElementById('fFactura').value+'\nMensaje: '+document.getElementById('fMsg').value;
+  document.getElementById('okSolar').style.display='block';
+  window.open(WA+encodeURIComponent(msg),'_blank');
+});
+document.getElementById('formAgua').addEventListener('submit',function(e){
+  e.preventDefault();
+  var msg='Hola kWh Solar, quiero información de Kilowatter.\nNombre: '+document.getElementById('aNombre').value+'\nTeléfono: '+document.getElementById('aTel').value+'\nPueblo: '+document.getElementById('aPueblo').value+'\nMensaje: '+document.getElementById('aMsg').value;
+  document.getElementById('okAgua').style.display='block';
+  window.open(WA+encodeURIComponent(msg),'_blank');
+});
+</script>
+</body>
+</html>
