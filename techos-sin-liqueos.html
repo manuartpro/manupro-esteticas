@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Techos Sin Liqueos — Protegemos lo que más importa</title>
+<meta name="description" content="Sellado e impermeabilización de techos en Puerto Rico. Techos Sin Liqueos — Protegemos lo que más importa.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E30613;--blue:#0B5ED7;--navy:#0A1931;--black:#111418;--wa:#25D366}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,system-ui,sans-serif;color:#1c2733;background:#F4F7FC}
+h1,h2,h3{font-family:Montserrat,sans-serif}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 4px 24px rgba(10,25,49,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{display:flex;align-items:center;gap:12px;font-family:Montserrat;font-weight:900;font-size:1.15rem;color:var(--navy);text-transform:uppercase}
+.logo img{width:54px;height:54px;object-fit:contain;border-radius:12px}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:13px 24px;border-radius:999px;font-weight:800;text-decoration:none;box-shadow:0 8px 0 rgba(0,0,0,.15)}
+.btn-blue{background:var(--blue)}
+.hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(120deg,#0A1931 0%,#0B3D91 55%,#E30613 130%)}
+.hero .wrap{position:relative;z-index:2;padding:74px 20px 66px;text-align:center}
+.hero img.mark{width:170px;height:170px;object-fit:contain;background:#fff;border-radius:28px;padding:12px;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1;text-transform:uppercase;margin:22px 0 10px}
+.hero h1 em{color:#7DB4FF;font-style:normal}
+.hero p{font-size:1.15rem;opacity:.95;max-width:640px;margin:0 auto 26px}
+.hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+section{padding:58px 0}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);text-transform:uppercase;text-align:center;margin-bottom:10px;color:var(--navy)}
+.lead{text-align:center;color:#5B6B85;max-width:700px;margin:0 auto 30px;line-height:1.6}
+/* Anuncios pasando hacia el lado */
+.marquee{overflow:hidden;background:#fff;border-top:6px solid var(--red);border-bottom:6px solid var(--blue);padding:18px 0}
+.track{display:flex;gap:18px;width:max-content;animation:scroll 28s linear infinite}
+.track img{height:230px;border-radius:18px;box-shadow:0 12px 26px rgba(10,25,49,.2);object-fit:cover}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* Nuestro trabajo */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal img{width:100%;height:260px;object-fit:cover;border-radius:20px;box-shadow:0 12px 26px rgba(10,25,49,.15)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border-radius:22px;padding:26px;box-shadow:0 12px 30px rgba(10,25,49,.08);border-top:6px solid var(--red)}
+.card:nth-child(2){border-color:var(--blue)}.card:nth-child(3){border-color:#111}
+.card h3{color:var(--navy);margin-bottom:8px}
+.card p,.card li{color:#5B6B85;line-height:1.6;font-size:.95rem}
+.card ul{list-style:none}
+.card li::before{content:"✓ ";color:var(--red);font-weight:800}
+.price{font-family:Montserrat;font-size:1.6rem;font-weight:900;color:var(--navy);margin:12px 0}
+details{background:#fff;border-radius:14px;padding:18px 20px;margin-bottom:10px;box-shadow:0 6px 16px rgba(10,25,49,.06);cursor:pointer}
+summary{font-weight:800;color:var(--navy)}
+details p{color:#5B6B85;line-height:1.6;margin-top:8px}
+form{background:#fff;border-radius:22px;padding:26px;box-shadow:0 14px 30px rgba(10,25,49,.1);max-width:640px;margin:0 auto}
+label{display:block;font-weight:700;font-size:.9rem;margin:12px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:2px solid #D9E2F0;border-radius:12px;font:inherit}
+footer{background:var(--navy);color:#CBD8EF;padding:38px 0;text-align:center;line-height:1.7}
+.s3d{display:flex;gap:12px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
+.s3d a{color:#fff;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:14px;box-shadow:0 6px 0 rgba(0,0,0,.25),0 14px 24px rgba(0,0,0,.25)}
+.s3d a.fb{background:linear-gradient(145deg,#1877F2,#0D5CB6)}
+.s3d a.ig{background:linear-gradient(145deg,#F58529,#DD2A7B,#8134AF)}
+.s3d a.wa3{background:linear-gradient(145deg,#25D366,#128C4A)}
+.wa{position:fixed;right:20px;bottom:20px;z-index:99;width:66px;height:66px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(37,211,102,.55);animation:pulse 2s infinite;text-decoration:none;font-size:32px}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@media(max-width:760px){.grid,.gal{grid-template-columns:1fr}.track img{height:180px}.gal img{height:220px}}
+</style></head><body>
+<header><div class="wrap nav"><div class="logo"><img src="techos-sin-liqueos-assets/logo.jpg" alt="Logo Techos Sin Liqueos">Techos <span style="color:var(--red)">Sin Liqueos</span></div><a class="btn" href="#cotiza">Cotización gratis</a></div></header>
+<section class="hero"><div class="wrap"><img class="mark" src="techos-sin-liqueos-assets/logo.jpg" alt="Techos Sin Liqueos — Protegemos lo que más importa"><h1>Techos <em>sin liqueos.</em><br>Protegemos lo que más importa.</h1><p>Protegemos tu hogar con un sellado de techos en 5 capas. Desde Caguas, Puerto Rico — siempre abierto.</p><div class="cta"><a class="btn" href="#cotiza">Pide tu cotización gratis</a><a class="btn btn-blue" href="#trabajo">Ver nuestro trabajo</a></div></div></section>
+<section style="padding:0"><div style="position:relative"><img src="techos-sin-liqueos-assets/portada.jpg" alt="Techos Sin Liqueos — Sellar no es pintar" style="width:100%;display:block;max-height:520px;object-fit:cover"><div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,25,49,.88),rgba(10,25,49,.15));display:flex;align-items:center"><div class="wrap" style="color:#fff"><h2 style="text-align:left;color:#fff;font-size:clamp(1.9rem,5vw,3.2rem)">SELLAR NO ES PINTAR.</h2><p style="font-size:1.15rem;max-width:560px;line-height:1.6">Marcos Collazo — te explica tu techo antes de tocarlo. Lavamos, corregimos la base y aplicamos 5 capas, con contrato y garantía por escrito.</p></div></div></div></section><section style="padding-bottom:0"><div class="wrap"><h2>Anuncios</h2><p class="lead">Anuncios y trabajos de Techos Sin Liqueos, pasando hacia el lado.</p></div><div class="marquee"><div class="track" id="ads"><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/portada.jpg" alt="Anuncio Techos Sin Liqueos — Sellar no es pintar"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-1.jpg" alt="Antes y después en Caguas — techo sellado"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-2.jpg" alt="Antes y después en Guaynabo — mantenimiento"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-3.jpg" alt="Techo sellado terminado en Caguas"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-4.jpg" alt="Techo en proceso en Caguas"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/portada.jpg" alt="Anuncio Techos Sin Liqueos — Sellar no es pintar"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-1.jpg" alt="Antes y después en Caguas — techo sellado"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-2.jpg" alt="Antes y después en Guaynabo — mantenimiento"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-3.jpg" alt="Techo sellado terminado en Caguas"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-4.jpg" alt="Techo en proceso en Caguas"></a></div></div></section>
+<section id="trabajo"><div class="wrap"><h2>Nuestro trabajo</h2><p class="lead">Trabajos reales de Techos Sin Liqueos en Caguas y Guaynabo, de su Facebook oficial. Toca cualquier foto para visitar su página.</p><div class="gal" id="gal"><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-1.jpg" alt="Antes y después en Caguas — techo sellado"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-2.jpg" alt="Antes y después en Guaynabo — mantenimiento"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-3.jpg" alt="Techo sellado terminado en Caguas"></a><a href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener"><img src="techos-sin-liqueos-assets/trabajo-4.jpg" alt="Techo en proceso en Caguas"></a></div></div></section>
+<section style="padding-top:0"><div class="wrap"><h2>Servicios</h2><p class="lead">Soluciones para que tu techo no vuelva a liquear.</p><div class="grid">
+<div class="card"><h3>Sellado en 5 capas</h3><ul><li>Lavamos tu techo antes de que firmes</li><li>Corregimos la base</li><li>Aplicamos 5 capas de sellado</li></ul></div>
+<div class="card"><h3>Contrato y garantía por escrito</h3><ul><li>Te explican tu techo antes de tocarlo</li><li>Contrato claro, sin sorpresas</li><li>Garantía por escrito</li></ul></div>
+<div class="card"><h3>Mantenimiento cada 18 meses</h3><ul><li>Revisión y retoque de áreas afectadas</li><li>Tu techo protegido año tras año</li><li>Desde Caguas, Puerto Rico</li></ul></div>
+</div></div></section>
+<section style="padding-top:0"><div class="wrap"><h2>El proceso</h2><p class="lead">Así trabaja Techos Sin Liqueos, paso a paso.</p><div class="grid"><div class="card"><h3>1. Lavamos</h3><p>Lavamos tu techo antes de que firmes, para que veas su condición real.</p></div><div class="card"><h3>2. Corregimos la base</h3><p>Se corrige la base donde hace falta, antes de sellar.</p></div><div class="card"><h3>3. Aplicamos 5 capas</h3><p>Sellado completo en 5 capas. Sellar no es pintar.</p></div></div><div class="grid" style="margin-top:18px"><div class="card"><h3>4. Contrato y garantía</h3><p>Todo por escrito: contrato y garantía.</p></div><div class="card"><h3>5. Mantenimiento cada 18 meses</h3><p>Mantenimiento programado cada 18 meses para que el sellado dure.</p></div><div class="card"><h3>Siempre abierto</h3><p>Desde Caguas, Puerto Rico. Escríbenos por WhatsApp y coordinamos tu visita.</p></div></div></div></section><section style="padding-top:0"><div class="wrap"><h2 style="text-align:center">Preguntas frecuentes</h2><div style="max-width:760px;margin:22px auto 0">
+<details><summary>¿Qué incluye el sellado?</summary><p>Lavado, corrección de la base y 5 capas de sellado, con contrato y garantía por escrito.</p></details>
+<details><summary>¿Dónde están ubicados?</summary><p>En Caguas, Puerto Rico, y siempre abiertos. Escríbenos por WhatsApp con tu pueblo y coordinamos.</p></details>
+<details><summary>¿Dan garantía?</summary><p>Sí: contrato y garantía por escrito, y mantenimiento cada 18 meses.</p></details>
+</div></div></section>
+<section id="cotiza" style="padding-top:0"><div class="wrap"><h2>Cotización gratis</h2><p class="lead">Completa el formulario y se abrirá WhatsApp con tu mensaje listo para enviar a Techos Sin Liqueos.</p>
+<form onsubmit="event.preventDefault();var n=document.getElementById('f-n').value,p=document.getElementById('f-p').value,s=document.getElementById('f-s').value,m=document.getElementById('f-m').value;window.open('https://wa.me/14074062560?text='+encodeURIComponent('Hola Techos Sin Liqueos, soy '+n+' de '+p+'. Me interesa: '+s+'. '+m),'_blank')">
+<label>Nombre</label><input id="f-n" required placeholder="Tu nombre">
+<label>Pueblo</label><input id="f-p" required placeholder="¿De qué pueblo eres?">
+<label>Servicio</label><select id="f-s"><option>Sellado en 5 capas</option><option>Mantenimiento cada 18 meses</option><option>Reparación de filtración</option><option>Inspección de techo</option></select>
+<label>Mensaje</label><textarea id="f-m" rows="3" placeholder="Cuéntanos: ¿tu techo liquea? ¿qué tamaño tiene?"></textarea>
+<button class="btn" type="submit" style="border:0;width:100%;margin-top:16px;cursor:pointer">Enviar por WhatsApp</button>
+</form></div></section>
+<footer><div class="wrap"><div class="s3d" id="social"><a class="fb" href="https://www.facebook.com/TechosSinLiqueos" target="_blank" rel="noopener">Facebook</a><a class="wa3" href="https://wa.me/14074062560" target="_blank" rel="noopener">WhatsApp</a></div><p><b style="color:#fff">Techos Sin Liqueos</b> — Puerto Rico · Caguas, Puerto Rico · Tel. (407) 406-2560 · WhatsApp 787-547-8365 · mcollazo@techossinliqueos.com</p><p>Demostración creada por ManuPro · Logo, portada, anuncios y fotos de trabajos: Facebook oficial de Techos Sin Liqueos (Caguas).</p><p>¿Eres el dueño de este negocio? Activa tu website escribiendo a <a href="mailto:manuartpro@gmail.com" style="color:#fff"><b>manuartpro@gmail.com</b></a> (ManuPro).</p></div></footer>
+<a class="wa" href="https://wa.me/14074062560" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+</body></html>
