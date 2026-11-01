@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DLX Deluxe Services | Construcción y Remodelación en Puerto Rico</title>
+<meta name="description" content="DLX Deluxe Services — Construcción, remodelación, pintura, piscinas, plomería y electricidad. Todo lo que tu proyecto necesita, en un solo lugar. A nivel isla. Cotiza con nosotros.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#d8a94e; --gold-soft:#e9c886; --gold-deep:#a97e2c;
+  --black:#0a0a0a; --coal:#111214; --panel:#16181b;
+  --white:#f7f4ec; --muted:#b9b3a4; --line:rgba(216,169,78,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'Manrope',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Cinzel',serif}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s;
+  background:linear-gradient(180deg,rgba(5,5,5,.85),rgba(5,5,5,0));padding:18px 0}
+header.solid{background:rgba(8,8,8,.96);border-bottom:1px solid var(--line);padding:10px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:52px;height:52px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+.brand .t{line-height:1.15}
+.brand .t b{font-family:'Cinzel',serif;font-size:1.05rem;letter-spacing:.08em;color:var(--gold)}
+.brand .t span{display:block;font-size:.68rem;letter-spacing:.28em;color:var(--muted);text-transform:uppercase}
+.links{display:flex;gap:26px;font-size:.86rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.links a{color:var(--muted);transition:.25s}
+.links a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--gold),var(--gold-deep));
+  color:#0a0a0a;font-weight:800;letter-spacing:.05em;padding:13px 26px;border-radius:999px;border:0;cursor:pointer;
+  font-size:.9rem;text-transform:uppercase;transition:.25s;box-shadow:0 8px 28px rgba(216,169,78,.28)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(216,169,78,.42)}
+.btn.ghost{background:transparent;color:var(--gold);border:1.5px solid var(--gold);box-shadow:none}
+.btn.ghost:hover{background:rgba(216,169,78,.1)}
+@media(max-width:900px){.links{display:none}}
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05)}
+.hero .shade{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(5,5,5,.62) 0%,rgba(5,5,5,.45) 45%,rgba(10,10,10,.97) 100%),
+  radial-gradient(60% 50% at 50% 40%,transparent,rgba(5,5,5,.55))}
+.hero .in{position:relative;z-index:2;padding:130px 0 90px;text-align:center;width:100%}
+.kicker{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.42em;text-transform:uppercase;
+  color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:9px 20px;margin-bottom:26px;
+  background:rgba(10,10,10,.55);backdrop-filter:blur(6px)}
+.hero h1{font-size:clamp(2.2rem,6.5vw,4.6rem);line-height:1.08;font-weight:700;max-width:900px;margin:0 auto 22px;
+  text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.sub{color:#e8e2d3;max-width:640px;margin:0 auto 36px;font-size:1.08rem;line-height:1.7}
+.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.trust{display:flex;gap:34px;justify-content:center;flex-wrap:wrap;margin-top:56px}
+.trust div{text-align:center}
+.trust b{display:block;font-family:'Cinzel',serif;font-size:1.35rem;color:var(--gold)}
+.trust span{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:var(--gold);
+  font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;animation:bob 2.2s infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+/* ---------- marquee ---------- */
+.marquee{background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-deep));color:#0a0a0a;
+  overflow:hidden;white-space:nowrap;padding:13px 0;font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.85rem}
+.marquee span{display:inline-block;padding:0 26px;animation:slide 26s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+/* ---------- sections ---------- */
+section{padding:96px 0}
+.sec-head{text-align:center;max-width:720px;margin:0 auto 58px}
+.sec-head .k{color:var(--gold);font-size:.72rem;font-weight:800;letter-spacing:.4em;text-transform:uppercase;margin-bottom:16px}
+.sec-head h2{font-size:clamp(1.7rem,4vw,2.8rem);margin-bottom:16px}
+.sec-head h2 em{font-style:normal;color:var(--gold)}
+.sec-head p{color:var(--muted);line-height:1.75}
+/* services */
+.svc{background:var(--coal)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:34px 28px;position:relative;
+  overflow:hidden;transition:.3s}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(216,169,78,.55);box-shadow:0 18px 44px rgba(0,0,0,.5)}
+.card:hover::before{opacity:1}
+.card .ic{width:58px;height:58px;border-radius:14px;display:grid;place-items:center;font-size:1.7rem;
+  background:rgba(216,169,78,.12);border:1px solid var(--line);margin-bottom:20px}
+.card h3{font-size:1.18rem;margin-bottom:10px;letter-spacing:.04em}
+.card h3 span{color:var(--gold)}
+.card p{color:var(--muted);font-size:.94rem;line-height:1.7}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.gal figure{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;cursor:zoom-in;
+  border:1px solid rgba(255,255,255,.07)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gal figure:hover img{transform:scale(1.07)}
+.gal figcaption{position:absolute;inset:auto 0 0 0;padding:34px 16px 14px;font-size:.8rem;font-weight:700;
+  letter-spacing:.08em;background:linear-gradient(transparent,rgba(0,0,0,.85));opacity:0;transition:.3s}
+.gal figure:hover figcaption{opacity:1}
+.lightbox{position:fixed;inset:0;z-index:99;background:rgba(0,0,0,.92);display:none;place-items:center;padding:20px}
+.lightbox.open{display:grid}
+.lightbox img{max-width:92vw;max-height:88vh;border-radius:10px;border:1px solid var(--line)}
+.lightbox .x{position:absolute;top:18px;right:26px;font-size:2rem;color:var(--gold);cursor:pointer;background:none;border:0}
+/* process */
+.proc{background:var(--coal)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;counter-reset:st}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:30px 24px;position:relative}
+.step::before{counter-increment:st;content:"0" counter(st);font-family:'Cinzel',serif;font-size:2.4rem;color:var(--gold);
+  opacity:.85;display:block;margin-bottom:14px}
+.step h3{font-size:1.02rem;margin-bottom:8px;letter-spacing:.05em}
+.step p{color:var(--muted);font-size:.9rem;line-height:1.65}
+/* faq */
+.faq{max-width:820px;margin:0 auto}
+.faq .item{border:1px solid var(--line);border-radius:14px;margin-bottom:12px;background:var(--panel);overflow:hidden}
+.faq .q{width:100%;background:none;border:0;color:var(--white);text-align:left;padding:20px 22px;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;font-size:1rem;font-weight:700;font-family:'Manrope',sans-serif}
+.faq .q .plus{color:var(--gold);font-size:1.4rem;flex-shrink:0;transition:.3s}
+.faq .a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted);line-height:1.75;font-size:.95rem}
+.faq .a div{padding:0 22px 22px}
+.faq .item.open .a{max-height:300px}
+.faq .item.open .plus{transform:rotate(45deg)}
+/* form */
+.quote{background:linear-gradient(180deg,var(--coal),#0c0d0f)}
+.form-card{max-width:860px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:22px;
+  padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+@media(max-width:760px){.form-card{grid-template-columns:1fr;padding:30px 22px}}
+.form-card h3{font-size:1.5rem;margin-bottom:10px}
+.form-card h3 em{font-style:normal;color:var(--gold)}
+.form-card .side p{color:var(--muted);line-height:1.75;font-size:.95rem;margin-bottom:22px}
+.contact-line{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-weight:700}
+.contact-line .dot{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(216,169,78,.12);border:1px solid var(--line);font-size:1.1rem}
+.contact-line small{display:block;color:var(--muted);font-weight:500}
+label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:16px 0 8px}
+input,select,textarea{width:100%;background:#0d0e10;border:1px solid rgba(255,255,255,.12);border-radius:10px;
+  color:var(--white);padding:13px 14px;font-size:.95rem;font-family:inherit;transition:.2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(216,169,78,.15)}
+textarea{min-height:110px;resize:vertical}
+select option{background:#111}
+.form-note{font-size:.82rem;color:var(--muted);margin-top:14px;line-height:1.6}
+/* footer */
+footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#070708}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot .brand img{width:44px;height:44px}
+.foot p{color:var(--muted);font-size:.85rem;line-height:1.7}
+.foot .made{font-size:.78rem;color:#6f6a5d;margin-top:16px;text-align:center;width:100%}
+.foot .made a{color:var(--gold);font-weight:700}
+/* floating WA */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;
+  background:#22b45e;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:.25s}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img src="assets/dlx-logo.jpg" alt="DLX Deluxe Services">
+      <span class="t"><b>DLX</b><span>Deluxe Services</span></span>
+    </a>
+    <nav class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#cotizar">Cotizar</a>
+    </nav>
+    <a class="btn" href="https://wa.me/17874635774?text=Hola%20DLX%2C%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener">Cotizar</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/dlx-trabajo-03.jpg">
+    <source src="assets/dlx-hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="shade"></div>
+  <div class="wrap in">
+    <span class="kicker">Construcción · Remodelación · Puerto Rico</span>
+    <h1>Transformamos espacios en <em>resultados</em></h1>
+    <p class="sub">Todo lo que tu proyecto necesita, en un solo lugar. Construcción, remodelación, pintura, piscinas, plomería y electricidad — con el acabado de lujo que tu hogar merece.</p>
+    <div class="cta-row">
+      <a class="btn" href="#cotizar">Cotiza con nosotros</a>
+      <a class="btn ghost" href="#trabajos">Ver trabajos</a>
+    </div>
+    <div class="trust">
+      <div><b>Calidad</b><span>Acabado elite</span></div>
+      <div><b>Experiencia</b><span>Equipo probado</span></div>
+      <div><b>Resultados</b><span>A nivel isla</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">Desliza</div>
+</section>
+
+<div class="marquee"><span>Construcción ✦ Remodelación ✦ Pintura ✦ Piscinas ✦ Plomería ✦ Electricidad ✦&nbsp;</span><span>Construcción ✦ Remodelación ✦ Pintura ✦ Piscinas ✦ Plomería ✦ Electricidad ✦&nbsp;</span></div>
+
+<section class="svc" id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Nuestros servicios</div>
+      <h2>Un solo equipo, <em>todo el proyecto</em></h2>
+      <p>No tienes que buscar cinco contratistas. DLX coordina cada fase de tu obra con un estándar único de calidad.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="ic">🏗️</div><h3>Construcción <span>&amp;</span> Remodelación</h3><p>Ampliaciones, remodelaciones completas y construcción desde cero, con planificación clara y ejecución impecable.</p></div>
+      <div class="card"><div class="ic">🎨</div><h3>Pintura</h3><p>Interior y exterior con acabados profesionales: preparación de superficie, sellado y pintura de primera.</p></div>
+      <div class="card"><div class="ic">🏊</div><h3>Piscinas</h3><p>Construcción, remodelación y mantenimiento de piscinas para que tu patio se convierta en resort.</p></div>
+      <div class="card"><div class="ic">🔧</div><h3>Plomería</h3><p>Instalaciones, reparaciones y sistemas de agua completos, hechos bien desde la primera vez.</p></div>
+      <div class="card"><div class="ic">⚡</div><h3>Electricidad</h3><p>Instalaciones eléctricas seguras y a código: paneles, iluminación, tomas y más.</p></div>
+      <div class="card"><div class="ic">✦</div><h3><span>Y</span> mucho más</h3><p>¿Tienes un proyecto especial? Cuéntanos tu idea por WhatsApp y te orientamos sin compromiso.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="trabajos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Trabajos reales</div>
+      <h2>Nuestro trabajo <em>habla solo</em></h2>
+      <p>Fotos reales de proyectos DLX en Puerto Rico. Toca cualquier imagen para verla en grande.</p>
+    </div>
+    <div class="gal" id="gallery"></div>
+  </div>
+</section>
+
+<section class="proc" id="proceso">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Cómo trabajamos</div>
+      <h2>De la idea a la <em>entrega</em></h2>
+      <p>Un proceso simple y transparente, para que sepas exactamente qué esperar en cada paso.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Cotización</h3><p>Nos cuentas tu proyecto por WhatsApp o por el formulario y coordinamos la evaluación.</p></div>
+      <div class="step"><h3>Plan y acuerdo</h3><p>Definimos alcance, materiales y tiempos antes de empezar. Sin sorpresas.</p></div>
+      <div class="step"><h3>Ejecución</h3><p>Nuestro equipo ejecuta con limpieza, puntualidad y supervisión constante.</p></div>
+      <div class="step"><h3>Entrega</h3><p>Revisamos cada detalle contigo hasta que el resultado te encante.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Preguntas frecuentes</div>
+      <h2>Pregunta, <em>te respondemos</em></h2>
+      <p>Las dudas más comunes antes de empezar un proyecto con DLX.</p>
+    </div>
+    <div class="faq">
+      <div class="item">
+        <button class="q" aria-expanded="false">¿Trabajan en toda la isla?<span class="plus">+</span></button>
+        <div class="a"><div>Sí. DLX trabaja a nivel isla en Puerto Rico. Escríbenos con tu pueblo y coordinamos la visita o evaluación de tu proyecto.</div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">¿La cotización tiene algún costo?<span class="plus">+</span></button>
+        <div class="a"><div>Escríbenos por WhatsApp o llena el formulario y te orientamos sobre tu proyecto sin compromiso. Cada proyecto se evalúa individualmente.</div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">¿Puedo contratar varios servicios a la vez?<span class="plus">+</span></button>
+        <div class="a"><div>Claro — esa es nuestra especialidad. Construcción, pintura, plomería, electricidad y más, coordinados por un solo equipo para que no tengas que buscar varios contratistas.</div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">¿Cuánto tarda un proyecto?<span class="plus">+</span></button>
+        <div class="a"><div>Depende del alcance: una pintura puede tomar días y una remodelación completa varias semanas. En la cotización te damos un estimado de tiempo realista antes de empezar.</div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">¿Cómo me mantengo al tanto del avance?<span class="plus">+</span></button>
+        <div class="a"><div>Comunicación directa por WhatsApp durante todo el proyecto: fotos del avance, avisos y cualquier decisión que necesite tu aprobación.</div></div>
+      </div>
+      <div class="item">
+        <button class="q" aria-expanded="false">¿Qué necesito para empezar?<span class="plus">+</span></button>
+        <div class="a"><div>Solo tu idea. Cuéntanos qué quieres lograr —con fotos si las tienes— por WhatsApp al 787-463-5774 o por el formulario, y nosotros nos encargamos del resto.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="cotizar">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Cotización</div>
+      <h2>Cotiza <em>con nosotros</em></h2>
+      <p>Llena el formulario y tu mensaje llega directo a nuestro WhatsApp. Te respondemos lo antes posible.</p>
+    </div>
+    <div class="form-card">
+      <div class="side">
+        <h3>Cuéntanos tu <em>proyecto</em></h3>
+        <p>Mientras más detalles nos des, más precisa será tu cotización. Si tienes fotos del área, envíalas por WhatsApp después de enviar el formulario.</p>
+        <a class="contact-line" href="tel:+17874635774"><span class="dot">📞</span><span>787-463-5774<small>Llámanos o escríbenos</small></span></a>
+        <a class="contact-line" href="https://www.facebook.com/deluxeservicespr" target="_blank" rel="noopener"><span class="dot">📘</span><span>Deluxe Services<small>Síguenos en Facebook</small></span></a>
+        <a class="contact-line" href="#cotizar"><span class="dot">📍</span><span>A nivel isla<small>Todo Puerto Rico</small></span></a>
+      </div>
+      <form id="quoteForm" novalidate>
+        <label for="fName">Tu nombre</label>
+        <input id="fName" required placeholder="Ej. María Rodríguez" autocomplete="name">
+        <label for="fTown">Pueblo</label>
+        <input id="fTown" required placeholder="Ej. Bayamón" autocomplete="address-level2">
+        <label for="fService">Servicio que necesitas</label>
+        <select id="fService" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Construcción / Remodelación</option>
+          <option>Pintura</option>
+          <option>Piscinas</option>
+          <option>Plomería</option>
+          <option>Electricidad</option>
+          <option>Otro / Varios servicios</option>
+        </select>
+        <label for="fMsg">Detalles del proyecto</label>
+        <textarea id="fMsg" required placeholder="Cuéntanos qué quieres hacer: tamaño aproximado del área, qué incluye, cuándo te gustaría empezar..."></textarea>
+        <div style="margin-top:22px"><button class="btn" type="submit" style="width:100%;justify-content:center">Enviar por WhatsApp</button></div>
+        <p class="form-note">Al enviar, se abrirá WhatsApp con tu mensaje listo para DLX Deluxe Services.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top">
+      <img src="assets/dlx-logo.jpg" alt="DLX Deluxe Services">
+      <span class="t"><b>DLX</b><span>Deluxe Services</span></span>
+    </a>
+    <p><b style="color:var(--gold)">DLX Deluxe Services</b> · Calidad · Experiencia · Resultados<br>
+    📞 <a href="tel:+17874635774">787-463-5774</a> · 📘 <a href="https://www.facebook.com/deluxeservicespr" target="_blank" rel="noopener">Facebook</a> · 📍 A nivel isla, Puerto Rico</p>
+    <p class="made">Sitio web creado por <a href="https://www.instagram.com/manuartpro" target="_blank" rel="noopener">ManuPro</a> · © 2026 DLX Deluxe Services</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/17874635774?text=Hola%20DLX%2C%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.5 4.3 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.4 0-2.8-.4-4-1.1l-.3-.2-4.6 1.2 1.2-4.4-.2-.3c-.8-1.3-1.2-2.7-1.2-4.2 0-4.9 4-8.9 8.9-8.9s8.9 4 8.9 8.9-4 8.9-8.7 8.9zm4.9-6.7c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.6.9-.8 1-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.3-.7-.7-1.2-1.5-1.4-1.7-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9 1 1.9 2.9 3.9 5 5 2.5 1.3 3.5 1.2 4.7.9.7-.2 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<div class="lightbox" id="lightbox"><button class="x" aria-label="Cerrar">×</button><img id="lbImg" alt="Trabajo DLX"></div>
+
+<script>
+(function(){
+  var WA="17874635774";
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('solid',scrollY>40)},{passive:true});
+  /* gallery (fotos reales de sus trabajos) */
+  var photos=[
+    {src:'assets/dlx-trabajo-01.jpg',cap:'Terraza en techo · antes del enlosado'},
+    {src:'assets/dlx-trabajo-02.jpg',cap:'Patio enlosado con puertas corredizas'},
+    {src:'assets/dlx-trabajo-03.jpg',cap:'Terraza terminada · acabado elite'},
+    {src:'assets/dlx-trabajo-04.jpg',cap:'Marquesina sellada y pintada · después'},
+    {src:'assets/dlx-trabajo-05.jpg',cap:'Marquesina · antes'},
+    {src:'assets/dlx-trabajo-06.jpg',cap:'Centro de entretenimiento · en proceso'},
+    {src:'assets/dlx-trabajo-07.jpg',cap:'Preparación de pintura interior'},
+    {src:'assets/dlx-trabajo-08.jpg',cap:'Arcos terminados con iluminación LED'},
+    {src:'assets/dlx-trabajo-09.jpg',cap:'Cocina remodelada en Bayamón · después'},
+    {src:'assets/dlx-trabajo-10.jpg',cap:'Cocina en Bayamón · antes'},
+    {src:'assets/dlx-trabajo-11.jpg',cap:'Baño transformado · Carolina'},
+    {src:'assets/dlx-trabajo-12.jpg',cap:'Instalación de losa profesional · Carolina'},
+    {src:'assets/dlx-trabajo-13.jpg',cap:'Patio exterior enlosado · Trujillo Alto'},
+    {src:'assets/dlx-trabajo-14.jpg',cap:'Pérgola con piscina · Cabo Rojo'}
+  ];
+  var gal=document.getElementById('gallery');
+  photos.forEach(function(p,i){
+    var f=document.createElement('figure');
+    var img=document.createElement('img');
+    img.src=p.src; img.alt=p.cap; img.loading='lazy';
+    var c=document.createElement('figcaption'); c.textContent=p.cap;
+    f.appendChild(img); f.appendChild(c);
+    f.addEventListener('click',function(){openLb(p.src)});
+    gal.appendChild(f);
+  });
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg');
+  function openLb(src){lbImg.src=src;lb.classList.add('open')}
+  lb.addEventListener('click',function(){lb.classList.remove('open')});
+  addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});
+  /* faq */
+  document.querySelectorAll('.faq .item').forEach(function(item){
+    var btn=item.querySelector('.q');
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.faq .item.open').forEach(function(o){
+        if(o!==item){o.classList.remove('open');o.querySelector('.q').setAttribute('aria-expanded','false');}});
+      var open=item.classList.toggle('open');
+      btn.setAttribute('aria-expanded',String(open));
+    });
+  });
+  /* form -> WhatsApp */
+  var form=document.getElementById('quoteForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.reportValidity())return;
+    var msg='Hola DLX Deluxe Services, soy '+document.getElementById('fName').value.trim()+
+      ' ('+document.getElementById('fTown').value.trim()+').'+
+      ' Necesito: '+document.getElementById('fService').value+'.'+
+      ' Detalles: '+document.getElementById('fMsg').value.trim();
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank','noopener');
+  });
+  /* video fallback */
+  var v=document.getElementById('heroVideo');
+  v.addEventListener('error',function(){v.style.display='none'},true);
+})();
+</script>
+</body>
+</html>
