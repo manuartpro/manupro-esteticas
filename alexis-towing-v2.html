@@ -53,7 +53,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(0,0,0,.94)
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes logoIn{0%{transform:scale(0) rotate(-220deg);opacity:0}60%{transform:scale(1.12) rotate(10deg);opacity:1}100%{transform:scale(1) rotate(0);opacity:1}}
 @keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 8px rgba(229,52,43,.45))}50%{filter:drop-shadow(0 0 22px rgba(229,52,43,.9))}}
-@media (prefers-reduced-motion:reduce){.logo-fx,.logo-fx::before,.logo-fx img,.hero-bg img,.mq-track{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.logo-fx,.logo-fx::before,.logo-fx img,.hero-bg img,.mq-track,.c-card img{animation:none!important}}
 .brand b{font-family:var(--fh);font-size:1rem;letter-spacing:.08em}
 .brand b span{color:var(--red)}
 nav{display:flex;gap:24px;font-size:.88rem;font-weight:500}
@@ -184,11 +184,12 @@ nav a:hover{color:var(--red)}
 /* footer */
 /* contacto */
 #contacto{background:var(--dark)}
-.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-@media(max-width:900px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
 .c-card{background:linear-gradient(160deg,#161616,#0a0a0a);border:1px solid #2a2a2a;border-radius:18px;padding:30px 18px;text-align:center;transition:transform .3s,border-color .3s,box-shadow .3s;text-decoration:none}
 .c-card:hover{transform:translateY(-6px);border-color:var(--red);box-shadow:0 18px 44px rgba(229,52,43,.2)}
-.c-card img{width:58px;height:58px;margin:0 auto 14px;object-fit:contain}
+.c-card img{width:58px;height:58px;margin:0 auto 14px;object-fit:contain;animation:floaty 4s ease-in-out infinite}
+.c-card:nth-child(2) img{animation-delay:.6s}.c-card:nth-child(3) img{animation-delay:1.2s}.c-card:nth-child(4) img{animation-delay:1.8s}.c-card:nth-child(5) img{animation-delay:2.4s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .c-card b{font-family:var(--fh);font-size:1.02rem;letter-spacing:.08em;display:block;margin-bottom:6px;text-transform:uppercase}
 .c-card span{color:var(--gmed);font-size:.86rem}
 .c-card .bignum{font-family:var(--fh);font-weight:800;font-size:1.35rem;line-height:1.35;margin:0 auto 14px}
@@ -410,9 +411,10 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
   <div class="wrap">
     <div class="sec-head reveal"><div class="kicker">Contacto directo</div><h2>Habla con <span>nosotros</span></h2><p>Respuesta inmediata, 24 horas al día.</p></div>
     <div class="contact-grid">
-      <a class="c-card reveal" href="https://wa.me/19396305858?text=Hola%20Alexis%20Towing%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener"><img src="assets/alexis-towing/whatsapp-logo.png" alt="WhatsApp"><b>WhatsApp</b><span>Escríbenos directo</span></a>
-      <a class="c-card reveal" href="https://www.facebook.com/share/1CMphimTww/" target="_blank" rel="noopener"><img src="assets/alexis-towing/facebook-logo.png" alt="Facebook"><b>Facebook</b><span>Síguenos</span></a>
-      <a class="c-card reveal" href="https://maps.app.goo.gl/PfPvY7esjbLBZgJP6" target="_blank" rel="noopener"><img src="assets/alexis-towing/google-logo.png" alt="Google"><b>Google</b><span>5.0 ★ · Déjanos tu reseña</span></a>
+      <a class="c-card reveal" href="https://wa.me/19396305858?text=Hola%20Alexis%20Towing%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener"><img src="assets/alexis-towing/whatsapp-3d.png" alt="WhatsApp"><b>WhatsApp</b><span>Escríbenos directo</span></a>
+      <a class="c-card reveal" href="https://www.facebook.com/share/1CMphimTww/" target="_blank" rel="noopener"><img src="assets/alexis-towing/facebook-3d.png" alt="Facebook"><b>Facebook</b><span>Síguenos</span></a>
+      <a class="c-card reveal" href="https://maps.app.goo.gl/PfPvY7esjbLBZgJP6" target="_blank" rel="noopener"><img src="assets/alexis-towing/google-3d.png" alt="Google"><b>Google</b><span>5.0 ★ · Déjanos tu reseña</span></a>
+      <a class="c-card reveal" href="mailto:alexisg2008@live.com"><img src="assets/alexis-towing/email-3d.png" alt="Email"><b>Email</b><span>alexisg2008@live.com</span></a>
       <a class="c-card reveal" href="tel:+19396305858"><div class="bignum">(939)<br>630-5858</div><b>Llamar</b><span>Abierto 24/7</span></a>
     </div>
   </div>
