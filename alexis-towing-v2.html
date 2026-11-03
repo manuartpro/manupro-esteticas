@@ -96,6 +96,34 @@ nav a:hover{color:var(--red)}
 .svc p{color:#bbb;font-size:.93rem}
 /* discount */
 #descuento{background:linear-gradient(135deg,#1c0605,#000 70%);border-top:2px solid var(--red);border-bottom:2px solid var(--red)}
+/* recuadro elite */
+.elite-frame{position:relative;background:linear-gradient(160deg,#161616,#0a0a0a);border:2px solid var(--red);border-radius:22px;padding:56px 48px;overflow:hidden;box-shadow:0 30px 80px rgba(229,52,43,.14),inset 0 0 120px rgba(229,52,43,.05)}
+.elite-frame::before{content:"";position:absolute;inset:12px;border:1px solid rgba(229,52,43,.35);border-radius:14px;pointer-events:none}
+.ef-corner{position:absolute;width:44px;height:44px;border:3px solid var(--red-l);z-index:2}
+.ef-tl{top:22px;left:22px;border-right:0;border-bottom:0;border-radius:14px 0 0 0}
+.ef-tr{top:22px;right:22px;border-left:0;border-bottom:0;border-radius:0 14px 0 0}
+.ef-bl{bottom:22px;left:22px;border-right:0;border-top:0;border-radius:0 0 0 14px}
+.ef-br{bottom:22px;right:22px;border-left:0;border-top:0;border-radius:0 0 14px 0}
+.ef-grid{position:relative;display:grid;grid-template-columns:340px 1fr;gap:48px;align-items:start;z-index:1}
+@media(max-width:900px){.ef-grid{grid-template-columns:1fr}.elite-frame{padding:40px 26px}}
+.ef-left{text-align:center}
+.ef-left .glogo{width:74px;margin:0 auto 10px}
+.ef-left .stars{color:var(--red);font-size:1.6rem;letter-spacing:6px}
+.ef-left .score{font-family:var(--fh);font-size:3rem;font-weight:800}
+.ef-left .src{color:var(--gmed);font-size:.85rem;margin-bottom:22px}
+.ef-left .seal{width:min(230px,55vw);margin:0 auto;filter:drop-shadow(0 0 30px rgba(229,52,43,.35))}
+.ef-rev{background:rgba(255,255,255,.04);border:1px solid #2a2a2a;border-radius:14px;padding:20px 22px;margin-bottom:16px}
+.ef-rev .rh{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.ef-rev .avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--red-d));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:1.1rem;flex-shrink:0}
+.ef-rev .who b{display:block;font-size:.95rem}
+.ef-rev .who span{color:var(--gmed);font-size:.8rem}
+.ef-rev .st{color:var(--red);letter-spacing:2px;font-size:.85rem;margin-left:auto}
+.ef-rev p{color:#ddd;font-size:.92rem;font-style:italic}
+.ef-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0}
+@media(max-width:700px){.ef-steps{grid-template-columns:1fr}}
+.ef-step{background:rgba(229,52,43,.08);border:1px solid rgba(229,52,43,.35);border-radius:12px;padding:16px;text-align:center;font-size:.88rem}
+.ef-step .n{font-family:var(--fh);font-weight:800;color:var(--red);font-size:1.2rem;display:block;margin-bottom:4px}
+.ef-cta{text-align:center;margin-top:8px}
 .disc-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 @media(max-width:900px){.disc-grid{grid-template-columns:1fr;text-align:center}}
 .seal-wrap img{width:min(320px,68vw);margin:0 auto;filter:drop-shadow(0 0 44px rgba(229,52,43,.35))}
@@ -238,18 +266,39 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
 </section>
 
 <section id="descuento">
-  <div class="wrap disc-grid">
-    <div class="seal-wrap reveal-s"><img src="assets/alexis-towing/sello-10.png" alt="Sello 10% de descuento"></div>
-    <div class="reveal-r">
-      <div class="kicker">Oferta para clientes</div>
-      <h2 style="font-size:clamp(1.6rem,4vw,2.6rem)">Tu reseña vale un<br><span style="color:var(--red)">10% de descuento</span></h2>
-      <p style="color:#ccc;margin-top:12px">Déjanos una reseña en Google y obtén 10% de descuento en tu próximo remolque.</p>
-      <div class="steps">
-        <div class="step reveal"><div class="n">01</div><div>Déjanos tu reseña en Google</div></div>
-        <div class="step reveal"><div class="n">02</div><div>Envíanos la captura por WhatsApp</div></div>
-        <div class="step reveal"><div class="n">03</div><div>Recibe tu 10% de descuento</div></div>
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="kicker">Oferta para clientes</div><h2>Tu reseña vale un <span>10% de descuento</span></h2><p>Déjanos una reseña en Google y obtén 10% de descuento en tu próximo remolque.</p></div>
+    <div class="elite-frame reveal-s">
+      <div class="ef-corner ef-tl"></div><div class="ef-corner ef-tr"></div><div class="ef-corner ef-bl"></div><div class="ef-corner ef-br"></div>
+      <div class="ef-grid">
+        <div class="ef-left">
+          <img class="glogo" src="assets/alexis-towing/google-logo.png" alt="Google">
+          <div class="stars">★★★★★</div>
+          <div class="score">5.0</div>
+          <div class="src">9 reseñas reales en Google</div>
+          <img class="seal" src="assets/alexis-towing/sello-10.png" alt="Sello 10% de descuento">
+        </div>
+        <div>
+          <div class="ef-rev">
+            <div class="rh"><div class="avatar">DE</div><div class="who"><b>Davis Encarnación Márquez</b><span>Hace un año</span></div><div class="st">★★★★★</div></div>
+            <p>"El mejor, excelente servicio, lo recomiendo a ojos cerrado. Gracias Alexis, por el servicio."</p>
+          </div>
+          <div class="ef-rev">
+            <div class="rh"><div class="avatar">SG</div><div class="who"><b>Sharelymar Garcia</b><span>Hace un año</span></div><div class="st">★★★★★</div></div>
+            <p>"Excelente servicio! Llegó rapidito y muy servicial."</p>
+          </div>
+          <div class="ef-rev">
+            <div class="rh"><div class="avatar">WR</div><div class="who"><b>Wilma Rivera</b><span>Hace un año</span></div><div class="st">★★★★★</div></div>
+            <p>"Excelente servicio disponibilidad siempre"</p>
+          </div>
+          <div class="ef-steps">
+            <div class="ef-step"><span class="n">01</span>Déjanos tu reseña en Google</div>
+            <div class="ef-step"><span class="n">02</span>Envíanos la captura por WhatsApp</div>
+            <div class="ef-step"><span class="n">03</span>Recibe tu 10% de descuento</div>
+          </div>
+          <div class="ef-cta"><a class="g-btn" href="https://maps.app.goo.gl/PfPvY7esjbLBZgJP6" target="_blank" rel="noopener"><img src="assets/alexis-towing/google-logo.png" alt="Google">Déjanos tu reseña en Google</a></div>
+        </div>
       </div>
-      <a class="g-btn" href="https://maps.app.goo.gl/PfPvY7esjbLBZgJP6" target="_blank" rel="noopener">Déjanos tu reseña en Google</a>
     </div>
   </div>
 </section>
@@ -284,7 +333,7 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
     <div class="std-grid">
       <div class="std reveal"><div class="big">24/7</div><h3>Disponibilidad Total</h3><p>Siempre disponibles, día y noche, todos los días del año.</p></div>
       <div class="std reveal"><div class="big">100%</div><h3>Compromiso</h3><p>Cuidado meticuloso de tu vehículo en cada servicio.</p></div>
-      <div class="std reveal"><div class="big">⚡</div><h3>Respuesta Rápida</h3><p>Llegamos rápido cuando más nos necesitas.</p></div>
+      <div class="std reveal"><div class="big">&raquo;</div><h3>Respuesta Rápida</h3><p>Llegamos rápido cuando más nos necesitas.</p></div>
       <div class="std reveal"><div class="big">5.0</div><h3>Satisfacción Garantizada</h3><p>Calificación perfecta de nuestros clientes en Google.</p></div>
     </div>
   </div>
@@ -347,7 +396,7 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/19396305858?text=Hola%20Alexis%20Towing%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
+<a class="wa-float" href="https://wa.me/19396305858?text=Hola%20Alexis%20Towing%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/alexis-towing/whatsapp-logo.png" alt="WhatsApp" style="width:32px;height:32px"></a>
 
 <script>
 document.querySelectorAll('.faq .item').forEach(it=>{it.querySelector('.q').onclick=()=>{const o=it.classList.contains('open');document.querySelectorAll('.faq .item').forEach(x=>x.classList.remove('open'));if(!o)it.classList.add('open');};});
