@@ -43,7 +43,7 @@ section{padding:90px 0}
 header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(0,0,0,.94);border-bottom:2px solid var(--red)}
 .hd{display:flex;align-items:center;justify-content:space-between;height:76px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{width:54px;height:54px;object-fit:cover;border-radius:50%;border:2px solid var(--red)}
+.brand img{width:54px;height:54px;object-fit:cover;border-radius:50%}
 .brand b{font-family:var(--fh);font-size:1rem;letter-spacing:.08em}
 .brand b span{color:var(--red)}
 nav{display:flex;gap:24px;font-size:.88rem;font-weight:500}
@@ -59,7 +59,7 @@ nav a:hover{color:var(--red)}
 .hero-bg img{width:100%;height:100%;object-fit:cover}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.78),rgba(0,0,0,.55) 50%,#000 100%)}
 .hero .wrap{position:relative;z-index:2;text-align:center}
-.logo-hero{width:180px;height:180px;object-fit:cover;border-radius:50%;border:4px solid var(--red);margin:0 auto 24px;filter:drop-shadow(0 0 34px rgba(229,52,43,.55))}
+.logo-hero{width:180px;height:180px;object-fit:cover;border-radius:50%;margin:0 auto 24px;filter:drop-shadow(0 0 34px rgba(229,52,43,.55))}
 .kicker{display:inline-block;color:var(--red);font-family:var(--fh);font-weight:700;letter-spacing:.3em;font-size:.78rem;margin-bottom:20px;text-transform:uppercase}
 .hero h1{font-size:clamp(1.7rem,4.6vw,3.4rem);font-weight:800;line-height:1.25;text-transform:uppercase}
 .hero h1 .r{color:var(--red)}
@@ -147,10 +147,23 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
 .f-grid a,.f-grid p{display:block;color:#bbb;text-decoration:none;margin:8px 0;font-size:.93rem}
 .f-grid a:hover{color:var(--red)}
 .f-grid .fbrand{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.f-grid .fbrand img{width:46px;height:46px;border-radius:50%;border:2px solid var(--red);object-fit:cover}
+.f-grid .fbrand img{width:46px;height:46px;border-radius:50%;object-fit:cover}
 .copy{text-align:center;color:var(--gmed);font-size:.85rem;border-top:1px solid #1c1c1c;padding-top:26px}
 .copy a{color:var(--red);text-decoration:none}
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.7rem;text-decoration:none;box-shadow:0 10px 30px rgba(37,211,102,.4)}
+/* scroll reveal: subida innovadora */
+.reveal{opacity:0;transform:translateY(48px);transition:opacity .85s ease,transform .85s cubic-bezier(.16,1,.3,1)}
+.reveal-l{opacity:0;transform:translateX(-56px);transition:opacity .85s ease,transform .85s cubic-bezier(.16,1,.3,1)}
+.reveal-r{opacity:0;transform:translateX(56px);transition:opacity .85s ease,transform .85s cubic-bezier(.16,1,.3,1)}
+.reveal-s{opacity:0;transform:scale(.8);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+.reveal.in,.reveal-l.in,.reveal-r.in,.reveal-s.in{opacity:1;transform:none}
+@keyframes riseIn{from{opacity:0;transform:translateY(44px)}to{opacity:1;transform:none}}
+.hero .wrap>*{animation:riseIn 1s cubic-bezier(.16,1,.3,1) both}
+.hero .wrap>*:nth-child(2){animation-delay:.12s}
+.hero .wrap>*:nth-child(3){animation-delay:.24s}
+.hero .wrap>*:nth-child(4){animation-delay:.36s}
+.hero .wrap>*:nth-child(5){animation-delay:.48s}
+@media(prefers-reduced-motion:reduce){.reveal,.reveal-l,.reveal-r,.reveal-s{opacity:1!important;transform:none!important;transition:none}.hero .wrap>*{animation:none}}
 </style>
 </head>
 <body>
@@ -195,10 +208,10 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
 
 <section id="nosotros">
   <div class="wrap">
-    <div class="sec-head"><h2>Sobre <span>Nosotros</span></h2></div>
+    <div class="sec-head reveal"><h2>Sobre <span>Nosotros</span></h2></div>
     <div class="about-grid">
-      <img src="assets/alexis-towing/foto-2.jpg" alt="Alexis Towing Services en acción">
-      <div>
+      <img class="reveal-l" src="assets/alexis-towing/foto-2.jpg" alt="Alexis Towing Services en acción">
+      <div class="reveal-r">
         <p><b>Alexis Towing Services</b> es un negocio local de grúa y asistencia vial con base en <b>Ceiba, Puerto Rico</b>. Nos dedicamos a sacar de apuros a conductores en todo el este de la isla, con un servicio rápido, honesto y profesional, las 24 horas del día, los 7 días de la semana.</p>
         <p>Nuestro compromiso es ofrecer un servicio excepcional con profesionalismo, rapidez y cuidado meticuloso de tu vehículo. Desde emergencias en carretera hasta transporte especializado, estamos aquí para ayudarte en cada momento.</p>
         <div class="feat"><span class="tick">◆</span> Servicio 24 horas, 7 días a la semana</div>
@@ -212,29 +225,29 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
 
 <section id="servicios">
   <div class="wrap">
-    <div class="sec-head"><h2>Nuestros <span>Servicios</span></h2><p>Soluciones completas para tu vehículo, a cualquier hora.</p></div>
+    <div class="sec-head reveal"><h2>Nuestros <span>Servicios</span></h2><p>Soluciones completas para tu vehículo, a cualquier hora.</p></div>
     <div class="svc-grid">
-      <div class="svc"><img src="assets/alexis-towing/foto-2.jpg" alt="Servicio de grúa 24/7"><div class="bd"><h3>Servicio de Grúa 24/7</h3><p>Remolque inmediato de día, de noche y fines de semana en todo el este.</p></div></div>
-      <div class="svc"><img src="assets/alexis-towing/foto-3.jpg" alt="Transporte de mercancía pesada"><div class="bd"><h3>Transporte de Mercancía Pesada</h3><p>Movemos carga y equipos pesados con plataforma especializada.</p></div></div>
-      <div class="svc"><img src="assets/alexis-towing/foto-1.jpg" alt="Recogida de chatarra"><div class="bd"><h3>Recogida de Chatarra</h3><p>Retiramos tu vehículo viejo o chatarra de forma rápida y limpia.</p></div></div>
-      <div class="svc"><img src="assets/alexis-towing/foto-2.jpg" alt="Suplido de gasolina"><div class="bd"><h3>Suplido de Gasolina</h3><p>¿Te quedaste sin gasolina? Llevamos combustible hasta donde estés.</p></div></div>
-      <div class="svc"><img src="assets/alexis-towing/foto-1.jpg" alt="Cerrajería de autos"><div class="bd"><h3>Cerrajería de Autos</h3><p>Apertura de vehículos cuando dejas las llaves adentro.</p></div></div>
-      <div class="svc"><img src="assets/alexis-towing/foto-3.jpg" alt="Cambio de gomas"><div class="bd"><h3>Cambio de Gomas</h3><p>Asistencia en carretera para gomas vacías o dañadas.</p></div></div>
+      <div class="svc reveal"><img src="assets/alexis-towing/foto-2.jpg" alt="Servicio de grúa 24/7"><div class="bd"><h3>Servicio de Grúa 24/7</h3><p>Remolque inmediato de día, de noche y fines de semana en todo el este.</p></div></div>
+      <div class="svc reveal"><img src="assets/alexis-towing/foto-3.jpg" alt="Transporte de mercancía pesada"><div class="bd"><h3>Transporte de Mercancía Pesada</h3><p>Movemos carga y equipos pesados con plataforma especializada.</p></div></div>
+      <div class="svc reveal"><img src="assets/alexis-towing/foto-1.jpg" alt="Recogida de chatarra"><div class="bd"><h3>Recogida de Chatarra</h3><p>Retiramos tu vehículo viejo o chatarra de forma rápida y limpia.</p></div></div>
+      <div class="svc reveal"><img src="assets/alexis-towing/foto-2.jpg" alt="Suplido de gasolina"><div class="bd"><h3>Suplido de Gasolina</h3><p>¿Te quedaste sin gasolina? Llevamos combustible hasta donde estés.</p></div></div>
+      <div class="svc reveal"><img src="assets/alexis-towing/foto-1.jpg" alt="Cerrajería de autos"><div class="bd"><h3>Cerrajería de Autos</h3><p>Apertura de vehículos cuando dejas las llaves adentro.</p></div></div>
+      <div class="svc reveal"><img src="assets/alexis-towing/foto-3.jpg" alt="Cambio de gomas"><div class="bd"><h3>Cambio de Gomas</h3><p>Asistencia en carretera para gomas vacías o dañadas.</p></div></div>
     </div>
   </div>
 </section>
 
 <section id="descuento">
   <div class="wrap disc-grid">
-    <div class="seal-wrap"><img src="assets/alexis-towing/sello-10.png" alt="Sello 10% de descuento"></div>
-    <div>
+    <div class="seal-wrap reveal-s"><img src="assets/alexis-towing/sello-10.png" alt="Sello 10% de descuento"></div>
+    <div class="reveal-r">
       <div class="kicker">Oferta para clientes</div>
       <h2 style="font-size:clamp(1.6rem,4vw,2.6rem)">Tu reseña vale un<br><span style="color:var(--red)">10% de descuento</span></h2>
       <p style="color:#ccc;margin-top:12px">Déjanos una reseña en Google y obtén 10% de descuento en tu próximo remolque.</p>
       <div class="steps">
-        <div class="step"><div class="n">01</div><div>Déjanos tu reseña en Google</div></div>
-        <div class="step"><div class="n">02</div><div>Envíanos la captura por WhatsApp</div></div>
-        <div class="step"><div class="n">03</div><div>Recibe tu 10% de descuento</div></div>
+        <div class="step reveal"><div class="n">01</div><div>Déjanos tu reseña en Google</div></div>
+        <div class="step reveal"><div class="n">02</div><div>Envíanos la captura por WhatsApp</div></div>
+        <div class="step reveal"><div class="n">03</div><div>Recibe tu 10% de descuento</div></div>
       </div>
       <a class="g-btn" href="https://maps.app.goo.gl/PfPvY7esjbLBZgJP6" target="_blank" rel="noopener">Déjanos tu reseña en Google</a>
     </div>
@@ -243,19 +256,19 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
 
 <section id="areas">
   <div class="wrap">
-    <div class="sec-head"><h2>Áreas de <span>Servicio</span></h2><p>Cobertura inmediata en el este de Puerto Rico:</p></div>
+    <div class="sec-head reveal"><h2>Áreas de <span>Servicio</span></h2><p>Cobertura inmediata en el este de Puerto Rico:</p></div>
     <div class="towns">
-      <div class="town"><div class="pin">◈</div><h3>Ceiba</h3><p>Nuestra base</p></div>
-      <div class="town"><div class="pin">◈</div><h3>Naguabo</h3><p>Cobertura total</p></div>
-      <div class="town"><div class="pin">◈</div><h3>Fajardo</h3><p>Servicio 24/7</p></div>
-      <div class="town"><div class="pin">◈</div><h3>Luquillo</h3><p>Día y noche</p></div>
+      <div class="town reveal"><div class="pin">◈</div><h3>Ceiba</h3><p>Nuestra base</p></div>
+      <div class="town reveal"><div class="pin">◈</div><h3>Naguabo</h3><p>Cobertura total</p></div>
+      <div class="town reveal"><div class="pin">◈</div><h3>Fajardo</h3><p>Servicio 24/7</p></div>
+      <div class="town reveal"><div class="pin">◈</div><h3>Luquillo</h3><p>Día y noche</p></div>
     </div>
   </div>
 </section>
 
 <section id="prueba">
   <div class="wrap">
-    <div class="proof">
+    <div class="proof reveal">
       <div class="kicker">Prueba social</div>
       <div class="stars">★★★★★</div>
       <div class="score">5.0</div>
@@ -267,34 +280,34 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
 
 <section id="estandares" style="background:var(--dark)">
   <div class="wrap">
-    <div class="sec-head"><h2>Estándares <span>Pro Elite</span></h2></div>
+    <div class="sec-head reveal"><h2>Estándares <span>Pro Elite</span></h2></div>
     <div class="std-grid">
-      <div class="std"><div class="big">24/7</div><h3>Disponibilidad Total</h3><p>Siempre disponibles, día y noche, todos los días del año.</p></div>
-      <div class="std"><div class="big">100%</div><h3>Compromiso</h3><p>Cuidado meticuloso de tu vehículo en cada servicio.</p></div>
-      <div class="std"><div class="big">⚡</div><h3>Respuesta Rápida</h3><p>Llegamos rápido cuando más nos necesitas.</p></div>
-      <div class="std"><div class="big">5.0</div><h3>Satisfacción Garantizada</h3><p>Calificación perfecta de nuestros clientes en Google.</p></div>
+      <div class="std reveal"><div class="big">24/7</div><h3>Disponibilidad Total</h3><p>Siempre disponibles, día y noche, todos los días del año.</p></div>
+      <div class="std reveal"><div class="big">100%</div><h3>Compromiso</h3><p>Cuidado meticuloso de tu vehículo en cada servicio.</p></div>
+      <div class="std reveal"><div class="big">⚡</div><h3>Respuesta Rápida</h3><p>Llegamos rápido cuando más nos necesitas.</p></div>
+      <div class="std reveal"><div class="big">5.0</div><h3>Satisfacción Garantizada</h3><p>Calificación perfecta de nuestros clientes en Google.</p></div>
     </div>
   </div>
 </section>
 
 <section id="faq">
   <div class="wrap">
-    <div class="sec-head"><h2>Preguntas <span>Frecuentes</span></h2></div>
+    <div class="sec-head reveal"><h2>Preguntas <span>Frecuentes</span></h2></div>
     <div class="faq">
-      <div class="item"><button class="q">¿Hacen servicio de grúa en Ceiba las 24 horas?<span class="plus">+</span></button><div class="a"><div>Sí. Operamos 24 horas al día, 7 días a la semana en Ceiba y todo el este: Naguabo, Fajardo y Luquillo. Escríbenos por WhatsApp al (939) 630-5858 a cualquier hora.</div></div></div>
-      <div class="item"><button class="q">¿Cuánto cuesta un servicio de grúa en Fajardo o Naguabo?<span class="plus">+</span></button><div class="a"><div>El costo depende de la distancia y el tipo de vehículo. Escríbenos por WhatsApp y te damos cotización inmediata, sin compromiso.</div></div></div>
-      <div class="item"><button class="q">¿Pueden remolcar una SUV o un vehículo de lujo?<span class="plus">+</span></button><div class="a"><div>Sí. Nuestra plataforma (flatbed) transporta desde carros compactos hasta SUVs y vehículos de lujo con total seguridad.</div></div></div>
-      <div class="item"><button class="q">¿Qué hago si me quedo sin gasolina en la carretera?<span class="plus">+</span></button><div class="a"><div>Escríbenos por WhatsApp o llámanos: llevamos gasolina hasta donde estés en el área este, de día o de noche.</div></div></div>
-      <div class="item"><button class="q">¿Ofrecen contratos mensuales para negocios?<span class="plus">+</span></button><div class="a"><div>Sí. Tenemos planes mensuales de asistencia vial para negocios, talleres y flotas de vehículos. Completa el formulario de contratos y te contactamos con una propuesta.</div></div></div>
-      <div class="item"><button class="q">¿Cómo obtengo el 10% de descuento?<span class="plus">+</span></button><div class="a"><div>Fácil: déjanos una reseña en Google, envíanos la captura por WhatsApp y obtén 10% de descuento en tu próximo remolque.</div></div></div>
+      <div class="item reveal"><button class="q">¿Hacen servicio de grúa en Ceiba las 24 horas?<span class="plus">+</span></button><div class="a"><div>Sí. Operamos 24 horas al día, 7 días a la semana en Ceiba y todo el este: Naguabo, Fajardo y Luquillo. Escríbenos por WhatsApp al (939) 630-5858 a cualquier hora.</div></div></div>
+      <div class="item reveal"><button class="q">¿Cuánto cuesta un servicio de grúa en Fajardo o Naguabo?<span class="plus">+</span></button><div class="a"><div>El costo depende de la distancia y el tipo de vehículo. Escríbenos por WhatsApp y te damos cotización inmediata, sin compromiso.</div></div></div>
+      <div class="item reveal"><button class="q">¿Pueden remolcar una SUV o un vehículo de lujo?<span class="plus">+</span></button><div class="a"><div>Sí. Nuestra plataforma (flatbed) transporta desde carros compactos hasta SUVs y vehículos de lujo con total seguridad.</div></div></div>
+      <div class="item reveal"><button class="q">¿Qué hago si me quedo sin gasolina en la carretera?<span class="plus">+</span></button><div class="a"><div>Escríbenos por WhatsApp o llámanos: llevamos gasolina hasta donde estés en el área este, de día o de noche.</div></div></div>
+      <div class="item reveal"><button class="q">¿Ofrecen contratos mensuales para negocios?<span class="plus">+</span></button><div class="a"><div>Sí. Tenemos planes mensuales de asistencia vial para negocios, talleres y flotas de vehículos. Completa el formulario de contratos y te contactamos con una propuesta.</div></div></div>
+      <div class="item reveal"><button class="q">¿Cómo obtengo el 10% de descuento?<span class="plus">+</span></button><div class="a"><div>Fácil: déjanos una reseña en Google, envíanos la captura por WhatsApp y obtén 10% de descuento en tu próximo remolque.</div></div></div>
     </div>
   </div>
 </section>
 
 <section id="contratos">
   <div class="wrap">
-    <div class="sec-head"><h2>Contratos <span>Mensuales</span></h2><p>¿Tienes taller, dealer o flota de vehículos? Asegura asistencia vial prioritaria todo el mes.</p></div>
-    <div class="form-card">
+    <div class="sec-head reveal"><h2>Contratos <span>Mensuales</span></h2><p>¿Tienes taller, dealer o flota de vehículos? Asegura asistencia vial prioritaria todo el mes.</p></div>
+    <div class="form-card reveal-s">
       <form onsubmit="sendContract(event)">
         <label for="c-nombre">Nombre completo</label>
         <input id="c-nombre" required placeholder="Tu nombre">
@@ -342,6 +355,14 @@ function sendContract(e){e.preventDefault();
 const v=id=>document.getElementById(id).value.trim();
 const msg='Hola Alexis Towing, quiero un CONTRATO MENSUAL.%0A%0ANombre: '+encodeURIComponent(v('c-nombre'))+'%0ANegocio: '+encodeURIComponent(v('c-negocio'))+'%0ATeléfono: '+encodeURIComponent(v('c-tel'))+'%0AFlota: '+encodeURIComponent(v('c-flota'))+'%0ADetalle: '+encodeURIComponent(v('c-msg'));
 window.open('https://wa.me/19396305858?text='+msg,'_blank','noopener');}
+// scroll reveal con stagger
+document.querySelectorAll('.svc-grid,.steps,.towns,.std-grid,.faq').forEach(p=>{
+  [...p.querySelectorAll(':scope .reveal')].forEach((el,i)=>el.dataset.d=i*90);
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.style.transitionDelay=(e.target.dataset.d||0)+'ms';e.target.classList.add('in');io.unobserve(e.target);}
+}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r,.reveal-s').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
