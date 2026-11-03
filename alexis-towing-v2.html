@@ -46,10 +46,10 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(0,0,0,.94)
 /* logo elite: anillo de energía giratorio + entrada cinematográfica */
 .logo-fx{position:relative;display:inline-block;flex-shrink:0;animation:logoGlow 3.2s ease-in-out infinite;transition:transform .3s}
 .logo-fx::before{content:"";position:absolute;inset:-6px;border-radius:50%;background:conic-gradient(var(--red),#ffb3ab,#ff5b4d,#7a0f0a,var(--red));animation:spin 4.5s linear infinite}
-.logo-fx img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;animation:logoIn 1.1s cubic-bezier(.2,.9,.25,1.3) .15s both}
-.brand .logo-fx{width:54px;height:54px}
+.logo-fx img{position:relative;z-index:1;display:block;width:80%;height:80%;margin:10%;object-fit:cover;border-radius:50%;animation:logoIn 1.1s cubic-bezier(.2,.9,.25,1.3) .15s both}
+.brand .logo-fx{width:64px;height:64px}
 .brand:hover .logo-fx{transform:scale(1.12) rotate(8deg)}
-.logo-fx-lg{width:180px;height:180px;margin:0 auto 24px}
+.logo-fx-lg{width:210px;height:210px;margin:0 auto 24px}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes logoIn{0%{transform:scale(0) rotate(-220deg);opacity:0}60%{transform:scale(1.12) rotate(10deg);opacity:1}100%{transform:scale(1) rotate(0);opacity:1}}
 @keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 8px rgba(229,52,43,.45))}50%{filter:drop-shadow(0 0 22px rgba(229,52,43,.9))}}
@@ -238,7 +238,7 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
 
 <section class="hero">
   <div class="hero-bg">
-    <img src="assets/alexis-towing/foto-1.jpg" alt="">
+    <img fetchpriority="high" src="assets/alexis-towing/foto-1.jpg" alt="">
     <img src="assets/alexis-towing/foto-2.jpg" alt="">
     <img src="assets/alexis-towing/foto-3.jpg" alt="">
     <img src="assets/alexis-towing/foto-4.jpg" alt="">
@@ -258,15 +258,15 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
 </section>
 
 <div class="strip"><div class="mq-track">
-  <img src="assets/alexis-towing/foto-1.jpg" alt="Grúa Alexis Towing"><img src="assets/alexis-towing/foto-2.jpg" alt="Grúa Alexis Towing"><img src="assets/alexis-towing/foto-3.jpg" alt="Grúa Alexis Towing"><img src="assets/alexis-towing/foto-4.jpg" alt="Grúa Alexis Towing"><img src="assets/alexis-towing/foto-5.jpg" alt="Grúa Alexis Towing"><img src="assets/alexis-towing/foto-6.jpg" alt="Grúa Alexis Towing">
-  <img src="assets/alexis-towing/foto-1.jpg" alt="Grúa Alexis Towing"><img src="assets/alexis-towing/foto-2.jpg" alt="Grúa Alexis Towing"><img src="assets/alexis-towing/foto-3.jpg" alt="Grúa Alexis Towing"><img src="assets/alexis-towing/foto-4.jpg" alt="Grúa Alexis Towing"><img src="assets/alexis-towing/foto-5.jpg" alt="Grúa Alexis Towing"><img src="assets/alexis-towing/foto-6.jpg" alt="Grúa Alexis Towing">
+  <img loading="lazy" decoding="async" src="assets/alexis-towing/foto-1.jpg" alt="Grúa Alexis Towing"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-2.jpg" alt="Grúa Alexis Towing"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-3.jpg" alt="Grúa Alexis Towing"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-4.jpg" alt="Grúa Alexis Towing"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-5.jpg" alt="Grúa Alexis Towing"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-6.jpg" alt="Grúa Alexis Towing">
+  <img loading="lazy" decoding="async" src="assets/alexis-towing/foto-1.jpg" alt="Grúa Alexis Towing"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-2.jpg" alt="Grúa Alexis Towing"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-3.jpg" alt="Grúa Alexis Towing"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-4.jpg" alt="Grúa Alexis Towing"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-5.jpg" alt="Grúa Alexis Towing"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-6.jpg" alt="Grúa Alexis Towing">
 </div></div>
 
 <section id="nosotros">
   <div class="wrap">
     <div class="sec-head reveal"><h2>Sobre <span>Nosotros</span></h2></div>
     <div class="about-grid">
-      <img class="reveal-l" src="assets/alexis-towing/foto-6.jpg" alt="Plataforma Alexis Flat Bed con BMW M4">
+      <img loading="lazy" decoding="async" class="reveal-l" src="assets/alexis-towing/foto-6.jpg" alt="Plataforma Alexis Flat Bed con BMW M4">
       <div class="reveal-r">
         <p><b>Alexis Towing Services</b> es un negocio local de grúa y asistencia vial con base en <b>Ceiba, Puerto Rico</b>. Nos dedicamos a sacar de apuros a conductores en todo el este de la isla, con un servicio rápido, honesto y profesional, las 24 horas del día, los 7 días de la semana.</p>
         <p>Nuestro compromiso es ofrecer un servicio excepcional con profesionalismo, rapidez y cuidado meticuloso de tu vehículo. Desde emergencias en carretera hasta transporte especializado, estamos aquí para ayudarte en cada momento.</p>
@@ -283,12 +283,12 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
   <div class="wrap">
     <div class="sec-head reveal"><h2>Nuestros <span>Servicios</span></h2><p>Soluciones completas para tu vehículo, a cualquier hora.</p></div>
     <div class="svc-grid">
-      <div class="svc reveal"><img src="assets/alexis-towing/foto-2.jpg" alt="Servicio de grúa 24/7"><div class="bd"><h3>Servicio de Grúa 24/7</h3><p>Remolque inmediato de día, de noche y fines de semana en todo el este.</p></div></div>
-      <div class="svc reveal"><img src="assets/alexis-towing/foto-4.jpg" alt="Transporte de mercancía pesada"><div class="bd"><h3>Transporte de Mercancía Pesada</h3><p>Movemos carga y equipos pesados con plataforma especializada.</p></div></div>
-      <div class="svc reveal"><img src="assets/alexis-towing/foto-3.jpg" alt="Recogida de chatarra"><div class="bd"><h3>Recogida de Chatarra</h3><p>Retiramos tu vehículo viejo o chatarra de forma rápida y limpia.</p></div></div>
-      <div class="svc reveal"><img src="assets/alexis-towing/foto-1.jpg" alt="Suplido de gasolina"><div class="bd"><h3>Suplido de Gasolina</h3><p>¿Te quedaste sin gasolina? Llevamos combustible hasta donde estés.</p></div></div>
-      <div class="svc reveal"><img src="assets/alexis-towing/foto-5.jpg" alt="Cerrajería de autos"><div class="bd"><h3>Cerrajería de Autos</h3><p>Apertura de vehículos cuando dejas las llaves adentro.</p></div></div>
-      <div class="svc reveal"><img src="assets/alexis-towing/foto-6.jpg" alt="Cambio de gomas"><div class="bd"><h3>Cambio de Gomas</h3><p>Asistencia en carretera para gomas vacías o dañadas.</p></div></div>
+      <div class="svc reveal"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-2.jpg" alt="Servicio de grúa 24/7"><div class="bd"><h3>Servicio de Grúa 24/7</h3><p>Remolque inmediato de día, de noche y fines de semana en todo el este.</p></div></div>
+      <div class="svc reveal"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-4.jpg" alt="Transporte de mercancía pesada"><div class="bd"><h3>Transporte de Mercancía Pesada</h3><p>Movemos carga y equipos pesados con plataforma especializada.</p></div></div>
+      <div class="svc reveal"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-3.jpg" alt="Recogida de chatarra"><div class="bd"><h3>Recogida de Chatarra</h3><p>Retiramos tu vehículo viejo o chatarra de forma rápida y limpia.</p></div></div>
+      <div class="svc reveal"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-1.jpg" alt="Suplido de gasolina"><div class="bd"><h3>Suplido de Gasolina</h3><p>¿Te quedaste sin gasolina? Llevamos combustible hasta donde estés.</p></div></div>
+      <div class="svc reveal"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-5.jpg" alt="Cerrajería de autos"><div class="bd"><h3>Cerrajería de Autos</h3><p>Apertura de vehículos cuando dejas las llaves adentro.</p></div></div>
+      <div class="svc reveal"><img loading="lazy" decoding="async" src="assets/alexis-towing/foto-6.jpg" alt="Cambio de gomas"><div class="bd"><h3>Cambio de Gomas</h3><p>Asistencia en carretera para gomas vacías o dañadas.</p></div></div>
     </div>
   </div>
 </section>
@@ -300,11 +300,11 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
       <div class="ef-corner ef-tl"></div><div class="ef-corner ef-tr"></div><div class="ef-corner ef-bl"></div><div class="ef-corner ef-br"></div>
       <div class="ef-grid">
         <div class="ef-left">
-          <img class="glogo" src="assets/alexis-towing/google-logo.png" alt="Google">
+          <img loading="lazy" decoding="async" class="glogo" src="assets/alexis-towing/google-logo.png" alt="Google">
           <div class="stars">★★★★★</div>
           <div class="score">5.0</div>
           <div class="src">9 reseñas reales en Google</div>
-          <img class="seal" src="assets/alexis-towing/sello-10.png" alt="Sello 10% de descuento">
+          <img loading="lazy" decoding="async" class="seal" src="assets/alexis-towing/sello-10.png" alt="Sello 10% de descuento">
         </div>
         <div>
           <div class="ef-rev">
@@ -324,7 +324,7 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
             <div class="ef-step"><span class="n">02</span>Envíanos la captura por WhatsApp</div>
             <div class="ef-step"><span class="n">03</span>Recibe tu 10% de descuento</div>
           </div>
-          <div class="ef-cta"><a class="g-btn" href="https://maps.app.goo.gl/PfPvY7esjbLBZgJP6" target="_blank" rel="noopener"><img src="assets/alexis-towing/google-logo.png" alt="Google">Déjanos tu reseña en Google</a></div>
+          <div class="ef-cta"><a class="g-btn" href="https://maps.app.goo.gl/PfPvY7esjbLBZgJP6" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="assets/alexis-towing/google-logo.png" alt="Google">Déjanos tu reseña en Google</a></div>
         </div>
       </div>
     </div>
@@ -411,10 +411,10 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
   <div class="wrap">
     <div class="sec-head reveal"><div class="kicker">Contacto directo</div><h2>Habla con <span>nosotros</span></h2><p>Respuesta inmediata, 24 horas al día.</p></div>
     <div class="contact-grid">
-      <a class="c-card reveal" href="https://wa.me/19396305858?text=Hola%20Alexis%20Towing%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener"><img src="assets/alexis-towing/whatsapp-3d.png" alt="WhatsApp"><b>WhatsApp</b><span>Escríbenos directo</span></a>
-      <a class="c-card reveal" href="https://www.facebook.com/share/1CMphimTww/" target="_blank" rel="noopener"><img src="assets/alexis-towing/facebook-3d.png" alt="Facebook"><b>Facebook</b><span>Síguenos</span></a>
-      <a class="c-card reveal" href="https://maps.app.goo.gl/PfPvY7esjbLBZgJP6" target="_blank" rel="noopener"><img src="assets/alexis-towing/google-3d.png" alt="Google"><b>Google</b><span>5.0 ★ · Déjanos tu reseña</span></a>
-      <a class="c-card reveal" href="mailto:alexisg2008@live.com"><img src="assets/alexis-towing/email-3d.png" alt="Email"><b>Email</b><span>alexisg2008@live.com</span></a>
+      <a class="c-card reveal" href="https://wa.me/19396305858?text=Hola%20Alexis%20Towing%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="assets/alexis-towing/whatsapp-3d.png" alt="WhatsApp"><b>WhatsApp</b><span>Escríbenos directo</span></a>
+      <a class="c-card reveal" href="https://www.facebook.com/share/1CMphimTww/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="assets/alexis-towing/facebook-3d.png" alt="Facebook"><b>Facebook</b><span>Síguenos</span></a>
+      <a class="c-card reveal" href="https://maps.app.goo.gl/PfPvY7esjbLBZgJP6" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="assets/alexis-towing/google-3d.png" alt="Google"><b>Google</b><span>5.0 ★ · Déjanos tu reseña</span></a>
+      <a class="c-card reveal" href="mailto:alexisg2008@live.com"><img loading="lazy" decoding="async" src="assets/alexis-towing/email-3d.png" alt="Email"><b>Email</b><span>alexisg2008@live.com</span></a>
       <a class="c-card reveal" href="tel:+19396305858"><div class="bignum">(939)<br>630-5858</div><b>Llamar</b><span>Abierto 24/7</span></a>
     </div>
   </div>
@@ -424,7 +424,7 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
   <div class="wrap">
     <div class="f-grid">
       <div>
-        <div class="fbrand"><img src="assets/alexis-towing/logo-redondo.png" alt="Alexis Towing"><h4 style="margin:0">ALEXIS TOWING SERVICES</h4></div>
+        <div class="fbrand"><img loading="lazy" decoding="async" src="assets/alexis-towing/logo-redondo.png" alt="Alexis Towing"><h4 style="margin:0">ALEXIS TOWING SERVICES</h4></div>
         <a href="tel:+19396305858">(939) 630-5858 — 24/7</a>
         <a href="mailto:alexisg2008@live.com">alexisg2008@live.com</a>
         <a href="https://serviciodegruaspr.com/" target="_blank" rel="noopener">serviciodegruaspr.com</a>
@@ -437,7 +437,7 @@ footer{background:#050505;border-top:2px solid var(--red);padding:64px 0 30px}
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/19396305858?text=Hola%20Alexis%20Towing%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/alexis-towing/whatsapp-logo.png" alt="WhatsApp" style="width:32px;height:32px"></a>
+<a class="wa-float" href="https://wa.me/19396305858?text=Hola%20Alexis%20Towing%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener" aria-label="WhatsApp"><img loading="lazy" decoding="async" src="assets/alexis-towing/whatsapp-logo.png" alt="WhatsApp" style="width:32px;height:32px"></a>
 
 <script>
 document.querySelectorAll('.faq .item').forEach(it=>{it.querySelector('.q').onclick=()=>{const o=it.classList.contains('open');document.querySelectorAll('.faq .item').forEach(x=>x.classList.remove('open'));if(!o)it.classList.add('open');};});
