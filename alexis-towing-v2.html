@@ -43,17 +43,14 @@ section{padding:90px 0}
 header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(0,0,0,.94);border-bottom:2px solid var(--red)}
 .hd{display:flex;align-items:center;justify-content:space-between;height:76px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-/* logo elite: anillo de energía giratorio + entrada cinematográfica */
-.logo-fx{position:relative;display:inline-block;flex-shrink:0;animation:logoGlow 3.2s ease-in-out infinite;transition:transform .3s}
-.logo-fx::before{content:"";position:absolute;inset:-6px;border-radius:50%;background:conic-gradient(var(--red),#ffb3ab,#ff5b4d,#7a0f0a,var(--red));animation:spin 4.5s linear infinite}
-.logo-fx img{position:relative;z-index:1;display:block;width:80%;height:80%;margin:10%;object-fit:cover;border-radius:50%;animation:logoIn 1.1s cubic-bezier(.2,.9,.25,1.3) .15s both}
-.brand .logo-fx{width:64px;height:64px}
-.brand:hover .logo-fx{transform:scale(1.12) rotate(8deg)}
-.logo-fx-lg{width:210px;height:210px;margin:0 auto 24px}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes logoIn{0%{transform:scale(0) rotate(-220deg);opacity:0}60%{transform:scale(1.12) rotate(10deg);opacity:1}100%{transform:scale(1) rotate(0);opacity:1}}
-@keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 8px rgba(229,52,43,.45))}50%{filter:drop-shadow(0 0 22px rgba(229,52,43,.9))}}
-@media (prefers-reduced-motion:reduce){.logo-fx,.logo-fx::before,.logo-fx img,.hero-bg img,.mq-track,.c-card img{animation:none!important}}
+/* logo: presentación limpia y sólida */
+.logo-fx{position:relative;display:inline-block;flex-shrink:0;transition:transform .3s}
+.logo-fx img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 0 0 3px var(--red),0 0 28px rgba(229,52,43,.5);animation:logoIn .9s ease-out .1s both}
+.brand .logo-fx{width:60px;height:60px}
+.brand:hover .logo-fx{transform:scale(1.07)}
+.logo-fx-lg{width:200px;height:200px;margin:0 auto 24px}
+@keyframes logoIn{from{opacity:0;transform:scale(.72)}to{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.logo-fx img,.hero-bg img,.mq-track,.c-card img{animation:none!important}}
 .brand b{font-family:var(--fh);font-size:1rem;letter-spacing:.08em}
 .brand b span{color:var(--red)}
 nav{display:flex;gap:24px;font-size:.88rem;font-weight:500}
