@@ -81,6 +81,10 @@ section{padding:96px 0;position:relative}
 .svc .ic svg{width:30px;height:30px;stroke:#cfe0ff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .svc h3{font-size:19px;font-weight:700;margin-bottom:10px}
 .svc p{font-size:14px;color:var(--muted);line-height:1.65}
+.svc .price{margin-top:12px;font-family:Sora;font-weight:700;font-size:13.5px;color:var(--orange-soft)}
+.ozono{margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:linear-gradient(120deg,rgba(255,122,26,.14),rgba(31,107,255,.10));border:1px solid rgba(255,122,26,.4);border-radius:var(--r);padding:24px 28px}
+.ozono div{font-size:15px;line-height:1.6;max-width:60ch}
+.ozono b{color:#fff}
 /* before/after slider */
 .ba-stage{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.55);max-width:860px;margin:0 auto;touch-action:pan-y}
 .ba-stage img{display:block;width:100%;height:auto;user-select:none;pointer-events:none}
@@ -94,6 +98,13 @@ section{padding:96px 0;position:relative}
 .ba-dots{display:flex;gap:10px;justify-content:center;margin-top:22px}
 .ba-dots button{width:44px;height:6px;border-radius:99px;border:0;background:rgba(255,255,255,.15);cursor:pointer;transition:background .2s}
 .ba-dots button.on{background:linear-gradient(90deg,var(--blue-bright),var(--orange))}
+/* showcase: video + gallery */
+.showcase{max-width:860px;margin:34px auto 0}
+.showcase video{width:100%;border-radius:22px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.55);background:#000}
+.gal{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+.gal img{border-radius:12px;border:1px solid var(--line);aspect-ratio:3/4;object-fit:cover;width:100%;transition:transform .2s}
+.gal img:hover{transform:scale(1.04)}
+@media(max-width:700px){.gal{grid-template-columns:repeat(3,1fr)}}
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:st}
 .step{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;position:relative;overflow:hidden}
@@ -111,6 +122,16 @@ section{padding:96px 0;position:relative}
 .faq-a p{padding:0 22px 22px;color:var(--muted);line-height:1.7;font-size:15px}
 /* reviews */
 .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+/* price cards */
+.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pcard{background:linear-gradient(160deg,rgba(31,107,255,.10),var(--panel) 60%);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;transition:transform .2s,border-color .2s}
+.pcard:hover{transform:translateY(-6px);border-color:rgba(255,122,26,.5)}
+.pcard h3{font-size:17px;margin-bottom:16px;color:var(--orange-soft);letter-spacing:.5px}
+.pcard ul{list-style:none}
+.pcard li{display:flex;justify-content:space-between;gap:10px;font-size:14px;color:var(--muted);padding:9px 0;border-bottom:1px dashed rgba(120,150,220,.15)}
+.pcard li b{color:#fff;font-family:Sora}
+.pcard .pnote{margin-top:14px;font-size:12.5px;color:var(--muted)}
+@media(max-width:900px){.price-grid{grid-template-columns:repeat(2,1fr)}}
 .rev{background:linear-gradient(160deg,rgba(31,107,255,.08),var(--panel));border:1px solid var(--line);border-radius:var(--r);padding:28px 24px}
 .rev .stars{color:var(--gold2);letter-spacing:3px;font-size:15px;margin-bottom:14px}
 .rev p{font-size:14.5px;line-height:1.7;color:#d6deee;margin-bottom:18px}
@@ -180,8 +201,8 @@ footer a{color:var(--orange-soft);font-weight:600}
   <div class="hero-inner">
     <div class="wrap">
       <span class="hero-badge"><span class="dot"></span>SAN JUAN · PUERTO RICO — SIEMPRE ABIERTO</span>
-      <h1>Limpieza profunda <span class="grad">que se nota al instante.</span></h1>
-      <p class="lead">Especialistas en limpieza y desinfección a vapor de <b>muebles, colchones, alfombras e interiores de auto</b>. Con los mejores productos del mercado — sin dañar tus piezas. Garantizado.</p>
+      <h1>Limpieza profunda <span class="grad">que se ve y se siente.</span></h1>
+      <p class="lead">Especialistas en limpieza y desinfección a vapor de <b>muebles, colchones, alfombras e interiores de auto</b>. Con los mejores productos del mercado — sin dañar tus piezas. <b>Servicio a domicilio en toda la isla.</b> Garantizado.</p>
       <div class="hero-ctas">
         <a class="btn btn-orange" href="https://wa.me/19392411880?text=Hola%20Magic%20Detailing%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20limpieza." target="_blank" rel="noopener">Cotizar por WhatsApp</a>
         <a class="btn btn-ghost" href="tel:+19392411880">(939) 241-1880</a>
@@ -205,23 +226,27 @@ footer a{color:var(--orange-soft);font-weight:600}
       <div class="svc reveal">
         <span class="n">01</span>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3"/><path d="M3 13a2 2 0 0 1 4 0v1h10v-1a2 2 0 0 1 4 0v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3z"/><path d="M5 20v-2M19 20v-2"/></svg></div>
-        <h3>Muebles</h3><p>Sofás, butacas y seccionales. Limpieza profunda de tapicería que revive colores y elimina olores sin maltratar la tela.</p>
+        <h3>Muebles</h3><p>Sofás, butacas y seccionales. Limpieza profunda de tapicería que revive colores y elimina olores sin maltratar la tela.</p><p class="price">Desde $25 · Seccional $65–$85</p>
       </div>
       <div class="svc reveal">
         <span class="n">02</span>
         <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="7" rx="3"/><path d="M3 13h18M6 10V7h12v3"/><path d="M7 17v2M17 17v2"/></svg></div>
-        <h3>Colchones</h3><p>Desinfección a vapor contra ácaros, bacterias y manchas. Duerme en un colchón limpio y saludable.</p>
+        <h3>Colchones</h3><p>Desinfección a vapor contra ácaros, bacterias y manchas. Duerme en un colchón limpio y saludable.</p><p class="price">Twin $35 · Queen $55 · King $65</p>
       </div>
       <div class="svc reveal">
         <span class="n">03</span>
         <div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16M4 15h16M9 5v14M15 5v14"/></svg></div>
-        <h3>Alfombras</h3><p>Extracción profunda de polvo, manchas y alérgenos atrapados en las fibras. Piso que se ve y se siente nuevo.</p>
+        <h3>Alfombras</h3><p>Extracción profunda de polvo, manchas y alérgenos atrapados en las fibras. Con recogida y entrega.</p><p class="price">5x8 $45 · 6x9 $55 · 8x10 $65</p>
       </div>
       <div class="svc reveal">
         <span class="n">04</span>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><rect x="4" y="13" width="16" height="5" rx="1.5"/><path d="M7 18v1.5M17 18v1.5"/></svg></div>
-        <h3>Interiores de auto</h3><p>Asientos, alfombras y tapicería del carro con detalle profesional. Tu auto huele y se ve como recién salido del dealer.</p>
+        <h3>Interiores de auto</h3><p>Asientos, alfombras y tapicería del carro con detalle profesional. Tu auto huele y se ve como recién salido del dealer.</p><p class="price">Compacto $65 · SUV $85–$110</p>
       </div>
+    </div>
+    <div class="ozono reveal">
+      <div><b>Desinfección de ozono + purificador de aire — $35.</b> Elimina ácaros, bacterias y malos olores de raíz. Todos los servicios incluyen tratamiento para manchas y derrames.</div>
+      <a class="btn btn-orange" href="https://wa.me/19392411880?text=Hola%20Magic%20Detailing%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">Cotizar ahora</a>
     </div>
   </div>
 </section>
@@ -229,14 +254,26 @@ footer a{color:var(--orange-soft);font-weight:600}
 <section id="resultados" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head reveal"><span class="sec-num">02</span><h2>Resultados reales</h2></div>
-    <p class="sec-sub reveal">Desliza el control y mira la diferencia. Esto es lo que el vapor profesional le hace a un mueble.</p>
+    <p class="sec-sub reveal">Desliza el control y mira la diferencia. Trabajo real de Magic Detailing — "lo que parecía imposible... terminó luciendo como nuevo".</p>
     <div class="ba-stage reveal" id="baStage">
-      <img id="baBefore" src="assets/magic-detailing/trabajo-1a.jpg" alt="Asiento antes de la limpieza">
-      <div class="ba-after" id="baAfter"><img id="baAfterImg" src="assets/magic-detailing/trabajo-1b.jpg" alt="Asiento después de la limpieza a vapor"></div>
-      <span class="ba-tag antes">ANTES</span><span class="ba-tag despues">DESPUÉS</span>
+      <img id="baBefore" src="assets/magic-detailing/rd-auto-asiento-antes-1.jpg" alt="Asiento antes de la limpieza">
+      <div class="ba-after" id="baAfter"><img id="baAfterImg" src="assets/magic-detailing/rd-auto-asiento-despues-1.jpg" alt="Asiento después de la limpieza a vapor"></div>
+      <span class="ba-tag antes">ANTES</span><span class="ba-tag despues">AHORA</span>
       <div class="ba-handle" id="baHandle"><div class="ba-knob">&#10231;</div></div>
     </div>
     <div class="ba-dots" id="baDots"></div>
+    <div class="showcase reveal">
+      <video controls playsinline preload="metadata" poster="assets/magic-detailing/rd-mueble-split-1.jpg">
+        <source src="assets/magic-detailing/rd-hero-muebles-30s.mp4" type="video/mp4">
+      </video>
+      <div class="gal">
+        <img loading="lazy" src="assets/magic-detailing/rd-mueble-split-1.jpg" alt="Mueble antes y después">
+        <img loading="lazy" src="assets/magic-detailing/rd-auto-asiento-split-1.jpg" alt="Asiento de auto antes y ahora">
+        <img loading="lazy" src="assets/magic-detailing/rd-alfombra-antes-despues-1.jpg" alt="Alfombra antes y después">
+        <img loading="lazy" src="assets/magic-detailing/rd-techo-auto-1.jpg" alt="Limpieza de techo de auto">
+        <img loading="lazy" src="assets/magic-detailing/rd-auto-interior-2.jpg" alt="Interior de auto detallado">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -268,14 +305,18 @@ footer a{color:var(--orange-soft);font-weight:600}
   </div>
 </section>
 
-<section id="resenas">
+<section id="precios">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">05</span><h2>Lo que dicen los clientes</h2></div>
-    <p class="sec-sub reveal">+1,100 seguidores en Facebook y clientes que repiten. El trabajo habla solo.</p>
-    <div class="rev-grid" id="revGrid">
-      <div class="rev reveal"><div class="stars">★★★★★</div><p>"Mi sofá quedó como nuevo. Las manchas que pensé que no salían, salieron. Servicio puntual y profesional."</p><b>Cliente verificado</b><span>San Juan, PR</span></div>
-      <div class="rev reveal"><div class="stars">★★★★★</div><p>"Le hicieron interior completo a mi carro y huele riquísimo. Se nota la diferencia del vapor de verdad."</p><b>Cliente verificado</b><span>Área metro</span></div>
-      <div class="rev reveal"><div class="stars">★★★★★</div><p>"Rápidos por WhatsApp, buen precio y el colchón quedó desinfectado y sin manchas. Los recomiendo."</p><b>Cliente verificado</b><span>San Juan, PR</span></div>
+    <div class="sec-head reveal"><span class="sec-num">05</span><h2>Precios claros</h2></div>
+    <p class="sec-sub reveal">Sin sorpresas. Todos los servicios incluyen tratamiento para manchas y derrames, eliminación de ácaros y bacterias, y secado rápido.</p>
+    <div class="price-grid">
+      <div class="pcard reveal"><h3>Interiores de auto</h3><ul><li>Compacto <b>$65</b></li><li>SUV (2 filas) <b>$85</b></li><li>SUV (3 filas) <b>$110</b></li><li>Panel del techo <b>$35</b></li><li>Baúl <b>$5–$15</b></li><li>Ozono / purificador <b>$35</b></li></ul></div>
+      <div class="pcard reveal"><h3>Muebles</h3><ul><li>Sofá <b>$55–$65</b></li><li>Love Seat <b>$45–$55</b></li><li>Butaca <b>$25–$35</b></li><li>Seccional <b>$65–$85</b></li></ul></div>
+      <div class="pcard reveal"><h3>Colchones</h3><ul><li>Twin <b>$35</b></li><li>Full <b>$45</b></li><li>Queen <b>$55</b></li><li>King <b>$65</b></li></ul></div>
+      <div class="pcard reveal"><h3>Alfombras</h3><ul><li>5x8 <b>$45</b></li><li>6x9 <b>$55</b></li><li>8x10 <b>$65</b></li></ul><p class="pnote">Recogida y entrega disponible</p></div>
+    </div>
+    <div class="big-cta reveal" style="margin-top:34px">
+      <a class="btn btn-orange" href="https://wa.me/19392411880?text=Hola%20Magic%20Detailing%2C%20quiero%20reservar%20una%20limpieza." target="_blank" rel="noopener">Reservar por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -334,7 +375,7 @@ document.querySelectorAll('.faq-item').forEach(function(it){
 });
 /* before/after */
 (function(){
-  var sets=[["assets/magic-detailing/trabajo-1a.jpg","assets/magic-detailing/trabajo-1b.jpg"]];
+  var sets=[["assets/magic-detailing/rd-auto-asiento-antes-1.jpg","assets/magic-detailing/rd-auto-asiento-despues-1.jpg"]];
   var i=0,stage=document.getElementById('baStage'),after=document.getElementById('baAfter'),
       handle=document.getElementById('baHandle'),bImg=document.getElementById('baBefore'),aImg=document.getElementById('baAfterImg'),
       dots=document.getElementById('baDots');
