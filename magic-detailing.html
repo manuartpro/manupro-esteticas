@@ -89,8 +89,8 @@ section{padding:96px 0;position:relative}
 /* before/after slider */
 .ba-stage{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.55);max-width:860px;margin:0 auto;touch-action:pan-y}
 .ba-stage img{display:block;width:100%;height:auto;user-select:none;pointer-events:none}
-.ba-after{position:absolute;inset:0;overflow:hidden;width:50%}
-.ba-after img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;max-width:none}
+.ba-after{position:absolute;inset:0;overflow:hidden;clip-path:inset(0 50% 0 0)}
+.ba-after img{display:block;width:100%;height:100%;object-fit:cover}
 .ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;box-shadow:0 0 18px rgba(255,255,255,.8);cursor:ew-resize;z-index:3}
 .ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--orange-deep));display:grid;place-items:center;color:#fff;font-weight:800;font-size:18px;box-shadow:0 6px 24px rgba(255,122,26,.6);white-space:nowrap}
 .ba-tag{position:absolute;top:16px;font-family:Sora;font-size:12px;font-weight:700;letter-spacing:2px;padding:8px 16px;border-radius:999px;z-index:2}
@@ -294,8 +294,8 @@ footer a{color:var(--orange-soft);font-weight:600}
       </div>
       <div class="reveal">
         <div class="ba-stage" id="baStage">
-          <img id="baBefore" src="assets/magic-detailing/ba-antes.jpg" alt="Asiento antes de la limpieza">
-          <div class="ba-after" id="baAfter"><img id="baAfterImg" src="assets/magic-detailing/ba-ahora.jpg" alt="Asiento después de la limpieza a vapor"></div>
+          <img id="baBefore" src="assets/magic-detailing/ba-ahora.jpg" alt="Asiento después de la limpieza a vapor">
+          <div class="ba-after" id="baAfter"><img id="baAfterImg" src="assets/magic-detailing/ba-antes.jpg" alt="Asiento antes de la limpieza"></div>
           <span class="ba-tag antes">ANTES</span><span class="ba-tag despues">AHORA</span>
           <div class="ba-handle" id="baHandle"><div class="ba-knob">&#10231;</div></div>
         </div>
@@ -455,13 +455,13 @@ document.querySelectorAll('.faq-item').forEach(function(it){
 });
 /* before/after */
 (function(){
-  var sets=[["assets/magic-detailing/ba-antes.jpg","assets/magic-detailing/ba-ahora.jpg"],["assets/magic-detailing/ba-ig-antes.jpg","assets/magic-detailing/ba-ig-ahora.jpg"]];
+  var sets=[["assets/magic-detailing/ba-ahora.jpg","assets/magic-detailing/ba-antes.jpg"],["assets/magic-detailing/ba-ig-ahora.jpg","assets/magic-detailing/ba-ig-antes.jpg"]];
   var i=0,stage=document.getElementById('baStage'),after=document.getElementById('baAfter'),
       handle=document.getElementById('baHandle'),bImg=document.getElementById('baBefore'),aImg=document.getElementById('baAfterImg'),
       dots=document.getElementById('baDots');
   function renderDots(){dots.innerHTML="";sets.forEach(function(s,k){var b=document.createElement('button');if(k===i)b.className='on';b.setAttribute('aria-label','Resultado '+(k+1));b.onclick=function(){load(k)};dots.appendChild(b);});}
   function load(k){i=k;bImg.src=sets[k][0];aImg.src=sets[k][1];setPos(50);renderDots();}
-  function setPos(p){p=Math.max(2,Math.min(98,p));after.style.width=p+'%';handle.style.left=p+'%';}
+  function setPos(p){p=Math.max(2,Math.min(98,p));after.style.clipPath='inset(0 '+(100-p)+'% 0 0)';handle.style.left=p+'%';}
   var drag=false;
   function pos(e){var r=stage.getBoundingClientRect();var x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;return x/r.width*100;}
   stage.addEventListener('pointerdown',function(e){drag=true;setPos(pos(e));stage.setPointerCapture(e.pointerId);});
