@@ -177,8 +177,8 @@ section{padding:96px 0;position:relative}
 .soc:hover .cube{transform:rotateX(-8deg) rotateY(12deg) scale(1.08)}
 .cube .face{position:absolute;inset:0;border-radius:22px;display:grid;place-items:center}
 .cube .front{transform:translateZ(16px)}
-.cube .side-r{transform:rotateY(90deg) translateZ(70px);width:32px;left:auto;right:-16px;border-radius:0 22px 22px 0;filter:brightness(.55)}
-.cube .side-b{transform:rotateX(90deg) translateZ(70px);height:32px;top:auto;bottom:-16px;border-radius:0 0 22px 22px;filter:brightness(.4)}
+.cube .side-r{left:100%;right:auto;width:32px;transform-origin:left center;transform:translateZ(16px) rotateY(90deg);border-radius:0 22px 22px 0;filter:brightness(.55)}
+.cube .side-b{top:100%;bottom:auto;height:32px;transform-origin:center top;transform:translateZ(16px) rotateX(-90deg);border-radius:0 0 22px 22px;filter:brightness(.4)}
 .cube svg{width:40px;height:40px;fill:#fff}
 .cube.fb .face{background:linear-gradient(135deg,#2f7bff,#0a3fc2)}
 .cube.ig .face{background:linear-gradient(135deg,#ff7a1a,#d62976 55%,#7b2ff7)}
