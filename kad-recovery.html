@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KAD RECOVERY PR LLC | Tu Grúa de Confianza — Servicio de Grúa 24/7 en Puerto Rico</title>
 <meta name="description" content="KAD RECOVERY PR LLC — Tu grúa de confianza. Rápido, seguro, confiable. Remolque liviana y pesada, asistencia en carretera 24/7, vehículos accidentados y transporte en todo Puerto Rico. Llama al 939-407-0656.">
-<link rel="preload" href="assets/kad-trabajo-02.jpg" as="image">
+<link rel="preload" href="assets/kad-foto-01.jpg" as="image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s;
 header.solid{background:rgba(7,7,10,.96);border-bottom:1px solid var(--line);padding:8px 0}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px}
-.brand img{width:74px;height:52px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,.7))}
+.brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--mag);filter:drop-shadow(0 2px 8px rgba(0,0,0,.7))}
 .brand .t{line-height:1.1}
 .brand .t b{font-family:'Anton',sans-serif;font-size:1.15rem;letter-spacing:.06em;color:var(--white)}
 .brand .t b em{font-style:normal;color:var(--mag)}
@@ -45,7 +45,7 @@ header.solid{background:rgba(7,7,10,.96);border-bottom:1px solid var(--line);pad
 .btn.ghost{background:transparent;color:#fff;border:1.5px solid var(--mag);box-shadow:none}
 .btn.ghost:hover{background:rgba(255,46,154,.12)}
 .btn.silver{background:linear-gradient(135deg,#e8ecf3,#9aa3b5);color:#0a0a0e;box-shadow:0 8px 28px rgba(215,221,232,.25)}
-@media(max-width:900px){.links{display:none}.brand img{width:62px;height:44px}}
+@media(max-width:900px){.links{display:none}.brand img{width:46px;height:46px}}
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
 .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kb 24s ease-in-out infinite alternate}
@@ -54,6 +54,19 @@ header.solid{background:rgba(7,7,10,.96);border-bottom:1px solid var(--line);pad
   linear-gradient(180deg,rgba(5,5,8,.72) 0%,rgba(5,5,8,.42) 42%,rgba(7,7,10,.97) 100%),
   radial-gradient(65% 55% at 50% 42%,transparent,rgba(5,5,8,.55))}
 .hero .in{position:relative;z-index:2;padding:140px 0 90px;text-align:center;width:100%}
+.hero-logo{width:150px;height:150px;border-radius:50%;margin:0 auto 24px;position:relative;display:grid;place-items:center;
+  background:#000;border:3px solid transparent;
+  background:linear-gradient(#000,#000) padding-box,linear-gradient(135deg,var(--mag),var(--purp),var(--mag-soft)) border-box;
+  box-shadow:0 0 42px rgba(255,46,154,.5),0 0 100px rgba(139,47,247,.35);
+  animation:heroFloat 4.5s ease-in-out infinite}
+.hero-logo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.hero-logo::before{content:'';position:absolute;inset:-13px;border-radius:50%;
+  border:1.5px dashed rgba(255,122,192,.6);animation:spinRing 16s linear infinite}
+.hero-logo::after{content:'';position:absolute;inset:-26px;border-radius:50%;
+  border:1px solid rgba(139,47,247,.35);animation:ringPulse 2.8s ease-out infinite}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes spinRing{to{transform:rotate(360deg)}}
+@keyframes ringPulse{0%{transform:scale(.92);opacity:.9}100%{transform:scale(1.12);opacity:0}}
 .badge-247{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:800;letter-spacing:.4em;text-transform:uppercase;
   color:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 20px;margin-bottom:26px;
   background:rgba(7,7,10,.6);backdrop-filter:blur(6px)}
@@ -190,9 +203,14 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
 .foot .made a{color:var(--mag);font-weight:700}
 /* floating call */
 .call-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;
-  background:var(--mag);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:.25s}
+  background:var(--mag);display:grid;place-items:center;transition:.25s;
+  animation:callFloat 3s ease-in-out infinite,callPulse 2.4s ease-out infinite}
 .call-float:hover{transform:scale(1.1)}
 .call-float svg{width:30px;height:30px;fill:#fff}
+@keyframes callFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes callPulse{0%{box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 0 rgba(255,46,154,.55)}
+  70%{box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 18px rgba(255,46,154,0)}
+  100%{box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 0 rgba(255,46,154,0)}}
 @media(max-width:640px){
   section{padding:72px 0}
   .slide img{height:min(58vh,440px)}
@@ -215,14 +233,14 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
       <a href="#resenas">Reseñas</a>
       <a href="#cotizar">Cotizar</a>
     </nav>
-    <a class="btn" href="tel:+19394070656">Llamar ahora</a>
   </div>
 </header>
 
 <section class="hero" id="top">
-  <img class="bg" src="assets/kad-trabajo-02.jpg" alt="Grúa KAD Recovery PR — RAM blanca con fondo neón morado">
+  <img class="bg" src="assets/kad-foto-01.jpg" alt="Grúa KAD Recovery PR — RAM blanca de noche con luces neón moradas">
   <div class="shade"></div>
   <div class="wrap in">
+    <div class="hero-logo"><img src="assets/kad-logo.png" alt="KAD RECOVERY PR LLC"></div>
     <span class="badge-247"><span class="pulse"></span> Servicio de grúa · 24 horas · 7 días</span>
     <h1>Tu grúa de <em>confianza</em></h1>
     <p class="tagline">Rápido <b>·</b> Seguro <b>·</b> Confiable</p>
@@ -477,13 +495,16 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
   addEventListener('scroll',function(){hdr.classList.toggle('solid',scrollY>40)},{passive:true});
   /* slider manual de trabajos (una foto a la vez) */
   var photos=[
-    {src:'assets/kad-trabajo-01.jpg',cap:'Movimiento de remolque semipesado · RAM remolcando box truck'},
-    {src:'assets/kad-trabajo-02.jpg',cap:'Servicio de grúa 24/7 · RAM con fondo neón morado'},
-    {src:'assets/kad-trabajo-03.jpg',cap:'Lanzamiento · Tu grúa de confianza, siempre listos para ayudarte'},
-    {src:'assets/kad-trabajo-04.jpg',cap:'Gasolinera Mobil de noche · dos grúas en servicio'},
-    {src:'assets/kad-trabajo-05.jpg',cap:'Feliz Viernes · Ford flatbed remolcando SUV, El Morro y bandera PR'},
-    {src:'assets/kad-trabajo-06.jpg',cap:'Trabajo real · RAM remolcando Honda HR-V en la calle'},
-    {src:'assets/kad-trabajo-07.jpg',cap:'¡Accidente! Llama a KAD Recovery PR · RAM remolcando auto rojo'}
+    {src:'assets/kad-foto-01.jpg',cap:'RAM blanca de noche · luces neón moradas en servicio'},
+    {src:'assets/kad-foto-02.jpg',cap:'Ford F-450 negra remolcando Range Rover · servicio en estacionamiento'},
+    {src:'assets/kad-foto-03.jpg',cap:'Grúa negra de noche · servicio en gasolinera Ecomaxx'},
+    {src:'assets/kad-foto-04.jpg',cap:'RAM blanca de día · remolcando en la calle'},
+    {src:'assets/kad-foto-05.jpg',cap:'RAM blanca remolcando BMW · servicio de día'},
+    {src:'assets/kad-foto-06.jpg',cap:'RAM blanca remolcando Toyota RAV4'},
+    {src:'assets/kad-foto-07.jpg',cap:'RAM blanca de noche · luces neón moradas y ámbar'},
+    {src:'assets/kad-foto-08.jpg',cap:'RAM blanca de noche remolcando Kia Soul'},
+    {src:'assets/kad-foto-09.jpg',cap:'Ford F-450 negra remolcando Ford Escape · gasolinera'},
+    {src:'assets/kad-foto-10.jpg',cap:'Ford F-450 negra en servicio · remolcando Ford Escape'}
   ];
   var track=document.getElementById('track'),
       dotsBox=document.getElementById('dots'),
