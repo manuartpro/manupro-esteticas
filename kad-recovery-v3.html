@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAD RECOVERY PR LLC | Tu Grúa de Confianza — Servicio de Grúa 24/7 en Puerto Rico</title>
+<meta name="description" content="KAD RECOVERY PR LLC — Tu grúa de confianza. Rápido, seguro, confiable. Remolque liviana y pesada, asistencia en carretera 24/7, vehículos accidentados y transporte en todo Puerto Rico. Llama al 939-407-0656.">
+<link rel="preload" href="assets/kad-foto-01.jpg" as="image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mag:#ff2e9a; --mag-deep:#e6007e; --mag-soft:#ff7ac0;
+  --purp:#8b2ff7; --purp-deep:#5b1bb8;
+  --black:#07070a; --coal:#0e0e14; --panel:#14141c;
+  --white:#f7f3fa; --muted:#b9b1c6; --silver:#d7dde8;
+  --line:rgba(255,46,154,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'Manrope',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.02em}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 22px}
+section{padding:96px 0}
+.outline{color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.85)}
+.outline-mag{color:transparent;-webkit-text-stroke:2px var(--mag)}
+.k{font-size:.72rem;font-weight:800;letter-spacing:.34em;text-transform:uppercase;color:var(--mag-soft);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.k::after{content:"";width:52px;height:2px;background:linear-gradient(90deg,var(--mag),transparent)}
+.sec-head h2{font-size:clamp(2.1rem,5.4vw,3.6rem);line-height:1.04;text-transform:uppercase}
+.sec-head h2 em{font-style:normal;color:var(--mag)}
+.sec-head p{color:var(--muted);line-height:1.75;max-width:640px;margin-top:16px}
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s;
+  background:linear-gradient(180deg,rgba(5,5,8,.9),rgba(5,5,8,0));padding:14px 0}
+header.solid{background:rgba(7,7,10,.96);border-bottom:1px solid var(--line);padding:8px 0;backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--mag);flex:none;filter:drop-shadow(0 2px 10px rgba(255,46,154,.45))}
+.brand .t{line-height:1.1}
+.brand .t b{font-family:'Anton',sans-serif;font-size:1.15rem;letter-spacing:.06em}
+.brand .t b em{font-style:normal;color:var(--mag)}
+.brand .t span{display:block;font-size:.62rem;letter-spacing:.3em;color:var(--mag-soft);text-transform:uppercase;font-weight:700}
+.links{display:flex;gap:26px;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.links a{color:var(--muted);transition:.25s}
+.links a:hover{color:var(--mag)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--mag),var(--mag-deep));
+  color:#fff;font-weight:800;letter-spacing:.05em;padding:14px 28px;border-radius:999px;border:0;cursor:pointer;
+  font-size:.9rem;text-transform:uppercase;transition:.25s;box-shadow:0 8px 28px rgba(255,46,154,.35)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(255,46,154,.5)}
+.btn.ghost{background:rgba(255,255,255,.06);color:#fff;border:1.5px solid var(--mag);box-shadow:none;backdrop-filter:blur(6px)}
+.btn.ghost:hover{background:rgba(255,46,154,.14)}
+.btn.silver{background:linear-gradient(135deg,#e8ecf3,#9aa3b5);color:#0a0a0e;box-shadow:0 8px 28px rgba(215,221,232,.25)}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:rgba(255,46,154,.08);
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0}
+.burger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);background:var(--mag)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);background:var(--mag)}
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:120px 0 70px}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1) translateY(0)}to{transform:scale(1.14) translateY(-1.5%)}}
+.hero .shade{position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(5,5,8,.94) 0%,rgba(5,5,8,.72) 46%,rgba(5,5,8,.28) 100%),
+  linear-gradient(180deg,rgba(5,5,8,.6) 0%,transparent 30%,rgba(7,7,10,.97) 100%)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;width:100%}
+.hero .badge-247{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;
+  padding:9px 18px;font-size:.78rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+  background:rgba(7,7,10,.55);backdrop-filter:blur(8px);margin-bottom:22px}
+.badge-247 .pulse{width:9px;height:9px;border-radius:50%;background:var(--mag);animation:pl 1.6s ease-out infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 rgba(255,46,154,.6)}70%{box-shadow:0 0 0 10px rgba(255,46,154,0)}100%{box-shadow:0 0 0 0 rgba(255,46,154,0)}}
+.hero h1{font-size:clamp(3rem,9.5vw,7rem);line-height:.96;text-transform:uppercase}
+.hero h1 .l2{display:block}
+.hero h1 em{font-style:normal;color:var(--mag)}
+.hero .tagline{font-family:'Anton',sans-serif;font-size:clamp(1.05rem,2.6vw,1.5rem);letter-spacing:.22em;text-transform:uppercase;margin-top:18px;color:var(--silver)}
+.hero .tagline b{color:var(--mag-soft);font-weight:400}
+.hero p.sub{color:#e9e4f0;max-width:560px;margin:20px 0 32px;font-size:1.04rem;line-height:1.75}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.trust{display:flex;gap:0;margin-top:44px;flex-wrap:wrap}
+.trust div{padding:0 26px;border-left:1px solid var(--line)}
+.trust div:first-child{padding-left:0;border-left:0}
+.trust b{display:block;font-family:'Anton',sans-serif;font-size:1.7rem;color:var(--white);letter-spacing:.03em}
+.trust b em{font-style:normal;color:var(--mag)}
+.trust span{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.hero-badge{position:relative;display:grid;place-items:center}
+.hero-logo{width:250px;height:250px;border-radius:50%;position:relative;display:grid;place-items:center;
+  background:#000;border:3px solid transparent;
+  background:linear-gradient(#000,#000) padding-box,linear-gradient(135deg,var(--mag),var(--purp),var(--mag-soft)) border-box;
+  box-shadow:0 0 50px rgba(255,46,154,.5),0 0 120px rgba(139,47,247,.35);
+  animation:heroFloat 4.5s ease-in-out infinite}
+.hero-logo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.hero-logo::before{content:'';position:absolute;inset:-14px;border-radius:50%;border:1.5px dashed rgba(255,122,192,.6);animation:spinRing 16s linear infinite}
+.hero-logo::after{content:'';position:absolute;inset:-28px;border-radius:50%;border:1px solid rgba(139,47,247,.35);animation:ringPulse 2.8s ease-out infinite}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes spinRing{to{transform:rotate(360deg)}}
+@keyframes ringPulse{0%{transform:scale(.92);opacity:.9}100%{transform:scale(1.12);opacity:0}}
+.hero-side{position:absolute;right:26px;top:50%;transform:translateY(-50%) rotate(180deg);z-index:2;
+  writing-mode:vertical-rl;font-family:'Anton',sans-serif;font-size:clamp(2.4rem,6vw,4.4rem);letter-spacing:.18em;
+  color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.35);text-transform:uppercase;pointer-events:none}
+.hero-side b{color:var(--mag);-webkit-text-stroke:0}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;font-size:.68rem;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-hint::after{content:"";width:1px;height:44px;background:linear-gradient(var(--mag),transparent);animation:drip 1.8s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- marquee ---------- */
+.marquee{overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:16px 0;background:linear-gradient(90deg,rgba(255,46,154,.14),rgba(139,47,247,.14),rgba(255,46,154,.14))}
+.marquee span{display:inline-block;padding:0 26px;font-family:'Anton',sans-serif;font-size:1.25rem;letter-spacing:.14em;
+  text-transform:uppercase;animation:slide 26s linear infinite}
+.marquee span i{font-style:normal;color:var(--mag)}
+@keyframes slide{to{transform:translateX(-50%)}}
+/* ---------- services editorial ---------- */
+.svc{background:var(--coal)}
+.svc-list{display:flex;flex-direction:column;gap:64px;margin-top:56px}
+.svc-row{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.svc-row:nth-child(even) .svc-photo{order:2}
+.svc-photo{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3}
+.svc-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.6s}
+.svc-row:hover .svc-photo img{transform:scale(1.05)}
+.svc-photo .num{position:absolute;left:16px;bottom:10px;font-family:'Anton',sans-serif;font-size:5.4rem;line-height:1;
+  color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.9);text-shadow:0 4px 24px rgba(0,0,0,.6)}
+.svc-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.55))}
+.svc-body .idx{font-family:'Anton',sans-serif;font-size:1rem;letter-spacing:.3em;color:var(--mag);margin-bottom:12px}
+.svc-body h3{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.1;text-transform:uppercase;margin-bottom:14px}
+.svc-body p{color:var(--muted);line-height:1.8;font-size:1rem;max-width:520px}
+.svc-body .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:20px;
+  background:rgba(255,46,154,.12);border:1px solid var(--line)}
+.svc-body .ic svg{width:28px;height:28px;stroke:var(--mag);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc-body .mini-cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:800;font-size:.86rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--mag-soft)}
+.svc-body .mini-cta:hover{color:var(--mag)}
+/* ---------- fleet ---------- */
+.fleet{background:linear-gradient(180deg,var(--black),#120a1c 55%,var(--black))}
+.fleet-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:52px}
+.truck{border-radius:22px;overflow:hidden;border:1px solid var(--line);background:rgba(20,20,28,.85);
+  backdrop-filter:blur(10px);transition:.3s}
+.truck:hover{transform:translateY(-6px);border-color:rgba(255,46,154,.6);box-shadow:0 20px 50px rgba(0,0,0,.55)}
+.truck img{width:100%;height:300px;object-fit:cover;display:block}
+.truck .in{padding:28px}
+.truck .tag{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--mag-soft);border:1px solid var(--line);border-radius:999px;padding:7px 14px;margin-bottom:14px}
+.truck h3{font-size:1.55rem;text-transform:uppercase;margin-bottom:10px}
+.truck p{color:var(--muted);line-height:1.75;font-size:.95rem}
+/* ---------- stats band ---------- */
+.stats-band{padding:70px 0;background:linear-gradient(90deg,var(--mag-deep),var(--purp-deep))}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats-grid b{display:block;font-family:'Anton',sans-serif;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1}
+.stats-grid span{font-size:.7rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;opacity:.9}
+/* ---------- gallery ---------- */
+.gallery{background:var(--coal)}
+.slider{position:relative;overflow:hidden;border-radius:20px;border:1px solid var(--line);background:var(--panel);margin-top:52px}
+.track{display:flex;transition:transform .55s cubic-bezier(.22,.8,.3,1)}
+.slide{min-width:100%;position:relative;cursor:zoom-in}
+.slide img{width:100%;height:min(72vh,600px);object-fit:cover;display:block}
+.slide .cap{position:absolute;left:0;right:0;bottom:0;padding:48px 22px 18px;font-weight:700;letter-spacing:.05em;
+  background:linear-gradient(transparent,rgba(0,0,0,.9));font-size:.95rem}
+.snav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;cursor:pointer;
+  background:rgba(7,7,10,.6);border:1.5px solid var(--mag);color:var(--mag);font-size:1.7rem;line-height:1;
+  display:grid;place-items:center;backdrop-filter:blur(4px);transition:.25s;z-index:3}
+.snav:hover{background:var(--mag);color:#fff}
+.snav.prev{left:14px}.snav.next{right:14px}
+.smeta{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 6px 0;flex-wrap:wrap}
+.scounter{font-family:'Anton',sans-serif;color:var(--mag);font-size:1.15rem;letter-spacing:.14em}
+.scaption{color:var(--muted);font-size:.9rem}
+.dots{display:flex;gap:8px;justify-content:center;padding:14px 0 2px;flex-wrap:wrap}
+.dots button{width:10px;height:10px;border-radius:50%;border:1px solid var(--mag);background:transparent;cursor:pointer;padding:0;transition:.25s}
+.dots button.on{background:var(--mag);transform:scale(1.25)}
+.lightbox{position:fixed;inset:0;z-index:99;background:rgba(0,0,0,.93);display:none;place-items:center;padding:20px}
+.lightbox.open{display:grid}
+.lightbox img{max-width:92vw;max-height:88vh;border-radius:10px;border:1px solid var(--line)}
+.lightbox .x{position:absolute;top:18px;right:26px;font-size:2rem;color:var(--mag);cursor:pointer;background:none;border:0}
+/* ---------- coverage ---------- */
+.zones{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:880px;margin:52px auto 0}
+.zone{display:inline-flex;align-items:center;gap:9px;background:rgba(20,20,28,.8);border:1px solid var(--line);
+  border-radius:999px;padding:13px 24px;font-weight:700;font-size:.94rem;transition:.25s;backdrop-filter:blur(8px)}
+.zone:hover{border-color:var(--mag);background:rgba(255,46,154,.12);transform:translateY(-2px)}
+.zone .pin{color:var(--mag);font-size:1rem}
+.cover-note{text-align:center;color:var(--muted);margin-top:36px;line-height:1.75}
+.cover-note b{color:var(--mag-soft)}
+/* ---------- reviews ---------- */
+.reviews{background:linear-gradient(180deg,var(--black),#120a1c 55%,var(--black));text-align:center}
+.big-rate{font-family:'Anton',sans-serif;font-size:clamp(4rem,10vw,6.4rem);line-height:1}
+.stars{color:var(--mag);font-size:1.6rem;letter-spacing:.18em;margin:10px 0 6px}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;max-width:940px;margin:48px auto 0;text-align:left}
+.rev{background:rgba(20,20,28,.85);border:1px solid var(--line);border-radius:18px;padding:32px 28px;backdrop-filter:blur(8px)}
+.rev .stars{font-size:1.15rem;margin:0 0 14px}
+.rev p{font-size:1.05rem;line-height:1.7;font-weight:600}
+.rev .who{margin-top:18px;color:var(--muted);font-size:.88rem;font-weight:700;letter-spacing:.04em}
+.rev .who span{color:var(--mag-soft)}
+.rev-note{text-align:center;color:var(--muted);margin-top:36px;font-size:.9rem}
+.rev-note a{color:var(--mag-soft);font-weight:700;border-bottom:1px solid var(--line)}
+/* ---------- FAQ ---------- */
+.faq-list{max-width:820px;margin:52px auto 0;display:flex;flex-direction:column;gap:14px}
+.faq{border:1px solid var(--line);border-radius:16px;background:rgba(20,20,28,.8);overflow:hidden}
+.faq button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:0;
+  color:var(--white);font-family:'Manrope',sans-serif;font-size:1.02rem;font-weight:800;text-align:left;
+  padding:22px 24px;cursor:pointer}
+.faq button .pm{color:var(--mag);font-size:1.5rem;line-height:1;flex:none;transition:.3s}
+.faq.open button .pm{transform:rotate(45deg)}
+.faq .a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq .a p{color:var(--muted);line-height:1.8;padding:0 24px 24px;font-size:.96rem}
+.faq .a a{color:var(--mag-soft);font-weight:700}
+/* ---------- form ---------- */
+.quote{background:linear-gradient(180deg,var(--coal),#0d0a12)}
+.form-card{max-width:920px;margin:52px auto 0;background:rgba(20,20,28,.9);border:1px solid var(--line);border-radius:22px;
+  padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:36px;backdrop-filter:blur(10px)}
+.form-card h3{font-size:1.6rem;margin-bottom:10px;text-transform:uppercase}
+.form-card h3 em{font-style:normal;color:var(--mag)}
+.form-card .side p{color:var(--muted);line-height:1.75;font-size:.95rem;margin-bottom:22px}
+.contact-line{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-weight:700}
+.contact-line .dot{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,46,154,.12);border:1px solid var(--line);font-size:1.1rem;flex-shrink:0}
+.contact-line .dot svg{width:18px;height:18px;stroke:var(--mag);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.contact-line small{display:block;color:var(--muted);font-weight:500}
+label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:16px 0 8px}
+input,select,textarea{width:100%;background:#0c0c12;border:1px solid rgba(255,255,255,.12);border-radius:10px;
+  color:var(--white);padding:13px 14px;font-size:.95rem;font-family:inherit;transition:.2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--mag);box-shadow:0 0 0 3px rgba(255,46,154,.15)}
+textarea{min-height:100px;resize:vertical}
+select option{background:#111}
+.form-note{font-size:.82rem;color:var(--muted);margin-top:14px;line-height:1.6}
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:52px 0 30px;background:#060609}
+.foot{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+.foot p{color:var(--muted);font-size:.88rem;line-height:1.8}
+.foot p b{color:var(--mag-soft)}
+.foot h4{font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;color:var(--mag-soft);margin-bottom:14px}
+.foot .socials{display:flex;gap:12px}
+.foot .socials a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;
+  padding:9px 18px;font-size:.85rem;font-weight:700;transition:.25s}
+.foot .socials a svg{width:20px;height:20px;flex:none}
+.foot .socials a:hover{border-color:var(--mag);color:var(--mag-soft)}
+.foot .made{font-size:.78rem;color:#6f6a7d;margin-top:28px;text-align:center;width:100%}
+.foot .made a{color:var(--mag);font-weight:700}
+/* ---------- floating call ---------- */
+.call-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;
+  background:var(--mag);display:grid;place-items:center;transition:.25s;
+  animation:callFloat 3s ease-in-out infinite,callPulse 2.4s ease-out infinite}
+.call-float:hover{transform:scale(1.1)}
+.call-float svg{width:30px;height:30px;fill:#fff}
+@keyframes callFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes callPulse{0%{box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 0 rgba(255,46,154,.55)}
+  70%{box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 18px rgba(255,46,154,0)}
+  100%{box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 0 rgba(255,46,154,0)}}
+@media(max-width:900px){
+  .links{display:none}
+  .burger{display:flex}
+  .links.open{display:flex;position:fixed;top:62px;left:0;right:0;flex-direction:column;align-items:center;gap:0;
+    background:rgba(7,7,10,.98);border-bottom:1px solid var(--line);padding:10px 0;z-index:49}
+  .links.open a{padding:14px 20px;width:100%;text-align:center;font-size:.95rem}
+  .links.open a:active{background:rgba(255,46,154,.12)}
+  .brand img{width:46px;height:46px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-badge{display:none}
+  .hero-side{display:none}
+  .svc-row{grid-template-columns:1fr;gap:22px}
+  .svc-row:nth-child(even) .svc-photo{order:0}
+  .fleet-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:28px 12px}
+}
+@media(max-width:760px){.form-card{grid-template-columns:1fr;padding:30px 22px}}
+@media(max-width:640px){
+  section{padding:72px 0}
+  .slide img{height:min(58vh,440px)}
+  .hero{padding:104px 0 60px}
+  .trust div{padding:0 16px}
+  .svc-list{gap:48px}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img src="assets/kad-logo-circle.png" alt="KAD RECOVERY PR LLC">
+      <span class="t"><b>KAD <em>RECOVERY</em></b><span>PR LLC · 24/7</span></span>
+    </a>
+    <nav class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#flota">Flota</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#cotizar">Cotizar</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <img class="bg" src="assets/kad-foto-01.jpg" alt="Grúa KAD Recovery PR — RAM blanca de noche con luces neón moradas">
+  <div class="shade"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge-247"><span class="pulse"></span> Servicio de grúa · 24 horas · 7 días</span>
+      <h1>Tu grúa<br>de <em>confianza</em></h1>
+      <p class="tagline">Rápido <b>·</b> Seguro <b>·</b> Confiable</p>
+      <p class="sub">Remolque liviana y pesada, asistencia en carretera y recuperación de vehículos accidentados en todo Puerto Rico. Donde otros no llegan, nosotros sí llegamos.</p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+19394070656">Llamar 939-407-0656</a>
+        <a class="btn ghost" href="https://wa.me/19394070656?text=Hola%20KAD%20Recovery%20PR%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="trust">
+        <div><b>24/7</b><span>Siempre disponibles</span></div>
+        <div><b>5.0 <em>★</em></b><span>En Google</span></div>
+        <div><b>Todo PR</b><span>Área metro e isla</span></div>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="hero-logo"><img src="assets/kad-logo-circle.png" alt="KAD RECOVERY PR LLC"></div>
+    </div>
+  </div>
+  <div class="hero-side">Rescate <b>24/7</b></div>
+  <div class="scroll-hint">Desliza</div>
+</section>
+
+<div class="marquee"><span>Rápido <i>◆</i> Seguro <i>◆</i> Confiable <i>◆</i> Servicio 24/7 <i>◆</i> Todo Puerto Rico <i>◆</i> Donde otros no llegan, nosotros sí llegamos <i>◆</i>&nbsp;</span><span>Rápido <i>◆</i> Seguro <i>◆</i> Confiable <i>◆</i> Servicio 24/7 <i>◆</i> Todo Puerto Rico <i>◆</i> Donde otros no llegan, nosotros sí llegamos <i>◆</i>&nbsp;</span></div>
+
+<section class="svc" id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="k">Nuestros servicios</div>
+      <h2>Lo que necesites,<br><span class="outline">donde lo necesites</span></h2>
+      <p>Un solo número para cualquier emergencia en la carretera. Grúas livianas y pesadas, asistencia completa y transporte de vehículos en toda la isla.</p>
+    </div>
+    <div class="svc-list">
+      <article class="svc-row rv">
+        <div class="svc-photo"><img src="assets/kad-foto-06.jpg" alt="RAM blanca remolcando Toyota RAV4" loading="lazy"><div class="num">01</div></div>
+        <div class="svc-body">
+          <div class="idx">01 / REMOLQUE</div>
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17h11l2-5h4l1.5 3H21a1.5 1.5 0 1 1 0 3h-1M7 20a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 7 20zm11 0a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 18 20zM3 17V7h9v10M12 7h4l3 5"/></svg></div>
+          <h3>Remolque liviana y pesada</h3>
+          <p>Remolque de vehículos livianos y semipesados con equipo profesional. Tu auto llega seguro a donde tiene que llegar, sin importar el tamaño.</p>
+          <a class="mini-cta" href="tel:+19394070656">Solicitar remolque →</a>
+        </div>
+      </article>
+      <article class="svc-row rv">
+        <div class="svc-photo"><img src="assets/kad-foto-03.jpg" alt="Grúa negra de noche en gasolinera Ecomaxx" loading="lazy"><div class="num">02</div></div>
+        <div class="svc-body">
+          <div class="idx">02 / 24 HORAS</div>
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+          <h3>Asistencia en carretera 24/7</h3>
+          <p>Te quedaste en la carretera a cualquier hora, cualquier día. Llámanos y vamos por ti — de día, de noche y en feriados.</p>
+          <a class="mini-cta" href="tel:+19394070656">Llamar ahora →</a>
+        </div>
+      </article>
+      <article class="svc-row rv">
+        <div class="svc-photo"><img src="assets/kad-foto-02.jpg" alt="Ford F-450 negra remolcando Range Rover" loading="lazy"><div class="num">03</div></div>
+        <div class="svc-body">
+          <div class="idx">03 / ACCIDENTES</div>
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-5A2 2 0 0 1 8.4 9.5h7.2a2 2 0 0 1 1.9 1.5L19 16M5 16v3m14-3v3M7 16a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 7 16zm10 0a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 17 16zM9 9.5 10.5 6h3L15 9.5"/></svg></div>
+          <h3>Vehículos accidentados</h3>
+          <p>Remoción y recuperación de vehículos accidentados con cuidado y rapidez, para que resuelvas lo antes posible.</p>
+          <a class="mini-cta" href="tel:+19394070656">Pedir ayuda →</a>
+        </div>
+      </article>
+      <article class="svc-row rv">
+        <div class="svc-photo"><img src="assets/kad-foto-04.jpg" alt="RAM blanca de día remolcando en la calle" loading="lazy"><div class="num">04</div></div>
+        <div class="svc-body">
+          <div class="idx">04 / TRANSPORTE</div>
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h13l3 4v3h-2M3 12V6h10v6M3 12v7h2M17 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 17 19zM7 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 7 19zM13 6h4l2 3"/></svg></div>
+          <h3>Transporte de vehículos</h3>
+          <p>Transporte local y a larga distancia dentro de Puerto Rico. Tu vehículo se mueve seguro, sin importar la distancia.</p>
+          <a class="mini-cta" href="tel:+19394070656">Cotizar transporte →</a>
+        </div>
+      </article>
+      <article class="svc-row rv">
+        <div class="svc-photo"><img src="assets/kad-foto-10.jpg" alt="Ford F-450 negra en servicio remolcando" loading="lazy"><div class="num">05</div></div>
+        <div class="svc-body">
+          <div class="idx">05 / PESADO</div>
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11M4 20h16M9 20v-6h6v6M12 9v2"/></svg></div>
+          <h3>Equipo pesado y semi pesado</h3>
+          <p>Movimiento y transporte de equipo pesado y semi pesado con el equipo adecuado para trabajos grandes.</p>
+          <a class="mini-cta" href="tel:+19394070656">Solicitar equipo →</a>
+        </div>
+      </article>
+      <article class="svc-row rv">
+        <div class="svc-photo"><img src="assets/kad-foto-09.jpg" alt="Ford F-450 negra en gasolinera" loading="lazy"><div class="num">06</div></div>
+        <div class="svc-body">
+          <div class="idx">06 / EN EL LUGAR</div>
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+          <h3>Servicios en el lugar</h3>
+          <p>Carga de batería y paso de corriente, cambio de goma, suministro de gasolina y carga eléctrica para vehículos EV — sin mover tu auto.</p>
+          <a class="mini-cta" href="tel:+19394070656">Pedir servicio →</a>
+        </div>
+      </article>
+      <article class="svc-row rv">
+        <div class="svc-photo"><img src="assets/kad-foto-05.jpg" alt="RAM blanca remolcando BMW" loading="lazy"><div class="num">07</div></div>
+        <div class="svc-body">
+          <div class="idx">07 / DOLLY</div>
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17h12l3 4M3 17v-5h9l2 5M7 20.5a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 7 20.5zm10 0a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 17 20.5zM12 12V6h5"/></svg></div>
+          <h3>Servicio de Dolly</h3>
+          <p>Remolque con dolly para vehículos trancados o bloqueados que no pueden rodar por sí solos. Los levantamos y los movemos con seguridad.</p>
+          <a class="mini-cta" href="tel:+19394070656">Pedir dolly →</a>
+        </div>
+      </article>
+      <article class="svc-row rv">
+        <div class="svc-photo"><img src="assets/kad-foto-08.jpg" alt="RAM blanca de noche remolcando Kia Soul" loading="lazy"><div class="num">08</div></div>
+        <div class="svc-body">
+          <div class="idx">08 / ELÉCTRICOS</div>
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/><path d="M18 20h.01"/></svg></div>
+          <h3>Servicio para carros eléctricos</h3>
+          <p>Remolque y asistencia para vehículos eléctricos, incluyendo carga EV en el lugar. Tu carro eléctrico atendido con el cuidado que necesita.</p>
+          <a class="mini-cta" href="tel:+19394070656">Pedir asistencia EV →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="fleet" id="flota">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="k">Nuestra flota</div>
+      <h2>Dos grúas, <em>una misión</em></h2>
+      <p>Equipo propio, listo para salir en cualquier momento. De día o de noche, en la ciudad o en la carretera.</p>
+    </div>
+    <div class="fleet-grid">
+      <div class="truck rv">
+        <img src="assets/kad-foto-07.jpg" alt="RAM blanca de noche con luces neón moradas y ámbar" loading="lazy">
+        <div class="in">
+          <span class="tag">Grúa principal</span>
+          <h3>RAM blanca</h3>
+          <p>Nuestra grúa principal. Remolque liviano y semipesado, asistencia en carretera y recuperación de vehículos accidentados en todo Puerto Rico.</p>
+        </div>
+      </div>
+      <div class="truck rv">
+        <img src="assets/kad-foto-02.jpg" alt="Ford F-450 negra remolcando Range Rover" loading="lazy">
+        <div class="in">
+          <span class="tag">Grúa pesada</span>
+          <h3>Ford F-450 negra</h3>
+          <p>La fuerza pesada de la flota. Equipo pesado y semi pesado, remolque de vehículos grandes y trabajos que exigen más capacidad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-band">
+  <div class="wrap stats-grid">
+    <div><b>24/7</b><span>Siempre disponibles</span></div>
+    <div><b>5.0 ★</b><span>Calificación en Google</span></div>
+    <div><b>12</b><span>Zonas de servicio</span></div>
+    <div><b>2</b><span>Grúas en la flota</span></div>
+  </div>
+</div>
+
+<section class="gallery" id="trabajos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="k">Trabajos reales</div>
+      <h2>Nuestros trabajos, <em>en la calle</em></h2>
+      <p>Fotos reales de nuestras grúas en servicio, de día y de noche, en toda la isla. Toca una foto para verla en grande.</p>
+    </div>
+    <div class="slider rv" id="slider">
+      <div class="track" id="track"></div>
+      <button class="snav prev" id="prevBtn" aria-label="Foto anterior">‹</button>
+      <button class="snav next" id="nextBtn" aria-label="Foto siguiente">›</button>
+    </div>
+    <div class="smeta rv">
+      <span class="scounter" id="counter">01 / 10</span>
+      <span class="scaption" id="scaption"></span>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</section>
+
+<section class="cover" id="cobertura">
+  <div class="wrap">
+    <div class="sec-head rv" style="text-align:center">
+      <div class="k" style="justify-content:center">Cobertura</div>
+      <h2>Donde nos necesites,<br><span class="outline-mag">allí estamos</span></h2>
+      <p style="margin-left:auto;margin-right:auto">Área metro y toda la isla. Nos llamas, nos dices dónde estás y vamos por ti.</p>
+    </div>
+    <div class="zones rv">
+      <span class="zone"><span class="pin">◆</span> Bayamón</span>
+      <span class="zone"><span class="pin">◆</span> Carolina</span>
+      <span class="zone"><span class="pin">◆</span> San Juan</span>
+      <span class="zone"><span class="pin">◆</span> Trujillo Alto</span>
+      <span class="zone"><span class="pin">◆</span> Cataño</span>
+      <span class="zone"><span class="pin">◆</span> Caimito</span>
+      <span class="zone"><span class="pin">◆</span> Río Piedras</span>
+      <span class="zone"><span class="pin">◆</span> Guaynabo</span>
+      <span class="zone"><span class="pin">◆</span> Piñones</span>
+      <span class="zone"><span class="pin">◆</span> Canóvanas</span>
+      <span class="zone"><span class="pin">◆</span> Las Américas</span>
+      <span class="zone"><span class="pin">◆</span> Viejo San Juan</span>
+    </div>
+    <p class="cover-note rv">¿Estás fuera de estas zonas? <b>Llámanos al 939-407-0656</b> — cubrimos todo Puerto Rico.</p>
+  </div>
+</section>
+
+<section class="reviews" id="resenas">
+  <div class="wrap">
+    <div class="sec-head rv" style="text-align:center">
+      <div class="k" style="justify-content:center">Reseñas en Google</div>
+      <h2>Lo que dicen <em>de nosotros</em></h2>
+    </div>
+    <div class="rv">
+      <div class="big-rate">5.0</div>
+      <div class="stars">★★★★★</div>
+      <p style="color:var(--muted)">Calificación en Google · 5 reseñas</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev rv">
+        <div class="stars">★★★★★</div>
+        <p>“Excelente servicio”</p>
+        <div class="who">GRÚAS EN SAN JUAN <span>· Google</span></div>
+      </div>
+      <div class="rev rv">
+        <div class="stars">★★★★★</div>
+        <p>Servicio rápido, seguro y confiable — con 5.0 estrellas en Google desde el primer día.</p>
+        <div class="who">KAD RECOVERY PR LLC <span>· 5.0 en Google</span></div>
+      </div>
+      <div class="rev rv">
+        <div class="stars">★★★★★</div>
+        <p>Donde otros no llegan, nosotros sí llegamos. Tu grúa de confianza, 24 horas al día.</p>
+        <div class="who">KAD RECOVERY PR LLC <span>· Servicio 24/7</span></div>
+      </div>
+    </div>
+    <p class="rev-note rv">¿Ya te ayudamos? <a href="https://www.google.com/search?q=KAD+Recovery+PR+LLC" target="_blank" rel="noopener">Déjanos tu reseña en Google</a>.</p>
+  </div>
+</section>
+
+<section class="faq" id="preguntas">
+  <div class="wrap">
+    <div class="sec-head rv" style="text-align:center">
+      <div class="k" style="justify-content:center">Preguntas frecuentes</div>
+      <h2>Antes de llamarnos,<br><span class="outline">resolvemos tus dudas</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq rv">
+        <button>¿Cuánto tardan en llegar? <span class="pm">+</span></button>
+        <div class="a"><p>Depende de dónde estés y del tráfico, pero salimos de inmediato cuando nos llamas. Estamos disponibles 24 horas, 7 días a la semana — de día, de noche y en feriados. Llámanos al <a href="tel:+19394070656">939-407-0656</a> y te decimos el tiempo estimado.</p></div>
+      </div>
+      <div class="faq rv">
+        <button>¿Qué zonas cubren? <span class="pm">+</span></button>
+        <div class="a"><p>Cubrimos el área metro — Bayamón, Carolina, San Juan, Trujillo Alto, Cataño, Caimito, Río Piedras, Guaynabo, Piñones, Canóvanas, Las Américas y Viejo San Juan — y todo Puerto Rico. Si estás fuera de estas zonas, llámanos y coordinamos.</p></div>
+      </div>
+      <div class="faq rv">
+        <button>¿Aceptan vehículos accidentados? <span class="pm">+</span></button>
+        <div class="a"><p>Sí. Removemos y recuperamos vehículos accidentados con cuidado y rapidez, para que resuelvas lo antes posible.</p></div>
+      </div>
+      <div class="faq rv">
+        <button>¿La cotización tiene costo? <span class="pm">+</span></button>
+        <div class="a"><p>No. La cotización es gratis — escríbenos por <a href="https://wa.me/19394070656" target="_blank" rel="noopener">WhatsApp</a> o llámanos al <a href="tel:+19394070656">939-407-0656</a> con tu ubicación y el tipo de vehículo, y te damos tu cotización.</p></div>
+      </div>
+      <div class="faq rv">
+        <button>¿Qué servicios hacen en el lugar, sin remolcar? <span class="pm">+</span></button>
+        <div class="a"><p>Carga de batería y paso de corriente, cambio de goma, suministro de gasolina y carga eléctrica para vehículos EV — sin mover tu auto.</p></div>
+      </div>
+      <div class="faq rv">
+        <button>¿A qué número los llamo? <span class="pm">+</span></button>
+        <div class="a"><p>Nuestro número principal es el <a href="tel:+19394070656">939-407-0656</a> — también nos escribes por WhatsApp a ese mismo número. El segundo número es el <a href="tel:+17875002757">787-500-2757</a>.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="cotizar">
+  <div class="wrap">
+    <div class="sec-head rv" style="text-align:center">
+      <div class="k" style="justify-content:center">Cotiza gratis</div>
+      <h2>Pide tu grúa <em>ahora mismo</em></h2>
+      <p style="margin-left:auto;margin-right:auto">Llena el formulario y te contactamos por WhatsApp con tu cotización. Sin compromiso.</p>
+    </div>
+    <div class="form-card rv">
+      <div class="side">
+        <h3>¿Te quedaste <em>en la carretera?</em></h3>
+        <p>Un solo número para cualquier emergencia. Grúas livianas y pesadas, asistencia completa y transporte de vehículos en toda la isla.</p>
+        <div class="contact-line">
+          <span class="dot"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span>
+          <span><small>Número principal · WhatsApp</small><a href="tel:+19394070656">939-407-0656</a></span>
+        </div>
+        <div class="contact-line">
+          <span class="dot"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span>
+          <span><small>Segundo número</small><a href="tel:+17875002757">787-500-2757</a></span>
+        </div>
+        <div class="contact-line">
+          <span class="dot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+          <span><small>Horario</small>24 horas · 7 días</span>
+        </div>
+        <div class="contact-line">
+          <span class="dot"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span><small>Cobertura</small>Todo Puerto Rico</span>
+        </div>
+      </div>
+      <form id="quoteForm">
+        <label for="fName">Tu nombre</label>
+        <input id="fName" type="text" placeholder="Ej. María Rodríguez" required>
+        <label for="fLocation">¿Dónde estás?</label>
+        <input id="fLocation" type="text" placeholder="Ej. Ave. Piñero, San Juan" required>
+        <label for="fVehicle">Tipo de vehículo</label>
+        <select id="fVehicle" required>
+          <option value="" disabled selected>Selecciona tu vehículo</option>
+          <option>Auto liviano</option>
+          <option>SUV / Guagua</option>
+          <option>Pickup</option>
+          <option>Vehículo pesado / semi pesado</option>
+          <option>Equipo pesado</option>
+          <option>Vehículo eléctrico (EV)</option>
+          <option>Otro</option>
+        </select>
+        <label for="fService">¿Qué necesitas?</label>
+        <select id="fService" required>
+          <option value="" disabled selected>Selecciona el servicio</option>
+          <option>Remolque liviana y pesada</option>
+          <option>Asistencia en carretera 24/7</option>
+          <option>Vehículo accidentado</option>
+          <option>Transporte de vehículo</option>
+          <option>Equipo pesado / semi pesado</option>
+          <option>Servicio de Dolly</option>
+          <option>Servicio para carros eléctricos</option>
+          <option>Batería / paso de corriente</option>
+          <option>Cambio de goma</option>
+          <option>Suministro de gasolina</option>
+          <option>Carga EV</option>
+        </select>
+        <label for="fNotes">Detalles (opcional)</label>
+        <textarea id="fNotes" placeholder="Ej. El auto no prende, estoy frente al centro comercial..."></textarea>
+        <button class="btn" type="submit" style="width:100%;margin-top:22px">Enviar por WhatsApp</button>
+        <p class="form-note">Al enviar, se abre WhatsApp con tu mensaje listo para KAD Recovery PR LLC. La cotización es gratis.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top">
+        <img src="assets/kad-logo-circle.png" alt="KAD RECOVERY PR LLC">
+        <span class="t"><b>KAD <em>RECOVERY</em></b><span>PR LLC · 24/7</span></span>
+      </a>
+      <p style="margin-top:16px;max-width:340px">Tu grúa de confianza. Rápido, seguro, confiable.<br>Donde otros no llegan, nosotros sí llegamos.</p>
+      <div class="socials" style="margin-top:18px">
+        <a href="https://facebook.com/people/KAD-Recovery-PR-LLC/61594914451831/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path fill="#1877F2" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047v-2.66c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.971H15.83c-1.491 0-1.956.93-1.956 1.886v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          Facebook</a>
+        <a href="https://www.instagram.com/kadrecoveryprllc/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><defs><linearGradient id="ig-grad" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".25" stop-color="#fa7e1e"/><stop offset=".5" stop-color="#d62976"/><stop offset=".75" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          Instagram</a>
+      </div>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p><b>939-407-0656</b> · principal / WhatsApp<br><b>787-500-2757</b> · segundo número<br>Servicio 24/7 · Todo Puerto Rico</p>
+    </div>
+    <div>
+      <h4>Servicios</h4>
+      <p>Remolque liviana y pesada<br>Asistencia en carretera 24/7<br>Vehículos accidentados<br>Transporte de vehículos<br>Equipo pesado y semi pesado<br>Servicios en el lugar</p>
+    </div>
+    <div class="made">Sitio web creado por <a href="https://www.instagram.com/manuartpro" target="_blank" rel="noopener">ManuPro</a> · © 2026 KAD RECOVERY PR LLC</div>
+  </div>
+</footer>
+
+<a class="call-float" href="tel:+19394070656" aria-label="Llamar a KAD Recovery PR">
+  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+</a>
+
+<div class="lightbox" id="lightbox"><button class="x" aria-label="Cerrar">×</button><img id="lbImg" alt="Trabajo KAD Recovery PR"></div>
+
+<script>
+(function(){
+  var WA="19394070656";
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('solid',scrollY>40)},{passive:true});
+  /* menú hamburguesa (móvil) */
+  var burger=document.getElementById('burger'),
+      navLinks=document.querySelector('.links');
+  burger.addEventListener('click',function(){
+    var open=navLinks.classList.toggle('open');
+    burger.classList.toggle('open',open);
+    burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){navLinks.classList.remove('open');burger.classList.remove('open')});
+  });
+  /* reveal on scroll */
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  /* slider manual de trabajos (una foto a la vez) */
+  var photos=[
+    {src:'assets/kad-foto-01.jpg',cap:'RAM blanca de noche · luces neón moradas en servicio'},
+    {src:'assets/kad-foto-02.jpg',cap:'Ford F-450 negra remolcando Range Rover · servicio en estacionamiento'},
+    {src:'assets/kad-foto-03.jpg',cap:'Grúa negra de noche · servicio en gasolinera Ecomaxx'},
+    {src:'assets/kad-foto-04.jpg',cap:'RAM blanca de día · remolcando en la calle'},
+    {src:'assets/kad-foto-05.jpg',cap:'RAM blanca remolcando BMW · servicio de día'},
+    {src:'assets/kad-foto-06.jpg',cap:'RAM blanca remolcando Toyota RAV4'},
+    {src:'assets/kad-foto-07.jpg',cap:'RAM blanca de noche · luces neón moradas y ámbar'},
+    {src:'assets/kad-foto-08.jpg',cap:'RAM blanca de noche remolcando Kia Soul'},
+    {src:'assets/kad-foto-09.jpg',cap:'Ford F-450 negra remolcando Ford Escape · gasolinera'},
+    {src:'assets/kad-foto-10.jpg',cap:'Ford F-450 negra en servicio · remolcando Ford Escape'}
+  ];
+  var track=document.getElementById('track'),
+      dotsBox=document.getElementById('dots'),
+      counter=document.getElementById('counter'),
+      scaption=document.getElementById('scaption'),
+      cur=0;
+  function pad(n){return (n<10?'0':'')+n}
+  photos.forEach(function(p,i){
+    var s=document.createElement('div');s.className='slide';
+    var img=document.createElement('img');img.src=p.src;img.alt=p.cap;img.loading=i?'lazy':'eager';
+    var c=document.createElement('div');c.className='cap';c.textContent=p.cap;
+    s.appendChild(img);s.appendChild(c);
+    s.addEventListener('click',function(){openLb(p.src)});
+    track.appendChild(s);
+    var d=document.createElement('button');d.setAttribute('aria-label','Ir a la foto '+(i+1));
+    d.addEventListener('click',function(){go(i)});
+    dotsBox.appendChild(d);
+  });
+  var dots=dotsBox.querySelectorAll('button');
+  function go(i){
+    cur=(i+photos.length)%photos.length;
+    track.style.transform='translateX(-'+(cur*100)+'%)';
+    counter.textContent=pad(cur+1)+' / '+pad(photos.length);
+    scaption.textContent=photos[cur].cap;
+    dots.forEach(function(d,j){d.classList.toggle('on',j===cur)});
+  }
+  document.getElementById('prevBtn').addEventListener('click',function(e){e.stopPropagation();go(cur-1)});
+  document.getElementById('nextBtn').addEventListener('click',function(e){e.stopPropagation();go(cur+1)});
+  addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft')go(cur-1);
+    if(e.key==='ArrowRight')go(cur+1);
+  });
+  var tx0=null;
+  track.addEventListener('touchstart',function(e){tx0=e.touches[0].clientX},{passive:true});
+  track.addEventListener('touchend',function(e){
+    if(tx0===null)return;
+    var dx=e.changedTouches[0].clientX-tx0;
+    if(Math.abs(dx)>40)go(cur+(dx<0?1:-1));
+    tx0=null;
+  },{passive:true});
+  go(0);
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg');
+  function openLb(src){lbImg.src=src;lb.classList.add('open')}
+  lb.addEventListener('click',function(){lb.classList.remove('open')});
+  addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});
+  /* FAQ accordion */
+  document.querySelectorAll('.faq button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=btn.parentElement,open=item.classList.contains('open'),ans=item.querySelector('.a');
+      document.querySelectorAll('.faq.open').forEach(function(f){
+        f.classList.remove('open');f.querySelector('.a').style.maxHeight=null;
+      });
+      if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+    });
+  });
+  /* form -> WhatsApp */
+  var form=document.getElementById('quoteForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.reportValidity())return;
+    var msg='Hola KAD Recovery PR LLC, soy '+document.getElementById('fName').value.trim()+
+      '. Estoy en: '+document.getElementById('fLocation').value.trim()+
+      '. Vehículo: '+document.getElementById('fVehicle').value+
+      '. Servicio: '+document.getElementById('fService').value;
+    var notes=document.getElementById('fNotes').value.trim();
+    if(notes)msg+='. Detalles: '+notes;
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');
+  });
+})();
+</script>
+</body>
+</html>
