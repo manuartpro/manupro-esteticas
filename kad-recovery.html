@@ -45,7 +45,18 @@ header.solid{background:rgba(7,7,10,.96);border-bottom:1px solid var(--line);pad
 .btn.ghost{background:transparent;color:#fff;border:1.5px solid var(--mag);box-shadow:none}
 .btn.ghost:hover{background:rgba(255,46,154,.12)}
 .btn.silver{background:linear-gradient(135deg,#e8ecf3,#9aa3b5);color:#0a0a0e;box-shadow:0 8px 28px rgba(215,221,232,.25)}
-@media(max-width:900px){.links{display:none}.brand img{width:46px;height:46px}}
+@media(max-width:900px){.links{display:none}.brand img{width:46px;height:46px}
+.burger{display:flex}
+.links.open{display:flex;position:fixed;top:62px;left:0;right:0;flex-direction:column;align-items:center;gap:0;
+  background:rgba(7,7,10,.98);border-bottom:1px solid var(--line);padding:10px 0;z-index:49}
+.links.open a{padding:14px 20px;width:100%;text-align:center;font-size:.95rem}
+.links.open a:active{background:rgba(255,46,154,.12)}}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:rgba(255,46,154,.08);
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0}
+.burger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);background:var(--mag)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);background:var(--mag)}
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
 .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kb 24s ease-in-out infinite alternate}
@@ -53,8 +64,8 @@ header.solid{background:rgba(7,7,10,.96);border-bottom:1px solid var(--line);pad
 .hero .shade{position:absolute;inset:0;background:
   linear-gradient(180deg,rgba(5,5,8,.72) 0%,rgba(5,5,8,.42) 42%,rgba(7,7,10,.97) 100%),
   radial-gradient(65% 55% at 50% 42%,transparent,rgba(5,5,8,.55))}
-.hero .in{position:relative;z-index:2;padding:140px 0 90px;text-align:center;width:100%}
-.hero-logo{width:150px;height:150px;border-radius:50%;margin:0 auto 24px;position:relative;display:grid;place-items:center;
+.hero .in{position:relative;z-index:2;padding:106px 0 90px;text-align:center;width:100%}
+.hero-logo{width:185px;height:185px;border-radius:50%;margin:0 auto 24px;position:relative;display:grid;place-items:center;
   background:#000;border:3px solid transparent;
   background:linear-gradient(#000,#000) padding-box,linear-gradient(135deg,var(--mag),var(--purp),var(--mag-soft)) border-box;
   box-shadow:0 0 42px rgba(255,46,154,.5),0 0 100px rgba(139,47,247,.35);
@@ -115,6 +126,9 @@ section{padding:96px 0}
 .card .ic svg{width:28px;height:28px;stroke:var(--mag);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .card h3{font-size:1.25rem;margin-bottom:10px;letter-spacing:.03em;text-transform:uppercase}
 .card p{color:var(--muted);font-size:.94rem;line-height:1.7}
+.card-photo{margin:-34px -28px 22px;height:170px;overflow:hidden;border-radius:15px 15px 0 0}
+.card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.45s}
+.card:hover .card-photo img{transform:scale(1.07)}
 /* why */
 .why{background:linear-gradient(180deg,var(--black),#120a1c 55%,var(--black))}
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
@@ -191,7 +205,7 @@ select option{background:#111}
 /* footer */
 footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
 .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
-.foot .brand img{width:74px;height:52px}
+.foot .brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--mag)}
 .foot p{color:var(--muted);font-size:.88rem;line-height:1.8}
 .foot p b{color:var(--mag-soft)}
 .foot .socials{display:flex;gap:12px;margin-top:14px}
@@ -214,7 +228,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
 @media(max-width:640px){
   section{padding:72px 0}
   .slide img{height:min(58vh,440px)}
-  .hero .in{padding:120px 0 80px}
+  .hero .in{padding:100px 0 80px}
 }
 </style>
 </head>
@@ -223,7 +237,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
 <header id="hdr">
   <div class="wrap nav">
     <a class="brand" href="#top">
-      <img src="assets/kad-logo.png" alt="KAD RECOVERY PR LLC">
+      <img src="assets/kad-logo-circle.png" alt="KAD RECOVERY PR LLC">
       <span class="t"><b>KAD <em>RECOVERY</em></b><span>PR LLC · 24/7</span></span>
     </a>
     <nav class="links">
@@ -233,6 +247,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
       <a href="#resenas">Reseñas</a>
       <a href="#cotizar">Cotizar</a>
     </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -240,7 +255,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
   <img class="bg" src="assets/kad-foto-01.jpg" alt="Grúa KAD Recovery PR — RAM blanca de noche con luces neón moradas">
   <div class="shade"></div>
   <div class="wrap in">
-    <div class="hero-logo"><img src="assets/kad-logo.png" alt="KAD RECOVERY PR LLC"></div>
+    <div class="hero-logo"><img src="assets/kad-logo-circle.png" alt="KAD RECOVERY PR LLC"></div>
     <span class="badge-247"><span class="pulse"></span> Servicio de grúa · 24 horas · 7 días</span>
     <h1>Tu grúa de <em>confianza</em></h1>
     <p class="tagline">Rápido <b>·</b> Seguro <b>·</b> Confiable</p>
@@ -269,36 +284,42 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
     </div>
     <div class="grid">
       <div class="card">
+        <div class="card-photo"><img src="assets/kad-foto-06.jpg" alt="RAM blanca remolcando Toyota RAV4" loading="lazy"></div>
         <div class="idx">01</div>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17h11l2-5h4l1.5 3H21a1.5 1.5 0 1 1 0 3h-1M7 20a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 7 20zm11 0a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 18 20zM3 17V7h9v10M12 7h4l3 5"/></svg></div>
         <h3>Remolque liviana y pesada</h3>
         <p>Remolque de vehículos livianos y semipesados con equipo profesional. Tu auto llega seguro a donde tiene que llegar.</p>
       </div>
       <div class="card">
+        <div class="card-photo"><img src="assets/kad-foto-03.jpg" alt="Grúa negra de noche en gasolinera Ecomaxx" loading="lazy"></div>
         <div class="idx">02</div>
         <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
         <h3>Asistencia en carretera 24/7</h3>
         <p>Te quedaste en la carretera a cualquier hora, cualquier día. Llámanos y vamos por ti — de día, de noche y en feriados.</p>
       </div>
       <div class="card">
+        <div class="card-photo"><img src="assets/kad-foto-02.jpg" alt="Ford F-450 negra remolcando Range Rover" loading="lazy"></div>
         <div class="idx">03</div>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-5A2 2 0 0 1 8.4 9.5h7.2a2 2 0 0 1 1.9 1.5L19 16M5 16v3m14-3v3M7 16a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 7 16zm10 0a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 17 16zM9 9.5 10.5 6h3L15 9.5"/></svg></div>
         <h3>Vehículos accidentados</h3>
         <p>Remoción y recuperación de vehículos accidentados con cuidado y rapidez, para que resuelvas lo antes posible.</p>
       </div>
       <div class="card">
+        <div class="card-photo"><img src="assets/kad-foto-04.jpg" alt="RAM blanca de día remolcando en la calle" loading="lazy"></div>
         <div class="idx">04</div>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h13l3 4v3h-2M3 12V6h10v6M3 12v7h2M17 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 17 19zM7 19a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 7 19zM13 6h4l2 3"/></svg></div>
         <h3>Transporte de vehículos</h3>
         <p>Transporte local y a larga distancia dentro de Puerto Rico. Tu vehículo se mueve seguro, sin importar la distancia.</p>
       </div>
       <div class="card">
+        <div class="card-photo"><img src="assets/kad-foto-10.jpg" alt="Ford F-450 negra en servicio remolcando" loading="lazy"></div>
         <div class="idx">05</div>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11M4 20h16M9 20v-6h6v6M12 9v2"/></svg></div>
         <h3>Equipo pesado y semi pesado</h3>
         <p>Movimiento y transporte de equipo pesado y semi pesado con el equipo adecuado para trabajos grandes.</p>
       </div>
       <div class="card">
+        <div class="card-photo"><img src="assets/kad-foto-09.jpg" alt="Ford F-450 negra en gasolinera" loading="lazy"></div>
         <div class="idx">06</div>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
         <h3>Servicios en el lugar</h3>
@@ -466,7 +487,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
 <footer>
   <div class="wrap foot">
     <a class="brand" href="#top">
-      <img src="assets/kad-logo.png" alt="KAD RECOVERY PR LLC">
+      <img src="assets/kad-logo-circle.png" alt="KAD RECOVERY PR LLC">
       <span class="t"><b>KAD <em>RECOVERY</em></b><span>PR LLC · 24/7</span></span>
     </a>
     <p><b>KAD RECOVERY PR LLC</b> · Tu grúa de confianza<br>
@@ -493,6 +514,17 @@ footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
   var WA="19394070656";
   var hdr=document.getElementById('hdr');
   addEventListener('scroll',function(){hdr.classList.toggle('solid',scrollY>40)},{passive:true});
+  /* menú hamburguesa (móvil) */
+  var burger=document.getElementById('burger'),
+      navLinks=document.querySelector('.links');
+  burger.addEventListener('click',function(){
+    var open=navLinks.classList.toggle('open');
+    burger.classList.toggle('open',open);
+    burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){navLinks.classList.remove('open');burger.classList.remove('open')});
+  });
   /* slider manual de trabajos (una foto a la vez) */
   var photos=[
     {src:'assets/kad-foto-01.jpg',cap:'RAM blanca de noche · luces neón moradas en servicio'},
