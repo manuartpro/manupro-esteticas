@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carlos M. Colon | Servicio de Grúa 24/7 en Puerto Rico</title>
+<meta name="description" content="Carlos M. Colon — Servicio de grúa 24/7 en todo Puerto Rico. Remolque, cerrajería, batería, gasolina, extracción y cambio de goma. Llama o escribe al 939-488-9645.">
+<link rel="preload" href="assets/carlos-foto-01.jpg" as="image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#ff2b1f; --red-deep:#c40e00; --red-soft:#ff7a6e;
+  --black:#0b0b0e; --coal:#101014; --panel:#16161c;
+  --white:#f7f5f2; --muted:#b8b2ae; --silver:#d7dde8;
+  --line:rgba(255,43,31,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'Manrope',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.02em}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s;
+  background:linear-gradient(180deg,rgba(5,5,8,.88),rgba(5,5,8,0));padding:14px 0}
+header.solid{background:rgba(11,11,14,.96);border-bottom:1px solid var(--line);padding:8px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.mono{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;flex:none;
+  font-family:'Anton',sans-serif;font-size:1.25rem;letter-spacing:.04em;color:#fff;
+  background:linear-gradient(135deg,var(--red),var(--red-deep));border:2px solid var(--red);
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.7))}
+.brand .t{line-height:1.1}
+.brand .t b{font-family:'Anton',sans-serif;font-size:1.15rem;letter-spacing:.06em;color:var(--white)}
+.brand .t b em{font-style:normal;color:var(--red)}
+.brand .t span{display:block;font-size:.62rem;letter-spacing:.3em;color:var(--red-soft);text-transform:uppercase;font-weight:700}
+.links{display:flex;gap:26px;font-size:.84rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.links a{color:var(--muted);transition:.25s}
+.links a:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--red),var(--red-deep));
+  color:#fff;font-weight:800;letter-spacing:.05em;padding:13px 26px;border-radius:999px;border:0;cursor:pointer;
+  font-size:.9rem;text-transform:uppercase;transition:.25s;box-shadow:0 8px 28px rgba(255,43,31,.35)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(255,43,31,.5)}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid var(--red);box-shadow:none}
+.btn.ghost:hover{background:rgba(255,43,31,.12)}
+.btn.silver{background:linear-gradient(135deg,#e8ecf3,#9aa3b5);color:#0a0a0e;box-shadow:0 8px 28px rgba(215,221,232,.25)}
+@media(max-width:900px){.links{display:none}.mono{width:46px;height:46px}
+.burger{display:flex}
+.links.open{display:flex;position:fixed;top:62px;left:0;right:0;flex-direction:column;align-items:center;gap:0;
+  background:rgba(11,11,14,.98);border-bottom:1px solid var(--line);padding:10px 0;z-index:49}
+.links.open a{padding:14px 20px;width:100%;text-align:center;font-size:.95rem}
+.links.open a:active{background:rgba(255,43,31,.12)}}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:rgba(255,43,31,.08);
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0}
+.burger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);background:var(--red)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);background:var(--red)}
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero video.bg,.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero .shade{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(5,5,8,.72) 0%,rgba(5,5,8,.42) 42%,rgba(11,11,14,.97) 100%),
+  radial-gradient(65% 55% at 50% 42%,transparent,rgba(5,5,8,.55))}
+.hero .in{position:relative;z-index:2;padding:106px 0 90px;text-align:center;width:100%}
+.hero-logo{width:150px;height:150px;border-radius:50%;margin:0 auto 24px;position:relative;display:grid;place-items:center;
+  font-family:'Anton',sans-serif;font-size:2.6rem;letter-spacing:.04em;color:#fff;
+  background:linear-gradient(135deg,#1a1a1f,#0b0b0e);border:3px solid transparent;
+  background:linear-gradient(#101014,#101014) padding-box,linear-gradient(135deg,var(--red),#ff8a5c,var(--red-soft)) border-box;
+  box-shadow:0 0 42px rgba(255,43,31,.5),0 0 100px rgba(255,43,31,.25);
+  animation:heroFloat 4.5s ease-in-out infinite}
+.hero-logo::before{content:'';position:absolute;inset:-13px;border-radius:50%;
+  border:1.5px dashed rgba(255,122,110,.6);animation:spinRing 16s linear infinite}
+.hero-logo::after{content:'';position:absolute;inset:-26px;border-radius:50%;
+  border:1px solid rgba(255,43,31,.35);animation:ringPulse 2.8s ease-out infinite}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes spinRing{to{transform:rotate(360deg)}}
+@keyframes ringPulse{0%{transform:scale(.92);opacity:.9}100%{transform:scale(1.12);opacity:0}}
+.badge-247{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:800;letter-spacing:.4em;text-transform:uppercase;
+  color:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 20px;margin-bottom:26px;
+  background:rgba(11,11,14,.6);backdrop-filter:blur(6px)}
+.badge-247 .pulse{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(255,43,31,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,43,31,.7)}70%{box-shadow:0 0 0 12px rgba(255,43,31,0)}100%{box-shadow:0 0 0 0 rgba(255,43,31,0)}}
+.hero h1{font-size:clamp(2.6rem,8vw,5.6rem);line-height:1.02;max-width:960px;margin:0 auto 10px;
+  text-shadow:0 4px 30px rgba(0,0,0,.65);text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .tagline{font-family:'Anton',sans-serif;font-size:clamp(1.15rem,3vw,1.7rem);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--silver);margin-bottom:20px;text-shadow:0 2px 16px rgba(0,0,0,.7)}
+.hero .tagline b{color:var(--red-soft)}
+.hero p.sub{color:#e9e4f0;max-width:640px;margin:0 auto 36px;font-size:1.06rem;line-height:1.7}
+.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.trust{display:flex;gap:34px;justify-content:center;flex-wrap:wrap;margin-top:56px}
+.trust div{text-align:center}
+.trust b{display:block;font-family:'Anton',sans-serif;font-size:1.5rem;color:var(--red-soft);letter-spacing:.04em}
+.trust span{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:var(--red-soft);
+  font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;animation:bob 2.2s infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+/* ---------- marquee ---------- */
+.marquee{background:linear-gradient(90deg,var(--red-deep),var(--red),#ff6a3d,var(--red-deep));color:#fff;
+  overflow:hidden;white-space:nowrap;padding:13px 0;font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.85rem}
+.marquee span{display:inline-block;padding:0 26px;animation:slide 26s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+/* ---------- sections ---------- */
+section{padding:96px 0}
+.sec-head{text-align:center;max-width:760px;margin:0 auto 58px}
+.sec-head .k{color:var(--red);font-size:.72rem;font-weight:800;letter-spacing:.4em;text-transform:uppercase;margin-bottom:16px}
+.sec-head h2{font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:16px;text-transform:uppercase;line-height:1.1}
+.sec-head h2 em{font-style:normal;color:var(--red)}
+.sec-head p{color:var(--muted);line-height:1.75}
+/* services */
+.svc{background:var(--coal)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:34px 28px;position:relative;
+  overflow:hidden;transition:.3s}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--red),#ff6a3d,transparent);opacity:0;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,43,31,.6);box-shadow:0 18px 44px rgba(0,0,0,.5)}
+.card:hover::before{opacity:1}
+.card .idx{font-family:'Anton',sans-serif;font-size:2.6rem;color:var(--red);opacity:.95;
+  margin-bottom:14px;letter-spacing:.06em;line-height:1}
+.card .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px;
+  background:rgba(255,43,31,.12);border:1px solid var(--line)}
+.card .ic svg{width:28px;height:28px;stroke:var(--red);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.25rem;margin-bottom:10px;letter-spacing:.03em;text-transform:uppercase}
+.card p{color:var(--muted);font-size:.94rem;line-height:1.7}
+.card-photo{margin:-34px -28px 22px;height:170px;overflow:hidden;border-radius:15px 15px 0 0}
+.card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.45s}
+.card:hover .card-photo img{transform:scale(1.07)}
+/* why */
+.why{background:linear-gradient(180deg,var(--black),#1c0d0a 55%,var(--black))}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.why-card{background:rgba(22,22,28,.85);border:1px solid var(--line);border-radius:18px;padding:38px 30px;text-align:center}
+.why-card .q{font-family:'Anton',sans-serif;font-size:1.55rem;line-height:1.25;text-transform:uppercase;margin-bottom:12px}
+.why-card .q em{font-style:normal;color:var(--red)}
+.why-card p{color:var(--muted);line-height:1.7;font-size:.95rem}
+.why-stats{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:54px}
+.why-stats div{text-align:center}
+.why-stats b{display:block;font-family:'Anton',sans-serif;font-size:2rem;color:var(--red-soft);letter-spacing:.04em}
+.why-stats span{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+/* gallery */
+.slider{position:relative;overflow:hidden;border-radius:18px;border:1px solid var(--line);background:var(--panel)}
+.track{display:flex;transition:transform .55s cubic-bezier(.22,.8,.3,1)}
+.slide{min-width:100%;position:relative;cursor:zoom-in}
+.slide img{width:100%;height:min(72vh,600px);object-fit:cover;display:block}
+.slide .cap{position:absolute;left:0;right:0;bottom:0;padding:44px 22px 18px;font-weight:700;letter-spacing:.05em;
+  background:linear-gradient(transparent,rgba(0,0,0,.9));font-size:.95rem}
+.snav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;cursor:pointer;
+  background:rgba(11,11,14,.6);border:1.5px solid var(--red);color:var(--red);font-size:1.7rem;line-height:1;
+  display:grid;place-items:center;backdrop-filter:blur(4px);transition:.25s;z-index:3}
+.snav:hover{background:var(--red);color:#fff}
+.snav.prev{left:14px}.snav.next{right:14px}
+.smeta{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 6px 0;flex-wrap:wrap}
+.scounter{font-family:'Anton',sans-serif;color:var(--red);font-size:1.15rem;letter-spacing:.14em}
+.scaption{color:var(--muted);font-size:.9rem}
+.dots{display:flex;gap:8px;justify-content:center;padding:14px 0 2px;flex-wrap:wrap}
+.dots button{width:10px;height:10px;border-radius:50%;border:1px solid var(--red);background:transparent;cursor:pointer;padding:0;transition:.25s}
+.dots button.on{background:var(--red);transform:scale(1.25)}
+.lightbox{position:fixed;inset:0;z-index:99;background:rgba(0,0,0,.93);display:none;place-items:center;padding:20px}
+.lightbox.open{display:grid}
+.lightbox img{max-width:92vw;max-height:88vh;border-radius:10px;border:1px solid var(--line)}
+.lightbox .x{position:absolute;top:18px;right:26px;font-size:2rem;color:var(--red);cursor:pointer;background:none;border:0}
+/* coverage */
+.cover{background:var(--coal)}
+.zones{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:860px;margin:0 auto}
+.zone{display:inline-flex;align-items:center;gap:9px;background:var(--panel);border:1px solid var(--line);
+  border-radius:999px;padding:12px 22px;font-weight:700;font-size:.92rem;transition:.25s}
+.zone:hover{border-color:var(--red);background:rgba(255,43,31,.1)}
+.zone .pin{color:var(--red);font-size:1rem}
+.cover-note{text-align:center;color:var(--muted);margin-top:34px;line-height:1.7}
+.cover-note b{color:var(--red-soft)}
+/* faq */
+.faq{max-width:820px;margin:0 auto}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin-bottom:14px}
+.faq summary{cursor:pointer;font-weight:800;font-size:1.02rem;letter-spacing:.02em;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';color:var(--red);font-size:1.5rem;font-weight:800;flex:none}
+.faq details[open ] summary::after{content:'–'}
+.faq p{color:var(--muted);line-height:1.75;margin-top:12px;font-size:.95rem}
+.faq p b{color:var(--red-soft)}
+/* form */
+.quote{background:linear-gradient(180deg,var(--coal),#120a0a)}
+.form-card{max-width:900px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:22px;
+  padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+@media(max-width:760px){.form-card{grid-template-columns:1fr;padding:30px 22px}}
+.form-card h3{font-size:1.6rem;margin-bottom:10px;text-transform:uppercase}
+.form-card h3 em{font-style:normal;color:var(--red)}
+.form-card .side p{color:var(--muted);line-height:1.75;font-size:.95rem;margin-bottom:22px}
+.contact-line{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-weight:700}
+.contact-line .dot{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,43,31,.12);border:1px solid var(--line);font-size:1.1rem;flex-shrink:0}
+.contact-line .dot svg{width:18px;height:18px;stroke:var(--red);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.contact-line small{display:block;color:var(--muted);font-weight:500}
+label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:16px 0 8px}
+input,select,textarea{width:100%;background:#0c0c12;border:1px solid rgba(255,255,255,.12);border-radius:10px;
+  color:var(--white);padding:13px 14px;font-size:.95rem;font-family:inherit;transition:.2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(255,43,31,.15)}
+textarea{min-height:100px;resize:vertical}
+select option{background:#111}
+.form-note{font-size:.82rem;color:var(--muted);margin-top:14px;line-height:1.6}
+/* footer */
+footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#060609}
+.foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+.foot p{color:var(--muted);font-size:.88rem;line-height:1.8}
+.foot p b{color:var(--red-soft)}
+.foot .socials{display:flex;gap:12px;margin-top:14px}
+.foot .socials a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;
+  padding:9px 18px;font-size:.85rem;font-weight:700;transition:.25s}
+.foot .socials a svg{width:20px;height:20px;flex:none}
+.foot .socials a:hover{border-color:var(--red);color:var(--red-soft)}
+.foot .made{font-size:.78rem;color:#6f6a7d;margin-top:20px;text-align:center;width:100%}
+.foot .made a{color:var(--red);font-weight:700}
+/* floating call */
+.call-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;
+  background:var(--red);display:grid;place-items:center;transition:.25s;
+  animation:callFloat 3s ease-in-out infinite,callPulse 2.4s ease-out infinite}
+.call-float:hover{transform:scale(1.1)}
+.call-float svg{width:30px;height:30px;fill:#fff}
+@keyframes callFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes callPulse{0%{box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 0 rgba(255,43,31,.55)}
+  70%{box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 18px rgba(255,43,31,0)}
+  100%{box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 0 rgba(255,43,31,0)}}
+@media(max-width:640px){
+  section{padding:72px 0}
+  .slide img{height:min(58vh,440px)}
+  .hero .in{padding:100px 0 80px}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mono">CC</span>
+      <span class="t"><b>CARLOS <em>M. COLON</em></b><span>Grúa 24/7 · Puerto Rico</span></span>
+    </a>
+    <nav class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#cotizar">Cotizar</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <video class="bg" autoplay muted loop playsinline preload="auto" poster="assets/carlos-foto-01.jpg">
+    <source src="assets/carlos-video-01.mp4" type="video/mp4">
+    <img class="bg" src="assets/carlos-foto-01.jpg" alt="Grúa roja International remolcando una pickup Ram blanca">
+  </video>
+  <div class="shade"></div>
+  <div class="wrap in">
+    <div class="hero-logo">CC</div>
+    <span class="badge-247"><span class="pulse"></span> Servicio de grúa · 24 horas · 7 días</span>
+    <h1>Te sacamos de apuros, <em>24/7</em></h1>
+    <p class="tagline">Remolque <b>·</b> Cerrajería <b>·</b> Batería <b>·</b> Gasolina</p>
+    <p class="sub">Servicio de grúa y asistencia en carretera en todo Puerto Rico. Si te quedaste a pie, una llamada basta — llegamos donde estés, a cualquier hora.</p>
+    <div class="cta-row">
+      <a class="btn" href="tel:+19394889645">Llamar 939-488-9645</a>
+      <a class="btn ghost" href="https://wa.me/19394889645?text=Hola%20Carlos%20M.%20Colon%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div class="trust">
+      <div><b>24/7</b><span>Siempre disponibles</span></div>
+      <div><b>6</b><span>Servicios en el lugar</span></div>
+      <div><b>78</b><span>Municipios · Toda la isla</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">Desliza</div>
+</section>
+
+<div class="marquee"><span>Remolque 24/7 ◆ Cerrajería ◆ Batería ◆ Gasolina ◆ Extracción ◆ Cambio de goma ◆ Todo Puerto Rico ◆&nbsp;</span><span>Remolque 24/7 ◆ Cerrajería ◆ Batería ◆ Gasolina ◆ Extracción ◆ Cambio de goma ◆ Todo Puerto Rico ◆&nbsp;</span></div>
+
+<section class="svc" id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Nuestros servicios</div>
+      <h2>Lo que necesites, <em>donde lo necesites</em></h2>
+      <p>Un solo número para cualquier emergencia en la carretera. Remolque y asistencia completa en el lugar, en toda la isla, las 24 horas.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-photo"><img src="assets/carlos-foto-01.jpg" alt="Grúa roja International remolcando una pickup Ram blanca" loading="lazy"></div>
+        <div class="idx">01</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17h11l2-5h4l1.5 3H21a1.5 1.5 0 1 1 0 3h-1M7 20a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 7 20zm11 0a1.8 1.8 0 1 0 0-3.6A1.8 1.8 0 0 0 18 20zM3 17V7h9v10M12 7h4l3 5"/></svg></div>
+        <h3>Remolque 24/7</h3>
+        <p>Remolque de vehículos con grúa flatbed, de día y de noche, en todo Puerto Rico. Tu auto llega seguro a donde tiene que llegar.</p>
+      </div>
+      <div class="card">
+        <div class="card-photo"><img src="assets/carlos-foto-02.jpg" alt="Grúas blanca y roja en gasolinera Puma" loading="lazy"></div>
+        <div class="idx">02</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="3.5"/><path d="M10.5 12.5 20 3M16 7l2.5 2.5M13.5 9.5 16 12"/></svg></div>
+        <h3>Cerrajería</h3>
+        <p>Te quedaste fuera del auto o perdiste las llaves. Abrimos tu vehículo en el lugar, sin daños y sin esperas largas.</p>
+      </div>
+      <div class="card">
+        <div class="card-photo"><img src="assets/carlos-foto-03.jpg" alt="Grúa blanca International remolcando una SUV oscura" loading="lazy"></div>
+        <div class="idx">03</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="8" width="17" height="9" rx="2"/><path d="M22 11.5v2M13 9.5 10.5 13h2.2L11 15.5l2.5-3.5h-2.2L13 9.5z"/></svg></div>
+        <h3>Batería</h3>
+        <p>Carga de batería y paso de corriente en el lugar. Si tu auto no enciende, lo resolvemos donde estés.</p>
+      </div>
+      <div class="card">
+        <div class="card-photo"><img src="assets/carlos-foto-04.jpg" alt="Grúa blanca flatbed cargada con materiales de construcción en una obra" loading="lazy"></div>
+        <div class="idx">04</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 21V6a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v15M2 21h13M13 9h3l2 2.5V17a1.5 1.5 0 0 0 3 0V9.5L19 7"/></svg></div>
+        <h3>Gasolina</h3>
+        <p>Te quedaste sin gasolina en la carretera. Te llevamos combustible al lugar para que sigas tu camino.</p>
+      </div>
+      <div class="card">
+        <div class="card-photo"><img src="assets/carlos-foto-01.jpg" alt="Grúa roja International con pickup Ram blanca en la plataforma" loading="lazy"></div>
+        <div class="idx">05</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v8M8.5 6.5 12 10l3.5-3.5M12 10v3a4 4 0 1 1-4-4"/></svg></div>
+        <h3>Extracción</h3>
+        <p>Extracción de vehículos atascados o en lugares difíciles. Sacamos tu auto con el equipo adecuado y con cuidado.</p>
+      </div>
+      <div class="card">
+        <div class="card-photo"><img src="assets/carlos-foto-03.jpg" alt="Grúa blanca remolcando una SUV en estacionamiento" loading="lazy"></div>
+        <div class="idx">06</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></div>
+        <h3>Cambio de goma</h3>
+        <p>Goma vacía o pinchada en la carretera. La cambiamos en el lugar para que sigas tu camino sin esperar una grúa completa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="porque">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">¿Por qué Carlos M. Colon?</div>
+      <h2>Cuando te quedas a pie, <em>una llamada basta</em></h2>
+      <p>Servicio directo, sin intermediarios. Hablas con quien va a buscarte.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="q">De verdad <em>24/7</em></div>
+        <p>De día, de noche, fines de semana y feriados. Si te quedas a pie a las 3 de la mañana, contestamos.</p>
+      </div>
+      <div class="why-card">
+        <div class="q">Toda la isla, <em>sin excepciones</em></div>
+        <p>Área metro, norte, sur, este, oeste y centro. Llegamos a los 78 municipios de Puerto Rico.</p>
+      </div>
+      <div class="why-card">
+        <div class="q">Lo resolvemos <em>en el lugar</em></div>
+        <p>Cerrajería, batería, gasolina y cambio de goma sin mover tu auto. Si no se puede en el lugar, lo remolcamos.</p>
+      </div>
+    </div>
+    <div class="why-stats">
+      <div><b>24/7</b><span>Todos los días</span></div>
+      <div><b>6</b><span>Servicios</span></div>
+      <div><b>78</b><span>Municipios</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="trabajos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Trabajos reales</div>
+      <h2>Nuestro trabajo <em>en la calle</em></h2>
+      <p>Fotos reales de Carlos M. Colon en servicio. Toca cualquier imagen para verla en grande.</p>
+    </div>
+    <div class="slider" id="slider">
+      <div class="track" id="track"></div>
+      <button class="snav prev" id="prevBtn" aria-label="Foto anterior">‹</button>
+      <button class="snav next" id="nextBtn" aria-label="Foto siguiente">›</button>
+    </div>
+    <div class="smeta">
+      <span class="scounter" id="counter">01 / 04</span>
+      <span class="scaption" id="scaption"></span>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</section>
+
+<section class="cover" id="cobertura">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Cobertura</div>
+      <h2>Todo Puerto Rico, <em>una llamada</em></h2>
+      <p>Servicio de grúa a nivel isla. No importa en qué pueblo te quedes, vamos por ti.</p>
+    </div>
+    <div class="zones">
+      <span class="zone"><span class="pin">◆</span> Área Metro</span>
+      <span class="zone"><span class="pin">◆</span> Norte</span>
+      <span class="zone"><span class="pin">◆</span> Sur</span>
+      <span class="zone"><span class="pin">◆</span> Este</span>
+      <span class="zone"><span class="pin">◆</span> Oeste</span>
+      <span class="zone"><span class="pin">◆</span> Centro</span>
+    </div>
+    <p class="cover-note">¿No sabes en qué zona estás? <b>Llámanos de todos modos</b> — dinos dónde estás y llegamos.</p>
+  </div>
+</section>
+
+<section id="preguntas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Preguntas frecuentes</div>
+      <h2>Antes de <em>llamar</em></h2>
+      <p>Lo que más nos preguntan los clientes cuando se quedan a pie.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>¿Atienden las 24 horas, de verdad?</summary>
+        <p>Sí. El servicio es <b>24 horas, 7 días a la semana</b>. Llámanos o escríbenos por WhatsApp al <b>939-488-9645</b> a cualquier hora.</p>
+      </details>
+      <details>
+        <summary>¿Cubren toda la isla o solo el área metro?</summary>
+        <p><b>Toda la isla.</b> Llegamos a los 78 municipios de Puerto Rico, del área metro hasta el pueblo más lejos.</p>
+      </details>
+      <details>
+        <summary>¿Qué información necesitan cuando llamo?</summary>
+        <p>Tu <b>ubicación</b> (pueblo y referencia cercana) y el <b>tipo de vehículo</b>. Con eso salimos a buscarte lo antes posible.</p>
+      </details>
+      <details>
+        <summary>¿Tienen que remolcar el auto siempre?</summary>
+        <p>No. Muchas veces lo resolvemos en el lugar: <b>cerrajería, carga de batería, gasolina y cambio de goma</b>. Si no se puede en el lugar, entonces lo remolcamos.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="cotizar">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Cotización</div>
+      <h2>Pide tu grúa <em>ahora mismo</em></h2>
+      <p>Llena el formulario y tu mensaje llega directo a nuestro WhatsApp. Respondemos 24/7.</p>
+    </div>
+    <div class="form-card">
+      <div class="side">
+        <h3>Cuéntanos <em>qué pasó</em></h3>
+        <p>Mientras más detalles nos des —dónde estás y qué vehículo es— más rápido llegamos. Si es una emergencia, llámanos directo: es más rápido que el formulario.</p>
+        <a class="contact-line" href="tel:+19394889645"><span class="dot"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></span><span>939-488-9645<small>Principal · WhatsApp · 24/7</small></span></a>
+        <a class="contact-line" href="#cobertura"><span class="dot"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>Todo Puerto Rico<small>78 municipios · 24/7</small></span></a>
+      </div>
+      <form id="quoteForm" novalidate>
+        <label for="fName">Tu nombre</label>
+        <input id="fName" required placeholder="Ej. María Rodríguez" autocomplete="name">
+        <label for="fLocation">Tu ubicación</label>
+        <input id="fLocation" required placeholder="Ej. Caguas, frente al centro comercial" autocomplete="address-level2">
+        <label for="fVehicle">Tipo de vehículo</label>
+        <select id="fVehicle" required>
+          <option value="" disabled selected>Selecciona el tipo de vehículo</option>
+          <option>Auto / Sedán</option>
+          <option>SUV / Pickup</option>
+          <option>Camión liviano</option>
+          <option>Motor / Otro</option>
+        </select>
+        <label for="fService">Servicio que necesitas</label>
+        <select id="fService" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Remolque 24/7</option>
+          <option>Cerrajería</option>
+          <option>Batería</option>
+          <option>Gasolina</option>
+          <option>Extracción</option>
+          <option>Cambio de goma</option>
+        </select>
+        <label for="fMsg">Detalles (opcional)</label>
+        <textarea id="fMsg" placeholder="Ej. El auto no enciende, estoy en el estacionamiento..."></textarea>
+        <div style="margin-top:22px"><button class="btn" type="submit" style="width:100%;justify-content:center">Enviar por WhatsApp</button></div>
+        <p class="form-note">Al enviar, se abrirá WhatsApp con tu mensaje listo para Carlos M. Colon.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top">
+      <span class="mono">CC</span>
+      <span class="t"><b>CARLOS <em>M. COLON</em></b><span>Grúa 24/7 · Puerto Rico</span></span>
+    </a>
+    <p><b>CARLOS M. COLON</b> · Servicio de grúa 24/7<br>
+    Tel. <a href="tel:+19394889645">939-488-9645</a><br>
+    Servicio 24/7 · Todo Puerto Rico</p>
+    <div>
+      <div class="socials">
+        <a href="https://www.threads.com/@carlosm.7518" target="_blank" rel="noopener" aria-label="Threads de Carlos M. Colon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#ffffff" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg>Threads</a>
+      </div>
+    </div>
+    <p class="made">Sitio web creado por <a href="https://www.instagram.com/manuartpro" target="_blank" rel="noopener">ManuPro</a> · © 2026 Carlos M. Colon</p>
+  </div>
+</footer>
+
+<a class="call-float" href="tel:+19394889645" aria-label="Llamar a Carlos M. Colon">
+  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+</a>
+
+<div class="lightbox" id="lightbox"><button class="x" aria-label="Cerrar">×</button><img id="lbImg" alt="Trabajo de Carlos M. Colon"></div>
+
+<script>
+(function(){
+  var WA="19394889645";
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('solid',scrollY>40)},{passive:true});
+  /* menú hamburguesa (móvil) */
+  var burger=document.getElementById('burger'),
+      navLinks=document.querySelector('.links');
+  burger.addEventListener('click',function(){
+    var open=navLinks.classList.toggle('open');
+    burger.classList.toggle('open',open);
+    burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){navLinks.classList.remove('open');burger.classList.remove('open')});
+  });
+  /* slider manual de trabajos (una foto a la vez) */
+  var photos=[
+    {src:'assets/carlos-foto-01.jpg',cap:'Grúa roja International remolcando una pickup Ram blanca'},
+    {src:'assets/carlos-foto-02.jpg',cap:'Grúas blanca y roja en servicio · gasolinera Puma'},
+    {src:'assets/carlos-foto-03.jpg',cap:'Grúa blanca International remolcando una SUV · estacionamiento'},
+    {src:'assets/carlos-foto-04.jpg',cap:'Grúa blanca flatbed cargada con materiales · obra en construcción'}
+  ];
+  var track=document.getElementById('track'),
+      dotsBox=document.getElementById('dots'),
+      counter=document.getElementById('counter'),
+      scaption=document.getElementById('scaption'),
+      cur=0;
+  function pad(n){return (n<10?'0':'')+n}
+  photos.forEach(function(p,i){
+    var s=document.createElement('div');s.className='slide';
+    var img=document.createElement('img');img.src=p.src;img.alt=p.cap;img.loading=i?'lazy':'eager';
+    var c=document.createElement('div');c.className='cap';c.textContent=p.cap;
+    s.appendChild(img);s.appendChild(c);
+    s.addEventListener('click',function(){openLb(p.src)});
+    track.appendChild(s);
+    var d=document.createElement('button');d.setAttribute('aria-label','Ir a la foto '+(i+1));
+    d.addEventListener('click',function(){go(i)});
+    dotsBox.appendChild(d);
+  });
+  var dots=dotsBox.querySelectorAll('button');
+  function go(i){
+    cur=(i+photos.length)%photos.length;
+    track.style.transform='translateX(-'+(cur*100)+'%)';
+    counter.textContent=pad(cur+1)+' / '+pad(photos.length);
+    scaption.textContent=photos[cur].cap;
+    dots.forEach(function(d,j){d.classList.toggle('on',j===cur)});
+  }
+  document.getElementById('prevBtn').addEventListener('click',function(e){e.stopPropagation();go(cur-1)});
+  document.getElementById('nextBtn').addEventListener('click',function(e){e.stopPropagation();go(cur+1)});
+  addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft')go(cur-1);
+    if(e.key==='ArrowRight')go(cur+1);
+  });
+  var tx0=null;
+  track.addEventListener('touchstart',function(e){tx0=e.touches[0].clientX},{passive:true});
+  track.addEventListener('touchend',function(e){
+    if(tx0===null)return;
+    var dx=e.changedTouches[0].clientX-tx0;
+    if(Math.abs(dx)>40)go(cur+(dx<0?1:-1));
+    tx0=null;
+  },{passive:true});
+  go(0);
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg');
+  function openLb(src){lbImg.src=src;lb.classList.add('open')}
+  lb.addEventListener('click',function(){lb.classList.remove('open')});
+  addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});
+  /* form -> WhatsApp */
+  var form=document.getElementById('quoteForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.reportValidity())return;
+    var msg='Hola Carlos M. Colon, soy '+document.getElementById('fName').value.trim()+
+      '. Estoy en: '+document.getElementById('fLocation').value.trim()+
+      '. Vehículo: '+document.getElementById('fVehicle').value+
+      '. Servicio: '+document.getElementById('fService').value+'.';
+    var det=document.getElementById('fMsg').value.trim();
+    if(det)msg+=' Detalles: '+det;
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank','noopener');
+  });
+})();
+</script>
+</body>
+</html>
