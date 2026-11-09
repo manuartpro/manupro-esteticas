@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carlos M. Colon | Servicio de Grúa 24/7 en Puerto Rico</title>
+<meta name="description" content="Carlos M. Colon — Rescate en carretera 24/7 en todo Puerto Rico. Remolque, cerrajería, batería, gasolina, extracción y cambio de goma. Llama o escribe al 939-488-9645.">
+<link rel="preload" href="assets/carlos-foto-01.jpg" as="image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e0c09; --coal:#171310; --panel:#1d1813; --panel2:#221c16;
+  --ivory:#f5f0e6; --ivory-dim:#e8e0cf;
+  --gold:#c9a227; --gold-lt:#e8c766; --gold-dk:#8f6f14;
+  --muted:#a89e8a; --muted-dk:#6d6353;
+  --line:rgba(201,162,39,.32); --line-soft:rgba(201,162,39,.16);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--ivory);font-family:var(--sans);font-weight:300;overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 26px}
+::selection{background:var(--gold);color:#14100a}
+
+/* ============ top utility bar ============ */
+.topbar{background:#080705;border-bottom:1px solid var(--line-soft);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-top:9px;padding-bottom:9px}
+.topbar a{color:var(--gold-lt);font-weight:500}
+.topbar a:hover{color:#fff}
+.topbar .mid{color:var(--gold);letter-spacing:.3em}
+.topbar .dot{color:var(--gold);margin:0 6px}
+
+/* ============ header ============ */
+header{position:sticky;top:0;z-index:60;background:rgba(14,12,9,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+header.solid{border-bottom-color:var(--line);background:rgba(14,12,9,.97)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:15px}
+.brand img.logo{width:58px;height:58px;border-radius:50%;object-fit:cover;flex:none;
+  box-shadow:0 0 0 1px rgba(201,162,39,.55),0 6px 22px rgba(0,0,0,.6)}
+.brand .t{line-height:1.15}
+.brand .t b{font-family:var(--serif);font-weight:600;font-size:1.28rem;letter-spacing:.02em;display:block}
+.brand .t b i{font-style:italic;color:var(--gold-lt)}
+.brand .t span{font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.links{display:flex;gap:30px;font-size:.8rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+.links a{color:var(--ivory-dim);position:relative;padding:6px 0;transition:color .25s}
+.links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:linear-gradient(90deg,var(--gold-lt),var(--gold));transition:width .35s}
+.links a:hover{color:var(--gold-lt)}
+.links a:hover::after{width:100%}
+.nav-call{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--gold);border-radius:999px;
+  padding:10px 20px;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-lt);transition:.3s;white-space:nowrap}
+.nav-call:hover{background:var(--gold);color:#14100a}
+.nav-call svg{width:15px;height:15px;fill:currentColor}
+/* botón hamburguesa — REGLA BASE (oculto en escritorio). La regla móvil que lo muestra
+   está al FINAL del archivo, después de esta, para que la cascada no la anule. */
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);
+  background:rgba(201,162,39,.12);flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;cursor:pointer;padding:0;flex:none}
+.burger span{display:block;width:22px;height:2px;background:var(--gold-lt);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ============ reveal on scroll ============ */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,.8,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal-l{opacity:0;transform:translateX(-40px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,.8,.3,1)}
+.reveal-l.in{opacity:1;transform:none}
+.reveal-r{opacity:0;transform:translateX(40px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,.8,.3,1)}
+.reveal-r.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ============ hero split ============ */
+.hero{position:relative;padding:74px 0 84px;overflow:hidden;
+  background:radial-gradient(900px 480px at 85% -10%,rgba(201,162,39,.14),transparent 60%),
+             radial-gradient(700px 500px at -10% 110%,rgba(201,162,39,.08),transparent 55%),var(--ink)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(201,162,39,.05) 1px,transparent 1px);
+  background-size:100% 92px}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;font-weight:500;
+  letter-spacing:.38em;text-transform:uppercase;color:var(--gold-lt)}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--gold)}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.5rem,5.4vw,4.3rem);
+  line-height:1.08;margin:22px 0 8px;letter-spacing:.005em}
+.hero h1 em{font-style:italic;font-weight:600;
+  background:linear-gradient(100deg,#f3dc8e 0%,var(--gold) 45%,#a37c1c 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .thin{font-weight:400}
+.hero .lede{font-size:1.12rem;color:#cfc6b4;max-width:520px;line-height:1.8;margin:18px 0 34px;font-weight:300}
+.hero .lede b{color:var(--ivory);font-weight:500}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:999px;cursor:pointer;
+  font-family:var(--sans);font-size:.86rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  border:1px solid transparent;transition:transform .3s,box-shadow .3s,background .3s,color .3s}
+.btn svg{width:16px;height:16px;fill:currentColor}
+.btn-gold{background:linear-gradient(120deg,var(--gold-lt),var(--gold) 55%,#a37c1c);color:#171204;
+  box-shadow:0 10px 30px rgba(201,162,39,.28)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(201,162,39,.42)}
+.btn-line{background:transparent;color:var(--ivory);border-color:rgba(245,240,230,.4)}
+.btn-line:hover{border-color:var(--gold-lt);color:var(--gold-lt);transform:translateY(-3px)}
+.hero-stats{display:flex;gap:0;margin-top:52px;border-top:1px solid var(--line-soft);padding-top:30px;max-width:560px}
+.hstat{flex:1;padding-right:18px}
+.hstat+.hstat{border-left:1px solid var(--line-soft);padding-left:26px}
+.hstat b{display:block;font-family:var(--serif);font-weight:600;font-size:2.15rem;line-height:1;color:var(--gold-lt)}
+.hstat b i{font-style:normal;font-size:1.3rem}
+.hstat span{display:block;margin-top:8px;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+/* hero media — video vertical enmarcado */
+.hero-media{position:relative}
+.hero-frame{position:relative;border:1px solid var(--gold);padding:12px;background:var(--coal);
+  box-shadow:0 30px 70px rgba(0,0,0,.6)}
+.hero-frame::after{content:"";position:absolute;inset:-13px;border:1px solid var(--line-soft);pointer-events:none}
+.hero-frame .clip{position:relative;overflow:hidden;aspect-ratio:9/13.5}
+.hero-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.09) translateY(-1.2%)}}
+.hero-frame .live{position:absolute;top:14px;left:14px;z-index:2;display:inline-flex;align-items:center;gap:8px;
+  background:rgba(10,8,6,.78);border:1px solid var(--line);border-radius:999px;padding:7px 14px;
+  font-size:.66rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-lt)}
+.hero-frame .live i{width:8px;height:8px;border-radius:50%;background:var(--gold-lt);animation:blink 1.6s infinite}
+@keyframes blink{0%,100%{box-shadow:0 0 0 0 rgba(232,199,102,.7)}70%{box-shadow:0 0 0 9px rgba(232,199,102,0)}}
+.hero-badge{position:absolute;left:-38px;bottom:26px;z-index:3;width:118px;height:118px;border-radius:50%;
+  animation:floaty 5s ease-in-out infinite;filter:drop-shadow(0 12px 26px rgba(0,0,0,.65))}
+.hero-badge img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-cap{margin-top:26px;display:flex;justify-content:space-between;gap:14px;font-size:.78rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.hero-cap b{color:var(--gold-lt);font-weight:500}
+
+/* ============ towns ticker ============ */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0b0908;
+  overflow:hidden;padding:15px 0;white-space:nowrap}
+.ticker .run{display:inline-block;animation:tick 38s linear infinite}
+.ticker span{font-family:var(--serif);font-style:italic;font-size:1.02rem;color:#8d8271;padding:0 22px;letter-spacing:.06em}
+.ticker span b{color:var(--gold-lt);font-style:normal;font-weight:600}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ============ section heads (left-aligned editorial) ============ */
+section{padding:104px 0}
+.sec-head{max-width:720px;margin-bottom:60px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head.center .eyebrow::after{content:"";width:44px;height:1px;background:var(--gold)}
+.sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.15;margin-top:18px}
+.sec-head h2 em{font-style:italic;color:var(--gold-lt)}
+.sec-head p{color:var(--muted);margin-top:16px;font-size:1.02rem;line-height:1.8}
+.gold-rule{width:64px;height:2px;background:linear-gradient(90deg,var(--gold-lt),var(--gold));margin-top:24px}
+.sec-head.center .gold-rule{margin-left:auto;margin-right:auto}
+
+/* ============ services — editorial rows, pro indices ============ */
+.svc-rows{display:flex;flex-direction:column}
+.svc-row{display:grid;grid-template-columns:190px 1fr 380px;gap:44px;align-items:center;
+  padding:42px 0;border-top:1px solid var(--line-soft);position:relative;transition:background .35s}
+.svc-row:last-child{border-bottom:1px solid var(--line-soft)}
+.svc-row:hover{background:linear-gradient(90deg,rgba(201,162,39,.06),transparent 70%)}
+.svc-row.rev .idx-cell{order:1}
+.svc-row.rev .svc-txt{order:2}
+.svc-row.rev .svc-photo{order:3}
+.idx-cell{text-align:center}
+.idx-num{font-family:var(--serif);font-weight:700;font-size:5.4rem;line-height:.9;letter-spacing:-.02em;
+  background:linear-gradient(160deg,#f6e2a0 0%,var(--gold-lt) 30%,var(--gold) 58%,#8a6514 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 3px 10px rgba(201,162,39,.22));
+  transition:transform .4s cubic-bezier(.22,.8,.3,1),filter .4s}
+.svc-row:hover .idx-num{transform:translateY(-6px) scale(1.05);filter:drop-shadow(0 8px 18px rgba(201,162,39,.4))}
+.idx-tag{display:block;margin-top:12px;font-size:.64rem;font-weight:600;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--gold)}
+.idx-tag::before,.idx-tag::after{content:"—";color:var(--line);margin:0 6px}
+.svc-txt h3{font-family:var(--serif);font-weight:600;font-size:1.85rem;line-height:1.2;margin-bottom:12px}
+.svc-txt h3 i{font-style:italic;color:var(--gold-lt);font-weight:500}
+.svc-txt p{color:var(--muted);line-height:1.8;max-width:460px}
+.svc-link{display:inline-flex;align-items:center;gap:9px;margin-top:20px;font-size:.78rem;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--gold-lt);border-bottom:1px solid var(--line);
+  padding-bottom:5px;transition:gap .3s,color .3s}
+.svc-link:hover{gap:15px;color:#fff}
+.svc-photo{position:relative;overflow:hidden;border:1px solid var(--line-soft);aspect-ratio:16/10.5}
+.svc-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,.8,.3,1),filter .5s;filter:saturate(.92)}
+.svc-row:hover .svc-photo img{transform:scale(1.08);filter:saturate(1.05)}
+.svc-photo::after{content:"";position:absolute;inset:0;border:1px solid rgba(232,199,102,0);
+  transition:.4s;pointer-events:none}
+.svc-row:hover .svc-photo::after{border-color:rgba(232,199,102,.55);inset:8px}
+
+/* ============ process strip ============ */
+.process{background:var(--coal);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:step}
+.step{padding:10px 38px 10px 0;position:relative}
+.step+.step{padding-left:38px;border-left:1px solid var(--line-soft)}
+.step .n{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1rem;color:var(--gold);
+  letter-spacing:.2em}
+.step h3{font-family:var(--serif);font-weight:600;font-size:1.5rem;margin:12px 0 10px}
+.step p{color:var(--muted);line-height:1.75;font-size:.97rem}
+.step .bar{height:2px;background:var(--line-soft);margin-top:26px;position:relative;overflow:hidden}
+.step .bar i{position:absolute;inset:0;background:linear-gradient(90deg,var(--gold-lt),var(--gold));
+  transform:scaleX(0);transform-origin:left;transition:transform 1s ease .3s}
+.in .step .bar i{transform:scaleX(1)}
+
+/* ============ gallery — main + filmstrip ============ */
+.gallery-grid{display:grid;grid-template-columns:1fr 190px;gap:22px;align-items:stretch}
+.g-main{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel);cursor:zoom-in}
+.g-main img{width:100%;height:100%;min-height:420px;max-height:640px;object-fit:cover;display:block;
+  transition:opacity .45s ease,transform .6s ease}
+.g-main img.swap{opacity:0}
+.g-main:hover img{transform:scale(1.02)}
+.g-main .g-cap{position:absolute;left:0;right:0;bottom:0;padding:52px 24px 18px;font-weight:400;
+  letter-spacing:.04em;background:linear-gradient(transparent,rgba(8,6,5,.92));font-size:.98rem}
+.g-main .g-cap b{color:var(--gold-lt);font-weight:600}
+.g-thumbs{display:flex;flex-direction:column;gap:14px}
+.g-thumbs button{flex:1;border:1px solid var(--line-soft);background:none;padding:0;cursor:pointer;
+  overflow:hidden;position:relative;opacity:.55;transition:opacity .3s,border-color .3s;min-height:0}
+.g-thumbs button img{width:100%;height:100%;object-fit:cover;display:block}
+.g-thumbs button:hover{opacity:.85}
+.g-thumbs button.on{opacity:1;border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.g-thumbs button.on::after{content:"";position:absolute;inset:0;border:2px solid rgba(232,199,102,.35);pointer-events:none}
+.g-meta{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:22px;flex-wrap:wrap}
+.g-counter{font-family:var(--serif);font-weight:600;font-size:1.5rem;color:var(--gold-lt);letter-spacing:.06em}
+.g-counter small{color:var(--muted);font-size:1rem}
+.g-nav{display:flex;gap:12px}
+.g-arrow{width:52px;height:52px;border-radius:50%;border:1px solid var(--gold);background:transparent;
+  color:var(--gold-lt);font-size:1.5rem;line-height:1;cursor:pointer;transition:.3s;display:grid;place-items:center}
+.g-arrow:hover{background:var(--gold);color:#171204;transform:translateY(-2px)}
+.g-note{color:var(--muted);font-size:.88rem;letter-spacing:.06em}
+
+/* ============ coverage — big numeral + list ============ */
+.cover-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.big78{font-family:var(--serif);font-weight:700;font-size:clamp(7rem,16vw,11rem);line-height:.85;
+  background:linear-gradient(165deg,#f6e2a0,var(--gold-lt) 35%,var(--gold) 65%,#8a6514);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 24px rgba(201,162,39,.2))}
+.big78-label{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--ivory);margin-top:18px}
+.cover-grid p.lead{color:var(--muted);line-height:1.85;margin-top:16px;max-width:420px}
+.cover-grid p.lead b{color:var(--gold-lt);font-weight:500}
+.zones{border-top:1px solid var(--line-soft)}
+.zone{display:flex;align-items:baseline;gap:20px;padding:21px 6px;border-bottom:1px solid var(--line-soft);
+  transition:background .3s,padding-left .3s}
+.zone:hover{background:rgba(201,162,39,.05);padding-left:16px}
+.zone .z-idx{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.05rem;flex:none;width:34px}
+.zone h3{font-family:var(--serif);font-weight:600;font-size:1.35rem;flex:none;width:150px}
+.zone p{color:var(--muted);font-size:.94rem;line-height:1.6}
+
+/* ============ FAQ — custom accordion ============ */
+.faq{max-width:860px;margin:0 auto}
+.faq-item{background:var(--panel);border:1px solid var(--line-soft);margin-bottom:14px;transition:border-color .3s}
+.faq-item.open{border-color:var(--gold)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;background:none;
+  border:0;color:var(--ivory);font-family:var(--serif);font-weight:600;font-size:1.18rem;text-align:left;
+  padding:22px 26px;cursor:pointer}
+.faq-q .pm{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);display:grid;
+  place-items:center;color:var(--gold-lt);font-size:1.3rem;line-height:1;font-family:var(--sans);
+  transition:transform .4s,background .3s,color .3s}
+.faq-item.open .pm{transform:rotate(135deg);background:var(--gold);color:#171204}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.faq-a p{color:var(--muted);line-height:1.8;padding:0 26px 24px;font-size:.98rem}
+.faq-a p b{color:var(--gold-lt);font-weight:500}
+
+/* ============ quote — dark panel + ivory form ============ */
+.quote{background:linear-gradient(180deg,var(--ink),#141009 60%,var(--ink))}
+.quote-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:0;border:1px solid var(--line);overflow:hidden}
+.quote-side{background:var(--coal);padding:56px 48px;display:flex;flex-direction:column;justify-content:center;
+  position:relative;overflow:hidden}
+.quote-side::before{content:"24/7";position:absolute;right:-30px;bottom:-70px;font-family:var(--serif);
+  font-weight:700;font-size:15rem;line-height:1;color:rgba(201,162,39,.06);pointer-events:none}
+.quote-side h3{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.2;margin-bottom:18px}
+.quote-side h3 em{font-style:italic;color:var(--gold-lt)}
+.quote-side p{color:var(--muted);line-height:1.8;margin-bottom:30px}
+.big-tel{font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,3.4vw,2.4rem);color:var(--gold-lt);
+  letter-spacing:.02em;line-height:1.2}
+.big-tel small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.quote-side .mini{display:flex;gap:14px;align-items:center;margin-top:30px;padding-top:26px;border-top:1px solid var(--line-soft)}
+.quote-side .mini img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.quote-side .mini p{margin:0;color:var(--ivory-dim);font-size:.92rem;line-height:1.6}
+.quote-side .mini p span{color:var(--muted);display:block;font-size:.8rem}
+.quote-form{background:var(--ivory);color:#241d12;padding:56px 48px}
+.quote-form h3{font-family:var(--serif);font-weight:600;font-size:1.7rem;color:#171204;margin-bottom:8px}
+.quote-form>p{color:var(--muted-dk);font-size:.95rem;margin-bottom:10px}
+.quote-form label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:#6d6353;margin:20px 0 7px}
+.quote-form input,.quote-form select,.quote-form textarea{width:100%;background:#fff;border:1px solid #d8cdb4;
+  border-radius:6px;color:#241d12;padding:13px 14px;font-size:.96rem;font-family:var(--sans);transition:.2s}
+.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{outline:none;border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(201,162,39,.25)}
+.quote-form textarea{min-height:96px;resize:vertical}
+.quote-form select option{background:#fff}
+.btn-dark{width:100%;justify-content:center;background:#171204;color:var(--gold-lt);margin-top:26px;
+  border:1px solid #171204}
+.btn-dark:hover{background:var(--gold);border-color:var(--gold);color:#171204;transform:translateY(-2px)}
+.form-note{font-size:.82rem;color:#8a7d63;margin-top:14px;line-height:1.6;text-align:center}
+
+/* ============ footer ============ */
+footer{border-top:1px solid var(--line);padding:64px 0 34px;background:#080705;text-align:center}
+footer .flogo{width:104px;height:104px;border-radius:50%;object-fit:cover;margin:0 auto 22px;
+  box-shadow:0 0 0 1px rgba(201,162,39,.55),0 10px 30px rgba(0,0,0,.6)}
+footer h4{font-family:var(--serif);font-weight:600;font-size:1.5rem}
+footer h4 i{font-style:italic;color:var(--gold-lt)}
+footer .f-sub{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+footer .f-nav{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin:30px 0 8px;
+  font-size:.8rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+footer .f-nav a{color:var(--ivory-dim)}
+footer .f-nav a:hover{color:var(--gold-lt)}
+footer p{color:var(--muted);font-size:.9rem;line-height:1.8}
+footer p a{color:var(--gold-lt)}
+.threads-btn{display:inline-flex;align-items:center;gap:10px;margin-top:26px;border:1px solid var(--line);
+  border-radius:999px;padding:11px 24px;font-size:.86rem;font-weight:500;transition:.3s}
+.threads-btn svg{width:20px;height:20px;flex:none}
+.threads-btn:hover{border-color:var(--gold);color:var(--gold-lt)}
+.made{font-size:.78rem;color:#6f675a;margin-top:34px}
+.made a{color:var(--gold);font-weight:600}
+
+/* ============ floating call ============ */
+.call-float{position:fixed;right:20px;bottom:20px;z-index:70;width:62px;height:62px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold-lt),var(--gold));display:grid;place-items:center;
+  box-shadow:0 12px 30px rgba(0,0,0,.55);transition:transform .25s;
+  animation:callFloat 3s ease-in-out infinite,callPulse 2.4s ease-out infinite}
+.call-float:hover{transform:scale(1.1)}
+.call-float svg{width:30px;height:30px;fill:#171204}
+@keyframes callFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes callPulse{0%{box-shadow:0 12px 30px rgba(0,0,0,.55),0 0 0 0 rgba(201,162,39,.5)}
+  70%{box-shadow:0 12px 30px rgba(0,0,0,.55),0 0 0 18px rgba(201,162,39,0)}
+  100%{box-shadow:0 12px 30px rgba(0,0,0,.55),0 0 0 0 rgba(201,162,39,0)}}
+
+/* ============ lightbox ============ */
+.lightbox{position:fixed;inset:0;z-index:99;background:rgba(5,4,3,.94);display:none;place-items:center;padding:20px}
+.lightbox.open{display:grid}
+.lightbox img{max-width:92vw;max-height:86vh;border:1px solid var(--line)}
+.lightbox .x{position:absolute;top:18px;right:26px;font-size:2.2rem;color:var(--gold-lt);cursor:pointer;background:none;border:0}
+
+/* ============ responsive — VA AL FINAL: la regla móvil del burger
+   DEBE ir después de la regla base .burger{display:none} ============ */
+@media(max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;gap:52px}
+  .hero-media{max-width:520px}
+  .svc-row{grid-template-columns:150px 1fr 300px;gap:28px}
+  .idx-num{font-size:4.4rem}
+  .cover-grid{gap:44px}
+}
+@media(max-width:900px){
+  .links{display:none}
+  .nav-call{display:none}
+  .links.open{display:flex;position:fixed;top:87px;left:0;right:0;flex-direction:column;align-items:center;gap:0;
+    background:#0e0c09;border-bottom:1px solid var(--line);padding:8px 0;z-index:59}
+  .links.open a{padding:15px 20px;width:100%;text-align:center;font-size:.92rem}
+  .links.open a::after{display:none}
+  .links.open a:active{background:rgba(201,162,39,.1)}
+  .burger{display:flex}
+  section{padding:78px 0}
+  .svc-row{grid-template-columns:1fr;gap:18px;padding:36px 0}
+  .svc-row.rev .idx-cell,.svc-row.rev .svc-txt,.svc-row.rev .svc-photo{order:initial}
+  .idx-cell{text-align:left;display:flex;align-items:baseline;gap:18px}
+  .idx-num{font-size:3.6rem}
+  .idx-tag{margin-top:0}
+  .steps{grid-template-columns:1fr}
+  .step{padding:0 0 34px}
+  .step+.step{padding-left:0;border-left:0;border-top:1px solid var(--line-soft);padding-top:34px}
+  .gallery-grid{grid-template-columns:1fr}
+  .g-thumbs{flex-direction:row}
+  .g-thumbs button{aspect-ratio:16/10}
+  .g-main img{min-height:300px}
+  .cover-grid{grid-template-columns:1fr}
+  .quote-grid{grid-template-columns:1fr}
+  .quote-side,.quote-form{padding:40px 26px}
+  .hero-badge{left:auto;right:8px;bottom:-30px;width:96px;height:96px}
+  .topbar .mid{display:none}
+}
+@media(max-width:560px){
+  .hero{padding:52px 0 64px}
+  .hero-stats{flex-wrap:wrap;gap:22px}
+  .hstat{flex:1 1 40%}
+  .hstat+.hstat{border-left:0;padding-left:0}
+  .zone{flex-wrap:wrap;gap:6px}
+  .zone h3{width:auto}
+  .brand .t b{font-size:1.1rem}
+  .brand img.logo{width:50px;height:50px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .reveal,.reveal-l,.reveal-r{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><a href="tel:+19394889645">939-488-9645</a><span class="dot">◆</span> Llámanos 24/7</span>
+    <span class="mid">Rescate en carretera · Todo Puerto Rico</span>
+    <span><a href="https://www.threads.com/@carlosm.7518" target="_blank" rel="noopener">@carlosm.7518</a></span>
+  </div>
+</div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img class="logo" src="assets/carlos-logo-circle.png" alt="Logo de Carlos M. Colon — grúa roja International remolcando una pickup Ram blanca">
+      <span class="t"><b>Carlos <i>M. Colon</i></b><span>Grúa 24/7 · Puerto Rico</span></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#cotizar">Cotizar</a>
+    </nav>
+    <a class="nav-call" href="tel:+19394889645"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>939-488-9645</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO dividido: texto editorial + video enmarcado ============ -->
+<section class="hero" id="top" style="padding-top:74px">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow reveal in">Servicio de grúa · Puerto Rico</span>
+      <h1 class="reveal in d1">Cuando el camino<br>se detiene, <em>nosotros no.</em></h1>
+      <p class="lede reveal in d2">Rescate en carretera con <b>grúa flatbed propia</b>, de día y de noche, en los 78 municipios. Una llamada basta: llegamos donde estés y lo resolvemos en el lugar — o remolcamos tu auto con cuidado.</p>
+      <div class="cta-row reveal in d3">
+        <a class="btn btn-gold" href="tel:+19394889645"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Llamar 939-488-9645</a>
+        <a class="btn btn-line" href="https://wa.me/19394889645?text=Hola%20Carlos%20M.%20Colon%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="hero-stats reveal in d4">
+        <div class="hstat"><b><span class="count" data-to="24">0</span>/7</b><span>Siempre disponibles</span></div>
+        <div class="hstat"><b><span class="count" data-to="6">0</span></b><span>Servicios en el lugar</span></div>
+        <div class="hstat"><b><span class="count" data-to="78">0</span></b><span>Municipios · Toda la isla</span></div>
+      </div>
+    </div>
+    <div class="hero-media reveal-r in">
+      <div class="hero-frame">
+        <div class="clip">
+          <span class="live"><i></i> En servicio</span>
+          <video autoplay muted loop playsinline preload="auto" poster="assets/carlos-foto-01.jpg">
+            <source src="assets/carlos-video-01.mp4" type="video/mp4">
+            <img src="assets/carlos-foto-01.jpg" alt="Grúa roja International remolcando una pickup Ram blanca">
+          </video>
+        </div>
+      </div>
+      <div class="hero-badge"><img src="assets/carlos-logo-circle.png" alt="Grúa roja de Carlos M. Colon"></div>
+      <div class="hero-cap"><span>Dos grúas en servicio</span><b>Gasolinera Puma</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="run"><span>San Juan <b>◆</b></span><span>Bayamón <b>◆</b></span><span>Caguas <b>◆</b></span><span>Ponce <b>◆</b></span><span>Mayagüez <b>◆</b></span><span>Arecibo <b>◆</b></span><span>Humacao <b>◆</b></span><span>Guaynabo <b>◆</b></span><span>Carolina <b>◆</b></span><span>Aguadilla <b>◆</b></span><span>San Juan <b>◆</b></span><span>Bayamón <b>◆</b></span><span>Caguas <b>◆</b></span><span>Ponce <b>◆</b></span><span>Mayagüez <b>◆</b></span><span>Arecibo <b>◆</b></span><span>Humacao <b>◆</b></span><span>Guaynabo <b>◆</b></span><span>Carolina <b>◆</b></span><span>Aguadilla <b>◆</b></span></div></div>
+
+<!-- ============ SERVICIOS: filas editoriales con índices dorados ============ -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Nuestros servicios</span>
+      <h2>Seis formas de <em>sacarte de apuros</em></h2>
+      <p>Un solo número para cualquier emergencia en la carretera. Remolque y asistencia completa en el lugar, en toda la isla, las 24 horas.</p>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="svc-rows">
+      <article class="svc-row reveal">
+        <div class="idx-cell"><span class="idx-num">01</span><span class="idx-tag">Servicio</span></div>
+        <div class="svc-txt">
+          <h3>Remolque <i>24/7</i></h3>
+          <p>Remolque de vehículos con grúa flatbed, de día y de noche, en todo Puerto Rico. Tu auto llega seguro a donde tiene que llegar.</p>
+          <a class="svc-link" href="#cotizar" data-service="Remolque 24/7">Pedir este servicio →</a>
+        </div>
+        <div class="svc-photo"><img src="assets/carlos-foto-01.jpg" alt="Grúa roja International remolcando una pickup Ram blanca" loading="lazy"></div>
+      </article>
+      <article class="svc-row rev reveal">
+        <div class="idx-cell"><span class="idx-num">02</span><span class="idx-tag">Servicio</span></div>
+        <div class="svc-txt">
+          <h3>Cerrajería <i>en el lugar</i></h3>
+          <p>Te quedaste fuera del auto o perdiste las llaves. Abrimos tu vehículo en el lugar, sin daños y sin esperas largas.</p>
+          <a class="svc-link" href="#cotizar" data-service="Cerrajería">Pedir este servicio →</a>
+        </div>
+        <div class="svc-photo"><img src="assets/carlos-foto-02.jpg" alt="Grúas blanca y roja en gasolinera Puma" loading="lazy"></div>
+      </article>
+      <article class="svc-row reveal">
+        <div class="idx-cell"><span class="idx-num">03</span><span class="idx-tag">Servicio</span></div>
+        <div class="svc-txt">
+          <h3>Batería <i>y arranque</i></h3>
+          <p>Carga de batería y paso de corriente en el lugar. Si tu auto no enciende, lo resolvemos donde estés.</p>
+          <a class="svc-link" href="#cotizar" data-service="Batería">Pedir este servicio →</a>
+        </div>
+        <div class="svc-photo"><img src="assets/carlos-foto-03.jpg" alt="Grúa blanca International remolcando una SUV oscura" loading="lazy"></div>
+      </article>
+      <article class="svc-row rev reveal">
+        <div class="idx-cell"><span class="idx-num">04</span><span class="idx-tag">Servicio</span></div>
+        <div class="svc-txt">
+          <h3>Gasolina <i>a domicilio</i></h3>
+          <p>Te quedaste sin gasolina en la carretera. Te llevamos combustible al lugar para que sigas tu camino.</p>
+          <a class="svc-link" href="#cotizar" data-service="Gasolina">Pedir este servicio →</a>
+        </div>
+        <div class="svc-photo"><img src="assets/carlos-foto-04.jpg" alt="Grúa blanca flatbed cargada con materiales de construcción en una obra" loading="lazy"></div>
+      </article>
+      <article class="svc-row reveal">
+        <div class="idx-cell"><span class="idx-num">05</span><span class="idx-tag">Servicio</span></div>
+        <div class="svc-txt">
+          <h3>Extracción <i>de vehículos</i></h3>
+          <p>Extracción de vehículos atascados o en lugares difíciles. Sacamos tu auto con el equipo adecuado y con cuidado.</p>
+          <a class="svc-link" href="#cotizar" data-service="Extracción">Pedir este servicio →</a>
+        </div>
+        <div class="svc-photo"><img src="assets/carlos-foto-01.jpg" alt="Grúa roja International con pickup Ram blanca en la plataforma" loading="lazy"></div>
+      </article>
+      <article class="svc-row rev reveal">
+        <div class="idx-cell"><span class="idx-num">06</span><span class="idx-tag">Servicio</span></div>
+        <div class="svc-txt">
+          <h3>Cambio <i>de goma</i></h3>
+          <p>Goma vacía o pinchada en la carretera. La cambiamos en el lugar para que sigas tu camino sin esperar una grúa completa.</p>
+          <a class="svc-link" href="#cotizar" data-service="Cambio de goma">Pedir este servicio →</a>
+        </div>
+        <div class="svc-photo"><img src="assets/carlos-foto-03.jpg" alt="Grúa blanca remolcando una SUV en estacionamiento" loading="lazy"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESO: 3 pasos ============ -->
+<section class="process" style="padding:72px 0">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:48px">
+      <span class="eyebrow">Así de simple</span>
+      <h2>De la llamada <em>al rescate</em></h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <span class="n">Paso — I</span>
+        <h3>Llámanos o escríbenos</h3>
+        <p>Al 939-488-9645, por llamada o WhatsApp. Contestamos a cualquier hora, todos los días.</p>
+        <div class="bar"><i></i></div>
+      </div>
+      <div class="step">
+        <span class="n">Paso — II</span>
+        <h3>Dinos dónde estás</h3>
+        <p>Pueblo, referencia cercana y tipo de vehículo. Con eso salimos a buscarte lo antes posible.</p>
+        <div class="bar"><i></i></div>
+      </div>
+      <div class="step">
+        <span class="n">Paso — III</span>
+        <h3>Llegamos y resolvemos</h3>
+        <p>Lo arreglamos en el lugar cuando se puede — y si no, remolcamos tu auto con cuidado.</p>
+        <div class="bar"><i></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRABAJOS: imagen grande + tira de miniaturas ============ -->
+<section id="trabajos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Trabajos reales</span>
+      <h2>Nuestro trabajo, <em>en la calle</em></h2>
+      <p>Fotos reales de Carlos M. Colon en servicio. Toca la imagen grande para verla completa, o elige una miniatura.</p>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="g-main" id="gMain">
+        <img id="gImg" src="assets/carlos-foto-01.jpg" alt="Grúa roja International remolcando una pickup Ram blanca">
+        <div class="g-cap"><b>01</b> — Grúa roja International remolcando una pickup Ram blanca</div>
+      </div>
+      <div class="g-thumbs" id="gThumbs"></div>
+    </div>
+    <div class="g-meta reveal">
+      <span class="g-counter"><span id="gCur">01</span> <small>/ 04</small></span>
+      <span class="g-note" id="gNote">Grúa roja International remolcando una pickup Ram blanca</span>
+      <span class="g-nav">
+        <button class="g-arrow" id="gPrev" aria-label="Foto anterior">‹</button>
+        <button class="g-arrow" id="gNext" aria-label="Foto siguiente">›</button>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COBERTURA: numeral gigante + lista ============ -->
+<section id="cobertura" style="background:var(--coal);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
+  <div class="wrap cover-grid">
+    <div class="reveal-l">
+      <div class="big78"><span class="count" data-to="78">0</span></div>
+      <div class="big78-label">municipios, una sola llamada</div>
+      <p class="lead">Servicio de grúa a nivel isla. No importa en qué pueblo te quedes — <b>del área metro hasta el pueblo más lejos</b>, vamos por ti.</p>
+    </div>
+    <div class="zones reveal-r">
+      <div class="zone"><span class="z-idx">i.</span><h3>Área Metro</h3><p>San Juan, Bayamón, Guaynabo, Carolina y todo el metro.</p></div>
+      <div class="zone"><span class="z-idx">ii.</span><h3>Norte</h3><p>Arecibo, Vega Baja, Manatí, Barceloneta y la costa norte.</p></div>
+      <div class="zone"><span class="z-idx">iii.</span><h3>Sur</h3><p>Ponce, Guayama, Salinas, Santa Isabel y todo el sur.</p></div>
+      <div class="zone"><span class="z-idx">iv.</span><h3>Este</h3><p>Humacao, Fajardo, Caguas, Gurabo y el este de la isla.</p></div>
+      <div class="zone"><span class="z-idx">v.</span><h3>Oeste</h3><p>Mayagüez, Aguadilla, Añasco, Cabo Rojo y el oeste.</p></div>
+      <div class="zone"><span class="z-idx">vi.</span><h3>Centro</h3><p>Utuado, Jayuya, Adjuntas, Orocovis y la montaña.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ: acordeón propio ============ -->
+<section id="preguntas">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Antes de <em>llamar</em></h2>
+      <p>Lo que más nos preguntan los clientes cuando se quedan a pie.</p>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item open">
+        <button class="faq-q" type="button">¿Atienden las 24 horas, de verdad?<span class="pm">+</span></button>
+        <div class="faq-a"><p>Sí. El servicio es <b>24 horas, 7 días a la semana</b>. Llámanos o escríbenos por WhatsApp al <b>939-488-9645</b> a cualquier hora.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">¿Cubren toda la isla o solo el área metro?<span class="pm">+</span></button>
+        <div class="faq-a"><p><b>Toda la isla.</b> Llegamos a los 78 municipios de Puerto Rico, del área metro hasta el pueblo más lejos.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">¿Qué información necesitan cuando llamo?<span class="pm">+</span></button>
+        <div class="faq-a"><p>Tu <b>ubicación</b> (pueblo y referencia cercana) y el <b>tipo de vehículo</b>. Con eso salimos a buscarte lo antes posible.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">¿Tienen que remolcar el auto siempre?<span class="pm">+</span></button>
+        <div class="faq-a"><p>No. Muchas veces lo resolvemos en el lugar: <b>cerrajería, carga de batería, gasolina y cambio de goma</b>. Si no se puede en el lugar, entonces lo remolcamos.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COTIZAR: panel oscuro + formulario claro ============ -->
+<section class="quote" id="cotizar">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Cotización</span>
+      <h2>Pide tu grúa <em>ahora mismo</em></h2>
+      <p>Llena el formulario y tu mensaje llega directo a nuestro WhatsApp. Respondemos 24/7.</p>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="quote-grid reveal">
+      <div class="quote-side">
+        <h3>¿Emergencia?<br><em>Llama directo.</em></h3>
+        <p>Si es una emergencia, la llamada es más rápida que el formulario. Hablas directo con quien va a buscarte.</p>
+        <a class="big-tel" href="tel:+19394889645"><small>Línea directa · 24/7</small>939-488-9645</a>
+        <div class="mini">
+          <img src="assets/carlos-logo-circle.png" alt="Grúa de Carlos M. Colon">
+          <p>Carlos M. Colon<span>Servicio de grúa · Todo Puerto Rico</span></p>
+        </div>
+      </div>
+      <form class="quote-form" id="quoteForm" novalidate>
+        <h3>Cuéntanos qué pasó</h3>
+        <p>Mientras más detalles nos des —dónde estás y qué vehículo es— más rápido llegamos.</p>
+        <label for="fName">Tu nombre</label>
+        <input id="fName" required placeholder="Ej. María Rodríguez" autocomplete="name">
+        <label for="fLocation">Tu ubicación</label>
+        <input id="fLocation" required placeholder="Ej. Caguas, frente al centro comercial" autocomplete="address-level2">
+        <label for="fVehicle">Tipo de vehículo</label>
+        <select id="fVehicle" required>
+          <option value="" disabled selected>Selecciona el tipo de vehículo</option>
+          <option>Auto / Sedán</option>
+          <option>SUV / Pickup</option>
+          <option>Camión liviano</option>
+          <option>Motor / Otro</option>
+        </select>
+        <label for="fService">Servicio que necesitas</label>
+        <select id="fService" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option>Remolque 24/7</option>
+          <option>Cerrajería</option>
+          <option>Batería</option>
+          <option>Gasolina</option>
+          <option>Extracción</option>
+          <option>Cambio de goma</option>
+        </select>
+        <label for="fMsg">Detalles (opcional)</label>
+        <textarea id="fMsg" placeholder="Ej. El auto no enciende, estoy en el estacionamiento..."></textarea>
+        <button class="btn btn-dark" type="submit">Enviar por WhatsApp</button>
+        <p class="form-note">Al enviar, se abrirá WhatsApp con tu mensaje listo para Carlos M. Colon.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="flogo" src="assets/carlos-logo-circle.png" alt="Logo de Carlos M. Colon — su grúa roja International">
+    <h4>Carlos <i>M. Colon</i></h4>
+    <div class="f-sub">Grúa 24/7 · Puerto Rico</div>
+    <nav class="f-nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#cotizar">Cotizar</a>
+    </nav>
+    <p>Servicio de grúa 24/7 · Tel. <a href="tel:+19394889645">939-488-9645</a><br>Todo Puerto Rico · 78 municipios</p>
+    <a class="threads-btn" href="https://www.threads.com/@carlosm.7518" target="_blank" rel="noopener" aria-label="Threads de Carlos M. Colon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f5f0e6" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg>Threads · @carlosm.7518</a>
+    <p class="made">Sitio web creado por <a href="https://www.instagram.com/manuartpro" target="_blank" rel="noopener">ManuPro</a> · © 2026 Carlos M. Colon</p>
+  </div>
+</footer>
+
+<a class="call-float" href="tel:+19394889645" aria-label="Llamar a Carlos M. Colon">
+  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+</a>
+
+<div class="lightbox" id="lightbox"><button class="x" aria-label="Cerrar">×</button><img id="lbImg" alt="Trabajo de Carlos M. Colon"></div>
+
+<script>
+(function(){
+  var WA="19394889645";
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('solid',scrollY>40)},{passive:true});
+
+  /* menú hamburguesa (móvil) */
+  var burger=document.getElementById('burger'),
+      navLinks=document.getElementById('navLinks');
+  burger.addEventListener('click',function(){
+    var open=navLinks.classList.toggle('open');
+    burger.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){navLinks.classList.remove('open');burger.classList.remove('open')});
+  });
+
+  /* animaciones de entrada al hacer scroll */
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(function(el){io.observe(el)});
+
+  /* contadores animados (24, 6, 78) */
+  var cio=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting)return;
+      cio.unobserve(en.target);
+      var el=en.target,to=+el.dataset.to,t0=null;
+      function tick(ts){
+        if(!t0)t0=ts;
+        var p=Math.min((ts-t0)/1100,1),e=1-Math.pow(1-p,3);
+        el.textContent=Math.round(to*e);
+        if(p<1)requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  },{threshold:.6});
+  document.querySelectorAll('.count').forEach(function(el){cio.observe(el)});
+
+  /* galería manual: imagen grande + tira de miniaturas (una foto a la vez) */
+  var photos=[
+    {src:'assets/carlos-foto-01.jpg',cap:'Grúa roja International remolcando una pickup Ram blanca'},
+    {src:'assets/carlos-foto-02.jpg',cap:'Grúas blanca y roja en servicio · gasolinera Puma'},
+    {src:'assets/carlos-foto-03.jpg',cap:'Grúa blanca International remolcando una SUV · estacionamiento'},
+    {src:'assets/carlos-foto-04.jpg',cap:'Grúa blanca flatbed cargada con materiales · obra en construcción'}
+  ];
+  var gImg=document.getElementById('gImg'),gMain=document.getElementById('gMain'),
+      gCur=document.getElementById('gCur'),gNote=document.getElementById('gNote'),
+      thumbsBox=document.getElementById('gThumbs'),cur=0;
+  function pad(n){return (n<10?'0':'')+n}
+  photos.forEach(function(p,i){
+    var b=document.createElement('button');
+    b.setAttribute('aria-label','Ver foto '+(i+1)+': '+p.cap);
+    var im=document.createElement('img');im.src=p.src;im.alt=p.cap;im.loading='lazy';
+    b.appendChild(im);
+    b.addEventListener('click',function(){go(i)});
+    thumbsBox.appendChild(b);
+  });
+  var thumbs=thumbsBox.querySelectorAll('button');
+  function go(i){
+    cur=(i+photos.length)%photos.length;
+    gImg.classList.add('swap');
+    setTimeout(function(){
+      gImg.src=photos[cur].src;gImg.alt=photos[cur].cap;
+      gImg.classList.remove('swap');
+    },220);
+    gCur.textContent=pad(cur+1);
+    gNote.textContent=photos[cur].cap;
+    gMain.querySelector('.g-cap').innerHTML='<b>'+pad(cur+1)+'</b> — '+photos[cur].cap;
+    thumbs.forEach(function(t,j){t.classList.toggle('on',j===cur)});
+  }
+  document.getElementById('gPrev').addEventListener('click',function(){go(cur-1)});
+  document.getElementById('gNext').addEventListener('click',function(){go(cur+1)});
+  addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft')go(cur-1);
+    if(e.key==='ArrowRight')go(cur+1);
+  });
+  var tx0=null;
+  gMain.addEventListener('touchstart',function(e){tx0=e.touches[0].clientX},{passive:true});
+  gMain.addEventListener('touchend',function(e){
+    if(tx0===null)return;
+    var dx=e.changedTouches[0].clientX-tx0;
+    if(Math.abs(dx)>40)go(cur+(dx<0?1:-1));
+    tx0=null;
+  },{passive:true});
+  go(0);
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg');
+  gMain.addEventListener('click',function(){lbImg.src=photos[cur].src;lb.classList.add('open')});
+  lb.addEventListener('click',function(){lb.classList.remove('open')});
+  addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});
+
+  /* FAQ acordeón propio (animado) */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q=item.querySelector('.faq-q'),a=item.querySelector('.faq-a');
+    function sync(){a.style.maxHeight=item.classList.contains('open')?a.scrollHeight+'px':'0px'}
+    q.addEventListener('click',function(){
+      var wasOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){
+        o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight='0px';
+      });
+      if(!wasOpen){item.classList.add('open');sync()}
+    });
+    sync();
+  });
+
+  /* "Pedir este servicio" preselecciona el servicio en el formulario */
+  document.querySelectorAll('.svc-link[data-service]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sel=document.getElementById('fService');
+      Array.prototype.forEach.call(sel.options,function(o){if(o.text===a.dataset.service)sel.value=o.value||o.text});
+      sel.value=a.dataset.service;
+    });
+  });
+
+  /* formulario -> WhatsApp */
+  var form=document.getElementById('quoteForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.reportValidity())return;
+    var msg='Hola Carlos M. Colon, soy '+document.getElementById('fName').value.trim()+
+      '. Estoy en: '+document.getElementById('fLocation').value.trim()+
+      '. Vehículo: '+document.getElementById('fVehicle').value+
+      '. Servicio: '+document.getElementById('fService').value+'.';
+    var det=document.getElementById('fMsg').value.trim();
+    if(det)msg+=' Detalles: '+det;
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank','noopener');
+  });
+})();
+</script>
+</body>
+</html>

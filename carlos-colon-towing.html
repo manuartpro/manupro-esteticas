@@ -48,17 +48,18 @@ header.solid{background:rgba(11,11,14,.96);border-bottom:1px solid var(--line);p
 .btn.ghost:hover{background:rgba(255,43,31,.12)}
 .btn.silver{background:linear-gradient(135deg,#e8ecf3,#9aa3b5);color:#0a0a0e;box-shadow:0 8px 28px rgba(215,221,232,.25)}
 @media(max-width:900px){.links{display:none}.mono{width:46px;height:46px}
-.burger{display:flex}
 .links.open{display:flex;position:fixed;top:62px;left:0;right:0;flex-direction:column;align-items:center;gap:0;
   background:rgba(11,11,14,.98);border-bottom:1px solid var(--line);padding:10px 0;z-index:49}
 .links.open a{padding:14px 20px;width:100%;text-align:center;font-size:.95rem}
 .links.open a:active{background:rgba(255,43,31,.12)}}
-.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:rgba(255,43,31,.08);
-  flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0}
-.burger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:.3s}
-.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);background:var(--red)}
+.burger{display:none;width:48px;height:48px;border-radius:12px;border:1.5px solid rgba(255,43,31,.55);background:rgba(255,43,31,.16);
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0;flex:none}
+.burger span{display:block;width:24px;height:2.5px;background:var(--white);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);background:var(--red)}
 .burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);background:var(--red)}
+.burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);background:var(--red)}
+/* el botón hamburguesa solo aparece en móvil — esta regla va DESPUÉS de la base para que la cascada no la anule */
+@media(max-width:900px){.burger{display:flex}}
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
 .hero video.bg,.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
