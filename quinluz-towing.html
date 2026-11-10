@@ -3,330 +3,286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quinluz Towing | Servicio de Grúa 24/7 en Toa Alta, Puerto Rico</title>
-<meta name="description" content="Quinluz Towing — Servicio de grúa 24/7 en Toa Alta y el área metropolitana de Puerto Rico. Remolque en plataforma, transporte de vehículos y asistencia en accidentes y averías. Llama o escribe al 787-679-1481.">
+<title>Quinluz Towing | Grúa 24/7 en Toa Alta, Puerto Rico — 787-679-1481</title>
+<meta name="description" content="Quinluz Towing — Tu carro en buenas manos, a cualquier hora. Grúa de plataforma 24/7 en Toa Alta y el área metropolitana de Puerto Rico. Remolque, transporte de vehículos y asistencia en accidentes y averías. Llama al 787-679-1481.">
 <link rel="preload" href="assets/quinluz/quinluz-foto-01.jpg" as="image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0b0b0d; --coal:#131316; --panel:#17171b; --panel2:#1c1c21;
-  --ivory:#ffffff; --ivory-dim:#e6e6e6;
-  --silver:#c9ced6; --silver-dk:#8f959e;
-  --red:#e30613; --red-lt:#ff2e3e; --red-dk:#a3000e;
-  --muted:#b3b3b3; --muted-dk:#7a7a7a;
-  --line:rgba(227,6,19,.45); --line-soft:rgba(227,6,19,.2);
-  --display:'Orbitron','Rajdhani',sans-serif;
-  --sans:'Rajdhani',system-ui,sans-serif;
+  --ink:#0a0a0b; --coal:#121214; --panel:#17171a; --panel2:#1e1e22;
+  --ivory:#ffffff; --ivory-dim:#ececec;
+  --silver:#c9ced6; --silver-dk:#9aa0a8;
+  --red:#e30613; --red-lt:#ff2e3e; --red-dk:#8f000c;
+  --muted:#b8b8b8; --muted-dk:#8a8a8a;
+  --line:rgba(227,6,19,.5); --line-soft:rgba(255,255,255,.12);
+  --display:'Bebas Neue','Inter',sans-serif;
+  --sans:'Inter',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--ivory);font-family:var(--sans);font-weight:400;overflow-x:hidden;line-height:1.6}
+body{background:var(--ink);color:var(--ivory);font-family:var(--sans);font-weight:400;overflow-x:hidden;line-height:1.65}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1220px;margin:0 auto;padding:0 26px}
-::selection{background:var(--red);color:#ffffff}
+.wrap{max-width:1240px;margin:0 auto;padding:0 26px}
+::selection{background:var(--red);color:#fff}
 
-/* ============ top utility bar ============ */
-.topbar{background:#08080a;border-bottom:1px solid var(--line-soft);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-top:9px;padding-bottom:9px}
-.topbar a{color:var(--red-lt);font-weight:500}
-.topbar a:hover{color:#fff}
-.topbar .mid{color:var(--red-lt);letter-spacing:.3em}
-.topbar .dot{color:var(--red);margin:0 6px}
+/* ============ franja de emergencia ============ */
+.emergency{background:var(--red);color:#fff;text-align:center;
+  font-family:var(--display);font-size:clamp(1.05rem,2.6vw,1.5rem);letter-spacing:.14em;
+  padding:11px 16px;line-height:1.3}
+.emergency a{font-weight:400;border-bottom:2px solid #fff;padding-bottom:1px;white-space:nowrap}
+.emergency .pulse-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#fff;
+  margin-right:10px;animation:blink 1.4s infinite;vertical-align:middle}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 
-/* ============ header ============ */
-header{position:sticky;top:0;z-index:60;background:rgba(11,11,13,.92);backdrop-filter:blur(10px);
-  border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
-header.solid{border-bottom-color:var(--line);background:rgba(11,11,13,.97)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0}
-.brand{display:flex;align-items:center;gap:15px}
-.brand img.logo{width:150px;height:auto;object-fit:contain;flex:none}
-.brand .t{line-height:1.15}
-.brand .t b{font-family:var(--display);font-weight:600;font-size:1.28rem;letter-spacing:.02em;display:block}
-.brand .t b i{font-style:normal;color:var(--red-lt)}
-.brand .t span{font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;color:var(--red-lt);font-weight:500}
-.links{display:flex;gap:30px;font-size:.8rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
-.links a{color:var(--ivory-dim);position:relative;padding:6px 0;transition:color .25s}
-.links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:linear-gradient(90deg,var(--red-lt),var(--red));transition:width .35s}
+/* ============ header con insignia QT ============ */
+header{position:sticky;top:0;z-index:60;background:rgba(10,10,11,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid transparent;transition:border-color .3s}
+header.solid{border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 0}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.qt-badge{flex:none;width:52px;height:52px;background:var(--red);color:#fff;
+  font-family:var(--display);font-size:1.75rem;line-height:1;display:grid;place-items:center;
+  letter-spacing:.04em;box-shadow:inset 0 0 0 2px rgba(255,255,255,.85),0 6px 18px rgba(227,6,19,.4);
+  transform:skewX(-6deg)}
+.qt-badge span{transform:skewX(6deg)}
+.brand img.logo{width:132px;height:auto;object-fit:contain;flex:none}
+.brand .t{line-height:1.2}
+.brand .t b{font-family:var(--display);font-weight:400;font-size:1.45rem;letter-spacing:.05em;display:block;line-height:1}
+.brand .t span{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--red-lt);font-weight:600}
+.links{display:flex;gap:26px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.links a{color:var(--ivory-dim);padding:6px 0;position:relative}
 .links a:hover{color:var(--red-lt)}
+.links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--red);transition:width .3s}
 .links a:hover::after{width:100%}
-.nav-call{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--red);border-radius:999px;
-  padding:10px 20px;font-family:var(--display);font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red-lt);transition:.3s;white-space:nowrap}
-.nav-call:hover{background:var(--red);color:#ffffff}
-.nav-call svg{width:15px;height:15px;fill:currentColor}
-.burger{display:none;width:48px;height:48px;border-radius:50%;border:1px solid var(--red);
-  background:rgba(227,6,19,.12);flex-direction:column;align-items:center;justify-content:center;
+.nav-call{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:#fff;
+  border-radius:4px;padding:12px 20px;font-weight:700;font-size:.85rem;letter-spacing:.06em;
+  white-space:nowrap;transition:.25s}
+.nav-call:hover{background:var(--red-lt);transform:translateY(-2px)}
+.nav-call svg{width:15px;height:15px;fill:#fff}
+.burger{display:none;width:48px;height:48px;border-radius:4px;border:1px solid var(--red);
+  background:rgba(227,6,19,.14);flex-direction:column;align-items:center;justify-content:center;
   gap:5px;cursor:pointer;padding:0;flex:none}
 .burger span{display:block;width:22px;height:2px;background:var(--red-lt);border-radius:2px;transition:.3s}
 .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-/* ============ reveal on scroll ============ */
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,.8,.3,1)}
+/* ============ reveal ============ */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,.8,.3,1)}
 .reveal.in{opacity:1;transform:none}
-.reveal-l{opacity:0;transform:translateX(-40px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,.8,.3,1)}
-.reveal-l.in{opacity:1;transform:none}
-.reveal-r{opacity:0;transform:translateX(40px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,.8,.3,1)}
-.reveal-r.in{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
-.d4{transition-delay:.4s}.d5{transition-delay:.5s}
 
-/* ============ hero split ============ */
-.hero{position:relative;padding:74px 0 84px;overflow:hidden;
-  background:radial-gradient(900px 480px at 85% -10%,rgba(227,6,19,.18),transparent 60%),
-             radial-gradient(700px 500px at -10% 110%,rgba(227,6,19,.09),transparent 55%),var(--ink)}
-.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
-  background-image:linear-gradient(rgba(227,6,19,.05) 1px,transparent 1px);
-  background-size:100% 92px}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;font-weight:500;
-  letter-spacing:.38em;text-transform:uppercase;color:var(--red-lt)}
-.eyebrow::before{content:"";width:44px;height:1px;background:var(--red)}
-.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(2.5rem,5.4vw,4.3rem);
-  line-height:1.08;margin:22px 0 8px;letter-spacing:.005em}
-.hero h1 em{font-style:normal;font-weight:600;
-  background:linear-gradient(100deg,#ffd7d9 0%,var(--red-lt) 45%,var(--red-dk) 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent}
-.hero h1 .thin{font-weight:400}
-.hero .lede{font-size:1.12rem;color:#d9d9d9;max-width:520px;line-height:1.8;margin:18px 0 34px;font-weight:400}
-.hero .lede b{color:var(--ivory);font-weight:500}
-.cta-row{display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:999px;cursor:pointer;
-  font-family:var(--display);font-size:.86rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
-  border:1px solid transparent;transition:transform .3s,box-shadow .3s,background .3s,color .3s}
-.btn svg{width:16px;height:16px;fill:currentColor}
-.btn-red{background:linear-gradient(120deg,var(--red-lt),var(--red) 55%,var(--red-dk));color:#ffffff;
-  box-shadow:0 10px 30px rgba(227,6,19,.32)}
-.btn-red:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(227,6,19,.45)}
-.btn-line{background:transparent;color:var(--ivory);border-color:rgba(255,255,255,.4)}
-.btn-line:hover{border-color:var(--red-lt);color:var(--red-lt);transform:translateY(-3px)}
-.hero-stats{display:flex;gap:0;margin-top:52px;border-top:1px solid var(--line-soft);padding-top:30px;max-width:560px}
-.hstat{flex:1;padding-right:18px}
-.hstat+.hstat{border-left:1px solid var(--line-soft);padding-left:26px}
-.hstat b{display:block;font-family:var(--display);font-weight:600;font-size:2.15rem;line-height:1;color:var(--red-lt)}
-.hstat b i{font-style:normal;font-size:1.3rem}
-.hstat span{display:block;margin-top:8px;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
-/* hero media — foto real enmarcada */
-.hero-media{position:relative}
-.hero-frame{position:relative;border:1px solid var(--red);padding:12px;background:var(--coal);
-  box-shadow:0 30px 70px rgba(0,0,0,.6)}
-.hero-frame::after{content:"";position:absolute;inset:-13px;border:1px solid var(--line-soft);pointer-events:none}
-.hero-frame .clip{position:relative;overflow:hidden;aspect-ratio:4/3}
-.hero-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  animation:kenburns 22s ease-in-out infinite alternate}
-@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.09) translateY(-1.2%)}}
-.hero-frame .live{position:absolute;top:14px;left:14px;z-index:2;display:inline-flex;align-items:center;gap:8px;
-  background:rgba(11,11,13,.78);border:1px solid var(--line);border-radius:999px;padding:7px 14px;
-  font-size:.66rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--red-lt)}
-.hero-frame .live i{width:8px;height:8px;border-radius:50%;background:var(--red-lt);animation:blink 1.6s infinite}
-@keyframes blink{0%,100%{box-shadow:0 0 0 0 rgba(255,46,62,.7)}70%{box-shadow:0 0 0 9px rgba(255,46,62,0)}}
-.hero-cap{margin-top:26px;display:flex;justify-content:space-between;gap:14px;font-size:.78rem;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.hero-cap b{color:var(--red-lt);font-weight:500}
+/* ============ HERO: foto de SU grúa a pantalla completa ============ */
+.hero{position:relative;min-height:calc(100vh - 118px);min-height:560px;display:flex;flex-direction:column;
+  justify-content:flex-end;overflow:hidden;background:#000}
+.hero-bg{position:absolute;inset:0;background:url('assets/quinluz/quinluz-foto-01.jpg') center 42%/cover no-repeat;
+  animation:heroZoom 24s ease-in-out infinite alternate}
+@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.07)}}
+.hero-veil{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,10,11,.62) 0%,rgba(10,10,11,.18) 34%,rgba(10,10,11,.28) 58%,rgba(10,10,11,.94) 100%),
+             linear-gradient(100deg,rgba(143,0,12,.72) 0%,rgba(10,10,11,.25) 55%,rgba(10,10,11,.55) 100%)}
+.hero-qt{position:absolute;right:-2%;bottom:8%;font-family:var(--display);font-weight:400;
+  font-size:clamp(15rem,42vw,34rem);line-height:.78;letter-spacing:-.02em;color:transparent;
+  -webkit-text-stroke:2px rgba(255,255,255,.16);user-select:none;pointer-events:none;z-index:1}
+.hero-inner{position:relative;z-index:2;padding:70px 0 0}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;
+  font-weight:700;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;padding:9px 16px}
+.hero-tag i{width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1.4s infinite}
+.hero h1{font-family:var(--display);font-weight:400;
+  font-size:clamp(3.4rem,9.2vw,7.4rem);line-height:.94;letter-spacing:.01em;
+  margin:22px 0 6px;text-transform:uppercase;text-shadow:0 4px 30px rgba(0,0,0,.55)}
+.hero h1 .r{color:var(--red-lt)}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:2px #fff}
+.hero .lede{font-size:1.13rem;color:#f0f0f0;max-width:600px;line-height:1.75;margin:14px 0 30px;
+  text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.hero .lede b{color:#fff;font-weight:700}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:17px 30px;border-radius:4px;cursor:pointer;
+  font-weight:800;font-size:.92rem;letter-spacing:.08em;text-transform:uppercase;
+  border:2px solid transparent;transition:transform .25s,box-shadow .25s,background .25s,color .25s}
+.btn svg{width:17px;height:17px;fill:currentColor}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 12px 34px rgba(227,6,19,.45)}
+.btn-red:hover{transform:translateY(-3px);background:var(--red-lt)}
+.btn-ghost{background:rgba(10,10,11,.55);color:#fff;border-color:#fff;backdrop-filter:blur(4px)}
+.btn-ghost:hover{border-color:var(--red-lt);color:var(--red-lt);transform:translateY(-3px)}
+.hero-foot{margin-top:56px;border-top:1px solid rgba(255,255,255,.25);
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  padding:20px 0 26px;font-family:var(--display);font-size:1.25rem;letter-spacing:.14em;color:#fff}
+.hero-foot span b{color:var(--red-lt);font-weight:400}
+.hero-foot .scroll{color:var(--silver);font-size:1rem;letter-spacing:.22em}
 
-/* ============ towns ticker ============ */
-.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0b0b0d;
-  overflow:hidden;padding:15px 0;white-space:nowrap}
-.ticker .run{display:inline-block;animation:tick 38s linear infinite}
-.ticker span{font-family:var(--display);font-style:normal;font-size:1.02rem;color:#9a9a9a;padding:0 22px;letter-spacing:.06em}
-.ticker span b{color:var(--red-lt);font-style:normal;font-weight:600}
+/* ============ tira de pueblos ============ */
+.towns{background:var(--red);overflow:hidden;padding:13px 0;white-space:nowrap}
+.towns .run{display:inline-block;animation:tick 36s linear infinite}
+.towns span{font-family:var(--display);font-size:1.3rem;color:#fff;padding:0 20px;letter-spacing:.1em}
+.towns span i{font-style:normal;color:rgba(255,255,255,.6);padding-left:20px}
 @keyframes tick{to{transform:translateX(-50%)}}
 
-/* ============ section heads ============ */
-section{padding:104px 0}
-.sec-head{max-width:720px;margin-bottom:60px}
+/* ============ encabezados de sección ============ */
+section{padding:96px 0}
+.sec-kicker{font-family:var(--display);font-size:1.15rem;letter-spacing:.32em;color:var(--red-lt);
+  text-transform:uppercase}
+.sec-kicker::before{content:"";display:inline-block;width:38px;height:3px;background:var(--red);
+  vertical-align:middle;margin-right:12px}
+.sec-head{max-width:760px;margin-bottom:56px}
 .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.sec-head.center .eyebrow::after{content:"";width:44px;height:1px;background:var(--red)}
-.sec-head h2{font-family:var(--display);font-weight:500;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.15;margin-top:18px}
+.sec-head.center .sec-kicker::after{content:"";display:inline-block;width:38px;height:3px;background:var(--red);
+  vertical-align:middle;margin-left:12px}
+.sec-head h2{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,5.4vw,4.2rem);
+  line-height:1;text-transform:uppercase;margin-top:14px;letter-spacing:.01em}
 .sec-head h2 em{font-style:normal;color:var(--red-lt)}
-.sec-head p{color:var(--muted);margin-top:16px;font-size:1.02rem;line-height:1.8}
-.red-rule{width:64px;height:2px;background:linear-gradient(90deg,var(--red-lt),var(--red));margin-top:24px}
-.sec-head.center .red-rule{margin-left:auto;margin-right:auto}
+.sec-head p{color:var(--muted);margin-top:16px;font-size:1.04rem;line-height:1.8}
 
-/* ============ services — editorial rows, pro indices ============ */
-.svc-rows{display:flex;flex-direction:column}
-.svc-row{display:grid;grid-template-columns:190px 1fr 380px;gap:44px;align-items:center;
-  padding:42px 0;border-top:1px solid var(--line-soft);position:relative;transition:background .35s}
-.svc-row:last-child{border-bottom:1px solid var(--line-soft)}
-.svc-row:hover{background:linear-gradient(90deg,rgba(227,6,19,.07),transparent 70%)}
-.svc-row.rev .idx-cell{order:1}
-.svc-row.rev .svc-txt{order:2}
-.svc-row.rev .svc-photo{order:3}
-.idx-cell{text-align:center}
-.idx-num{font-family:var(--display);font-weight:700;font-size:5.4rem;line-height:.9;letter-spacing:-.02em;
-  background:linear-gradient(160deg,#ffd7d9 0%,var(--red-lt) 30%,var(--red) 58%,#7a000a 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 3px 10px rgba(227,6,19,.25));
-  transition:transform .4s cubic-bezier(.22,.8,.3,1),filter .4s}
-.svc-row:hover .idx-num{transform:translateY(-6px) scale(1.05);filter:drop-shadow(0 8px 18px rgba(227,6,19,.45))}
-.idx-tag{display:block;margin-top:12px;font-size:.64rem;font-weight:600;letter-spacing:.34em;
-  text-transform:uppercase;color:var(--red-lt)}
-.idx-tag::before,.idx-tag::after{content:"—";color:var(--line);margin:0 6px}
-.svc-txt h3{font-family:var(--display);font-weight:600;font-size:1.85rem;line-height:1.2;margin-bottom:12px}
-.svc-txt h3 i{font-style:normal;color:var(--red-lt);font-weight:500}
-.svc-txt p{color:var(--muted);line-height:1.8;max-width:460px}
-.svc-link{display:inline-flex;align-items:center;gap:9px;margin-top:20px;font-size:.78rem;font-weight:600;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--red-lt);border-bottom:1px solid var(--line);
-  padding-bottom:5px;transition:gap .3s,color .3s}
-.svc-link:hover{gap:15px;color:#fff}
-.svc-photo{position:relative;overflow:hidden;border:1px solid var(--line-soft);aspect-ratio:16/10.5}
-.svc-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,.8,.3,1),filter .5s;filter:saturate(.92)}
-.svc-row:hover .svc-photo img{transform:scale(1.08);filter:saturate(1.05)}
-.svc-photo::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,46,62,0);
-  transition:.4s;pointer-events:none}
-.svc-row:hover .svc-photo::after{border-color:rgba(255,46,62,.55);inset:8px}
+/* ============ servicios: filas alternadas foto/texto ============ */
+.svc-alt{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line-soft)}
+.svc-alt+.svc-alt{border-top:1px solid var(--line-soft)}
+.svc-photo{position:relative;overflow:hidden;min-height:340px}
+.svc-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:transform .8s cubic-bezier(.22,.8,.3,1)}
+.svc-alt:hover .svc-photo img{transform:scale(1.06)}
+.svc-photo .ph-tag{position:absolute;left:0;bottom:0;background:var(--red);color:#fff;
+  font-family:var(--display);font-size:1.05rem;letter-spacing:.16em;padding:8px 16px}
+.svc-txt{padding:54px 52px;display:flex;flex-direction:column;justify-content:center}
+.svc-alt.flip .svc-photo{order:2}
+.svc-alt.flip .svc-txt{order:1}
+.svc-num{font-family:var(--display);font-size:1.3rem;color:var(--red-lt);letter-spacing:.24em}
+.svc-txt h3{font-family:var(--display);font-weight:400;font-size:clamp(2rem,3.4vw,2.9rem);
+  line-height:1;text-transform:uppercase;margin:12px 0 14px}
+.svc-txt p{color:var(--muted);line-height:1.85;max-width:480px}
+.svc-link{display:inline-flex;align-items:center;gap:10px;margin-top:24px;font-weight:700;
+  font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red-lt);
+  border-bottom:2px solid var(--red);padding-bottom:6px;width:max-content;transition:gap .3s,color .3s}
+.svc-link:hover{gap:16px;color:#fff}
+/* fila 4: banda roja, sin foto */
+.svc-red{background:var(--red);display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.svc-red .svc-txt h3{color:#fff}
+.svc-red .svc-txt p{color:rgba(255,255,255,.88)}
+.svc-red .svc-link{color:#fff;border-color:#fff}
+.svc-red .svc-link:hover{color:#fff}
+.svc-red .svc-num{color:#fff}
+.big247{font-family:var(--display);font-weight:400;color:#fff;text-align:center;
+  font-size:clamp(6.5rem,14vw,11rem);line-height:.9;padding:40px 20px}
+.big247 small{display:block;font-size:1.25rem;letter-spacing:.34em;margin-top:6px}
 
-/* ============ about — misión y visión ============ */
-.about{background:var(--coal);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
-.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:start}
-.about-grid .lead{color:var(--muted);line-height:1.85;margin-top:16px;font-size:1.05rem}
-.about-grid .lead b{color:var(--red-lt);font-weight:500}
-.mv-cards{display:flex;flex-direction:column;gap:22px}
-.mv-card{background:var(--panel);border:1px solid var(--line-soft);border-left:3px solid var(--red);padding:30px 32px}
-.mv-card h3{font-family:var(--display);font-weight:600;font-size:1.4rem;margin-bottom:10px}
-.mv-card h3 i{font-style:normal;color:var(--red-lt)}
-.mv-card p{color:var(--muted);line-height:1.8;font-size:.98rem}
+/* ============ línea de tiempo: 3 pasos horizontales ============ */
+.how{background:var(--coal);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.timeline{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
+.timeline::before{content:"";position:absolute;top:31px;left:6%;right:6%;height:2px;
+  background:linear-gradient(90deg,var(--red),var(--red-lt),var(--red))}
+.tstep{position:relative;text-align:center;padding:0 12px}
+.tstep .dot{position:relative;z-index:1;width:62px;height:62px;margin:0 auto 22px;border-radius:50%;
+  background:var(--ink);border:2px solid var(--red);display:grid;place-items:center;
+  font-family:var(--display);font-size:1.7rem;color:var(--red-lt)}
+.tstep h3{font-family:var(--display);font-weight:400;font-size:1.9rem;letter-spacing:.04em;
+  text-transform:uppercase;line-height:1.05}
+.tstep p{color:var(--muted);line-height:1.8;margin-top:10px;font-size:.97rem}
+.tstep p b{color:var(--ivory);font-weight:600}
 
-/* ============ process strip ============ */
-.process{background:var(--ink)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:step}
-.step{padding:10px 38px 10px 0;position:relative}
-.step+.step{padding-left:38px;border-left:1px solid var(--line-soft)}
-.step .n{font-family:var(--display);font-style:normal;font-weight:500;font-size:1rem;color:var(--red-lt);
-  letter-spacing:.2em}
-.step h3{font-family:var(--display);font-weight:600;font-size:1.5rem;margin:12px 0 10px}
-.step p{color:var(--muted);line-height:1.75;font-size:.97rem}
-.step .bar{height:2px;background:var(--line-soft);margin-top:26px;position:relative;overflow:hidden}
-.step .bar i{position:absolute;inset:0;background:linear-gradient(90deg,var(--red-lt),var(--red));
-  transform:scaleX(0);transform-origin:left;transition:transform 1s ease .3s}
-.in .step .bar i{transform:scaleX(1)}
+/* ============ galería a lo ancho: La grúa en acción ============ */
+.gallery-full{padding-left:0;padding-right:0}
+.gallery-full .wrap{padding-bottom:0}
+.g-strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:0 26px 10px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--red) #222}
+.g-strip::-webkit-scrollbar{height:6px}
+.g-strip::-webkit-scrollbar-thumb{background:var(--red)}
+.g-strip::-webkit-scrollbar-track{background:#222}
+.g-card{flex:0 0 min(78vw,760px);scroll-snap-align:start;position:relative;overflow:hidden;cursor:zoom-in}
+.g-card img{width:100%;height:100%;aspect-ratio:16/10;object-fit:cover;display:block;
+  transition:transform .7s cubic-bezier(.22,.8,.3,1)}
+.g-card:hover img{transform:scale(1.05)}
+.g-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:56px 22px 16px;
+  background:linear-gradient(transparent,rgba(8,8,8,.92));font-size:.98rem}
+.g-card figcaption b{color:var(--red-lt);font-weight:700}
+.g-hint{color:var(--muted);font-size:.88rem;letter-spacing:.06em;margin-top:14px}
 
-/* ============ gallery — main + filmstrip ============ */
-.gallery-grid{display:grid;grid-template-columns:1fr 190px;gap:22px;align-items:stretch}
-.g-main{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel);cursor:zoom-in}
-.g-main img{width:100%;height:100%;min-height:420px;max-height:640px;object-fit:cover;display:block;
-  transition:opacity .45s ease,transform .6s ease}
-.g-main img.swap{opacity:0}
-.g-main:hover img{transform:scale(1.02)}
-.g-main .g-cap{position:absolute;left:0;right:0;bottom:0;padding:52px 24px 18px;font-weight:400;
-  letter-spacing:.04em;background:linear-gradient(transparent,rgba(8,8,8,.92));font-size:.98rem}
-.g-main .g-cap b{color:var(--red-lt);font-weight:600}
-.g-thumbs{display:flex;flex-direction:column;gap:14px}
-.g-thumbs button{flex:1;border:1px solid var(--line-soft);background:none;padding:0;cursor:pointer;
-  overflow:hidden;position:relative;opacity:.55;transition:opacity .3s,border-color .3s;min-height:0}
-.g-thumbs button img{width:100%;height:100%;object-fit:cover;display:block}
-.g-thumbs button:hover{opacity:.85}
-.g-thumbs button.on{opacity:1;border-color:var(--red);box-shadow:0 0 0 1px var(--red)}
-.g-thumbs button.on::after{content:"";position:absolute;inset:0;border:2px solid rgba(255,46,62,.35);pointer-events:none}
-.g-meta{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:22px;flex-wrap:wrap}
-.g-counter{font-family:var(--display);font-weight:600;font-size:1.5rem;color:var(--red-lt);letter-spacing:.06em}
-.g-counter small{color:var(--muted);font-size:1rem}
-.g-nav{display:flex;gap:12px}
-.g-arrow{width:52px;height:52px;border-radius:50%;border:1px solid var(--red);background:transparent;
-  color:var(--red-lt);font-size:1.5rem;line-height:1;cursor:pointer;transition:.3s;display:grid;place-items:center}
-.g-arrow:hover{background:var(--red);color:#ffffff;transform:translateY(-2px)}
-.g-note{color:var(--muted);font-size:.88rem;letter-spacing:.06em}
+/* ============ cobertura + contacto en un solo bloque ============ */
+.contact-block{background:var(--coal);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.cc-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:0;border:1px solid var(--line);overflow:hidden}
+.cc-info{background:var(--ink);padding:52px 44px}
+.cc-info h3{font-family:var(--display);font-weight:400;font-size:2.5rem;line-height:1;text-transform:uppercase}
+.cc-info h3 em{font-style:normal;color:var(--red-lt)}
+.cc-info>p{color:var(--muted);line-height:1.8;margin:14px 0 28px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.chip{border:1px solid var(--line-soft);border-radius:999px;padding:8px 16px;font-weight:600;
+  font-size:.85rem;color:var(--ivory-dim);transition:.25s}
+.chip:hover{border-color:var(--red);color:var(--red-lt)}
+.chip.hot{background:var(--red);border-color:var(--red);color:#fff}
+.cc-line{display:flex;gap:14px;padding:15px 0;border-top:1px solid var(--line-soft);align-items:flex-start}
+.cc-line b{display:block;font-size:.68rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--red-lt);margin-bottom:3px}
+.cc-line span{font-size:.98rem;color:var(--ivory-dim);line-height:1.6}
+.cc-line a{color:var(--ivory-dim)}
+.cc-line a:hover{color:var(--red-lt)}
+.cc-note{margin-top:24px;background:rgba(227,6,19,.09);border:1px solid var(--line);
+  padding:18px 20px;color:var(--ivory-dim);line-height:1.7;font-size:.95rem}
+.cc-note b{color:var(--red-lt)}
+.cc-note a{color:var(--red-lt);font-weight:700}
+.cc-form{background:var(--ivory);color:#111;padding:52px 44px}
+.cc-form h3{font-family:var(--display);font-weight:400;font-size:2.3rem;line-height:1;color:#0a0a0a;
+  text-transform:uppercase}
+.cc-form>p{color:#666;margin:10px 0 6px;font-size:.95rem}
+.cc-form label{display:block;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:#888;margin:18px 0 7px}
+.cc-form input,.cc-form select,.cc-form textarea{width:100%;background:#fff;border:1px solid #ccc;
+  border-radius:4px;color:#111;padding:13px 14px;font-size:.96rem;font-family:var(--sans);transition:.2s}
+.cc-form input:focus,.cc-form select:focus,.cc-form textarea:focus{outline:none;border-color:var(--red);
+  box-shadow:0 0 0 3px rgba(227,6,19,.22)}
+.cc-form textarea{min-height:92px;resize:vertical}
+.btn-dark{width:100%;justify-content:center;background:#0a0a0a;color:#fff;margin-top:26px;border:2px solid #0a0a0a}
+.btn-dark:hover{background:var(--red);border-color:var(--red);transform:translateY(-2px)}
+.form-note{font-size:.82rem;color:#888;margin-top:14px;line-height:1.6;text-align:center}
+.big-tel{display:block;font-family:var(--display);font-size:clamp(2.2rem,4.4vw,3rem);color:var(--red-lt);
+  letter-spacing:.03em;line-height:1.1;margin:4px 0 2px}
+.big-tel:hover{color:var(--red)}
 
-/* ============ coverage — big numeral + list ============ */
-.cover-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
-.big247{font-family:var(--display);font-weight:700;font-size:clamp(6rem,15vw,10rem);line-height:.85;
-  background:linear-gradient(165deg,#ffd7d9,var(--red-lt) 35%,var(--red) 65%,#7a000a);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 6px 24px rgba(227,6,19,.25))}
-.big247-label{font-family:var(--display);font-style:normal;font-size:1.5rem;color:var(--ivory);margin-top:18px}
-.cover-grid p.lead{color:var(--muted);line-height:1.85;margin-top:16px;max-width:420px}
-.cover-grid p.lead b{color:var(--red-lt);font-weight:500}
-.zones{border-top:1px solid var(--line-soft)}
-.zone{display:flex;align-items:baseline;gap:20px;padding:21px 6px;border-bottom:1px solid var(--line-soft);
-  transition:background .3s,padding-left .3s}
-.zone:hover{background:rgba(227,6,19,.06);padding-left:16px}
-.zone .z-idx{font-family:var(--display);font-style:normal;color:var(--red-lt);font-size:1.05rem;flex:none;width:34px}
-.zone h3{font-family:var(--display);font-weight:600;font-size:1.35rem;flex:none;width:150px}
-.zone p{color:var(--muted);font-size:.94rem;line-height:1.6}
-.cover-note{margin-top:26px;padding:20px 22px;border:1px solid var(--line);background:rgba(227,6,19,.06);
-  color:var(--ivory-dim);line-height:1.7;font-size:.98rem}
-.cover-note b{color:var(--red-lt);font-weight:600}
-.cover-note a{color:var(--red-lt);font-weight:600;border-bottom:1px solid var(--line)}
-
-/* ============ FAQ — custom accordion ============ */
-.faq{max-width:860px;margin:0 auto}
-.faq-item{background:var(--panel);border:1px solid var(--line-soft);margin-bottom:14px;transition:border-color .3s}
+/* ============ FAQ ============ */
+.faq{max-width:880px;margin:0 auto}
+.faq-item{background:var(--panel);border:1px solid var(--line-soft);margin-bottom:12px;transition:border-color .3s}
 .faq-item.open{border-color:var(--red)}
 .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;background:none;
-  border:0;color:var(--ivory);font-family:var(--display);font-weight:600;font-size:1.18rem;text-align:left;
-  padding:22px 26px;cursor:pointer}
+  border:0;color:var(--ivory);font-weight:700;font-size:1.06rem;text-align:left;
+  padding:21px 24px;cursor:pointer;font-family:var(--sans)}
 .faq-q .pm{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--red);display:grid;
-  place-items:center;color:var(--red-lt);font-size:1.3rem;line-height:1;font-family:var(--sans);
-  transition:transform .4s,background .3s,color .3s}
-.faq-item.open .pm{transform:rotate(135deg);background:var(--red);color:#ffffff}
+  place-items:center;color:var(--red-lt);font-size:1.3rem;line-height:1;transition:transform .4s,background .3s,color .3s}
+.faq-item.open .pm{transform:rotate(135deg);background:var(--red);color:#fff}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .45s ease}
-.faq-a p{color:var(--muted);line-height:1.8;padding:0 26px 24px;font-size:.98rem}
-.faq-a p b{color:var(--red-lt);font-weight:500}
-.faq-a p a{color:var(--red-lt);font-weight:500}
+.faq-a p{color:var(--muted);line-height:1.8;padding:0 24px 22px;font-size:.97rem}
+.faq-a p b{color:var(--red-lt);font-weight:600}
+.faq-a p a{color:var(--red-lt);font-weight:600}
 
-/* ============ quote — dark panel + ivory form ============ */
-.quote{background:linear-gradient(180deg,var(--ink),#1c0507 60%,var(--ink))}
-.quote-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:0;border:1px solid var(--line);overflow:hidden}
-.quote-side{background:var(--coal);padding:56px 48px;display:flex;flex-direction:column;justify-content:center;
-  position:relative;overflow:hidden}
-.quote-side::before{content:"24/7";position:absolute;right:-30px;bottom:-70px;font-family:var(--display);
-  font-weight:700;font-size:15rem;line-height:1;color:rgba(227,6,19,.07);pointer-events:none}
-.quote-side h3{font-family:var(--display);font-weight:500;font-size:2.1rem;line-height:1.2;margin-bottom:18px}
-.quote-side h3 em{font-style:normal;color:var(--red-lt)}
-.quote-side p{color:var(--muted);line-height:1.8;margin-bottom:30px}
-.big-tel{font-family:var(--display);font-weight:600;font-size:clamp(1.7rem,3.4vw,2.4rem);color:var(--red-lt);
-  letter-spacing:.02em;line-height:1.2}
-.big-tel small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.3em;
-  text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.quote-side .mini{display:flex;gap:14px;align-items:center;margin-top:30px;padding-top:26px;border-top:1px solid var(--line-soft)}
-.quote-side .mini img{width:130px;height:auto}
-.quote-side .mini p{margin:0;color:var(--ivory-dim);font-size:.92rem;line-height:1.6}
-.quote-side .mini p span{color:var(--muted);display:block;font-size:.8rem}
-.quote-form{background:var(--ivory);color:#111111;padding:56px 48px}
-.quote-form h3{font-family:var(--display);font-weight:600;font-size:1.7rem;color:#0a0a0a;margin-bottom:8px}
-.quote-form>p{color:var(--muted-dk);font-size:.95rem;margin-bottom:10px}
-.quote-form label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
-  color:#7a7a7a;margin:20px 0 7px}
-.quote-form input,.quote-form select,.quote-form textarea{width:100%;background:#fff;border:1px solid #cccccc;
-  border-radius:6px;color:#111111;padding:13px 14px;font-size:.96rem;font-family:var(--sans);transition:.2s}
-.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{outline:none;border-color:var(--red);
-  box-shadow:0 0 0 3px rgba(227,6,19,.25)}
-.quote-form textarea{min-height:96px;resize:vertical}
-.quote-form select option{background:#fff}
-.btn-dark{width:100%;justify-content:center;background:#0a0a0a;color:#ffffff;margin-top:26px;
-  border:1px solid #0a0a0a}
-.btn-dark:hover{background:var(--red);border-color:var(--red);color:#ffffff;transform:translateY(-2px)}
-.form-note{font-size:.82rem;color:#888888;margin-top:14px;line-height:1.6;text-align:center}
-
-/* ============ footer ============ */
-footer{border-top:1px solid var(--line);padding:64px 0 34px;background:#08080a;text-align:center}
-footer .flogo{width:240px;height:auto;margin:0 auto 22px}
-footer h4{font-family:var(--display);font-weight:600;font-size:1.5rem}
+/* ============ footer rediseñado ============ */
+footer{position:relative;overflow:hidden;padding:70px 0 34px;background:#070708;text-align:center}
+footer .f-qt{position:absolute;left:50%;top:8px;transform:translateX(-50%);
+  font-family:var(--display);font-size:clamp(9rem,26vw,19rem);line-height:.8;color:transparent;
+  -webkit-text-stroke:1px rgba(227,6,19,.22);user-select:none;pointer-events:none}
+footer .inner{position:relative;z-index:1}
+footer .flogo{width:230px;height:auto;margin:0 auto 20px}
+footer h4{font-family:var(--display);font-weight:400;font-size:1.9rem;letter-spacing:.06em}
 footer h4 i{font-style:normal;color:var(--red-lt)}
-footer .f-sub{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--red-lt);margin-top:8px}
-footer .f-nav{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin:30px 0 8px;
-  font-size:.8rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+footer .f-sub{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--red-lt);margin-top:6px}
+footer .f-nav{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:28px 0 10px;
+  font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
 footer .f-nav a{color:var(--ivory-dim)}
 footer .f-nav a:hover{color:var(--red-lt)}
-footer p{color:var(--muted);font-size:.9rem;line-height:1.8}
+footer p{color:var(--muted);font-size:.9rem;line-height:1.85}
 footer p a{color:var(--red-lt)}
-.fb-btn{display:inline-flex;align-items:center;gap:10px;margin-top:26px;border:1px solid var(--line);
-  border-radius:999px;padding:11px 24px;font-size:.86rem;font-weight:500;transition:.3s}
+.fb-btn{display:inline-flex;align-items:center;gap:10px;margin-top:24px;border:1px solid var(--line);
+  border-radius:999px;padding:11px 24px;font-size:.86rem;font-weight:600;transition:.3s}
 .fb-btn svg{width:20px;height:20px;flex:none}
 .fb-btn:hover{border-color:var(--red);color:var(--red-lt)}
-.made{font-size:.78rem;color:#777777;margin-top:34px}
-.made a{color:var(--red-lt);font-weight:600}
+.made{font-size:.78rem;color:#777;margin-top:32px}
+.made a{color:var(--red-lt);font-weight:700}
 
-/* ============ floating call ============ */
+/* ============ llamada flotante ============ */
 .call-float{position:fixed;right:20px;bottom:20px;z-index:70;width:62px;height:62px;border-radius:50%;
   background:linear-gradient(135deg,var(--red-lt),var(--red));display:grid;place-items:center;
   box-shadow:0 12px 30px rgba(0,0,0,.55);transition:transform .25s;
   animation:callFloat 3s ease-in-out infinite,callPulse 2.4s ease-out infinite}
 .call-float:hover{transform:scale(1.1)}
-.call-float svg{width:30px;height:30px;fill:#ffffff}
+.call-float svg{width:30px;height:30px;fill:#fff}
 @keyframes callFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes callPulse{0%{box-shadow:0 12px 30px rgba(0,0,0,.55),0 0 0 0 rgba(227,6,19,.5)}
   70%{box-shadow:0 12px 30px rgba(0,0,0,.55),0 0 0 18px rgba(227,6,19,0)}
@@ -338,320 +294,242 @@ footer p a{color:var(--red-lt)}
 .lightbox img{max-width:92vw;max-height:86vh;border:1px solid var(--line)}
 .lightbox .x{position:absolute;top:18px;right:26px;font-size:2.2rem;color:var(--red-lt);cursor:pointer;background:none;border:0}
 
-/* ============ responsive — VA AL FINAL: la regla móvil del burger
-   DEBE ir después de la regla base .burger{display:none} ============ */
+/* ============ responsive — la regla móvil del burger VA AL FINAL ============ */
 @media(max-width:1020px){
-  .hero-grid{grid-template-columns:1fr;gap:52px}
-  .hero-media{max-width:520px}
-  .svc-row{grid-template-columns:150px 1fr 300px;gap:28px}
-  .idx-num{font-size:4.4rem}
-  .cover-grid{gap:44px}
-  .about-grid{grid-template-columns:1fr;gap:44px}
+  .svc-txt{padding:40px 32px}
+  .cc-info,.cc-form{padding:40px 30px}
 }
 @media(max-width:900px){
   .links{display:none}
   .nav-call{display:none}
-  .links.open{display:flex;position:fixed;top:87px;left:0;right:0;flex-direction:column;align-items:center;gap:0;
+  .links.open{display:flex;position:fixed;top:118px;left:0;right:0;flex-direction:column;align-items:center;gap:0;
     background:#0b0b0d;border-bottom:1px solid var(--line);padding:8px 0;z-index:59}
   .links.open a{padding:15px 20px;width:100%;text-align:center;font-size:.92rem}
   .links.open a::after{display:none}
   .links.open a:active{background:rgba(227,6,19,.1)}
   .burger{display:flex}
-  section{padding:78px 0}
-  .svc-row{grid-template-columns:1fr;gap:18px;padding:36px 0}
-  .svc-row.rev .idx-cell,.svc-row.rev .svc-txt,.svc-row.rev .svc-photo{order:initial}
-  .idx-cell{text-align:left;display:flex;align-items:baseline;gap:18px}
-  .idx-num{font-size:3.6rem}
-  .idx-tag{margin-top:0}
-  .steps{grid-template-columns:1fr}
-  .step{padding:0 0 34px}
-  .step+.step{padding-left:0;border-left:0;border-top:1px solid var(--line-soft);padding-top:34px}
-  .gallery-grid{grid-template-columns:1fr}
-  .g-thumbs{flex-direction:row}
-  .g-thumbs button{aspect-ratio:16/10}
-  .g-main img{min-height:300px}
-  .cover-grid{grid-template-columns:1fr}
-  .quote-grid{grid-template-columns:1fr}
-  .quote-side,.quote-form{padding:40px 26px}
-  .topbar .mid{display:none}
+  section{padding:72px 0}
+  .svc-alt{grid-template-columns:1fr}
+  .svc-alt.flip .svc-photo{order:initial}
+  .svc-alt.flip .svc-txt{order:initial}
+  .svc-photo{min-height:260px}
+  .svc-red{grid-template-columns:1fr}
+  .big247{padding:10px 20px 44px}
+  .timeline{grid-template-columns:1fr;gap:40px}
+  .timeline::before{display:none}
+  .tstep{text-align:left;display:grid;grid-template-columns:62px 1fr;gap:0 20px;align-items:start}
+  .tstep .dot{margin:0;grid-row:span 2}
+  .tstep h3{margin-top:8px}
+  .tstep p{grid-column:2}
+  .cc-grid{grid-template-columns:1fr}
+  .g-card{flex-basis:86vw}
 }
 @media(max-width:560px){
-  .hero{padding:52px 0 64px}
-  .hero-stats{flex-wrap:wrap;gap:22px}
-  .hstat{flex:1 1 40%}
-  .hstat+.hstat{border-left:0;padding-left:0}
-  .zone{flex-wrap:wrap;gap:6px}
-  .zone h3{width:auto}
-  .brand .t b{font-size:1.1rem}
-  .brand img.logo{width:118px}
-  footer .flogo{width:200px}
+  .hero{min-height:520px}
+  .hero-qt{font-size:16rem;right:-8%;bottom:22%}
+  .hero-foot{font-size:1.05rem}
+  .brand img.logo{width:104px}
+  .qt-badge{width:44px;height:44px;font-size:1.5rem}
+  .brand .t b{font-size:1.2rem}
+  .svc-txt{padding:34px 24px}
+  .cc-info,.cc-form{padding:36px 22px}
+  footer .flogo{width:190px}
+  .emergency{font-size:1rem}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
-  .reveal,.reveal-l,.reveal-r{opacity:1;transform:none}
+  .reveal{opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap">
-    <span><a href="tel:+17876791481">787-679-1481</a><span class="dot">◆</span> Llámanos 24/7</span>
-    <span class="mid">Servicio de grúa · Toa Alta · Área metropolitana</span>
-    <span><a href="https://www.facebook.com/profile.php?id=61574758648785" target="_blank" rel="noopener">Facebook</a></span>
-  </div>
-</div>
+<div class="emergency"><span class="pulse-dot"></span>EMERGENCIA EN LA CARRETERA? LLAMA AHORA <a href="tel:+17876791481">787-679-1481</a> · 24/7</div>
 
 <header id="hdr">
   <div class="wrap nav">
     <a class="brand" href="#top">
+      <span class="qt-badge" aria-hidden="true"><span>QT</span></span>
       <img class="logo" src="assets/quinluz/quinluz-logo.png" alt="Logo de Quinluz Towing — QUINLUZ TOWING en rojo y negro con cadena y gancho, camión de plataforma, 787-679-1481">
-      <span class="t"><b>Quinluz <i>Towing</i></b><span>Grúa 24/7 · Toa Alta, PR</span></span>
+      <span class="t"><b>QUINLUZ TOWING</b><span>Grúa 24/7 · Toa Alta, PR</span></span>
     </a>
     <nav class="links" id="navLinks">
       <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#trabajos">Trabajos</a>
-      <a href="#cobertura">Cobertura</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#accion">La grúa en acción</a>
+      <a href="#contacto">Cobertura</a>
       <a href="#preguntas">Preguntas</a>
-      <a href="#cotizar">Cotizar</a>
+      <a href="#contacto">Contacto</a>
     </nav>
-    <a class="nav-call" href="tel:+17876791481"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>787-679-1481</a>
+    <a class="nav-call" href="tel:+17876791481"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Llamar ahora</a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<!-- ============ HERO dividido: texto editorial + foto real enmarcada ============ -->
-<section class="hero" id="top" style="padding-top:74px">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow reveal in">Servicio de grúa · Toa Alta, Puerto Rico</span>
-      <h1 class="reveal in d1">Te quedaste a pie.<br><em>Nosotros llegamos.</em></h1>
-      <p class="lede reveal in d2">Servicio de grúa con <b>camión de plataforma propio</b>, siempre abierto, en Toa Alta y el área metropolitana. Una llamada basta: llegamos donde estés y remolcamos tu vehículo con seguridad, eficiencia y profesionalismo.</p>
-      <div class="cta-row reveal in d3">
-        <a class="btn btn-red" href="tel:+17876791481"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Llamar 787-679-1481</a>
-        <a class="btn btn-line" href="https://wa.me/17876791481?text=Hola%20Quinluz%20Towing%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-      <div class="hero-stats reveal in d4">
-        <div class="hstat"><b><span class="count" data-to="24">0</span></b><span>Horas al día</span></div>
-        <div class="hstat"><b><span class="count" data-to="7">0</span></b><span>Días a la semana</span></div>
-        <div class="hstat"><b><span class="count" data-to="4">0</span></b><span>Servicios de grúa</span></div>
-      </div>
+<!-- ============ HERO: la grúa de fondo, QT gigante, titular nuevo ============ -->
+<section class="hero" id="top" style="padding:0">
+  <div class="hero-bg" role="img" aria-label="Grúa de plataforma azul de Quinluz Towing transportando un Ford Fiesta negro en una calle de Puerto Rico"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-qt" aria-hidden="true">QT</div>
+  <div class="wrap hero-inner">
+    <span class="hero-tag reveal in"><i></i>En servicio ahora · Toa Alta, PR</span>
+    <h1 class="reveal in d1">Tu carro en<br><span class="r">buenas manos,</span><br><span class="outline">a cualquier hora.</span></h1>
+    <p class="lede reveal in d2">Grúa de plataforma propia, siempre abierta, en Toa Alta y el área metropolitana. Una llamada basta: llegamos donde estés y movemos tu vehículo con seguridad, eficiencia y profesionalismo.</p>
+    <div class="cta-row reveal in d3">
+      <a class="btn btn-red" href="tel:+17876791481"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Llamar 787-679-1481</a>
+      <a class="btn btn-ghost" href="https://wa.me/17876791481?text=Hola%20Quinluz%20Towing%2C%20necesito%20una%20gr%C3%BAa." target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
     </div>
-    <div class="hero-media reveal-r in">
-      <div class="hero-frame">
-        <div class="clip">
-          <span class="live"><i></i> En servicio</span>
-          <img src="assets/quinluz/quinluz-foto-01.jpg" alt="Grúa de plataforma azul de Quinluz Towing transportando un Ford Fiesta negro en una calle de Puerto Rico">
-        </div>
-      </div>
-      <div class="hero-cap"><span>Camión de plataforma propio</span><b>Toa Alta, PR</b></div>
+    <div class="hero-foot">
+      <span><b>24</b> HORAS · <b>7</b> DÍAS</span>
+      <span>TOA ALTA <b>◆</b> ÁREA METRO</span>
+      <span class="scroll">DESLIZA ↓</span>
     </div>
   </div>
 </section>
 
-<div class="ticker" aria-hidden="true"><div class="run"><span>Toa Alta <b>◆</b></span><span>Toa Baja <b>◆</b></span><span>Bayamón <b>◆</b></span><span>Guaynabo <b>◆</b></span><span>San Juan <b>◆</b></span><span>Carolina <b>◆</b></span><span>Cataño <b>◆</b></span><span>Dorado <b>◆</b></span><span>Vega Baja <b>◆</b></span><span>Trujillo Alto <b>◆</b></span><span>Toa Alta <b>◆</b></span><span>Toa Baja <b>◆</b></span><span>Bayamón <b>◆</b></span><span>Guaynabo <b>◆</b></span><span>San Juan <b>◆</b></span><span>Carolina <b>◆</b></span><span>Cataño <b>◆</b></span><span>Dorado <b>◆</b></span><span>Vega Baja <b>◆</b></span><span>Trujillo Alto <b>◆</b></span></div></div>
+<div class="towns" aria-hidden="true"><div class="run"><span>Toa Alta <i>◆</i></span><span>Toa Baja <i>◆</i></span><span>Bayamón <i>◆</i></span><span>Guaynabo <i>◆</i></span><span>San Juan <i>◆</i></span><span>Carolina <i>◆</i></span><span>Cataño <i>◆</i></span><span>Dorado <i>◆</i></span><span>Vega Baja <i>◆</i></span><span>Trujillo Alto <i>◆</i></span><span>Toa Alta <i>◆</i></span><span>Toa Baja <i>◆</i></span><span>Bayamón <i>◆</i></span><span>Guaynabo <i>◆</i></span><span>San Juan <i>◆</i></span><span>Carolina <i>◆</i></span><span>Cataño <i>◆</i></span><span>Dorado <i>◆</i></span><span>Vega Baja <i>◆</i></span><span>Trujillo Alto <i>◆</i></span></div></div>
 
-<!-- ============ SERVICIOS: filas editoriales con índices rojos ============ -->
-<section id="servicios">
+<!-- ============ SERVICIOS: filas alternadas, cada una con foto real ============ -->
+<section id="servicios" style="padding-bottom:0">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Nuestros servicios</span>
-      <h2>Cuatro formas de <em>sacarte de apuros</em></h2>
+      <span class="sec-kicker">Lo que hacemos</span>
+      <h2>Cuando tu carro se detiene, <em>nosotros arrancamos</em></h2>
       <p>Un solo número para cualquier emergencia en la carretera. Remolque y transporte de vehículos con seguridad, eficiencia y profesionalismo, en Toa Alta y el área metropolitana, las 24 horas.</p>
-      <div class="red-rule"></div>
     </div>
-    <div class="svc-rows">
-      <article class="svc-row reveal">
-        <div class="idx-cell"><span class="idx-num">01</span><span class="idx-tag">Servicio</span></div>
-        <div class="svc-txt">
-          <h3>Remolque <i>24/7</i></h3>
-          <p>Servicio de grúa las 24 horas, todos los días, en grúa de plataforma. Tu vehículo viaja seguro, amarrado como se debe, hasta donde tiene que llegar.</p>
-          <a class="svc-link" href="#cotizar" data-service="Remolque 24/7">Pedir este servicio →</a>
-        </div>
-        <div class="svc-photo"><img src="assets/quinluz/quinluz-foto-01.jpg" alt="Grúa de plataforma azul de Quinluz Towing transportando un Ford Fiesta negro" loading="lazy"></div>
-      </article>
-      <article class="svc-row rev reveal">
-        <div class="idx-cell"><span class="idx-num">02</span><span class="idx-tag">Servicio</span></div>
-        <div class="svc-txt">
-          <h3>Transporte <i>de vehículos</i></h3>
-          <p>Transporte de vehículos a cualquier destino. Llevamos tu auto, SUV o van a donde lo necesites, con el cuidado que tu vehículo merece.</p>
-          <a class="svc-link" href="#cotizar" data-service="Transporte de vehículos">Pedir este servicio →</a>
-        </div>
-        <div class="svc-photo"><img src="assets/quinluz/quinluz-foto-02.jpg" alt="Grúa de plataforma azul de Quinluz Towing transportando una van blanca" loading="lazy"></div>
-      </article>
-      <article class="svc-row reveal">
-        <div class="idx-cell"><span class="idx-num">03</span><span class="idx-tag">Servicio</span></div>
-        <div class="svc-txt">
-          <h3>Asistencia en <i>accidentes y averías</i></h3>
-          <p>Si tuviste un accidente o tu vehículo se averió en la carretera, llegamos a asistirte. Respondemos con rapidez para que no te quedes esperando.</p>
-          <a class="svc-link" href="#cotizar" data-service="Asistencia en accidentes y averías">Pedir este servicio →</a>
-        </div>
-        <div class="svc-photo"><img src="assets/quinluz/quinluz-foto-03.jpg" alt="Grúa de plataforma de Quinluz Towing de noche transportando un sedán gris" loading="lazy"></div>
-      </article>
-      <article class="svc-row rev reveal">
-        <div class="idx-cell"><span class="idx-num">04</span><span class="idx-tag">Servicio</span></div>
-        <div class="svc-txt">
-          <h3>Respuesta <i>rápida</i></h3>
-          <p>Grúas despachadas en minutos. Cuando llamas, salimos a buscarte lo antes posible — de día o de noche, porque una emergencia no espera.</p>
-          <a class="svc-link" href="#cotizar" data-service="Respuesta rápida">Pedir este servicio →</a>
-        </div>
-        <div class="svc-photo"><img src="assets/quinluz/quinluz-foto-01.jpg" alt="Grúa de plataforma azul de Quinluz Towing en servicio en una calle de Puerto Rico" loading="lazy"></div>
-      </article>
+  </div>
+  <div class="svc-alt reveal">
+    <div class="svc-photo">
+      <img src="assets/quinluz/quinluz-foto-01.jpg" alt="Grúa de plataforma azul de Quinluz Towing transportando un Ford Fiesta negro" loading="lazy">
+      <span class="ph-tag">Grúa de plataforma propia</span>
     </div>
+    <div class="svc-txt">
+      <span class="svc-num">QT — 01</span>
+      <h3>Remolque 24/7</h3>
+      <p>Servicio de grúa las 24 horas, todos los días, en grúa de plataforma. Tu vehículo viaja seguro, amarrado como se debe, hasta donde tiene que llegar.</p>
+      <a class="svc-link" href="#contacto" data-service="Remolque 24/7">Pedir este servicio →</a>
+    </div>
+  </div>
+  <div class="svc-alt flip reveal">
+    <div class="svc-photo">
+      <img src="assets/quinluz/quinluz-foto-02.jpg" alt="Grúa de plataforma azul de Quinluz Towing transportando una van blanca" loading="lazy">
+      <span class="ph-tag">Transporte seguro</span>
+    </div>
+    <div class="svc-txt">
+      <span class="svc-num">QT — 02</span>
+      <h3>Transporte de vehículos</h3>
+      <p>Transporte de vehículos a cualquier destino. Llevamos tu auto, SUV o van a donde lo necesites, con el cuidado que tu vehículo merece.</p>
+      <a class="svc-link" href="#contacto" data-service="Transporte de vehículos">Pedir este servicio →</a>
+    </div>
+  </div>
+  <div class="svc-alt reveal">
+    <div class="svc-photo">
+      <img src="assets/quinluz/quinluz-foto-03.jpg" alt="Grúa de plataforma de Quinluz Towing de noche transportando un sedán gris" loading="lazy">
+      <span class="ph-tag">De día y de noche</span>
+    </div>
+    <div class="svc-txt">
+      <span class="svc-num">QT — 03</span>
+      <h3>Asistencia en accidentes y averías</h3>
+      <p>Si tuviste un accidente o tu vehículo se averió en la carretera, llegamos a asistirte. Respondemos con rapidez para que no te quedes esperando.</p>
+      <a class="svc-link" href="#contacto" data-service="Asistencia en accidentes y averías">Pedir este servicio →</a>
+    </div>
+  </div>
+  <div class="svc-red reveal">
+    <div class="svc-txt">
+      <span class="svc-num">QT — 04</span>
+      <h3>Respuesta rápida</h3>
+      <p>Grúas despachadas en minutos. Cuando llamas, salimos a buscarte lo antes posible — de día o de noche, porque una emergencia no espera.</p>
+      <a class="svc-link" href="#contacto" data-service="Respuesta rápida">Pedir este servicio →</a>
+    </div>
+    <div class="big247">24/7<small>Siempre abiertos</small></div>
   </div>
 </section>
 
-<!-- ============ NOSOTROS: sobre, misión y visión ============ -->
-<section class="about" id="nosotros">
-  <div class="wrap about-grid">
-    <div class="reveal-l">
-      <span class="eyebrow">Nosotros</span>
-      <h2 style="font-family:var(--display);font-weight:500;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.15;margin-top:18px">Soluciones de transporte vehicular <em style="font-style:normal;color:var(--red-lt)">con seguridad y profesionalismo</em></h2>
-      <p class="lead">En <b>Quinluz Towing</b> nos dedicamos a ofrecer soluciones de transporte vehicular con seguridad, eficiencia y profesionalismo. Somos de Toa Alta y servimos a nuestra comunidad y al área metropolitana con un servicio seguro y confiable, con precios accesibles.</p>
-      <p class="lead">Cuando te quedas a pie, no necesitas promesas — necesitas una grúa que llegue. Ese es nuestro trabajo: responder rápido, tratar tu vehículo con cuidado y llevarlo a donde tiene que llegar.</p>
-      <div class="red-rule"></div>
-    </div>
-    <div class="mv-cards reveal-r">
-      <div class="mv-card">
-        <h3>Nuestra <i>misión</i></h3>
-        <p>Brindar un servicio de grúa seguro y confiable, con precios accesibles, para que ningún conductor de Toa Alta y el área metropolitana se quede varado sin ayuda.</p>
-      </div>
-      <div class="mv-card">
-        <h3>Nuestra <i>visión</i></h3>
-        <p>Ser líderes en el servicio de grúas en Puerto Rico, reconocidos por la rapidez de nuestra respuesta y la excelencia de nuestro servicio.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROCESO: 3 pasos ============ -->
-<section class="process" style="padding:72px 0">
-  <div class="wrap">
-    <div class="sec-head reveal" style="margin-bottom:48px">
-      <span class="eyebrow">Así de simple</span>
-      <h2>De la llamada <em>al rescate</em></h2>
-    </div>
-    <div class="steps reveal">
-      <div class="step">
-        <span class="n">Paso — I</span>
-        <h3>Llámanos o escríbenos</h3>
-        <p>Al 787-679-1481, por llamada o WhatsApp. Siempre abierto, a cualquier hora.</p>
-        <div class="bar"><i></i></div>
-      </div>
-      <div class="step">
-        <span class="n">Paso — II</span>
-        <h3>Dinos dónde estás</h3>
-        <p>Pueblo, referencia cercana y tipo de vehículo. Con eso salimos a buscarte lo antes posible.</p>
-        <div class="bar"><i></i></div>
-      </div>
-      <div class="step">
-        <span class="n">Paso — III</span>
-        <h3>Llegamos y resolvemos</h3>
-        <p>Remolcamos tu vehículo con cuidado en nuestra grúa de plataforma y lo llevamos a su destino.</p>
-        <div class="bar"><i></i></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TRABAJOS: imagen grande + tira de miniaturas ============ -->
-<section id="trabajos">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Trabajos reales</span>
-      <h2>Nuestro trabajo, <em>en la calle</em></h2>
-      <p>Fotos reales de Quinluz Towing en servicio. Toca la imagen grande para verla completa, o elige una miniatura.</p>
-      <div class="red-rule"></div>
-    </div>
-    <div class="gallery-grid reveal">
-      <div class="g-main" id="gMain">
-        <img id="gImg" src="assets/quinluz/quinluz-foto-01.jpg" alt="Grúa de plataforma azul de Quinluz Towing transportando un Ford Fiesta negro">
-        <div class="g-cap"><b>01</b> — Grúa de plataforma azul transportando un Ford Fiesta negro</div>
-      </div>
-      <div class="g-thumbs" id="gThumbs"></div>
-    </div>
-    <div class="g-meta reveal">
-      <span class="g-counter"><span id="gCur">01</span> <small>/ 03</small></span>
-      <span class="g-note" id="gNote">Grúa de plataforma azul transportando un Ford Fiesta negro</span>
-      <span class="g-nav">
-        <button class="g-arrow" id="gPrev" aria-label="Foto anterior">‹</button>
-        <button class="g-arrow" id="gNext" aria-label="Foto siguiente">›</button>
-      </span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ COBERTURA: numeral gigante + lista ============ -->
-<section id="cobertura" style="background:var(--coal);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
-  <div class="wrap cover-grid">
-    <div class="reveal-l">
-      <div class="big247">24/7</div>
-      <div class="big247-label">siempre abiertos, en Toa Alta y el área metro</div>
-      <p class="lead">Nuestra base está en <b>Toa Alta</b> y servimos toda el <b>área metropolitana</b>. No importa si es de día o de madrugada — si te quedas a pie, una llamada basta.</p>
-    </div>
-    <div class="zones reveal-r">
-      <div class="zone"><span class="z-idx">i.</span><h3>Toa Alta</h3><p>Nuestra base. Respuesta inmediata en todo el pueblo.</p></div>
-      <div class="zone"><span class="z-idx">ii.</span><h3>Toa Baja</h3><p>Servicio directo desde Toa Alta, a minutos de distancia.</p></div>
-      <div class="zone"><span class="z-idx">iii.</span><h3>Bayamón</h3><p>Cobertura completa en el municipio vecino.</p></div>
-      <div class="zone"><span class="z-idx">iv.</span><h3>Guaynabo</h3><p>Servicio en todo Guaynabo y sus alrededores.</p></div>
-      <div class="zone"><span class="z-idx">v.</span><h3>San Juan</h3><p>Llegamos a la capital y a todo el área metro.</p></div>
-      <div class="zone"><span class="z-idx">vi.</span><h3>Área Metro</h3><p>Carolina, Cataño, Dorado, Vega Baja y Trujillo Alto.</p></div>
-      <div class="cover-note"><b>¿Estás fuera del área?</b> Llama y coordinamos. Escríbenos al <a href="tel:+17876791481">787-679-1481</a> y te decimos cómo te ayudamos.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FAQ: acordeón propio ============ -->
-<section id="preguntas">
+<!-- ============ CÓMO FUNCIONA: línea de tiempo horizontal ============ -->
+<section class="how" id="como">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow">Preguntas frecuentes</span>
-      <h2>Antes de <em>llamar</em></h2>
-      <p>Lo que más nos preguntan los clientes cuando se quedan a pie.</p>
-      <div class="red-rule"></div>
+      <span class="sec-kicker">Así de simple</span>
+      <h2>Llama, ubícanos, <em>resolvemos</em></h2>
+      <p>Tres pasos y tu carro ya va camino a donde tiene que llegar.</p>
     </div>
-    <div class="faq reveal">
-      <div class="faq-item open">
-        <button class="faq-q" type="button">¿Atienden de noche?<span class="pm">+</span></button>
-        <div class="faq-a"><p>Sí. Estamos <b>abiertos las 24 horas, todos los días</b>. Llámanos o escríbenos por WhatsApp al <b>787-679-1481</b> a cualquier hora, de día o de madrugada.</p></div>
+    <div class="timeline reveal">
+      <div class="tstep">
+        <span class="dot">1</span>
+        <h3>Llama o escribe</h3>
+        <p>Al <b>787-679-1481</b>, por llamada o WhatsApp. Siempre abierto, a cualquier hora.</p>
       </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">¿Qué áreas cubren?<span class="pm">+</span></button>
-        <div class="faq-a"><p>Nuestra base está en <b>Toa Alta</b> y cubrimos el <b>área metropolitana</b>: Toa Baja, Bayamón, Guaynabo, San Juan, Carolina, Cataño, Dorado, Vega Baja y Trujillo Alto. ¿Estás fuera del área? <b>Llama y coordinamos.</b></p></div>
+      <div class="tstep">
+        <span class="dot">2</span>
+        <h3>Dinos dónde estás</h3>
+        <p>Pueblo, referencia cercana y tipo de vehículo. Con eso <b>salimos a buscarte</b> lo antes posible.</p>
       </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">¿Cómo pido la grúa?<span class="pm">+</span></button>
-        <div class="faq-a"><p>Llámanos al <b>787-679-1481</b> o escríbenos por WhatsApp. Dinos <b>dónde estás</b> (pueblo y referencia cercana) y <b>qué vehículo es</b>. Con eso despachamos la grúa en minutos.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">¿Cuánto cuesta el servicio?<span class="pm">+</span></button>
-        <div class="faq-a"><p>El costo depende de la distancia y del tipo de servicio. <b>Llama al 787-679-1481 y te cotizamos sin compromiso</b>, sin cargos ocultos. Nuestro compromiso es un servicio seguro y confiable con precios accesibles.</p></div>
+      <div class="tstep">
+        <span class="dot">3</span>
+        <h3>Llegamos y resolvemos</h3>
+        <p>Remolcamos tu vehículo con cuidado en nuestra <b>grúa de plataforma</b> y lo llevamos a su destino.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ COTIZAR: panel oscuro + formulario claro ============ -->
-<section class="quote" id="cotizar">
+<!-- ============ GALERÍA A LO ANCHO: La grúa en acción ============ -->
+<section class="gallery-full" id="accion">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Cotización</span>
-      <h2>Pide tu grúa <em>ahora mismo</em></h2>
-      <p>Llena el formulario y tu mensaje llega directo a nuestro WhatsApp. Respondemos 24/7.</p>
-      <div class="red-rule"></div>
+      <span class="sec-kicker">Trabajos reales</span>
+      <h2>La grúa <em>en acción</em></h2>
+      <p>Fotos reales de Quinluz Towing en servicio, en las calles de Puerto Rico. Desliza para verlas todas y toca una foto para ampliarla.</p>
     </div>
-    <div class="quote-grid reveal">
-      <div class="quote-side">
-        <h3>¿Emergencia?<br><em>Llama directo.</em></h3>
-        <p>Si es una emergencia, la llamada es más rápida que el formulario. Hablas directo con quien va a buscarte.</p>
-        <a class="big-tel" href="tel:+17876791481"><small>Línea directa · 24/7</small>787-679-1481</a>
-        <div class="mini">
-          <img src="assets/quinluz/quinluz-logo.png" alt="Logo de Quinluz Towing">
-          <p>Quinluz Towing<span>Servicio de grúa · Toa Alta, Puerto Rico</span></p>
+  </div>
+  <div class="g-strip reveal" id="gStrip">
+    <figure class="g-card">
+      <img src="assets/quinluz/quinluz-foto-01.jpg" alt="Grúa de plataforma azul de Quinluz Towing transportando un Ford Fiesta negro">
+      <figcaption><b>01</b> — Grúa de plataforma azul transportando un Ford Fiesta negro</figcaption>
+    </figure>
+    <figure class="g-card">
+      <img src="assets/quinluz/quinluz-foto-02.jpg" alt="Grúa de plataforma azul de Quinluz Towing transportando una van blanca" loading="lazy">
+      <figcaption><b>02</b> — Grúa de plataforma azul transportando una van blanca</figcaption>
+    </figure>
+    <figure class="g-card">
+      <img src="assets/quinluz/quinluz-foto-03.jpg" alt="Grúa de plataforma de Quinluz Towing de noche transportando un sedán gris" loading="lazy">
+      <figcaption><b>03</b> — Grúa de plataforma de noche transportando un sedán gris</figcaption>
+    </figure>
+  </div>
+  <div class="wrap"><p class="g-hint reveal">← Desliza para ver las 3 fotos reales de nuestro trabajo →</p></div>
+</section>
+
+<!-- ============ COBERTURA + CONTACTO: un solo bloque ============ -->
+<section class="contact-block" id="contacto">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">Cobertura y contacto</span>
+      <h2>Estamos cerca. <em>Pide tu grúa ahora.</em></h2>
+      <p>Nuestra base está en Toa Alta y servimos toda el área metropolitana. Llena el formulario y tu mensaje llega directo a nuestro WhatsApp. Respondemos 24/7.</p>
+    </div>
+    <div class="cc-grid reveal">
+      <div class="cc-info">
+        <h3>Toa Alta <em>y el área metro</em></h3>
+        <p>No importa si es de día o de madrugada — si te quedas a pie, una llamada basta.</p>
+        <div class="chips">
+          <span class="chip hot">Toa Alta · Base</span>
+          <span class="chip">Toa Baja</span>
+          <span class="chip">Bayamón</span>
+          <span class="chip">Guaynabo</span>
+          <span class="chip">San Juan</span>
+          <span class="chip">Carolina</span>
+          <span class="chip">Cataño</span>
+          <span class="chip">Dorado</span>
+          <span class="chip">Vega Baja</span>
+          <span class="chip">Trujillo Alto</span>
         </div>
+        <a class="big-tel" href="tel:+17876791481">787-679-1481</a>
+        <div class="cc-line"><div><b>Dirección</b><span>Urb Colinas De La Plata, Camino las Riveras 58, Toa Alta, PR 00953</span></div></div>
+        <div class="cc-line"><div><b>Email</b><span><a href="mailto:manuel.quinterodiaz@gmail.com">manuel.quinterodiaz@gmail.com</a></span></div></div>
+        <div class="cc-line"><div><b>Horario</b><span>Las 24 horas, todos los días</span></div></div>
+        <div class="cc-note"><b>¿Estás fuera del área?</b> Llama y coordinamos. Escríbenos al <a href="tel:+17876791481">787-679-1481</a> y te decimos cómo te ayudamos.</div>
       </div>
-      <form class="quote-form" id="quoteForm" novalidate>
+      <form class="cc-form" id="quoteForm" novalidate>
         <h3>Cuéntanos qué pasó</h3>
         <p>Mientras más detalles nos des —dónde estás y qué vehículo es— más rápido llegamos.</p>
         <label for="fName">Tu nombre</label>
@@ -684,23 +562,52 @@ footer p a{color:var(--red-lt)}
   </div>
 </section>
 
-<footer>
+<!-- ============ FAQ ============ -->
+<section id="preguntas" style="padding-top:96px">
   <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="sec-kicker">Preguntas frecuentes</span>
+      <h2>Antes de <em>llamar</em></h2>
+      <p>Lo que más nos preguntan los clientes cuando se quedan a pie.</p>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item open">
+        <button class="faq-q" type="button">¿Atienden de noche?<span class="pm">+</span></button>
+        <div class="faq-a"><p>Sí. Estamos <b>abiertos las 24 horas, todos los días</b>. Llámanos o escríbenos por WhatsApp al <b>787-679-1481</b> a cualquier hora, de día o de madrugada.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">¿Qué áreas cubren?<span class="pm">+</span></button>
+        <div class="faq-a"><p>Nuestra base está en <b>Toa Alta</b> y cubrimos el <b>área metropolitana</b>: Toa Baja, Bayamón, Guaynabo, San Juan, Carolina, Cataño, Dorado, Vega Baja y Trujillo Alto. ¿Estás fuera del área? <b>Llama y coordinamos.</b></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">¿Cómo pido la grúa?<span class="pm">+</span></button>
+        <div class="faq-a"><p>Llámanos al <b>787-679-1481</b> o escríbenos por WhatsApp. Dinos <b>dónde estás</b> (pueblo y referencia cercana) y <b>qué vehículo es</b>. Con eso despachamos la grúa en minutos.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">¿Cuánto cuesta el servicio?<span class="pm">+</span></button>
+        <div class="faq-a"><p>El costo depende de la distancia y del tipo de servicio. <b>Llama al 787-679-1481 y te cotizamos sin compromiso</b>, sin cargos ocultos. Nuestro compromiso es un servicio seguro y confiable con precios accesibles.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-qt" aria-hidden="true">QT</div>
+  <div class="wrap inner">
     <img class="flogo" src="assets/quinluz/quinluz-logo.png" alt="Logo de Quinluz Towing — QUINLUZ TOWING en rojo y negro con cadena y gancho, 787-679-1481">
     <h4>Quinluz <i>Towing</i></h4>
-    <div class="f-sub">Grúa 24/7 · Toa Alta, Puerto Rico</div>
+    <div class="f-sub">QT · Grúa 24/7 · Toa Alta, Puerto Rico</div>
     <nav class="f-nav">
       <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#trabajos">Trabajos</a>
-      <a href="#cobertura">Cobertura</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#accion">La grúa en acción</a>
+      <a href="#contacto">Contacto</a>
       <a href="#preguntas">Preguntas</a>
-      <a href="#cotizar">Cotizar</a>
     </nav>
     <p>Servicio de grúa 24/7 · Tel. <a href="tel:+17876791481">787-679-1481</a><br>
     Urb Colinas De La Plata, Camino las Riveras 58, Toa Alta, PR 00953<br>
     Email: <a href="mailto:manuel.quinterodiaz@gmail.com">manuel.quinterodiaz@gmail.com</a><br>
-    Toa Alta y área metropolitana · Siempre abiertos</p>
+    Tu carro en buenas manos, a cualquier hora.</p>
     <a class="fb-btn" href="https://www.facebook.com/profile.php?id=61574758648785" target="_blank" rel="noopener" aria-label="Facebook de Quinluz Towing"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook · Quinluz Towing</a>
     <p class="made">Sitio web creado por <a href="https://www.instagram.com/manuartpro" target="_blank" rel="noopener">ManuPro</a> · © 2026 Quinluz Towing</p>
   </div>
@@ -737,73 +644,16 @@ footer p a{color:var(--red-lt)}
       if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
     });
   },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(function(el){io.observe(el)});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 
-  /* contadores animados (24, 7, 4) */
-  var cio=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if(!en.isIntersecting)return;
-      cio.unobserve(en.target);
-      var el=en.target,to=+el.dataset.to,t0=null;
-      function tick(ts){
-        if(!t0)t0=ts;
-        var p=Math.min((ts-t0)/1100,1),e=1-Math.pow(1-p,3);
-        el.textContent=Math.round(to*e);
-        if(p<1)requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    });
-  },{threshold:.6});
-  document.querySelectorAll('.count').forEach(function(el){cio.observe(el)});
-
-  /* galería manual: imagen grande + tira de miniaturas (una foto a la vez) */
-  var photos=[
-    {src:'assets/quinluz/quinluz-foto-01.jpg',cap:'Grúa de plataforma azul transportando un Ford Fiesta negro'},
-    {src:'assets/quinluz/quinluz-foto-02.jpg',cap:'Grúa de plataforma azul transportando una van blanca'},
-    {src:'assets/quinluz/quinluz-foto-03.jpg',cap:'Grúa de plataforma de noche transportando un sedán gris'}
-  ];
-  var gImg=document.getElementById('gImg'),gMain=document.getElementById('gMain'),
-      gCur=document.getElementById('gCur'),gNote=document.getElementById('gNote'),
-      thumbsBox=document.getElementById('gThumbs'),cur=0;
-  function pad(n){return (n<10?'0':'')+n}
-  photos.forEach(function(p,i){
-    var b=document.createElement('button');
-    b.setAttribute('aria-label','Ver foto '+(i+1)+': '+p.cap);
-    var im=document.createElement('img');im.src=p.src;im.alt=p.cap;im.loading='lazy';
-    b.appendChild(im);
-    b.addEventListener('click',function(){go(i)});
-    thumbsBox.appendChild(b);
-  });
-  var thumbs=thumbsBox.querySelectorAll('button');
-  function go(i){
-    cur=(i+photos.length)%photos.length;
-    gImg.classList.add('swap');
-    setTimeout(function(){
-      gImg.src=photos[cur].src;gImg.alt=photos[cur].cap;
-      gImg.classList.remove('swap');
-    },220);
-    gCur.textContent=pad(cur+1);
-    gNote.textContent=photos[cur].cap;
-    gMain.querySelector('.g-cap').innerHTML='<b>'+pad(cur+1)+'</b> — '+photos[cur].cap;
-    thumbs.forEach(function(t,j){t.classList.toggle('on',j===cur)});
-  }
-  document.getElementById('gPrev').addEventListener('click',function(){go(cur-1)});
-  document.getElementById('gNext').addEventListener('click',function(){go(cur+1)});
-  addEventListener('keydown',function(e){
-    if(e.key==='ArrowLeft')go(cur-1);
-    if(e.key==='ArrowRight')go(cur+1);
-  });
-  var tx0=null;
-  gMain.addEventListener('touchstart',function(e){tx0=e.touches[0].clientX},{passive:true});
-  gMain.addEventListener('touchend',function(e){
-    if(tx0===null)return;
-    var dx=e.changedTouches[0].clientX-tx0;
-    if(Math.abs(dx)>40)go(cur+(dx<0?1:-1));
-    tx0=null;
-  },{passive:true});
-  go(0);
+  /* galería: tocar una foto la amplía */
   var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg');
-  gMain.addEventListener('click',function(){lbImg.src=photos[cur].src;lb.classList.add('open')});
+  document.querySelectorAll('.g-card').forEach(function(card){
+    card.addEventListener('click',function(){
+      var img=card.querySelector('img');
+      lbImg.src=img.src;lbImg.alt=img.alt;lb.classList.add('open');
+    });
+  });
   lb.addEventListener('click',function(){lb.classList.remove('open')});
   addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});
 
@@ -824,8 +674,7 @@ footer p a{color:var(--red-lt)}
   /* "Pedir este servicio" preselecciona el servicio en el formulario */
   document.querySelectorAll('.svc-link[data-service]').forEach(function(a){
     a.addEventListener('click',function(){
-      var sel=document.getElementById('fService');
-      sel.value=a.dataset.service;
+      document.getElementById('fService').value=a.dataset.service;
     });
   });
 
