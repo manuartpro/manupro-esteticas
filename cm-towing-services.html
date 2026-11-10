@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>C.M Towing Services | Servicio de Grúa 24/7 en Ponce, Puerto Rico</title>
 <meta name="description" content="C.M Towing Services — Servicio de grúa 24/7 en Ponce y todo Puerto Rico. Remolque, transporte de maquinaria pesada, grúa con pluma, battery booster, cerrajería, cambio de goma, servicio de gasolina y movimiento de vehículos. Llama o escribe al 787-241-8427.">
-<link rel="preload" href="assets/cm-nueva-01.jpg" as="image">
+<link rel="preload" href="assets/cm-video-poster.jpg" as="image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#0b0b0d; --coal:#131316; --panel:#17171b; --panel2:#1c1c21;
@@ -17,8 +17,8 @@
   --red:#e10600; --red-lt:#ff3b30; --red-dk:#8f0f0f;
   --muted:#b3b3b3; --muted-dk:#7a7a7a;
   --line:rgba(225,6,0,.35); --line-soft:rgba(225,6,0,.18);
-  --display:'Orbitron','Rajdhani',sans-serif;
-  --sans:'Rajdhani',system-ui,sans-serif;
+  --display:'Barlow Condensed','Barlow',sans-serif;
+  --sans:'Barlow',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -77,15 +77,28 @@ header.solid{border-bottom-color:var(--line);background:rgba(11,11,13,.97)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 .d4{transition-delay:.4s}.d5{transition-delay:.5s}
 
-/* ============ hero full-bleed: foto real limpia de fondo ============ */
-.hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
+/* ============ hero: video real del rescate + foto de fondo tenue ============ */
+.hero{position:relative;min-height:94vh;display:flex;align-items:center;overflow:hidden;background:var(--ink);padding:118px 0 84px}
 .hero-bg{position:absolute;inset:0;background:url('assets/cm-nueva-01.jpg') center 30%/cover no-repeat;
-  animation:heroZoom 26s ease-in-out infinite alternate}
-@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.06)}}
+  filter:brightness(.3) saturate(.9)}
 .hero-bg::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(8,8,10,.58) 0%,rgba(8,8,10,.08) 42%,rgba(8,8,10,.62) 74%,rgba(11,11,13,.97) 100%),
-             linear-gradient(90deg,rgba(8,8,10,.68) 0%,rgba(8,8,10,.22) 62%,transparent 100%)}
-.hero-inner{position:relative;z-index:2;width:100%;padding:150px 0 68px}
+  background:linear-gradient(180deg,rgba(8,8,10,.55) 0%,rgba(8,8,10,.25) 45%,rgba(8,8,10,.78) 100%),
+             linear-gradient(90deg,rgba(8,8,10,.72) 0%,rgba(8,8,10,.3) 60%,rgba(8,8,10,.45) 100%)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+/* video del rescate — marco 3D con perspectiva */
+.hero-video-wrap{position:relative}
+.hero-video-frame{position:relative;max-width:400px;margin:0 auto;border:1px solid var(--red);padding:10px;
+  background:#0d0d0f;box-shadow:0 34px 70px rgba(0,0,0,.65),0 8px 0 rgba(0,0,0,.3);
+  transform:perspective(1100px) rotateY(-4deg) rotateX(2deg);transition:transform .5s cubic-bezier(.22,.8,.3,1)}
+.hero-video-frame:hover{transform:perspective(1100px) rotateY(0) rotateX(0) translateY(-4px)}
+.hero-video-frame video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:#000}
+.hero-video-frame .live{position:absolute;top:22px;left:22px;z-index:2;display:inline-flex;align-items:center;gap:8px;
+  background:rgba(11,11,13,.8);border:1px solid var(--line);border-radius:999px;padding:7px 14px;
+  font-size:.66rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--red-lt)}
+.hero-video-frame .live i{width:8px;height:8px;border-radius:50%;background:var(--red-lt);animation:blink 1.6s infinite}
+.hero-cap{margin-top:22px;display:flex;justify-content:space-between;gap:14px;font-size:.78rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.hero-cap b{color:var(--red-lt);font-weight:500}
 .hero-badge{position:absolute;top:26px;right:26px;z-index:3;display:inline-flex;align-items:center;gap:8px;
   background:rgba(11,11,13,.78);border:1px solid var(--line);border-radius:999px;padding:8px 16px;
   font-size:.66rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--red-lt)}
@@ -95,7 +108,7 @@ header.solid{border-bottom-color:var(--line);background:rgba(11,11,13,.97)}
   letter-spacing:.38em;text-transform:uppercase;color:var(--red-lt)}
 .eyebrow::before{content:"";width:44px;height:1px;background:var(--red)}
 .hero h1{font-family:var(--display);font-weight:500;font-size:clamp(2.5rem,5.4vw,4.3rem);
-  line-height:1.08;margin:22px 0 8px;letter-spacing:.005em}
+  line-height:1.06;margin:22px 0 8px;letter-spacing:.01em;text-shadow:0 4px 28px rgba(0,0,0,.65)}
 .hero h1 em{font-style:normal;font-weight:600;
   background:linear-gradient(100deg,#ffd9d6 0%,var(--red) 45%,#8f0f0f 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent}
@@ -108,8 +121,9 @@ header.solid{border-bottom-color:var(--line);background:rgba(11,11,13,.97)}
   border:1px solid transparent;transition:transform .3s,box-shadow .3s,background .3s,color .3s}
 .btn svg{width:16px;height:16px;fill:currentColor}
 .btn-red{background:linear-gradient(120deg,var(--red-lt),var(--red) 55%,#8f0f0f);color:#ffffff;
-  box-shadow:0 10px 30px rgba(225,6,0,.28)}
-.btn-red:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(225,6,0,.42)}
+  box-shadow:0 6px 0 #7a0c0c,0 14px 30px rgba(225,6,0,.3)}
+.btn-red:hover{transform:translateY(-3px);box-shadow:0 9px 0 #7a0c0c,0 18px 40px rgba(225,6,0,.42)}
+.btn-red:active{transform:translateY(3px);box-shadow:0 2px 0 #7a0c0c,0 8px 20px rgba(225,6,0,.3)}
 .btn-line{background:transparent;color:var(--ivory);border-color:rgba(255,255,255,.4)}
 .btn-line:hover{border-color:var(--red-lt);color:var(--red-lt);transform:translateY(-3px)}
 .hero-stats{display:flex;gap:0;margin-top:52px;border-top:1px solid var(--line-soft);padding-top:30px;max-width:560px}
@@ -147,12 +161,14 @@ section{padding:104px 0}
 .svc-row.rev .svc-txt{order:2}
 .svc-row.rev .svc-photo{order:3}
 .idx-cell{text-align:center}
-.idx-num{font-family:var(--display);font-weight:700;font-size:5.4rem;line-height:.9;letter-spacing:-.02em;
-  background:linear-gradient(160deg,#ffd9d6 0%,var(--red-lt) 30%,var(--red) 58%,#7a0c0c 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 3px 10px rgba(225,6,0,.22));
-  transition:transform .4s cubic-bezier(.22,.8,.3,1),filter .4s}
-.svc-row:hover .idx-num{transform:translateY(-6px) scale(1.05);filter:drop-shadow(0 8px 18px rgba(225,6,0,.4))}
+.svc-ico{display:inline-grid;place-items:center;width:112px;height:112px;border-radius:24px;color:#fff;
+  background:linear-gradient(145deg,#ff3b30 0%,#e10600 55%,#8f0f0f 100%);
+  box-shadow:0 20px 36px rgba(0,0,0,.55),0 4px 0 rgba(0,0,0,.35),inset 0 2px 0 rgba(255,255,255,.35),inset 0 -10px 18px rgba(0,0,0,.28);
+  transform:perspective(700px) rotateX(5deg) rotateY(-4deg);
+  transition:transform .45s cubic-bezier(.22,.8,.3,1),box-shadow .45s}
+.svc-row:hover .svc-ico{transform:perspective(700px) rotateX(0) rotateY(0) translateY(-6px) scale(1.04);
+  box-shadow:0 28px 44px rgba(0,0,0,.6),0 6px 0 rgba(0,0,0,.3),inset 0 2px 0 rgba(255,255,255,.4),inset 0 -10px 18px rgba(0,0,0,.25)}
+.svc-ico svg{width:60px;height:60px}
 .idx-tag{display:block;margin-top:12px;font-size:.64rem;font-weight:600;letter-spacing:.34em;
   text-transform:uppercase;color:var(--red)}
 .idx-tag::before,.idx-tag::after{content:"—";color:var(--line);margin:0 6px}
@@ -163,9 +179,11 @@ section{padding:104px 0}
   letter-spacing:.22em;text-transform:uppercase;color:var(--red-lt);border-bottom:1px solid var(--line);
   padding-bottom:5px;transition:gap .3s,color .3s}
 .svc-link:hover{gap:15px;color:#fff}
-.svc-photo{position:relative;overflow:hidden;border:1px solid var(--line-soft);aspect-ratio:16/10.5}
+.svc-photo{position:relative;overflow:hidden;border:1px solid var(--line-soft);aspect-ratio:16/10.5;
+  box-shadow:0 24px 48px rgba(0,0,0,.5);transition:transform .5s cubic-bezier(.22,.8,.3,1),box-shadow .5s}
 .svc-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,.8,.3,1),filter .5s;filter:saturate(.92)}
 .svc-row:hover .svc-photo img{transform:scale(1.08);filter:saturate(1.05)}
+.svc-row:hover .svc-photo{transform:perspective(900px) rotateY(-2deg) translateY(-4px);box-shadow:0 32px 60px rgba(0,0,0,.6)}
 .svc-photo::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,59,48,0);
   transition:.4s;pointer-events:none}
 .svc-row:hover .svc-photo::after{border-color:rgba(255,59,48,.55);inset:8px}
@@ -184,8 +202,10 @@ section{padding:104px 0}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:step}
 .step{padding:10px 38px 10px 0;position:relative}
 .step+.step{padding-left:38px;border-left:1px solid var(--line-soft)}
-.step .n{font-family:var(--display);font-style:normal;font-weight:500;font-size:1rem;color:var(--red);
-  letter-spacing:.2em}
+.step .n-ico{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:16px;color:#fff;
+  background:linear-gradient(145deg,var(--red-lt),var(--red) 55%,#8f0f0f);
+  box-shadow:0 12px 24px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.35),inset 0 -8px 14px rgba(0,0,0,.25)}
+.step .n-ico svg{width:28px;height:28px}
 .step h3{font-family:var(--display);font-weight:600;font-size:1.5rem;margin:12px 0 10px}
 .step p{color:var(--muted);line-height:1.75;font-size:.97rem}
 .step .bar{height:2px;background:var(--line-soft);margin-top:26px;position:relative;overflow:hidden}
@@ -195,7 +215,8 @@ section{padding:104px 0}
 
 /* ============ gallery — main + filmstrip ============ */
 .gallery-grid{display:grid;grid-template-columns:1fr 190px;gap:22px;align-items:stretch}
-.g-main{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel);cursor:zoom-in}
+.g-main{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel);cursor:zoom-in;
+  box-shadow:0 30px 60px rgba(0,0,0,.5)}
 .g-main img{width:100%;height:100%;min-height:420px;max-height:640px;object-fit:cover;display:block;
   transition:opacity .45s ease,transform .6s ease}
 .g-main img.swap{opacity:0}
@@ -232,7 +253,8 @@ section{padding:104px 0}
 .zone{display:flex;align-items:baseline;gap:20px;padding:21px 6px;border-bottom:1px solid var(--line-soft);
   transition:background .3s,padding-left .3s}
 .zone:hover{background:rgba(225,6,0,.05);padding-left:16px}
-.zone .z-idx{font-family:var(--display);font-style:normal;color:var(--red);font-size:1.05rem;flex:none;width:34px}
+.zone .z-idx{display:grid;place-items:center;flex:none;width:34px;color:var(--red-lt)}
+.zone .z-idx svg{width:22px;height:22px}
 .zone h3{font-family:var(--display);font-weight:600;font-size:1.35rem;flex:none;width:150px}
 .zone p{color:var(--muted);font-size:.94rem;line-height:1.6}
 
@@ -327,7 +349,8 @@ footer p a{color:var(--red-lt)}
    DEBE ir después de la regla base .burger{display:none} ============ */
 @media(max-width:1020px){
   .svc-row{grid-template-columns:150px 1fr 300px;gap:28px}
-  .idx-num{font-size:4.4rem}
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero-video-frame{max-width:420px}
   .cover-grid{gap:44px}
 }
 @media(max-width:900px){
@@ -342,8 +365,9 @@ footer p a{color:var(--red-lt)}
   section{padding:78px 0}
   .svc-row{grid-template-columns:1fr;gap:18px;padding:36px 0}
   .svc-row.rev .idx-cell,.svc-row.rev .svc-txt,.svc-row.rev .svc-photo{order:initial}
-  .idx-cell{text-align:left;display:flex;align-items:baseline;gap:18px}
-  .idx-num{font-size:3.6rem}
+  .idx-cell{text-align:left;display:flex;align-items:center;gap:18px}
+  .svc-ico{width:84px;height:84px;border-radius:18px}
+  .svc-ico svg{width:46px;height:46px}
   .idx-tag{margin-top:0}
   .steps{grid-template-columns:1fr}
   .step{padding:0 0 34px}
@@ -358,8 +382,8 @@ footer p a{color:var(--red-lt)}
   .topbar .mid{display:none}
 }
 @media(max-width:560px){
-  .hero{min-height:88vh}
-  .hero-inner{padding:110px 0 52px}
+  .hero{padding:96px 0 64px;min-height:0}
+  .hero-video-frame{max-width:340px}
   .hero-stats{flex-wrap:wrap;gap:22px}
   .hstat{flex:1 1 40%}
   .hstat+.hstat{border-left:0;padding-left:0}
@@ -402,11 +426,11 @@ footer p a{color:var(--red-lt)}
   </div>
 </header>
 
-<!-- ============ HERO full-bleed: foto limpia de día de fondo ============ -->
+<!-- ============ HERO: video real del rescate + foto de fondo tenue ============ -->
 <section class="hero" id="top">
-  <div class="hero-bg" role="img" aria-label="Camión Kenworth blanco de C.M Towing Services transportando un skid steer bajo un cielo azul despejado"></div>
+  <div class="hero-bg" aria-hidden="true"></div>
   <span class="hero-badge"><i></i> En servicio</span>
-  <div class="wrap hero-inner">
+  <div class="wrap hero-grid">
     <div>
       <span class="eyebrow reveal in">Servicio de grúa · Ponce, Puerto Rico</span>
       <h1 class="reveal in d1">Te quedaste a pie.<br><em>Nosotros llegamos.</em></h1>
@@ -421,12 +445,21 @@ footer p a{color:var(--red-lt)}
         <div class="hstat"><b><span class="count" data-to="78">0</span></b><span>Municipios · Toda la isla</span></div>
       </div>
     </div>
+    <div class="hero-video-wrap reveal-r in">
+      <div class="hero-video-frame">
+        <span class="live"><i></i> Rescate real</span>
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/cm-video-poster.jpg">
+          <source src="assets/cm-video-rescate.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-cap"><span>Rescate real · Camioneta volcada</span><b>Ponce, PR</b></div>
+    </div>
   </div>
 </section>
 
 <div class="ticker" aria-hidden="true"><div class="run"><span>Ponce <b>◆</b></span><span>San Juan <b>◆</b></span><span>Bayamón <b>◆</b></span><span>Caguas <b>◆</b></span><span>Mayagüez <b>◆</b></span><span>Arecibo <b>◆</b></span><span>Humacao <b>◆</b></span><span>Guaynabo <b>◆</b></span><span>Carolina <b>◆</b></span><span>Aguadilla <b>◆</b></span><span>Ponce <b>◆</b></span><span>San Juan <b>◆</b></span><span>Bayamón <b>◆</b></span><span>Caguas <b>◆</b></span><span>Mayagüez <b>◆</b></span><span>Arecibo <b>◆</b></span><span>Humacao <b>◆</b></span><span>Guaynabo <b>◆</b></span><span>Carolina <b>◆</b></span><span>Aguadilla <b>◆</b></span></div></div>
 
-<!-- ============ SERVICIOS: filas editoriales con índices rojos ============ -->
+<!-- ============ SERVICIOS: filas editoriales con iconos de servicio ============ -->
 <section id="servicios">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -437,7 +470,7 @@ footer p a{color:var(--red-lt)}
     </div>
     <div class="svc-rows">
       <article class="svc-row reveal">
-        <div class="idx-cell"><span class="idx-num">01</span><span class="idx-tag">Servicio</span></div>
+        <div class="idx-cell"><span class="svc-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 36h30v6H6z"/><path d="M36 42V26h9l9 8v8"/><circle cx="16" cy="48" r="5"/><circle cx="48" cy="48" r="5"/><path d="M14 36V20h10"/><path d="M24 20v3c0 4-6 4-6 8"/></svg></span><span class="idx-tag">Servicio</span></div>
         <div class="svc-txt">
           <h3>Remolque <i>24/7</i></h3>
           <p>Servicio de grúa las 24 horas, en Ponce y en toda la isla. Tu vehículo llega seguro a donde tiene que llegar, con camión de plataforma propio.</p>
@@ -446,7 +479,7 @@ footer p a{color:var(--red-lt)}
         <div class="svc-photo"><img src="assets/cm-nueva-07.jpg" alt="Camión Kenworth blanco de C.M Towing Services de noche, luces encendidas, con un sedán en plataforma" loading="lazy"></div>
       </article>
       <article class="svc-row rev reveal">
-        <div class="idx-cell"><span class="idx-num">02</span><span class="idx-tag">Servicio</span></div>
+        <div class="idx-cell"><span class="svc-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="20" width="34" height="26" rx="4"/><path d="M21 20v-5h6v5M37 20v-5h6v5"/><path d="M32 25l-7 9h5l-3 9 10-11h-5l4-7z" fill="currentColor" stroke="none"/></svg></span><span class="idx-tag">Servicio</span></div>
         <div class="svc-txt">
           <h3>Battery <i>Booster</i></h3>
           <p>Paso de corriente y carga de batería en el lugar. Si tu auto no enciende, lo resolvemos donde estés, sin esperar una grúa completa.</p>
@@ -455,7 +488,7 @@ footer p a{color:var(--red-lt)}
         <div class="svc-photo"><img src="assets/cm-nueva-04.jpg" alt="Camión Kenworth blanco MATOS de C.M Towing Services con carga asegurada en plataforma" loading="lazy"></div>
       </article>
       <article class="svc-row reveal">
-        <div class="idx-cell"><span class="idx-num">03</span><span class="idx-tag">Servicio</span></div>
+        <div class="idx-cell"><span class="svc-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="32" r="10"/><path d="M30 32h24"/><path d="M44 32v8M52 32v6"/></svg></span><span class="idx-tag">Servicio</span></div>
         <div class="svc-txt">
           <h3>Cerrajería <i>en el lugar</i></h3>
           <p>Te quedaste fuera del auto o perdiste las llaves. Abrimos tu vehículo en el lugar, sin daños y sin esperas largas.</p>
@@ -464,7 +497,7 @@ footer p a{color:var(--red-lt)}
         <div class="svc-photo"><img src="assets/cm-nueva-03.jpg" alt="Camión Peterbilt blanco de C.M Towing Services transportando un JLG Lift" loading="lazy"></div>
       </article>
       <article class="svc-row rev reveal">
-        <div class="idx-cell"><span class="idx-num">04</span><span class="idx-tag">Servicio</span></div>
+        <div class="idx-cell"><span class="svc-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="20"/><circle cx="32" cy="32" r="8"/><path d="M32 9v5M50 21l-4 3M50 43l-4-3M32 55v-5M14 43l4-3M14 21l4 3"/></svg></span><span class="idx-tag">Servicio</span></div>
         <div class="svc-txt">
           <h3>Cambio <i>de goma</i></h3>
           <p>Goma vacía o pinchada en la carretera. La cambiamos en el lugar para que sigas tu camino sin esperar una grúa completa.</p>
@@ -473,7 +506,7 @@ footer p a{color:var(--red-lt)}
         <div class="svc-photo"><img src="assets/cm-nueva-05.jpg" alt="Camión Kenworth blanco MATOS de C.M Towing Services transportando una SUV gris" loading="lazy"></div>
       </article>
       <article class="svc-row reveal">
-        <div class="idx-cell"><span class="idx-num">05</span><span class="idx-tag">Servicio</span></div>
+        <div class="idx-cell"><span class="svc-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="14" width="26" height="36" rx="3"/><rect x="17" y="20" width="16" height="9" rx="1"/><path d="M8 54h34"/><path d="M38 24c10 0 12 7 12 14v8"/><path d="M50 46h7l-1 6h-6z"/></svg></span><span class="idx-tag">Servicio</span></div>
         <div class="svc-txt">
           <h3>Servicio <i>de gasolina</i></h3>
           <p>Te quedaste sin gasolina en la carretera. Te llevamos combustible al lugar para que sigas tu camino.</p>
@@ -482,7 +515,7 @@ footer p a{color:var(--red-lt)}
         <div class="svc-photo"><img src="assets/cm-nueva-09.jpg" alt="Camión Freightliner amarillo de C.M Towing Services de noche en servicio" loading="lazy"></div>
       </article>
       <article class="svc-row rev reveal">
-        <div class="idx-cell"><span class="idx-num">06</span><span class="idx-tag">Servicio</span></div>
+        <div class="idx-cell"><span class="svc-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 48v-5l4-8h8l6-7h12l6 7h8l4 8v5H8z"/><circle cx="20" cy="48" r="5"/><circle cx="44" cy="48" r="5"/><path d="M2 26h9M4 34h7"/></svg></span><span class="idx-tag">Servicio</span></div>
         <div class="svc-txt">
           <h3>Movimiento <i>de vehículo</i></h3>
           <p>Movimiento de vehículos en toda la isla, con camión de plataforma. Llevamos tu vehículo a donde lo necesites, con cuidado.</p>
@@ -491,7 +524,7 @@ footer p a{color:var(--red-lt)}
         <div class="svc-photo"><img src="assets/cm-nueva-08.jpg" alt="Camión Freightliner amarillo de C.M Towing Services de noche transportando un auto rojo" loading="lazy"></div>
       </article>
       <article class="svc-row reveal">
-        <div class="idx-cell"><span class="idx-num">07</span><span class="idx-tag">Servicio</span></div>
+        <div class="idx-cell"><span class="svc-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 44h52"/><circle cx="16" cy="50" r="4"/><circle cx="48" cy="50" r="4"/><rect x="20" y="22" width="24" height="22" rx="2"/><path d="M20 22l24 22M44 22L20 44"/></svg></span><span class="idx-tag">Servicio</span></div>
         <div class="svc-txt">
           <h3>Transporte de <i>maquinaria pesada</i></h3>
           <p>Movemos tractores, skid steers, lifts y equipos pesados en plataforma, en toda la isla. Carga asegurada y entrega donde la necesites.</p>
@@ -500,7 +533,7 @@ footer p a{color:var(--red-lt)}
         <div class="svc-photo"><img src="assets/cm-nueva-01.jpg" alt="Camión Kenworth blanco de C.M Towing Services transportando un skid steer amarillo" loading="lazy"></div>
       </article>
       <article class="svc-row rev reveal">
-        <div class="idx-cell"><span class="idx-num">08</span><span class="idx-tag">Servicio</span></div>
+        <div class="idx-cell"><span class="svc-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 54h28"/><path d="M22 54V14"/><path d="M22 14h30"/><path d="M22 14H12"/><path d="M46 14v16"/><path d="M46 30c0 5-8 5-8 10"/><path d="M38 40h4"/><rect x="26" y="34" width="10" height="12" rx="1"/></svg></span><span class="idx-tag">Servicio</span></div>
         <div class="svc-txt">
           <h3>Grúa con <i>pluma</i></h3>
           <p>Servicio de grúa con pluma para levantar y mover equipos pesados en el trabajo. El equipo que ves en las fotos, es el que llega.</p>
@@ -537,19 +570,19 @@ footer p a{color:var(--red-lt)}
     </div>
     <div class="steps reveal">
       <div class="step">
-        <span class="n">Paso — I</span>
+        <span class="n-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
         <h3>Llámanos o escríbenos</h3>
         <p>Al 787-241-8427, por llamada o WhatsApp. Siempre abierto, a cualquier hora.</p>
         <div class="bar"><i></i></div>
       </div>
       <div class="step">
-        <span class="n">Paso — II</span>
+        <span class="n-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span>
         <h3>Dinos dónde estás</h3>
         <p>Pueblo, referencia cercana y tipo de vehículo. Con eso salimos a buscarte lo antes posible.</p>
         <div class="bar"><i></i></div>
       </div>
       <div class="step">
-        <span class="n">Paso — III</span>
+        <span class="n-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="21"/><path d="M22 33l7 7 14-15"/></svg></span>
         <h3>Llegamos y resolvemos</h3>
         <p>Lo arreglamos en el lugar cuando se puede — y si no, remolcamos tu vehículo con cuidado.</p>
         <div class="bar"><i></i></div>
@@ -594,12 +627,12 @@ footer p a{color:var(--red-lt)}
       <p class="lead">Servicio de grúa a nivel isla, desde Ponce. No importa en qué pueblo te quedes — <b>del área metro hasta el pueblo más lejos</b>, vamos por ti.</p>
     </div>
     <div class="zones reveal-r">
-      <div class="zone"><span class="z-idx">i.</span><h3>Sur</h3><p>Ponce, Guayama, Salinas, Santa Isabel y todo el sur.</p></div>
-      <div class="zone"><span class="z-idx">ii.</span><h3>Área Metro</h3><p>San Juan, Bayamón, Guaynabo, Carolina y todo el metro.</p></div>
-      <div class="zone"><span class="z-idx">iii.</span><h3>Norte</h3><p>Arecibo, Vega Baja, Manatí, Barceloneta y la costa norte.</p></div>
-      <div class="zone"><span class="z-idx">iv.</span><h3>Este</h3><p>Humacao, Fajardo, Caguas, Gurabo y el este de la isla.</p></div>
-      <div class="zone"><span class="z-idx">v.</span><h3>Oeste</h3><p>Mayagüez, Aguadilla, Añasco, Cabo Rojo y el oeste.</p></div>
-      <div class="zone"><span class="z-idx">vi.</span><h3>Centro</h3><p>Utuado, Jayuya, Adjuntas, Orocovis y la montaña.</p></div>
+      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Sur</h3><p>Ponce, Guayama, Salinas, Santa Isabel y todo el sur.</p></div>
+      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Área Metro</h3><p>San Juan, Bayamón, Guaynabo, Carolina y todo el metro.</p></div>
+      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Norte</h3><p>Arecibo, Vega Baja, Manatí, Barceloneta y la costa norte.</p></div>
+      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Este</h3><p>Humacao, Fajardo, Caguas, Gurabo y el este de la isla.</p></div>
+      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Oeste</h3><p>Mayagüez, Aguadilla, Añasco, Cabo Rojo y el oeste.</p></div>
+      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Centro</h3><p>Utuado, Jayuya, Adjuntas, Orocovis y la montaña.</p></div>
     </div>
   </div>
 </section>
