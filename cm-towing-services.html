@@ -79,11 +79,11 @@ header.solid{border-bottom-color:var(--line);background:rgba(11,11,13,.97)}
 
 /* ============ hero: video real del rescate + foto de fondo tenue ============ */
 .hero{position:relative;min-height:94vh;display:flex;align-items:center;overflow:hidden;background:var(--ink);padding:118px 0 84px}
-.hero-bg{position:absolute;inset:0;background:url('assets/cm-nueva-15.jpg') center 42%/cover no-repeat;
-  filter:brightness(.3) saturate(.9)}
+.hero-bg{position:absolute;inset:0;background:url('assets/cm-nueva-02.jpg') center 42%/cover no-repeat;
+  filter:brightness(.55) saturate(1.05)}
 .hero-bg::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(8,8,10,.55) 0%,rgba(8,8,10,.25) 45%,rgba(8,8,10,.78) 100%),
-             linear-gradient(90deg,rgba(8,8,10,.72) 0%,rgba(8,8,10,.3) 60%,rgba(8,8,10,.45) 100%)}
+  background:linear-gradient(180deg,rgba(8,8,10,.42) 0%,rgba(8,8,10,.15) 45%,rgba(8,8,10,.7) 100%),
+             linear-gradient(90deg,rgba(8,8,10,.6) 0%,rgba(8,8,10,.18) 60%,rgba(8,8,10,.35) 100%)}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 /* video del rescate — marco 3D con perspectiva */
 .hero-video-wrap{position:relative}
@@ -597,7 +597,7 @@ footer p a{color:var(--red-lt)}
     <div class="sec-head reveal">
       <span class="eyebrow">Trabajos reales</span>
       <h2>Nuestro trabajo, <em>en la calle</em></h2>
-      <p>15 fotos reales nuevas, enviadas por el cliente. Toca la imagen grande para verla completa, o elige una miniatura.</p>
+      <p>14 fotos reales nuevas, enviadas por el cliente. Toca la imagen grande para verla completa, o elige una miniatura.</p>
       <div class="red-rule"></div>
     </div>
     <div class="gallery-grid reveal">
@@ -608,7 +608,7 @@ footer p a{color:var(--red-lt)}
       <div class="g-thumbs" id="gThumbs"></div>
     </div>
     <div class="g-meta reveal">
-      <span class="g-counter"><span id="gCur">01</span> <small>/ 15</small></span>
+      <span class="g-counter"><span id="gCur">01</span> <small>/ 14</small></span>
       <span class="g-note" id="gNote">Camión Kenworth blanco transportando un tractor rojo</span>
       <span class="g-nav">
         <button class="g-arrow" id="gPrev" aria-label="Foto anterior">‹</button>
@@ -812,8 +812,7 @@ footer p a{color:var(--red-lt)}
     {src:'assets/cm-nueva-11.jpg',cap:'Flota en el patio: Kenworth negro y Freightliner amarillo con contenedores'},
     {src:'assets/cm-nueva-12.jpg',cap:'Sedán blanco asegurado en la plataforma, de noche'},
     {src:'assets/cm-nueva-13.jpg',cap:'Grúa Grove amarilla izando una torre de iluminación'},
-    {src:'assets/cm-nueva-14.jpg',cap:'Grúa Grove amarilla en el patio'},
-    {src:'assets/cm-nueva-15.jpg',cap:'Camión Kenworth blanco con tractor rojo, de frente en planta industrial'}
+    {src:'assets/cm-nueva-14.jpg',cap:'Grúa Grove amarilla en el patio'}
   ];
   var gImg=document.getElementById('gImg'),gMain=document.getElementById('gMain'),
       gCur=document.getElementById('gCur'),gNote=document.getElementById('gNote'),
