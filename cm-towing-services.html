@@ -182,6 +182,7 @@ section{padding:104px 0}
 .svc-photo{position:relative;overflow:hidden;border:1px solid var(--line-soft);aspect-ratio:16/10.5;
   box-shadow:0 24px 48px rgba(0,0,0,.5);transition:transform .5s cubic-bezier(.22,.8,.3,1),box-shadow .5s}
 .svc-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,.8,.3,1),filter .5s;filter:saturate(.92)}
+.svc-photo img.obj-bottom{object-position:50% 82%}
 .svc-row:hover .svc-photo img{transform:scale(1.08);filter:saturate(1.05)}
 .svc-row:hover .svc-photo{transform:perspective(900px) rotateY(-2deg) translateY(-4px);box-shadow:0 32px 60px rgba(0,0,0,.6)}
 .svc-photo::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,59,48,0);
@@ -539,7 +540,7 @@ footer p a{color:var(--red-lt)}
           <p>Servicio de grúa con pluma para levantar y mover equipos pesados en el trabajo. El equipo que ves en las fotos, es el que llega.</p>
           <a class="svc-link" href="#cotizar" data-service="Grúa con pluma">Pedir este servicio →</a>
         </div>
-        <div class="svc-photo"><img src="assets/cm-nueva-06.jpg" alt="Camión grúa blanco de C.M Towing Services con la pluma extendida" loading="lazy"></div>
+        <div class="svc-photo"><img class="obj-bottom" src="assets/cm-nueva-06.jpg" alt="Camión grúa blanco de C.M Towing Services con la pluma extendida" loading="lazy"></div>
       </article>
     </div>
   </div>
@@ -804,7 +805,7 @@ footer p a{color:var(--red-lt)}
     {src:'assets/cm-nueva-03.jpg',cap:'Camión Peterbilt blanco transportando un JLG Lift'},
     {src:'assets/cm-nueva-04.jpg',cap:'Camión Kenworth blanco MATOS con carga asegurada en plataforma'},
     {src:'assets/cm-nueva-05.jpg',cap:'Camión Kenworth blanco MATOS transportando una SUV gris'},
-    {src:'assets/cm-nueva-06.jpg',cap:'Camión grúa blanco con la pluma extendida en el trabajo'},
+    {src:'assets/cm-nueva-06.jpg',cap:'Camión grúa blanco con la pluma extendida en el trabajo',pos:'50% 82%'},
     {src:'assets/cm-nueva-07.jpg',cap:'Camión Kenworth blanco de noche, luces encendidas, con un sedán en plataforma'},
     {src:'assets/cm-nueva-08.jpg',cap:'Camión Freightliner amarillo de noche transportando un auto rojo'},
     {src:'assets/cm-nueva-09.jpg',cap:'Camión Freightliner amarillo de noche en servicio'},
@@ -832,6 +833,7 @@ footer p a{color:var(--red-lt)}
     gImg.classList.add('swap');
     setTimeout(function(){
       gImg.src=photos[cur].src;gImg.alt=photos[cur].cap;
+      gImg.style.objectPosition=photos[cur].pos||'50% 50%';
       gImg.classList.remove('swap');
     },220);
     gCur.textContent=pad(cur+1);
