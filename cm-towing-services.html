@@ -78,7 +78,7 @@ header:hover,header.solid{border-color:rgba(255,30,30,.5);box-shadow:0 8px 32px 
 .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* ============ reveal on scroll ============ */
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.22,.8,.3,1)}
+.reveal{opacity:0;transform:translateY(34px) scale(.985);transition:opacity .9s ease,transform .9s cubic-bezier(.22,.8,.3,1)}
 .reveal.in{opacity:1;transform:none}
 .reveal-l{opacity:0;transform:translateX(-40px);transition:opacity .9s ease,transform .9s cubic-bezier(.22,.8,.3,1)}
 .reveal-l.in{opacity:1;transform:none}
@@ -552,7 +552,7 @@ footer p a{color:var(--red-lt)}
     <div class="hero-video-wrap reveal">
       <div class="hero-video-frame ticks">
         <span class="live"><i></i> Rescate real</span>
-        <video autoplay muted loop playsinline preload="metadata" poster="assets/cm-video-poster.jpg">
+        <video autoplay muted loop playsinline preload="auto" poster="assets/cm-video-poster.jpg">
           <source src="assets/cm-video-rescate.mp4" type="video/mp4">
         </video>
       </div>
@@ -563,20 +563,20 @@ footer p a{color:var(--red-lt)}
       <div class="hstat"><b><span class="count" data-to="9">0</span></b><span>Servicios en el lugar</span></div>
       <div class="hstat"><b><span class="count" data-to="78">0</span></b><span>Municipios · Toda la isla</span></div>
     </div>
-    <div class="hero-cards reveal">
-      <div class="hcard">
+    <div class="hero-cards" data-stagger>
+      <div class="hcard reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
         <div><h3>Respuesta inmediata</h3><p>Te atendemos a cualquier hora, de día o de noche, en Ponce y toda la isla.</p></div>
       </div>
-      <div class="hcard">
+      <div class="hcard reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
         <div><h3>Servicio en el lugar</h3><p>Battery booster, cerrajería, cambio de goma y gasolina sin remolcar.</p></div>
       </div>
-      <div class="hcard">
+      <div class="hcard reveal">
         <span class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span>
         <div><h3>Toda la isla</h3><p>Cubrimos los 78 municipios de Puerto Rico, del metro a la montaña.</p></div>
       </div>
-      <div class="hcard">
+      <div class="hcard reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
         <div><h3>24/7</h3><p>Asistencia disponible las 24 horas del día, todos los días.</p></div>
       </div>
@@ -595,7 +595,7 @@ footer p a{color:var(--red-lt)}
       <p>Un solo número para cualquier emergencia en la carretera. Remolque y asistencia completa en el lugar, en Ponce y en toda la isla, las 24 horas.</p>
       <div class="red-rule"></div>
     </div>
-    <div class="svc-rows">
+    <div class="svc-rows" data-stagger>
       <article class="svc-row reveal">
         <div class="idx-cell"><span class="svc-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 36h30v6H6z"/><path d="M36 42V26h9l9 8v8"/><circle cx="16" cy="48" r="5"/><circle cx="48" cy="48" r="5"/><path d="M14 36V20h10"/><path d="M24 20v3c0 4-6 4-6 8"/></svg></span><span class="idx-tag">Servicio</span></div>
         <div class="svc-txt">
@@ -714,20 +714,20 @@ footer p a{color:var(--red-lt)}
       <span class="eyebrow">Así de simple</span>
       <h2>De la llamada <em>al rescate</em></h2>
     </div>
-    <div class="steps reveal">
-      <div class="step">
+    <div class="steps" data-stagger>
+      <div class="step reveal">
         <span class="n-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
         <h3>Llámanos o escríbenos</h3>
         <p>Al 787-241-8427, por llamada o WhatsApp. Siempre abierto, a cualquier hora.</p>
         <div class="bar"><i></i></div>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <span class="n-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span>
         <h3>Dinos dónde estás</h3>
         <p>Pueblo, referencia cercana y tipo de vehículo. Con eso salimos a buscarte lo antes posible.</p>
         <div class="bar"><i></i></div>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <span class="n-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="21"/><path d="M22 33l7 7 14-15"/></svg></span>
         <h3>Llegamos y resolvemos</h3>
         <p>Lo arreglamos en el lugar cuando se puede — y si no, remolcamos tu vehículo con cuidado.</p>
@@ -775,17 +775,17 @@ footer p a{color:var(--red-lt)}
   </div>
   <div class="wrap cover-grid">
     <div class="reveal-l">
-      <div class="big78"><span class="count" data-to="78">0</span></div>
-      <div class="big78-label">municipios, una sola llamada</div>
+      <div class="big78 reveal"><span class="count" data-to="78">0</span></div>
+      <div class="big78-label reveal">municipios, una sola llamada</div>
       <p class="lead">Servicio de grúa a nivel isla, desde Ponce. No importa en qué pueblo te quedes — <b>del área metro hasta el pueblo más lejos</b>, vamos por ti.</p>
     </div>
-    <div class="zones reveal-r">
-      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Sur</h3><p>Ponce, Guayama, Salinas, Santa Isabel y todo el sur.</p></div>
-      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Área Metro</h3><p>San Juan, Bayamón, Guaynabo, Carolina y todo el metro.</p></div>
-      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Norte</h3><p>Arecibo, Vega Baja, Manatí, Barceloneta y la costa norte.</p></div>
-      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Este</h3><p>Humacao, Fajardo, Caguas, Gurabo y el este de la isla.</p></div>
-      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Oeste</h3><p>Mayagüez, Aguadilla, Añasco, Cabo Rojo y el oeste.</p></div>
-      <div class="zone"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Centro</h3><p>Utuado, Jayuya, Adjuntas, Orocovis y la montaña.</p></div>
+    <div class="zones" data-stagger>
+      <div class="zone reveal"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Sur</h3><p>Ponce, Guayama, Salinas, Santa Isabel y todo el sur.</p></div>
+      <div class="zone reveal"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Área Metro</h3><p>San Juan, Bayamón, Guaynabo, Carolina y todo el metro.</p></div>
+      <div class="zone reveal"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Norte</h3><p>Arecibo, Vega Baja, Manatí, Barceloneta y la costa norte.</p></div>
+      <div class="zone reveal"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Este</h3><p>Humacao, Fajardo, Caguas, Gurabo y el este de la isla.</p></div>
+      <div class="zone reveal"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Oeste</h3><p>Mayagüez, Aguadilla, Añasco, Cabo Rojo y el oeste.</p></div>
+      <div class="zone reveal"><span class="z-idx"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span><h3>Centro</h3><p>Utuado, Jayuya, Adjuntas, Orocovis y la montaña.</p></div>
     </div>
   </div>
 </section>
@@ -799,24 +799,24 @@ footer p a{color:var(--red-lt)}
       <p>Lo que más nos preguntan los clientes cuando se quedan a pie.</p>
       <div class="red-rule"></div>
     </div>
-    <div class="faq reveal">
-      <div class="faq-item open">
+    <div class="faq" data-stagger>
+      <div class="faq-item open reveal">
         <button class="faq-q" type="button">¿Atienden las 24 horas, de verdad?<span class="pm">+</span></button>
         <div class="faq-a"><p>Sí. Estamos <b>siempre abiertos</b>. Llámanos o escríbenos por WhatsApp al <b>787-241-8427</b> a cualquier hora.</p></div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <button class="faq-q" type="button">¿Cubren toda la isla o solo Ponce?<span class="pm">+</span></button>
         <div class="faq-a"><p><b>Toda la isla.</b> Estamos en Ponce y llegamos a los 78 municipios de Puerto Rico, del área metro hasta el pueblo más lejos.</p></div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <button class="faq-q" type="button">¿Qué pueden resolver en el lugar sin remolcar?<span class="pm">+</span></button>
         <div class="faq-a"><p>Muchas veces lo resolvemos en el lugar: <b>battery booster, cerrajería, cambio de goma y servicio de gasolina</b>. Si no se puede en el lugar, entonces lo remolcamos.</p></div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <button class="faq-q" type="button">¿Transportan maquinaria pesada?<span class="pm">+</span></button>
         <div class="faq-a"><p>Sí. Movemos <b>tractores, skid steers, lifts y equipos pesados</b> en plataforma, en toda la isla, y tenemos <b>grúa con pluma</b> para levantar equipos en el trabajo.</p></div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <button class="faq-q" type="button">¿Qué información necesitan cuando llamo?<span class="pm">+</span></button>
         <div class="faq-a"><p>Tu <b>ubicación</b> (pueblo y referencia cercana) y el <b>tipo de vehículo</b>. Con eso salimos a buscarte lo antes posible.</p></div>
       </div>
@@ -887,7 +887,7 @@ footer p a{color:var(--red-lt)}
 </section>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap reveal">
     <img class="flogo" src="assets/cm-logo.jpg" alt="Logo de C.M Towing Services — CM cromo y rojo, camión blanco International">
     <h4>C.M <i>Towing Services</i></h4>
     <div class="f-sub">Grúa 24/7 · Ponce, Puerto Rico</div>
@@ -934,9 +934,17 @@ footer p a{color:var(--red-lt)}
   });
 
   /* animaciones de entrada al hacer scroll */
+  /* escalonado pro: los hijos de [data-stagger] entran en cascada */
+  document.querySelectorAll('[data-stagger]').forEach(function(g){
+    g.querySelectorAll(':scope > .reveal').forEach(function(el,i){el.dataset.di=i});
+  });
   var io=new IntersectionObserver(function(entries){
     entries.forEach(function(en){
-      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
+      if(!en.isIntersecting)return;
+      var d=+en.target.dataset.di||0;
+      if(d)en.target.style.transitionDelay=(d*80)+'ms';
+      en.target.classList.add('in');io.unobserve(en.target);
+      if(d)setTimeout(function(){en.target.style.transitionDelay=''},1300+d*80);
     });
   },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(function(el){io.observe(el)});
