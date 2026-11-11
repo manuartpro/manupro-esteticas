@@ -128,12 +128,13 @@ header:hover,header.solid{border-color:rgba(255,30,30,.5);box-shadow:0 8px 32px 
 .hero-inner{width:min(880px,100% - 48px);margin:0 auto;position:relative;z-index:2}
 .hero-loc{display:flex;justify-content:flex-end;align-items:center;gap:8px;color:var(--red-lt);font-size:.82rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
 .hero-loc svg{width:18px;height:18px}
-.hero-photo{position:relative;margin:26px 0 30px;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.hero-photo{position:relative;margin:0 0 30px;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.5)}
 .hero-photo img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 55%}
-.hero-badge24{position:absolute;top:16px;right:16px;width:104px;height:104px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;border:2px solid var(--red-lt);background:rgba(11,11,13,.55);backdrop-filter:blur(3px);box-shadow:0 0 26px rgba(225,6,0,.45),inset 0 0 18px rgba(225,6,0,.25)}
-.hero-badge24 span{font-family:var(--display);font-weight:800;font-size:1.7rem;line-height:1}
-.hero-badge24 small{font-size:.58rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#ffd9d6;margin-top:5px}
-.hero-grua{position:absolute;top:132px;right:16px;color:var(--red-lt);font-family:var(--display);font-weight:600;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 0 18px rgba(225,6,0,.65)}
+.hero-badge-row{display:flex;justify-content:flex-end;align-items:center;gap:16px;margin:18px 0 16px}
+.hero-badge24{width:84px;height:84px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;border:2px solid var(--red-lt);background:rgba(11,11,13,.8);box-shadow:0 0 26px rgba(225,6,0,.45),inset 0 0 18px rgba(225,6,0,.25)}
+.hero-badge24 span{font-family:var(--display);font-weight:800;font-size:1.3rem;line-height:1}
+.hero-badge24 small{font-size:.5rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#ffd9d6;margin-top:5px}
+.hero-grua{color:var(--red-lt);font-family:var(--display);font-weight:600;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 0 18px rgba(225,6,0,.65)}
 .hero-cta{display:flex;justify-content:center}
 .btn-hero{display:inline-flex;align-items:center;gap:16px;padding:14px 36px 14px 16px;border-radius:999px;
   background:linear-gradient(180deg,#ff3b30 0%,#e10600 55%,#a80d0d 100%);color:#fff;
@@ -467,10 +468,11 @@ footer p a{color:var(--red-lt)}
   .hero-video-frame{max-width:300px}
   .hero-video-frame video{aspect-ratio:4/5}
   .hero h1{font-size:2.15rem}
-  .hero-badge24{width:88px;height:88px;top:12px;right:12px}
-  .hero-badge24 span{font-size:1.45rem}
-  .hero-badge24 small{font-size:.5rem}
-  .hero-grua{top:108px;right:12px;font-size:.72rem}
+  .hero-badge24{width:72px;height:72px}
+  .hero-badge24 span{font-size:1.1rem}
+  .hero-badge24 small{font-size:.45rem}
+  .hero-grua{font-size:.72rem}
+  .hero-badge-row{gap:12px;margin:14px 0 14px}
   .btn-hero{padding:12px 28px 12px 14px;gap:12px}
   .btn-hero .ph{width:46px;height:46px}
   .btn-hero .ph svg{width:22px;height:22px}
@@ -530,10 +532,12 @@ footer p a{color:var(--red-lt)}
   <div class="wrap hero-inner">
     <div class="hero-loc reveal in"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg> Ponce, PR</div>
     <h1 class="reveal in d1">Soluciones seguras,<br><em>rápidas</em> y <em>confiables</em></h1>
+    <div class="hero-badge-row reveal in d2">
+      <div class="hero-grua">Grúa 24/7</div>
+      <div class="hero-badge24"><span>24/7</span><small>Asistencia</small></div>
+    </div>
     <div class="hero-photo reveal in d2">
       <img src="assets/cm-nueva-07.jpg" alt="Camión Kenworth de C.M Towing Services con un sedán en la plataforma, de noche con las luces ámbar encendidas" fetchpriority="high">
-      <div class="hero-badge24"><span>24/7</span><small>Asistencia</small></div>
-      <div class="hero-grua">Grúa 24/7</div>
     </div>
     <div class="hero-cta reveal in d3">
       <a class="btn btn-hero" href="tel:+17872418427"><span class="ph"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span><span><small>Llamar ahora</small><b>787-241-8427</b></span></a>
