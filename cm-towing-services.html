@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" href="assets/cm-nueva-01.jpg" as="image">
+<link rel="preload" href="assets/cm-nueva-07.jpg" as="image">
 <style>
 :root{
   --ink:#0b0b0d; --coal:#131316; --panel:#17171b; --panel2:#1c1c21;
@@ -85,13 +85,8 @@ header.solid{border-bottom-color:var(--line);background:rgba(11,11,13,.97)}
 .d4{transition-delay:.4s}.d5{transition-delay:.5s}
 
 /* ============ hero: video real del rescate + foto de fondo tenue ============ */
-.hero{position:relative;min-height:94vh;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;background:var(--ink);padding:118px 0 84px}
-.hero-bg{position:absolute;inset:0;
-  background:url('assets/cm-nueva-01.jpg') center 30%/cover no-repeat}
-.hero-bg::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(8,8,10,.82) 0%,rgba(8,8,10,.58) 42%,rgba(8,8,10,.88) 100%),
-    linear-gradient(90deg,rgba(8,8,10,.72) 0%,rgba(8,8,10,.25) 55%,rgba(8,8,10,.55) 100%)}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;background:#0b0b0d;padding:100px 0 72px}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(820px 420px at 50% 0%,rgba(225,6,0,.16),rgba(225,6,0,0) 65%);pointer-events:none}
 /* video del rescate — marco 3D con perspectiva */
 .hero-video-wrap{position:relative}
 .hero-video-frame{position:relative;max-width:400px;margin:0 auto;border:1px solid var(--red);padding:10px;
@@ -115,10 +110,34 @@ header.solid{border-bottom-color:var(--line);background:rgba(11,11,13,.97)}
 .hcard .ic svg{width:26px;height:26px}
 .hcard h3{font-family:var(--display);font-size:1.12rem;font-weight:600;line-height:1.25}
 .hcard p{color:var(--muted);font-size:.88rem;line-height:1.6;margin-top:6px}
-.hero-badge{position:absolute;top:26px;right:26px;z-index:3;display:inline-flex;align-items:center;gap:8px;
-  background:rgba(11,11,13,.78);border:1px solid var(--line);border-radius:999px;padding:8px 16px;
-  font-size:.66rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--red-lt)}
-.hero-badge i{width:8px;height:8px;border-radius:50%;background:var(--red-lt);animation:blink 1.6s infinite}
+/* ============ hero estilo mockup (pantalla inicial) ============ */
+.hero-inner{width:min(880px,100% - 48px);margin:0 auto;position:relative;z-index:2}
+.hero-loc{display:flex;justify-content:flex-end;align-items:center;gap:8px;color:var(--red-lt);font-size:.82rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+.hero-loc svg{width:18px;height:18px}
+.hero-photo{position:relative;margin:26px 0 30px;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.hero-photo img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 55%}
+.hero-badge24{position:absolute;top:16px;right:16px;width:104px;height:104px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;border:2px solid var(--red-lt);background:rgba(11,11,13,.55);backdrop-filter:blur(3px);box-shadow:0 0 26px rgba(225,6,0,.45),inset 0 0 18px rgba(225,6,0,.25)}
+.hero-badge24 span{font-family:var(--display);font-weight:800;font-size:1.7rem;line-height:1}
+.hero-badge24 small{font-size:.58rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#ffd9d6;margin-top:5px}
+.hero-grua{position:absolute;top:132px;right:16px;color:var(--red-lt);font-family:var(--display);font-weight:600;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;text-shadow:0 0 18px rgba(225,6,0,.65)}
+.hero-cta{display:flex;justify-content:center}
+.btn-hero{display:inline-flex;align-items:center;gap:16px;padding:14px 36px 14px 16px;border-radius:999px;
+  background:linear-gradient(180deg,#ff3b30 0%,#e10600 55%,#a80d0d 100%);color:#fff;
+  box-shadow:0 0 0 1px rgba(255,59,48,.45),0 12px 34px rgba(225,6,0,.5),0 0 46px rgba(225,6,0,.32);
+  position:relative;overflow:hidden}
+.btn-hero::before{content:"";position:absolute;left:0;right:0;top:0;height:52%;border-radius:999px 999px 0 0;
+  background:linear-gradient(180deg,rgba(255,255,255,.30),rgba(255,255,255,0));pointer-events:none}
+.btn-hero .ph{flex:none;width:52px;height:52px;border-radius:50%;background:rgba(0,0,0,.5);display:grid;place-items:center;position:relative;z-index:1}
+.btn-hero .ph svg{width:26px;height:26px;fill:#ff3b30}
+.btn-hero span{display:flex;flex-direction:column;align-items:flex-start;line-height:1.2;text-align:left;position:relative;z-index:1}
+.btn-hero small{font-size:.68rem;font-weight:500;letter-spacing:.3em}
+.btn-hero b{font-size:1.35rem;font-weight:700;letter-spacing:.04em}
+/* ============ rescate real (video + datos) ============ */
+.rescue{background:var(--ink);padding:96px 0;border-top:1px solid var(--line-soft)}
+.rescue-in{max-width:880px;margin:0 auto;text-align:center}
+.rescue .hero-video-wrap{max-width:340px;margin:40px auto 0}
+.rescue .hero-stats{margin-left:auto;margin-right:auto;margin-top:44px}
+.rescue .hero-cards{margin-top:48px;text-align:left}
 @keyframes blink{0%,100%{box-shadow:0 0 0 0 rgba(255,59,48,.7)}70%{box-shadow:0 0 0 9px rgba(255,59,48,0)}}
 .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;font-weight:500;
   letter-spacing:.38em;text-transform:uppercase;color:var(--red-lt)}
@@ -130,10 +149,8 @@ header.solid{border-bottom-color:var(--line);background:rgba(11,11,13,.97)}
 .hero h1 em{font-style:normal;font-weight:600;
   background:linear-gradient(100deg,#ffd9d6 0%,var(--red) 45%,#8f0f0f 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 em{text-shadow:0 0 28px rgba(255,59,48,.55)}
 .hero h1 .thin{font-weight:400}
-.hero .lede{font-size:1.12rem;color:#d9d9d9;max-width:600px;line-height:1.8;margin:18px 0 34px;font-weight:400}
-.hero .lede b{color:var(--ivory);font-weight:500}
-.cta-row{display:flex;gap:16px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:999px;cursor:pointer;
   font-family:var(--display);font-size:.86rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
   border:1px solid transparent;transition:transform .3s,box-shadow .3s,background .3s,color .3s}
@@ -144,9 +161,6 @@ header.solid{border-bottom-color:var(--line);background:rgba(11,11,13,.97)}
   background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);
   transform:skewX(-20deg);transition:left .65s ease;pointer-events:none}
 .btn-red:hover::after{left:135%}
-.btn-call{font-size:1.02rem}
-.btn-call span{display:flex;flex-direction:column;align-items:flex-start;line-height:1.25;text-align:left}
-.btn-call small{font-size:.6rem;font-weight:500;letter-spacing:.26em;opacity:.92}
 .btn-red:hover{transform:translateY(-3px);box-shadow:0 9px 0 #7a0c0c,0 18px 40px rgba(225,6,0,.42)}
 .btn-red:active{transform:translateY(3px);box-shadow:0 2px 0 #7a0c0c,0 8px 20px rgba(225,6,0,.3)}
 .btn-line{background:transparent;color:var(--ivory);border-color:rgba(255,255,255,.4)}
@@ -400,7 +414,6 @@ footer p a{color:var(--red-lt)}
    DEBE ir después de la regla base .burger{display:none} ============ */
 @media(max-width:1020px){
   .svc-row{grid-template-columns:150px 1fr 300px;gap:28px}
-  .hero-grid{grid-template-columns:1fr;gap:48px}
   .hero-cards{grid-template-columns:1fr 1fr}
   .hero-video-frame{max-width:420px}
   .cover-grid{gap:44px}
@@ -437,8 +450,16 @@ footer p a{color:var(--red-lt)}
   .hero{padding:84px 0 48px;min-height:0}
   .hero-video-frame{max-width:300px}
   .hero-video-frame video{aspect-ratio:4/5}
-  .hero .lede{font-size:1rem;line-height:1.65;margin:14px 0 24px}
   .hero h1{font-size:2.15rem}
+  .hero-badge24{width:88px;height:88px;top:12px;right:12px}
+  .hero-badge24 span{font-size:1.45rem}
+  .hero-badge24 small{font-size:.5rem}
+  .hero-grua{top:108px;right:12px;font-size:.72rem}
+  .btn-hero{padding:12px 28px 12px 14px;gap:12px}
+  .btn-hero .ph{width:46px;height:46px}
+  .btn-hero .ph svg{width:22px;height:22px}
+  .btn-hero b{font-size:1.15rem}
+  .rescue{padding:64px 0}
   .hero-cards{grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
   .hcard{padding:16px 14px;flex-direction:column;align-items:flex-start;gap:10px}
   .hcard .ic{width:44px;height:44px}
@@ -451,8 +472,8 @@ footer p a{color:var(--red-lt)}
   .hstat+.hstat{border-left:0;padding-left:0}
   .zone{flex-wrap:wrap;gap:6px}
   .zone h3{width:auto}
-  .brand .t b{font-size:1.1rem}
-  .brand img.logo{width:104px;height:70px;padding:4px;border-radius:13px}
+  .brand .t{display:none}
+  .brand img.logo{width:128px;height:86px;padding:4px;border-radius:13px}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
@@ -490,24 +511,25 @@ footer p a{color:var(--red-lt)}
 
 <!-- ============ HERO: video real del rescate + foto de fondo tenue ============ -->
 <section class="hero" id="top">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <span class="hero-badge"><i></i> En servicio</span>
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow pill reveal in">Servicio de grúas · Ponce, PR</span>
-      <h1 class="reveal in d1">¿Te quedaste a pie?<br><em>C.M Towing</em><br>llega al rescate.</h1>
-      <p class="lede reveal in d2">Servicio de grúa con <b>camión de plataforma propio</b>, siempre abierto, en Ponce y en toda la isla. Una llamada basta: llegamos donde estés y lo resolvemos en el lugar — o remolcamos tu vehículo con cuidado.</p>
-      <div class="cta-row reveal in d3">
-        <a class="btn btn-red btn-call" href="tel:+17872418427"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><span><small>Llamar ahora:</small>787-241-8427</span></a>
-        <a class="btn btn-line" href="#servicios">Ver servicios</a>
-      </div>
-      <div class="hero-stats reveal in d4">
-        <div class="hstat"><b><span class="count" data-to="24">0</span></b><span>Siempre abierto</span></div>
-        <div class="hstat"><b><span class="count" data-to="9">0</span></b><span>Servicios en el lugar</span></div>
-        <div class="hstat"><b><span class="count" data-to="78">0</span></b><span>Municipios · Toda la isla</span></div>
-      </div>
+  <div class="wrap hero-inner">
+    <div class="hero-loc reveal in"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg> Ponce, PR</div>
+    <h1 class="reveal in d1">Soluciones seguras,<br><em>rápidas</em> y <em>confiables</em></h1>
+    <div class="hero-photo reveal in d2">
+      <img src="assets/cm-nueva-07.jpg" alt="Camión Kenworth de C.M Towing Services con un sedán en la plataforma, de noche con las luces ámbar encendidas" fetchpriority="high">
+      <div class="hero-badge24"><span>24/7</span><small>Asistencia</small></div>
+      <div class="hero-grua">Grúa 24/7</div>
     </div>
-    <div class="hero-video-wrap reveal-r in">
+    <div class="hero-cta reveal in d3">
+      <a class="btn btn-hero" href="tel:+17872418427"><span class="ph"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span><span><small>Llamar ahora</small><b>787-241-8427</b></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESCATE REAL: video + datos ============ -->
+<section class="rescue">
+  <div class="wrap rescue-in">
+    <span class="eyebrow pill reveal">Rescate real · Ponce, PR</span>
+    <div class="hero-video-wrap reveal">
       <div class="hero-video-frame ticks">
         <span class="live"><i></i> Rescate real</span>
         <video autoplay muted loop playsinline preload="metadata" poster="assets/cm-video-poster.jpg">
@@ -516,23 +538,28 @@ footer p a{color:var(--red-lt)}
       </div>
       <div class="hero-cap"><span>Rescate real · Camioneta volcada</span><b>Ponce, PR</b></div>
     </div>
-  </div>
-  <div class="wrap hero-cards reveal in">
-    <div class="hcard">
-      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
-      <div><h3>Respuesta inmediata</h3><p>Te atendemos a cualquier hora, de día o de noche, en Ponce y toda la isla.</p></div>
+    <div class="hero-stats reveal">
+      <div class="hstat"><b><span class="count" data-to="24">0</span></b><span>Siempre abierto</span></div>
+      <div class="hstat"><b><span class="count" data-to="9">0</span></b><span>Servicios en el lugar</span></div>
+      <div class="hstat"><b><span class="count" data-to="78">0</span></b><span>Municipios · Toda la isla</span></div>
     </div>
-    <div class="hcard">
-      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
-      <div><h3>Servicio en el lugar</h3><p>Battery booster, cerrajería, cambio de goma y gasolina sin remolcar.</p></div>
-    </div>
-    <div class="hcard">
-      <span class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span>
-      <div><h3>Toda la isla</h3><p>Cubrimos los 78 municipios de Puerto Rico, del metro a la montaña.</p></div>
-    </div>
-    <div class="hcard">
-      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-      <div><h3>24/7</h3><p>Asistencia disponible las 24 horas del día, todos los días.</p></div>
+    <div class="hero-cards reveal">
+      <div class="hcard">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+        <div><h3>Respuesta inmediata</h3><p>Te atendemos a cualquier hora, de día o de noche, en Ponce y toda la isla.</p></div>
+      </div>
+      <div class="hcard">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>
+        <div><h3>Servicio en el lugar</h3><p>Battery booster, cerrajería, cambio de goma y gasolina sin remolcar.</p></div>
+      </div>
+      <div class="hcard">
+        <span class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z"/><circle cx="32" cy="28" r="6"/></svg></span>
+        <div><h3>Toda la isla</h3><p>Cubrimos los 78 municipios de Puerto Rico, del metro a la montaña.</p></div>
+      </div>
+      <div class="hcard">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <div><h3>24/7</h3><p>Asistencia disponible las 24 horas del día, todos los días.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -637,8 +664,8 @@ footer p a{color:var(--red-lt)}
 <!-- ============ POR QUÉ ELEGIRNOS ============ -->
 <section class="why">
   <div class="wrap why-in reveal">
-    <span class="eyebrow pill">¿Por qué elegirnos?</span>
-    <h2>Soluciones seguras, <em>rápidas y confiables</em></h2>
+    <span class="eyebrow pill">Servicio de grúa · Ponce, PR</span>
+    <h2>¿Por qué <em>elegirnos?</em></h2>
     <p>No importa la hora ni el lugar: llegamos donde estés y lo resolvemos en el lugar — o remolcamos tu vehículo con cuidado. Servicio de grúa con camión de plataforma propio, siempre abierto, en Ponce y en toda la isla.</p>
     <a class="btn btn-red" href="tel:+17872418427">Llamar 787-241-8427</a>
   </div>
